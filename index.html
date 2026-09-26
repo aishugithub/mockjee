@@ -593,7 +593,7 @@ code { font-family: var(--font-num); font-size: .92em; background: #f1f4f8; padd
     <div class="modal-actions">
       <button type="button" class="btn btn-line" id="dlTemplate">Download CSV template</button>
       <button type="button" class="btn btn-line" id="dlBank">Export bank as JSON</button>
-      <button type="button" class="btn btn-line" id="resetBank">Restore sample bank</button>
+      <button type="button" class="btn btn-line" id="resetBank">Restore built-in bank</button>
       <button type="button" class="btn btn-primary" id="bankClose">Done</button>
     </div>
   </div>
@@ -604,6 +604,7 @@ code { font-family: var(--font-num); font-size: .92em; background: #f1f4f8; padd
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="questions.js"></script>
+<script src="pyq_bank.js"></script>
 <script>
 (() => {
 'use strict';
@@ -627,7 +628,13 @@ function rich(s) {
     .replace(/_([A-Za-z0-9]{1,5})\b/g, '<sub>$1</sub>')
     .replace(/\n/g, '<br>');
 }
-const qImg = q => q.image && /^(data:image\/|https?:\/\/)/.test(q.image) ? `<img src="${esc(q.image)}" alt="Figure for this question" crossorigin="anonymous">` : '';
+/* images: data: URIs, https:// links, or files shipped in the local pyq/ folder (no crossorigin there, so they also load from file://) */
+const imgTag = (src, alt) => /^(data:image\/|https?:\/\/)/.test(src) ? `<img src="${esc(src)}" alt="${alt}" crossorigin="anonymous">`
+  : /^pyq\/[\w\/.-]+\.(png|jpe?g|gif|webp)$/i.test(src) ? `<img src="${esc(src)}" alt="${alt}">` : '';
+const qImg = q => q.image ? imgTag(q.image, 'Question as printed in the NTA paper') : '';
+const optHtml = (q, k, o) => q.option_images && q.option_images[k] ? imgTag(q.option_images[k], `Option ${k + 1} as printed in the NTA paper`) : rich(o);
+/* NTA's final key sometimes accepts more than one answer (q.accept) */
+const isKey = (q, k) => Array.isArray(q.accept) ? q.accept.includes(k) : k === q.answer;
 const fmtMarks = n => (Math.round(n * 100) / 100).toString();
 const posT = n => n ? '+' + fmtMarks(n) : '0';
 const negT = n => n ? '−' + fmtMarks(n) : '0';
@@ -662,8 +669,11 @@ async function saveFile(filename, data, mime) {
 const SAMPLE = { name: 'Built-in sample bank', sample: true, questions: (window.JEE_SAMPLE_BANK || []).map(q => Object.assign({}, q, { origin: 'sample' })) };
 /* Never present a practice question as a real PYQ: sample items show their year only as a tag. */
 const srcLabel = q => q.source ? q.source : q.origin === 'sample' ? `Practice question (year tag ${q.year})` : `JEE Main ${q.year}`;
+/* Official NTA questions extracted by tools/extract_nta_paper.py (see pyq/ and sources/) */
+const PYQ = (window.JEE_PYQ_BANK || []).length ? { name: 'Official NTA PYQs', pyq: true, sample: false, questions: window.JEE_PYQ_BANK.map(q => Object.assign({}, q, { origin: 'nta' })) } : null;
+const DEFAULT_BANK = PYQ || SAMPLE;
 let bank = store.get(KEYS.bank, null);
-if (!bank || !Array.isArray(bank.questions) || !bank.questions.length) bank = SAMPLE;
+if (!bank || !Array.isArray(bank.questions) || !bank.questions.length) bank = DEFAULT_BANK;
 
 function normSubject(s) {
   const t = String(s || '').trim(); const l = t.toLowerCase();
@@ -689,7 +699,7 @@ function normalizeQ(raw, i, errs, fromCsv) {
   if (raw.image) q.image = String(raw.image).trim();
   if (raw.source) q.source = String(raw.source).trim();
   if (!q.subject) { errs.push(`${where}: subject is missing.`); return null; }
-  if (!q.question) { errs.push(`${where}: question text is missing.`); return null; }
+  if (!q.question && !q.image) { errs.push(`${where}: question text is missing.`); return null; }
   if (!Number.isFinite(q.year)) { errs.push(`${where}: year must be a number such as 2025.`); return null; }
   if (!q.type) { errs.push(`${where}: type must be MCQ or NUM.`); return null; }
   if (q.type === 'MCQ') {
@@ -766,6 +776,7 @@ function renderBankLabel() {
   $('#bankLabel').textContent = `${bank.name}: ${bank.questions.length} questions`;
   $('#bankNote').innerHTML = bank.sample
     ? 'The built-in bank holds 84 original practice questions written in JEE Main style and tagged by year to demonstrate the filters. They are not official NTA papers. Use <b>Manage bank</b> to import real previous-year questions.'
+    : bank.pyq ? `Official questions from public NTA question papers, answers from NTA's final answer keys (${bank.questions.length} questions). Questions NTA dropped are left out. Chapters are not tagged yet.`
     : `Using an imported bank (${bank.questions.length} questions).`;
 }
 
@@ -887,7 +898,7 @@ const drop = $('#drop');
 ['dragenter', 'dragover'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.add('over'); }));
 ['dragleave', 'drop'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.remove('over'); }));
 drop.addEventListener('drop', e => readFile(e.dataTransfer.files[0]));
-$('#resetBank').addEventListener('click', () => { bank = SAMPLE; store.del(KEYS.bank); cfg.years = null; cfg.chapters = null; resetSelection(); renderSetup(); saveCfg(); $('#bankErr').innerHTML = ''; $('#bankNow').textContent = `Current bank: ${bank.name}, ${bank.questions.length} questions.`; });
+$('#resetBank').addEventListener('click', () => { bank = DEFAULT_BANK; store.del(KEYS.bank); cfg.years = null; cfg.chapters = null; resetSelection(); renderSetup(); saveCfg(); $('#bankErr').innerHTML = ''; $('#bankNow').textContent = `Current bank: ${bank.name}, ${bank.questions.length} questions.`; });
 $('#dlTemplate').addEventListener('click', async () => {
   const csv = 'id,subject,chapter,year,type,question,option_a,option_b,option_c,option_d,answer,solution\n' +
     'P101,Physics,Kinematics,2025,MCQ,"A car accelerates uniformly from rest to 20 m/s in 5 s. Its acceleration is:",2 m/s^{2},4 m/s^{2},5 m/s^{2},10 m/s^{2},B,"a = 20/5 = 4 m/s^{2}"\n' +
@@ -989,7 +1000,7 @@ function renderQuestion() {
   let h = `<div class="cbt-qtext">${rich(q.question)}${qImg(q)}</div>`;
   if (isM) {
     h += `<ul class="cbt-opts" role="radiogroup" aria-label="Options">` + q.options.map((o, k) =>
-      `<li><label class="cbt-opt"><input type="radio" name="opt" value="${k}" ${draft === k ? 'checked' : ''}><b>(${k + 1})</b><span>${rich(o)}</span></label></li>`).join('') + `</ul>`;
+      `<li><label class="cbt-opt"><input type="radio" name="opt" value="${k}" ${draft === k ? 'checked' : ''}><b>(${k + 1})</b><span>${optHtml(q, k, o)}</span></label></li>`).join('') + `</ul>`;
   } else {
     h += `<div class="cbt-numwrap"><label for="numIn">Enter your answer using the keypad</label>
       <input class="cbt-numin" id="numIn" inputmode="decimal" autocomplete="off" value="${esc(draft ?? '')}">
@@ -1069,7 +1080,8 @@ function evaluate(ex) {
     const r = ex.resp[i]; const given = r.v; const att = given !== null && given !== '';
     let ok = false;
     if (att) {
-      if (q.type === 'MCQ') ok = +given === q.answer;
+      if (q.type === 'MCQ') ok = isKey(q, +given);
+      else if (Array.isArray(q.accept)) { const v = parseFloat(given); ok = q.accept.some(a => Math.abs(v - a) < 1e-9); }
       else { const v = parseFloat(given); ok = Array.isArray(q.answer) ? v >= Math.min(...q.answer) - 1e-9 && v <= Math.max(...q.answer) + 1e-9 : Math.abs(v - q.answer) < 1e-9; }
     }
     const pc = q.type === 'MCQ' ? c.mcqC : c.numC, pw = q.type === 'MCQ' ? c.mcqW : c.numW;
@@ -1116,8 +1128,9 @@ function showResult(ex) {
   $('#reviewCard').hidden = true; $('#pdfStatus').textContent = '';
   show('scr-result');
 }
-function answerText(q, v) { if (v === null || v === '' || v === undefined) return '—'; return q.type === 'MCQ' ? `(${+v + 1}) ${q.options[+v] ?? ''}` : String(v); }
-const correctText = q => q.type === 'MCQ' ? `(${q.answer + 1}) ${q.options[q.answer]}` : Array.isArray(q.answer) ? `${q.answer[0]} to ${q.answer[1]}` : String(q.answer);
+function answerText(q, v) { if (v === null || v === '' || v === undefined) return '—'; return q.type === 'MCQ' ? `(${+v + 1})${q.option_images ? '' : ' ' + (q.options[+v] ?? '')}` : String(v); }
+const correctText = q => Array.isArray(q.accept) ? q.accept.map(a => q.type === 'MCQ' ? `(${a + 1})` : String(a)).join(' or ')
+  : q.type === 'MCQ' ? `(${q.answer + 1})${q.option_images ? '' : ' ' + q.options[q.answer]}` : Array.isArray(q.answer) ? `${q.answer[0]} to ${q.answer[1]}` : String(q.answer);
 let revFilter = 'all';
 function renderReview() {
   const f = { all: () => true, wrong: x => x.att && !x.ok, right: x => x.ok, skip: x => !x.att };
@@ -1125,7 +1138,7 @@ function renderReview() {
   $('#reviewList').innerHTML = shownRes.rows.filter(f[revFilter]).map(x => {
     const q = x.q; const pill = !x.att ? '<span class="pill na">0 · not attempted</span>' : x.ok ? `<span class="pill ok">${sign(x.marks)} · correct</span>` : `<span class="pill no">${sign(x.marks)} · incorrect</span>`;
     let body;
-    if (q.type === 'MCQ') body = `<div class="rev-opts">${q.options.map((o, k) => { const isC = k === q.answer, isY = x.att && +x.given === k; return `<div class="rev-opt${isC ? ' correct' : isY ? ' wrong' : ''}"><b>(${k + 1})</b><span>${rich(o)}</span>${isC && isY ? '<em class="pos">Your answer · correct</em>' : isC ? '<em class="pos">Correct answer</em>' : isY ? '<em class="negc">Your answer</em>' : ''}</div>`; }).join('')}</div>`;
+    if (q.type === 'MCQ') body = `<div class="rev-opts">${q.options.map((o, k) => { const isC = isKey(q, k), isY = x.att && +x.given === k; return `<div class="rev-opt${isC ? ' correct' : isY ? ' wrong' : ''}"><b>(${k + 1})</b><span>${optHtml(q, k, o)}</span>${isC && isY ? '<em class="pos">Your answer · correct</em>' : isC ? '<em class="pos">Correct answer</em>' : isY ? '<em class="negc">Your answer</em>' : ''}</div>`; }).join('')}</div>`;
     else body = `<div class="rev-opts"><div class="rev-opt${x.att ? (x.ok ? ' correct' : ' wrong') : ''}">Your answer: <b class="num">${esc(answerText(q, x.given))}</b></div><div class="rev-opt correct">Correct answer: <b class="num">${esc(correctText(q))}</b></div></div>`;
     return `<div class="rev-item"><div class="rev-top"><span><b style="color:var(--ink)">Q${x.i + 1}</b> · ${esc(q.subject)} · ${esc(q.chapter)} · ${esc(srcLabel(q))} · ${q.type === 'MCQ' ? 'MCQ' : 'Numerical'} · ${Math.round(x.time / 1000)} s spent</span>${pill}</div><div class="rev-q">${rich(q.question)}${qImg(q)}</div>${body}${q.solution ? `<div class="rev-sol"><b>Solution:</b> ${rich(q.solution)}</div>` : ''}</div>`;
   }).join('') || '<p style="color:var(--muted)">No questions in this group.</p>';
@@ -1164,8 +1177,8 @@ function reportBlocks(ex, res) {
     const st = !x.att ? '<span class="rp-st na">NOT ATTEMPTED · 0</span>' : x.ok ? `<span class="rp-st ok">CORRECT · ${sign(x.marks)}</span>` : `<span class="rp-st no">INCORRECT · ${sign(x.marks)}</span>`;
     let body;
     if (q.type === 'MCQ') {
-      body = `<div class="rp-opts">${q.options.map((o, k) => { const isC = k === q.answer, isY = x.att && +x.given === k; return `<div class="rp-opt${isC ? ' correct' : isY ? ' wrong' : ''}"><b>(${k + 1})</b><span>${rich(o)}</span>${isC && isY ? '<i style="color:#1f7a37">✓ Your answer</i>' : isC ? '<i style="color:#1f7a37">✓ Correct</i>' : isY ? '<i style="color:#b3321f">✗ Your answer</i>' : ''}</div>`; }).join('')}</div>
-      <div class="rp-ans"><span>Your answer: <b>${esc(x.att ? `(${+x.given + 1})` : 'Not attempted')}</b></span><span style="background:#e3f3e7;border-color:#9fd2ad">Correct answer: <b>(${q.answer + 1})</b></span></div>`;
+      body = `<div class="rp-opts">${q.options.map((o, k) => { const isC = isKey(q, k), isY = x.att && +x.given === k; return `<div class="rp-opt${isC ? ' correct' : isY ? ' wrong' : ''}"><b>(${k + 1})</b><span>${optHtml(q, k, o)}</span>${isC && isY ? '<i style="color:#1f7a37">✓ Your answer</i>' : isC ? '<i style="color:#1f7a37">✓ Correct</i>' : isY ? '<i style="color:#b3321f">✗ Your answer</i>' : ''}</div>`; }).join('')}</div>
+      <div class="rp-ans"><span>Your answer: <b>${esc(x.att ? `(${+x.given + 1})` : 'Not attempted')}</b></span><span style="background:#e3f3e7;border-color:#9fd2ad">Correct answer: <b>${esc(correctText(q))}</b></span></div>`;
     } else {
       body = `<div class="rp-ans"><span style="${x.att ? (x.ok ? 'background:#e3f3e7;border-color:#9fd2ad' : 'background:#fbe7e4;border-color:#eba89d') : ''}">Your answer: <b>${esc(x.att ? x.given : 'Not attempted')}</b></span><span style="background:#e3f3e7;border-color:#9fd2ad">Correct answer: <b>${esc(correctText(q))}</b></span></div>`;
     }

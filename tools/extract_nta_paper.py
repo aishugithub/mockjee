@@ -1,0 +1,236 @@
+"""
+Extract questions from an official NTA JEE Main question-paper PDF and match
+them to NTA's FINAL answer key by question ID.
+
+NTA papers print every question and option as a picture; only the question IDs
+and option IDs are text. So this script does not try to read the questions: it
+saves NTA's own embedded images unchanged (native pixels) and records which
+option ID is correct according to the final key.
+
+Usage:
+  python tools/extract_nta_paper.py <paper.pdf> <final_key.pdf> <out_dir> "<source label>" <year>
+
+Writes into <out_dir>:
+  img/<qid>.png, img/<qid>_o1.png .. _o4.png   question and option images
+  questions.json                               records for the app (see README)
+  review.csv                                   one row per question for the owner's check
+"""
+import csv, io, json, os, re, sys
+
+import pymupdf
+from PIL import Image
+
+HEADER = re.compile(r'Question Number : (\d+) Question Id : (\d+) Question Type : (\w+)')
+SECTION = re.compile(r'(Mathematics|Physics|Chemistry) Section ([AB])\b')
+OPTION_ID = re.compile(r'^(\d{6,})\.$')
+
+
+def stream(pdf):
+    """All text/image blocks of the paper, in reading order, across pages."""
+    for pno, page in enumerate(pdf):
+        blocks = page.get_text('dict')['blocks']
+        for b in sorted(blocks, key=lambda b: (round(b['bbox'][1]), b['bbox'][0])):
+            if b['type'] == 0:
+                text = ' '.join(s['text'] for l in b['lines'] for s in l['spans']).strip()
+                if text:
+                    yield {'kind': 'text', 'text': text, 'page': pno, 'bbox': b['bbox']}
+            else:
+                yield {'kind': 'image', 'data': b['image'], 'ext': b.get('ext', 'png'),
+                       'page': pno, 'bbox': b['bbox']}
+
+
+def parse_paper(path):
+    pdf = pymupdf.open(path)
+    meta = {}
+    first = pdf[0].get_text()
+    m = re.search(r'Question Paper Name :\s*(.+)', first)
+    meta['paper_name'] = m.group(1).strip() if m else ''
+    questions, cur, subject, section = [], None, None, None
+    for b in stream(pdf):
+        if b['kind'] == 'text':
+            t = b['text']
+            s = SECTION.search(t)
+            if s:
+                subject, section = s.group(1), s.group(2)
+                continue
+            h = HEADER.search(t)
+            if h:
+                cur = {'num': int(h.group(1)), 'qid': h.group(2), 'nta_type': h.group(3),
+                       'subject': subject, 'section': section,
+                       'q_imgs': [], 'opt_items': [], 'in_options': False, 'notes': []}
+                questions.append(cur)
+                continue
+            if cur is None:
+                continue
+            if t.startswith('Options :'):
+                cur['in_options'] = True
+                continue
+            o = OPTION_ID.match(t)
+            if o and cur['in_options']:
+                cur['opt_items'].append({'kind': 'label', 'oid': o.group(1), 'page': b['page'], 'bbox': b['bbox']})
+        elif cur is not None:
+            (cur['opt_items'] if cur['in_options'] else cur['q_imgs']).append(b)
+    for q in questions:
+        q['options'] = assign_options(q)
+    return meta, questions
+
+
+def assign_options(q):
+    """Pair each option-ID label with its image.
+
+    Short options: the image sits on the same line as the label (a little above it).
+    Long options: the label comes first and a full-width image follows below it.
+    """
+    items = q['opt_items']
+    labels = [i for i in items if i['kind'] == 'label']
+    imgs = [i for i in items if i['kind'] == 'image']
+    opts = [{'oid': l['oid'], 'imgs': []} for l in labels]
+    used = set()
+    for n, l in enumerate(labels):
+        y0, y1 = l['bbox'][1], l['bbox'][3]
+        for k, im in enumerate(imgs):
+            if k not in used and im['page'] == l['page'] and im['bbox'][3] >= y0 - 2 and im['bbox'][1] <= y1 + 2:
+                opts[n]['imgs'].append(im); used.add(k)
+    # leftover images belong to the closest label before them that still has no image
+    pos = {id(x): i for i, x in enumerate(items)}
+    for k, im in enumerate(imgs):
+        if k in used:
+            continue
+        before = [n for n, l in enumerate(labels) if pos[id(l)] < pos[id(im)] and not opts[n]['imgs']]
+        if before:
+            opts[before[-1]]['imgs'].append(im); used.add(k)
+            q['notes'].append(f'option {before[-1] + 1}: long option, image placed below its label (check)')
+        else:
+            q['notes'].append('an option image could not be matched to a label')
+    return opts
+
+
+def parse_key(path, exam_date, shift):
+    """Return {qid: answer} for the India page of one date/shift of the final key."""
+    pdf = pymupdf.open(path)
+    for page in pdf:
+        t = page.get_text()
+        if f'Exam Date : {exam_date}' in t and f'Exam Shift : {shift}' in t and 'Centers in India' in t:
+            lines = [l.strip() for l in t.splitlines() if l.strip()]
+            start = next(i for i, l in enumerate(lines) if l.startswith('('))
+            key, subj, i = {}, None, start
+            body = lines[start:]
+            j = 0
+            while j < len(body):
+                l = body[j]
+                if l.startswith('( '):
+                    subj = l.strip('() ').title(); j += 1; continue
+                one = re.fullmatch(r'(\d{7,})\s+(\S.*)', l)   # some pages print "qid answer" on one line
+                if one:
+                    key[one.group(1)] = {'answer': one.group(2), 'subject': subj}
+                    j += 1; continue
+                if re.fullmatch(r'\d{7,}', l) and j + 1 < len(body):
+                    key[l] = {'answer': body[j + 1], 'subject': subj}
+                    j += 2; continue
+                j += 1
+            return key
+    raise SystemExit(f'No India key page for {exam_date} / {shift}')
+
+
+def stack(images, path):
+    """Save one or more image blocks as a single PNG (stacked vertically)."""
+    pics = [Image.open(io.BytesIO(i['data'])).convert('RGB') for i in images]
+    if len(pics) == 1:
+        pics[0].save(path, optimize=True); return
+    w = max(p.width for p in pics); h = sum(p.height for p in pics) + 8 * (len(pics) - 1)
+    out = Image.new('RGB', (w, h), 'white'); y = 0
+    for p in pics:
+        out.paste(p, (0, y)); y += p.height + 8
+    out.save(path, optimize=True)
+
+
+def main():
+    paper, keyfile, out, source, year = sys.argv[1:6]
+    meta, qs = parse_paper(paper)
+    m = re.search(r'(\d+)(?:st|nd|rd|th) (\w{3}) (\d{4}) Shift (\d)', meta['paper_name'])
+    months = {'Jan': '01', 'Feb': '02', 'Mar': '03', 'Apr': '04', 'May': '05', 'Jun': '06',
+              'Jul': '07', 'Aug': '08', 'Sep': '09', 'Oct': '10', 'Nov': '11', 'Dec': '12'}
+    exam_date = f'{int(m.group(1)):02d}.{months[m.group(2)]}.{m.group(3)}'
+    shift = {'1': 'First', '2': 'Second'}[m.group(4)]
+    key = parse_key(keyfile, exam_date, shift)
+
+    os.makedirs(os.path.join(out, 'img'), exist_ok=True)
+    records, review = [], []
+    for q in qs:
+        flags = list(q['notes'])
+        qid = q['qid']
+        k = key.get(qid)
+        rec = {'id': qid, 'subject': q['subject'], 'chapter': 'Not tagged yet', 'year': int(year),
+               'type': 'MCQ' if q['nta_type'] == 'MCQ' else 'NUM',
+               'source': f'{source}, Q.{q["num"]} (Question ID {qid})',
+               'question': '', 'solution': ''}     # the question is the NTA image
+        if not q['q_imgs']:
+            flags.append('no question image found')
+        else:
+            rel = f'img/{qid}.png'; stack(q['q_imgs'], os.path.join(out, rel)); rec['image'] = rel
+            if len(q['q_imgs']) > 1:
+                flags.append(f'question built from {len(q["q_imgs"])} image pieces (check nothing is cut)')
+            if len({i['page'] for i in q['q_imgs']}) > 1:
+                flags.append('question runs across a page break')
+        if k is None:
+            flags.append('question ID not in final key'); ans = ''
+        else:
+            ans = k['answer']
+            if k['subject'] and k['subject'] != q['subject']:
+                flags.append(f'key lists it under {k["subject"]}')
+        if rec['type'] == 'MCQ':
+            if len(q['options']) != 4:
+                flags.append(f'{len(q["options"])} options found, expected 4')
+            rec['options'], rec['option_images'] = [], []
+            for n, o in enumerate(q['options'], 1):
+                rec['options'].append(f'[option image {n}]')
+                if o['imgs']:
+                    rel = f'img/{qid}_o{n}.png'; stack(o['imgs'], os.path.join(out, rel)); rec['option_images'].append(rel)
+                else:
+                    rec['option_images'].append(''); flags.append(f'option {n} has no image')
+            oids = [o['oid'] for o in q['options']]
+            multi = [a.strip() for a in ans.split(',')]
+            if ans in oids:
+                rec['answer'] = oids.index(ans)
+            elif ans.lower() == 'dropped':
+                rec['exclude'] = 'dropped'; rec['answer'] = None; flags.append('NTA DROPPED this question (final key); left out of mocks')
+            elif len(multi) > 1 and all(a in oids for a in multi):
+                rec['accept'] = [oids.index(a) for a in multi]; rec['answer'] = rec['accept'][0]
+                flags.append('final key accepts more than one option: ' + ', '.join(str(i + 1) for i in rec['accept']))
+            else:
+                rec['answer'] = None; flags.append(f'key answer "{ans}" is not one of the option IDs')
+        else:
+            num = r'-?\d+(?:\.\d+)?'
+            alts = re.fullmatch(rf'({num})\s+or\s+({num})', ans, re.I)
+            if re.fullmatch(num, ans):
+                rec['answer'] = float(ans) if '.' in ans else int(ans)
+            elif alts:
+                rec['accept'] = [float(v) if '.' in v else int(v) for v in alts.groups()]; rec['answer'] = rec['accept'][0]
+                flags.append('final key accepts either ' + ' or '.join(alts.groups()))
+            elif ans.lower() == 'dropped':
+                rec['exclude'] = 'dropped'; rec['answer'] = None; flags.append('NTA DROPPED this question (final key); left out of mocks')
+            else:
+                rec['exclude'] = 'special key'; rec['answer'] = None
+                flags.append(f'final key says "{ans}"; left out of mocks')
+        rec['nta_key'] = ans
+        rec['review_flags'] = flags
+        records.append(rec)
+        review.append({'Q.No': q['num'], 'Question ID': qid, 'Subject': q['subject'], 'Type': rec['type'],
+                       'Final key (NTA)': ans,
+                       'Answer as option no.': (rec['answer'] + 1) if rec['type'] == 'MCQ' and rec.get('answer') is not None else '',
+                       'Flags': '; '.join(flags)})
+
+    missing = set(key) - {q['qid'] for q in qs}
+    with open(os.path.join(out, 'questions.json'), 'w', encoding='utf-8') as f:
+        json.dump({'paper': meta['paper_name'], 'source': source, 'exam_date': exam_date, 'shift': shift,
+                   'key_ids_not_in_paper': sorted(missing), 'questions': records}, f, ensure_ascii=False, indent=1)
+    with open(os.path.join(out, 'review.csv'), 'w', newline='', encoding='utf-8-sig') as f:
+        w = csv.DictWriter(f, fieldnames=list(review[0])); w.writeheader(); w.writerows(review)
+    by = {}
+    for r in records: by[r['subject']] = by.get(r['subject'], 0) + 1
+    print(f"{meta['paper_name']}: {len(records)} questions {by}; key entries {len(key)}; "
+          f"flagged {sum(1 for r in records if r['review_flags'])}; key IDs missing from paper {len(missing)}")
+
+
+if __name__ == '__main__':
+    main()

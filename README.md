@@ -23,6 +23,20 @@ Palette states follow the official instructions: Not Visited, Not Answered, Answ
 
 The built-in bank (`questions.js`) has 84 **original** practice questions written in JEE Main style (28 per subject, MCQ + numerical). Each carries a year tag (2023–2026) only so the year filter can be demonstrated. They are **not** official NTA questions and did not appear in those papers. The app says so on the setup page, labels each one "Practice question (year tag …)" in the review and PDF, and prints a notice on the PDF cover. For real PYQs, import your own file.
 
+### Official NTA questions
+
+`pyq_bank.js` holds official questions from NTA's public question papers (JEE Main 2026 Session 2, all nine B.Tech shifts so far). It is the default bank when present. Each question is shown as NTA printed it (NTA's own images). Its answer comes from NTA's **final** answer key, matched by question ID, and it carries its source, for example `JEE Main 2026 (Session 2), 2 Apr Shift 1, Q.3 (Question ID 6911213)`. Questions NTA dropped are left out. Where the final key accepts more than one answer, any of them scores.
+
+To add a paper, save the NTA PDFs under `sources/<year>/` (with `SOURCES.md`), then:
+
+```
+pip install pymupdf pillow
+python tools/extract_nta_paper.py sources/2026/<paper>.pdf sources/2026/<final_key>.pdf pyq/2026/<shift> "JEE Main 2026 (Session 2), 2 Apr Shift 1" 2026
+python tools/build_pyq_bank.py
+```
+
+Check each shift's `review.csv` for flags. Serve the folder over http (below) so the images appear in the PDF report.
+
 ### How the sample answers were checked
 
 `verify_answers.py` recomputes the 65 calculation-based answers independently (SymPy and plain arithmetic) and confirms each one matches the key stored in `questions.js`:
