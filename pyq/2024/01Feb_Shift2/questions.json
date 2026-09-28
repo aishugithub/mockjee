@@ -1,0 +1,2003 @@
+{
+ "paper": "B Tech 1st Feb 2024 Shift 2",
+ "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2",
+ "exam_date": "01.02.2024",
+ "shift": "Second",
+ "key_ids_not_in_paper": [],
+ "questions": [
+  {
+   "id": "9561771216",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.1 (Question ID 9561771216)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771216.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771216_o1.png",
+    "img/9561771216_o2.png",
+    "img/9561771216_o3.png",
+    "img/9561771216_o4.png"
+   ],
+   "answer": 2,
+   "nta_key": "9561772553",
+   "review_flags": []
+  },
+  {
+   "id": "9561771217",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.2 (Question ID 9561771217)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771217.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771217_o1.png",
+    "img/9561771217_o2.png",
+    "img/9561771217_o3.png",
+    "img/9561771217_o4.png"
+   ],
+   "answer": 1,
+   "nta_key": "9561772556",
+   "review_flags": []
+  },
+  {
+   "id": "9561771218",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.3 (Question ID 9561771218)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771218.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771218_o1.png",
+    "img/9561771218_o2.png",
+    "img/9561771218_o3.png",
+    "img/9561771218_o4.png"
+   ],
+   "exclude": "dropped",
+   "answer": null,
+   "nta_key": "Drop",
+   "review_flags": [
+    "NTA DROPPED this question (final key); left out of mocks"
+   ]
+  },
+  {
+   "id": "9561771219",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.4 (Question ID 9561771219)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771219.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771219_o1.png",
+    "img/9561771219_o2.png",
+    "img/9561771219_o3.png",
+    "img/9561771219_o4.png"
+   ],
+   "answer": 1,
+   "nta_key": "9561772564",
+   "review_flags": []
+  },
+  {
+   "id": "9561771220",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.5 (Question ID 9561771220)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771220.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771220_o1.png",
+    "img/9561771220_o2.png",
+    "img/9561771220_o3.png",
+    "img/9561771220_o4.png"
+   ],
+   "answer": 0,
+   "nta_key": "9561772567",
+   "review_flags": [
+    "option 3: long option, image placed below its label (check)"
+   ]
+  },
+  {
+   "id": "9561771221",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.6 (Question ID 9561771221)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771221.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771221_o1.png",
+    "img/9561771221_o2.png",
+    "img/9561771221_o3.png",
+    "img/9561771221_o4.png"
+   ],
+   "answer": 3,
+   "nta_key": "9561772574",
+   "review_flags": []
+  },
+  {
+   "id": "9561771222",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.7 (Question ID 9561771222)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771222.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771222_o1.png",
+    "img/9561771222_o2.png",
+    "img/9561771222_o3.png",
+    "img/9561771222_o4.png"
+   ],
+   "answer": 3,
+   "nta_key": "9561772578",
+   "review_flags": []
+  },
+  {
+   "id": "9561771223",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.8 (Question ID 9561771223)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771223.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771223_o1.png",
+    "img/9561771223_o2.png",
+    "img/9561771223_o3.png",
+    "img/9561771223_o4.png"
+   ],
+   "answer": 2,
+   "nta_key": "9561772581",
+   "review_flags": []
+  },
+  {
+   "id": "9561771224",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.9 (Question ID 9561771224)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771224.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771224_o1.png",
+    "img/9561771224_o2.png",
+    "img/9561771224_o3.png",
+    "img/9561771224_o4.png"
+   ],
+   "answer": 1,
+   "nta_key": "9561772584",
+   "review_flags": []
+  },
+  {
+   "id": "9561771225",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.10 (Question ID 9561771225)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771225.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771225_o1.png",
+    "img/9561771225_o2.png",
+    "img/9561771225_o3.png",
+    "img/9561771225_o4.png"
+   ],
+   "answer": 1,
+   "nta_key": "9561772588",
+   "review_flags": []
+  },
+  {
+   "id": "9561771226",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.11 (Question ID 9561771226)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771226.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771226_o1.png",
+    "img/9561771226_o2.png",
+    "img/9561771226_o3.png",
+    "img/9561771226_o4.png"
+   ],
+   "answer": 1,
+   "nta_key": "9561772592",
+   "review_flags": []
+  },
+  {
+   "id": "9561771227",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.12 (Question ID 9561771227)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771227.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771227_o1.png",
+    "img/9561771227_o2.png",
+    "img/9561771227_o3.png",
+    "img/9561771227_o4.png"
+   ],
+   "exclude": "dropped",
+   "answer": null,
+   "nta_key": "Drop",
+   "review_flags": [
+    "NTA DROPPED this question (final key); left out of mocks"
+   ]
+  },
+  {
+   "id": "9561771228",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.13 (Question ID 9561771228)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771228.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771228_o1.png",
+    "img/9561771228_o2.png",
+    "img/9561771228_o3.png",
+    "img/9561771228_o4.png"
+   ],
+   "answer": 0,
+   "nta_key": "9561772599",
+   "review_flags": []
+  },
+  {
+   "id": "9561771229",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.14 (Question ID 9561771229)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771229.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771229_o1.png",
+    "img/9561771229_o2.png",
+    "img/9561771229_o3.png",
+    "img/9561771229_o4.png"
+   ],
+   "answer": 2,
+   "nta_key": "9561772605",
+   "review_flags": []
+  },
+  {
+   "id": "9561771230",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.15 (Question ID 9561771230)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771230.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771230_o1.png",
+    "img/9561771230_o2.png",
+    "img/9561771230_o3.png",
+    "img/9561771230_o4.png"
+   ],
+   "answer": 1,
+   "nta_key": "9561772608",
+   "review_flags": []
+  },
+  {
+   "id": "9561771231",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.16 (Question ID 9561771231)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771231.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771231_o1.png",
+    "img/9561771231_o2.png",
+    "img/9561771231_o3.png",
+    "img/9561771231_o4.png"
+   ],
+   "answer": 0,
+   "nta_key": "9561772611",
+   "review_flags": []
+  },
+  {
+   "id": "9561771232",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.17 (Question ID 9561771232)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771232.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771232_o1.png",
+    "img/9561771232_o2.png",
+    "img/9561771232_o3.png",
+    "img/9561771232_o4.png"
+   ],
+   "answer": 1,
+   "nta_key": "9561772616",
+   "review_flags": []
+  },
+  {
+   "id": "9561771233",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.18 (Question ID 9561771233)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771233.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771233_o1.png",
+    "img/9561771233_o2.png",
+    "img/9561771233_o3.png",
+    "img/9561771233_o4.png"
+   ],
+   "answer": 2,
+   "nta_key": "9561772621",
+   "review_flags": []
+  },
+  {
+   "id": "9561771234",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.19 (Question ID 9561771234)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771234.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771234_o1.png",
+    "img/9561771234_o2.png",
+    "img/9561771234_o3.png",
+    "img/9561771234_o4.png"
+   ],
+   "answer": 1,
+   "nta_key": "9561772624",
+   "review_flags": []
+  },
+  {
+   "id": "9561771235",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.20 (Question ID 9561771235)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771235.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771235_o1.png",
+    "img/9561771235_o2.png",
+    "img/9561771235_o3.png",
+    "img/9561771235_o4.png"
+   ],
+   "answer": 0,
+   "nta_key": "9561772627",
+   "review_flags": []
+  },
+  {
+   "id": "9561771236",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "NUM",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.21 (Question ID 9561771236)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771236.png",
+   "answer": 2,
+   "nta_key": "2",
+   "review_flags": []
+  },
+  {
+   "id": "9561771237",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "NUM",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.22 (Question ID 9561771237)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771237.png",
+   "answer": 101,
+   "nta_key": "101",
+   "review_flags": []
+  },
+  {
+   "id": "9561771238",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "NUM",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.23 (Question ID 9561771238)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771238.png",
+   "answer": 1,
+   "nta_key": "1",
+   "review_flags": []
+  },
+  {
+   "id": "9561771239",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "NUM",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.24 (Question ID 9561771239)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771239.png",
+   "answer": 219,
+   "nta_key": "219",
+   "review_flags": []
+  },
+  {
+   "id": "9561771240",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "NUM",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.25 (Question ID 9561771240)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771240.png",
+   "answer": 105,
+   "nta_key": "105",
+   "review_flags": []
+  },
+  {
+   "id": "9561771241",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "NUM",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.26 (Question ID 9561771241)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771241.png",
+   "answer": 8,
+   "nta_key": "8",
+   "review_flags": []
+  },
+  {
+   "id": "9561771242",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "NUM",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.27 (Question ID 9561771242)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771242.png",
+   "answer": 5,
+   "nta_key": "5",
+   "review_flags": []
+  },
+  {
+   "id": "9561771243",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "NUM",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.28 (Question ID 9561771243)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771243.png",
+   "answer": 7,
+   "nta_key": "7",
+   "review_flags": []
+  },
+  {
+   "id": "9561771244",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "NUM",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.29 (Question ID 9561771244)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771244.png",
+   "answer": 36,
+   "nta_key": "36",
+   "review_flags": []
+  },
+  {
+   "id": "9561771245",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "NUM",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.30 (Question ID 9561771245)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771245.png",
+   "answer": 38,
+   "nta_key": "38",
+   "review_flags": []
+  },
+  {
+   "id": "9561771246",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.31 (Question ID 9561771246)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771246.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771246_o1.png",
+    "img/9561771246_o2.png",
+    "img/9561771246_o3.png",
+    "img/9561771246_o4.png"
+   ],
+   "answer": 1,
+   "nta_key": "9561772642",
+   "review_flags": [
+    "option 2: long option, image placed below its label (check)"
+   ]
+  },
+  {
+   "id": "9561771247",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.32 (Question ID 9561771247)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771247.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771247_o1.png",
+    "img/9561771247_o2.png",
+    "img/9561771247_o3.png",
+    "img/9561771247_o4.png"
+   ],
+   "answer": 0,
+   "nta_key": "9561772645",
+   "review_flags": []
+  },
+  {
+   "id": "9561771248",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.33 (Question ID 9561771248)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771248.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771248_o1.png",
+    "img/9561771248_o2.png",
+    "img/9561771248_o3.png",
+    "img/9561771248_o4.png"
+   ],
+   "answer": 2,
+   "nta_key": "9561772651",
+   "review_flags": []
+  },
+  {
+   "id": "9561771249",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.34 (Question ID 9561771249)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771249.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771249_o1.png",
+    "img/9561771249_o2.png",
+    "img/9561771249_o3.png",
+    "img/9561771249_o4.png"
+   ],
+   "answer": 0,
+   "nta_key": "9561772653",
+   "review_flags": []
+  },
+  {
+   "id": "9561771250",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.35 (Question ID 9561771250)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771250.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771250_o1.png",
+    "img/9561771250_o2.png",
+    "img/9561771250_o3.png",
+    "img/9561771250_o4.png"
+   ],
+   "answer": 3,
+   "nta_key": "9561772660",
+   "review_flags": []
+  },
+  {
+   "id": "9561771251",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.36 (Question ID 9561771251)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771251.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771251_o1.png",
+    "img/9561771251_o2.png",
+    "img/9561771251_o3.png",
+    "img/9561771251_o4.png"
+   ],
+   "answer": 2,
+   "nta_key": "9561772663",
+   "review_flags": []
+  },
+  {
+   "id": "9561771252",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.37 (Question ID 9561771252)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771252.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771252_o1.png",
+    "img/9561771252_o2.png",
+    "img/9561771252_o3.png",
+    "img/9561771252_o4.png"
+   ],
+   "answer": 1,
+   "nta_key": "9561772666",
+   "review_flags": []
+  },
+  {
+   "id": "9561771253",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.38 (Question ID 9561771253)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771253.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771253_o1.png",
+    "img/9561771253_o2.png",
+    "img/9561771253_o3.png",
+    "img/9561771253_o4.png"
+   ],
+   "answer": 1,
+   "nta_key": "9561772670",
+   "review_flags": []
+  },
+  {
+   "id": "9561771254",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.39 (Question ID 9561771254)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771254.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771254_o1.png",
+    "img/9561771254_o2.png",
+    "img/9561771254_o3.png",
+    "img/9561771254_o4.png"
+   ],
+   "answer": 0,
+   "nta_key": "9561772673",
+   "review_flags": []
+  },
+  {
+   "id": "9561771255",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.40 (Question ID 9561771255)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771255.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771255_o1.png",
+    "img/9561771255_o2.png",
+    "img/9561771255_o3.png",
+    "img/9561771255_o4.png"
+   ],
+   "answer": 1,
+   "nta_key": "9561772678",
+   "review_flags": []
+  },
+  {
+   "id": "9561771256",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.41 (Question ID 9561771256)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771256.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771256_o1.png",
+    "img/9561771256_o2.png",
+    "img/9561771256_o3.png",
+    "img/9561771256_o4.png"
+   ],
+   "answer": 1,
+   "nta_key": "9561772682",
+   "review_flags": []
+  },
+  {
+   "id": "9561771257",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.42 (Question ID 9561771257)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771257.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771257_o1.png",
+    "img/9561771257_o2.png",
+    "img/9561771257_o3.png",
+    "img/9561771257_o4.png"
+   ],
+   "answer": 1,
+   "nta_key": "9561772686",
+   "review_flags": []
+  },
+  {
+   "id": "9561771258",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.43 (Question ID 9561771258)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771258.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771258_o1.png",
+    "img/9561771258_o2.png",
+    "img/9561771258_o3.png",
+    "img/9561771258_o4.png"
+   ],
+   "answer": 0,
+   "nta_key": "9561772689",
+   "review_flags": []
+  },
+  {
+   "id": "9561771259",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.44 (Question ID 9561771259)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771259.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771259_o1.png",
+    "img/9561771259_o2.png",
+    "img/9561771259_o3.png",
+    "img/9561771259_o4.png"
+   ],
+   "answer": 1,
+   "nta_key": "9561772694",
+   "review_flags": []
+  },
+  {
+   "id": "9561771260",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.45 (Question ID 9561771260)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771260.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771260_o1.png",
+    "img/9561771260_o2.png",
+    "img/9561771260_o3.png",
+    "img/9561771260_o4.png"
+   ],
+   "answer": 1,
+   "nta_key": "9561772698",
+   "review_flags": []
+  },
+  {
+   "id": "9561771261",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.46 (Question ID 9561771261)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771261.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771261_o1.png",
+    "img/9561771261_o2.png",
+    "img/9561771261_o3.png",
+    "img/9561771261_o4.png"
+   ],
+   "answer": 0,
+   "nta_key": "9561772701",
+   "review_flags": []
+  },
+  {
+   "id": "9561771262",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.47 (Question ID 9561771262)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771262.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771262_o1.png",
+    "img/9561771262_o2.png",
+    "img/9561771262_o3.png",
+    "img/9561771262_o4.png"
+   ],
+   "answer": 3,
+   "nta_key": "9561772708",
+   "review_flags": []
+  },
+  {
+   "id": "9561771263",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.48 (Question ID 9561771263)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771263.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771263_o1.png",
+    "img/9561771263_o2.png",
+    "img/9561771263_o3.png",
+    "img/9561771263_o4.png"
+   ],
+   "answer": 2,
+   "nta_key": "9561772711",
+   "review_flags": []
+  },
+  {
+   "id": "9561771264",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.49 (Question ID 9561771264)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771264.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771264_o1.png",
+    "img/9561771264_o2.png",
+    "img/9561771264_o3.png",
+    "img/9561771264_o4.png"
+   ],
+   "answer": 0,
+   "nta_key": "9561772713",
+   "review_flags": []
+  },
+  {
+   "id": "9561771265",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.50 (Question ID 9561771265)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771265.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771265_o1.png",
+    "img/9561771265_o2.png",
+    "img/9561771265_o3.png",
+    "img/9561771265_o4.png"
+   ],
+   "answer": 1,
+   "nta_key": "9561772718",
+   "review_flags": []
+  },
+  {
+   "id": "9561771266",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "NUM",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.51 (Question ID 9561771266)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771266.png",
+   "answer": 8,
+   "nta_key": "8",
+   "review_flags": []
+  },
+  {
+   "id": "9561771267",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "NUM",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.52 (Question ID 9561771267)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771267.png",
+   "answer": 4,
+   "nta_key": "4",
+   "review_flags": []
+  },
+  {
+   "id": "9561771268",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "NUM",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.53 (Question ID 9561771268)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771268.png",
+   "answer": 3,
+   "nta_key": "3",
+   "review_flags": []
+  },
+  {
+   "id": "9561771269",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "NUM",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.54 (Question ID 9561771269)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771269.png",
+   "answer": 3,
+   "nta_key": "3",
+   "review_flags": []
+  },
+  {
+   "id": "9561771270",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "NUM",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.55 (Question ID 9561771270)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771270.png",
+   "answer": 3,
+   "nta_key": "3",
+   "review_flags": []
+  },
+  {
+   "id": "9561771271",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "NUM",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.56 (Question ID 9561771271)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771271.png",
+   "answer": 60,
+   "nta_key": "60",
+   "review_flags": []
+  },
+  {
+   "id": "9561771272",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "NUM",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.57 (Question ID 9561771272)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771272.png",
+   "answer": 4,
+   "nta_key": "4",
+   "review_flags": []
+  },
+  {
+   "id": "9561771273",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "NUM",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.58 (Question ID 9561771273)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771273.png",
+   "answer": 5,
+   "nta_key": "5",
+   "review_flags": []
+  },
+  {
+   "id": "9561771274",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "NUM",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.59 (Question ID 9561771274)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771274.png",
+   "answer": 125,
+   "nta_key": "125",
+   "review_flags": []
+  },
+  {
+   "id": "9561771275",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "NUM",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.60 (Question ID 9561771275)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771275.png",
+   "answer": 32,
+   "nta_key": "32",
+   "review_flags": []
+  },
+  {
+   "id": "9561771276",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.61 (Question ID 9561771276)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771276.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771276_o1.png",
+    "img/9561771276_o2.png",
+    "img/9561771276_o3.png",
+    "img/9561771276_o4.png"
+   ],
+   "answer": 3,
+   "nta_key": "9561772734",
+   "review_flags": []
+  },
+  {
+   "id": "9561771277",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.62 (Question ID 9561771277)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771277.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771277_o1.png",
+    "img/9561771277_o2.png",
+    "img/9561771277_o3.png",
+    "img/9561771277_o4.png"
+   ],
+   "answer": 3,
+   "nta_key": "9561772738",
+   "review_flags": []
+  },
+  {
+   "id": "9561771278",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.63 (Question ID 9561771278)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771278.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771278_o1.png",
+    "img/9561771278_o2.png",
+    "img/9561771278_o3.png",
+    "img/9561771278_o4.png"
+   ],
+   "answer": 2,
+   "nta_key": "9561772741",
+   "review_flags": []
+  },
+  {
+   "id": "9561771279",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.64 (Question ID 9561771279)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771279.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771279_o1.png",
+    "img/9561771279_o2.png",
+    "img/9561771279_o3.png",
+    "img/9561771279_o4.png"
+   ],
+   "answer": 1,
+   "nta_key": "9561772744",
+   "review_flags": []
+  },
+  {
+   "id": "9561771280",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.65 (Question ID 9561771280)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771280.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771280_o1.png",
+    "img/9561771280_o2.png",
+    "img/9561771280_o3.png",
+    "img/9561771280_o4.png"
+   ],
+   "answer": 3,
+   "nta_key": "9561772750",
+   "review_flags": []
+  },
+  {
+   "id": "9561771281",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.66 (Question ID 9561771281)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771281.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771281_o1.png",
+    "img/9561771281_o2.png",
+    "img/9561771281_o3.png",
+    "img/9561771281_o4.png"
+   ],
+   "answer": 1,
+   "nta_key": "9561772752",
+   "review_flags": []
+  },
+  {
+   "id": "9561771282",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.67 (Question ID 9561771282)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771282.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771282_o1.png",
+    "img/9561771282_o2.png",
+    "img/9561771282_o3.png",
+    "img/9561771282_o4.png"
+   ],
+   "answer": 2,
+   "nta_key": "9561772757",
+   "review_flags": []
+  },
+  {
+   "id": "9561771283",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.68 (Question ID 9561771283)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771283.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771283_o1.png",
+    "img/9561771283_o2.png",
+    "img/9561771283_o3.png",
+    "img/9561771283_o4.png"
+   ],
+   "answer": 2,
+   "nta_key": "9561772761",
+   "review_flags": [
+    "option 3: long option, image placed below its label (check)"
+   ]
+  },
+  {
+   "id": "9561771284",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.69 (Question ID 9561771284)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771284.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771284_o1.png",
+    "img/9561771284_o2.png",
+    "img/9561771284_o3.png",
+    "img/9561771284_o4.png"
+   ],
+   "answer": 0,
+   "nta_key": "9561772763",
+   "review_flags": []
+  },
+  {
+   "id": "9561771285",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.70 (Question ID 9561771285)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771285.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771285_o1.png",
+    "img/9561771285_o2.png",
+    "img/9561771285_o3.png",
+    "img/9561771285_o4.png"
+   ],
+   "answer": 0,
+   "nta_key": "9561772767",
+   "review_flags": []
+  },
+  {
+   "id": "9561771286",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.71 (Question ID 9561771286)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771286.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771286_o1.png",
+    "img/9561771286_o2.png",
+    "img/9561771286_o3.png",
+    "img/9561771286_o4.png"
+   ],
+   "answer": 3,
+   "nta_key": "9561772774",
+   "review_flags": []
+  },
+  {
+   "id": "9561771287",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.72 (Question ID 9561771287)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771287.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771287_o1.png",
+    "img/9561771287_o2.png",
+    "img/9561771287_o3.png",
+    "img/9561771287_o4.png"
+   ],
+   "answer": 3,
+   "nta_key": "9561772778",
+   "review_flags": [
+    "option 1: long option, image placed below its label (check)"
+   ]
+  },
+  {
+   "id": "9561771288",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.73 (Question ID 9561771288)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771288.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771288_o1.png",
+    "img/9561771288_o2.png",
+    "img/9561771288_o3.png",
+    "img/9561771288_o4.png"
+   ],
+   "answer": 2,
+   "nta_key": "9561772781",
+   "review_flags": []
+  },
+  {
+   "id": "9561771289",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.74 (Question ID 9561771289)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771289.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771289_o1.png",
+    "img/9561771289_o2.png",
+    "img/9561771289_o3.png",
+    "img/9561771289_o4.png"
+   ],
+   "answer": 1,
+   "nta_key": "9561772784",
+   "review_flags": []
+  },
+  {
+   "id": "9561771290",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.75 (Question ID 9561771290)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771290.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771290_o1.png",
+    "img/9561771290_o2.png",
+    "img/9561771290_o3.png",
+    "img/9561771290_o4.png"
+   ],
+   "answer": 1,
+   "nta_key": "9561772788",
+   "review_flags": []
+  },
+  {
+   "id": "9561771291",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.76 (Question ID 9561771291)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771291.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771291_o1.png",
+    "img/9561771291_o2.png",
+    "img/9561771291_o3.png",
+    "img/9561771291_o4.png"
+   ],
+   "answer": 3,
+   "nta_key": "9561772794",
+   "review_flags": []
+  },
+  {
+   "id": "9561771292",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.77 (Question ID 9561771292)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771292.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771292_o1.png",
+    "img/9561771292_o2.png",
+    "img/9561771292_o3.png",
+    "img/9561771292_o4.png"
+   ],
+   "answer": 0,
+   "nta_key": "9561772795",
+   "review_flags": []
+  },
+  {
+   "id": "9561771293",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.78 (Question ID 9561771293)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771293.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771293_o1.png",
+    "img/9561771293_o2.png",
+    "img/9561771293_o3.png",
+    "img/9561771293_o4.png"
+   ],
+   "answer": 3,
+   "nta_key": "9561772802",
+   "review_flags": []
+  },
+  {
+   "id": "9561771294",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.79 (Question ID 9561771294)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771294.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771294_o1.png",
+    "img/9561771294_o2.png",
+    "img/9561771294_o3.png",
+    "img/9561771294_o4.png"
+   ],
+   "answer": 3,
+   "nta_key": "9561772806",
+   "review_flags": []
+  },
+  {
+   "id": "9561771295",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "MCQ",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.80 (Question ID 9561771295)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771295.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/9561771295_o1.png",
+    "img/9561771295_o2.png",
+    "img/9561771295_o3.png",
+    "img/9561771295_o4.png"
+   ],
+   "answer": 3,
+   "nta_key": "9561772810",
+   "review_flags": []
+  },
+  {
+   "id": "9561771296",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "NUM",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.81 (Question ID 9561771296)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771296.png",
+   "answer": 14,
+   "nta_key": "14",
+   "review_flags": []
+  },
+  {
+   "id": "9561771297",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "NUM",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.82 (Question ID 9561771297)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771297.png",
+   "answer": 57,
+   "nta_key": "57",
+   "review_flags": []
+  },
+  {
+   "id": "9561771298",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "NUM",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.83 (Question ID 9561771298)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771298.png",
+   "answer": 15,
+   "nta_key": "15",
+   "review_flags": []
+  },
+  {
+   "id": "9561771299",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "NUM",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.84 (Question ID 9561771299)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771299.png",
+   "answer": 2,
+   "nta_key": "2",
+   "review_flags": []
+  },
+  {
+   "id": "9561771300",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "NUM",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.85 (Question ID 9561771300)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771300.png",
+   "answer": 338,
+   "nta_key": "338",
+   "review_flags": []
+  },
+  {
+   "id": "9561771301",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "NUM",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.86 (Question ID 9561771301)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771301.png",
+   "answer": 2,
+   "nta_key": "2",
+   "review_flags": []
+  },
+  {
+   "id": "9561771302",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "NUM",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.87 (Question ID 9561771302)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771302.png",
+   "answer": 56,
+   "nta_key": "56",
+   "review_flags": []
+  },
+  {
+   "id": "9561771303",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "NUM",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.88 (Question ID 9561771303)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771303.png",
+   "answer": 6,
+   "nta_key": "6",
+   "review_flags": []
+  },
+  {
+   "id": "9561771304",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "NUM",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.89 (Question ID 9561771304)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771304.png",
+   "answer": 5,
+   "nta_key": "5",
+   "review_flags": []
+  },
+  {
+   "id": "9561771305",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2024,
+   "type": "NUM",
+   "source": "JEE Main 2024 (Session 1), 1 Feb Shift 2, Q.90 (Question ID 9561771305)",
+   "question": "",
+   "solution": "",
+   "image": "img/9561771305.png",
+   "answer": 6,
+   "nta_key": "6",
+   "review_flags": []
+  }
+ ]
+}

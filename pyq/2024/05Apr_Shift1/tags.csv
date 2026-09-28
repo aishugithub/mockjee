@@ -1,0 +1,91 @@
+q,chapter,subtopic,confidence,secondary
+1,M1,Counting one-one maps with a condition,high,M4
+2,M2,Complex number inequalities,high,
+3,M3,Determinant of adjoint expressions,high,
+4,M3,System of linear equations with infinitely many solutions,high,
+5,M7,Increasing and decreasing functions,high,
+6,M6,Telescoping sums,high,M10
+7,M7,Continuity: finding constants,high,
+8,M7,Derivative of inverse function,high,M1
+9,M7,Maximum area of circumscribing rectangle,high,
+10,M8,Definite integral using odd/even and King's property,high,
+11,M8,Definite integral of sin/(a sin + b cos),high,
+12,M9,Linear differential equation,high,
+13,M10,Circle touching two lines: shortest distance,high,
+14,M10,Isosceles right triangle with vertices on a line,high,
+15,M10,Circle on diameter; ellipse latus rectum,high,
+16,M11,Perpendicular lines in 3D,high,
+17,M11,Intersection of two lines; distance,high,
+18,M12,Area of quadrilateral from vectors,high,
+19,M13,Probability of repeated roots,high,M2
+20,M14,Trigonometric equation: value of cosine,high,
+21,M2,Equation with greatest integer and fractional part,high,M1
+22,M2,Modulus equation: number of real roots,high,
+23,M4,Ways to get a sum with four dice,high,
+24,M5,Constant term in a product expansion,high,
+25,M6,AP: alternating sum of squares,high,
+26,M9,Limit leading to a differential equation,high,M7
+27,M8,Area between two parabolas,high,
+28,M10,Parabola: focal chord length and distance,high,
+29,M12,Vector equation with cross product,high,
+30,M13,Variance of a hypergeometric random variable,high,
+31,P1,Dimensions of sqrt(uG),high,P6
+32,P2,Angle between vector and resultant,high,
+33,P3,Newton's third law: action force on floor,high,
+34,P4,Work against gravity by two routes,high,
+35,P5,Radius of gyration of sphere and cylinder,high,
+36,P6,Energies of a planet in orbit,high,
+37,P7,Contact angle and capillary action,high,
+38,P8,Heat in a cyclic process,high,
+39,P9,Collision frequency vs temperature,high,
+40,P10,Pendulum time period at height,high,P6
+41,P11,Ratio of Coulomb to gravitational force,high,P6
+42,P12,Equivalent resistance and current,high,
+43,P13,Magnetic field of a coaxial cable,high,
+44,P14,Mutual inductance of coplanar concentric loops,high,
+45,P15,Displacement current in a capacitor,high,P14
+46,P16,Wavefront from a source at the focus,high,
+47,P17,Stopping potential vs frequency graph,high,
+48,P18,Bohr model: total and potential energy,high,
+49,P19,Logic gates controlling a bulb,high,
+50,P1,Mean in correct significant figures,high,
+51,P2,Distance in successive seconds,high,
+52,P3,Tensions in a system of hanging blocks,high,
+53,P7,Maximum length of a hanging wire,high,
+54,P11,Capacitors in series and parallel: energy,high,
+55,P12,RC discharge: resistance from time,high,P11
+56,P13,Wire suspended by magnetic force,high,
+57,P14,Series LCR: rms voltage across capacitor,high,
+58,P16,YDSE: position of third maximum,high,
+59,P18,Energy released in helium fusion,high,
+60,P20,Galvanometer resistance by half-deflection,high,P12
+61,C1,Dalton's atomic theory,high,
+62,C3,Sigma and pi bonds in ethylene,high,
+63,C6,Le Chatelier's principle,high,
+64,C7,Dry cell: cathode reaction,high,
+65,C7,Kohlrausch's law: molar conductivity,high,
+66,C9,Isoelectronic species: ionic radii,high,
+67,C10,Group 13: inert pair effect and atomic size,high,C9
+68,C10,Boron: isotopes and oxide,high,
+69,C11,Manganese oxidation states,high,
+70,C12,Spectrochemical series,high,
+71,C12,Paramagnetism of aqua complexes,high,C11
+72,C4,Enthalpy of neutralisation,high,
+73,C1,Molecular formula from percentage composition,high,
+74,C15,Nitration of benzene: mechanism,high,C14
+75,C17,Boiling points of ether; alkane; ketone; alcohol,high,
+76,C15,Dipole moments of cis and trans alkenes,high,C14
+77,C17,Bromination of phenol,high,
+78,C17,Dow's process; nitration to picric acid,high,C16
+79,C17,Wolff-Kishner reduction,high,
+80,C19,Ninhydrin test for proteins,high,C20
+81,C2,Velocity of electron in Bohr orbit,high,
+82,C3,Lewis structure of nitrite ion,high,
+83,C4,Heat of combustion at constant pressure and volume,high,
+84,C5,Osmotic pressure difference,high,
+85,C8,Order of reaction from rate data,high,
+86,C11,Magnetic moment of a strong oxidising ion,high,
+87,C20,Borax bead test: magnetic moment,high,C11
+88,C16,Sandmeyer's reaction,high,
+89,C17,Sulphonation and nitration of phenol,high,
+90,C18,Bromination of aniline: percentage yield,high,C1

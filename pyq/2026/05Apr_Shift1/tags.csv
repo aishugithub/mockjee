@@ -1,0 +1,76 @@
+q,chapter,subtopic,confidence,secondary
+1,M2,Roots of quadratic with complex coefficients,high,
+2,M6,AP from sum formula; sum of squares of terms,high,
+3,M3,Matrix from column conditions; det of adjoint,high,
+4,M3,Homogeneous system with infinitely many solutions; monotonicity,high,M7
+5,M6,Telescoping sum,high,
+6,M14,Tan of sum from quadratic roots,high,M2
+7,M13,Conditional probability (Bayes),high,
+8,M13,Mean deviation about mean,high,
+9,M10,Ellipse: focus; eccentricity; triangle area,high,
+10,M10,Circle and parabola vertex: maximum distance,high,
+11,M10,Equilateral triangle: orthocentre,high,
+12,M14,Range of trigonometric expression,high,
+13,M11,Distance of point from line,high,
+14,M12,Vector equations with cross product,high,
+15,M11,Intersection of two lines,high,
+16,M8,Area of region bounded by curves,high,
+17,M7,Limit with trigonometric product,high,
+18,M8,Improper definite integral with logarithm,high,
+19,M7,Functional equation; minimum value,high,M1
+20,M8,Definite integral of trigonometric function,high,
+21,M4,Counting one-one functions with conditions,high,M1
+22,M4,Number of ways a best-of series is won,high,
+23,M5,Binomial coefficients of given powers,high,
+24,M14,Sum of inverse tangents (telescoping),high,
+25,M9,Homogeneous differential equation; circle radius condition,high,M10
+26,P20,Vernier callipers: zero error,high,P1
+27,P1,Dimensional formula of combination of L; C; R,high,
+28,P6,Variation of g with depth and height,high,
+29,P3,Pulley system: tension ratio,high,
+30,P3,Block on accelerating wedge,high,
+31,P7,Young's modulus: dependence on dimensions,high,
+32,P8,Internal energy and degrees of freedom,high,P9
+33,P8,Laws of thermodynamics; intensive and extensive variables,high,
+34,P12,Kirchhoff's laws: currents in a network,high,
+35,P17,De Broglie wavelength of electron in electric field,high,
+36,P18,Hydrogen transition: wavelength from orbit radii,high,
+37,P15,Displacement current in a capacitor,high,
+38,P12,Network of cells and resistors,high,
+39,P16,YDSE fringe width in a medium,high,
+40,P16,Prism: minimum deviation from speed of light,high,
+41,P17,Photoelectric effect: work function,high,
+42,P16,Compound microscope: magnification and tube length,high,
+43,P7,Breaking stress of wires,high,
+44,P14,Series RC circuit with frequency change,high,
+45,P19,Logic gates with LEDs,high,
+46,P7,Shear modulus: displacement,high,
+47,P2,Free fall: speed equals g condition,high,
+48,P10,Wave equation: wavelength,high,
+49,P13,Force on moving charge: acceleration perpendicular to B,high,
+50,P14,Magnetic energy in inductor combination,high,
+51,C1,Decomposition stoichiometry of silver carbonate,high,
+52,C2,Energy order of orbitals (n+l rule),high,
+53,C2,Atomic structure statements,high,
+54,C5,Mole fraction from mass percentage,high,
+55,C6,Solubility product of M3A2,high,
+56,C6,pH of acid-base mixtures,high,
+57,C8,First order gas phase kinetics: rate constant from pressure,high,
+58,C9,Electronegativity; oxidation states of oxygen,high,C10
+59,C10,Nitrogen: anomalous properties,high,
+60,C11,Interstitial compounds,high,
+61,C12,Metal carbonyls: synergic bonding,high,
+62,C12,Crystal field theory statements,high,
+63,C14,Stability of carbanions,high,
+64,C15,Ozonolysis; haloform reaction; identifying alkene,high,C17
+65,C15,Friedel-Crafts alkylation,high,C14
+66,C18,Preparation of isocyanides,high,C16
+67,C17,Dehydration of alcohols,high,
+68,C18,Amines: basicity; Gabriel; Hoffmann; diazonium,high,
+69,C19,Anomers of glucose,high,
+70,C20,Primary standards and indicators,high,
+71,C3,Hybridisation sp3d of central atom,high,
+72,C13,Carius estimation of sulphur,high,
+73,C17,Nitration of phenol; steam distillation,high,C13
+74,C6,Van't Hoff equation from Kp data,high,C4
+75,C8,First order: time for 99% completion,high,

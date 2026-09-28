@@ -1,0 +1,76 @@
+q,chapter,subtopic,confidence,secondary
+1,M1,Function and its inverse: points of intersection,high,
+2,M2,Roots of quadratic in complex numbers; modulus,high,
+3,M3,System of linear equations with infinitely many solutions,high,
+4,M2,Cubic with complex roots; definite integral,low,M8
+5,M2,Quadratic with both roots positive,high,
+6,M3,Eigenvalue-type determinant equation; circle meets axes,low,M10
+7,M6,Infinite GP sums with logarithms,high,
+8,M13,Standard deviation from sums of squares,high,
+9,M5,Term independent of x,high,
+10,M10,Ellipse; circle and line: centroid condition,high,
+11,M10,Hyperbola: foci; directrices; triangle area,high,
+12,M7,Maximum value of a trigonometric function,high,M14
+13,M11,Shortest distance between skew lines,high,
+14,M11,Image of a point in a line,high,
+15,M12,Vector triple products and components,high,
+16,M1,Functional equation,high,M6
+17,M4,Counting non-negative integer solutions,high,
+18,M8,Area between two parabolas,high,
+19,M9,Linear differential equation,high,
+20,M8,Definite integral of inverse cot,high,
+21,M13,Probability that three dates form an AP,high,M4
+22,M7,Continuity and differentiability of composite function,high,
+23,M10,Angle bisector of half-lines; circumradius,high,
+24,M10,Locus of centroid for triangle in parabola,high,
+25,M8,Integral equation (Leibniz rule),high,M7
+26,P1,Dimensions of photoelectric quantities,high,P17
+27,P2,Relative velocity,high,
+28,P3,Motion under constant force: position ratio,high,P2
+29,P2,Projectile: angle with horizontal,high,
+30,P6,Variation of g with height,high,
+31,P7,Elongation of strings with hanging masses,high,
+32,P7,Equation of continuity,high,
+33,P9,Kinetic energy and rms speed of gases,high,
+34,P7,Thermal expansion of a strip,high,
+35,P10,Physical pendulum: disc oscillating about tangent axis,high,P5
+36,P11,Dipole oscillating in electric field: frequency change,high,P10
+37,P11,Capacitor network: equivalent capacitance,high,
+38,P11,Conductors in electrostatics; charges inside a capacitor,high,
+39,P13,Magnetic intensity in a solenoid with core,high,
+40,P15,EM wave: E from B,high,
+41,P16,Lens maker's formula,high,
+42,P16,Malus's law with three polarisers,high,
+43,P18,Rutherford scattering,high,
+44,P17,De Broglie wavelength of electron and proton,high,
+45,P19,Diode reverse bias and breakdown,high,
+46,P19,Zener diode series resistance,high,
+47,P2,Maximum range of projectile,high,
+48,P13,Field of two perpendicular bar magnets,high,
+49,P13,Torque on current loop in magnetic field,high,
+50,P16,YDSE with mica sheet: fringe shift,high,
+51,C1,Mole concept: number of atoms,high,
+52,C2,Bohr radius of hydrogen-like species,high,
+53,C3,Molecular orbital diagrams: pi antibonding,high,
+54,C5,Osmosis between isotonic solutions,high,
+55,C6,Buffer pH in partial neutralisation,high,
+56,C14,Reaction mechanisms: substitution and addition types,high,
+57,C9,Successive ionisation enthalpies,high,
+58,C10,Group 13 element (thallium): oxidation states,low,C9
+59,C11,Lanthanoid 4f electron configurations,high,
+60,C12,Nickel complexes: unpaired electrons and absorption,high,
+61,C3,Carbon-oxygen bond length and resonance,low,C14
+62,C11,Manganese oxidation states; unpaired electrons in ions,high,
+63,C8,Concentration-time graphs and reaction order,high,
+64,C15,Alkyne formation from styrene and reduction,high,
+65,C14,Stereoisomerism: enantiomers and identical molecules,high,
+66,C17,Acidity of phenols and carboxylic acids,high,
+67,C18,Basicity of substituted anilines,high,
+68,C19,D-aldotetroses: oxidation to meso acid,high,
+69,C20,Qualitative analysis: group reagents,high,C11
+70,C20,Tests for functional groups,high,
+71,C4,Enthalpy of formation from combustion data,high,
+72,C6,Equilibrium constant and standard Gibbs energy,high,C4
+73,C7,Nernst equation,high,
+74,C8,First order kinetics: time for fraction left,high,
+75,C13,Estimation of sulphur,high,

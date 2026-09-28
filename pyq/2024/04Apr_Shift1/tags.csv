@@ -1,0 +1,91 @@
+q,chapter,subtopic,confidence,secondary
+1,M1,Domain with inverse sine and logarithm,high,
+2,M2,Complex equation with conjugate and modulus,high,
+3,M2,Transforming roots of a quadratic,high,
+4,M3,Homogeneous system with non-trivial solution,high,M14
+5,M3,Determinant of product of adjoints,high,
+6,M7,Continuity at a point: finding constants,high,
+7,M4,Triangles from points on sides of a triangle,high,
+8,M5,Sum of rational terms in binomial expansion,high,
+9,M6,GP terms as AP terms,high,
+10,M8,Definite integral of modulus functions,high,M1
+11,M7,Derivative of inverse function,high,M1
+12,M7,Maximum and minimum of a rational function,high,
+13,M8,Area between parabola and hyperbola,high,
+14,M9,Variable separable differential equation,high,
+15,M10,Square inscribed in a circle,high,
+16,M10,Triangle with sides shifted inwards,high,
+17,M11,Point on a line at given distance,high,
+18,M12,Unit vector at given angles to two vectors,high,
+19,M13,Bayes' theorem with three urns,high,
+20,M13,Mean deviation from mean and variance,high,
+21,M1,Sets: counting with three subjects,high,
+22,M3,Maximum determinant with row sum condition,high,
+23,M6,Series with binomial coefficients and factorials,high,M5
+24,M7,Limit of radical expressions,high,
+25,M8,Definite integral of trigonometric function,high,
+26,M9,Linear differential equation,high,
+27,M3,Matrix equation; hyperbola eccentricity and latus rectum,high,M10
+28,M10,Parabola: focal chord distance from origin,high,
+29,M11,Shortest distance; integral with greatest integer,high,M8
+30,M12,Area of triangle from vectors,high,
+31,P1,Dimensions in stationary wave equation,high,P10
+32,P2,Motion in a plane: nature of path,high,
+33,P3,Friction: acceleration vs time graph,high,
+34,P2,Distance in nth second: acceleration,high,
+35,P4,Energy loss in rebound,high,
+36,P6,Gravitational force of a semicircular wire,high,
+37,P7,Hydrostatics and venturi tube,high,
+38,P8,Celsius and Fahrenheit scales,high,
+39,P9,P-T graph for different densities,high,
+40,P11,KE of electron orbiting a line charge,high,
+41,P12,Platinum resistance thermometer,high,
+42,P13,Electron moving along solenoid axis,high,
+43,P14,AC circuits: phase difference,high,
+44,P15,EM wave: B from E,high,
+45,P16,Combination of lenses: power,high,
+46,P17,Photoelectric current vs voltage graph,high,
+47,P18,Nuclear fission products,high,
+48,P19,Diodes in a resistor network,high,
+49,P20,Error in focal length measurement,high,P1
+50,P20,Potentiometer: internal resistance,high,P12
+51,P2,Resultant of two forces: angle,high,
+52,P5,Rolling bodies on incline: height ratio,high,
+53,P7,Work in blowing a soap bubble,high,
+54,P7,Elastic spring: tension from lengths,low,P10
+55,P11,Fields of sheet charge and line charge,high,
+56,P12,Cube of resistors: potential difference,high,
+57,P13,Force on loop in non-uniform magnetic field,high,
+58,P14,rms value of AC with DC offset,high,
+59,P16,YDSE with two wavelengths: overlapping fringes,high,
+60,P18,Recoil of hydrogen atom: wavelength change,high,
+61,C1,Molarity of NaCl solution,high,
+62,C3,Dipole moment comparison,high,
+63,C6,Basic strength of conjugate bases,low,C14
+64,C7,Calomel electrode type,high,
+65,C7,Nernst equation: hydrogen electrode in water,high,
+66,C9,First ionisation enthalpy order,high,
+67,C9,Group valency of elements,high,C10
+68,C3,sp3 hybridisation of central atom,high,
+69,C11,Scandium: single oxidation state,high,
+70,C12,Spectrochemical series,high,
+71,C12,Unpaired d-electrons in aqua complexes,high,
+72,C20,Iron group precipitation: role of NH4Cl,high,C6
+73,C13,Lassaigne's test: hydrazine,high,
+74,C14,Electromeric and resonance effects,high,
+75,C14,Electromeric effect statements,high,
+76,C16,Elimination and addition: position isomers,high,C15
+77,C16,Elimination and Markovnikov addition,high,
+78,C17,Aldol and cross-aldol reactions,high,
+79,C17,Clemmensen reduction,high,
+80,C19,L-glucose structure,high,
+81,C2,De Broglie wavelength in Bohr orbit,high,
+82,C3,Unpaired electrons from MO theory,high,
+83,C4,Enthalpy of reaction from bond energies,high,
+84,C5,Elevation of boiling point and vapour pressure,high,
+85,C8,Activation energy of a composite rate constant,high,
+86,C11,Manganate disproportionation: magnetic moments,high,
+87,C7,Permanganate-oxalate titration,high,
+88,C15,Chain isomers of heptane,high,C14
+89,C17,Named reactions: Friedel-Crafts; Rosenmund; Gattermann-Koch,high,C18
+90,C18,Ethylamine with nitrous acid: nitrogen evolved,high,C1

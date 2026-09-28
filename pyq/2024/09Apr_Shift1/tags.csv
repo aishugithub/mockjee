@@ -1,0 +1,91 @@
+q,chapter,subtopic,confidence,secondary
+1,M1,Domain of inverse sine function,high,
+2,M2,Quadratic with roots from powers of given roots,high,
+3,M3,System of linear equations with infinitely many solutions,high,
+4,M5,Coefficient of a term in a sum of binomial products,high,
+5,M6,Telescoping sum of reciprocals of AP terms,high,
+6,M7,Cubic from values of derivatives,high,
+7,M10,Line through a point: minimum area of triangle with axes,high,M7
+8,M8,Integral of (a + b tan x)/(c + d tan x),high,
+9,M8,Area of circle cut by a parabola,high,
+10,M9,Homogeneous differential equation,high,
+11,M9,Solution curve is a conic: vertex,high,M10
+12,M10,Ellipse: eccentricity and latus rectum from composite functions,high,M1
+13,M10,Circle with centre from limit of intersection point,high,M7
+14,M10,Reflection of a ray; parallelogram vertex,high,
+15,M11,Line intersecting two lines and parallel to a third,high,
+16,M11,Shortest distance between skew lines,high,
+17,M12,Area of parallelogram and quadrilateral with vectors,high,
+18,M12,Area of triangle from vectors,high,
+19,M13,Mean deviation about median: frequency table,high,
+20,M14,Product cos x cos(60-x) cos(60+x); solving for theta,high,
+21,M1,Counting elements of a relation,high,
+22,M2,Complex numbers: lattice points in a region,high,
+23,M3,Determinant of adjoint expressions,high,
+24,M7,Continuity: limits of exponential forms,high,
+25,M5,Remainder using binomial theorem,high,
+26,M1,Additive function: sum condition,high,M6
+27,M7,Local minimum; rational inequality,high,M2
+28,M8,Limit of a sum as a definite integral,high,M7
+29,M10,Circle through two points touching another circle,high,
+30,M13,Probability that a quadratic has real roots (dice),high,M2
+31,P1,Dimensions of latent heat,high,
+32,P2,Average speed over two halves,high,
+33,P5,Equilibrium of a bar: force on the shoulder,high,P3
+34,P3,Atwood machine: mass ratio from acceleration,high,
+35,P4,Work-energy theorem with v proportional to root x,high,
+36,P6,Change in energy from surface to orbit,high,
+37,P7,Floating hollow sphere: cavity ratio,high,
+38,P8,Work done in adiabatic expansion,high,
+39,P8,Adiabatic process: pressure ratio,high,
+40,P11,Capacitor with stepped plate: parallel combination,high,
+41,P12,Equivalent resistance of a network,high,
+42,P13,Ampere's law; momentum of the EM field,low,P15
+43,P14,Bulb with capacitor on AC: effect of dielectric,high,P11
+44,P15,Equation of magnetic field in an EM wave,high,
+45,P16,Image by concave lens,high,
+46,P17,De Broglie wavelengths at equal energy,high,
+47,P18,Mass-energy equivalence,high,
+48,P19,LED: wavelength from band gap,high,
+49,P20,Vernier callipers: least count,high,P1
+50,P12,Galvanometer to ammeter: shunt,high,
+51,P2,Angle between vectors: magnitude condition,high,
+52,P5,Torque on a wheel: angular velocity,high,
+53,P7,Young's modulus: extension of a wire,high,
+54,P10,SHM: amplitude from position; velocity; acceleration,high,
+55,P11,Potential at centre of a charged half ring,high,
+56,P12,Kirchhoff's laws: current in a branch,high,
+57,P13,Force on a loop in a non-uniform magnetic field,high,
+58,P14,Coil on DC and AC: self inductance,high,
+59,P16,Young's double slit: position for given intensity,high,
+60,P18,Triple alpha process: rate from power,high,
+61,C2,Energy order of orbitals: (n+l) rule,high,
+62,C3,Hybridisation: sp2 central atoms,high,
+63,C5,Osmosis between two solutions,high,
+64,C7,Molar conductivity vs root concentration,high,
+65,C7,Oxidation state definition; p pi-p pi bonding,low,C10
+66,C10,S8 vs O2: multiple bonding,high,
+67,CX,Fluoride and fluoroapatite in teeth (environmental chemistry),low,C10
+68,C11,Stability of Cu(I) and Cu(II),high,
+69,C12,Geometrical isomers of [Co(en)2Cl2]+,high,
+70,C13,Basis of purification methods,high,
+71,C14,Resonance structures: relative stability,high,
+72,C17,Friedel-Crafts acylation; Clemmensen reduction; ring closure,high,C15
+73,C16,SN2 of benzyl bromide: transition state conjugation,high,
+74,C16,Wurtz reaction; Grignard with D2O; Swarts reaction,high,
+75,C15,Gattermann-Koch formylation,high,C17
+76,C15,Hydration vs hydroboration-oxidation of propene,high,C17
+77,C17,Acidity of substituted phenols (pKa order),high,
+78,C18,Basic strength of pyrrole; pyridine; piperidine,high,
+79,C10,Lead sulphide with dilute nitric acid,low,
+80,C20,Primary standard in titrimetric analysis,high,
+81,C5,Molarity to molality,high,
+82,C3,Molecular orbital theory: one unpaired electron,high,
+83,C4,Hess's law: enthalpy of hydration,high,
+84,C4,Enthalpy of neutralisation,high,
+85,C7,Electrochemical series: metals oxidised by dichromate,high,
+86,C8,Rate law and zero-order plot,high,
+87,C11,Colourless lanthanoid ions,high,
+88,C12,Ambidentate ligands,high,
+89,C14,Inductive; mesomeric and hyperconjugation effects,high,
+90,C19,Essential amino acids,high,

@@ -1,0 +1,76 @@
+q,chapter,subtopic,confidence,secondary
+1,M1,Domain of inverse sine with greatest integer function,high,
+2,M2,Quadratic with one root twice the other; parabola latus rectum,high,M10
+3,M2,Roots as eccentricities of conics,high,M10
+4,M2,Complex equation with parameter: existence of solution,high,
+5,M6,Alternating sum of cubes,high,
+6,M6,AP and GP combined,high,
+7,M4,Forming words with given vowels and consonants,high,
+8,M5,Middle terms of binomial expansions,high,
+9,M13,Mean and standard deviation from sums,high,
+10,M13,Total probability with a double-headed coin,high,
+11,M10,Hyperbola: eccentricity and latus rectum,high,
+12,M10,Parabola chord: angle at focus,high,
+13,M14,Inverse tangent equation,high,
+14,M14,Trigonometric equation: sum of solutions,high,
+15,M11,Image of a point in a line; point at given distance,high,
+16,M11,Line perpendicular to two lines; angle with a third,high,M12
+17,M7,Limit of indeterminate form,high,
+18,M8,Definite integral using King's property,high,
+19,M8,Area of region bounded by curves,high,
+20,M8,Bijective functions; area between curves,low,M1
+21,M3,Adjoint of adjoint; matrix equation,high,
+22,M10,Circle: equilateral triangle inscribed; chord length,high,
+23,M12,Vector equations: cross and dot product,high,
+24,M14,Min/max of trigonometric functions; GP sum,low,M6
+25,M9,Differential equation (exact / substitution),high,
+26,P1,Percentage error in density,high,
+27,P1,Dimensions of constants in potential energy formula,high,
+28,P4,Work done by resistive force (work-energy theorem),high,
+29,P3,Blocks on accelerating cube: friction,high,
+30,P7,Maximum stress in lift cable,high,P3
+31,P5,Torque and rotations to stop a sphere,high,
+32,P3,Vertical circular motion: normal force at top,high,P4
+33,P5,Centre of mass of three particles,high,
+34,P7,Young's modulus: equal elongation of joined wires,high,
+35,P9,Connected vessels at different temperatures: final pressure,high,
+36,P16,Interference: intensity ratio from path difference,high,
+37,P10,SHM: time between positions,high,
+38,P11,Electric field of charged half ring,high,
+39,P19,LED with Zener diode: series resistance,low,P12
+40,P15,Intensity of point source on a sphere,high,
+41,P16,Refraction at spherical surface: magnification,high,
+42,P13,Magnetic energy density at centre of loop,high,P14
+43,P14,LR circuit growth: voltage across inductor,high,
+44,P18,Balmer lines: photon momentum ratio,high,
+45,P14,Series LCR: power factor,high,
+46,P12,Kirchhoff's laws: heat in resistor,high,
+47,P16,Polariser and optically active solution,high,
+48,P18,Nuclear reaction energy (Li to He),high,
+49,P11,Work done by electric field on a charge,high,
+50,P7,Bulk modulus: work in isothermal compression,low,P8
+51,C1,Empirical formula of iron oxide,high,
+52,C2,Hydrogen-like spectra: Lyman and Balmer wavelengths,high,
+53,C2,Radial nodes and nodal planes,high,
+54,C3,Isoelectronic species: Lewis structures,high,
+55,C4,Work in single-stage vs multistage processes,high,
+56,C5,Relative lowering of vapour pressure,high,
+57,C6,Partial pressures at equilibrium with inert gas,high,
+58,C7,Kohlrausch's law: solubility product of BaSO4,high,C6
+59,C10,Group 13: electrode potentials; ionisation enthalpies,high,
+60,C11,Catalysts: V2O5; Ziegler-Natta; Wacker process,high,
+61,C12,CFSE in tetrahedral field,high,
+62,C12,d-orbital energies in tetrahedral complexes,high,
+63,C13,Chromatography: Rf value change,low,C17
+64,C14,Metamerism; keto-enol tautomerism,high,
+65,C15,Preparation of methane,high,
+66,C16,Addition of HBr; Sandmeyer and Gattermann,high,C15
+67,C17,Dehydration of tertiary alcohol; esterification,low,C15
+68,C18,Boiling points of alcohols; amines; alkanes,high,C17
+69,C19,Vitamin deficiency diseases,high,
+70,C19,Side-chain tests for amino acids,high,C20
+71,C9,Ionisation enthalpy: energy for given mass,high,
+72,C18,Diazoaminobenzene rearrangement,high,
+73,C17,Phenol reduction with zinc dust,high,
+74,C8,First order kinetics: percentage remaining,high,
+75,C6,Gibbs energy from K and enthalpy: entropy,high,C4

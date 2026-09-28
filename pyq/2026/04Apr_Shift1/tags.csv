@@ -1,0 +1,76 @@
+q,chapter,subtopic,confidence,secondary
+1,M1,Domain of inverse cosine with greatest integer function,high,
+2,M2,Modulus equation; solution set,high,
+3,M2,Complex numbers: modulus and argument conditions,high,
+4,M1,Counting functions that are not onto,high,M4
+5,M3,Matrices satisfying a quadratic matrix equation,high,
+6,M3,Adjoint and inverse of a matrix,high,
+7,M6,AP: sum and last term condition,high,
+8,M4,Arrangements with girls not all together,high,
+9,M5,Coefficient of x^3 in a sum of binomial expansions,high,
+10,M13,Mean; median and mean deviation,high,
+11,M10,Angle bisector of two lines,high,
+12,M10,Triangle: centroid and circumcentre,high,
+13,M10,Circle: chords bisected by the y-axis,high,
+14,M11,Line intersecting two given lines in 3D,high,
+15,M11,Distance of a point from a line measured along another line,high,
+16,M7,Derivative of inverse trigonometric functions,high,
+17,M7,Polynomial satisfying f = f'f'',high,M8
+18,M8,Area of region bounded by curves,high,
+19,M8,Definite integral with greatest integer function,high,
+20,M9,Variable separable differential equation,high,
+21,M13,Binomial probability of coin tosses,high,
+22,M10,Parabola and ellipse sharing latus rectum,high,
+23,M14,Trigonometric sums and identities,high,
+24,M12,Sum of squared magnitudes of vectors with trig terms,low,M14
+25,M7,Points of non-differentiability,high,
+26,P20,Screw gauge: least count,high,P1
+27,P7,Bulk modulus: volume change,high,
+28,P3,Rough inclined plane: coefficient of friction,high,
+29,P18,Nuclear fusion energy from binding energies,high,
+30,P5,Moment of inertia of sphere and disc,high,
+31,P2,Projectile range ratio,high,
+32,P17,Stopping potential vs frequency graph,high,
+33,P16,Single slit diffraction: separation of minima,high,
+34,P7,Elongation of strings in series (Young's modulus),high,
+35,P9,Temperature of a mixture of ideal gases,high,
+36,P8,Process P = P0/(1+(V0/V)^2): temperature difference,low,P9
+37,P12,Voltmeter range extension,high,
+38,P19,Logic gates with binary inputs,high,
+39,P16,Concave mirror: image of a rod along the axis,high,
+40,P11,Capacitor plates pulled apart at constant voltage: energy rate,high,
+41,P13,Magnetic moment of a flat spiral coil,high,
+42,P19,RC circuit with diodes: time constant,high,P12
+43,P12,Kirchhoff's laws: network with cells,high,
+44,P16,Resolving power of a telescope,high,
+45,P16,Brewster angle: polarisation of reflected light,high,P15
+46,P4,Work done by forces over a displacement,high,
+47,P7,Surface energy of soap bubble,high,
+48,P10,SHM from velocity-displacement relation,high,
+49,P4,Instantaneous power under time-varying force,high,P3
+50,P14,Series LCR: power factor and reactances,high,
+51,C1,Mole concept at STP,high,
+52,C2,Hydrogen spectrum: Balmer and Brackett lines,high,
+53,C2,Quantum numbers of an electron in chromium,high,
+54,C4,Heat capacities and constant volume process,high,
+55,C6,Equilibrium constant of a scaled reaction,high,
+56,C7,Redox titration: moles of KMnO4 needed,high,C1
+57,C8,First order reaction: fraction decomposed,high,
+58,C9,Identifying element from neutrons and electrons,high,
+59,C10,Oxygen: covalency; oxidation states; anomalous behaviour,high,
+60,C11,Transition elements; lanthanoids and actinoids,high,
+61,C11,Potassium dichromate: properties and structure,high,
+62,C12,Spin-only magnetic moments of complexes,high,
+63,C14,Electron-withdrawing power of groups,high,
+64,C15,Ozonolysis: identifying the alkene,high,
+65,C16,Named reactions of haloalkanes and haloarenes,high,
+66,C17,Solubility of phenols and acids in NaOH,high,C18
+67,C18,Aniline bromination and diazonium reactions,high,
+68,C19,Structures of maltose and lactose,high,
+69,C19,Amino acids: symbols and essential/non-essential,high,
+70,C20,Phenolphthalein preparation and colour change,high,C17
+71,C3,Lone pairs and bond pairs in XeO6 4-,high,C10
+72,C15,Aromatic substitution sequence; reaction with NaHCO3,high,C17
+73,C13,Carius estimation; empirical formula,high,
+74,C6,pH of a basic buffer,high,
+75,C5,Relative lowering of vapour pressure and elevation of boiling point,high,

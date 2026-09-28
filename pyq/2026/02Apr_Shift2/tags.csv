@@ -1,0 +1,76 @@
+q,chapter,subtopic,confidence,secondary
+1,M2,Relations between roots of quadratics,high,
+2,M2,Complex numbers: circles and max/min distance,high,
+3,M3,System of linear equations with infinitely many solutions,high,
+4,M6,AP and GP combined,high,
+5,M6,Sum of series involving sums of cubes,high,
+6,M4,Sums of binomial coefficients (Pascal's rule),low,M5
+7,M4,Triangles formed from vertices of a polygon,high,
+8,M13,Probability of reaching exact score with coin tosses,high,
+9,M13,Mean and variance,high,
+10,M10,Circle through origin; chord length,high,
+11,M10,Rectangular hyperbola; chord with given midpoint,high,
+12,M10,Parabola: vertex distance minimisation,high,M2
+13,M14,Trigonometric equation; integer values,high,
+14,M12,Vectors: linear combination and dot products,high,
+15,M11,Foot of perpendicular from point to line,high,
+16,M12,Vectors: angle between sides after rotation,high,M14
+17,M8,Definite integral of periodic function,high,
+18,M7,Polynomial with given extrema and limit,high,
+19,M8,Indefinite integral by partial fractions,high,
+20,M9,Differential equation reducible to linear/homogeneous form,high,
+21,M1,Counting elements of a relation,high,
+22,M3,Matrix equations PA = B and AQ = B,high,
+23,M10,Locus from touching circles; ellipse eccentricity,high,
+24,M8,Area bounded by hyperbola and line,high,M10
+25,M7,Discontinuities of greatest integer function,high,
+26,P1,Dimensions of G in terms of h; L; M; T,high,
+27,P3,Friction in rotating drum (circular motion),high,
+28,P5,Centre of mass motion in Atwood machine,high,P3
+29,P13,Lorentz force: velocity from force,high,
+30,P19,Logic gate combination,high,
+31,P6,Body falling from infinity: speed and KE,high,
+32,P20,Screw gauge with zero error,high,P1
+33,P7,Surface energy of soap bubble,high,
+34,P9,Ideal gas mixture: number of moles,high,
+35,P7,Viscosity: terminal velocity of rising bubble,high,
+36,P4,Work-energy theorem: average resistive force,high,
+37,P15,EM wave: E from B,high,
+38,P12,Series resistors with bulb in parallel,high,
+39,P11,Charged drop balanced between plates,high,
+40,P11,Gauss's law: flux through spheres,high,
+41,P16,Total internal reflection at painted prism face,high,
+42,P14,LCR circuit: phase difference,high,
+43,P14,Mutual inductance of coplanar loops,high,P13
+44,P18,Binding energy per nucleon,high,
+45,P10,SHM: times of zero velocity and zero acceleration,high,
+46,P16,Young's double slit: intensity and path difference,high,
+47,P18,Bohr model: magnetic field at nucleus,high,P13
+48,P8,Change in internal energy at constant volume,high,P9
+49,P16,Lens maker's formula,high,
+50,P5,Moment of inertia; parallel axis theorem,high,
+51,C1,Empirical formula and combustion stoichiometry,high,
+52,C6,Dibasic acid ionisation with common ion,high,
+53,C3,VSEPR: isostructural species,high,
+54,C4,First law over a cyclic process,high,
+55,C5,Osmotic pressure of mixed solutions,high,
+56,C6,pH during weak acid titration (buffer),high,
+57,C8,Second order reaction features,high,
+58,C9,Nature of oxides: acidic; basic; amphoteric; neutral,low,C10
+59,C9,Ionisation enthalpy of groups 13 and 14,high,C10
+60,C11,Third ionisation enthalpy of 3d metals; CFSE,high,C12
+61,C12,Coordination isomerism,high,
+62,C13,Quantitative estimation of C and H,high,C1
+63,C14,Resonance stabilisation of carbocation and carbanion,high,
+64,C15,Alkane isomerisation; aromatisation; cyclisation,high,
+65,C16,Haloalkanes and haloarenes: properties and preparation,high,
+66,C17,Identifying compound from composition; reaction with KOH,low,
+67,C17,Hydrolysis of vinyl ether to carbonyl compounds,high,
+68,C18,Aromatic reaction sequence via diazonium salt,high,
+69,C19,Amino acids and thyroxine,high,
+70,C11,Borax bead test; ionisation enthalpy of ions,high,C20
+71,C2,Photoelectric effect: wavelength from work function,high,
+72,C8,Kinetics from total pressure data,high,
+73,C7,Fuel cell: Gibbs energy and work,high,C4
+74,C11,Magnetic behaviour of d- and f-block ions,high,
+75,C18,Aniline protection; bromination; Carius estimation,high,C13

@@ -1,0 +1,1991 @@
+{
+ "paper": "SET 142",
+ "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2",
+ "exam_date": "10.04.2023",
+ "shift": "Second",
+ "key_ids_not_in_paper": [],
+ "questions": [
+  {
+   "id": "7155054132",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.1 (Question ID 7155054132)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054132.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054132_o1.png",
+    "img/7155054132_o2.png",
+    "img/7155054132_o3.png",
+    "img/7155054132_o4.png"
+   ],
+   "answer": 3,
+   "nta_key": "71550513074",
+   "review_flags": []
+  },
+  {
+   "id": "7155054133",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.2 (Question ID 7155054133)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054133.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054133_o1.png",
+    "img/7155054133_o2.png",
+    "img/7155054133_o3.png",
+    "img/7155054133_o4.png"
+   ],
+   "answer": 2,
+   "nta_key": "71550513077",
+   "review_flags": []
+  },
+  {
+   "id": "7155054134",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.3 (Question ID 7155054134)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054134.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054134_o1.png",
+    "img/7155054134_o2.png",
+    "img/7155054134_o3.png",
+    "img/7155054134_o4.png"
+   ],
+   "answer": 3,
+   "nta_key": "71550513082",
+   "review_flags": [
+    "option 3: long option, image placed below its label (check)"
+   ]
+  },
+  {
+   "id": "7155054135",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.4 (Question ID 7155054135)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054135.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054135_o1.png",
+    "img/7155054135_o2.png",
+    "img/7155054135_o3.png",
+    "img/7155054135_o4.png"
+   ],
+   "answer": 1,
+   "nta_key": "71550513084",
+   "review_flags": []
+  },
+  {
+   "id": "7155054136",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.5 (Question ID 7155054136)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054136.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054136_o1.png",
+    "img/7155054136_o2.png",
+    "img/7155054136_o3.png",
+    "img/7155054136_o4.png"
+   ],
+   "answer": 2,
+   "nta_key": "71550513089",
+   "review_flags": []
+  },
+  {
+   "id": "7155054137",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.6 (Question ID 7155054137)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054137.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054137_o1.png",
+    "img/7155054137_o2.png",
+    "img/7155054137_o3.png",
+    "img/7155054137_o4.png"
+   ],
+   "answer": 1,
+   "nta_key": "71550513092",
+   "review_flags": []
+  },
+  {
+   "id": "7155054138",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.7 (Question ID 7155054138)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054138.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054138_o1.png",
+    "img/7155054138_o2.png",
+    "img/7155054138_o3.png",
+    "img/7155054138_o4.png"
+   ],
+   "answer": 0,
+   "nta_key": "71550513095",
+   "review_flags": []
+  },
+  {
+   "id": "7155054139",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.8 (Question ID 7155054139)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054139.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054139_o1.png",
+    "img/7155054139_o2.png",
+    "img/7155054139_o3.png",
+    "img/7155054139_o4.png"
+   ],
+   "answer": 1,
+   "nta_key": "71550513100",
+   "review_flags": []
+  },
+  {
+   "id": "7155054140",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.9 (Question ID 7155054140)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054140.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054140_o1.png",
+    "img/7155054140_o2.png",
+    "img/7155054140_o3.png",
+    "img/7155054140_o4.png"
+   ],
+   "answer": 3,
+   "nta_key": "71550513106",
+   "review_flags": []
+  },
+  {
+   "id": "7155054141",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.10 (Question ID 7155054141)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054141.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054141_o1.png",
+    "img/7155054141_o2.png",
+    "img/7155054141_o3.png",
+    "img/7155054141_o4.png"
+   ],
+   "answer": 3,
+   "nta_key": "71550513110",
+   "review_flags": []
+  },
+  {
+   "id": "7155054142",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.11 (Question ID 7155054142)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054142.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054142_o1.png",
+    "img/7155054142_o2.png",
+    "img/7155054142_o3.png",
+    "img/7155054142_o4.png"
+   ],
+   "answer": 3,
+   "nta_key": "71550513114",
+   "review_flags": []
+  },
+  {
+   "id": "7155054143",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.12 (Question ID 7155054143)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054143.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054143_o1.png",
+    "img/7155054143_o2.png",
+    "img/7155054143_o3.png",
+    "img/7155054143_o4.png"
+   ],
+   "answer": 0,
+   "nta_key": "71550513115",
+   "review_flags": []
+  },
+  {
+   "id": "7155054144",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.13 (Question ID 7155054144)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054144.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054144_o1.png",
+    "img/7155054144_o2.png",
+    "img/7155054144_o3.png",
+    "img/7155054144_o4.png"
+   ],
+   "answer": 0,
+   "nta_key": "71550513119",
+   "review_flags": []
+  },
+  {
+   "id": "7155054145",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.14 (Question ID 7155054145)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054145.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054145_o1.png",
+    "img/7155054145_o2.png",
+    "img/7155054145_o3.png",
+    "img/7155054145_o4.png"
+   ],
+   "answer": 1,
+   "nta_key": "71550513124",
+   "review_flags": []
+  },
+  {
+   "id": "7155054146",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.15 (Question ID 7155054146)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054146.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054146_o1.png",
+    "img/7155054146_o2.png",
+    "img/7155054146_o3.png",
+    "img/7155054146_o4.png"
+   ],
+   "answer": 2,
+   "nta_key": "71550513129",
+   "review_flags": []
+  },
+  {
+   "id": "7155054147",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.16 (Question ID 7155054147)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054147.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054147_o1.png",
+    "img/7155054147_o2.png",
+    "img/7155054147_o3.png",
+    "img/7155054147_o4.png"
+   ],
+   "answer": 2,
+   "nta_key": "71550513133",
+   "review_flags": []
+  },
+  {
+   "id": "7155054148",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.17 (Question ID 7155054148)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054148.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054148_o1.png",
+    "img/7155054148_o2.png",
+    "img/7155054148_o3.png",
+    "img/7155054148_o4.png"
+   ],
+   "answer": 2,
+   "nta_key": "71550513137",
+   "review_flags": []
+  },
+  {
+   "id": "7155054149",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.18 (Question ID 7155054149)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054149.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054149_o1.png",
+    "img/7155054149_o2.png",
+    "img/7155054149_o3.png",
+    "img/7155054149_o4.png"
+   ],
+   "answer": 2,
+   "nta_key": "71550513141",
+   "review_flags": []
+  },
+  {
+   "id": "7155054150",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.19 (Question ID 7155054150)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054150.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054150_o1.png",
+    "img/7155054150_o2.png",
+    "img/7155054150_o3.png",
+    "img/7155054150_o4.png"
+   ],
+   "answer": 2,
+   "nta_key": "71550513145",
+   "review_flags": []
+  },
+  {
+   "id": "7155054151",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.20 (Question ID 7155054151)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054151.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054151_o1.png",
+    "img/7155054151_o2.png",
+    "img/7155054151_o3.png",
+    "img/7155054151_o4.png"
+   ],
+   "answer": 2,
+   "nta_key": "71550513149",
+   "review_flags": []
+  },
+  {
+   "id": "7155054152",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "NUM",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.21 (Question ID 7155054152)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054152.png",
+   "answer": 24,
+   "nta_key": "24",
+   "review_flags": []
+  },
+  {
+   "id": "7155054153",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "NUM",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.22 (Question ID 7155054153)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054153.png",
+   "answer": 24,
+   "nta_key": "24",
+   "review_flags": []
+  },
+  {
+   "id": "7155054154",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "NUM",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.23 (Question ID 7155054154)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054154.png",
+   "answer": 26664,
+   "nta_key": "26664",
+   "review_flags": []
+  },
+  {
+   "id": "7155054155",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "NUM",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.24 (Question ID 7155054155)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054155.png",
+   "answer": 16,
+   "nta_key": "16",
+   "review_flags": []
+  },
+  {
+   "id": "7155054156",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "NUM",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.25 (Question ID 7155054156)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054156.png",
+   "answer": 11,
+   "nta_key": "11",
+   "review_flags": []
+  },
+  {
+   "id": "7155054157",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "NUM",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.26 (Question ID 7155054157)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054157.png",
+   "answer": 27,
+   "nta_key": "27",
+   "review_flags": []
+  },
+  {
+   "id": "7155054158",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "NUM",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.27 (Question ID 7155054158)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054158.png",
+   "answer": 5,
+   "nta_key": "5",
+   "review_flags": []
+  },
+  {
+   "id": "7155054159",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "NUM",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.28 (Question ID 7155054159)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054159.png",
+   "answer": 529,
+   "nta_key": "529",
+   "review_flags": []
+  },
+  {
+   "id": "7155054160",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "NUM",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.29 (Question ID 7155054160)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054160.png",
+   "answer": 7,
+   "nta_key": "7",
+   "review_flags": []
+  },
+  {
+   "id": "7155054161",
+   "subject": "Mathematics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "NUM",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.30 (Question ID 7155054161)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054161.png",
+   "answer": 6,
+   "nta_key": "6",
+   "review_flags": []
+  },
+  {
+   "id": "7155054162",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.31 (Question ID 7155054162)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054162.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054162_o1.png",
+    "img/7155054162_o2.png",
+    "img/7155054162_o3.png",
+    "img/7155054162_o4.png"
+   ],
+   "answer": 2,
+   "nta_key": "71550513163",
+   "review_flags": []
+  },
+  {
+   "id": "7155054163",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.32 (Question ID 7155054163)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054163.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054163_o1.png",
+    "img/7155054163_o2.png",
+    "img/7155054163_o3.png",
+    "img/7155054163_o4.png"
+   ],
+   "answer": 2,
+   "nta_key": "71550513167",
+   "review_flags": []
+  },
+  {
+   "id": "7155054164",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.33 (Question ID 7155054164)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054164.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054164_o1.png",
+    "img/7155054164_o2.png",
+    "img/7155054164_o3.png",
+    "img/7155054164_o4.png"
+   ],
+   "answer": 2,
+   "nta_key": "71550513171",
+   "review_flags": []
+  },
+  {
+   "id": "7155054165",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.34 (Question ID 7155054165)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054165.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054165_o1.png",
+    "img/7155054165_o2.png",
+    "img/7155054165_o3.png",
+    "img/7155054165_o4.png"
+   ],
+   "answer": 2,
+   "nta_key": "71550513175",
+   "review_flags": []
+  },
+  {
+   "id": "7155054166",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.35 (Question ID 7155054166)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054166.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054166_o1.png",
+    "img/7155054166_o2.png",
+    "img/7155054166_o3.png",
+    "img/7155054166_o4.png"
+   ],
+   "answer": 2,
+   "nta_key": "71550513179",
+   "review_flags": []
+  },
+  {
+   "id": "7155054167",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.36 (Question ID 7155054167)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054167.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054167_o1.png",
+    "img/7155054167_o2.png",
+    "img/7155054167_o3.png",
+    "img/7155054167_o4.png"
+   ],
+   "answer": 2,
+   "nta_key": "71550513183",
+   "review_flags": []
+  },
+  {
+   "id": "7155054168",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.37 (Question ID 7155054168)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054168.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054168_o1.png",
+    "img/7155054168_o2.png",
+    "img/7155054168_o3.png",
+    "img/7155054168_o4.png"
+   ],
+   "answer": 3,
+   "nta_key": "71550513188",
+   "review_flags": []
+  },
+  {
+   "id": "7155054169",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.38 (Question ID 7155054169)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054169.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054169_o1.png",
+    "img/7155054169_o2.png",
+    "img/7155054169_o3.png",
+    "img/7155054169_o4.png"
+   ],
+   "answer": 0,
+   "nta_key": "71550513189",
+   "review_flags": []
+  },
+  {
+   "id": "7155054170",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.39 (Question ID 7155054170)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054170.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054170_o1.png",
+    "img/7155054170_o2.png",
+    "img/7155054170_o3.png",
+    "img/7155054170_o4.png"
+   ],
+   "answer": 3,
+   "nta_key": "71550513196",
+   "review_flags": []
+  },
+  {
+   "id": "7155054171",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.40 (Question ID 7155054171)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054171.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054171_o1.png",
+    "img/7155054171_o2.png",
+    "img/7155054171_o3.png",
+    "img/7155054171_o4.png"
+   ],
+   "answer": 3,
+   "nta_key": "71550513200",
+   "review_flags": []
+  },
+  {
+   "id": "7155054172",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.41 (Question ID 7155054172)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054172.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054172_o1.png",
+    "img/7155054172_o2.png",
+    "img/7155054172_o3.png",
+    "img/7155054172_o4.png"
+   ],
+   "answer": 0,
+   "nta_key": "71550513201",
+   "review_flags": []
+  },
+  {
+   "id": "7155054173",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.42 (Question ID 7155054173)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054173.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054173_o1.png",
+    "img/7155054173_o2.png",
+    "img/7155054173_o3.png",
+    "img/7155054173_o4.png"
+   ],
+   "answer": 3,
+   "nta_key": "71550513208",
+   "review_flags": []
+  },
+  {
+   "id": "7155054174",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.43 (Question ID 7155054174)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054174.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054174_o1.png",
+    "img/7155054174_o2.png",
+    "img/7155054174_o3.png",
+    "img/7155054174_o4.png"
+   ],
+   "answer": 3,
+   "nta_key": "71550513212",
+   "review_flags": []
+  },
+  {
+   "id": "7155054175",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.44 (Question ID 7155054175)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054175.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054175_o1.png",
+    "img/7155054175_o2.png",
+    "img/7155054175_o3.png",
+    "img/7155054175_o4.png"
+   ],
+   "answer": 2,
+   "nta_key": "71550513215",
+   "review_flags": []
+  },
+  {
+   "id": "7155054176",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.45 (Question ID 7155054176)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054176.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054176_o1.png",
+    "img/7155054176_o2.png",
+    "img/7155054176_o3.png",
+    "img/7155054176_o4.png"
+   ],
+   "answer": 2,
+   "nta_key": "71550513219",
+   "review_flags": []
+  },
+  {
+   "id": "7155054177",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.46 (Question ID 7155054177)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054177.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054177_o1.png",
+    "img/7155054177_o2.png",
+    "img/7155054177_o3.png",
+    "img/7155054177_o4.png"
+   ],
+   "answer": 2,
+   "nta_key": "71550513223",
+   "review_flags": []
+  },
+  {
+   "id": "7155054178",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.47 (Question ID 7155054178)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054178.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054178_o1.png",
+    "img/7155054178_o2.png",
+    "img/7155054178_o3.png",
+    "img/7155054178_o4.png"
+   ],
+   "answer": 0,
+   "nta_key": "71550513225",
+   "review_flags": []
+  },
+  {
+   "id": "7155054179",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.48 (Question ID 7155054179)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054179.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054179_o1.png",
+    "img/7155054179_o2.png",
+    "img/7155054179_o3.png",
+    "img/7155054179_o4.png"
+   ],
+   "answer": 1,
+   "nta_key": "71550513230",
+   "review_flags": []
+  },
+  {
+   "id": "7155054180",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.49 (Question ID 7155054180)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054180.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054180_o1.png",
+    "img/7155054180_o2.png",
+    "img/7155054180_o3.png",
+    "img/7155054180_o4.png"
+   ],
+   "answer": 0,
+   "nta_key": "71550513233",
+   "review_flags": []
+  },
+  {
+   "id": "7155054181",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.50 (Question ID 7155054181)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054181.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054181_o1.png",
+    "img/7155054181_o2.png",
+    "img/7155054181_o3.png",
+    "img/7155054181_o4.png"
+   ],
+   "answer": 3,
+   "nta_key": "71550513240",
+   "review_flags": []
+  },
+  {
+   "id": "7155054182",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "NUM",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.51 (Question ID 7155054182)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054182.png",
+   "answer": 20,
+   "nta_key": "20",
+   "review_flags": []
+  },
+  {
+   "id": "7155054183",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "NUM",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.52 (Question ID 7155054183)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054183.png",
+   "answer": 80,
+   "nta_key": "80",
+   "review_flags": []
+  },
+  {
+   "id": "7155054184",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "NUM",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.53 (Question ID 7155054184)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054184.png",
+   "answer": 3,
+   "nta_key": "3",
+   "review_flags": []
+  },
+  {
+   "id": "7155054185",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "NUM",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.54 (Question ID 7155054185)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054185.png",
+   "answer": 48,
+   "nta_key": "48",
+   "review_flags": []
+  },
+  {
+   "id": "7155054186",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "NUM",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.55 (Question ID 7155054186)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054186.png",
+   "answer": 8,
+   "nta_key": "8",
+   "review_flags": []
+  },
+  {
+   "id": "7155054187",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "NUM",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.56 (Question ID 7155054187)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054187.png",
+   "answer": 3668,
+   "nta_key": "3668",
+   "review_flags": []
+  },
+  {
+   "id": "7155054188",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "NUM",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.57 (Question ID 7155054188)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054188.png",
+   "answer": 34,
+   "nta_key": "34",
+   "review_flags": []
+  },
+  {
+   "id": "7155054189",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "NUM",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.58 (Question ID 7155054189)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054189.png",
+   "answer": 44,
+   "nta_key": "44",
+   "review_flags": []
+  },
+  {
+   "id": "7155054190",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "NUM",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.59 (Question ID 7155054190)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054190.png",
+   "answer": 2,
+   "nta_key": "2",
+   "review_flags": []
+  },
+  {
+   "id": "7155054191",
+   "subject": "Physics",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "NUM",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.60 (Question ID 7155054191)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054191.png",
+   "answer": 3,
+   "nta_key": "3",
+   "review_flags": []
+  },
+  {
+   "id": "7155054192",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.61 (Question ID 7155054192)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054192.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054192_o1.png",
+    "img/7155054192_o2.png",
+    "img/7155054192_o3.png",
+    "img/7155054192_o4.png"
+   ],
+   "answer": 1,
+   "nta_key": "71550513252",
+   "review_flags": []
+  },
+  {
+   "id": "7155054193",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.62 (Question ID 7155054193)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054193.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054193_o1.png",
+    "img/7155054193_o2.png",
+    "img/7155054193_o3.png",
+    "img/7155054193_o4.png"
+   ],
+   "answer": 0,
+   "nta_key": "71550513255",
+   "review_flags": []
+  },
+  {
+   "id": "7155054194",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.63 (Question ID 7155054194)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054194.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054194_o1.png",
+    "img/7155054194_o2.png",
+    "img/7155054194_o3.png",
+    "img/7155054194_o4.png"
+   ],
+   "answer": 2,
+   "nta_key": "71550513261",
+   "review_flags": []
+  },
+  {
+   "id": "7155054195",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.64 (Question ID 7155054195)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054195.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054195_o1.png",
+    "img/7155054195_o2.png",
+    "img/7155054195_o3.png",
+    "img/7155054195_o4.png"
+   ],
+   "answer": 0,
+   "nta_key": "71550513263",
+   "review_flags": []
+  },
+  {
+   "id": "7155054196",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.65 (Question ID 7155054196)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054196.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054196_o1.png",
+    "img/7155054196_o2.png",
+    "img/7155054196_o3.png",
+    "img/7155054196_o4.png"
+   ],
+   "answer": 0,
+   "nta_key": "71550513267",
+   "review_flags": []
+  },
+  {
+   "id": "7155054197",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.66 (Question ID 7155054197)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054197.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054197_o1.png",
+    "img/7155054197_o2.png",
+    "img/7155054197_o3.png",
+    "img/7155054197_o4.png"
+   ],
+   "answer": 0,
+   "nta_key": "71550513271",
+   "review_flags": []
+  },
+  {
+   "id": "7155054198",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.67 (Question ID 7155054198)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054198.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054198_o1.png",
+    "img/7155054198_o2.png",
+    "img/7155054198_o3.png",
+    "img/7155054198_o4.png"
+   ],
+   "answer": 2,
+   "nta_key": "71550513277",
+   "review_flags": []
+  },
+  {
+   "id": "7155054199",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.68 (Question ID 7155054199)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054199.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054199_o1.png",
+    "img/7155054199_o2.png",
+    "img/7155054199_o3.png",
+    "img/7155054199_o4.png"
+   ],
+   "answer": 0,
+   "nta_key": "71550513279",
+   "review_flags": []
+  },
+  {
+   "id": "7155054200",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.69 (Question ID 7155054200)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054200.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054200_o1.png",
+    "img/7155054200_o2.png",
+    "img/7155054200_o3.png",
+    "img/7155054200_o4.png"
+   ],
+   "answer": 2,
+   "nta_key": "71550513285",
+   "review_flags": []
+  },
+  {
+   "id": "7155054201",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.70 (Question ID 7155054201)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054201.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054201_o1.png",
+    "img/7155054201_o2.png",
+    "img/7155054201_o3.png",
+    "img/7155054201_o4.png"
+   ],
+   "answer": 0,
+   "nta_key": "71550513287",
+   "review_flags": []
+  },
+  {
+   "id": "7155054202",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.71 (Question ID 7155054202)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054202.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054202_o1.png",
+    "img/7155054202_o2.png",
+    "img/7155054202_o3.png",
+    "img/7155054202_o4.png"
+   ],
+   "answer": 3,
+   "nta_key": "71550513294",
+   "review_flags": []
+  },
+  {
+   "id": "7155054203",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.72 (Question ID 7155054203)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054203.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054203_o1.png",
+    "img/7155054203_o2.png",
+    "img/7155054203_o3.png",
+    "img/7155054203_o4.png"
+   ],
+   "answer": 1,
+   "nta_key": "71550513296",
+   "review_flags": []
+  },
+  {
+   "id": "7155054204",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.73 (Question ID 7155054204)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054204.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054204_o1.png",
+    "img/7155054204_o2.png",
+    "img/7155054204_o3.png",
+    "img/7155054204_o4.png"
+   ],
+   "answer": 0,
+   "nta_key": "71550513299",
+   "review_flags": []
+  },
+  {
+   "id": "7155054205",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.74 (Question ID 7155054205)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054205.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054205_o1.png",
+    "img/7155054205_o2.png",
+    "img/7155054205_o3.png",
+    "img/7155054205_o4.png"
+   ],
+   "answer": 0,
+   "nta_key": "71550513303",
+   "review_flags": []
+  },
+  {
+   "id": "7155054206",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.75 (Question ID 7155054206)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054206.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054206_o1.png",
+    "img/7155054206_o2.png",
+    "img/7155054206_o3.png",
+    "img/7155054206_o4.png"
+   ],
+   "answer": 2,
+   "nta_key": "71550513309",
+   "review_flags": []
+  },
+  {
+   "id": "7155054207",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.76 (Question ID 7155054207)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054207.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054207_o1.png",
+    "img/7155054207_o2.png",
+    "img/7155054207_o3.png",
+    "img/7155054207_o4.png"
+   ],
+   "answer": 0,
+   "nta_key": "71550513311",
+   "review_flags": []
+  },
+  {
+   "id": "7155054208",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.77 (Question ID 7155054208)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054208.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054208_o1.png",
+    "img/7155054208_o2.png",
+    "img/7155054208_o3.png",
+    "img/7155054208_o4.png"
+   ],
+   "answer": 1,
+   "nta_key": "71550513316",
+   "review_flags": []
+  },
+  {
+   "id": "7155054209",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.78 (Question ID 7155054209)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054209.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054209_o1.png",
+    "img/7155054209_o2.png",
+    "img/7155054209_o3.png",
+    "img/7155054209_o4.png"
+   ],
+   "answer": 3,
+   "nta_key": "71550513322",
+   "review_flags": []
+  },
+  {
+   "id": "7155054210",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.79 (Question ID 7155054210)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054210.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054210_o1.png",
+    "img/7155054210_o2.png",
+    "img/7155054210_o3.png",
+    "img/7155054210_o4.png"
+   ],
+   "answer": 1,
+   "nta_key": "71550513324",
+   "review_flags": []
+  },
+  {
+   "id": "7155054211",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "MCQ",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.80 (Question ID 7155054211)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054211.png",
+   "options": [
+    "[option image 1]",
+    "[option image 2]",
+    "[option image 3]",
+    "[option image 4]"
+   ],
+   "option_images": [
+    "img/7155054211_o1.png",
+    "img/7155054211_o2.png",
+    "img/7155054211_o3.png",
+    "img/7155054211_o4.png"
+   ],
+   "answer": 0,
+   "nta_key": "71550513327",
+   "review_flags": []
+  },
+  {
+   "id": "7155054212",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "NUM",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.81 (Question ID 7155054212)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054212.png",
+   "answer": 1,
+   "nta_key": "1",
+   "review_flags": []
+  },
+  {
+   "id": "7155054213",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "NUM",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.82 (Question ID 7155054213)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054213.png",
+   "answer": 4,
+   "nta_key": "4",
+   "review_flags": []
+  },
+  {
+   "id": "7155054214",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "NUM",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.83 (Question ID 7155054214)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054214.png",
+   "answer": 4,
+   "nta_key": "4",
+   "review_flags": []
+  },
+  {
+   "id": "7155054215",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "NUM",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.84 (Question ID 7155054215)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054215.png",
+   "answer": 40535,
+   "nta_key": "40535",
+   "review_flags": []
+  },
+  {
+   "id": "7155054216",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "NUM",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.85 (Question ID 7155054216)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054216.png",
+   "answer": 3,
+   "nta_key": "3",
+   "review_flags": []
+  },
+  {
+   "id": "7155054217",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "NUM",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.86 (Question ID 7155054217)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054217.png",
+   "answer": 66,
+   "nta_key": "66",
+   "review_flags": []
+  },
+  {
+   "id": "7155054218",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "NUM",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.87 (Question ID 7155054218)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054218.png",
+   "answer": 1,
+   "nta_key": "1",
+   "review_flags": []
+  },
+  {
+   "id": "7155054219",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "NUM",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.88 (Question ID 7155054219)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054219.png",
+   "answer": 2,
+   "nta_key": "2",
+   "review_flags": []
+  },
+  {
+   "id": "7155054220",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "NUM",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.89 (Question ID 7155054220)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054220.png",
+   "answer": 4,
+   "nta_key": "4",
+   "review_flags": []
+  },
+  {
+   "id": "7155054221",
+   "subject": "Chemistry",
+   "chapter": "Not tagged yet",
+   "year": 2023,
+   "type": "NUM",
+   "source": "JEE Main 2023 (Session 2), 10 Apr Shift 2, Q.90 (Question ID 7155054221)",
+   "question": "",
+   "solution": "",
+   "image": "img/7155054221.png",
+   "answer": 3,
+   "nta_key": "3",
+   "review_flags": []
+  }
+ ]
+}

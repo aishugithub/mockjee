@@ -1,0 +1,91 @@
+q,chapter,subtopic,confidence,secondary
+1,M1,Domain with logarithm and inverse cosine,high,
+2,M2,Common roots using cube roots of unity,high,
+3,M3,Diagonal matrix: trace and adjoint,high,M14
+4,M3,Consistency of a system of linear equations,high,
+5,M5,Consecutive binomial coefficients,high,
+6,M6,Terms of two GPs,high,
+7,M7,Functional equation: derivative,high,M1
+8,M7,Differentiability; definite integral,high,M8
+9,M7,Maximum and minimum on an interval,high,
+10,M8,Definite integral of exponential function,high,M7
+11,M14,Compound angle identities,high,
+12,M8,Definite integral using slopes of tangents,high,M7
+13,M8,Composite function; definite integral by substitution,high,M1
+14,M10,Ellipse: directrix; focus; latus rectum,high,
+15,M10,Hyperbola: area with foci,high,
+16,M10,Locus equidistant from two lines (angle bisectors),high,
+17,M11,Line perpendicular to two lines,high,M12
+18,M12,Cross product magnitude,high,
+19,M12,Dot and cross product; angle between vectors,high,
+20,M13,Bayes' theorem,high,
+21,M1,Counting symmetric non-reflexive relations,high,M4
+22,M2,Equation with modulus: number of real roots,high,
+23,M4,Selecting questions from sections,high,
+24,M5,Sums of products of binomial coefficients,high,
+25,M6,Sum of sums of an AP,high,
+26,M8,Area bounded by parabola and line,high,
+27,M9,Differential equation from area condition,high,M10
+28,M10,Intersecting circles: common chord,high,M14
+29,M11,Line through a point meeting two lines,high,
+30,M13,Variance of frequency data,high,
+31,P1,Dimensional analysis of mass,high,
+32,P2,Projectiles from a tower,high,
+33,P3,Tension in connected blocks,high,
+34,P3,Friction on a curved surface,high,
+35,P4,Work done against friction on incline,high,P3
+36,P6,Escape velocity of a planet,high,
+37,P8,Heating curve of ice to steam,high,P7
+38,P8,Isothermal and adiabatic processes,high,
+39,P9,Adiabatic exponent of a gas mixture,high,
+40,P11,Charge in circular orbit around line charge,high,
+41,P12,Power dissipated when wire halves are paralleled,high,
+42,P15,Maxwell's equations,high,P14
+43,P14,AC in resistor: time from half to peak,high,
+44,P15,Momentum delivered by radiation,high,
+45,P16,Malus's law,high,
+46,P17,Photoelectric graph: slope,high,
+47,P18,Fission: speed of daughter nuclei,high,
+48,P18,Magnetic moment of electron in Bohr orbit,high,P13
+49,P19,Diodes in series: voltage across load,high,
+50,P20,Vernier constant of travelling microscope,high,P1
+51,P2,Vector with given magnitude and direction,high,
+52,P5,Loss of KE when discs are brought together,high,
+53,P7,Surface energy when drops coalesce,high,
+54,P10,Intensity of sound from a point source,high,
+55,P11,Charged spheres in a dielectric liquid,high,
+56,P12,Voltmeter resistance in a series circuit,high,
+57,P13,Magnetic field at centre of square loop,high,
+58,P14,Transformer efficiency: output current,high,
+59,P16,Convex lens focal length from graph,high,
+60,P10,Simple pendulum at height,high,P6
+61,C5,Mole fraction,high,C1
+62,C3,Dipole moments of NH3 and NF3,high,
+63,C3,Square pyramidal shape,high,
+64,C5,Depression of freezing point: highest,high,
+65,C7,Oxidising power from reduction potentials,high,
+66,C9,Periodic trends in reactivity and oxides,high,
+67,C10,Group 15 hydrides,high,
+68,C10,Acidity of group 16 hydrides,high,
+69,C11,Preparation of potassium permanganate,high,
+70,C11,Colour of dichromate and permanganate,high,
+71,C12,Geometry in dimanganese decacarbonyl,high,
+72,C13,Purification by differential extraction,high,
+73,C14,Carbocation stability,high,
+74,C14,IUPAC naming of nitrile,high,
+75,C16,SN1 vs SN2 conditions,high,
+76,C17,Reimer-Tiemann reaction,high,
+77,C15,Hydration and hydroboration of alkene,high,C17
+78,C17,Cannizzaro reaction,high,
+79,C18,Aniline; diazotisation; coupling with phenol,high,
+80,C11,Chromyl chloride and chromate reactions,high,C20
+81,C2,Spectral lines between excited states,high,
+82,C4,Hess's law,high,
+83,C6,Buffer composition from pH,high,
+84,C7,Disproportionation reactions,high,
+85,C8,Rate of formation from concentration change,high,
+86,C12,Optical isomerism in complexes,high,
+87,C14,Geometrical isomerism,high,
+88,C14,Optically active isomers of dichlorobutane,high,C16
+89,C19,Nucleic acids,high,
+90,C20,Flame test for cations,high,

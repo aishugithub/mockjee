@@ -1,0 +1,76 @@
+q,chapter,subtopic,confidence,secondary
+1,M2,Roots of two quadratics in GP,high,M6
+2,M2,Quadratic with complex coefficients: moduli of roots,high,
+3,M3,Determinant function; sum over n,high,M6
+4,M3,Matrix from action on basis vectors,high,
+5,M6,Sum of series by partial fractions,high,
+6,M6,Arithmetic means,high,
+7,M5,Coefficient in binomial expansion,high,
+8,M13,Total probability,high,
+9,M4,Selections with at least two of each colour,high,
+10,M13,Mean and median of binomial-weighted data,high,M5
+11,M10,Parabola vertex and circle: power of a point,high,
+12,M10,Parabola: focal chord and triangle area,high,
+13,M10,Hyperbola: latus rectum from foci and eccentricity,high,
+14,M11,Triangle with vertices on a line; centroid,high,
+15,M11,Image of a point in a line,high,
+16,M12,Section formula with vectors,high,
+17,M7,Limit defining a function; number of solutions,high,M14
+18,M8,Definite integral; AM-GM minimum,high,
+19,M8,Integral equation; differentiation,high,M9
+20,M9,Functions with equal second derivatives,high,M8
+21,M1,Counting elements of a relation,high,
+22,M10,Reflection of rays in a line mirror,high,
+23,M14,Trigonometric equation: number of solutions,high,
+24,M8,Area between curves; maximum of a function,high,M1
+25,M9,Linear differential equation,high,
+26,P1,Planck units: dimensions from h; G; c,high,
+27,P1,Error in resistance measurement,high,P12
+28,P4,Work done by friction on moving incline,high,
+29,P2,Velocity-time graph: distance and average velocity,high,
+30,P5,Uniform angular acceleration: angle ratio,high,
+31,P5,Rolling up a curved path: identifying the body,high,
+32,P6,Gravitational potential energy at height,high,
+33,P7,Surface energy released when drops coalesce,high,
+34,P9,Coefficient of volume expansion for a gas process,high,P8
+35,P10,Periodic and SHM functions,high,
+36,P14,EMF in rotating rod with varying field,high,
+37,P12,Capacitor in steady-state DC circuit,high,P11
+38,P13,Charge in electric and magnetic fields: change in KE,high,P11
+39,P15,Radiation pressure of EM waves,high,
+40,P16,Combination of convex and concave lenses,high,
+41,P16,Two-lens system: final image,high,
+42,P16,YDSE: intensity opposite a slit,high,
+43,P17,De Broglie wavelength in a medium,high,
+44,P18,Mass defect of carbon-12,high,
+45,P19,p-n junction: depletion region width,high,
+46,P7,Elastic potential energy in stretched wire,high,
+47,P8,Calorimetry: cooling vs evaporation,low,
+48,P14,Series LCR: reactance at resonance,high,
+49,P12,Internal resistance of a cell,high,
+50,P14,Induced current from time-varying field,high,
+51,C1,Stoichiometry: hydrogen from zinc and acid,high,
+52,C2,Orbital energies; radial nodes,high,
+53,C3,Covalent radius and bond length,high,
+54,C4,Gibbs energy from enthalpy and entropy data,high,
+55,C4,Molar heat capacities of substances,low,
+56,C6,Kp in terms of degree of dissociation,high,
+57,C7,Nernst equation: silver ion concentration,high,
+58,C9,Nature of oxides: acidic; basic; amphoteric; neutral,low,C10
+59,C10,Aluminium with NaOH; shapes of interhalogen ions,low,C3
+60,C11,Enthalpy of atomisation; d-orbital splitting,high,C12
+61,C12,Stability; hybridisation; linkage isomerism,high,
+62,C13,Distillation techniques,high,
+63,C15,Stability of alkenes,high,
+64,C15,IUPAC name of C5H12 isomer,high,C14
+65,C17,Nitrile hydrolysis; HVZ reaction,high,C18
+66,C17,Semicarbazone formation; hemiacetal hydrolysis,high,
+67,C18,Hoffmann bromamide; nitration of aniline,high,
+68,C19,Tertiary structure of proteins,high,
+69,C19,Anomers of glucose; chiral carbons,high,
+70,C20,Test for SO2 with dichromate paper,high,C11
+71,C12,Unpaired electrons in octahedral complexes,high,
+72,C16,Grignard reagent hydrolysis; Wurtz reaction,high,C15
+73,C5,Osmotic pressure: molar mass of haemoglobin,high,
+74,C7,Molar conductivity and concentration,high,
+75,C8,Half-life vs initial concentration (zero order),high,

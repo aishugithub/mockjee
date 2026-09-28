@@ -1,0 +1,91 @@
+q,chapter,subtopic,confidence,secondary
+1,M1,One-one functions onto range of greatest-integer function,high,M4
+2,M2,Complex number on a circle; imaginary part condition,high,
+3,M2,Exponential equation reducible to quadratic; sum of roots,high,
+4,M3,Matrix polynomial identity; unknown entries,high,
+5,M10,Side of triangle via section formula,high,
+6,M2,Powers of i; counting ordered pairs,high,M1
+7,M7,Roots and monotonicity of cos x - x + 1,high,
+8,M7,Critical points of a function with fractional power,high,
+9,M7,Local maxima of a trigonometric function,high,M14
+10,M8,Indefinite integral by substitution,high,
+11,M8,Reduction formula for definite integral,high,
+12,M9,Forming a differential equation from an area function,high,M8
+13,M9,Variable separable differential equation,high,
+14,M11,Shortest distance between skew lines,high,
+15,M10,Circles touching externally: centres and radii,high,
+16,M10,Hyperbola: focal distances of a point,high,
+17,M11,Direction angles: distance of a point from x-axis,high,
+18,M12,Obtuse angle between vectors for all t,high,M2
+19,M13,Probability: product of two integers with fixed sum,high,
+20,M14,Trigonometric ratios in third quadrant,high,
+21,M1,Range of a trigonometric function; infinite GP,high,M6
+22,M3,Powers of a 2x2 matrix; trace,high,
+23,M4,Counting 3-digit numbers not divisible by 3,high,
+24,M5,Sums of binomial coefficients,high,
+25,M6,Triangular numbers: row containing a number,high,
+26,M7,Limit of product of cosine roots,high,
+27,M8,Area under min(sin x; cos x),high,
+28,M12,Vector equation with cross products,high,
+29,M10,Orthocentre; centroid; circumcentre (Euler line),high,
+30,M13,Mean of hypergeometric random variables,high,
+31,P1,Order of magnitude,high,
+32,P2,Distance travelled by tips of clock hands,high,
+33,P4,Explosion: kinetic energy ratio from momentum conservation,high,P3
+34,P3,Impulse: force when catching a ball,high,
+35,P4,Momentum ratio for equal kinetic energies,high,
+36,P7,Bernoulli's equation,high,
+37,P8,Adiabatic and isothermal volume ratios,high,
+38,P6,Planetary orbits: time period from angular momentum,high,
+39,P9,Specific heats of monoatomic and diatomic gases,high,
+40,P12,Terminal voltage of a cell,high,
+41,P13,Properties of paramagnetic substances,high,
+42,P15,Radiation pressure: force of light on a surface,high,
+43,P16,Critical angle and refractive index,high,
+44,P17,Same de Broglie wavelength: ratio of kinetic energies,high,
+45,P11,Charge sharing between connected spheres,high,
+46,P18,Binding energy and mass defect,high,
+47,P19,Logic gate circuit output,high,
+48,P20,Error in Young's modulus from graph least counts,high,P1
+49,P20,Vernier callipers: density of a sphere,high,P1
+50,P14,LCR at resonance: current when R is halved,high,
+51,P2,Resultant of three vectors,high,
+52,P5,Centre of mass of a cut plate,high,
+53,P7,Excess pressure in soap bubble balanced by liquid column,high,
+54,P10,Overtones of closed and open organ pipes,high,
+55,P11,Electric flux through a surface,high,
+56,P12,Temperature coefficient of resistance,high,
+57,P13,Velocity selector: crossed electric and magnetic fields,high,
+58,P18,Alpha scattering: distance of closest approach,high,
+59,P16,Single slit diffraction: angular position of minima,high,
+60,P14,Work done pulling a loop out of a magnetic field,high,
+61,C1,Stoichiometry: oxygen for combustion of glucose,high,
+62,C3,VSEPR shapes of molecules,high,
+63,C6,Combining equilibrium constants,high,
+64,C7,Thiosulphate with iodine and bromine: oxidising strength,high,C10
+65,C10,Disproportionation of halogens,high,C7
+66,C10,Inert pair effect in group 13,high,
+67,C12,N(CH3)3 vs P(CH3)3 as ligands,high,
+68,C9,Periodic trends: electronegativity; electron gain enthalpy; size,high,
+69,C11,Fe3+ catalysis of iodide-persulphate reaction,high,C7
+70,C12,Werner complex: moles of AgCl precipitated,high,
+71,C12,t2g electron count in aqua complexes,high,C11
+72,C20,Salt analysis: borax bead; charcoal cavity; cobalt nitrate tests,high,
+73,C20,Colours of compounds in qualitative analysis,high,C12
+74,C14,IUPAC names of benzene derivatives,high,
+75,C14,Counting secondary carbon atoms,high,
+76,C15,Aromaticity (Huckel rule),high,
+77,C16,SN2 reactivity of alkyl bromides,high,
+78,C17,Tertiary alcohol: dehydration and acetylation,high,
+79,C17,Hell-Volhard-Zelinsky reaction,high,
+80,C19,Glucose structure: properties,high,
+81,C2,Electromagnetic wave: frequency from wavelength,high,
+82,C3,Exceptions to the octet rule,high,
+83,C4,Work in reversible isothermal expansion,high,
+84,C5,Boiling point elevation with van't Hoff factor,high,
+85,C8,Order of reaction from half-lives,high,
+86,C11,Spin-only magnetic moment of MO4^2-,high,
+87,C18,Diazo coupling: mass of aniline yellow,high,C1
+88,C14,Optical isomers: counting chiral centres,high,
+89,C15,Side-chain oxidation then nitration: pi bonds,high,C17
+90,C18,Hinsberg test,high,

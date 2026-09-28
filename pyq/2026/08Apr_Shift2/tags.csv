@@ -1,0 +1,76 @@
+q,chapter,subtopic,confidence,secondary
+1,M1,Relation: number of elements; equivalence,high,
+2,M2,Complex numbers: circle and ellipse loci intersection,high,
+3,M3,System of linear equations with infinitely many solutions,high,
+4,M3,Determinant of adjoint,high,
+5,M6,Sum of series; quadratic root,low,M14
+6,M13,Bayes' theorem,high,
+7,M13,Combined variance of two groups,high,
+8,M5,Binomial coefficient sums with integration,high,
+9,M4,Distributing books into bags; no bag empty,high,
+10,M10,Locus of midpoint of intercepts,high,
+11,M10,Parabola: locus of midpoint of perpendicular chords,high,
+12,M14,Inverse trigonometric functions: sign of cosine,high,
+13,M7,Differentiability and monotonicity,high,
+14,M12,Vector equations with cross product,high,
+15,M11,Foot of perpendicular; distance between parallel lines,high,
+16,M8,Definite integral by substitution,high,
+17,M9,Linear differential equation with inverse cosine,high,
+18,M8,Iterated function; area between curves,high,M1
+19,M7,Continuity; integral of modulus function,high,M8
+20,M10,Ellipse with decreasing function: condition on parameter,high,M1
+21,M2,Logarithmic equation: real solutions,high,
+22,M8,Definite integral of product of cotangents,high,M14
+23,M11,Line perpendicular to two lines; point at distance,high,
+24,M10,Circle: locus of foot of perpendicular to chord,high,
+25,M1,Polynomial functional equation,high,M6
+26,P1,New unit of length based on speed of light,high,
+27,P1,Dimensional analysis of magnetic field formula,high,
+28,P3,Pendulum in turning car: banking angle,high,
+29,P2,Stone dropped from rising balloon,high,
+30,P16,Silvered lens: object at image position,high,
+31,P2,Projectile: range from times of flight,high,
+32,P5,Slipping to rolling of a cylinder,high,
+33,P7,Bernoulli's principle: pressure difference,high,
+34,P7,Terminal velocity of droplets,high,
+35,P8,First law: heat supplied to diatomic gas,high,P9
+36,P8,Adiabatic expansion: change in internal energy,high,
+37,P10,Spring cut in half: frequency ratio,high,
+38,P15,Photon energy: region of spectrum,high,P17
+39,P13,Torque on current loop,high,
+40,P14,Self-induced EMF in solenoid,high,
+41,P11,Coulomb's law in vector form,high,
+42,P16,Snell's law with vectors,high,
+43,P17,Photoelectric effect: work function,high,
+44,P18,Alpha decay: kinetic energy of alpha particle,high,
+45,P19,Logic circuit output waveform,high,
+46,P11,Capacitor with leaky dielectric: permittivity,high,P12
+47,P16,Resolving power of a telescope,high,
+48,P13,Helical motion of charge: pitch,high,
+49,P12,Capacitor in steady-state DC network,high,P11
+50,P2,Distance in nth second; momentum ratio,high,
+51,C1,Mole concept: number of atoms,high,
+52,C5,Mole fraction; deviation from Raoult's law,high,
+53,C3,Shapes of BrF2+ and BrF4-,high,C10
+54,C5,Colligative properties statements,high,
+55,C6,Combining equilibrium constants,high,
+56,C7,Electrode potentials: Fe3+/Fe2+,high,
+57,C8,Arrhenius; half-life vs concentration,high,
+58,C9,First ionisation energies of period 2,high,
+59,C10,Group 15 hydrides: properties,high,
+60,C11,Coloured and diamagnetic ions of d- and f-block,high,
+61,C11,Catalytic properties of transition metals,high,
+62,C13,Fractional distillation,high,
+63,C15,Rearrangement in Friedel-Crafts and dehydration,low,C17
+64,C14,Aromaticity,high,
+65,C15,Dichlorination of 2-chlorobutane,high,C16
+66,C16,Boiling and melting points of haloalkanes and haloarenes,high,
+67,C17,Reduction of aldehyde; amide hydrolysis,low,C18
+68,C18,Hoffmann bromamide degradation,high,
+69,C19,Carbohydrates statements,high,
+70,C19,Amino acid with phenolic side chain: FeCl3 test,high,C20
+71,C12,Paramagnetic complexes,high,
+72,C17,Gattermann-Koch; Friedel-Crafts acylation; Claisen-Schmidt,high,
+73,C2,Energy ratio of radiations,high,
+74,C4,Enthalpy of reaction from enthalpies of formation,high,
+75,C6,Simultaneous equilibria: partial pressure of CO,high,

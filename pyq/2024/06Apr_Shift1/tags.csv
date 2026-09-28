@@ -1,0 +1,91 @@
+q,chapter,subtopic,confidence,secondary
+1,M1,Making relations symmetric,high,
+2,M1,One-one and onto: rational function,high,
+3,M4,Triangles from octagon vertices with no common side,high,
+4,M2,Recurrence of powers of quadratic roots,high,M6
+5,M3,Determinant with sums: linear combination,high,
+6,M7,Limit using derivative definition,high,
+7,M1,Counting integers not divisible by 3 or 4,high,
+8,M7,Second derivative of x^3 sin(1/x),high,
+9,M7,Increasing interval of x^x,high,
+10,M10,Line through a point: minimum sum of intercepts,high,M7
+11,M8,Definite integral by substitution,high,
+12,M8,Area of region bounded by curves,high,
+13,M9,Linear differential equation,high,
+14,M9,Linear differential equation with logarithm,high,
+15,M10,Circle inscribed in equilateral triangle; inscribed square,high,
+16,M10,Circle of minimum area touching parabola and lines,high,
+17,M11,Shortest distance between skew lines,high,
+18,M13,Corrected standard deviation,high,
+19,M12,Area of quadrilateral in 3D,high,
+20,M13,Bayes' theorem,high,
+21,M2,Roots of quartic: product expression,high,
+22,M3,Homogeneous system with non-trivial solution,high,
+23,M5,Consecutive terms of binomial expansion,high,
+24,M6,Recurrence; sum of series,high,
+25,M8,Reduction formula for integrals,high,M6
+26,M10,Tangents to a parabola; isosceles triangle,high,
+27,M10,Conic from tangent slope condition; focal distance,high,M9
+28,M11,Foot of perpendicular to a line,high,
+29,M12,Vector equation with cross products,high,
+30,M14,Sum of inverse cotangents,high,
+31,P4,Kinetic energy vs momentum,high,
+32,P3,Atwood machine: mass ratio,high,
+33,P6,Energy to escape from earth,high,
+34,P2,Average speed of a journey,high,
+35,P7,Viscous force at terminal velocity,high,
+36,P8,Specific heat of a gas obeying PV^2=RT,high,P9
+37,P9,rms speed of helium and oxygen,high,
+38,P11,Electric field at the surface of a charged shell,high,
+39,P15,EM wave speed: relative permittivity,high,
+40,P12,Balanced Wheatstone bridge,high,
+41,P20,Screw gauge: diameter of wire,high,P1
+42,P13,Dimensions of magnetic quantities,high,P1
+43,P13,Biot-Savart law: field of a current element,high,
+44,P14,LCR circuit at resonance,high,
+45,P1,Percentage error in spring constant,high,P10
+46,P16,Wave nature of light,high,P17
+47,P17,Photoelectric work function,high,
+48,P18,Balmer and Lyman shortest wavelengths,high,
+49,P19,Logic circuit truth table,high,
+50,P4,Loss of KE of bullet through plywood,high,
+51,P16,Prism: angle from minimum deviation,high,
+52,P10,SHM: maximum velocity,high,
+53,P2,Scalar triple product of vectors,low,M12
+54,P7,Surface energy of droplets and big drop,high,
+55,P14,Inductor: power in AC circuit,high,
+56,P5,Earth's rotation period with smaller radius,high,
+57,P13,Work in rotating a coil in magnetic field,high,
+58,P12,Resistance of stretched wire,high,
+59,P11,Electric field of three charged sheets,high,
+60,P18,Bohr orbit radius and energy,high,
+61,C5,Molarity and molality of NaOH solution,high,C1
+62,C3,Shape and magnetism of species,high,
+63,C6,Kp for H2 + I2 equilibrium,high,
+64,C10,Semiconductors,low,
+65,C7,Molar conductivity on dilution,high,
+66,C9,Negative electron affinities,high,
+67,C10,Gallium in thermometers,high,
+68,C3,VSEPR shapes of species,high,
+69,C11,Lanthanoids vs actinoids,high,
+70,C3,Hybridisation and geometry,high,C12
+71,C12,Wavenumber of absorbed light (spectrochemical),high,
+72,C20,Group reagents in qualitative analysis,high,
+73,C13,Purification methods,high,
+74,C14,Metamerism,high,
+75,C14,Functional group of sulphonic acids,high,
+76,C16,Uses of polyhalogen compounds,high,
+77,C17,Picric acid preparation,high,
+78,C17,Reimer-Tiemann intermediate,high,
+79,C17,Reactivity towards nucleophilic addition,high,
+80,C19,Structures of DNA bases,high,
+81,C2,Frequency of de Broglie wave in Bohr orbit,high,
+82,C3,Molecules forming hydrogen bonds,high,
+83,C4,Adiabatic expansion against constant pressure,high,
+84,C5,Osmotic pressure of a weak acid,high,C6
+85,C8,First order: 99.9% vs 90% completion time,high,
+86,C11,Chromium oxides: magnetic moments,high,
+87,C11,Permanganate reduction: magnetic moment difference,high,C7
+88,C15,Birch reduction; hydroxylation of alkene,high,C14
+89,C15,Bromination and elimination of cyclohexene,high,C16
+90,C18,Diazotisation and coupling: mass of dye,high,C1

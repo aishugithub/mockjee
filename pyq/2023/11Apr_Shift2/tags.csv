@@ -1,0 +1,89 @@
+q,chapter,subtopic,confidence,secondary
+1,M1,Counting elements of a relation,high,M4
+2,M1,Domain with greatest integer function,high,M2
+3,M2,Complex numbers: sets defined by real and imaginary parts,high,
+4,M3,System of linear equations with infinitely many solutions,high,
+5,M3,Determinant as a polynomial: comparing coefficients,high,M2
+6,M4,Dictionary rank of a word,high,
+8,M5,Consecutive binomial coefficients in a ratio,high,
+9,M6,AM-GM inequality: maximum of a product,high,
+10,M7,Continuity and differentiability of a composite function,high,M1
+11,M8,Definite integral of a piecewise function,high,
+12,M8,Definite integrals by substitution,high,
+13,M9,Linear differential equation,high,
+14,M10,Largest circle inside an ellipse,high,
+15,M11,Plane through three points: distances,high,
+16,M11,Distance measured parallel to a line,high,
+17,M12,Coplanar points: scalar triple products,high,
+18,M13,Mean deviation from mean and variance,high,
+19,MX,Heights and distances,high,
+20,MX,Mathematical reasoning: converse,high,
+21,M2,Complex number with real quotient,high,
+22,M4,Counting functions with a condition,high,M1
+23,M6,Arithmetico-geometric type series sum,high,
+24,M7,Roots of an exponential equation,high,M2
+25,M8,Area bounded by a parabola; tangent and line,high,
+26,M10,Angle bisector of two lines,high,
+27,M10,Tangent to a parabola; normal to a hyperbola,high,
+28,M11,Angle between a line and a plane,high,
+29,M12,Vector equations: cross and dot products,high,
+30,M13,Geometric distribution: probability of no real roots,high,M2
+31,P10,Doppler effect: moving source and observer,high,
+32,P9,RMS speed of nitrogen molecules,high,
+33,P6,Orbital to escape velocity: additional speed,high,
+34,P8,Isothermal process: constant internal energy,high,
+35,P3,Force from velocity-displacement relation,high,P2
+36,P7,Terminal velocity of coalesced drops,high,
+37,P6,Gravitational potential inside a sphere,high,
+39,P2,Projectile velocity at a time,high,
+40,P1,Dimensions of density in new base units,high,
+41,PX,Communication systems: satellite uplink band,high,
+42,P19,Logic gate combination,high,
+43,P16,Angle of deviation on reflection,high,
+44,P18,Energy of He+ in first excited state,high,
+45,P17,De Broglie wavelengths of proton and electron,high,
+46,P15,Magnetic field from electric field in an EM wave,high,
+47,P14,Magnet falling in a metal pipe: eddy currents,high,
+48,P13,Electron moving along a solenoid axis,high,
+49,P12,Kirchhoff's laws: current in a network,high,
+50,P11,Gauss's law: flux enclosing a capacitor plate,high,
+51,P10,Fundamental frequency of a stretched wire,high,P7
+52,P7,Surface tension: work to enlarge a soap bubble,high,
+53,P5,Conservation of angular momentum: kinetic energy,high,
+54,P4,Power delivered on an incline,high,P3
+55,P4,Nuclear break-up: momentum conservation,high,P18
+56,P16,Image in a mirror above a water tank,high,
+57,P14,Energy stored in an inductor,high,
+58,P14,Motional EMF across a moving cube,high,
+59,P12,Internal resistance of cells,high,
+60,P11,Charge on a capacitor in a network,high,
+61,CX,Solid state: polar molecular solids,high,
+62,C5,Relative lowering of vapour pressure,high,
+63,C8,Rate law: unknown concentrations,high,
+64,C1,Mass percent,high,C5
+65,CX,Metallurgy: roasting sulphide ores,high,
+66,CX,Hydrides: stability,low,C9
+67,C10,P4 with SOCl2,high,
+68,CX,s-block: melting points of alkali metals,high,
+69,C12,Spin-only magnetic moments of iron complexes,high,
+70,C12,Crystal field: wavelength of absorbed light,high,
+71,CX,Environmental chemistry: freons,high,C16
+72,C12,Replacing Ni2+ by Pt2+ in a complex,high,
+73,C20,Colours of compounds in salt analysis,high,C12
+74,C16,Precipitate with AgNO3: ionisation of halides,high,
+75,C16,Alcohol to iodide to Grignard; reaction with D2O,high,C17
+76,C17,Clemmensen reduction with a hydroxyl group,low,
+77,C17,Wolff-Kishner reduction with a halide present,high,C16
+78,C18,Diazotisation and thiol substitution,low,
+79,C19,Chirality: glycine halogenation (HVZ),high,C14
+80,CX,Polymers: LDP and nylon 6,high,
+81,C1,Stoichiometry: hydrogen from magnesium,high,
+82,C3,Lone pairs on central atom,high,
+83,C2,Probability density and nodes of orbitals,high,
+84,C4,Intensive properties,high,
+85,C6,Equilibrium constant for HI formation,high,
+86,C7,Electrochemistry statements,high,
+87,CX,Surface chemistry: adsorption theory of catalysis,high,
+88,CX,s-block: hydrated nitrate salts,high,
+89,C19,Reducing sugars: Benedict's test,high,
+90,C15,Addition of HCl via allylic carbocation,high,C16

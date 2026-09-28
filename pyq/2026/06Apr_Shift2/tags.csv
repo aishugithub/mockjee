@@ -1,0 +1,76 @@
+q,chapter,subtopic,confidence,secondary
+1,M1,One-one and onto: rational function,high,
+2,M2,Quadratic: extreme values of sum and product of roots; GP sum,high,M6
+3,M2,Powers of complex roots,high,
+4,M3,Homogeneous system with non-trivial solution; trigonometric,high,M14
+5,M3,Powers of a matrix,high,
+6,M6,Sum of series with sums of squares,high,
+7,M4,Distributing persons among floors,high,
+8,M13,Mean and variance with unknown observations,high,M2
+9,M13,Probability of drawing matched pairs,high,M4
+10,M10,Circle touching x-axis; chord length,high,
+11,M10,Ellipse and hyperbola parameters,high,
+12,M10,Ellipse: locus of midpoint of focal chord,high,
+13,M14,Inverse trigonometric equation,high,
+14,M11,Shortest distance between skew lines,high,
+15,M12,Area of triangle from vectors,high,
+16,M7,Limit condition; location of quadratic roots,high,M2
+17,M3,Singular matrix; max/min of integral function,low,M8
+18,M8,Integral equation with functional equation,high,M1
+19,M8,Area between parabola and line,high,
+20,M8,Definite integral: odd and even parts,high,
+21,M1,Transitive closure of a relation,high,
+22,M5,Binomial expansion identity: coefficient ratio,low,
+23,M10,Circle and line: point equidistant from intersections,high,
+24,M11,Images of points in lines; parallelogram area,high,M12
+25,M7,Discontinuities of a composite function,high,M1
+26,P1,Percentage error in volume,high,
+27,P1,Dimensions of physical constants,high,
+28,P5,Rolling of sphere and shell under tangential force,high,
+29,P4,Work from velocity as function of position,high,
+30,P8,Adiabatic compartments with piston,high,
+31,P15,Relation between B; E and k,high,
+32,P5,Centre of mass motion of two bodies,high,P2
+33,P7,Young's modulus from extension graph,high,
+34,P7,Torricelli's law: range of water jet,high,P2
+35,P9,Temperature of mixed monoatomic gases,high,
+36,P10,Spring-mass: frequency and energy,high,
+37,P11,Electric field from potential,high,
+38,P13,Field midway between two antiparallel currents,high,
+39,P14,Maximum EMF in loop in sinusoidal field,high,
+40,P11,Energy loss when capacitors share charge,high,
+41,P18,Fusion energy from binding energies,high,
+42,P16,Prism: refractive index from minimum deviation,high,
+43,P19,Logic circuit output,high,
+44,P3,Atwood machine: speed on reaching ground,high,P4
+45,P16,YDSE: path difference for given intensity,high,
+46,P3,Rough incline: friction from time ratio,high,
+47,P17,De Broglie wavelength and accelerating voltage,high,
+48,P12,Galvanometer as ammeter and voltmeter,high,
+49,P12,Parallel cells: current with reversed polarity,high,
+50,P16,Concave mirror: two positions for magnification 2,high,
+51,C1,Mole concept: equal numbers of atoms,high,
+52,C2,Bohr radius of hydrogen-like species,high,
+53,C3,Octet rule and lone pairs,high,
+54,C4,Isothermal processes: q and w expressions,high,
+55,C5,Osmosis direction; osmotic pressure,high,
+56,C6,Degree of dissociation of AxBy electrolyte,high,
+57,C7,Electrochemistry: Nernst plot; cell reaction,high,
+58,C9,Periodic trends: ionisation and electron gain enthalpy,high,
+59,C3,Bond angle trends; nature of halides,low,C10
+60,C11,Ionisation enthalpies of Cr and Mn,high,
+61,C12,Hybridisation and magnetism of nickel complexes,high,
+62,C13,Separation by differential solubility; steam distillation,high,
+63,C14,Carbon-oxygen bond lengths in ester (resonance),high,C17
+64,C17,Aldol condensation of acetone,high,C15
+65,C15,Alkyne formation and hydration; test for ketone,high,C16
+66,C17,Cleavage of ethers with HI,high,
+67,C18,Hoffmann degradation; diazotisation,high,
+68,C18,Hoffmann bromamide and Gabriel synthesis,high,
+69,C19,Glucose with HI to hexane; aromatisation; Friedel-Crafts,low,C15
+70,C20,Brown ring test,high,C10
+71,C12,Ionisable chloride in a complex,high,
+72,C15,Combustion of alkane; single monochloro product,high,
+73,C7,Redox titration: iodometry,high,
+74,C6,Equilibrium constant and standard Gibbs energy,high,C4
+75,C8,Arrhenius equation: activation energy,high,
