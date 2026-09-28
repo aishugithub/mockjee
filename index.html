@@ -352,6 +352,9 @@ code { font-family: var(--font-num); font-size: .92em; background: #f1f4f8; padd
 .rp-ans span { border-radius: 4px; padding: 2px 8px; border: 1px solid #d4dbe5; }
 .rp-sol { font-size: 10.5px; color: #3d4a5c; margin-top: 5px; border-top: 1px dashed #d4dbe5; padding-top: 4px; }
 .rp-legend { font-size: 10px; color: #5a6677; }
+.why{margin-top:10px;padding-top:8px;border-top:1px dashed var(--line,#e3e7ee)}
+.why>span{display:block;font-size:13.5px;color:var(--muted);margin-bottom:6px}
+.why-btns{display:flex;flex-wrap:wrap;gap:6px}
 </style>
 </head>
 <body>
@@ -551,6 +554,7 @@ code { font-family: var(--font-num); font-size: .92em; background: #f1f4f8; padd
       <button type="button" class="btn btn-primary" id="btnPdf">Download PDF report</button>
       <button type="button" class="btn btn-line" id="btnReview">Review answers</button>
       <span class="res-status" id="pdfStatus" role="status"></span>
+      <span class="res-status" id="syncStatus" role="status"></span>
     </div>
     <div class="res-grid">
       <div class="card"><h2 style="margin-bottom:10px">Subject-wise performance</h2><div class="tbl-wrap"><table class="tbl" id="tblSubj"></table></div></div>
@@ -613,7 +617,7 @@ code { font-family: var(--font-num); font-size: .92em; background: #f1f4f8; padd
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const KNOWN = ['Physics', 'Chemistry', 'Mathematics'];
-const KEYS = { bank: 'jeecbt.bank.v1', active: 'jeecbt.active.v1', hist: 'jeecbt.history.v1', cfg: 'jeecbt.cfg.v1' };
+const KEYS = { bank: 'jeecbt.bank.v1', active: 'jeecbt.active.v1', hist: 'jeecbt.history.v1', cfg: 'jeecbt.cfg.v1', unsynced: 'jeecbt.unsynced.v1' };
 const store = {
   get(k, d) { try { const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
   set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch (e) { return false; } },
@@ -928,7 +932,7 @@ function buildExam() {
   return {
     id: Date.now().toString(36),
     cfg: { testName: cfg.testName.trim() || 'JEE Main Mock Test', candidate: cfg.candidate.trim() || 'Candidate', duration: cfg.duration, mcqC: cfg.mcqC, mcqW: cfg.mcqW, numC: cfg.numC, numW: cfg.numW, years: [...sel.years].sort(), bankName: bank.name, sample: !!bank.sample },
-    sections, qs, resp: qs.map(() => ({ v: null, visited: false, marked: false, t: 0 })),
+    sections, qs, resp: qs.map(() => ({ v: null, visited: false, marked: false, t: 0, visits: 0, changes: 0, first: null })),
     cur: 0, startedAt: null, endsAt: null, submittedAt: null
   };
 }
@@ -986,7 +990,7 @@ function onTick() {
 }
 function go(i, first) {
   const n = exam.qs.length; i = ((i % n) + n) % n;
-  exam.cur = i; exam.resp[i].visited = true;
+  exam.cur = i; exam.resp[i].visited = true; exam.resp[i].visits = (exam.resp[i].visits || 0) + 1;
   const r = exam.resp[i]; draft = r.v;
   renderQuestion(); renderPalette(); persist();
   if (!first) $('#qBody').scrollTop = 0;
@@ -1043,10 +1047,16 @@ function renderPalette() {
   if (s.num) h += `<div class="pal-sub">Section B (Numerical)</div><div class="pal-grid">${range(s.start + s.mcq, s.start + s.mcq + s.num).map(btn).join('')}</div>`;
   $('#palGrid').innerHTML = h;
 }
+/* record the answer; also how often he changed it and what he first chose (for the analysis) */
+function setAnswer(r, v) {
+  if (v !== null && r.first == null) r.first = v;
+  if (r.v !== null && r.v !== '' && v !== null && String(v) !== String(r.v)) r.changes = (r.changes || 0) + 1;
+  r.v = v;
+}
 const cleanDraft = () => { if (draft === null || draft === '') return null; if (typeof draft === 'string') { const v = draft.trim(); return v === '' || v === '-' || v === '.' || v === '-.' ? null : v; } return draft; };
-$('#bSave').addEventListener('click', () => { const r = exam.resp[exam.cur]; r.v = cleanDraft(); r.marked = false; go(exam.cur + 1); });
+$('#bSave').addEventListener('click', () => { const r = exam.resp[exam.cur]; setAnswer(r, cleanDraft()); r.marked = false; go(exam.cur + 1); });
 $('#bClear').addEventListener('click', () => { const r = exam.resp[exam.cur]; r.v = null; draft = null; renderQuestion(); renderPalette(); persist(); });
-$('#bSmr').addEventListener('click', () => { const r = exam.resp[exam.cur]; r.v = cleanDraft(); r.marked = true; go(exam.cur + 1); });
+$('#bSmr').addEventListener('click', () => { const r = exam.resp[exam.cur]; setAnswer(r, cleanDraft()); r.marked = true; go(exam.cur + 1); });
 $('#bMrn').addEventListener('click', () => { exam.resp[exam.cur].marked = true; go(exam.cur + 1); });
 $('#bBack').addEventListener('click', () => go(exam.cur - 1));
 $('#bNext').addEventListener('click', () => go(exam.cur + 1));
@@ -1068,9 +1078,11 @@ function finish(timeUp) {
   exam.timeUp = !!timeUp;
   const res = evaluate(exam);
   exam.score = res.score; exam.max = res.max;
+  exam.reasons = {};
   const h = store.get(KEYS.hist, []); h.unshift(exam); store.set(KEYS.hist, h.slice(0, 8));
   store.del(KEYS.active);
   showResult(exam);
+  syncAttempt(exam);
 }
 
 /* ---------- evaluation ---------- */
@@ -1126,6 +1138,8 @@ function showResult(ex) {
   res.byChap.forEach(c => { if (c.subject !== last) { ch += `<tr class="grp"><td class="l" colspan="9">${esc(c.subject)}</td></tr>`; last = c.subject; } ch += line(esc(c.chapter), c); });
   $('#tblChap').innerHTML = head.replace('%%', 'Chapter') + '<tbody>' + ch + '</tbody>';
   $('#reviewCard').hidden = true; $('#pdfStatus').textContent = '';
+  $('#syncStatus').textContent = ex.synced ? 'Saved to the progress database.' : onServer ? 'Not saved to the database yet.' : '';
+  $('#btnReview').textContent = reviewLabel(ex, res);
   show('scr-result');
 }
 function answerText(q, v) { if (v === null || v === '' || v === undefined) return '—'; return q.type === 'MCQ' ? `(${+v + 1})${q.option_images ? '' : ' ' + (q.options[+v] ?? '')}` : String(v); }
@@ -1140,12 +1154,72 @@ function renderReview() {
     let body;
     if (q.type === 'MCQ') body = `<div class="rev-opts">${q.options.map((o, k) => { const isC = isKey(q, k), isY = x.att && +x.given === k; return `<div class="rev-opt${isC ? ' correct' : isY ? ' wrong' : ''}"><b>(${k + 1})</b><span>${optHtml(q, k, o)}</span>${isC && isY ? '<em class="pos">Your answer · correct</em>' : isC ? '<em class="pos">Correct answer</em>' : isY ? '<em class="negc">Your answer</em>' : ''}</div>`; }).join('')}</div>`;
     else body = `<div class="rev-opts"><div class="rev-opt${x.att ? (x.ok ? ' correct' : ' wrong') : ''}">Your answer: <b class="num">${esc(answerText(q, x.given))}</b></div><div class="rev-opt correct">Correct answer: <b class="num">${esc(correctText(q))}</b></div></div>`;
-    return `<div class="rev-item"><div class="rev-top"><span><b style="color:var(--ink)">Q${x.i + 1}</b> · ${esc(q.subject)} · ${esc(q.chapter)} · ${esc(srcLabel(q))} · ${q.type === 'MCQ' ? 'MCQ' : 'Numerical'} · ${Math.round(x.time / 1000)} s spent</span>${pill}</div><div class="rev-q">${rich(q.question)}${qImg(q)}</div>${body}${q.solution ? `<div class="rev-sol"><b>Solution:</b> ${rich(q.solution)}</div>` : ''}</div>`;
+    return `<div class="rev-item"><div class="rev-top"><span><b style="color:var(--ink)">Q${x.i + 1}</b> · ${esc(q.subject)} · ${esc(q.chapter)} · ${esc(srcLabel(q))} · ${q.type === 'MCQ' ? 'MCQ' : 'Numerical'} · ${Math.round(x.time / 1000)} s spent</span>${pill}</div><div class="rev-q">${rich(q.question)}${qImg(q)}</div>${body}${q.solution ? `<div class="rev-sol"><b>Solution:</b> ${rich(q.solution)}</div>` : ''}${x.att && !x.ok ? whyHtml(shown, x) : ''}</div>`;
   }).join('') || '<p style="color:var(--muted)">No questions in this group.</p>';
 }
 $('#btnReview').addEventListener('click', () => { const c = $('#reviewCard'); c.hidden = !c.hidden; if (!c.hidden) { renderReview(); c.scrollIntoView({ behavior: 'smooth', block: 'start' }); } });
 $('#revFilter').addEventListener('click', e => { const b = e.target.closest('[data-rf]'); if (!b) return; revFilter = b.dataset.rf; renderReview(); });
 $('#btnNew').addEventListener('click', () => { exam = null; show('scr-setup'); renderSetup(); });
+
+/* ---------- saving attempts to the server (server.py) ----------
+   Each finished exam is posted to /api/attempts. If the server is not reachable
+   (app opened as a file, or offline) it waits in a queue and is sent on the next load. */
+const onServer = /^https?:$/.test(location.protocol) && !/claude\.ai|claudeusercontent/.test(location.hostname);
+function setSync(ex, msg) { if (shown && ex && shown.id === ex.id) $('#syncStatus').textContent = msg; }
+function queueAttempt(ex) {
+  const q = store.get(KEYS.unsynced, []).filter(x => x.id !== ex.id);
+  q.push(ex); store.set(KEYS.unsynced, q.slice(-30));
+}
+async function flushQueue() {
+  if (!onServer) return;
+  /* results taken before the server existed (or while it was off) are sent too */
+  store.get(KEYS.hist, []).forEach(x => { if (x.submittedAt && !x.synced && !store.get(KEYS.unsynced, []).some(y => y.id === x.id)) queueAttempt(x); });
+  for (const ex of store.get(KEYS.unsynced, [])) {
+    try {
+      const r = await fetch('api/attempts', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(ex) });
+      if (!r.ok) throw new Error((await r.json().catch(() => ({}))).error || `HTTP ${r.status}`);
+      store.set(KEYS.unsynced, store.get(KEYS.unsynced, []).filter(x => x.id !== ex.id));
+      const h = store.get(KEYS.hist, []); h.forEach(x => { if (x.id === ex.id) x.synced = true; }); store.set(KEYS.hist, h);
+      if (shown && shown.id === ex.id) shown.synced = true;
+      setSync(ex, 'Saved to the progress database.');
+    } catch (e) {
+      setSync(ex, `Not saved to the database yet (${e.message || 'server not reachable'}). It is kept in this browser and will be sent next time.`);
+      return;
+    }
+  }
+}
+function syncAttempt(ex) {
+  queueAttempt(ex);
+  if (!onServer) { setSync(ex, 'Saved in this browser only. Start the app with server.py to keep results in the progress database.'); return; }
+  setSync(ex, 'Saving to the progress database…');
+  flushQueue();
+}
+function updateHist(ex) {
+  const h = store.get(KEYS.hist, []); const k = h.findIndex(x => x.id === ex.id);
+  if (k >= 0) { h[k] = Object.assign({}, ex, { synced: false }); store.set(KEYS.hist, h); }
+}
+
+/* ---------- Akil's own label for each wrong answer ---------- */
+/* each reason points to a different fix, which is what the analysis needs; guesses show up in the timing data, so there is no "guessed" button */
+const REASONS = [['concept', "Didn't know the concept"], ['approach', 'Silly concept mistake (knew it, wrong approach)'], ['calc', 'Silly calculation mistake'],
+  ['recall', 'Forgot a formula or fact'], ['misread', 'Misread the question'], ['rushed', 'Rushed / time pressure']];
+let whyTimer = null;
+const whyHtml = (ex, x) => `<div class="why" data-wq="${x.i}"><span>Why did this go wrong? (one tap)</span><div class="why-btns">${REASONS.map(([k, l]) =>
+  `<button type="button" class="chip" data-why="${k}" aria-pressed="${(ex.reasons || {})[x.i] === k}">${l}</button>`).join('')}</div></div>`;
+function reviewLabel(ex, res) {
+  const wrong = res.rows.filter(x => x.att && !x.ok).length, done = Object.keys(ex.reasons || {}).length;
+  return wrong && done < wrong ? `Review answers · say why for ${wrong - done} wrong` : 'Review answers';
+}
+$('#reviewList').addEventListener('click', e => {
+  const b = e.target.closest('[data-why]'); if (!b) return;
+  const i = b.closest('[data-wq]').dataset.wq; const ex = shown; ex.reasons = ex.reasons || {};
+  ex.reasons[i] = ex.reasons[i] === b.dataset.why ? undefined : b.dataset.why;
+  if (!ex.reasons[i]) delete ex.reasons[i];
+  $$('[data-why]', b.parentElement).forEach(x => x.setAttribute('aria-pressed', ex.reasons[i] === x.dataset.why));
+  $('#btnReview').textContent = reviewLabel(ex, shownRes);
+  updateHist(ex);
+  clearTimeout(whyTimer); whyTimer = setTimeout(() => syncAttempt(ex), 1200);
+});
 
 /* ---------- PDF report ---------- */
 function reportBlocks(ex, res) {
@@ -1204,9 +1278,10 @@ async function makePdf() {
     for (const html of reportBlocks(ex, res)) {
       const tmp = document.createElement('div'); tmp.innerHTML = html; const el = tmp.firstElementChild;
       body.appendChild(el);
+      /* measure only after this block's images have loaded; otherwise they count as 0 px tall and later questions get cut off the page */
+      await Promise.all($$('img', el).map(img => img.complete ? 0 : new Promise(r => { img.onload = img.onerror = r; })));
       if (body.scrollHeight > body.clientHeight + 1 && body.children.length > 1) { body.removeChild(el); body = newPage(); body.appendChild(el); }
     }
-    await Promise.all($$('img', host).map(img => img.complete ? 0 : new Promise(r => { img.onload = img.onerror = r; })));
     pages.forEach((p, i) => { p.querySelector('[data-pg]').textContent = `Page ${i + 1} of ${pages.length}`; });
     const { jsPDF } = window.jspdf;
     const pdf = new jsPDF({ unit: 'pt', format: 'a4', compress: true });
@@ -1254,6 +1329,7 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') { $('#mBank'
 resetSelection();
 renderSetup();
 show('scr-setup');
+flushQueue();
 })();
 </script>
 </body>
