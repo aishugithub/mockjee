@@ -27,6 +27,10 @@ def main():
     out = []
     for n, q in enumerate(paper['questions'], 1):
         s = sols.get(n)
+        if q.get('exclude') or q.get('answer') is None:
+            out.append(f'<section><h2>Q{n} · {q["subject"]} · ID {q["id"]}</h2><p class="miss">Left out of the bank: '
+                       f'{html.escape(q.get("exclude") or "no answer in the final key")} (NTA).</p></section>')
+            continue
         key = q['answer'] + 1 if q['type'] == 'MCQ' else q['answer']
         opts = ''.join(f'<div class="opt{" key" if q["type"] == "MCQ" and k == key else ""}"><b>({k})</b> <img src="{html.escape(p)}"></div>'
                        for k, p in enumerate(q.get('option_images', []), 1))

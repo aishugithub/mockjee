@@ -1,0 +1,245 @@
+q,claude_answer,check,hint1,hint2,solution,concept,revise,note
+1,1,sympy,cos^{−1} needs its input between −1 and 1. Split x by its integer part [x] = n.,"−3 ≤ 4x + 2[x] ≤ 3. Try n = 0 (x in [0,1)) and n = −1 (x in [−1,0)); check that the other n give nothing.","1. n = 0: 0 ≤ x < 1 and 4x ≤ 3, so x in [0, 3/4].
+2. n = −1: −1 ≤ x < 0 and 4x − 2 ≥ −3, so x ≥ −1/4: x in [−1/4, 0).
+3. n = 1 needs 4x ≤ 1 (impossible for x ≥ 1); n = −2 needs 4x ≥ 1 (impossible for x < −1).
+4. Domain = [−1/4, 3/4], so 12(α + β) = 12 × 1/2 = 6.
+Answer: (1)",Domain of cos^{−1} combined with the greatest integer function.,"Revise 'Inverse Trigonometric Functions' (domains). For [x] questions, fixing [x] = n is the standard move.",
+2,2,sympy,Notice x^{2} + x − 9 = x + (x^{2} − 9). When is |a + b| = |a| + |b|?,|a + b| = |a| + |b| exactly when a and b have the same sign (ab ≥ 0). So you need x(x^{2} − 9) ≥ 0.,"1. With a = x and b = x^{2} − 9: the equation holds iff x(x^{2} − 9) ≥ 0.
+2. x(x − 3)(x + 3) ≥ 0 gives x in [−3, 0] ∪ [3, ∞).
+3. α = −3, β = 0, γ = 3, so α^{2} + β^{2} + γ^{2} = 18.
+Answer: (2)",Modulus equations: |a + b| = |a| + |b| ⇔ ab ≥ 0.,This property saves a lot of case-work. Revise 'Relations and Functions' (modulus) and sign charts for inequalities.,
+3,1,sympy,|z + 2| = |z − 2| means z is equally far from −2 and 2. Where can z be?,"z lies on the imaginary axis: z = iy. arg(w) = π/4 means w has equal, positive real and imaginary parts.","1. z = iy. Then (z + 3)/(z − i) = (3 + iy)/(i(y − 1)) = (y − 3i)/(y − 1).
+2. arg = π/4: real part = imaginary part > 0, so y/(y − 1) = −3/(y − 1), giving y = −3 (and then both parts are 3/4 > 0 ✓).
+3. |z|^{2} = 9.
+Answer: (1)",Locus |z − a| = |z − b| (perpendicular bisector) and the argument of a complex number.,"When using arg = π/4, check that both parts are positive, not just equal. Revise 'Complex Numbers'.",
+4,2,sympy,"Count all functions, then subtract the onto ones.",Total = 3^{4}. Onto functions from 4 elements to 3 = 3^{4} − 3·2^{4} + 3·1^{4} = 36.,"1. Total functions = 81.
+2. Onto functions = 81 − 48 + 3 = 36.
+3. Not onto = 81 − 36 = 45.
+Answer: (2)",Counting functions and onto functions (inclusion–exclusion).,Revise 'Relations and Functions' and inclusion–exclusion in 'Permutations and Combinations'.,
+5,4,sympy,"If trace = 4, Cayley–Hamilton says A^{2} − 4A + (det A)I = O. Compare with the given equation.","Subtracting, (3 − det A)I = O, so det A = 3: a + d = 4 and ad − bc = 3 with entries in {0, …, 4}.","1. a + d = 4 and ad − bc = 3.
+2. (a, d) = (1, 3) or (3, 1): ad = 3, so bc = 0: 9 pairs (b, c) each, 18 in all.
+3. (2, 2): ad = 4, so bc = 1: only (1, 1), 1 matrix.
+4. (0, 4), (4, 0): bc = −3 is impossible.
+5. Total = 19.
+Answer: (4)",Cayley–Hamilton for 2×2 matrices and counting.,Revise the 2×2 Cayley–Hamilton form A^{2} − (tr A)A + |A|I = O. It turns a matrix equation into two number conditions.,
+6,4,sympy,Use adj(adj B) = |B|^{n−2}B (here n = 3) and (adj A)^{−1} = A/|A|.,"|A| = −4, so 2(adj A)^{−1} = 2A/|A| = −A/2. Call it B and find |B|.","1. |A| = −4, so B = 2(adj A)^{−1} = −A/2.
+2. |B| = (−1/2)^{3}(−4) = 1/2.
+3. adj(adj B) = |B| B = (1/2)(−A/2) = −A/4.
+4. Sum of the elements of A = 12, so the answer is −12/4 = −3.
+Answer: (4)",Properties of the adjoint: adj(adj B) = |B|^{n−2}B and (adj A)^{−1} = A/|A|.,Revise 'Matrices and Determinants': adjoint properties. Working with formulas is much faster than computing adjoints.,
+7,1,sympy,Let l be the last term. The sum of an AP = (n/2)(first + last).,"S = 15(10/3 + l) = l^{3}. Solve this cubic for l, then d = (l − a)/29.","1. 15(10/3 + l) = l^{3}, i.e. l^{3} − 15l − 50 = 0, so l = 5.
+2. d = (5 − 10/3)/29 = (5/3)/29 = 5/87.
+Answer: (1)",AP sum with first and last term.,Revise 'Sequences and Series'. Using the last term as the unknown keeps the algebra small.,
+8,4,sympy,'All the girls are not together' means 'not all three girls together'. Use total minus the opposite.,Total arrangements 7!. All three girls together: treat them as one block: 5! × 3!.,"1. Total = 5040.
+2. All girls together = 120 × 6 = 720.
+3. Required = 5040 − 720 = 4320.
+Answer: (4)",Arrangements with a restriction (complement counting).,'Not all together' is different from 'no two together'. Read the wording carefully. Revise 'Permutations and Combinations'.,
+9,2,sympy,The coefficient of x^{3} in (1+x)^{3} + … + (1+x)^{99} adds up to one binomial coefficient (hockey-stick identity).,Σ_{r=3}^{99} ^{r}C_{3} = ^{100}C_{4} = (97/4)·^{100}C_{3}. The last term adds k^{3}·^{100}C_{3}.,"1. Coefficient = ^{100}C_{3}(97/4 + k^{3}).
+2. 97/4 + k^{3} = 43n + 101/4, so k^{3} = 43n + 1.
+3. Smallest natural k > 1 with k^{3} ≡ 1 (mod 43): k = 6 (216 = 5 × 43 + 1), so n = 5.
+4. p + n = 6 + 5 = 11.
+Answer: (2)",Hockey-stick identity for binomial coefficients.,Revise Σ ^{r}C_{k} = ^{n+1}C_{k+1}. Then try small k for the remainder condition.,
+10,4,sympy,"Use the mean to get a + b, and the median to see where a and b sit.","Mean 40 gives a + b = 80. Mean deviation about the median 21 is 26, so Σ|x_{i} − 21| = 234. Expect b < 21 < a.","1. Sum of the known numbers = 280, so a + b = 80.
+2. Deviations of the known numbers from 21 add to 183, so |a − 21| + |b − 21| = 51.
+3. With b ≤ 21 ≤ a: a − b = 51, so a = 65.5 and b = 14.5 (the median is still 21 ✓).
+4. 2a = 131.
+Answer: (4)","Mean, median and mean deviation.",Revise 'Statistics': mean deviation about the median. Check that your a and b keep 21 as the median.,
+11,1,sympy,A and B are where x = −3 meets the two lines. C lies on a bisector of the angle at O.,"By the angle bisector theorem (internal or external), BC : AC = OB : OA. So BC^{2} : AC^{2} = OB^{2} : OA^{2}.","1. A = (−3, −3) and B = (−3, 9).
+2. OA^{2} = 18 and OB^{2} = 90.
+3. C lies on a bisector of angle AOB, so BC^{2} : AC^{2} = OB^{2} : OA^{2} = 90 : 18 = 5 : 1.
+Answer: (1)",Angle bisector theorem in coordinate geometry.,"The theorem holds for both the internal and the external bisector, so you don't even need to decide which one is obtuse. Revise 'Straight Lines'.",
+12,3,sympy,"Find B from the midpoint, then C from the centroid.","B = 2(5, −1) − (1, 2) = (9, −4). C = 3(3, 4) − A − B = (−1, 14). The circumcentre is equidistant from A, B and C.","1. A = (1, 2), B = (9, −4), C = (−1, 14).
+2. Setting PA^{2} = PB^{2} and PA^{2} = PC^{2} gives P = (94/7, 215/21).
+3. α + β = 282/21 + 215/21 = 497/21, so 21(α + β) = 497.
+Answer: (3)","Centroid, midpoint and circumcentre.",Revise 'Straight Lines'. Writing PA^{2} = PB^{2} gives straight-line equations: no square roots needed.,
+13,2,sympy,"A chord from P(1, 2) bisected by the y-axis has its midpoint at (0, t). Where is its other end?","Other end = (−1, 2t − 2). It must lie on the circle.","1. Put (−1, 2t − 2) in x^{2} + y^{2} + x − 3y = 0: (2t − 2)^{2} − 3(2t − 2) = 0.
+2. 2t − 2 = 0 or 3, so R = (−1, 0) and S = (−1, 3).
+3. Midpoint of RS = (−1, 3/2), so 6(α + β) = 6 × 1/2 = 3.
+Answer: (2)",Chords of a circle and midpoints.,Revise 'Conic Sections': circle. Using the midpoint to write the other end is the key trick.,
+14,2,sympy,"Write general points P (on line 1) and Q (on line 2). PQ must be parallel to (1, −1, 2).","P = (2s, 3s, 3s − 1), Q = (−1 − t, 2 + t, 4t). Set Q − P = λ(1, −1, 2).","1. Solving: s = 1/5, t = −8/15, λ = −13/15.
+2. Q − P = (−13/15)(1, −1, 2), so PQ^{2} = (169/225) × 6.
+3. 225α^{2} = 169 × 6 = 1014.
+Answer: (2)",Line meeting two given lines in a given direction.,"Revise 'Three Dimensional Geometry'. Three equations in s, t and λ: solve two, then check the third.",
+15,2,sympy,'Distance along a line' means: go from the point in the given direction until you hit the first line.,"Point on the path: (−2 + s, −8 − s, 6 + 2s). Set it equal to a point (1 + t, 1 + 2t, −t) on the first line.","1. Solving gives s = −1, so the meeting point is (−3, −7, 4).
+2. Distance^{2} from (−2, −8, 6) = 1 + 1 + 4 = 6.
+Answer: (2)",Distance of a point from a line measured along a given direction.,This is different from the perpendicular distance. Revise 'Three Dimensional Geometry'.,
+16,3,sympy,Simplify each inverse-tan term before differentiating.,"First term: divide by 4cos x: tan^{−1}((3/4 − tan x)/(1 + (3/4)tan x)) = tan^{−1}(3/4) − x. Second: put x = sin θ, so x/(1 + √(1 − x^{2})) = tan(θ/2).","1. First term = constant − x, with derivative −1.
+2. Second term = 2 × (θ/2) = sin^{−1}x, with derivative 1/√(1 − x^{2}).
+3. At x = √3/2: −1 + 1/(1/2) = −1 + 2 = 1.
+Answer: (3)",Simplifying inverse trig functions before differentiating.,Revise 'Inverse Trigonometric Functions': the tan(A − B) form and half-angle substitutions.,
+17,3,sympy,"Compare degrees: f has degree n, f′f″ has degree (n − 1) + (n − 2).","n = 2n − 3, so n = 3. Try f = a(x + b)^{3}: then f′f″ = 18a^{2}(x + b)^{3}.","1. Degree 3. With f = a(x + b)^{3}: 18a^{2} = a gives a = 1/18, and f(0) = 0 gives b = 0. So f = x^{3}/18.
+2. f′(2) = 12/18 = 2/3, f″(2) = 12/18 = 2/3, ∫ from 0 to 2 of f = 16/72 = 2/9.
+3. 36(2/3 + 2/3 + 2/9) = 36 × 14/9 = 56.
+Answer: (3)",Polynomial functional equations (comparing degrees).,Comparing degrees first is the key move. Revise 'Continuity and Differentiability' and polynomial basics.,
+18,2,sympy,"The region is symmetric about the y-axis. For x in [0, π], which is smaller: π − x or x sin x?","They are equal at x = π/2. For x < π/2, x sin x is lower; for x > π/2, π − x is lower.","1. Area = 2[∫ from 0 to π/2 of x sin x dx + ∫ from π/2 to π of (π − x) dx].
+2. ∫ x sin x from 0 to π/2 = [sin x − x cos x] = 1.
+3. ∫ (π − x) from π/2 to π = π^{2}/8.
+4. Area = 2(1 + π^{2}/8) = 2 + π^{2}/4.
+Answer: (2)",Area between curves; integration by parts.,Sketching both curves is the key. Revise 'Application of Integrals'.,
+19,2,sympy,"Both integrands are even. On [0, 2], x sin x increases from 0 to about 1.82. When is [x sin x] = 1?","[x sin x] = 1 from x_{0} (where x_{0} sin x_{0} = 1) up to 2, and 0 before that. So the integral of the floor part is 2(2 − x_{0}).","1. ∫ from −2 to 2 of |sin x| = 2(1 − cos 2).
+2. ∫ from −2 to 2 of [x sin x] = 2(2 − x_{0}).
+3. Total = 2(3 − cos 2) − 2x_{0}, so β = −2x_{0}.
+4. β sin(β/2) = (−2x_{0}) sin(−x_{0}) = 2x_{0} sin x_{0} = 2.
+Answer: (2)",Integrals with the greatest integer function of a non-linear expression.,You never need x_{0}'s value: keep it as a symbol and use x_{0} sin x_{0} = 1 at the end. Revise 'Definite Integrals'.,
+20,3,sympy,The equation is variable separable: dy/(1 − y + y^{2}) = (1 + x + x^{2}) dx.,∫dy/(y^{2} − y + 1) = (2/√3) tan^{−1}((2y − 1)/√3). The right side from 0 to 1 is 1 + 1/2 + 1/3 = 11/6.,"1. (2/√3)tan^{−1}((2y − 1)/√3) = x + x^{2}/2 + x^{3}/3 + C, and y(0) = 1/2 gives C = 0.
+2. At x = 1: tan^{−1}((2y − 1)/√3) = (√3/2)(11/6) = 11√3/12.
+3. 2y(1) − 1 = √3 tan(11√3/12).
+Answer: (3)",Variable separable DE; completing the square for ∫dy/(y^{2} − y + 1).,Revise 'Integrals': ∫dx/((x − a)^{2} + b^{2}) = (1/b)tan^{−1}((x − a)/b).,
+21,9,sympy,"Tosses 1–6 and 4–8 overlap in tosses 4, 5, 6. Condition on how many heads fall in the overlap.",Let k = heads in tosses 4–6. You need 4 − k heads in tosses 1–3 and 3 − k in tosses 7–8.,"1. Count = Σ_{k} C(3, k)·C(3, 4 − k)·C(2, 3 − k).
+2. k = 1: 3 × 1 × 1 = 3; k = 2: 3 × 3 × 2 = 18; k = 3: 1 × 3 × 1 = 3. Total 24.
+3. p = 24/256, so 96p = 9.
+Answer: 9",Probability with overlapping events (conditioning on the overlap).,Splitting on the shared tosses avoids double counting. Revise 'Probability' and 'Permutations and Combinations'.,
+22,3,sympy,"Latus rectum of y^{2} = 4kx: x = k, from (k, −2k) to (k, 2k). For the ellipse: x = ae, half-length b^{2}/a.",Same segment: k = ae and 2k = b^{2}/a = a(1 − e^{2}). So 2ae = a(1 − e^{2}).,"1. e^{2} + 2e − 1 = 0, so e = √2 − 1.
+2. e^{2} = 3 − 2√2, so e^{2} + 2√2 = 3.
+Answer: 3",Latus rectum of a parabola and an ellipse.,Revise 'Conic Sections': latus rectum lengths 4a (parabola) and 2b^{2}/a (ellipse).,
+23,2,sympy,Look for a telescoping identity: sin θ/cos 3θ in terms of tan 3θ and tan θ.,tan 3θ − tan θ = sin 2θ/(cos 3θ cos θ) = 2 sin θ/cos 3θ. So sin θ/cos 3θ = ½(tan 3θ − tan θ).,"1. A = ½[(tan 9° − tan 3°) + (tan 27° − tan 9°) + (tan 81° − tan 27°)] = ½(tan 81° − tan 3°).
+2. B/A = 2.
+Answer: 2",Telescoping trigonometric sums.,Revise 'Trigonometric Functions': tan A − tan B = sin(A − B)/(cos A cos B). It is the engine of many telescoping sums.,
+24,3,sympy,|a_{k}|^{2} = 1 + tan^{2}θ_{k} = sec^{2}θ_{k} and |b_{k}|^{2} = 1 + cot^{2}θ_{k} = cosec^{2}θ_{k}. Notice θ_{k+1} = 2θ_{k}.,"cosec^{2}2θ = 1/(4sin^{2}θcos^{2}θ) = (sec^{2}θ + cosec^{2}θ)/4, so sec^{2}θ = 4cosec^{2}2θ − cosec^{2}θ. Sum this over k and look at the first and last terms.","1. Σ_{k=1..n} sec^{2}θ_{k} = 4Σcosec^{2}θ_{k+1} − Σcosec^{2}θ_{k} = 3Σ_{k=1..n} cosec^{2}θ_{k} + 4(cosec^{2}θ_{n+1} − cosec^{2}θ_{1}).
+2. θ_{n+1} = 2^{n}π/(2^{n}+1) = π − θ_{1}, so cosec^{2}θ_{n+1} = cosec^{2}θ_{1} and the bracket is 0.
+3. So Σ|a_{k}|^{2} = 3Σ|b_{k}|^{2}, and the ratio is 3.
+Answer: 3",Telescoping trigonometric sums over doubling angles.,"This one is hard. If it felt too hard, it's a fair one to skip in the exam. The identity cosec^{2}2θ = (sec^{2}θ + cosec^{2}θ)/4 is worth knowing.",
+25,3,sympy,Find the corners of each part separately. Is cos|x^{2} − 1/4| smooth?,"cos|u| = cos u, so it is smooth. |x − 1| times something non-zero at x = 1 gives a corner at x = 1. max{6x, 2 + 3x^{2}} has corners where 6x = 2 + 3x^{2}.","1. 3x^{2} − 6x + 2 = 0 gives x = 1 ± 1/√3, both in (−π, π), and the slopes differ there: 2 corners.
+2. |x − 1|cos(x^{2} − 1/4): cos(3/4) ≠ 0, so there is a corner at x = 1.
+3. Total 3.
+Answer: 3",Points of non-differentiability of max functions and |x − a|·g(x).,Remember: |x − a|·g(x) is differentiable at a only if g(a) = 0. Revise 'Continuity and Differentiability'.,
+26,4,arithmetic,Least count = pitch / number of circular divisions. What is the pitch?,Pitch = distance moved in one full rotation = 2.5 mm/5.,"1. Pitch = 0.5 mm.
+2. LC = 0.5/100 = 5 × 10^{−3} mm.
+Answer: (4)",Least count of a screw gauge.,Revise 'Units and Measurements': screw gauge.,
+27,2,arithmetic,Bulk modulus B = ΔP/(ΔV/V).,ΔV/V = ΔP/B.,"1. ΔV/V = 6.3×10^{7}/2.1×10^{9} = 0.03.
+2. That is a 3% decrease.
+Answer: (2)",Bulk modulus.,Revise 'Mechanical Properties of Solids'.,
+28,3,arithmetic,"Same distance, so t ∝ 1/√a. If the time is 1.5 times, how do the accelerations compare?","a_{smooth}/a_{rough} = 1.5^{2} = 9/4, with a_{smooth} = g sin 45° and a_{rough} = g(sin 45° − μ cos 45°).","1. 1/(1 − μ) = 9/4 (sin 45° = cos 45° cancels).
+2. μ = 1 − 4/9 = 5/9.
+Answer: (3)",Motion on a rough incline.,Common slip: using a ratio of 1.5 instead of 1.5^{2}. Revise 'Laws of Motion' (friction).,
+29,3,arithmetic,Energy change = total binding energy after − total binding energy before.,Before: 2 × (3 × 5.6) + 4 × 7.4. After: 10 × 6.1.,"1. Before: 33.6 + 29.6 = 63.2 MeV. After: 61 MeV.
+2. The binding energy decreases by 2.2 MeV, so the mass increases: ΔMc^{2} = 2.2 MeV.
+Answer: (3)",Binding energy and mass change in nuclear reactions.,Revise 'Nuclei'. Multiply the per-nucleon value by the mass number before adding.,
+30,2,arithmetic,The mass M/8 at the same density makes a sphere of radius r = R/2. The disc has mass 7M/8 and radius 2R.,I_{1} = (2/5)(M/8)(R/2)^{2}; I_{2} (disc about a diameter) = (1/4)(7M/8)(2R)^{2}.,"1. I_{1} = (2/5)(M/8)(R^{2}/4) = MR^{2}/80.
+2. I_{2} = (1/4)(7M/8)(4R^{2}) = 7MR^{2}/8.
+3. I_{2}/I_{1} = (7/8) × 80 = 70.
+Answer: (2)",Moments of inertia of a sphere and a disc.,"Disc about a diameter is MR^{2}/4, not MR^{2}/2. Revise 'System of Particles and Rotational Motion'.",
+31,2,arithmetic,Range R = u^{2} sin 2θ/g.,R ∝ sin 2θ: sin 30° : sin 60°.,"1. Ratio = (1/2) : (√3/2) = 1 : √3.
+Answer: (2), x = √3",Range of a projectile.,Revise 'Motion in a Plane'.,
+32,1,conceptual,"For the same frequency, KE_{max} = h(ν − ν_{0}). Which metal has the smallest threshold frequency?",The threshold frequency is where each line meets the frequency axis.,"1. X_{1} has the lowest threshold (1.0 × 10^{14} Hz).
+2. Same ν means a larger ν − ν_{0}, so the greatest KE is for X_{1}.
+Answer: (1)",Photoelectric effect: stopping potential vs frequency graphs.,Revise 'Dual Nature of Matter and Radiation'.,
+33,3,arithmetic,"In single-slit diffraction, minima are at y_{n} = nDλ/a.",Separation between the 1st and 3rd minima = (3 − 1)Dλ/a.,"1. y_{3} − y_{1} = 2Dλ/a.
+Answer: (3)",Positions of minima in single-slit diffraction.,Revise 'Wave Optics'.,
+34,2,arithmetic,Each string stretches by FL/(AY). Both carry the same load.,"B has twice the length and twice the Young's modulus, so it stretches by the same amount as A.","1. ΔL_{A} = 8 × 0.314/(π(2×10^{−4})^{2} × 2×10^{10}) = 1 × 10^{−3} m = 1 mm.
+2. ΔL_{B} = 1 mm.
+3. Total = 2 mm.
+Answer: (2)",Young's modulus for wires in series.,Revise 'Mechanical Properties of Solids'.,
+35,2,conceptual,Moles add up when gases mix. Use n = PV/RT for each.,PV/T = P_{1}V_{1}/T_{1} + P_{2}V_{2}/T_{2}.,"1. T = PV/(P_{1}V_{1}/T_{1} + P_{2}V_{2}/T_{2}) = T_{1}T_{2}PV/(T_{2}P_{1}V_{1} + T_{1}P_{2}V_{2}).
+Answer: (2)",Mixing ideal gases (conservation of moles).,Revise 'Kinetic Theory'. Temperatures don't simply average.,
+37,1,arithmetic,Full-scale current I_{g} = 20/x. What total resistance gives 30 V at the same current?,R_{total} = 30/I_{g} = 1.5x. Extra resistance goes in series.,"1. Extra = 1.5x − x = x/2, in series.
+Answer: (1)",Extending the range of a voltmeter.,Voltmeters get series resistors and ammeters get shunts. Revise 'Current Electricity' / 'Moving Charges and Magnetism'.,
+38,1,arithmetic,"The circuit is NAND(NOT A, B). Simplify with De Morgan.",Y = (A′·B)′ = A + B′.,"1. B′ = 0101.
+2. A + B′ = 1101 OR 0101 = 1101.
+Answer: (1)",Logic gates applied bit by bit.,Revise 'Semiconductor Electronics': logic gates and De Morgan's laws.,
+39,2,arithmetic,"Find the images of both ends of the rod. The nearer end is at 20 cm, the farther at 30 cm.",1/v + 1/u = 1/f with f = −10 cm. u = −20 gives v = −20; u = −30 gives v = −15.,"1. The near end is at 2f, so its image is at 20 cm.
+2. Far end: 1/v = −1/10 + 1/30 = −1/15, so v = −15 cm.
+3. Image length = 20 − 15 = 5 cm.
+Answer: (2)",Image of an extended object along the axis of a mirror.,Don't use magnification m^{2} for a long rod: image each end separately. Revise 'Ray Optics'.,
+40,1,arithmetic,"With the battery connected, V stays fixed. Write U in terms of x.","U = ½CV^{2} = ε_{0}AV^{2}/(2x). Differentiate with respect to time, using dx/dt = v.","1. dU/dt = −(ε_{0}AV^{2}/2x^{2}) × v.
+2. So dU/dt ∝ x^{−2}: α = −2.
+Answer: (1)",Capacitor energy at constant voltage.,Decide first whether V or Q is constant. Revise 'Electrostatic Potential and Capacitance'.,
+41,2,arithmetic,The turns are spread evenly from r_{1} to r_{2}. A thin ring of turns at radius r has moment I × πr^{2} each.,Turns per unit radius = N/(r_{2} − r_{1}). M = ∫ from r_{1} to r_{2} of I·πr^{2}·(N/(r_{2} − r_{1})) dr.,"1. M = IπN(r_{2}^{3} − r_{1}^{3})/(3(r_{2} − r_{1})).
+2. = 0.02 × π × 200 × (216 − 27)×10^{−6}/(3 × 0.03) ≈ 2.64 × 10^{−2} A m^{2}.
+Answer: (2)",Magnetic moment of a flat spiral coil (integration).,Revise 'Moving Charges and Magnetism': m = NIA. Integrating over turns is the extra step here.,
+42,1,arithmetic,"The two diodes point opposite ways. For DC from the battery, how many conduct?",Only one diode is forward biased (10 Ω); the other blocks. Total R = 100 + 10 = 110 Ω.,"1. τ = RC = 110 × 20×10^{−6} = 2.2 × 10^{−3} s.
+Answer: (1)",RC time constant with diodes.,Revise 'Semiconductor Electronics' and RC circuits.,
+43,2,arithmetic,"Four branches each have a 27 V battery with 3 Ω (14 V + 13 V = 27 V in one of them). They are in parallel across A and B, with the 6 Ω path (two 3 Ω) as the load.","Identical cells in parallel: same EMF 27 V, internal resistance 3/4 Ω. Load = 6 Ω.","1. Equivalent: 27 V with r = 0.75 Ω.
+2. I = 27/(6 + 0.75) = 4 A.
+3. V_{AB} = 4 × 6 = 24 V.
+Answer: (2)",Combination of cells in parallel.,Revise 'Current Electricity': cells in parallel. Spotting that the branches are identical is the shortcut.,
+44,2,arithmetic,Angular resolution of a telescope: θ = 1.22λ/D.,D = 1.22λ/θ.,"1. D = 1.22 × 500×10^{−9}/(5×10^{−7}) = 1.22 m = 122 cm.
+Answer: (2)",Resolving power of a telescope.,Revise 'Wave Optics' (resolving power).,
+45,1,conceptual,"At the Brewster angle, the reflected light travels in the plane of incidence (x–z here) and goes back up (−z).",The reflected wave moves along +x and −z: phase (kx − kz − ωt). Only one option has that.,"1. Incident direction lies in the x–z plane, travelling into the medium (+z). The reflected direction is +x, −z.
+2. Only option 1 has the phase (kx − kz − ωt).
+Answer: (1)",Reflection at the Brewster angle; wave direction from the phase.,Revise 'Wave Optics': Brewster's law. The reflected light is polarised perpendicular to the plane of incidence.,Physically the reflected E is along y only; option 1 is the only one with the right direction of travel. A teacher may want to discuss the E components.
+46,35,arithmetic,"Add the two forces, then W = F·d.","F = (5, 2, 2) N. d = 25 × (3, −4, 0)/5 = (15, −20, 0) m.","1. W = 5(15) + 2(−20) + 2(0) = 75 − 40 = 35 J.
+Answer: 35",Work done by a constant force (dot product).,"Turn the direction into a unit vector before multiplying by 25 m. Revise 'Work, Energy and Power'.",
+47,264,arithmetic,A soap bubble has two surfaces. W = T × increase in total area.,W = 2T × 4π(r_{2}^{2} − r_{1}^{2}).,"1. W = 8π × 3.5×10^{−2} × (4 − 1) × 10^{−4} = 8 × (22/7) × 1.05 × 10^{−5} = 264 × 10^{−6} J.
+Answer: 264",Surface energy of a soap bubble.,Revise 'Mechanical Properties of Fluids'. Remember the factor 2 for the two surfaces.,
+48,44,arithmetic,"In SHM, v^{2} = ω^{2}(A^{2} − x^{2}). Compare with v^{2} = 50 − x^{2}.","ω^{2} = 1, so ω = 1 rad/s and T = 2π/ω.","1. ω = 1, so T = 2π = 44/7 s (π = 22/7).
+2. x = 44.
+Answer: 44",Velocity–displacement relation in SHM.,Revise 'Oscillations'.,
+49,200,arithmetic,Find the velocity at t = 2 by integrating a = F/m from rest.,"a = (t, 3t^{2}), so v = (t^{2}/2, t^{3}). Power = F·v.","1. At t = 2: v = (2, 8) and F = (4, 24).
+2. P = 4 × 2 + 24 × 8 = 8 + 192 = 200 W.
+Answer: 200",Power from force and velocity.,"Revise 'Work, Energy and Power': P = F·v.",
+50,100,arithmetic,"Power factor cos φ = 0.5, so what is tan φ?","tan φ = (X_{L} − X_{C})/R, with φ = 60°.","1. X_{L} − X_{C} = R tan 60° = 100√3 Ω (in magnitude).
+2. α = 100.
+Answer: 100",Phase angle in an LCR circuit.,"The L, C and frequency values are not needed. Revise 'Alternating Current'.",
+51,2,arithmetic,"At STP, 1 mol of gas occupies 22.4 L.",n = 1.4187/22.4. Molecules = n × 6.022 × 10^{23}.,"1. n = 0.0633 mol.
+2. Molecules = 0.0633 × 6.022×10^{23} ≈ 3.812 × 10^{22}.
+Answer: (2)",Mole concept for gases.,Revise 'Some Basic Concepts of Chemistry'.,
+52,2,arithmetic,Wave number ∝ (1/n_{1}^{2} − 1/n_{2}^{2}). Balmer: n_{1} = 2; Brackett: n_{1} = 4. First line: n_{2} = n_{1} + 1.,Balmer: 1/4 − 1/9 = 5/36. Brackett: 1/16 − 1/25 = 9/400.,"1. Ratio = (5/36)/(9/400) = 2000/324 ≈ 6.17.
+2. 5 : (5/6.17) = 5 : 0.81.
+Answer: (2)",Hydrogen spectral series.,"Revise 'Structure of Atom': spectral series (Lyman 1, Balmer 2, Paschen 3, Brackett 4).",
+53,4,conceptual,"Fill orbitals by the Aufbau order (ignore the real exception for Cr). After 3p^{6} (18 electrons), which orbital comes next?",1s 2s 2p 3s 3p 4s 3d: the 19th electron enters 4s.,"1. Electron 19 is the first electron in 4s.
+2. n = 4, l = 0, m = 0, s = +1/2.
+Answer: (4)",Aufbau principle and quantum numbers.,"Revise 'Structure of Atom'. The question asks for strict Aufbau, not Cr's actual configuration.",
+54,4,conceptual,Compare C_{p} and C_{v} for an ideal gas.,"C_{p} − C_{v} = R > 0. At constant volume, no work is done, so all the heat goes into internal energy.","1. Statement I: C_{v} > C_{p} is false.
+2. Statement II: at constant volume, W = 0 and q = ΔU, which shows up as a temperature rise. True.
+Answer: (4)",Heat capacities and the first law.,Revise 'Thermodynamics'.,
+55,4,arithmetic,"If you multiply a reaction by a factor, K is raised to that power.",K′ = K^{1/3}.,"1. K′ = (2.7 × 10^{−5})^{1/3} = 3 × 10^{−2}.
+Answer: (4)",Equilibrium constant for a scaled reaction.,Revise 'Equilibrium'.,
+56,2,arithmetic,Count the electrons each species loses. Fe^{2+} → Fe^{3+} loses 1; each C_{2}O_{4}^{2−} → 2CO_{2} loses 2. MnO_{4}^{−} takes 5.,FeC_{2}O_{4}: 1 + 2 = 3. Fe_{2}(C_{2}O_{4})_{3}: 3 × 2 = 6. FeSO_{4}: 1. Fe_{2}(SO_{4})_{3}: 0.,"1. Total electrons = 3 + 6 + 1 + 0 = 10.
+2. Moles of KMnO_{4} = 10/5 = 2.
+Answer: (2)",Redox titration with electron counting.,Revise 'Redox Reactions': n-factor method.,
+57,4,conceptual,"For first order, [R] = [R]_{0}e^{−k_{1}t}. What fraction has decomposed?",Fraction decomposed = ([R]_{0} − [R])/[R]_{0}.,"1. = 1 − e^{−k_{1}t}.
+Answer: (4)",Integrated first-order rate law.,Revise 'Chemical Kinetics'.,
+58,1,conceptual,"A^{−} has 36 electrons, so A has 35. Which element is that?",Z = 35 is bromine. Mass number = protons + neutrons.,"1. Z = 35 (Br), A = 35 + 45 = 80.
+2. Group 17, liquid at room temperature.
+Answer: (1)",Atomic structure and the periodic table.,Revise 'Structure of Atom' and 'p-Block Elements'.,
+59,1,conceptual,Oxygen has no d orbitals. What is its maximum covalency? Check the oxidation states in SO_{2} and OF_{2}.,"Oxygen's maximum covalency is 4. In OF_{2}, F is more electronegative.","1. Statement I: covalency is usually 2 and at most 4; O is −2 in SO_{2} and +2 in OF_{2}. True.
+2. Statement II: oxygen's anomalous behaviour comes from its small size and high electronegativity. True.
+Answer: (1)",Anomalous behaviour of oxygen.,Revise 'p-Block Elements' (group 16).,
+60,3,conceptual,Check each statement against the d- and f-block trends.,Higher oxidation states are more stable down group 6. Ce^{4+}/Tb^{4+} want to gain electrons; Eu^{2+}/Yb^{2+} want to lose them.,"1. A false: Mo(VI) and W(VI) are more stable than Cr(VI).
+2. B true.
+3. C false: Cm (5f^{7}6d^{1}) has 8 unpaired electrons.
+4. D true: actinoid contraction is larger from element to element.
+Answer: (3), B and D","d- and f-block trends: oxidation states, contraction.",Revise 'd- and f-Block Elements'.,
+61,2,conceptual,"Which dichromate is hygroscopic, and so not a primary standard?","Na_{2}Cr_{2}O_{7} absorbs moisture, so K_{2}Cr_{2}O_{7} is used as the primary standard.","1. A true. B false. C true (CrO_{4}^{2−} ⇌ Cr_{2}O_{7}^{2−} with pH). D true (Cr−O−Cr ≈ 126°).
+Answer: (2), A, C and D",Properties of potassium dichromate.,Revise 'd- and f-Block Elements': K_{2}Cr_{2}O_{7}.,
+62,4,conceptual,"Water is a weak-field ligand, so all of these are high spin. Count the unpaired electrons.",Cr^{2+} d^{4}: 4; Co^{2+} d^{7}: 3; Cu^{2+} d^{9}: 1; Mn^{2+} d^{5}: 5. μ = √(n(n+2)).,"1. Cr^{2+}: 4.90 (III). Co^{2+}: 3.87 (I). Cu^{2+}: 1.73 (IV). Mn^{2+}: 5.92 (II).
+Answer: (4)",Spin-only magnetic moments.,Revise 'Coordination Compounds': μ = √(n(n+2)) BM.,
+63,3,conceptual,Rank the groups by how strongly they pull electrons (−I/−R).,−NO_{2} > −CN > −COOH > −I.,"1. Increasing order: −I < −COOH < −CN < −NO_{2}, i.e. d < b < a < c.
+Answer: (3)",Electron-withdrawing strength of groups.,Revise 'Basic Principles of Organic Chemistry': inductive and resonance effects.,
+64,4,conceptual,Each C=O in the products came from a C=C. Rebuild the alkene by joining the carbonyl carbons in pairs.,2 HCHO means two =CH_{2} groups. OHC−CO−CHO and CH_{3}CO−CO−COCH_{3} together form a six-membered ring.,"1. The ring is built from OHC−CO−CHO (3 C) and CH_{3}CO−CO−COCH_{3} (3 C, plus two CH_{3}).
+2. The two middle C=O carbons carried exocyclic =CH_{2} groups (giving 2 HCHO).
+3. This matches the cyclohexadiene with two methyls and two exocyclic =CH_{2} groups in option 4.
+Answer: (4)",Reverse ozonolysis.,Revise 'Hydrocarbons': ozonolysis. Pair the C=O ends to rebuild the C=C bonds.,Checked by rebuilding the structure from the products; a teacher may want to confirm the option images.
+65,2,conceptual,Recall the reagent for each named reaction.,Finkelstein: NaI. Swarts: SbF_{3}. Sandmeyer: Cu_{2}Cl_{2}. Fittig: Na in dry ether.,"1. A-III, B-I, C-IV, D-II.
+Answer: (2)",Named reactions of haloalkanes and haloarenes.,Revise 'Haloalkanes and Haloarenes'. A small table of named reactions is worth making.,
+66,1,conceptual,"Aqueous NaOH dissolves acids and phenols, not alcohols, aldehydes or amines.","Phenols: II, III, IV. Acids: V, VII. IX is a benzylic alcohol (CH_{2}OH), not a phenol.","1. Soluble: II, III, IV, V, VII.
+2. Not soluble: I (aldehyde), VI (amine), VIII (hydrocarbon), IX (alcohol).
+3. Count = 5.
+Answer: (1)",Acidity of phenols and carboxylic acids.,"Revise 'Alcohols, Phenols and Ethers': acidity. An −OH on a ring carbon is a phenol; on a CH_{2} it's an alcohol.",
+67,2,conceptual,Br_{2} water with aniline brominates all the free ortho and para positions. Then the NH_{2} becomes N_{2}^{+}.,"A = 2,4,6-tribromoaniline. With HBF_{4} and then NaNO_{2}/Cu, the diazonium group is replaced by NO_{2}.","1. A = 2,4,6-tribromoaniline; B = its diazonium salt.
+2. C = 2,4,6-tribromonitrobenzene = 1,3,5-tribromo-2-nitrobenzene.
+Answer: (2)",Bromination of aniline; diazonium replacement by NO_{2}.,Revise 'Amines': diazonium salt reactions (HBF_{4} then NaNO_{2}/Cu gives nitro).,
+68,4,conceptual,Does maltose have a free hemiacetal OH? Does lactose?,"In both, one glucose unit keeps its anomeric carbon free, so both are reducing sugars.","1. Statement I: maltose is a reducing sugar, so 'non-reducing' is false.
+2. Statement II: lactose is reducing. True.
+Answer: (4)",Reducing and non-reducing disaccharides.,Revise 'Biomolecules': sucrose is the common non-reducing disaccharide.,
+69,1,conceptual,"Recall the one-letter codes R, D, K, E and which amino acids are essential.","R = arginine, D = aspartic acid, K = lysine, E = glutamic acid. Essential (NCERT): arginine and lysine.","1. A-II (R, essential), B-I (D, non-essential), C-IV (K, essential), D-III (E, non-essential).
+Answer: (1)",Amino acid codes and classification.,Revise 'Biomolecules': essential amino acids.,
+70,4,conceptual,Phenolphthalein is pink in mildly basic solution. What happens in excess NaOH?,"Excess OH^{−} adds to the central carbon, breaking the conjugation (carbinol form).","1. X is the carbinol form with no extended conjugation, so it is colourless.
+Answer: (4)","Structure of phenolphthalein in acid, base and excess base.",Revise acid–base indicators (phenolphthalein).,
+71,6,conceptual,"In XeO_{6}^{4−}, Xe is +8. How many of its 8 valence electrons are left as lone pairs?","Xe forms six Xe−O σ bonds and uses all its valence electrons, so there is no lone pair.","1. σ bond pairs = 6; lone pairs on Xe = 0.
+2. Total = 6.
+Answer: 6",Lewis structures of xenon compounds.,Revise 'p-Block Elements' (noble gases).,
+72,78,arithmetic,"Follow the sequence: methylation, chlorination (CH_{3} directs ortho/para, major para), then oxidation of CH_{3}.",X = p-chlorobenzoic acid (M = 156.5). With NaHCO_{3}: 1 mol acid → 1 mol CO_{2}.,"1. 11.2 dm^{3} CO_{2} at STP = 0.5 mol, so 0.5 mol of acid.
+2. P = 0.5 × 156.5 = 78.25 g ≈ 78 g.
+Answer: 78","Friedel–Crafts, directing effects, oxidation; acid–bicarbonate stoichiometry.",Revise 'Hydrocarbons' (directing effects) and 'Carboxylic Acids' (NaHCO_{3} test).,
+73,5,arithmetic,"Find %Br from the AgBr mass, then %H by difference.","Mass of Br = 3.36 × 80/188 = 1.43 g, i.e. 71.5%. C 26.7%, so H = 1.8%.","1. Moles: C 26.7/12 = 2.23, H 1.8/1 = 1.8, Br 71.5/80 = 0.894.
+2. Ratio C : H : Br ≈ 2.5 : 2 : 1 = 5 : 4 : 2.
+3. Empirical formula C_{5}H_{4}Br_{2}: 5 carbon atoms.
+Answer: 5",Carius estimation and empirical formula.,Revise 'Purification and Characterisation of Organic Compounds'. Get H by difference when it isn't given.,
+74,756,arithmetic,This is a basic buffer. Use pOH = pK_{b} + log([salt]/[base]).,"Moles: base 0.5 mmol, salt 25 mmol, so the ratio is 50.","1. pOH = 4.74 + log 50 = 4.74 + 1.70 = 6.44.
+2. pH = 14 − 6.44 = 7.56 = 756 × 10^{−2}.
+Answer: 756",Henderson equation for a basic buffer.,Revise 'Equilibrium'. log 50 = log 100 − log 2 = 1.70.,
+75,5,arithmetic,"Use the boiling-point elevation to find the moles of solute, then Raoult's law for the solvent moles.","ΔT_{b} = 0.5 = K_{b}m, so m = 5/3 mol/kg. Then (p° − p)/p° = n_{solute}/(n_{solute} + n_{solvent}).","1. Moles of solute in 40 g = (5/3) × 0.040 = 0.0667.
+2. 10/760 = 0.0667/(0.0667 + N), so N ≈ 5.0.
+Answer: 5",Colligative properties: elevation of boiling point and relative lowering of vapour pressure.,Revise 'Solutions'.,

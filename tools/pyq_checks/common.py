@@ -4,7 +4,8 @@ from fractions import Fraction
 from itertools import product
 
 from sympy import (Matrix, Rational, Symbol, cos, diff, exp, expand, integrate, limit, log, nsimplify,
-                   pi, simplify, sin, solve, sqrt, symbols, tan, factor)
+                   pi, simplify, sin, solve, sqrt, symbols, tan, factor, atan, asin, acos, Poly, oo)
+from sympy import I as sympy_I
 
 x = Symbol('x')
 
