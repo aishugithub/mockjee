@@ -1,1 +1,4 @@
 flask>=3.0
+# only for the answer checkers (verify_answers.py, tools/verify_pyq_solutions.py), not the server
+sympy
+mpmath
