@@ -1,0 +1,216 @@
+q,claude_answer,check,hint1,hint2,solution,concept,revise,note
+1,3,sympy,"Write the four numbers as a, ar, ar², ar³. Then α + β and γ + δ are related by r².","a(1 + r) = 1 and ar²(1 + r) = 4, so r² = 4. Check r = 2 and r = −2: p = a²r and q = a²r⁵ must be integers.","1. r = 2: a = 1/3 and p = 2/9, not an integer.
+2. r = −2: a = −1, p = (1)(−2) = −2, q = (1)(−32) = −32.
+3. |p + q| = 34.
+Answer: (3)",Roots in geometric progression.,"Using the condition p, q ∈ ℤ to choose r is the key step. Revise 'Sequences and Series' and 'Quadratic Equations'.",
+2,4,sympy,Use the quadratic formula. You'll need √(5 + 12i).,√(5 + 12i) = 3 + 2i (check: (3 + 2i)² = 9 − 4 + 12i). So z = −2 ± (3 + 2i).,"1. z_{1} = 1 + 2i and z_{2} = −5 − 2i.
+2. |z_{1}|² + |z_{2}|² = 5 + 29 = 34.
+Answer: (4)",Square roots of complex numbers.,Revise 'Complex Numbers': finding √(a + ib) by solving (x + iy)² = a + ib.,
+3,1,sympy,"Only the first column depends on n. So the sum of the determinants is one determinant with Σn, Σn², Σn³ in the first column.","Column 1 becomes (k(k+1)/2, −2Σn², −3Σn³). Expand and simplify; it equals k(k+1)(2k+1)... Try small k.","1. Σf(n) = det[[Σn, −1, −5], [−2Σn², 3(2k+1), 2k+1], [−3Σn³, 3k(2k+1), 3k(k+2)+1]].
+2. Evaluating for k = 1, 2, 3: the value reaches 98 at k = 3.
+Answer: (1)",Summation of determinants (linearity in one column).,Revise 'Matrices and Determinants': a determinant is linear in each column.,
+4,2,sympy,"Me_{1}, Me_{2}, Me_{3} are the columns of M.","M = [[1, 0, −1], [2, 1, 1], [3, 2, 1]]. Solve M(x, y, z) = (1, 7, 11).","1. x − z = 1, 2x + y + z = 7, 3x + 2y + z = 11.
+2. Subtracting the second from the third: x + y = 4. With z = x − 1: 3x + y = 8. So x = 2, y = 2, z = 1.
+3. x + y + z = 5.
+Answer: (2)",Matrix columns and solving linear systems.,Revise 'Matrices'.,
+5,3,sympy,Factor 1 + 4n⁴ (Sophie Germain identity).,4n⁴ + 1 = (2n² + 2n + 1)(2n² − 2n + 1). Then n/(1 + 4n⁴) = ¼[1/(2n² − 2n + 1) − 1/(2n² + 2n + 1)].,"1. The terms telescope: sum = ¼[1 − 1/(2 × 100 + 20 + 1)] = ¼ × 220/221 = 55/221.
+2. m + n = 276.
+Answer: (3)",Telescoping sums via factorisation.,Revise 'Sequences and Series'. The factorisation a⁴ + 4b⁴ = (a² + 2b² + 2ab)(a² + 2b² − 2ab) is worth knowing.,
+6,4,sympy,39 means between 59 and 159 make 41 terms. What is the common difference?,d = 100/40 = 2.5 and A_{k} = 59 + 2.5k.,"1. Mean of A_{25}, A_{28}, A_{31}, A_{36} = 59 + 2.5 × (25 + 28 + 31 + 36)/4 = 59 + 2.5 × 30 = 134.
+Answer: (4)",Arithmetic means.,Revise 'Sequences and Series'.,
+7,2,sympy,"General term: C(10, r)(2x²)^{10−r}(1/x)^{r}. Find r for x².","Power of x = 20 − 3r = 2, so r = 6.","1. Coefficient = C(10, 6) × 2⁴ = 210 × 16 = 3360.
+Answer: (2)",General term of a binomial expansion.,Revise 'Binomial Theorem'.,
+8,2,arithmetic,Use the total probability theorem.,P(win) = P(A)P(win | A) + P(B)P(win | B).,"1. 0.6 × 0.8 + 0.4 × 0.7 = 0.48 + 0.28 = 0.76.
+Answer: (2)",Total probability.,Revise 'Probability'.,
+9,1,sympy,"List the colour splits (b, y, r) with each at least 2 and total 8.","Splits: (2,2,4), (2,3,3), (2,4,2), (3,2,3), (3,3,2), (4,2,2). Multiply the choices for each.","1. 150 + 800 + 900 + 600 + 1200 + 450 = 4100.
+Answer: (1)",Selections with lower limits.,Revise 'Permutations and Combinations'. Listing the splits systematically avoids misses.,
+10,1,sympy,"The r-th value is r(r − 1) with frequency C(n, r). Use Σr(r − 1)C(n, r) = n(n − 1)2^{n−2}.","Mean = n(n − 1)/4 = 60, so n = 16. The frequencies are symmetric, so the median is at the middle r.","1. n(n − 1) = 240, so n = 16.
+2. The median falls at r = 8, so the median value = 8 × 7 = 56.
+Answer: (1)",Mean and median with binomial-coefficient frequencies.,"Revise 'Statistics' and 'Binomial Theorem' (sums like Σr(r − 1)C(n, r)).",
+11,2,sympy,"P is outside the circle. For a line through P, PR + PS = 2 × (distance from P to the chord's midpoint).","P = (3, 3), centre C = (1, 2). PR + PS = 2√(PC² − p²), where p is the distance from C to the line. Make p = 0.","1. PC² = 4 + 1 = 5.
+2. Maximum PR + PS = 2√5 (the line through the centre).
+3. (PR + PS)² = 20.
+Answer: (2)",Secants from an external point.,Revise 'Conic Sections': circle.,
+12,2,sympy,"Directrix x = −2, so A = (−2, 0). Take B = (2t², 4t) and use the slope 3/5.","4t/(2t² + 2) = 3/5 gives 3t² − 10t + 3 = 0. For a focal chord, the other end has parameter −1/t.","1. t = 3 (since α > 1): B = (18, 12). C has parameter −1/3: C = (2/9, −4/3).
+2. Area of ABC = ½|(B − A) × (C − A)| = 80/3.
+3. Six times the area = 160.
+Answer: (2)",Parabola parametric form; focal chords.,"Revise 'Conic Sections': for y² = 4ax, a focal chord has t_{1}t_{2} = −1.",
+13,3,sympy,A hyperbola has e > 1. Solve the quadratic for e.,e = 3/2. The distance between the foci is 9 = 2ae.,"1. a = 3; b² = a²(e² − 1) = 9 × 5/4 = 45/4.
+2. Latus rectum = 2b²/a = 15/2.
+Answer: (3)",Hyperbola: eccentricity and latus rectum.,Revise 'Conic Sections'.,
+14,3,sympy,"RP = RQ = 6, so the foot F of the perpendicular from R to the line is the midpoint of PQ.",Centroid = (P + Q + R)/3 = (2F + R)/3. Find F.,"1. With (−3 + 8t, 4 + 2t, −1 + 2t): (R − point)·(8, 2, 2) = 36 − 72t = 0, so t = 1/2 and F = (1, 5, 0).
+2. Centroid = ((2, 10, 0) + (1, 2, 3))/3 = (1, 4, 1).
+3. Sum = 6.
+Answer: (3)",Foot of a perpendicular; centroid.,Revise 'Three Dimensional Geometry'.,
+15,3,sympy,"Find the foot F of the perpendicular from (1, 2, 7) to the line; the image is 2F − P.","Point on the line (t, 1 + t, 2 + 2t). Perpendicular condition gives t = 2.","1. F = (2, 3, 6), image = (3, 4, 5).
+2. (a − 3)² + 4 = 16, so a = 3 ± 2√3.
+3. Sum = 6.
+Answer: (3)",Image of a point in a line.,Revise 'Three Dimensional Geometry'.,
+16,2,conceptual,Write the position vectors of R and M in terms of a and b.,"R = a/5. RM = b/5, so M = (a + b)/5.","1. PM = M − a = (b − 4a)/5.
+Answer: (2)",Position vectors.,Revise 'Vector Algebra'.,
+17,3,sympy,Use 1 − cos u ≈ u²/2 and tan u ≈ u as y → 0.,f(x) = (x²y²/2)(xy)/y³ = x³/2. Now count solutions of x³/2 = sin x.,"1. x = 0 is a solution.
+2. Near 0, sin x > x³/2; at x = 1.5, x³/2 > sin x: one positive root. By symmetry, one negative root.
+3. For |x| ≥ 2, |x³/2| > 1, so there are no more.
+4. Total 3.
+Answer: (3)",Standard limits; counting roots graphically.,Revise 'Limits' and sketching y = sin x against y = x³/2.,
+18,2,sympy,f(a) is the average of the two outer terms. Use AM ≥ GM on each.,"2^{1−a} + 2^{1+a} ≥ 4 and 3^{a} + 3^{−a} ≥ 2, both at a = 0. So α = 3. For the integral, put u = e^{2x}.","1. α = (4 + 2)/2 = 3.
+2. ∫dx/(e^{2x} − e^{−2x}) = ½∫du/(u² − 1) = ¼ ln((u − 1)/(u + 1)).
+3. u from 4 to 9: ¼[ln(8/10) − ln(3/5)] = ¼ ln(4/3).
+Answer: (2)",AM–GM and integration by substitution.,Revise 'Integrals' (∫du/(u² − 1)) and AM–GM.,
+19,1,sympy,Put x = 1 to get f(1). Then differentiate to get a differential equation.,"f(1) = e. Differentiating: f′ = f − ln x + 1/x, i.e. (f e^{−x})′ = e^{−x}(1/x − ln x) = (e^{−x} ln x)′.","1. f e^{−x} = e^{−x} ln x + C, so f = ln x + Ce^{x}. f(1) = e gives C = 1.
+2. f(x) = ln x + e^{x}.
+3. f(f(1)) = f(e) = 1 + e^{e}.
+Answer: (1)",Integral equations and linear differential equations.,Revise 'Differential Equations' and the Leibniz rule.,
+20,2,sympy,"f″ = g″ means f′ − g′ is constant, and f − g is linear.","f′ − g′ = 4 − 2 = 2, so f − g = 2x + c. Use f(2) = 3 and g(2) = 9.","1. 3 − 9 = 4 + c, so c = −10.
+2. f(25) − g(25) = 50 − 10 = 40.
+Answer: (2)",Integrating derivative conditions.,Revise 'Integrals' (antiderivatives).,
+21,18,sympy,Write s = a_{1} + b_{2} and t = a_{2} + b_{1}. Both are sums a + b with a in A and b in B. You need s to divide t.,"The 9 possible sums a + b are 3, 4, 6, 7, 9, 9, 10, 12, 15 (9 appears twice: 1 + 8 and 7 + 2). Count ordered pairs (s, t) of these 9 sums with s | t.","1. s = 3 divides 3, 6, 9, 9, 12, 15: 6 pairs.
+2. s = 4 divides 4, 12: 2. s = 6 divides 6, 12: 2. s = 7: 1. s = 10: 1. s = 12: 1. s = 15: 1.
+3. Each of the two 9s divides both 9s: 4.
+4. Total = 6 + 2 + 2 + 1 + 1 + 1 + 1 + 4 = 18.
+Answer: 18",Counting elements of a relation.,Making the list of sums first turns this into a quick count. Revise 'Relations and Functions'.,
+22,7,sympy,"Lines through (−1, −1) at 45° to x + y = 0 are x = −1 and y = −1.","A reflected ray appears to come from the image of (−1, −1) in the mirror, which is (3/5, 11/5). Find where each ray hits the mirror.","1. x = −1 hits x + 2y = 1 at (−1, 1); y = −1 hits it at (3, −1).
+2. Through (3/5, 11/5): from (−1, 1) the line is −3x + 4y = 7; from (3, −1) it is 4x + 3y = 9.
+3. a = 4, b = 3, c = −3, d = 4: ad + bc = 16 − 9 = 7.
+Answer: 7",Reflection of rays in a line mirror.,Revise 'Straight Lines': image of a point in a line.,
+23,19,sympy,Use product-to-sum on both sides.,"Both sides contain ½cos(7θ/2), which cancels. You get cos(3θ/2) = cos(21θ/2).","1. 21θ/2 = 2nπ ± 3θ/2 gives θ = 2nπ/9 or θ = nπ/6.
+2. In [−π, π]: 9 values of 2nπ/9 and 13 values of nπ/6.
+3. Common values: 0, ±2π/3 (3 of them).
+4. n(S) = 9 + 13 − 3 = 19.
+Answer: 19",Trigonometric equations and counting solutions.,Don't forget to remove the solutions counted twice. Revise 'Trigonometric Functions'.,
+24,16,sympy,"Replace x by π/2 − x to get a second equation, then solve for f(x).","f(x) = (3cos x − sin x)/8, so α = √10/8 and α² = 5/32. The curves x² and βx³ meet at x = 0 and x = 1/β.","1. Area = ∫ from 0 to 1/β of (x² − βx³) dx = 1/(12β³).
+2. 1/(12β³) = 5/32, so β³ = 8/15.
+3. 30β³ = 16.
+Answer: 16",Functional equations; area between curves.,Revise 'Application of Integrals' and a cos x + b sin x (max √(a² + b²)).,
+25,48,sympy,Divide by √tan x: it's a linear equation dy/dx + (tan x)y = sec³x/√tan x.,Integrating factor = sec x. Then ∫sec⁴x/√tan x dx with t = tan x becomes ∫(1 + t²)/√t dt.,"1. y sec x = 2√t + (2/5)t^{5/2} + C. At π/4: (6√2/5)√2 = 12/5 = 2 + 2/5 + C, so C = 0.
+2. At π/3 (t = √3, sec = 2): 2y = 3^{1/4}(2 + 6/5), so y = (8/5)3^{1/4} = (4/5)α.
+3. α = 2 × 3^{1/4}, α⁴ = 48.
+Answer: 48",Linear differential equations.,Revise 'Differential Equations'.,
+26,2,conceptual,"Planck units: combine h, G and c to get length, time and mass.","Length √(Gh/c³), time √(Gh/c⁵), mass √(hc/G). The remaining expression is the temperature.","1. A-IV, B-II, C-I, D-III.
+Answer: (2)",Dimensional analysis (Planck units).,Revise 'Units and Measurements'. Check dimensions to confirm: Gh/c⁵ has dimension T².,
+27,4,arithmetic,R = V/I. Fractional errors add for a quotient.,ΔR/R = ΔV/V + ΔI/I = 0.5/10 + 0.2/5.,"1. R = 2 Ω; ΔR/R = 0.05 + 0.04 = 0.09.
+2. ΔR = 0.18 Ω.
+Answer: (4)",Error propagation.,Revise 'Units and Measurements'.,
+28,1,arithmetic,"The block stays at rest on the incline, so static friction = mg sin 30°, along the incline (upwards).",The assembly moves vertically up 8 m in 2 s. Work = force × displacement × cos(angle between them).,"1. Friction = 1 × 10 × ½ = 5 N, at 30° to the horizontal, i.e. 60° to the vertical.
+2. W = 5 × 8 × cos 60° = 20 J.
+Answer: (1)",Work done by static friction.,"Static friction can do work when the surface itself moves. Revise 'Work, Energy and Power'.",
+29,3,arithmetic,Distance = total area between the graph and the time axis. Displacement = signed area.,"Two triangles: one above (0–20 s, height 5) and one below (20–40 s, depth 5).","1. Each triangle has area ½ × 20 × 5 = 50 m.
+2. Distance = 100 m; displacement = 0, so the average velocity is zero.
+Answer: (3)",Reading v–t graphs.,Revise 'Motion in a Straight Line'.,
+30,2,arithmetic,From rest with constant angular acceleration: θ ∝ t².,θ in 2 s ∝ 4; θ in 4 s ∝ 16.,"1. θ_{2} = 16 − 4 = 12 (units), θ_{1} = 4.
+2. θ_{2}/θ_{1} = 3.
+Answer: (2)",Rotational kinematics.,Revise 'System of Particles and Rotational Motion'.,
+31,4,arithmetic,Rolling: total KE = ½mv²(1 + k²/R²). This all becomes mgh.,h = v_{0}²(1 + k²/R²)/(2g) = 7v_{0}²/(10g).,"1. 1 + k²/R² = 7/5, so k²/R² = 2/5.
+2. That is a solid sphere.
+Answer: (4)",Rolling motion energy.,"Revise 'System of Particles and Rotational Motion': k²/R² values (ring 1, disc/cylinder ½, solid sphere 2/5).",
+32,4,arithmetic,"Use U = −GMm/r, not mgh (the height is large).",ΔU = GMm(1/R − 1/(3R)) and GM = gR².,"1. ΔU = (2/3)mgR.
+Answer: (4)",Gravitational potential energy at large heights.,The trap 2mgR comes from using mgh. Revise 'Gravitation'.,
+33,2,arithmetic,Volume is conserved: 8 small drops make one drop of radius 2r.,Area before: 8 × 4πr². Area after: 4π(2r)².,"1. Area decrease = 32πr² − 16πr² = 16πr².
+2. Energy released = 16πr²S.
+Answer: (2)",Surface energy when drops merge.,Revise 'Mechanical Properties of Fluids'.,
+34,3,arithmetic,Combine PT³ = constant with PV = nRT.,"P ∝ T/V, so (T/V)T³ = constant, i.e. V ∝ T⁴.","1. Coefficient of volume expansion = (1/V)(dV/dT) = 4/T.
+Answer: (3)",Thermal expansion of an ideal gas in a process.,Revise 'Thermodynamics' and 'Thermal Properties of Matter'.,
+35,1,conceptual,Rewrite each function using identities. SHM means a single sine/cosine (possibly with a constant shift).,sin²ωt = (1 − cos 2ωt)/2. sin ωt + cos πωt mixes frequencies ω and πω (ratio irrational).,"1. A: SHM about ½ with period π/ω (III).
+2. B: sin³(2ωt) has period π/ω but is not SHM (I).
+3. C: not periodic (IV).
+4. D: period 2π/ω, not SHM (II).
+Answer: (1)",Periodic motion vs SHM.,Revise 'Oscillations'.,
+36,1,sympy,A small piece dr at distance r moves with speed ωr. emf = ∫B(r)(ωr) dr.,emf = B_{0}ω∫ from 0 to L of r e^{−λr} dr. Use integration by parts.,"1. ∫ r e^{−λr} dr from 0 to L = 1/λ² − e^{−λL}(L/λ + 1/λ²).
+2. emf = B_{0}ω[1/λ² − e^{−λL}(1/λ² + L/λ)].
+Answer: (1)",Motional emf in a non-uniform field.,Revise 'Electromagnetic Induction' and integration by parts.,
+37,1,arithmetic,"In steady state, no current flows through the capacitor's branch.","Current flows in the loop with the 2 V cell, 6 Ω and 2 Ω. The capacitor branch sits across the 2 Ω resistor.","1. I = 2/(6 + 2) = 0.25 A.
+2. Voltage across 2 Ω = 0.5 V. The 4 Ω in the capacitor branch carries no current, so V_{C} = 0.5 V.
+Answer: (1)",Capacitors in DC circuits at steady state.,Revise 'Current Electricity' and 'Capacitance'.,
+38,1,sympy,Does the magnetic force do any work?,No: only the electric force does work. W = ∫qE dx from 0 to L.,"1. W = qE_{0}∫ from 0 to L of e^{−λx} dx = (qE_{0}/λ)(1 − e^{−λL}).
+Answer: (1)",Work–energy theorem with electric and magnetic fields.,Revise 'Moving Charges and Magnetism'. Magnetic forces never change kinetic energy.,
+39,2,conceptual,EM waves carry momentum. Does that need mass?,"Radiation pressure comes from momentum p = U/c, not from mass.","1. A true; R true (no rest mass).
+2. R doesn't explain A: the pressure is due to momentum.
+Answer: (2)",Momentum of electromagnetic waves.,Revise 'Electromagnetic Waves'.,
+40,1,conceptual,For lenses in contact: P = P_{convex} + P_{concave} = 1/f_{1} − 1/|f_{2}|.,"The combination is concave if the concave lens is stronger, i.e. if |f_{concave}| < |f_{convex}|.","1. Behaves as concave if |f_{convex}| > |f_{concave}|.
+2. Swapping thin lenses in contact changes nothing.
+Answer: (1)",Combination of thin lenses.,Revise 'Ray Optics'. Think in powers (dioptres): they simply add.,
+41,2,arithmetic,Find P's image first. It becomes the object for Q.,"P: u = −15, f = 10 gives v = +30, which is 15 cm beyond Q (a virtual object for Q).","1. Q: 1/v = 1/15 + 1/15, so v = 7.5 cm (real, to the right of Q).
+2. Magnifications: −2 × 0.5 = −1, so the image is the same size.
+Answer: (2)",Two-lens systems.,Revise 'Ray Optics'. A virtual object has positive u in the sign convention.,
+42,2,arithmetic,"Opposite a slit, y = d/2. Path difference = yd/D.",Path difference = (d/2)(d)/(10d) = d/20 = λ/4. Phase = π/2.,"1. I = I_{0}cos²(φ/2) = I_{0}cos²(π/4) = I_{0}/2.
+Answer: (2)",Intensity in YDSE at a given point.,Revise 'Wave Optics'.,
+43,3,arithmetic,λ = h/(mv). How does λ change if v falls by 20%?,v becomes 0.8v.,"1. λ = λ_{0}/0.8 = 1.25λ_{0}.
+Answer: (3)",de Broglie wavelength.,Revise 'Dual Nature of Matter and Radiation'.,
+44,2,arithmetic,Mass defect = 6m_{p} + 6m_{n} − mass of the nucleus.,Δm = 6(1.00727) + 6(1.00866) − 12.,"1. Δm = 0.09558 u.
+2. × 931.5 = 89.03 MeV/c².
+Answer: (2)",Mass defect.,Revise 'Nuclei'.,The question uses the atomic mass 12 u with proton (not hydrogen-atom) masses; the options follow that.
+45,2,conceptual,Charge balance: N_{A}x_{p} = N_{D}x_{n}. Which side has fewer dopant atoms?,"The p-side is doped less (10^{15} vs 10^{18}), so the depletion region goes deeper into it.","1. The depletion width is more on the p-side.
+Answer: (2)",Depletion region in an asymmetric p-n junction.,Revise 'Semiconductor Electronics'.,
+46,33,arithmetic,Energy stored = ½ × stress × strain × volume = ½Y(strain)² × volume.,Strain = 3 mm/3 m = 10^{−3}.,"1. U = ½ × 1.1×10^{11} × 10^{−6} × 6×10^{−4} = 33 J.
+Answer: 33",Elastic potential energy.,Revise 'Mechanical Properties of Solids'.,
+47,922,arithmetic,Heat released by x g cooling from 50 °C to 0 °C must heat (1000 − x) g to 100 °C and then boil it.,"x × 4.2 × 50 = (1000 − x)(4.2 × 50 + 2256) J (per gram, in J).","1. 210x = 2466(1000 − x), so x = 2,466,000/2676 ≈ 921.5.
+2. x ≈ 922.
+Answer: 922",Calorimetry with a phase change.,Remember to include heating to 100 °C before evaporation. Revise 'Thermal Properties of Matter'.,NTA's answer 922 takes the evaporating water to be heated to 100 °C first.
+48,200,arithmetic,At resonance ω = 1/√(LC). Then X_{L} = ωL.,ω = 1/√(1.6 × 40×10^{−6}) = 125 rad/s.,"1. X_{L} = 125 × 1.6 = 200 Ω.
+Answer: 200",LCR resonance.,Revise 'Alternating Current'.,
+49,1,arithmetic,The EMF is the same in both cases: E = I(R + r).,0.25(5 + r) = 0.5(2 + r).,"1. 1.25 + 0.25r = 1 + 0.5r, so r = 1 Ω.
+Answer: 1",Internal resistance of a cell.,Revise 'Current Electricity'.,
+50,44,arithmetic,emf = A × dB/dt (the loop is perpendicular to B).,dB/dt = 4t + 2 = 14 T/s at t = 3 s. A = π(0.2)².,"1. emf = (22/7)(0.04)(14) = 1.76 V.
+2. I = 1.76/2 = 0.88 A = 44/50 A.
+Answer: 44",Faraday's law.,Revise 'Electromagnetic Induction'.,
+51,3,arithmetic,Find moles of H_{2}SO_{4} and of Zn. Which is limiting?,H_{2}SO_{4}: 50 × 1.3 × 0.5 = 32.5 g = 0.332 mol. Zn: 20/65 = 0.308 mol.,"1. Zn is limiting: 0.308 mol H_{2}.
+2. Volume = 0.308 × 22.4 ≈ 6.892 L.
+Answer: (3)",Limiting reagent.,Revise 'Some Basic Concepts of Chemistry'.,
+52,2,conceptual,"Check each statement. For D, radial nodes = n − l − 1.","5f: 1, 6s: 5, 4d: 1, 5p: 3, 5d: 2.","1. A true. C true.
+2. B false: orbital energies decrease with increasing atomic number.
+3. D false: 5d has 2 radial nodes.
+Answer: (2), A and C",Orbital energies and nodes.,Revise 'Structure of Atom'.,
+53,1,conceptual,Bond length = distance between the two nuclei. The whole molecule extends one atomic radius beyond each nucleus.,Bond length = r_{A} + r_{B}. Total length = r_{A} + (r_{A} + r_{B}) + r_{B}.,"1. Bond length r_{A} + r_{B}; total length 2(r_{A} + r_{B}).
+Answer: (1)",Covalent radius and bond length.,Revise 'Classification of Elements' (covalent radius).,
+54,2,arithmetic,ΔH and ΔS from products minus reactants. Then ΔG = ΔH − TΔS.,ΔH = 2(42) − 8 − 80 = −4 kJ. ΔS = 2(200) − 140 − 250 = 10 J/K.,"1. ΔG = −4 − 600 × 0.010 = −10 kJ/mol.
+Answer: (2)",Gibbs energy from ΔH and ΔS.,Watch units: J vs kJ. Revise 'Thermodynamics'.,
+55,2,conceptual,"Molar heat capacities at 298 K: Cu(s) ≈ 24.4, Br_{2}(l) ≈ 75.7, He(g) ≈ 20.8 J/(mol K).",Liquids with many internal motions have high C; a monatomic gas has the lowest.,"1. Br_{2}(l) > Cu(s) > He(g).
+Answer: (2)",Molar heat capacities.,Revise 'Thermodynamics'.,
+56,2,sympy,"Make a table: at equilibrium A = a − x, B = x, C = x; total moles = a + x.",Partial pressure = (moles/total) × p.,"1. K_{p} = [x/(a + x)]²p²/[(a − x)p/(a + x)] = x²p/(a² − x²).
+Answer: (2)",K_{p} from degree of dissociation.,Revise 'Equilibrium'.,
+57,2,arithmetic,E°_{cell} = 0.80 − (−0.76) = 1.56 V. Write the Nernst equation for Zn + 2Ag⁺ → Zn²⁺ + 2Ag.,E = 1.56 − (0.059/2) log(1/x²) = 1.56 + 0.059 log x.,"1. 1.60 = 1.56 + 0.059 log x, so log x = 0.04/0.059 = 4/5.9.
+Answer: (2)",Nernst equation.,Revise 'Electrochemistry'.,
+58,1,conceptual,"Classify each oxide: acidic, basic, amphoteric or neutral.","Al_{2}O_{3}, Cr_{2}O_{3}: amphoteric. Cl_{2}O_{7}, Mn_{2}O_{7}: acidic. Na_{2}O, V_{2}O_{3}: basic. CO, N_{2}O: neutral.","1. All 4 pairs match, so Statement I is true.
+2. Na_{2}O is the most basic and Cl_{2}O_{7} the most acidic: true.
+Answer: (1)",Nature of oxides.,Revise 'p-Block' and 'd-Block' oxides. Lower oxidation states of V are basic.,
+59,4,conceptual,What does NCERT give as the product of Al with NaOH?,2Al + 2NaOH + 6H_{2}O → 2Na⁺[Al(OH)_{4}]⁻ + 3H_{2}.,"1. Statement I false ([Al(OH)_{4}]⁻, not [Al(OH)_{6}]³⁻).
+2. Statement II true: ICl_{4}⁻ square planar, ClO_{3}⁻ pyramidal, IBr_{2}⁻ linear.
+Answer: (4)",Amphoteric aluminium; VSEPR shapes.,Revise 'p-Block Elements' and 'Chemical Bonding'.,
+60,1,conceptual,More unpaired d electrons means stronger metallic bonding. Which splitting pattern is octahedral and which tetrahedral?,Octahedral: t_{2g} below e_{g}. Tetrahedral ([NiCl_{4}]²⁻): e below t_{2}.,"1. Both statements are correct.
+Answer: (1)",Enthalpy of atomisation; crystal field splitting.,Revise 'd- and f-Block Elements' and 'Coordination Compounds'.,
+61,3,conceptual,Chelating ligands make complexes more stable. Which ligands are ambidentate?,Oxalate and en are chelating. NO_{2}⁻ and SCN⁻ are ambidentate.,"1. A true (oxalate chelate). C true (Fe²⁺ low spin, d²sp³). D true (NO_{2}⁻ is ambidentate).
+2. B false (en complex is more stable). E false.
+Answer: (3), A, C and D","Stability, hybridisation and isomerism of complexes.",Revise 'Coordination Compounds'.,
+62,2,conceptual,Match each method with the situation where it is used.,Simple: large bp difference. Fractional: close bps. Steam: steam-volatile. Reduced pressure: decomposes at its bp.,"1. A-II, B-IV, C-I, D-III.
+Answer: (2)",Purification techniques.,Revise 'Purification and Characterisation of Organic Compounds'.,
+63,1,conceptual,Alkene stability rises with the number of alkyl groups on the C=C (hyperconjugation).,Tetrasubstituted > trisubstituted > disubstituted > monosubstituted.,"1. 2,3-dimethylbut-2-ene > 2-methylbut-2-ene > cis-but-2-ene > propene.
+Answer: (1), C > A > B > D",Alkene stability.,Revise 'Hydrocarbons'.,
+64,3,conceptual,Molar mass 72 = C_{5}H_{12}. Which isomer has exactly three CH_{3} groups?,"n-pentane has 2, 2-methylbutane 3, 2,2-dimethylpropane 4. 1,1-dimethylcyclopropane is C_{5}H_{10} (70).","1. 2-Methylbutane.
+Answer: (3)",Classification of carbon atoms; isomers.,Revise 'Basic Principles of Organic Chemistry'.,
+65,1,conceptual,Nitrile hydrolysis gives a carboxylic acid. Cl_{2}/red P is the HVZ reaction.,Propanenitrile → propanoic acid → α-chlorination.,"1. P = 2-chloropropanoic acid.
+Answer: (1)",Nitrile hydrolysis and the Hell–Volhard–Zelinsky reaction.,Revise 'Carboxylic Acids'.,
+66,4,conceptual,Which nitrogen of semicarbazide is the nucleophile?,The terminal NH_{2} attached to the other N (not the amide N) condenses. Hemiacetals revert to aldehyde + alcohol in acid.,"1. Statement I false: the correct product is CH_{3}CH=N−NH−CO−NH_{2}.
+2. Statement II true.
+Answer: (4)",Semicarbazone formation; hemiacetals.,Revise 'Aldehydes and Ketones'.,
+67,4,conceptual,Hofmann bromamide removes one carbon. Nitration of aniline happens partly on the anilinium ion.,"Benzamide gives aniline, not benzylamine. NCERT: nitration gives p 51%, m 47%, o 2%.","1. Statement I false.
+2. Statement II true (m > o).
+Answer: (4)",Hofmann bromamide; nitration of aniline.,Revise 'Amines'.,
+68,3,conceptual,What happens to proteins when pH or temperature changes a lot?,Denaturation disrupts the tertiary structure.,"1. 'Remains intact with pH changes' is incorrect.
+Answer: (3)",Protein structure and denaturation.,Revise 'Biomolecules'.,
+69,1,conceptual,Anomers differ only at C-1. Compare the open-chain forms of glucose and fructose.,"Glucose and fructose have the same configuration at C-3, C-4 and C-5.","1. Both statements are true.
+Answer: (1)",Anomers of glucose; glucose vs fructose.,Revise 'Biomolecules'.,
+70,4,conceptual,SO_{2} is a reducing agent. Which reagent turns green when reduced?,Orange dichromate becomes green Cr³⁺.,"1. X = K_{2}Cr_{2}O_{7}.
+Answer: (4)",Test for SO_{2}.,Revise salt analysis (anions).,
+71,15,conceptual,Fill t_{2g} and e_{g} for each case.,d³: 3; d⁴ low spin: t_{2g}⁴ (2); d⁵ high spin: 5; d⁶ high spin: 4; d⁷ low spin: t_{2g}⁶e_{g}¹ (1).,"1. Total = 3 + 2 + 5 + 4 + 1 = 15.
+Answer: 15",Crystal field configurations.,Revise 'Coordination Compounds'.,
+72,30,arithmetic,1.4 dm³ per gram at STP: what molar mass does that give?,"M = 22.4/1.4 = 16 g/mol, so the gas is CH_{4}. Then CH_{4} + I_{2}/HIO_{3} gives CH_{3}I; Wurtz gives the dimer.","1. X = CH_{3}I, Y = C_{2}H_{6}.
+2. M(Y) = 30 g/mol.
+Answer: 30",Grignard reagents; Wurtz reaction.,Revise 'Haloalkanes' and 'Hydrocarbons'.,
+73,62,arithmetic,The osmotic pressure equals the hydrostatic pressure of the extra column: π = ρgh.,π = 1000 × 10 × 0.080 = 800 Pa = 0.8 kPa. π = (n/V)RT.,"1. n = 0.8 × 1/(8.3 × 300) = 3.21 × 10^{−4} mol.
+2. M = 20/3.21×10^{−4} ≈ 62,250 g/mol ≈ 62 kg/mol.
+Answer: 62",Osmotic pressure and molar mass.,Revise 'Solutions'. Keep kPa with dm³ to match the R given.,
+74,15,arithmetic,κ = conductance × cell constant. Then Λ_{m} = 1000κ/C gives C.,κ = 1.9×10^{−3} × 1.3 = 2.47 × 10^{−3} S/cm.,"1. C = 1000 × 2.47×10^{−3}/123.5 = 0.02 mol/L.
+2. 1 L (1000 g) contains 0.02 × 75 = 1.5 g, i.e. 0.15% = 15 × 10^{−2}.
+Answer: 15",Conductivity and concentration.,Revise 'Electrochemistry'.,
+75,90,arithmetic,t_{1/2} is proportional to [A]_{0} (a straight line through the origin). Which order is that?,Zero order: t_{1/2} = [A]_{0}/(2k). Use the proportion.,"1. x = 240 × (1.5×10^{−3})/(4×10^{−3}) = 90 s.
+Answer: 90",Half-life dependence on concentration.,Revise 'Chemical Kinetics'.,
