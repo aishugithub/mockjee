@@ -168,6 +168,13 @@ def checks():
     c[32] = lambda: opt(1 - Rational(1, 3), [Rational(1, 2), Rational(3, 4), Rational(1, 4), Rational(2, 3)])
     c[33] = lambda: opt(8 * 4 - 4 * 2**2, [8, 16, 64, 4])          # in units of pi r^2 S
     c[34] = lambda: opt(diff(x**4, x) / x**4 * x, [2, 1, 4, 3])    # V ~ T^4: (1/V) dV/dT = 4/T, times T
+    def q36():
+        B0, w, l, L, r = symbols('B0 w l L r', positive=True)
+        emf = integrate(B0 * exp(-l * r) * w * r, (r, 0, L))
+        opts = [B0 * w * (1 / l**2 - exp(-l * L) * (1 / l**2 + L / l)), B0 * w * (1 / l**2 + exp(-l * L) * (1 / l**2 + L / l)),
+                B0 * w * (4 / l**2 - exp(-2 * l * L) * (1 / l**2 + 2 * L / l)), B0 * w * (3 / l**2 - exp(-3 * l * L) * (3 / l**2 + L / l))]
+        return opt(emf, opts)
+    c[36] = q36
     c[37] = lambda: opt(Rational(2, 2 + 6) * 2, [Rational(1, 2), Rational(3, 2), 0, 2])
 
     def q38():
