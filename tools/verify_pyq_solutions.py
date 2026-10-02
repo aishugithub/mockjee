@@ -344,7 +344,8 @@ def main():
             q = qs[n - 1]
             got = f()
             key = key_of(q)
-            ok = (got == key) or (q['type'] != 'MCQ' and abs(float(got) - float(key)) < 1e-6)
+            accept = [k + 1 for k in q.get('accept', [])] if q['type'] == 'MCQ' else q.get('accept', [])
+            ok = any((got == k) or (q['type'] != 'MCQ' and abs(float(got) - float(k)) < 1e-6) for k in [key] + accept)
             if not ok: bad += 1
             print(f"{year} {shift} Q{n:<3} {'ok ' if ok else 'MISMATCH'}  computed {got}  NTA key {key}")
         print(f'{year} {shift}: {len(checks)} of {len(qs)} questions recomputed')

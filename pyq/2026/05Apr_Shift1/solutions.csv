@@ -1,0 +1,223 @@
+q,claude_answer,check,hint1,hint2,solution,concept,revise,note
+1,2,sympy,Use β² − α² = (β − α)(β + α) to find α + β.,α + β = 3i. Then (β − α)² = (α + β)² − 4αβ gives αβ. Finally β³ − α³ = (β − α)[(α + β)² − αβ].,"1. √11(α + β) = 3i√11, so α + β = 3i.
+2. 11 = (3i)² − 4αβ = −9 − 4αβ, so αβ = −5.
+3. β³ − α³ = √11[(3i)² − (−5)] = √11(−9 + 5) = −4√11.
+4. Squared: 16 × 11 = 176.
+Answer: (2)",Symmetric functions of roots (with complex values).,Revise 'Quadratic Equations': write everything in terms of α + β and αβ.,
+2,3,sympy,"From S_{n}, find the n-th term: a_{n} = S_{n} − S_{n−1}.",a_{n} = 6n + 2. So you need Σ(6n + 2)² for n = 1 to 10.,"1. Σ(6n + 2)² = 36Σn² + 24Σn + 4 × 10.
+2. = 36(385) + 24(55) + 40 = 13860 + 1320 + 40 = 15220.
+Answer: (3)",Terms of an AP from its sum; sums of squares.,Revise 'Sequences and Series'.,
+3,4,sympy,A·e_{1} is column 1 of A; A^{T}·e_{1} is row 1. Subtract the given pairs to get these.,"A^{T}e_{1} = (5,2,2) − (3,1,1) = (2,1,1) = row 1; A^{T}e_{3} = (3,1,1) = row 3; Ae_{1} = (2,1,3) = column 1; Ae_{3} = (1,3,1) = column 3. Only a_{22} is unknown; use det A = 1.","1. A = [[2,1,1],[1,a,3],[3,1,1]]; det A = 3 − a = 1, so a = 2.
+2. det(adj M) = (det M)² for 3×3, and det(A² + A) = det A · det(A + I).
+3. det(A + I) = det[[3,1,1],[1,3,3],[3,1,2]] = 8.
+4. det(adj(A² + A)) = (1 × 8)² = 64.
+Answer: (4)",Building a matrix from products with basis vectors; adjoint properties.,Revise 'Matrices and Determinants': det(adj M) = (det M)^{n−1} and det(AB) = det A · det B.,
+4,2,sympy,Infinitely many solutions for every t means the determinant is 0 for every t.,Expand the determinant: −11f(t) + t³ + 27t = 0.,"1. f(t) = (t³ + 27t)/11.
+2. f′(t) = (3t² + 27)/11 > 0 for all t.
+3. So f is strictly increasing on ℝ.
+Answer: (2)",Homogeneous systems with non-trivial solutions; monotonicity.,Revise 'Matrices and Determinants' and 'Application of Derivatives' (increasing functions).,
+5,2,sympy,Split 1/(n(n+1)(n+2)) into a telescoping difference.,1/(n(n+1)(n+2)) = ½[1/(n(n+1)) − 1/((n+1)(n+2))].,"1. Σ_{n=1..10} = ½[1/2 − 1/(11 × 12)] = ½ × 65/132 = 65/264.
+2. 528 × 65/264 = 130.
+Answer: (2)",Telescoping series.,Revise 'Sequences and Series': partial fractions for products of consecutive terms.,
+6,3,sympy,tan(A + B) from the sum and product of roots. Then which quadrant is A + B in?,"tan(A + B) = 2/(1 + 5) = 1/3 > 0, and A + B lies in (0, π/2), so cos(A + B) = 3/√10. Use sin²(θ/2) = (1 − cos θ)/2.","1. cos(A + B) = 3/√10.
+2. 20 sin²((A + B)/2) = 10(1 − 3/√10) = 10 − 3√10.
+Answer: (3)",tan(A + B) from roots of a quadratic; half-angle formula.,Revise 'Trigonometric Functions'. Check the quadrant before taking the square root.,
+7,2,sympy,"Use Bayes' theorem. In each word, how many pairs of consecutive letters are there, and how many of them are 'AN'?","KANPUR: 5 pairs, 1 'AN'. ANANTPUR: 7 pairs, 2 'AN'. Each city is equally likely beforehand.","1. P(AN | Kanpur) = 1/5; P(AN | Anantpur) = 2/7.
+2. P(Anantpur | AN) = (2/7)/(1/5 + 2/7) = (2/7)/(17/35) = 10/17.
+Answer: (2)",Bayes' theorem.,Revise 'Probability': Bayes' theorem. Counting the letter pairs carefully is the whole question.,
+8,3,sympy,"Find the mean first, then Σf|x − mean|/Σf.","Σf = 26, Σfx = 234, so the mean is 9.","1. Σf|x − 9| = 8(4) + 6(2) + 2(0) + 2(1) + 2(3) + 6(6) = 88.
+2. Mean deviation = 88/26 = 44/13.
+Answer: (3)",Mean deviation about the mean.,Revise 'Statistics'.,
+9,3,sympy,"Focus (4, 0) and e = 4/5 give a. Then find b² and the y-coordinate of P.","ae = 4, so a = 5; b² = 25(1 − 16/25) = 9. Put x = 3 in the ellipse to find α.","1. 9/25 + α²/9 = 1, so α² = 144/25 and |α| = 12/5.
+2. Area of POS = ½ × OS × |α| = ½ × 4 × 12/5 = 24/5.
+Answer: (3)","Ellipse: focus, eccentricity, area.",Revise 'Conic Sections': ellipse.,
+10,3,sympy,"Find the circle's centre and radius, and the parabola's vertex.","Circle: centre (3, 4), radius 2. Parabola: (x + 3)² = −(y + 4), vertex (−3, −4).","1. Distance from the centre to the vertex = √(36 + 64) = 10.
+2. Maximum distance = 10 + 2 = 12.
+Answer: (3)",Maximum distance from a point to a circle.,Revise 'Conic Sections'.,
+11,4,sympy,"In an equilateral triangle the orthocentre is the centroid. It lies on the altitude from P, 2/3 of the way down.","Foot of the perpendicular from P(3, 5) to x + y = 4 is M(1, 3).","1. Centroid = P + (2/3)(M − P) = (3, 5) + (2/3)(−2, −2) = (5/3, 11/3).
+2. 9(α + β) = 9 × 16/3 = 48.
+Answer: (4)",Centres of an equilateral triangle.,Revise 'Straight Lines': foot of a perpendicular.,
+12,3,sympy,Write the left side in terms of c = cos x only.,"3sin²x + 12cos x − 3 = −3c² + 12c with c in [−1, 1]. This is increasing on [−1, 1].","1. Range: from −3 − 12 = −15 (c = −1) to −3 + 12 = 9 (c = 1).
+2. Integers −15 to 9: sum = (−15 + 9) × 25/2 = −75.
+Answer: (3)",Range of a trigonometric expression.,"Revise 'Trigonometric Functions'. Check whether the vertex of the quadratic is inside [−1, 1] (here it isn't).",
+13,3,sympy,Distance² = |AP|² − (projection of AP on the line)².,"A = (2, 5, 2) is on the line, d = (2, 3, 4). AP = (3, 1, 5).","1. AP·d = 6 + 3 + 20 = 29 and |d|² = 29, so the projection² = 29.
+2. |AP|² = 35.
+3. Distance² = 35 − 29 = 6.
+Answer: (3)",Distance from a point to a line in 3D.,Revise 'Three Dimensional Geometry'.,
+14,1,sympy,Rewrite r × a + a × b = 0 as (r − b) × a = 0. What does that say about r − b?,r − b is parallel to a: r = b + λa. Then r·a = 0 gives λ.,"1. a·b = 1 − 2 = −1 and |a|² = 9, so λ = 1/9.
+2. r = (√7/9, 10/9, 17/9), |r|² = (7 + 100 + 289)/81 = 396/81.
+3. |3r|² = 396/9 = 44.
+Answer: (1)",Vector equations with cross products.,Revise 'Vector Algebra': a × b = 0 ⇔ a ∥ b.,
+15,3,sympy,Equate the coordinates of the two lines. The z-coordinates give something quickly.,"z: −1 = −1 + μa with a ≠ 0, so μ = 0. Then the point is (4, 0, −1).","1. y: 1 − λ = 0, so λ = 1; x: 1 + a = 4, so a = 3.
+2. Point (4, 0, −1): distance² = 16 + 1 = 17.
+Answer: (3)",Intersection of two lines in 3D.,Revise 'Three Dimensional Geometry'. Start with the coordinate that has the fewest unknowns.,
+16,2,sympy,"Sketch y = x², y = 27/x and y = 1 for x > 0. Where do the curves meet?",x² = 27/x at x = 3. 27/x = 1 at x = 27. Area = ∫ from 1 to 3 of (x² − 1) dx + ∫ from 3 to 27 of (27/x − 1) dx.,"1. ∫ from 1 to 3 of (x² − 1) dx = 20/3.
+2. ∫ from 3 to 27 of (27/x − 1) dx = 27 ln 9 − 24 = 54 ln 3 − 24.
+3. Area = 54 ln 3 − 52/3.
+Answer: (2)",Area bounded by curves.,Revise 'Application of Integrals'. A quick sketch shows where to split.,"Taken in the first quadrant, as intended; for x ≤ −1 the conditions would allow an unbounded region."
+17,3,sympy,Use 1 − cos u ≈ u²/2 for small u. For a product: 1 − cos A cos B cos C ≈ (A² + B² + C²)/2.,The limit is [α² + (α+1)² + (α+2)²]/(2(α+1)²). Set it equal to 2.,"1. α² + (α+1)² + (α+2)² = 4(α+1)².
+2. With u = α + 1: 3u² + 2 = 4u², so u² = 2 and α = −1 ± √2.
+3. Product = (−1)² − 2 = −1.
+Answer: (3)",Standard limits for 1 − cos x.,Revise 'Limits'.,
+18,2,sympy,Substitute x = 2t to make the denominator 4(t² + 1).,The integral becomes ½∫ from 0 to ∞ of (ln 2 + ln t)/(t² + 1) dt. Note ∫ from 0 to ∞ of ln t/(t² + 1) dt = 0 (put t = 1/u).,"1. ½[ln 2 × π/2 + 0] = (π ln 2)/4.
+Answer: (2)",Improper integrals with substitution symmetry.,Revise 'Definite Integrals': the t → 1/t trick.,
+19,2,sympy,"Find f(0) first, then show f is linear.","x = y = 0 gives f(0) = 0. y = 0 gives f(x/3) = f(x)/3. Then f(x + y) = f(x) + f(y), so f(x) = kx with k = f′(0) = 3.","1. f(x) = 3x, so g(x) = 3 + 3xe^{x}.
+2. g′ = 3e^{x}(1 + x) = 0 at x = −1 (a minimum).
+3. g(−1) = 3 − 3/e = 3(e − 1)/e.
+Answer: (2)",Functional equations; minimum of a function.,Revise 'Continuity and Differentiability' and 'Application of Derivatives'.,
+20,3,sympy,"Divide everything into powers of t = tan x, with dt = sec²x dx.",sec⁴x = sec²x(1 + t²) and cosec²x·sec⁴x = sec²x(1 + t²)²/t². The integrand becomes (2 + 3t² − 1/t²) dt.,"1. Antiderivative: 2t + t³ + 1/t.
+2. At t = √3: 16/√3. At t = 1/√3: 16/(3√3).
+3. Difference = 32/(3√3).
+Answer: (3)",Integration by substitution t = tan x.,Revise 'Integrals'. Converting everything to tan x is the standard move with sec⁴x.,
+21,72,sympy,Start with f(2) + f(3) = 5. Which pairs are possible?,"(f(2), f(3)) = (1,4), (2,3), (3,2), (4,1). For each, f(1) ≥ 3 must avoid the used values; the other 3 elements fill the rest in 3! ways.","1. Each pair leaves exactly 3 choices for f(1).
+2. Total = 4 × 3 × 6 = 72.
+Answer: 72",Counting one-one functions with conditions.,Revise 'Permutations and Combinations'. Fix the most restricted values first.,
+22,126,sympy,A wins the series in game k (k = 5 to 9). The last game must be A's win.,"A wins exactly 4 of the first k − 1 games: C(k − 1, 4) ways.","1. Total = C(4,4) + C(5,4) + C(6,4) + C(7,4) + C(8,4) = 1 + 5 + 15 + 35 + 70 = 126.
+Answer: 126",Counting sequences where the last event is fixed.,Revise 'Permutations and Combinations'.,
+23,21,sympy,"General term: C(n, r)(−1)^{r} x^{7r − 3n}.","x⁷ and x¹⁴ need 7r − 3n = 7 and 14, so n is a multiple of 7: n = 7m, r = 3m + 1 and 3m + 2.","1. The coefficients have opposite signs, so they cancel iff C(n, 3m+1) = C(n, 3m+2).
+2. That needs (3m+1) + (3m+2) = n = 7m, so m = 3.
+3. n = 21.
+Answer: 21",Binomial coefficients and their symmetry.,"Revise 'Binomial Theorem': C(n, a) = C(n, b) ⇔ a = b or a + b = n.",
+24,2048,sympy,Write 2^{p−1} = 2^{p} − 2^{p−1} and 2^{2p−1} = 2^{p} × 2^{p−1}. Does it look like tan(A − B)?,Each term = tan^{−1}(2^{p}) − tan^{−1}(2^{p−1}). The sum telescopes.,"1. Sum = tan^{−1}(2^{11}) − tan^{−1}(1) = tan^{−1}2048 − π/4.
+2. α = tan^{−1}2048, so tan α = 2048.
+Answer: 2048",Telescoping inverse-tan sums.,Revise 'Inverse Trigonometric Functions'.,
+26,3,arithmetic,Least count = 1 mm/10. Is the zero error positive or negative when the Vernier zero is to the right?,To the right of the main zero means positive. Zero error = coinciding division × LC.,"1. LC = 0.1 mm.
+2. Zero error = +7 × 0.1 = +0.7 mm = +0.07 cm.
+Answer: (3)",Zero error of Vernier calipers.,The trap is 0.7 cm (mm/cm mix-up). Revise 'Units and Measurements'.,
+27,1,conceptual,Write the dimensions of R and of LC.,R = ML²T^{−3}A^{−2}. LC has dimension T² (since ω = 1/√(LC)).,"1. R/√(LC) = ML²T^{−3}A^{−2}/T = ML²T^{−4}A^{−2}.
+Answer: (1)",Dimensions of electrical quantities.,Remember √(LC) is a time. Revise 'Units and Measurements'.,
+28,2,arithmetic,Below the surface: g(1 − d/R). Above (small h): g(1 − 2h/R).,"d = h = 16 km, R = 6400 km.","1. g_{below} = g(1 − 0.0025) and g_{above} = g(1 − 0.005).
+2. Change = 0.0025g = 0.25%.
+Answer: (2)",Variation of g with depth and height.,Revise 'Gravitation'.,
+29,1,arithmetic,Treat m_{2} and m_{3} together (10 kg) against m_{1} (4 kg). Find the acceleration first.,a = (10 − 4)g/14 = 3g/7. T_{1} = m_{1}(g + a); T_{2} supports m_{3}: T_{2} = m_{3}(g − a).,"1. T_{1} = 4(10 + 30/7) = 400/7 N.
+2. T_{2} = 6(10 − 30/7) = 240/7 N.
+3. T_{1}/T_{2} = 5/3.
+Answer: (1)",Connected masses over a pulley.,Revise 'Laws of Motion'.,
+30,1,arithmetic,Work in the wedge's frame: a pseudo force −m×A acts on the block.,"Down the slope: a_{rel} = g sin 37° − A cos 37°. The wedge: MA = f − N sin 37°, with N = mg cos 37° + mA sin 37°.","1. Solving: A ≈ 1.34 m/s² and a_{rel} ≈ 4.9 m/s².
+2. t = √(2 × 8.8/4.9) ≈ 1.9 s, so the nearest option is 2 s.
+3. (Taking A = f/(M + m) = 2 m/s² gives a_{rel} = 4.4 and exactly 2 s.)
+Answer: (1)",Block on an accelerating wedge (pseudo force).,Revise 'Laws of Motion': non-inertial frames.,The exact two-body solution gives about 1.9 s; NTA's option 2 s matches the simpler approach A = f/(M + m). Agreed with the key as the nearest option.
+31,3,conceptual,Does Young's modulus depend on the size of the wire?,Y is a property of the material only.,"1. Changing r and L changes the extension, not Y.
+Answer: (3)",Elastic moduli are material properties.,Revise 'Mechanical Properties of Solids'.,
+32,2,conceptual,"Check each statement, then ask whether II is the reason for I.",C_{v} = R/(γ − 1) follows from C_{p} − C_{v} = R. γ = 1 + 2/f comes from equipartition.,"1. Statement I is true; Statement II is true.
+2. I follows from Mayer's relation, not from II, so II is not the explanation.
+Answer: (2)",Specific heats of ideal gases.,Revise 'Thermodynamics' and 'Kinetic Theory'.,
+33,3,conceptual,"In an isothermal process for an ideal gas, what is ΔU?","ΔU = 0, so ΔQ = ΔW. Intensive/mass ratios: extensive ÷ mass is intensive (e.g. specific volume).","1. A true, B true.
+2. C false (ΔQ = ΔW).
+3. D true (e.g. P × V).
+4. E false (it is intensive).
+Answer: (3), A, B and D",Laws of thermodynamics; intensive and extensive variables.,Revise 'Thermodynamics'.,
+34,1,arithmetic,Use node potentials. Take the bottom node as 0 V; the 5 V cell fixes the top node at 5 V.,Unknowns: the left node V_{L} and the middle node V_{M}. Write Kirchhoff's current law at each.,"1. Solving gives V_{L} = 7.5 V and V_{M} = 0.
+2. I_{1} (through 1 Ω and the 10 V cell) = 0 + 10 − 7.5 = 2.5 A.
+3. I_{3} = 7.5/4 = 1.875 A; I_{2} (through the 5 V cell) = 2.5 − 0.625 = 1.875 A.
+Answer: (1)",Kirchhoff's laws (node method).,Revise 'Current Electricity'. Node potentials need fewer equations than loops here.,
+35,3,arithmetic,Force on the electron = −eE. Which way does it point here?,"−e(−2E_{0}î) = +2eE_{0}î, so the electron speeds up: v = v_{0} + 2eE_{0}t/m.","1. λ = h/(mv) = h/(mv_{0}(1 + 2eE_{0}t/(mv_{0}))).
+2. h/(mv_{0}) = 4λ_{0}, so λ = 4λ_{0}/[1 + 2E_{0}et/(mv_{0})].
+Answer: (3)",de Broglie wavelength of an accelerated electron.,The sign of the electron's charge is the trap. Revise 'Dual Nature of Matter and Radiation'.,
+36,3,arithmetic,Bohr radius ∝ n². Find the two orbits from 16 : 4.,"n_{i} = 4, n_{f} = 2. 1/λ = R(1/4 − 1/16).","1. 1/λ = 3R/16, so λ = 16/(3 × 1.0973×10⁷) ≈ 486 nm.
+Answer: (3)",Bohr model and the hydrogen spectrum.,Revise 'Atoms'.,
+37,2,arithmetic,Displacement current = C × dV/dt.,dV/dt = I_{d}/C.,"1. dV/dt = 4/(6×10^{−6}) ≈ 0.67 × 10⁶ V/s.
+Answer: (2)",Displacement current.,Revise 'Electromagnetic Waves'.,
+38,2,arithmetic,The top three rows are identical: each is 15 V with 9 Ω. A and B are across the bottom row (9 Ω).,"Identical cells in parallel: EMF 15 V, internal resistance 9/3 = 3 Ω.","1. I = 15/(3 + 9) = 1.25 A.
+Answer: (2)",Combination of identical sources in parallel.,Revise 'Current Electricity'.,
+39,2,arithmetic,Fringe width β = λD/d. What happens to λ in a medium?,λ becomes λ/μ.,"1. β′ = 2.4/1.2 = 2 μm.
+Answer: (2)",YDSE in a medium.,Revise 'Wave Optics'.,
+40,2,arithmetic,μ = c/v. Then use the prism formula with A = 60°.,μ = 3/2.12 ≈ 1.414 = √2. μ = sin((A + δ)/2)/sin(A/2).,"1. sin((60° + δ)/2) = √2 × ½ = 1/√2, so (60° + δ)/2 = 45°.
+2. δ_{min} = 30°.
+Answer: (2)",Refractive index and minimum deviation.,Revise 'Ray Optics'.,
+41,3,arithmetic,Einstein's equation: hc/λ = φ + eV_{0}.,hc/λ = 6.62×10^{−34} × 3×10⁸/331×10^{−9} = 6.0 × 10^{−19} J. eV_{0} = 0.32 × 10^{−19} J.,"1. φ = 6.00 − 0.32 = 5.68 × 10^{−19} J.
+Answer: (3)",Photoelectric equation.,Revise 'Dual Nature of Matter and Radiation'.,
+42,1,conceptual,Cutting a biconvex lens into two plano-convex halves: what happens to each half's focal length?,Each half has focal length 2f. Microscope magnification ≈ (L/f_{o})(D/f_{e}).,"1. f_{o} doubles, so L must double to keep the same magnification.
+Answer: (1)",Focal length of lens parts; compound microscope.,Revise 'Ray Optics'.,
+43,2,arithmetic,Each wire carries everything below it. Find the limit for each wire separately.,Breaking force = stress × area. Upper: 12×10⁸ × 8×10^{−7} = 960 N. Lower: 480 N.,"1. Upper: (30 + 10 + m)g ≤ 960, so m ≤ 56 kg.
+2. Lower: (10 + m)g ≤ 480, so m ≤ 38 kg.
+3. Maximum = 38 kg.
+Answer: (2)",Breaking stress in hanging wires.,The trap 56 kg checks only the upper wire. Revise 'Mechanical Properties of Solids'.,
+44,3,arithmetic,I = V/√(R² + X_{C}²). What happens to X_{C} at ω/4?,X_{C} becomes 4X_{C}. Set √(R² + 16X_{C}²) = 3√(R² + X_{C}²).,"1. R² + 16X_{C}² = 9R² + 9X_{C}², so 7X_{C}² = 8R².
+2. R/X_{C} = √(7/8).
+Answer: (3)",RC circuit impedance.,Revise 'Alternating Current'.,
+45,3,conceptual,LED-1 needs the OR output to be 1. LED-2 needs (OR AND C) AND A to be 1.,"So A + B = 1, C = 1 and A = 1.","1. A = 1 and C = 1 (B can be anything).
+2. Only option 3 (A = 1, B = 0, C = 1) works.
+Answer: (3)",Logic gates.,Revise 'Semiconductor Electronics'.,
+46,2,arithmetic,Modulus of rigidity η = (F/A)/(Δx/L).,"Δx = FL/(Aη), with A = (0.05)² m² and L = 0.05 m.","1. Δx = 10 × 0.05/(0.0025 × 10⁵) = 0.002 m = 2 mm.
+Answer: 2",Shear strain.,Revise 'Mechanical Properties of Solids'.,
+47,13,arithmetic,v = g numerically means v = 10 m/s. How far has it fallen then?,v² = 2gs.,"1. s = 100/20 = 5 m.
+2. Height = 18 − 5 = 13 m.
+Answer: 13",Free fall.,Revise 'Motion in a Straight Line'.,
+48,349,arithmetic,Distance between successive crests = wavelength = 2π/k.,k = 0.018 per cm.,"1. λ = 2 × 3.14/0.018 ≈ 348.9 cm ≈ 349 cm.
+Answer: 349",Wave equation parameters.,Revise 'Waves'.,
+49,12,arithmetic,"Magnetic force is always perpendicular to B, so a·B = 0.","(4, −x/2)·(3, 2) = 0.","1. 12 − x = 0, so x = 12.
+Answer: 12",Direction of the magnetic force.,Revise 'Moving Charges and Magnetism'.,
+50,6,arithmetic,L_{1} carries the full current I; L_{2} and L_{3} share it equally.,U = ½LI² for each inductor.,"1. U_{t} = ½LI² + 2 × ½L(I/2)² = ¾LI².
+2. U_{2} = ½L(I/2)² = LI²/8.
+3. Ratio = 6.
+Answer: 6",Energy stored in inductors.,Revise 'Electromagnetic Induction'.,
+51,2,arithmetic,"On heating, Ag_{2}CO_{3} finally leaves metallic silver.",M(Ag_{2}CO_{3}) = 276. 1 mol gives 2 mol Ag.,"1. 2.76 g = 0.01 mol, giving 0.02 mol Ag = 2.16 g.
+Answer: (2)",Thermal decomposition stoichiometry.,Revise 'Some Basic Concepts of Chemistry'.,
+52,4,conceptual,"Use the (n + l) rule; for equal n + l, lower n first.",A 3d: 5; B 4s: 4; C 6p: 7; D 5p: 6; E 2p: 3.,"1. Order: E < B < A < D < C.
+Answer: (4)",Aufbau (n + l) rule.,Revise 'Structure of Atom'.,
+53,2,conceptual,"Check each statement. For C, is the 2s energy the same in H and Li?",In multi-electron atoms the energy depends on Z and on shielding.,"1. A true, B true, D true (Cr is 3d⁵4s¹).
+2. C false: the 2s energies of H and Li differ.
+Answer: (2)",Atomic structure basics.,Revise 'Structure of Atom'.,
+54,4,arithmetic,Take 100 g of solution: 10 g urea and 90 g water.,Urea = 10/60 mol; water = 90/18 = 5 mol.,"1. x_{water} = 5/(5 + 1/6) = 30/31 ≈ 0.967.
+Answer: (4)",Mole fraction from mass percent.,Revise 'Solutions'.,
+55,1,arithmetic,M_{3}A_{2} → 3M²⁺ + 2A³⁻. Molar solubility s = x/y.,[A³⁻] = 2s and K_{sp} = (3s)³(2s)² = 108s⁵.,"1. Ratio = 2s/(108s⁵) = 1/(54s⁴) = (1/54)(y⁴/x⁴).
+Answer: (1)",Solubility product.,Revise 'Equilibrium'.,
+56,3,arithmetic,Count millimoles of H⁺ and OH⁻ in each mixture.,"A: OH⁻ 4, H⁺ 2.5. B: H⁺ 0.2, OH⁻ 0.2. C: H⁺ 2, OH⁻ 1.","1. A is basic, B is neutral, C is acidic.
+2. Increasing pH: C < B < A.
+Answer: (3)",pH of acid–base mixtures.,Revise 'Equilibrium'. Remember H_{2}SO_{4} gives 2 H⁺ and Ca(OH)_{2} gives 2 OH⁻.,
+57,1,conceptual,Let x of A react. Then p_{A} = p_{i} − x and p_{t} = p_{i} + x.,"x = p_{t} − p_{i}, so p_{A} = 2p_{i} − p_{t}.","1. k = (1/t) ln(p_{i}/(2p_{i} − p_{t})).
+Answer: (1)",First-order gas reactions using pressure.,Revise 'Chemical Kinetics'.,
+58,1,conceptual,"Electronegativity: F 4.0, O 3.5, N 3.0. O in OF_{2}: F is more electronegative.",OF_{2}: O is +2. Na_{2}O: O is −2.,"1. Both statements are true.
+Answer: (1)",Electronegativity and oxidation states.,Revise 'Classification of Elements' and 'p-Block Elements'.,
+59,4,conceptual,Check each statement against NCERT's group 15 section.,Nitrogen forms pπ–pπ (not dπ–pπ) bonds; the N−N single bond is weaker than P−P; density increases down the group.,"1. A true (N in +1 to +4 disproportionates in acid).
+2. B false, C false, D false.
+3. E true (only four valence orbitals).
+Answer: (4), A and E",Anomalous properties of nitrogen.,Revise 'p-Block Elements' (group 15).,
+60,2,conceptual,"Recall NCERT's properties of interstitial compounds (TiC, Mn_{4}N, Fe_{3}H…).","They are hard, have high melting points, keep metallic conductivity, are chemically inert and often non-stoichiometric.","1. 'Very soft and ionic' is NOT a property.
+Answer: (2)",Interstitial compounds.,Revise 'd- and f-Block Elements'.,
+61,2,conceptual,Synergic bonding: σ donation from CO and π back-donation from the metal. Does that weaken or strengthen M−C?,Back-donation strengthens the M−C bond (and weakens C≡O).,"1. A, C and D are true.
+2. B is false: the M−C bond becomes stronger.
+Answer: (2)",Bonding in metal carbonyls.,Revise 'Coordination Compounds'.,
+62,1,conceptual,Recall the CFT energy values for e_{g} and t_{2g}.,e_{g}: +0.6Δ_{o}; t_{2g}: −0.4Δ_{o}. Free-ion d orbitals are degenerate; ligands split them.,"1. Both statements are correct.
+Answer: (1)",Crystal field theory.,Revise 'Coordination Compounds'.,
+63,3,conceptual,Alkyl groups push electrons (+I). Is that good or bad for a carbanion?,"+I destabilises carbanions, so fewer alkyl groups is better. Allyl and benzyl carbanions are stabilised by resonance.","1. Statement I true.
+2. Statement II false (it is resonance, not induction).
+Answer: (3)",Carbanion stability.,Revise 'Basic Principles of Organic Chemistry'.,
+64,4,conceptual,Work backwards: the iodoform test turns COCH_{3} into COOH. So R is 1-acetyl-2-methylcyclopentene.,"R comes from an intramolecular aldol of a diketone Q. CH_{3}CO(CH_{2})_{4}COCH_{3} (octane-2,7-dione) closes to a five-membered ring.","1. Octane-2,7-dione comes from ozonolysis of 1,2-dimethylcyclohexene (C_{8}H_{14}).
+2. Aldol: the CH_{2} next to one C=O attacks the other C=O, closes a 5-ring, then dehydration gives R.
+3. Iodoform turns the acetyl group into COOH, giving S.
+Answer: (4)","Ozonolysis, intramolecular aldol, haloform reaction.","Revise 'Aldehydes and Ketones' (aldol, haloform) and 'Hydrocarbons' (ozonolysis).",
+65,2,conceptual,1-Chloropropane with AlCl_{3} gives a primary carbocation. What does it do?,"It rearranges (hydride shift) to the isopropyl cation, so cumene is the major product. Alkylbenzenes are more reactive than benzene.","1. A false (major product is isopropylbenzene).
+2. B true. C true (polyalkylation happens).
+3. D false (electron donors make substitution easier).
+Answer: (2), B and C",Friedel–Crafts alkylation: rearrangement and polyalkylation.,Revise 'Hydrocarbons'.,
+66,1,conceptual,Isocyanides come from AgCN (attack through N) or the carbylamine reaction of a primary amine.,"Benzyl isocyanide is PhCH_{2}NC, so you need a benzyl group.","1. A: PhCH_{2}Br + AgCN gives PhCH_{2}NC ✓.
+2. B: PhCH_{2}NH_{2} + CHCl_{3}/NaOH gives PhCH_{2}NC ✓.
+3. C and D give phenyl derivatives (or don't react); E gives a nitrile.
+Answer: (1)",Preparation of isocyanides.,Revise 'Amines' and 'Haloalkanes' (KCN vs AgCN).,
+67,4,conceptual,Going from the alcohol A to the alkene B is a dehydration. What reagent does that?,"Conc. H_{2}SO_{4} or H_{3}PO_{4}. The diol C loses two waters, giving a conjugated diene.","1. D = conc. H_{2}SO_{4} or H_{3}PO_{4}.
+2. E = CH_{2}=CH−CH=CH−CH_{3}.
+Answer: (4)",Dehydration of alcohols.,"PCC oxidises alcohols; it doesn't dehydrate them. Revise 'Alcohols, Phenols and Ethers'.",
+68,3,conceptual,The question asks for INCORRECT statements. Check each one.,Gabriel synthesis can't make aryl amines. Hofmann bromamide on PhCH_{2}CONH_{2} gives PhCH_{2}NH_{2}: the NH_{2} is not on the ring.,"1. A correct (benzylamine is more basic).
+2. B incorrect. C incorrect.
+3. D correct (p-nitrophenol dissolves in NaOH).
+Answer: (3), B and C",Preparation and basicity of amines.,Revise 'Amines'.,
+69,4,conceptual,Recall NCERT's facts about α- and β-glucose.,"α-glucose: m.p. 419 K, [α] = +112°. β-glucose: m.p. 423 K, [α] = +19°.","1. A and B are true.
+2. C false (β melts higher). D false (values swapped).
+3. E true (α at 303 K, β at 371 K).
+Answer: (4), A, B and E",Anomers of glucose.,Revise 'Biomolecules'.,
+70,2,conceptual,Is sodium dichromate a primary standard? Is phenolphthalein an acid or a base?,Na_{2}Cr_{2}O_{7} is hygroscopic. Phenolphthalein is a weak acid.,"1. Both statements are false.
+Answer: (2)",Primary standards and indicators.,Revise 'd-Block' (dichromates) and acid–base indicators.,
+71,4,conceptual,sp³d means 5 electron pairs (bond pairs + lone pairs) around the centre.,"Count bp + lp: SF_{4} 4+1, ClF_{3} 3+2, XeF_{2} 2+3, ICl_{2}⁻ 2+3. BrF_{5}, ICl_{4}⁻, XeF_{4} have 6; XeF_{5}⁻ has 7.","1. SF_{4}, ClF_{3}, XeF_{2}, ICl_{2}⁻ are sp³d.
+Answer: 4",Hybridisation via VSEPR.,Revise 'Chemical Bonding'.,
+72,42,arithmetic,Mass of S = (32/231) × mass of BaSO_{4}.,%S = (0.6 × 32/231)/0.2 × 100.,"1. Mass of S = 0.0831 g.
+2. %S = 41.6%, so 42 to the nearest integer (NTA accepts 41 or 42).
+Answer: 42",Carius estimation of sulphur.,Revise 'Purification and Characterisation of Organic Compounds'.,
+73,175,arithmetic,Phenol with dilute HNO_{3} gives o- and p-nitrophenol. Which is steam volatile?,"o-Nitrophenol (intramolecular H-bonding), C_{6}H_{5}NO_{3}, M = 139.","1. %O in phenol = 16/94 = 17.02%. %O in X = 48/139 = 34.53%.
+2. Increase = 17.5% = 175 × 10^{−1}%.
+Answer: 175",Nitration of phenol; percentage composition.,"Revise 'Alcohols, Phenols and Ethers'.",
+74,230,arithmetic,van 't Hoff: log K_{p} = −ΔH°/(2.303R) × (1/T) + constant.,Slope of log K_{p} vs 1/T = (2.5 − 3.5)/(0.06 − 0.05) = −100.,"1. ΔH°/(2.303R) = 100, so ΔH°/R = 230.3 ≈ 230.
+Answer: 230",van 't Hoff equation.,Revise 'Equilibrium' / 'Thermodynamics'.,
+75,46,arithmetic,First order: k = 0.693/t_{1/2}. Time for 99% = (2.303/k) log(100/1).,k = 0.1 per minute.,"1. t = 2.303 × 2/0.1 = 46.06 ≈ 46 min.
+Answer: 46",First-order kinetics.,Revise 'Chemical Kinetics'.,
