@@ -37,6 +37,7 @@ def run(*args):
 
 
 def main():
+    sys.stdout.reconfigure(encoding="utf-8")
     data, folder = sys.argv[1], sys.argv[2].rstrip('/\\')
     year, shift = folder.replace('\\', '/').split('/')[-2:]
     repair_split_strings(data)

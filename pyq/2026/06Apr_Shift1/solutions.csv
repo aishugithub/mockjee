@@ -1,0 +1,207 @@
+q,claude_answer,check,hint1,hint2,solution,concept,revise,note
+1,2,sympy,"sin^{−1} needs its input in [−1, 1], so −3 ≤ x + [x] ≤ 3. Fix [x] = n and test each n.","On [n, n+1), x + [x] runs from 2n up to (but not including) 2n + 1.","1. n = 1: values in [2, 3), so x in [1, 2) works.
+2. n = 0: [0, 1) works. n = −1: values in [−3, −2), so x in [−1, 0) works.
+3. n = 2 gives values ≥ 4; n = −2 gives values below −3. Neither works.
+4. Domain [−1, 2): α² + β² = 1 + 4 = 5.
+Answer: (2)",Domain of sin^{−1} with the greatest integer function.,Revise 'Inverse Trigonometric Functions' (domains). Fixing [x] = n is the standard move.,
+2,4,sympy,Call the roots r and 2r. Write their sum and product using the coefficients.,With D = k² − 15k + 27: 3r = −9(k − 1)/D and 2r² = 18/D. Eliminate r.,"1. r = −3(k − 1)/D, so 2 × 9(k − 1)²/D² = 18/D, giving (k − 1)² = D.
+2. k² − 2k + 1 = k² − 15k + 27, so k = 2.
+3. The parabola is y² = 12x, latus rectum 12.
+Answer: (4)",Relations between roots and coefficients.,Revise 'Quadratic Equations'.,
+3,3,sympy,The product of the roots is 2. A hyperbola has e > 1 and an ellipse has 0 < e < 1.,"Both roots > 1 (and distinct): use f(1) > 0, the vertex a/2 > 1 and D > 0. One root in (0, 1) and one > 1: use f(1) < 0.","1. Both > 1: a² > 8, a > 2 and 3 − a > 0, so a is in (2√2, 3): α² + β² = 8 + 9 = 17.
+2. One in (0, 1), one > 1: f(1) = 3 − a < 0, so a > 3: γ = 3.
+3. Total = 17 + 9 = 26.
+Answer: (3)",Location of roots of a quadratic; eccentricities of conics.,Revise 'Quadratic Equations' (location of roots) and 'Conic Sections'.,
+4,1,sympy,Put z = x + iy and separate the real and imaginary parts.,Real: x² + y² + 2x − y + 2k = 0 (a circle). Imaginary: x + 2y + 3k = 0 (a line). A solution exists iff the line meets the circle.,"1. Centre (−1, 1/2), radius² = 5/4 − 2k. Distance from the centre to the line = 3|k|/√5.
+2. 9k²/5 ≤ 5/4 − 2k ⇔ 36k² + 40k − 25 ≤ 0.
+3. α + β = −40/36, so 9(α + β) = −10.
+Answer: (1)",Complex equations as geometry (line meeting circle).,Revise 'Complex Numbers' and 'Conic Sections' (circle and line).,
+5,2,sympy,Alternating sum = (sum of all cubes) − 2 × (sum of even cubes).,Σ_{1..15} k³ = (15 × 16/2)² = 14400. Even cubes: 8 × Σ_{1..7} k³ = 8 × 784.,"1. 14400 − 2 × 6272 = 1856.
+Answer: (2)",Sums of cubes.,Revise 'Sequences and Series'.,
+6,1,sympy,Let the AP have first term a = r (the GP's ratio) and difference d = g (the GP's first term).,S_{10} = 5(2r + 9g) = 160 and g(1 + r) = 8.,"1. r = (32 − 9g)/2. Then g(17 − 9g/2) = 8, i.e. 9g² − 34g + 16 = 0.
+2. Sum of the roots = 34/9.
+Answer: (1)",AP and GP combined.,Revise 'Sequences and Series'.,
+7,4,sympy,List the distinct vowels and consonants in INCONSEQUENTIAL.,"Vowels: I, O, E, U, A (5). Consonants: N, C, S, Q, T, L (6). No letter repeats in a word.","1. C(5, 2) × C(6, 2) × 4! = 10 × 15 × 24 = 3600.
+Answer: (4)",Selection then arrangement.,Revise 'Permutations and Combinations'. Count distinct letters only.,
+8,4,sympy,(1 + αx)^{26} has one middle term (T_{14}); (1 − αx)^{28} has one middle term (T_{15}).,"C(26, 13)α^{13} = C(28, 14)α^{14}.","1. α = C(26, 13)/C(28, 14).
+2. C(28, 14) = C(26, 13) × (28 × 27)/(14 × 14) = (27/7)C(26, 13).
+3. α = 7/27.
+Answer: (4)",Middle terms of binomial expansions.,Revise 'Binomial Theorem'.,
+9,2,sympy,Expand both sums and subtract them to find Σx.,Σx² + 10Σx + 500 = 2500 and Σx² − 10Σx + 500 = 100.,"1. 20Σx = 2400, so Σx = 120 and the mean is 6.
+2. Σx² = 800, variance = 40 − 36 = 4, SD = 2.
+3. Mean : SD = 3 : 1.
+Answer: (2)",Mean and SD from shifted sums.,Revise 'Statistics'.,
+10,2,sympy,Total probability: choose a fair coin or the two-headed coin.,P(H) = (N/(N + 1))(1/2) + 1/(N + 1).,"1. (N + 2)/(2(N + 1)) = 9/16, so 16N + 32 = 18N + 18 and N = 7.
+Answer: (2)",Total probability.,Revise 'Probability'.,
+11,1,sympy,Solve for e first; a hyperbola needs e > 1.,"e = 5/3, so b²/a² = 16/9. Put (6, 4√3) in the hyperbola.","1. 36/a² − 48 × 9/(16a²) = 9/a² = 1, so a² = 9 and b² = 16.
+2. New hyperbola x²/16 − y²/20 = 1: latus rectum = 2 × 20/4 = 10.
+Answer: (1)",Hyperbola parameters.,Revise 'Conic Sections'.,
+12,1,sympy,"Take P = (3t², 6t). Ordinates 1 : 2 means Q has parameter 2t.","PQ² = 9(4t² − t²)² + 36(2t − t)² = 117. Solve for t², then use the focus (3, 0).","1. 81t⁴ + 36t² − 117 = 0, so t² = 1: P(3, 6), Q(12, 12).
+2. FP = (0, 6), FQ = (9, 12). sin α = |0 × 12 − 6 × 9|/(6 × 15) = 54/90 = 3/5.
+Answer: (1)",Parabola parametric points; angle at the focus.,Revise 'Conic Sections' (parabola) and the 2D cross product for sin of an angle.,
+13,2,sympy,Use tan^{−1}u + tan^{−1}v = tan^{−1}((u + v)/(1 − uv)).,"(2 − α − β)/(α + β − αβ) = 1, with αβ = 1/3.","1. 2 − 2(α + β) + αβ = 0, so α + β = (2 + 1/3)/2 = 7/6.
+2. 6(α + β) = 7. (Check: α = 1/2, β = 2/3 works.)
+Answer: (2)",Inverse tangent addition.,Revise 'Inverse Trigonometric Functions'.,
+14,2,sympy,Write √3 sin θ − cos θ as 2 sin(θ − π/6).,"2 sin(θ − π/6) = 1, so θ − π/6 = π/6 or 5π/6 (plus 2nπ).","1. θ = π/3 + 2nπ or π + 2nπ.
+2. In (−2π, 2π): π/3, −5π/3, π, −π.
+3. Sum = −4π/3.
+Answer: (2)",Trigonometric equations in an interval.,Revise 'Trigonometric Functions'.,
+15,3,sympy,"The midpoint of P and its image lies on L, and the segment is perpendicular to L.","Midpoint ((1 + a/3)/2, 3, (2a + c)/2). y = 3 on L means t = 1, so x = 1 and a = 3.","1. Perpendicular: 12 − bc = 0. z: 2 + b = 3 + c/2. So c = 4, b = 3 (b > 0).
+2. Foot F = (1, 3, 5). Moving 2√14 along (1, 2, 3)/√14: S = (3, 7, 11) or (−1, −1, −1).
+3. α > 0: S = (3, 7, 11), sum 21.
+Answer: (3)",Image of a point in a line; points at a given distance on a line.,Revise 'Three Dimensional Geometry'.,
+16,2,sympy,L's direction is the cross product of the directions of L_{1} and L_{2}.,"(3, 5, 7) × (1, 4, 7) = (7, −14, 7) ∥ (1, −2, 1). L_{3} has direction (2, 1, 2).","1. cos θ = |2 − 2 + 2|/(√6 × 3) = 2/(3√6).
+2. sin θ = √(50/54), so tan θ = √50/2 = 5√2/2.
+Answer: (2)",Angle between lines; cross product.,Revise 'Three Dimensional Geometry'.,
+17,2,sympy,Expand sin x to the x³ term.,x² − sin²x ≈ x² − (x − x³/6)² ≈ x⁴/3. The numerator ≈ x⁴.,"1. Limit = x⁴/(x⁴/3) = 3.
+Answer: (2)",Limits with series expansions.,Revise 'Limits'.,
+18,2,sympy,Add the integral to itself with x → −x. What is 1/(1 + e^{s}) + 1/(1 + e^{−s})?,"The sum is 1, so I = ∫ from 0 to π/4 of 32 cos⁴x dx.","1. cos⁴x = (3 + 4 cos 2x + cos 4x)/8.
+2. ∫ from 0 to π/4 = (3π/4 + 2)/8; × 32 = 3π + 8.
+Answer: (2)",The property ∫_{−a}^{a} f(x) dx = ∫_{0}^{a} [f(x) + f(−x)] dx.,Revise 'Definite Integrals'.,
+19,2,sympy,"Integrate with respect to y. For each y ≥ 0, x goes from 0 to the smaller of (y² + 3)/4 and 6 − y.",The parabola and the line cross at y = 3.,"1. Area = ∫ from 0 to 3 of (y² + 3)/4 dy + ∫ from 3 to 6 of (6 − y) dy = 4.5 + 4.5 = 9.
+Answer: (2)",Area using horizontal strips.,Revise 'Application of Integrals'.,
+20,1,sympy,"Write out f and g explicitly: f decreasing, g increasing.","f(1) = e³, …, f(4) = 1. g(1) = 1/4, g(e) = 1/3, g(e²) = 1/2, g(e³) = 1. So g^{−1}(1/2) = e² and f^{−1}(e²) = 2.","1. φ(x) = 2^{x}.
+2. Area = ∫ from 0 to 1 of (2^{x} − x²) dx = 1/ln 2 − 1/3 = (3 − ln 2)/(3 ln 2).
+Answer: (1)","Bijections, inverses and area.",Revise 'Relations and Functions' and 'Application of Integrals'.,
+21,4,sympy,"Use adj(adj A) = |A|A for 3×3 matrices, and A·adj A = |A|I.","|A| = −1, so adj(adj A) = −A and adj(A)·adj(adj A) = −adj(A)·A = I.","1. The equation becomes A² − αA + βI = RHS.
+2. A² = [[2, −1, 1], [−1, 1, 0], [0, 0, 1]].
+3. Entry (1,2): −1 − α = −2, so α = 1. Entry (3,3): 1 − α + β = −1, so β = −1.
+4. (α − β)² = 4.
+Answer: 4",Adjoint identities.,Revise 'Matrices and Determinants'.,
+22,80,sympy,An equilateral triangle inscribed in a circle of radius r has area (3√3/4)r².,"r² = 36, so g² + f² = 61. The centre (h, 2h − 4) is in the first quadrant.","1. h² + (2h − 4)² = 61 gives h = 5, centre (5, 6).
+2. Distance to x = 1 is 4; half chord = √(36 − 16) = √20.
+3. Chord² = 80.
+Answer: 80","Circles: inscribed triangle, chord length.",Revise 'Conic Sections' (circle).,
+23,3,sympy,Cross a × c = b with a. Use the vector triple product.,"a × (a × c) = a(a·c) − c|a|² = a × b, so c = (3a − a × b)/3.","1. a × b = (−2, 1, 1), so c = (5, 2, 2)/3.
+2. a − 2b = (1, −1, 3). c·(a − 2b) = (5 − 2 + 6)/3 = 3.
+Answer: 3",Vector triple product.,Revise 'Vector Algebra'.,
+24,1279,sympy,min of α tan²θ + β cot²θ by AM–GM; max of α sin²θ + β cos²θ when α > β.,"min f = 2√(αβ); max g = α. So 2√(αβ) = α, i.e. α = 4β.","1. First term α/(2β) = 2, ratio 2β/α = 1/2.
+2. S_{10} = 2(1 − 2^{−10})/(1/2) = 1023/256.
+3. m + n = 1279.
+Answer: 1279",AM–GM; GP sums.,Revise 'Sequences and Series' and AM–GM.,
+25,3,sympy,Group the terms: (x dy + y dx) appears multiplied by (x − √(x² − 1)).,"(x − √(x² − 1)) d(xy) = x dx, and 1/(x − √(x² − 1)) = x + √(x² − 1).","1. d(xy) = (x² + x√(x² − 1)) dx, so xy = x³/3 + (x² − 1)^{3/2}/3 + C. y(1) = 1 gives C = 2/3.
+2. At x = √5: √5 y = 5√5/3 + 8/3 + 2/3, so y = 5/3 + 2√5/3 ≈ 3.16.
+3. Greatest integer less than y = 3.
+Answer: 3",Exact differential equations.,Spotting d(xy) is the key. Revise 'Differential Equations'.,
+26,2,arithmetic,"ρ = 4m/(πd²l). Fractional errors add, with 2 for d².",Δρ/ρ = Δm/m + Δl/l + 2Δd/d.,"1. 0.02/97.42 + 0.05/8.35 + 2 × 0.02/20.20 ≈ 0.0002 + 0.0060 + 0.0020 = 0.0082 = 0.82%.
+Answer: (2)",Error propagation.,Revise 'Units and Measurements'.,
+27,4,arithmetic,"B is added to x, so [B] = L. Then find [A] from V.",A√x/x = A L^{−1/2} must be energy ML²T^{−2}.,"1. [A] = ML^{5/2}T^{−2}, [B] = L.
+2. [AB] = ML^{7/2}T^{−2}.
+Answer: (4)",Dimensional analysis.,Revise 'Units and Measurements'.,
+28,4,arithmetic,Work–energy theorem: W_{gravity} + W_{resistance} = ΔKE.,W_{g} = mgh = 0.001 × 10 × 1000 = 10 J. ΔKE = ½ × 0.001 × 25.,"1. W_{res} = 0.0125 − 10 ≈ −9.99 J, nearest option −9.98 J.
+Answer: (4)",Work–energy theorem with resistance.,"Revise 'Work, Energy and Power'.",
+29,2,arithmetic,Work in the cube's frame: a pseudo force m(g/2) acts backwards on each block.,P (frictionless top): T = 2 × g/2 = 10 N. Q presses on the side face with N = 1.5 × g/2 = 7.5 N.,"1. Vertical for Q: T + f = 15 N, so f = 5 N.
+2. μ ≥ 5/7.5 ≈ 0.67.
+Answer: (2)",Pseudo forces and friction.,Revise 'Laws of Motion' (non-inertial frames).,
+30,1,arithmetic,Maximum tension = stress × area. Then T − mg = ma.,T_{max} = 4×10⁸ × 3.14 × (4×10^{−3})² = 20096 N.,"1. a = 20096/1600 − 10 = 2.56 m/s².
+Answer: (1)",Breaking stress and Newton's second law.,Revise 'Mechanical Properties of Solids'.,
+31,4,arithmetic,"I = (2/5)MR², ω = 1200 rpm in rad/s. Torque = Iω/t.","I = 0.0032 kg m², ω = 40π rad/s.","1. τ = 0.0032 × 40π/10 = 0.0128π N m.
+2. Angle = ωt/2 = 200π rad = 100 rotations.
+Answer: (4)",Rotational kinematics and torque.,Revise 'System of Particles and Rotational Motion'.,
+32,2,arithmetic,At the top of the loop: N + mg = mv²/R with N = 3mg.,v² = 4gR at the top. Energy: mgh = mg(2R) + ½mv².,"1. h = 2R + 2R = 4R.
+Answer: (2)",Vertical circular motion with energy conservation.,"Revise 'Work, Energy and Power'.",
+33,1,arithmetic,Set up coordinates with p (the midpoint of the altitude from the 15 kg mass) as the origin.,"Altitude = 10 cos 60° = 5 m, half-base = 5√3 m. So 15 kg is at (0, 2.5), 2 kg at (−5√3, −2.5), 3 kg at (5√3, −2.5).","1. x = (−10√3 + 15√3)/20 = √3/4.
+2. y = (37.5 − 12.5)/20 = 1.25.
+Answer: (1)",Centre of mass.,Revise 'System of Particles and Rotational Motion'.,
+34,3,arithmetic,"Same tension and area, equal elongation: FL/(AY) is the same for both.",L_{B} = L_{A} × Y_{B}/Y_{A}.,"1. L_{B} = 2.2 × 11/20 = 1.21 m.
+Answer: (3)",Young's modulus in series wires.,Revise 'Mechanical Properties of Solids'.,
+35,1,arithmetic,The total number of moles stays the same; the final pressure is equal in both vessels.,2 × 90/400 = P(1/400 + 1/500).,"1. 0.45 = P × 9/2000, so P = 100 kPa.
+Answer: (1)",Ideal gas in connected vessels.,Revise 'Kinetic Theory'.,
+36,3,arithmetic,I ∝ cos²(φ/2) with φ = (2π/λ) × path difference.,A: φ = 2π/3. B: φ = π/3.,"1. I_{A} ∝ cos²60° = 1/4; I_{B} ∝ cos²30° = 3/4.
+2. Ratio = 1/3.
+Answer: (3)",Interference intensity.,Revise 'Wave Optics'.,
+37,3,arithmetic,x = A cos ωt. When is cos ωt = 1/√2?,"ωt = π/4, so t = T/8.","1. t = 5/8 s.
+Answer: (3)",SHM time intervals.,Revise 'Oscillations'.,
+38,1,arithmetic,Field at the centre of a uniformly charged half ring: E = 2kλ/R with λ = Q/(πR).,E = Q/(2π²ε_{0}R²).,"1. Q = 100 × 2π² × 8.85×10^{−12} × 0.35² ≈ 2.14 × 10^{−9} C = 2.14 nC.
+Answer: (1)",Field of a charged semicircular ring.,Revise 'Electric Charges and Fields'.,
+39,2,arithmetic,"Which diode conducts? The middle diode points against the current (reverse biased), so its branch carries nothing.",All 0.5 mA flows through the LED. Its voltage = P/I.,"1. V_{LED} = 2 mW/0.5 mA = 4 V.
+2. R_{S} = (5 − 4)/0.5 mA = 2 kΩ.
+Answer: (2)",Diode circuits; power rating.,Revise 'Semiconductor Electronics'.,Depends on reading the middle diode as reverse biased in the figure.
+40,2,conceptual,A point source radiates equally in all directions. What changes when you move on the same sphere?,Intensity depends only on distance: I = P/(4πr²).,"1. Same distance, so the same intensity I_{0}.
+Answer: (2)",Intensity of a point source.,Revise 'Electromagnetic Waves'.,
+41,1,arithmetic,"Refraction at one curved surface. From the figure the centre is on the far side, so R > 0.",n_{2}/v − n_{1}/u = (n_{2} − n_{1})/R with u = −4R. Magnification m = n_{1}v/(n_{2}u).,"1. 1.4/v = 0.4/R − 1/(4R) = 0.15/R, so v ≈ 9.33R.
+2. |m| = 9.33R/(1.4 × 4R) ≈ 1.66.
+Answer: (1)",Refraction at a spherical surface.,Revise 'Ray Optics'.,
+42,1,arithmetic,Field at the centre of the loop: B = μ_{0}I/(2r). Energy density = B²/(2μ_{0}).,B = 4π×10^{−7} × 2/0.2 ≈ 1.256 × 10^{−5} T.,"1. u ≈ 6.28 × 10^{−5} J/m³.
+2. Energy in 10^{−9} m³ = 6.28 × 10^{−14} J.
+Answer: (1)",Magnetic energy density.,Revise 'Electromagnetic Induction'.,
+43,1,arithmetic,Voltage across the inductor = E − iR (the rest is across its resistance).,At 2 mA: 1 − 0.2. At 4 mA: 1 − 0.4.,"1. Ratio = 0.8/0.6 = 4/3.
+Answer: (1)",RL circuit transients.,Revise 'Electromagnetic Induction'.,
+44,4,arithmetic,Photon momentum p = h/λ ∝ 1/λ ∝ (1/4 − 1/n²).,1st line: n = 3; 2nd line: n = 4.,"1. Ratio = (5/36)/(3/16) = 20/27.
+Answer: (4)",Hydrogen spectrum and photon momentum.,Revise 'Atoms'.,
+45,1,arithmetic,Power factor = R/Z.,Z = √(R² + (X_{C} − X_{L})²) = √(80² + 60²).,"1. Z = 100 Ω, so the power factor = 0.8.
+Answer: (1)",LCR circuits.,Revise 'Alternating Current'.,
+46,3477,arithmetic,Let V be the voltage across the 4 Ω (and across the 6 Ω + 3 V branch). Use Kirchhoff's current law at the junction.,(2 − V)/3 = V/4 + (V − 3)/6.,"1. 8 − 4V = 3V + 2V − 6, so V = 14/9 V.
+2. I_{6Ω} = (14/9 − 3)/6 ≈ −0.241 A (magnitude 0.241 A).
+3. Heat in 100 s = 6 × 0.241² × 100 ≈ 34.77 J = 3477/100 J.
+Answer: 3477",Kirchhoff's laws; Joule heating.,Revise 'Current Electricity'.,Cell polarities as read from the figure.
+47,30,arithmetic,"After the polariser, the intensity is I_{0}/2. The solution rotates the plane by θ.",(I_{0}/2)cos²θ = 3I_{0}/8.,"1. cos²θ = 3/4, so θ = 30°.
+Answer: 30",Malus's law; optical rotation.,Revise 'Wave Optics'.,
+48,6,arithmetic,"Reaction: ⁷Li + p → 2 ⁴He. Find the Q value, then multiply by the number of Li atoms.",Q = (7.0183 + 1.008 − 8.008) × 931 MeV ≈ 17.04 MeV.,"1. Li atoms = (7/17.13 kg)/(7 g/mol) × 6×10²³ ≈ 3.50 × 10²⁵.
+2. Energy ≈ 3.50×10²⁵ × 17.04×10⁶ eV ≈ 5.97 × 10³² eV ≈ 6 × 10³² eV.
+Answer: 6",Nuclear reaction energy.,Revise 'Nuclei'.,
+49,186,arithmetic,W = q∫E·dl. Each component depends only on its own coordinate.,"∫2x dx = x², ∫3y² dy = y³, ∫4 dz = 4z.","1. W = 3[(25 − 0) + (1 + 8) + 4(2 + 5)] = 3 × 62 = 186 J.
+Answer: 186",Work done by an electric field.,Revise 'Electrostatic Potential'.,
+50,989,disputed,"For an isothermal ideal gas, the bulk modulus equals the pressure.","Initial P = 3×10⁵ Pa, V_{0} = 3×10^{−3} m³. Work on the gas = P_{0}V_{0} ln(V_{0}/V).","1. W = 3×10⁵ × 3×10^{−3} × ln 3 = 900 × 1.0986 ≈ 989 J.
+Answer: 989",Work in an isothermal process; isothermal bulk modulus.,Revise 'Thermodynamics' and 'Mechanical Properties of Solids' (bulk modulus).,"DISPUTED: NTA's final key is 600. That equals B × ΔV = 3×10⁵ × 2×10^{−3}, i.e. treating the pressure as constant, which is not true for an isothermal compression (P triples). Claude gets P_{0}V_{0} ln 3 ≈ 989 J. Key unchanged; please ask a physics teacher."
+51,2,arithmetic,Find the mole ratio Fe : O.,69.9/56 = 1.248; 30.1/16 = 1.881.,"1. Ratio 1 : 1.51 ≈ 2 : 3, so Fe_{2}O_{3}.
+Answer: (2)",Empirical formula.,Revise 'Some Basic Concepts of Chemistry'.,
+52,1,arithmetic,"Shortest Lyman line of H: 1/x = R. For He⁺, multiply by Z² = 4.",Longest Balmer line: n = 3 → 2: 1/λ = 4R(1/4 − 1/9).,"1. 1/λ = 4R × 5/36 = 5R/9, so λ = 9x/5.
+Answer: (1)",Spectral lines of hydrogen-like ions.,Revise 'Structure of Atom'.,
+53,4,conceptual,Radial nodes = n − l − 1; nodal planes = l.,"2s: 1, 0. 3s: 2, 0. 3p: 1, 1. 4d: 1, 2.","1. A-IV, B-III, C-II, D-I.
+Answer: (4)",Nodes of atomic orbitals.,Revise 'Structure of Atom'.,
+54,2,conceptual,"Draw the Lewis structures, or compare valence electron counts and bonding.",SO_{3}²⁻ has a lone pair on S (pyramidal); CO_{3}²⁻ has none (planar). MnO_{4}²⁻ has one more electron than CrO_{4}²⁻.,"1. B (O_{2}²⁻/F_{2}), C (CN⁻/CO) and D (NH_{3}/H_{3}O⁺) are isoelectronic pairs with matching structures.
+2. A and E differ.
+Answer: (2)",Lewis structures and isoelectronic species.,Revise 'Chemical Bonding'.,
+55,3,conceptual,"On a P–V diagram, single-stage compression needs the most work and single-stage expansion gives the least.","Multi-stage processes come closer to reversible, so they sit between.","1. |w_{C}| > |w_{D}| > |w_{B}| > |w_{A}|.
+Answer: (3)",Work in single- vs multi-stage processes.,Revise 'Thermodynamics' (NCERT P–V diagrams).,
+56,4,arithmetic,Raoult's law: p/p° = mole fraction of the solvent.,x_{solvent} = 1/(1 + 0.25).,"1. p/p° = 0.8 = 80%.
+Answer: (4)",Raoult's law.,Revise 'Solutions'.,
+57,1,arithmetic,"K_{c} = [B]/[A] = 4 and Δn = 0, so moles divide 4 : 1.","B = 0.8 mol, A = 0.2 mol, He = 1 mol (unchanged). P = nRT/V.","1. P(He) = 1 × 0.082 × 400/10 = 3.28 atm.
+2. P(B) = 0.8 × 3.28 = 2.624 atm.
+Answer: (1)",Equilibrium with an inert gas.,Revise 'Equilibrium'.,
+58,1,conceptual,Λ°(BaSO_{4}) from Kohlrausch's law. Then solubility s = 1000κ/Λ (mol/L).,Λ°(BaSO_{4}) = x_{1} + x_{2} − 2x_{3}.,"1. s = 1000x/(x_{1} + x_{2} − 2x_{3}).
+2. K_{sp} = s² = 10⁶x²/(x_{1} + x_{2} − 2x_{3})² (option 1, with α = 1).
+Answer: (1)",Kohlrausch's law and solubility products.,Revise 'Electrochemistry'.,Option 1 shows an extra α² in the denominator; with Λm = Λ°m that factor is 1.
+59,1,conceptual,"Look up E° for Al³⁺/Al and Tl³⁺/Tl, and the IE sums of B and Al.",E°(Al³⁺/Al) = −1.66 V; E°(Tl³⁺/Tl) = +1.26 V. B's three IEs are much higher than Al's.,"1. Both statements are true (NCERT).
+Answer: (1)",Group 13 trends.,Revise 'p-Block Elements' (group 13).,
+60,3,conceptual,"Recall the catalysts: V_{2}O_{5} (contact process), TiCl_{4} + Al(C_{2}H_{5})_{3} (Ziegler–Natta), PdCl_{2} (Wacker).","V_{2}O_{5} is amphoteric/acidic, not basic. Ti⁴⁺ is d⁰ (0 BM). Al is +3. Pd²⁺ is 4d⁸.","1. A false, B false.
+2. C true, D true.
+Answer: (3)",Catalysts in industry.,Revise 'd- and f-Block Elements'.,
+61,3,conceptual,Tetrahedral: e (−0.6Δ_{t} each) below t_{2} (+0.4Δ_{t} each). Fill e first.,d²: e²; d⁴: e²t_{2}²; d⁶: e³t_{2}³; d⁸: e⁴t_{2}⁴ (high spin).,"1. d²: −1.2 (III). d⁴: −0.4 (IV). d⁶: −0.6 (I). d⁸: −0.8 (II).
+Answer: (3)",Tetrahedral CFSE.,Revise 'Coordination Compounds'.,
+62,1,conceptual,"In a tetrahedral field, which set is higher: t_{2} (dxy, dyz, dxz) or e (dx²−y², dz²)?",t_{2} is higher.,"1. A, B and D are true; C is false.
+Answer: (1)",Tetrahedral splitting.,Revise 'Coordination Compounds'.,
+63,4,conceptual,Acid-catalysed hydration of 2-methylpropene gives tert-butanol. Is it more or less polar?,"On silica TLC, more polar compounds move less, so they have a lower R_{f}.","1. The alcohol is more polar, so its R_{f} is below 0.42: 0.12.
+Answer: (4)",TLC R_{f} and polarity.,Revise 'Purification and Characterisation of Organic Compounds'.,
+64,3,conceptual,Metamers have the same formula but different alkyl groups on either side of the functional group. Keto–enol needs an α-H.,Both ketones are C_{10}H_{18}O with different groups on each side of the C=O. The tetramethyl compound has no α-H.,"1. Statement I true.
+2. Statement II false.
+Answer: (3)",Metamerism and tautomerism.,Revise 'Basic Principles of Organic Chemistry'.,
+65,4,conceptual,What does Kolbe's electrolysis of sodium acetate give?,"It gives ethane (two CH_{3} radicals join), not methane.","1. Statement I false.
+2. Statement II true: hydrogenation gives ≥ C_{2}, and Wurtz doubles the chain.
+Answer: (4)",Preparation of methane.,Revise 'Hydrocarbons'.,
+66,3,conceptual,Markovnikov addition to PhCH_{2}CH=CH_{2}. Then: can aryl cyanides be made by the Gattermann reaction?,"The product is a secondary bromide with a chiral carbon. Gattermann (Cu/HX) gives aryl halides, not aryl cyanides (NCERT).","1. Statement I true.
+2. Statement II false.
+Answer: (3)",Electrophilic addition; Sandmeyer vs Gattermann.,Revise 'Haloalkanes and Haloarenes'.,
+67,2,conceptual,Tertiary alcohols with Cu at 573 K dehydrate instead of dehydrogenating. What forms from the alkene with H⁺?,"tert-Butanol → 2-methylpropene → (H⁺) tert-butyl cation, an electrophile. It attacks the ring of benzoic acid. Where does −COOH direct?","1. Cu/573 K: tert-butanol loses water, giving 2-methylpropene.
+2. H⁺ protonates it to the tert-butyl cation (CH_{3})_{3}C⁺.
+3. Friedel–Crafts-type attack on benzoic acid: −COOH is meta-directing.
+4. P = 3-tert-butylbenzoic acid.
+Answer: (2)",Reactions of tertiary alcohols; carbocation electrophiles; meta-directing groups.,"Revise 'Alcohols, Phenols and Ethers' (Cu/573 K) and directing effects in 'Hydrocarbons'.","NTA's key (option 2) reads step (ii) as ring alkylation. An acid-catalysed addition to the COOH (tert-butyl benzoate, option 3) is also chemically plausible, and Friedel–Crafts on a deactivated ring is normally sluggish. Agreed with the key; a chemistry teacher may want to discuss it."
+68,3,conceptual,Boiling point follows hydrogen bonding: alcohol > primary amine > secondary amine > alkane.,n-Butanol has the strongest H-bonds; diethylamine has fewer N−H bonds than butylamine.,"1. C < D < B < A.
+Answer: (3)",Boiling points and hydrogen bonding.,Revise 'Amines' and 'Alcohols'.,
+69,3,conceptual,Recall each deficiency disease.,Scurvy: vitamin C. Convulsions: B_{6}. Cheilosis: B_{2}. Xerophthalmia: A.,"1. A-III, B-I, C-IV, D-II.
+Answer: (3)",Vitamins and deficiency diseases.,Revise 'Biomolecules'.,
+70,2,conceptual,"Identify each side chain: amide, amine, phenol, alcohol.",Glutamine: amide → Hofmann bromamide. Lysine: NH_{2} → Hinsberg. Tyrosine: phenol → FeCl_{3}. Serine: alcohol → CAN.,"1. A-IV, B-I, C-II, D-III.
+Answer: (2)",Tests on amino-acid side chains.,Revise 'Biomolecules' and functional-group tests.,
+71,4,arithmetic,Energy = moles × (IE_{1} + IE_{2}).,3.5 mg Li = 5×10^{−4} mol.,"1. 5×10^{−4} × (520 + 7297) = 3.91 kJ ≈ 4.
+Answer: 4",Ionisation enthalpy calculations.,Revise 'Classification of Elements'.,
+72,21,arithmetic,Diazoaminobenzene rearranges in acid (with aniline) to a yellow azo dye.,"The product is p-aminoazobenzene, C_{12}H_{11}N_{3}, M = 197.","1. %N = 42/197 × 100 ≈ 21%.
+Answer: 21",Diazoamino rearrangement; percentage composition.,Revise 'Amines' (diazonium chemistry).,
+73,3,arithmetic,Zinc dust reduces phenol to benzene.,4.7 g phenol = 0.05 mol.,"1. 60% gives 0.03 mol = 3 × 10^{−2} mol.
+Answer: 3",Reduction of phenol with zinc.,"Revise 'Alcohols, Phenols and Ethers'.",
+74,25,arithmetic,6 hours = how many half-lives?,2 half-lives.,"1. Remaining = (1/2)² = 25%.
+Answer: 25",First-order half-life.,Revise 'Chemical Kinetics'.,
+75,34,arithmetic,ΔG° = −2.303RT log K. Then ΔS° = (ΔH° − ΔG°)/T.,log(1.8×10^{−7}) = log 2 + 2 log 3 − 1 − 7 = −6.74.,"1. ΔG° = 2.3 × 8.3 × 300 × 6.74 ≈ 38,600 J/mol.
+2. ΔS° = (28,400 − 38,600)/300 = −34 J/(K mol); magnitude 34.
+Answer: 34",Gibbs energy and equilibrium.,Revise 'Thermodynamics'.,
