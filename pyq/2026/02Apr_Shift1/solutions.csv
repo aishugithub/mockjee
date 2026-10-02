@@ -1,186 +1,333 @@
-q,claude_answer,check,solution,note
-1,3,sympy,"Expand: (x+k)(x+k+2) = x^{2} + (2k+2)x + k^{2} + 2k. Summing k = 0 … n−1 and dividing by n:
-x^{2} + (n+1)x + (n−1)(2n−1)/6 + n − 5 = 0.
-Roots α and α+2 differ by 2, so discriminant = 4. Only n = 7 gives integer roots: x^{2} + 8x + 15 = 0, roots −5 and −3. So α = −5 and n + α = 2.",
-2,4,sympy,"2x/(1+3i) = x(1−3i)/5 and y/(1−2i) = y(1+2i)/5.
-So 10[(x−y) − i(3x+2y)] = 31 + 17i, giving x − y = 3.1 and 3x + 2y = −1.7.
-x = 0.9, y = −2.2, so 10(x − 3y) = 10(0.9 + 6.6) = 75.",
-3,2,sympy,"No solution needs det = 0: 1(β−4α) − 2(2β−8α) + 1(8−8) = 12α − 3β = 0, so β = 4α.
-Then equation 3 minus 4 × equation 2 gives 0 = 18 − 20, which is impossible, so the system really has no solution.
-β/α = 4.",
-4,2,sympy,"A is not a multiple of I, so by Cayley–Hamilton A^{2} − 4A + I = O means tr A = 4 and det A = 1: α = 3.
-Similarly tr B = 5 (true) and det B = 6 − 3β = −6, so β = 4.
-(B−A)(B+A) = [13 15; 7 10], so its transpose is [13 7; 15 10]: S1 is wrong (it quotes the matrix before transposing).
-For a 2×2 matrix det(adj M) = det M. A + B = [4 5; 5 5], det = −5: S2 is correct.",
-5,2,sympy,"A = {1, 6, …, 501} are the numbers ≡ 1 (mod 5); B = {9, 16, …, 499} are the numbers ≡ 2 (mod 7).
-Common terms: x ≡ 16 (mod 35), i.e. 16, 51, …, 471: 14 terms (16 + 35t, t = 0 … 13).
-16 + 35t is divisible by 3 when t ≡ 1 (mod 3): t = 1, 4, 7, 10, 13. Answer 5.",
-6,3,sympy,"Seven digits using all five of 1, 2, 3, 5, 7 = onto maps from 7 places to 5 digits.
-Inclusion–exclusion: 5^{7} − 5·4^{7} + 10·3^{7} − 10·2^{7} + 5 = 16800.
-(Equivalently: one digit used 3 times: 5 × 7!/3! = 4200; two digits used twice: 10 × 7!/(2!2!) = 12600.)",
-7,2,sympy,"^{36}C_{r+1} = (36/(r+1)) · ^{35}C_{r}, so 36/(r+1) = 6/(k^{2} − 3), i.e. r + 1 = 6(k^{2} − 3).
-With 0 ≤ r ≤ 35: k^{2} − 3 must be positive and at most 6, and r + 1 a multiple of 6. k^{2} = 4 gives r = 5; k^{2} = 9 gives r = 35.
-k = ±2, ±3: 4 pairs (r, k).",
-8,3,sympy,"Class marks 7.5, 12.5, …, 32.5. Σf = 90 + 2k, Σfx = 1910 + 40k.
-Mean 21: 1910 + 40k = 21(90 + 2k), so k = 10.
-Check: 2(10)^{2} − 19(10) − 10 = 0.",
-9,3,sympy,"A + B + C = sum of the midpoints = (9, 15); each vertex = (9, 15) − 2 × the opposite side's midpoint.
-Vertices (4, 1), (4, 9), (1, 5), with opposite sides 5, 5, 8 (for (4,1), (4,9), (1,5) respectively).
-Incentre = [5(4,1) + 5(4,9) + 8(1,5)]/18 = (8/3, 5). 3h + k = 8 + 5 = 13.",
-10,4,sympy,"a < b, so the major axis is along y: e^{2} = 1 − a^{2}/b^{2} = 5/9, so a^{2} = 4b^{2}/9.
-16/a^{2} + 9/b^{2} = 1 gives 36/b^{2} + 9/b^{2} = 1: b^{2} = 45, a^{2} = 20.
-Latus rectum = 2a^{2}/b = 40/(3√5) = 8√5/3.",
-11,1,sympy,"sin θ sin(60°−θ) sin(60°+θ) = (1/4) sin 3θ. With θ = 10°: sin 10° sin 50° sin 70° = (1/4) sin 30° = 1/8, so K = 1/8.
-sin(10Kπ/3) = sin(5π/12) = sin 75° = (√3 + 1)/(2√2).",
-12,4,sympy,"sin x(sin x + cos x) = 1/2 + (sin 2x − cos 2x)/2, whose range is [(1−√2)/2, (1+√2)/2] ≈ [−0.21, 1.21]. So a = 0 or 1.
-a = 0: sin x = 0 or tan x = −1: x = −π, 0, π, −π/4, 3π/4 (5 values).
-a = 1: sin x cos x = cos^{2} x, so cos x = 0 or tan x = 1: x = ±π/2, π/4, −3π/4 (4 values).
-n(S) = 9.",
-13,3,sympy,"General points: (−1+3t, −a+5t, −b−1+7t) and (2+s, b+4s, 2a+7s). On the xy-plane z = 0.
-x: s = 3t − 3; z: b = 7t − 1 and a = −7s/2; y: −a + 5t = b + 4s.
-Solving: t = 5/7, s = −6/7, a = 3, b = 4. a + b = 7.",
-14,3,sympy,"Let p = a·b (−6 ≤ p ≤ 6). |3a+2b|^{2} = 72 + 12p and |3a−2b|^{2} = 72 − 12p, and the two add to 144.
-By Cauchy–Schwarz, 3u + 4v ≤ √(3^{2}+4^{2}) · √(u^{2}+v^{2}) = 5 × 12 = 60.
-Equality needs u/3 = v/4, i.e. p = −1.68, which is allowed. Maximum = 60.",
-15,3,sympy,"Direction of L = (2,2,1) × (1,2,2) = (2, −3, 2).
-Foot from O on the line (1,1,1) + t(2,−3,2): t = −(2−3+2)/17 = −1/17, so P = (15/17, 20/17, 15/17).
-34(a + b + c) = 34 × 50/17 = 100.",
-16,2,sympy,"Near x = 2: √(x−1) − 1 ≈ (x−2)/2 and ln(x−1) ≈ x − 2, so the denominator ≈ (x−2)^{2}/2.
-For a finite limit, the cubic needs a double root at 2: 8 − 20 + 2a + b = 0 and 12 − 20 + a = 0, so a = 8 and b = −4.
-Cubic = (x−2)^{2}(x−1), so m = lim 2(x−1) = 2. a + b + m = 6.",
-17,3,sympy,"dy/y = (2 + ln x)dx, so ln y = 2x + x ln x − x + C = x + x ln x + C.
-At (1, e): 1 = 1 + 0 + C, so C = 0.
-f(e) = e^{e + e} = e^{2e} (option 3; option 4 is e raised to 2^{e}).",
-18,3,sympy,"f(x) = |sin x / x|. Critical points in (−2π, 2π):
-• x = ±π: sin x/x changes sign there, so |·| has a corner (f′ does not exist). 2 points.
-• x = 0: smooth maximum (f′ = 0). 1 point.
-• f′ = 0 where tan x = x: one root in (π, 3π/2), about 4.49, and its mirror at −4.49. 2 points.
-Total 5.",
-19,2,sympy,"[x]! = 1 on [0,1), 1 on [1,2), 2 on [2,3).
-Integral = (e^{2} − e^{−2}) + (1/2)(e^{3} − e^{−3} − e^{2} + e^{−2}) = (1/2)(e^{2} + e^{3} − 1/e^{2} − 1/e^{3}).",
-20,4,sympy,"dy/(y+1) = −cos x dx/(1 + sin x), so ln(y+1) = −ln(1 + sin x) + C. y(0) = 0 gives C = 0.
-y + 1 = 1/(1 + sin x). For y = −1/2: 1 + sin α = 2, so sin α = 1 and α = π/2.",
-21,4,sympy,"Need log_{0.6}(t) ≥ 0, i.e. 0 < t ≤ 1, where t = |2x−5|/|x^{2}−4|. So x ≠ ±2, 5/2.
-|2x−5| ≤ |x^{2}−4| ⇔ (x^{2}−2x+1)(x^{2}+2x−9) ≥ 0 ⇔ (x−1)^{2}(x^{2}+2x−9) ≥ 0.
-Domain: (−∞, −1−√10] ∪ {1} ∪ [−1+√10, 5/2) ∪ (5/2, ∞).
-a + b + c + d + e = (−1−√10) + 1 + (−1+√10) + 5/2 + 5/2 = 4.",
-22,91,sympy,"a_{k} = 6k^{3} − 6(k−1)^{3} = 6(3k^{2} − 3k + 1), so a_{k+1} − a_{k} = 36k.
-Σ_{k=1..6} k^{2} = 91.",
-23,81,sympy,"a > 0 always, so we need discriminant < 0: 8b^{2} − 4ac < 0, i.e. ac > 2b^{2}.
-b = 1: ac ≥ 3: 13 pairs (of 16). b = 2: ac > 8: (3,3), (3,4), (4,3), (4,4) = 4 pairs. b ≥ 3: ac > 18 is impossible.
-Probability 17/64, so m + n = 81.",
-24,8,sympy,"Equal intercepts and centre in the first quadrant: centre (h, h). Exactly three points on the axes means the circle passes through O (meeting each axis at 0 and 2h). So r^{2} = 2h^{2}.
-Distance from centre to x + y = 1 is |2h−1|/√2; half chord = √14/2.
-2h^{2} = (2h−1)^{2}/2 + 14/4, so h = 2 and r^{2} = 8.",
-25,192,sympy,"y = log_{2}(x^{2}+4) on [0, 2√3] runs from 2 to 4, and its inverse is x = √(2^{y} − 4) on [2, 4].
-The two integrals are the areas on either side of the same curve, so α = (2√3)(4) − 0 × 2 = 8√3.
-α^{2} = 192.",
-26,2,arithmetic,"(1/2)ε_{0}E^{2} is energy per unit volume: [ML^{2}T^{−2}]/[L^{3}] = [ML^{−1}T^{−2}].
-a = 1, b = −1, c = −2, so 2a − b + c = 2 + 1 − 2 = 1.",
-27,2,arithmetic,"Y = 4FL/(πd^{2}l). ΔY/Y = 2Δd/d + ΔL/L + Δl/l = 2(0.001/0.08) + 0.1/150 + 0.001/0.5 = 0.02767.
-Y = 4(100)(1.5)/(π(8×10^{−4})^{2}(5×10^{−3})) ≈ 5.97×10^{10} N/m^{2}.
-ΔY ≈ 0.02767 × 5.97×10^{10} ≈ 1.65×10^{9}. α = 1.65.",
-28,2,arithmetic,"a = (v·∇)v: a_{x} = v_{x}∂v_{x}/∂x = (−x)(−1) = x, a_{y} = (2y)(2) = 4y, a_{z} = (−z)(−1) = z.
-At (1, 2, 4): a = (1, 8, 4), |a| = √81 = 9 m/s^{2}.",
-29,4,arithmetic,"v = (20t, 15t^{2}) and a = (20, 30t). At t = 1: r = (10, 5), v = (20, 15), a = (20, 30).
-p = 0.1v = (2, 1.5) ✓ A. F = 0.1a = (2, 3) ✓ B.
-L = r × p = (10)(1.5) − (5)(2) = 5 k̂, not 15 ✗ C. τ = r × F = (10)(3) − (5)(2) = 20 k̂ ✓ D.
-A, B and D.",
-30,2,arithmetic,T = 2π√(r^{3}/GM). T_{2}/T_{1} = √[(2R)^{3}/(4M)] / √[R^{3}/(2M)] = √(8 × 2/4) = 2.,
-31,3,arithmetic,"ω = dθ/dt = t^{3}/2 − t^{2}; angular acceleration = dω/dt = 3t^{2}/2 − 2t.
-At t = 10 s: 150 − 20 = 130 rad/s^{2}.",
-32,2,arithmetic,"The slab fills the whole plate area with thickness d/2, so it is in series with the d/2 air gap.
-C′ = ε_{0}A/(d/2 + d/(2K)) = ε_{0}A/(0.6d) = (5/3)C.
-Increase = 2/3 = 66.67%.",
-33,4,arithmetic,"Diatomic, constant pressure: ΔQ = nC_{p}ΔT = (7/2)nRΔT, ΔU = (5/2)nRΔT, ΔW = nRΔT.
-ΔQ : ΔU : ΔW = 7 : 5 : 2.",
-34,4,arithmetic,"Connected spheres are at the same potential: kQ_{1}/r_{1} = kQ_{2}/r_{2}, so Q ∝ r.
-Surface field E = kQ/r^{2} ∝ 1/r. E_{S1}/E_{S2} = 18/8 = 9/4.",
-35,4,arithmetic,"y = 5 cos(200πt − πx/150): ω = 200π rad/s and k = π/150 per cm.
-v = ω/k = 30000 cm/s = 300 m/s.",
-36,2,arithmetic,"Point x is on the axis of A and on the perpendicular bisector (equatorial line) of B.
-E_{A} = 2kp_{1}/r^{3} along Ox; E_{B} = kp_{2}/r^{3} perpendicular to Ox.
-tan 60° = E_{B}/E_{A} = p_{2}/(2p_{1}), so p_{2}/p_{1} = 2√3.",
-37,2,conceptual,"Reading part (C), the output is clipped at about +5 V in the positive half and at about −5 V in the negative half (a two-sided clipper).
-The branch already drawn (ideal diode + 5 V Zener) conducts in one half-cycle once the Zener breaks down, holding the output at 5 V.
-To clip the other half as well, the X–Y branch must be the same pair turned the other way: an ideal diode and a Zener diode in series, opposite to the first branch (option 2).",The figure's voltage scale is rough. A teacher should confirm the reading of part (C).
-38,1,arithmetic,"P = ε^{2}/R with ε = NA(dB/dt). Wire length = N × 2π(coil radius) ∝ N√A, so R ∝ N√A/r^{2}.
-P ∝ N^{2}A^{2} · r^{2}/(N√A) = N A^{3/2} r^{2}.
-Ratio = 2 × 2^{3/2} × 9 = 36√2, so α = 36.",
-39,1,conceptual,"(I) Two semi-infinite straight wires, each ending level with P at distance r, each give μ_{0}I/(4πr), in the same direction. The semicircle gives μ_{0}I/(4r). B_{1} = (μ_{0}I/4πr)(2 + π).
-(II) The incoming straight wire gives μ_{0}I/(4πr), the semicircle gives μ_{0}I/(4r), and the outgoing wire points along the line through Q, giving 0. B_{2} = (μ_{0}I/4πr)(1 + π).
-B_{1}/B_{2} = (2 + π)/(1 + π).","Figure (II) is drawn loosely. The solution assumes the outgoing straight wire lies on a line through Q, which is the only reading that gives one of the options."
-40,2,arithmetic,"Thin prism: δ_{min} = (μ − 1)A = A/2. At minimum deviation i = (A + δ)/2 = 3A/4.
-i : δ = (3A/4) : (A/2) = 3 : 2.",
-41,1,arithmetic,"Single refracting surface with C on the object side: u = −40 cm, R = −20 cm.
-μ_{2}/v − μ_{1}/u = (μ_{2} − μ_{1})/R: 1.54/v + 1/40 = 0.54/(−20), so v ≈ −29.6 cm.
-m = μ_{1}v/(μ_{2}u) ≈ 0.48, so image height ≈ 0.96 cm ≈ 1 cm (with μ = 1.5 it is exactly 1 cm).","The exact value with μ = 1.54 is 0.96 cm; NTA's key takes the nearest option, 1 cm."
-42,2,arithmetic,"3eV_{0} = hc/λ − φ and eV_{0} = hc/(2λ) − φ. Subtracting: 2eV_{0} = hc/(2λ), so eV_{0} = hc/(4λ).
-φ = hc/(2λ) − hc/(4λ) = hc/(4λ), so the threshold wavelength is 4λ: α = 4.",
-43,1,arithmetic,"F_{E} = eE_{0} and F_{B} = evB_{0} with B_{0} = E_{0}/c.
-F_{E}/F_{B} = c/v = (3×10^{8})/(1.5×10^{6}) = 200.",
-44,3,arithmetic,"L = nh/(2π) = 3h/π, so n = 6. E = −13.6/36 ≈ −0.38 eV.",
-45,2,arithmetic,"Volume is conserved: 512r^{3} = R^{3}, so r = R/8 with R = 1 mm.
-ΔA = 4π(512r^{2} − R^{2}) = 4πR^{2}(8 − 1) = 28π × 10^{−6} m^{2}.
-ΔE = TΔA = 0.08 × 28π × 10^{−6} ≈ 7.0 × 10^{−6} J. α = 7.",
-46,36,arithmetic,"Angular width of the central maximum = 2λ/a = 2(628×10^{−9})/(0.2×10^{−3}) = 6.28×10^{−3} rad.
-In degrees: 6.28×10^{−3} × 180/π ≈ 0.36° = 36×10^{−2}°.",Exact value 35.98 (with π = 3.14 it is exactly 36); JEE numerical answers are integers.
-47,120,arithmetic,"γ = C_{p}/C_{v} = 1.5. V_{2} = V_{1}(P_{1}/P_{2})^{1/γ} = 0.15 × 8^{2/3} = 0.6 m^{3}.
-W = (P_{1}V_{1} − P_{2}V_{2})/(γ − 1) = (1.2×10^{5} − 0.6×10^{5})/0.5 = 1.2×10^{5} J = 120 kJ.",
-48,171,arithmetic,"v × B = (1, −2, 3) × (2, 3, −5) = (1, 11, 7), |v × B| = √171.
-F = q|v × B| = √171 × 10^{−6} N, so α = 171.",
-49,3,arithmetic,"At l/3 below the top, the wire below has weight 2w/3, so tension = W + 2w/3.
-Stress = W/A + (2/3)(w/A), so 2/γ = 2/3 and γ = 3.",
-50,387,arithmetic,"The coin's weight = weight of the extra water displaced = 10 × 10 × 3.87 cm^{3} × 1 g/cm^{3} = 387 g.
-(The wood density is not needed.)",
-51,4,arithmetic,"3Fe + 4H_{2}O → Fe_{3}O_{4} + 4H_{2}. 18 g steam = 1 mol, which reacts with 3/4 mol Fe = 0.75 × 56 = 42 g.",
-52,3,arithmetic,Li^{2+} is hydrogen-like with Z = 3: IE = Z^{2} × 2.18×10^{−18} = 9 × 2.18×10^{−18} = 1.962×10^{−17} J.,
-53,3,conceptual,"Bond orders: O_{2}^{+} 2.5, O_{2} 2, O_{2}^{−} 1.5, O_{2}^{2−} 1. Bond length rises as bond order falls, so Statement I is true.
-Unpaired electrons: O_{2} 2, O_{2}^{+} 1, O_{2}^{−} 1, O_{2}^{2−} 0. O_{2}^{+} and O_{2}^{−} are equal, so the strict order in Statement II is false.",
-54,4,arithmetic,"Target: 2Al(s) + 3Cl_{2}(g) → Al_{2}Cl_{6}(s). Combine (i) + 3(ii) + 6(iii) − (iv). (All the reactions release heat, so each ΔH is negative.)
-ΔH_{f} = −1200 + 3(−164) + 6(−83) − (−663) = −1200 − 492 − 498 + 663 = −1527 kJ/mol.",
-55,4,arithmetic,"Molality = (19.5/78)/0.5 = 0.5 m. ΔT_{f} = iK_{f}m: 1 = i(1.86)(0.5), so i = 1.075 and α = 0.075.
-K_{a} = cα^{2}/(1 − α) = 0.5(0.075)^{2}/0.925 ≈ 3×10^{−3}.",
-56,4,arithmetic,"Ag_{2}CrO_{4}: 4s^{3} = 32x, so s = 2x^{1/3}. AgBr: s^{2} = 4y, so s = 2√y.
-Ratio = x^{1/3}/√y = ∛x/√y.",
-57,1,conceptual,"The more positive couple is reduced: AgBr/Ag is the cathode and Fe/Fe(OH)_{2} the anode (Fe is oxidised, not reduced).
-E°_{cell} = 0.07 − (−0.88) = +0.95 V (not −0.95). E°_{cell} is intensive.
-Overall: Fe + 2OH^{−} + 2AgBr → Fe(OH)_{2} + 2Ag + 2Br^{−}, which is option 1.",
-58,2,conceptual,"Zero order: [A] = [A]_{0} − kt, so t_{100%} = [A]_{0}/k = 2t_{1/2}.
-First order: [A] = [A]_{0}e^{−kt} never reaches 0, so t_{100%} is infinite. That is what option 2 means by (t_{1/2})^{∞}.",
-59,4,conceptual,"First ionisation enthalpies (kJ/mol): Na 496, Mg 738, Cl 1251, Ar 1521, so the order is Ar > Cl > Mg > Na and Statement I is false.
-Third IE: Ca → Ca^{3+} removes an electron from the noble-gas core [Ar], so it is very high (about 4912), more than for Al, Fe or B. Statement II is true.",
-60,1,conceptual,"Oxidising power F_{2} > Cl_{2} > Br_{2} > I_{2}, so Cl_{2} oxidises Br^{−} and I^{−}. The freed Br_{2} or I_{2} colours the organic layer (layer test). Both statements are true.",
-61,1,conceptual,"Acidified dichromate (orange) is reduced to Cr^{3+} (green) by reducing agents.
-Fe^{2+}, Sn^{2+}, I^{−} and S^{2−} are all reducing agents. Fe^{3+}, Sn^{4+} and SO_{4}^{2−} cannot reduce it, so every other option includes at least one species that does not react.",
-62,4,conceptual,"Spectrochemical series: F^{−} < H_{2}O < en < CN^{−}, so Δ_{0} increases in that order.
-CrF_{6}^{3−} 15,060; Cr(H_{2}O)_{6}^{3+} 17,400; Cr(en)_{3}^{3+} 22,300; Cr(CN)_{6}^{3−} 26,600.
-A-IV, B-I, C-II, D-III.",
-63,4,conceptual,"Glycerol (b.p. about 563 K) decomposes near its boiling point, so it is purified by distillation under reduced pressure, not by simple distillation (NCERT). Statement I is false.
-An azeotrope boils at constant composition, so fractional distillation cannot separate it. Statement II is true.",NCERT-based. A teacher should confirm how Statement I is meant to be read.
-64,1,conceptual,"The benzyl carbocation is resonance-stabilised, while the ethyl carbocation has only hyperconjugation. So benzyl chloride ionises (S_{N}1) much faster. Both statements are true.",
-65,3,conceptual,"IUPAC priority: acid > ester > acid halide > amide > nitrile > aldehyde > ketone > alcohol > amine > alkene/alkyne.
-Option 3, −CONH_{2} > −CHO > >C=O > −NH_{2} > −C≡C−, follows this.
-Option 1 puts ketone before aldehyde, option 2 puts amide before ester, and option 4 puts aldehyde before nitrile.",
-66,4,conceptual,"The −NH− lone pair activates the N-phenyl ring (ortho/para). The C=O deactivates the benzoyl ring.
-On the N-phenyl ring, the bulky −NHCOPh group makes attack at the para position (u) dominate over ortho (s).",
-67,4,conceptual,"A: carbylamine test (CHCl_{3} + KOH) works for the primary amine (ethylamine) only: II.
-B: Tollens' reagent oxidises acetaldehyde, not acetone: IV.
-C: neutral FeCl_{3} gives a violet colour with phenol: III.
-D: bromine water is decolourised by the C=C of cinnamic acid: I.
-A-II, B-IV, C-III, D-I.",
-68,1,conceptual,"Azo coupling attacks the para position, so the ring needs strong activation by NMe_{2}.
-Ortho methyl groups twist NMe_{2} out of the ring plane (steric inhibition of resonance), cutting its activation: one ortho Me (Q) less, two (R) least.
-P > Q > R.",
-69,3,conceptual,"B_{1} thiamine, B_{2} riboflavin, B_{6} pyridoxine, C ascorbic acid: A-III, B-IV, C-I, D-II.",
-70,2,conceptual,"Apple-green flame: Ba^{2+}. Yellow precipitate with K_{2}CrO_{4} in acetic acid: BaCrO_{4}.
-Canary-yellow precipitate with ammonium molybdate and HNO_{3}: phosphate. So the ions are Ba^{2+} and PO_{4}^{3−}.",
-71,33,arithmetic,"M(CrCl_{3}·6H_{2}O) = 266.5 g/mol, so 5.33 g = 0.02 mol. AgCl: 8.61/143.5 = 0.06 mol (all 3 Cl^{−} per complex, as it is a 1:3 electrolyte).
-Ratio = 0.02/0.06 = 0.333 = 33×10^{−2} (nearest integer 33).",
-72,14,conceptual,"Not decolourising KMnO_{4} means no C=C, so the isomers are the cycloalkanes C_{5}H_{10}.
-Monochloro products: cyclopentane 1; methylcyclobutane 4; ethylcyclopropane 4; 1,1-dimethylcyclopropane 2; 1,2-dimethylcyclopropane 3 (structural only).
-Total 14.",
-73,17,arithmetic,"C_{n}H_{2n+2} needs (3n+1)/2 mol O_{2}: (3n+1)/2 = 8, so n = 5. The alkane is C_{5}H_{12}: 5 + 12 = 17.",
-74,41,arithmetic,"log(k_{2}/k_{1}) = log 3 = 0.48 = [E_{a}/(2.3R)](1/T_{1} − 1/T_{2}), with E_{a}/(2.3R) = 60000/19.09 ≈ 3143.
-1/T_{2} = 1/300 − 0.48/3143, so T_{2} ≈ 314.4 K ≈ 41 °C.",
-75,727,arithmetic,"At the transition temperature ΔG° = 0: 35 log T = 105, so log T = 3, T = 1000 K = 727 °C.",
+q,claude_answer,check,hint1,hint2,solution,concept,revise,note
+1,3,sympy,"Each bracket is (x+k)(x+k+2) for k = 0, 1, …, n−1. Expand one bracket first, then add them up as a quadratic in x.","After adding and dividing by n you get x^{2} + (n+1)x + (n−1)(2n−1)/6 + n − 5 = 0. Two roots that differ by 2 means (difference of roots)^{2} = 4, i.e. discriminant = 4.","1. One bracket: (x+k)(x+k+2) = x^{2} + (2k+2)x + (k^{2}+2k).
+2. Add for k = 0 to n−1 and divide by n: x^{2} + (n+1)x + (n−1)(2n−1)/6 + (n−1) − 4 = 0.
+3. Roots α and α+2 differ by 2, so the discriminant must be 4.
+4. Try natural n: only n = 7 gives whole-number roots. The equation is x^{2} + 8x + 15 = 0, roots −5 and −3.
+5. So α = −5 and n + α = 7 − 5 = 2.
+Answer: (3)","Sums of series (Σk, Σk^{2}) feeding into the root conditions of a quadratic.","If the summing step was the hard part, practise writing a general term and using Σk = n(n+1)/2 and Σk^{2} = n(n+1)(2n+1)/6. The fact that roots differing by d means discriminant = d^{2} (when the x^{2} coefficient is 1) is worth remembering.",
+2,4,sympy,Make each fraction simpler first: multiply top and bottom by the conjugate of its denominator.,2x/(1+3i) = x(1−3i)/5 and y/(1−2i) = y(1+2i)/5. Then compare real parts and imaginary parts on both sides.,"1. 2x/(1+3i) = 2x(1−3i)/10 = x(1−3i)/5.
+2. y/(1−2i) = y(1+2i)/5.
+3. So 50 × [x − 3xi − y − 2yi]/5 = 10[(x − y) − i(3x + 2y)] = 31 + 17i.
+4. Real parts: x − y = 3.1. Imaginary parts: −(3x + 2y) = 1.7, so 3x + 2y = −1.7.
+5. Solving: x = 0.9, y = −2.2.
+6. 10(x − 3y) = 10(0.9 + 6.6) = 75.
+Answer: (4)",Rationalising complex denominators and equating real and imaginary parts.,"If the sign of the imaginary part slipped, slow down at step 3: write the real and imaginary parts on separate lines before comparing. Revise 'Complex Numbers' (conjugates and equality of complex numbers).",
+3,2,sympy,For 'no solution' the coefficient determinant must be zero. Start there to link α and β.,det = 1(β − 4α) − 2(2β − 8α) + 1(8 − 8). Set it to 0. Then check that the equations really contradict each other (compare equation 3 with a multiple of equation 2).,"1. det of coefficients = 1(β − 4α) − 2(2β − 8α) + 0 = 12α − 3β.
+2. No solution needs det = 0, so β = 4α.
+3. Check it is really inconsistent: with β = 4α, equation 3 is 8x + 4y + 4αz = 18, but 4 × equation 2 is 8x + 4y + 4αz = 20. These can't both hold, so there is no solution.
+4. β/α = 4.
+Answer: (2)",Consistency of linear equations using determinants (Cramer's rule conditions).,Remember: det = 0 alone means 'no solution OR infinitely many'. You must then check whether the equations contradict each other. Revise 'Matrices and Determinants': consistency of a system.,
+4,2,sympy,A 2×2 matrix (not a multiple of I) satisfies A^{2} − (trace)A + (det)I = O. Compare this with the given equations.,"From A^{2} − 4A + I = O: trace A = 4 and det A = 1. From B^{2} − 5B − 6I = O: trace B = 5 and det B = −6. Also, for 2×2 matrices det(adj M) = det M.","1. Cayley–Hamilton for A: trace = 1 + α = 4 gives α = 3 (and det = 3 − 2 = 1 ✓).
+2. For B: trace = 5 ✓ and det = 6 − 3β = −6 gives β = 4.
+3. (B − A)(B + A) works out to [13 15; 7 10]. Its transpose is [13 7; 15 10], which is not what S1 says. S1 is wrong: it quotes the matrix before transposing.
+4. A + B = [4 5; 5 5], det = 20 − 25 = −5. For a 2×2 matrix det(adj M) = det M = −5. S2 is correct.
+Answer: (2), only S2 is correct.","Cayley–Hamilton theorem for 2×2 matrices, transpose, and det(adj A) = |A|^{n−1}.","If finding α and β was the hard part, revise the 2×2 Cayley–Hamilton form A^{2} − (tr A)A + |A|I = O. Keep |adj A| = |A|^{n−1} handy: for n = 2 it is just |A|. A transpose trap like S1 is common, so always apply the last operation in the statement.",
+5,2,sympy,Describe each set by its remainder: A is numbers 1 more than a multiple of 5; B is numbers 2 more than a multiple of 7.,"Common terms satisfy x ≡ 1 (mod 5) and x ≡ 2 (mod 7). The first one is 16, and they repeat every 35. List them up to the smaller last term (499), then test divisibility by 3.","1. A = 1, 6, 11, …, 501 (all ≡ 1 mod 5). B = 9, 16, 23, …, 499 (all ≡ 2 mod 7).
+2. The first common number is 16, and common numbers repeat every lcm(5, 7) = 35: 16, 51, 86, …
+3. They must be ≤ 499: 16 + 35t ≤ 499 gives t = 0 to 13, so 14 common terms.
+4. 16 + 35t is divisible by 3 when 1 + 2t is divisible by 3, i.e. t = 1, 4, 7, 10, 13.
+5. That is 5 numbers.
+Answer: (2)",Common terms of two APs (common difference = lcm) and divisibility.,"If listing the common terms was the hard part, remember the common terms of two APs form a new AP with difference lcm(d_{1}, d_{2}). Revise 'Sequences and Series'.",
+6,3,sympy,"Every one of the 5 digits must appear, in 7 places. So the extra 2 places repeat some digits. In how many ways can the repetition happen?","Two cases: one digit used 3 times (others once), or two digits used twice each. Count arrangements with 7!/(repeats)! in each case.","1. Case A: one digit appears 3 times. Choose it in 5 ways; arrangements = 7!/3! = 840. Total 5 × 840 = 4200.
+2. Case B: two digits appear twice each. Choose them in C(5,2) = 10 ways; arrangements = 7!/(2!·2!) = 1260. Total 12600.
+3. Sum = 4200 + 12600 = 16800.
+(Check: inclusion–exclusion 5^{7} − 5·4^{7} + 10·3^{7} − 10·2^{7} + 5 gives the same.)
+Answer: (3)",Permutations with repetition where every digit must be used at least once.,A common slip is forgetting one of the two cases (3+1+1+1+1 and 2+2+1+1+1). Split 'at least once' problems by how the extra places are shared. Revise 'Permutations and Combinations'.,
+7,2,sympy,Write ^{36}C_{r+1} in terms of ^{35}C_{r}. There is a neat identity: ^{n}C_{r} = (n/r)·^{n−1}C_{r−1}.,"^{36}C_{r+1} = (36/(r+1))·^{35}C_{r}. So the equation becomes 36/(r+1) = 6/(k^{2} − 3), i.e. r + 1 = 6(k^{2} − 3). Now remember 0 ≤ r ≤ 35.","1. Use ^{36}C_{r+1} = (36/(r+1)) × ^{35}C_{r}.
+2. Cancel ^{35}C_{r}: 36/(r+1) = 6/(k^{2} − 3), so r + 1 = 6(k^{2} − 3).
+3. r + 1 is between 1 and 36, so k^{2} − 3 is between 1 and 6, and k^{2} is a perfect square: k^{2} = 4 or 9.
+4. k^{2} = 4: r = 5, k = ±2. k^{2} = 9: r = 35, k = ±3.
+5. Four pairs (r, k).
+Answer: (2)",Binomial coefficient identities and integer solutions with a range restriction.,A common slip is stopping at k = ±2 and missing r = 35 (k = ±3). Always write the allowed range of r. Revise the identity ^{n}C_{r} = (n/r)·^{n−1}C_{r−1}.,
+8,3,sympy,"Use the class marks (midpoints) 7.5, 12.5, …, 32.5 and the mean formula Σfx/Σf.",Σf = 90 + 2k and Σfx = 1910 + 40k. Set Σfx = 21 × Σf.,"1. Class marks: 7.5, 12.5, 17.5, 22.5, 27.5, 32.5.
+2. Σf = 2 + k + 28 + 54 + (k+1) + 5 = 90 + 2k.
+3. Σfx = 15 + 12.5k + 490 + 1215 + 27.5(k+1) + 162.5 = 1910 + 40k.
+4. Mean 21: 1910 + 40k = 21(90 + 2k) = 1890 + 42k, so k = 10.
+5. Test the options: 2(100) − 19(10) − 10 = 0, so option 3 works.
+Answer: (3)",Mean of grouped data using class marks.,"If the arithmetic got messy, keep a small table (x, f, fx). Revise 'Statistics': mean of grouped data.",
+9,3,sympy,Adding the three midpoints gives A + B + C. Can you get each vertex from that?,"Each vertex = (sum of midpoints) − 2 × (midpoint of the opposite side). Then use the incentre formula (aA + bB + cC)/(a + b + c), where a, b, c are the side lengths opposite A, B, C.","1. Sum of midpoints = (9, 15) = A + B + C.
+2. Vertices: (9,15) − 2(5/2, 7) = (4, 1); (9,15) − 2(5/2, 3) = (4, 9); (9,15) − 2(4, 5) = (1, 5).
+3. Sides: (4,1)–(4,9) = 8; (4,9)–(1,5) = 5; (1,5)–(4,1) = 5. The side opposite (1,5) is 8; the side opposite each of the other two is 5.
+4. Incentre = [8(1,5) + 5(4,1) + 5(4,9)]/18 = (48/18, 90/18) = (8/3, 5).
+5. 3h + k = 8 + 5 = 13.
+Answer: (3)",Recovering a triangle from its midpoints; the incentre formula.,"A common slip is weighting each vertex by the wrong side: the weight is the side opposite that vertex. Revise 'Straight Lines': centroid, incentre.",
+10,4,sympy,"a < b, so the major axis is along y. Which formula for eccentricity applies then?",e^{2} = 1 − a^{2}/b^{2} = 5/9. Use this with 16/a^{2} + 9/b^{2} = 1. Latus rectum (major axis along y) = 2a^{2}/b.,"1. Major axis along y (since b > a): e^{2} = 1 − a^{2}/b^{2} = 5/9, so a^{2} = 4b^{2}/9.
+2. The point (4, 3) lies on it: 16/a^{2} + 9/b^{2} = 1 gives 36/b^{2} + 9/b^{2} = 1, so b^{2} = 45 and a^{2} = 20.
+3. Latus rectum = 2a^{2}/b = 40/(3√5) = 8√5/3.
+Answer: (4)",Ellipse with a vertical major axis: eccentricity and latus rectum.,"The trap here is using e^{2} = 1 − b^{2}/a^{2} and 2b^{2}/a, which are only for a > b. Always check which denominator is bigger first. Revise 'Conic Sections': ellipse.",
+11,1,sympy,"Write the angles in degrees: 10°, 50°, 70°. Is there an identity for sin θ · sin(60° − θ) · sin(60° + θ)?",sin θ · sin(60° − θ) · sin(60° + θ) = (1/4) sin 3θ. Put θ = 10° to get K.,"1. π/18 = 10°, 5π/18 = 50° = 60° − 10°, 7π/18 = 70° = 60° + 10°.
+2. Using the identity, K = (1/4) sin 30° = 1/8.
+3. 10Kπ/3 = 10π/24 = 5π/12 = 75°.
+4. sin 75° = sin(45° + 30°) = (√3 + 1)/(2√2).
+Answer: (1)",Product identity sin θ sin(60°−θ) sin(60°+θ) = ¼ sin 3θ.,"This identity (and its cos version) comes up often in JEE, so it's worth memorising. Revise 'Trigonometric Functions'.",
+12,4,sympy,First find which integer values a can actually take. Rewrite sin x(sin x + cos x) using double angles.,"sin^{2}x + sin x cos x = 1/2 + (sin 2x − cos 2x)/2, whose range is about [−0.21, 1.21]. So a = 0 or a = 1. Solve each in [−π, π].","1. sin x(sin x + cos x) = 1/2 + (sin 2x − cos 2x)/2. Since sin 2x − cos 2x ranges over [−√2, √2], the expression lies in [(1−√2)/2, (1+√2)/2] ≈ [−0.21, 1.21]. So a = 0 or 1.
+2. a = 0: sin x = 0 or tan x = −1. In [−π, π]: −π, 0, π, −π/4, 3π/4 (5 values).
+3. a = 1: sin^{2}x + sin x cos x = 1, so sin x cos x = cos^{2}x, giving cos x = 0 or tan x = 1: −π/2, π/2, π/4, −3π/4 (4 values).
+4. Total 9.
+Answer: (4)",Range of a trigonometric expression; solving trig equations in an interval.,"A common slip is dividing by cos x and losing the cos x = 0 solutions, or forgetting the endpoints ±π. Revise 'Trigonometric Functions': general solutions.",
+13,3,sympy,"Write a general point on each line using parameters t and s. On the xy-plane, z = 0.","Point on line 1: (−1+3t, −a+5t, −b−1+7t). Point on line 2: (2+s, b+4s, 2a+7s). Equate x, y, z and set z = 0.","1. Equal x: −1 + 3t = 2 + s, so s = 3t − 3.
+2. z = 0 on both: 7t = b + 1 and 7s = −2a.
+3. Equal y: −a + 5t = b + 4s.
+4. Substituting: t = 5/7, s = −6/7, so a = 3 and b = 4.
+5. a + b = 7.
+Answer: (3)",Intersection of two lines in 3D using parametric form.,"If the algebra got tangled, solve in order: get s from x, then a and b from z, then use y last. Revise 'Three Dimensional Geometry': lines.",
+14,3,sympy,Let p = a·b. Write |3a + 2b|^{2} and |3a − 2b|^{2} in terms of p. Notice their sum.,"|3a+2b|^{2} = 72 + 12p and |3a−2b|^{2} = 72 − 12p, which add up to 144. Now maximise 3u + 4v given u^{2} + v^{2} = 144 (Cauchy–Schwarz).","1. |3a + 2b|^{2} = 9(4) + 4(9) + 12p = 72 + 12p; |3a − 2b|^{2} = 72 − 12p.
+2. With u = |3a+2b| and v = |3a−2b|: u^{2} + v^{2} = 144.
+3. Cauchy–Schwarz: 3u + 4v ≤ √(9+16)·√144 = 5 × 12 = 60.
+4. Equality needs u : v = 3 : 4, which gives p = −1.68. That's allowed, since |p| ≤ 6.
+Answer: (3), 60",Magnitudes via dot products; maximising a linear sum under u^{2} + v^{2} = constant.,"The key move is noticing u^{2} + v^{2} is constant. After that, either Cauchy–Schwarz or u = 12 cos θ, v = 12 sin θ works. Revise 'Vector Algebra' and maxima with the a cos θ + b sin θ form.",
+15,3,sympy,A line perpendicular to two vectors is parallel to their cross product.,"Direction d = (2,2,1) × (1,2,2) = (2, −3, 2). The foot of the perpendicular from O on the line r = (1,1,1) + t·d needs OP·d = 0.","1. d = (2,2,1) × (1,2,2) = (2, −3, 2).
+2. P = (1+2t, 1−3t, 1+2t). OP ⊥ d: 2(1+2t) − 3(1−3t) + 2(1+2t) = 0, so 1 + 17t = 0 and t = −1/17.
+3. P = (15/17, 20/17, 15/17), so a + b + c = 50/17.
+4. 34(a + b + c) = 100.
+Answer: (3)",Cross product for a perpendicular direction; foot of perpendicular on a line.,"Revise 'Three Dimensional Geometry': foot of the perpendicular. Writing the general point first, then using the perpendicular condition, works every time.",
+16,2,sympy,The denominator goes to 0 like (x − 2)^{2}. What must the cubic look like near x = 2 for the limit to be finite?,Near x = 2: √(x−1) − 1 ≈ (x−2)/2 and ln(x−1) ≈ x − 2. So the cubic must have a double root at x = 2: p(2) = 0 and p′(2) = 0.,"1. Denominator ≈ (x−2)/2 × (x−2) = (x−2)^{2}/2.
+2. For a finite limit, sin(p(x)) ≈ p(x) must also vanish like (x−2)^{2}: p(2) = 0 and p′(2) = 0.
+3. p(2) = 8 − 20 + 2a + b = 0 and p′(2) = 12 − 20 + a = 0, so a = 8 and b = −4.
+4. p(x) = (x−2)^{2}(x−1), so the limit = (x−1)/(1/2) at x = 2 = 2. So m = 2.
+5. a + b + m = 8 − 4 + 2 = 6.
+Answer: (2)","Limits using standard approximations, and the double-root condition.","If the 'double root' idea was new, revise how the order of zero of the denominator decides what the numerator needs. Revise 'Limits': standard limits for sin, ln and roots.",
+17,3,sympy,"Separate the variables: dy/y on one side, everything in x on the other.",ln y = ∫(2 + ln x) dx = 2x + x ln x − x + C. Use y(1) = e to find C.,"1. dy/y = (2 + ln x) dx.
+2. Integrate: ln y = 2x + (x ln x − x) + C = x + x ln x + C.
+3. At x = 1, y = e: 1 = 1 + 0 + C, so C = 0.
+4. At x = e: ln y = e + e = 2e, so f(e) = e^{2e}.
+Answer: (3). Careful: option 4 is e raised to 2^{e}, which looks similar.",Variable separable differential equations; ∫ln x dx.,Remember ∫ln x dx = x ln x − x. Also read exponent options slowly: here two options differ only in where the e sits. Revise 'Differential Equations'.,
+18,3,sympy,A critical point is where f′ = 0 OR where f′ doesn't exist. |g(x)| has a corner where g changes sign.,sin x/x is zero at ±π (corners for |·|). Also look for f′ = 0: x = 0 and where tan x = x.,"1. Corners: sin x/x changes sign at x = ±π, so |sin x/x| has sharp corners there. 2 points.
+2. x = 0: f is smooth with a maximum there (f′ = 0). 1 point.
+3. Elsewhere f′ = 0 when x cos x − sin x = 0, i.e. tan x = x. In (π, 2π) this has one root (about 4.49), and by symmetry one in (−2π, −π). 2 points.
+4. Total 5.
+Answer: (3)",Critical points include points of non-differentiability; tan x = x roots.,The usual slip is counting only f′ = 0 and forgetting the corners at ±π. Revise 'Application of Derivatives': the definition of a critical point.,
+19,2,sympy,"[x] is constant on each unit interval. What is [x]! on [0,1), [1,2) and [2,3)?","[x]! = 1, 1, 2 on those intervals. So split the integral and divide the last part by 2.","1. On [0, 2): [x]! = 1. On [2, 3): [x]! = 2.
+2. ∫ from 0 to 2 of (e^{x} + e^{−x}) dx = e^{2} − e^{−2}.
+3. (1/2)∫ from 2 to 3 = (1/2)(e^{3} − e^{−3} − e^{2} + e^{−2}).
+4. Add: (1/2)(e^{2} + e^{3} − e^{−2} − e^{−3}).
+Answer: (2)",Definite integrals with the greatest integer function (split at integers).,"Note 0! = 1, so the first two intervals behave the same. Revise 'Definite Integrals': integrals with [x].",
+20,4,sympy,This is variable separable: put (y + 1) with dy and the rest with dx.,dy/(y+1) = −cos x/(1 + sin x) dx. Both sides integrate to logarithms.,"1. dy/(y+1) = −cos x dx/(1 + sin x).
+2. ln(y + 1) = −ln(1 + sin x) + C. With y(0) = 0: C = 0.
+3. So y + 1 = 1/(1 + sin x).
+4. y = −1/2 means 1 + sin α = 2, so sin α = 1 and α = π/2.
+Answer: (4)",Variable separable differential equation with ∫f′/f = ln f.,Spotting cos x/(1 + sin x) as f′/f is the key step. Revise 'Differential Equations' and 'Integrals': the ∫f′(x)/f(x) form.,
+21,4,sympy,"√(log_{0.6} t) needs log_{0.6} t ≥ 0. Since the base 0.6 is less than 1, what does that say about t?","log_{0.6} t ≥ 0 ⇔ 0 < t ≤ 1. So you need |2x − 5| ≤ |x^{2} − 4|, with x ≠ ±2 and x ≠ 5/2. Square both sides and factor.","1. Base 0.6 < 1, so log_{0.6} t ≥ 0 means 0 < t ≤ 1, where t = |2x−5|/|x^{2}−4|.
+2. t > 0: x ≠ 5/2 (and x ≠ ±2 for the denominator).
+3. t ≤ 1: (2x−5)^{2} ≤ (x^{2}−4)^{2}, which factors to (x−1)^{2}(x^{2}+2x−9) ≥ 0.
+4. So x = 1, or x ≤ −1−√10, or x ≥ −1+√10 (≈ 2.16).
+5. Domain: (−∞, −1−√10] ∪ {1} ∪ [−1+√10, 5/2) ∪ (5/2, ∞).
+6. Sum = (−1−√10) + 1 + (−1+√10) + 5/2 + 5/2 = 4.
+Answer: 4","Domain with logs whose base is between 0 and 1, and modulus inequalities.","The trap is treating log_{0.6} like log_{10}: for a base below 1 the inequality flips. Revise 'Relations and Functions': domain, and the properties of logarithms.",
+22,91,sympy,"If the sum of the first n terms is S_{n}, then a_{k} = S_{k} − S_{k−1}.",a_{k} = 6k^{3} − 6(k−1)^{3} = 6(3k^{2} − 3k + 1). Then find a_{k+1} − a_{k}.,"1. a_{k} = 6k^{3} − 6(k−1)^{3} = 18k^{2} − 18k + 6.
+2. a_{k+1} − a_{k} = 18(2k+1) − 18 = 36k.
+3. ((a_{k+1} − a_{k})/36)^{2} = k^{2}.
+4. Sum for k = 1 to 6: 1 + 4 + 9 + 16 + 25 + 36 = 91.
+Answer: 91",Getting the nth term from the sum of n terms.,"Revise 'Sequences and Series': a_{n} = S_{n} − S_{n−1}. Once you have a_{k}, everything simplifies quickly.",
+23,81,sympy,A quadratic is positive for all x when the leading coefficient is positive and the discriminant is negative.,"a > 0 always here. You need (2√2 b)^{2} − 4ac < 0, i.e. ac > 2b^{2}. Count triples for each b.","1. Condition: 8b^{2} − 4ac < 0, i.e. ac > 2b^{2}.
+2. b = 1: ac > 2. Of the 16 pairs, only (1,1), (1,2), (2,1) fail, so 13 work.
+3. b = 2: ac > 8: (3,3), (3,4), (4,3), (4,4), so 4 work.
+4. b = 3 or 4: ac > 18 is impossible (max ac = 16).
+5. Probability = 17/64, so m + n = 81.
+Answer: 81","Sign of a quadratic for all real x, plus counting outcomes.","If the counting was the slow part, fix b first and count the pairs (a, c). That's quicker than listing all 64. Revise 'Quadratic Equations' (sign of a quadratic) and 'Probability'.",
+24,8,sympy,"Equal intercepts on both axes with the centre in the first quadrant means the centre is (h, h). Meeting the axes in exactly three points means one point is shared. Which point could that be?","The circle passes through the origin, so r^{2} = 2h^{2}. Then use (half chord)^{2} + (distance from centre to line)^{2} = r^{2}.","1. Centre (h, h). Three axis points means it passes through O (cutting each axis at 0 and 2h), so r^{2} = 2h^{2}.
+2. Distance from (h, h) to x + y = 1 is |2h − 1|/√2. Half chord = √14/2.
+3. 2h^{2} = (2h − 1)^{2}/2 + 14/4. Multiply by 4: 8h^{2} = 2(4h^{2} − 4h + 1) + 14, so 8h = 16 and h = 2.
+4. r^{2} = 2(4) = 8.
+Answer: 8",Circle through the origin with equal intercepts; chord length.,"The tricky part is turning 'exactly three points' into 'passes through the origin'. Draw a quick sketch when a condition sounds unusual. Revise 'Conic Sections': circle, length of a chord.",
+25,192,sympy,Look at the two integrands. Are they inverse functions of each other?,"If y = log_{2}(x^{2}+4), then x = √(2^{y} − 4). As x goes from 0 to 2√3, y goes from 2 to 4. For inverse functions, ∫f + ∫f^{−1} = b·f(b) − a·f(a).","1. f(x) = log_{2}(x^{2} + 4) is increasing on [0, 2√3], with f(0) = 2 and f(2√3) = log_{2} 16 = 4.
+2. Its inverse is f^{−1}(y) = √(2^{y} − 4) on [2, 4]: exactly the second integrand.
+3. The two integrals fill the rectangle: α = (2√3)(4) − (0)(2) = 8√3.
+4. α^{2} = 192.
+Answer: 192",Integral of a function plus its inverse (area of a rectangle).,"When two hard-looking integrals are added, check whether they are inverses before computing. A small sketch of the area makes the rule obvious. Revise 'Definite Integrals' (properties) and 'Inverse functions'.",
+26,2,arithmetic,What physical quantity is (1/2)ε_{0}E^{2}? Think of the energy stored in a capacitor.,"It is energy per unit volume. Energy is [ML^{2}T^{−2}], volume is [L^{3}].","1. (1/2)ε_{0}E^{2} = energy density = energy/volume.
+2. [ML^{2}T^{−2}]/[L^{3}] = [ML^{−1}T^{−2}], so a = 1, b = −1, c = −2.
+3. 2a − b + c = 2 + 1 − 2 = 1.
+Answer: (2)",Dimensions using a known physical meaning (energy density).,Recognising a combination's meaning is faster than working out the dimensions of ε_{0}. Revise 'Units and Measurements' and 'Electrostatic Potential and Capacitance' (energy density).,
+27,2,arithmetic,Write Y = FL/(Aℓ) with A = πd^{2}/4. Which errors add up in ΔY/Y?,ΔY/Y = 2(Δd/d) + ΔL/L + Δℓ/ℓ (the load error is ignored). Then ΔY = (ΔY/Y) × Y.,"1. Y = 4FL/(πd^{2}ℓ) = 4(100)(1.5)/(π × (8×10^{−4})^{2} × 5×10^{−3}) ≈ 5.97 × 10^{10} N/m^{2}.
+2. ΔY/Y = 2(0.001/0.08) + 0.1/150 + 0.001/0.5 = 0.025 + 0.00067 + 0.002 ≈ 0.0277.
+3. ΔY ≈ 0.0277 × 5.97×10^{10} ≈ 1.65 × 10^{9} N/m^{2}.
+Answer: (2), α = 1.65",Propagation of errors in a product/quotient formula.,"Common slips: forgetting the factor 2 for d^{2}, or giving the fractional error instead of the absolute error ΔY. Revise 'Units and Measurements': errors.",
+28,2,arithmetic,"The velocity depends on position, not time. How is acceleration found for a velocity field?","a_{x} = v_{x}∂v_{x}/∂x, a_{y} = v_{y}∂v_{y}/∂y, a_{z} = v_{z}∂v_{z}/∂z (each component depends only on its own coordinate here).","1. a_{x} = (−x)(−1) = x.
+2. a_{y} = (2y)(2) = 4y.
+3. a_{z} = (−z)(−1) = z.
+4. At (1, 2, 4): a = (1, 8, 4), so |a| = √(1 + 64 + 16) = 9 m/s^{2}.
+Answer: (2)",Acceleration when velocity is given as a function of position (a = v dv/dx).,"The trap answer 0 comes from differentiating with respect to time directly. When v depends on x, use a = v dv/dx. Revise 'Motion in a Straight Line' (a = v dv/dx).",
+29,4,arithmetic,Differentiate r once for v and again for a. Then check each statement with t = 1.,"At t = 1: r = (10, 5), v = (20, 15), a = (20, 30). p = mv, F = ma, L = r × p, τ = r × F (z-component = xP_{y} − yP_{x}).","1. v = (20t, 15t^{2}) and a = (20, 30t). At t = 1: r = (10, 5), v = (20, 15), a = (20, 30).
+2. p = 0.1v = (2, 1.5). A is correct.
+3. F = 0.1a = (2, 3). B is correct.
+4. L = r × p = 10(1.5) − 5(2) = 5 k̂, not 15. C is wrong.
+5. τ = r × F = 10(3) − 5(2) = 20 k̂. D is correct.
+Answer: (4), A, B and D","Momentum, force, angular momentum and torque from a position vector.","If L came out wrong, practise the 2D cross product: (x, y) × (p_{x}, p_{y}) = xp_{y} − yp_{x}. Revise 'System of Particles and Rotational Motion'.",
+30,2,arithmetic,"By Kepler's third law, how does T depend on the orbit radius and the star's mass?",T = 2π√(r^{3}/GM). Take the ratio: T_{2}/T_{1} = √[(r_{2}/r_{1})^{3} × (M_{1}/M_{2})].,"1. T ∝ √(r^{3}/M).
+2. T_{2}/T_{1} = √[(2R/R)^{3} × (2M/4M)] = √(8 × 1/2) = √4 = 2.
+Answer: (2)","Time period of an orbit, T^{2} ∝ r^{3}/M.","A common slip is forgetting that the star's mass changes too, or flipping the mass ratio. Revise 'Gravitation': orbital period.",
+31,3,arithmetic,Angular acceleration is the second derivative of θ with respect to time.,ω = dθ/dt = t^{3}/2 − t^{2}. Differentiate once more and put t = 10.,"1. ω = dθ/dt = 20t^{3}/40 − t^{2} = t^{3}/2 − t^{2}.
+2. α = dω/dt = 3t^{2}/2 − 2t.
+3. At t = 10: 150 − 20 = 130 rad/s^{2}.
+Answer: (3)",Angular kinematics by differentiation.,150 is the trap if you drop the −2t term. Revise 'Motion in a Plane' / rotational kinematics.,
+32,2,arithmetic,Look at the figure: the slab covers the whole plate area but only half the gap. Are the two parts in series or in parallel?,"They are layers one above the other, so in series: C′ = ε_{0}A/(t/K + (d − t)) with t = d/2.","1. The dielectric layer (thickness d/2) and the air layer (thickness d/2) are in series.
+2. C′ = ε_{0}A/(d/(2K) + d/2) = ε_{0}A/(d(1/10 + 1/2)) = ε_{0}A/(0.6d) = (5/3)C.
+3. Increase = (5/3 − 1) × 100% = 66.67%.
+Answer: (2)",Capacitor partly filled with a dielectric (series layers).,"The trap 200% comes from treating the halves as side by side (in parallel), and 400% from using KC. Check the figure: a horizontal layer is series, a vertical split is parallel. Revise 'Electrostatic Potential and Capacitance'.",
+33,4,arithmetic,"For a diatomic gas, what are C_{v} and C_{p}?","At constant pressure: ΔQ = nC_{p}ΔT, ΔU = nC_{v}ΔT, ΔW = nRΔT, with C_{v} = 5R/2 and C_{p} = 7R/2.","1. Diatomic: C_{v} = 5R/2, C_{p} = 7R/2.
+2. ΔQ : ΔU : ΔW = 7/2 : 5/2 : 1 = 7 : 5 : 2.
+Answer: (4)",First law at constant pressure; C_{p} and C_{v} for a diatomic gas.,"Revise 'Thermodynamics' and 'Kinetic Theory' (degrees of freedom: diatomic f = 5). The options are just reorderings, so write ΔQ, ΔU, ΔW in the order the question asks.",
+34,4,arithmetic,"Joined by a wire, the spheres reach the same potential. How does charge relate to radius then?","V = kQ/r is the same, so Q ∝ r. The surface field E = kQ/r^{2}.","1. Same potential: Q_{1}/r_{1} = Q_{2}/r_{2}, so Q ∝ r.
+2. E = kQ/r^{2} ∝ r/r^{2} = 1/r.
+3. E_{S1}/E_{S2} = r_{2}/r_{1} = 18/8 = 9/4.
+Answer: (4)",Charge sharing between connected conductors; field at the surface.,The trap 4/9 comes from flipping the ratio: the smaller sphere has the larger field. Revise 'Electric Charges and Fields' and 'Electrostatic Potential'.,
+35,4,arithmetic,Compare with y = A cos(ωt − kx). What are ω and k here?,ω = 200π rad/s and k = π/150 per cm. Wave speed v = ω/k. Watch the units: x is in cm.,"1. ω = 200π, k = π/150 cm^{−1}.
+2. v = ω/k = 200π × 150/π = 30000 cm/s.
+3. 30000 cm/s = 300 m/s.
+Answer: (4)","Wave speed from the wave equation, v = ω/k.",The units step is where most slips happen (cm to m). Revise 'Waves'.,
+36,2,arithmetic,Point x is on the axis of one dipole and on the equatorial line of the other. Which is which?,"Axial field: 2kp/r^{3}. Equatorial field: kp/r^{3}. They are perpendicular, and tan 60° = E_{B}/E_{A}.","1. A lies along Ox, so x is on A's axis: E_{A} = 2kp_{1}/r^{3}, along Ox.
+2. B is perpendicular to Ox, so x is on B's equatorial line: E_{B} = kp_{2}/r^{3}, perpendicular to Ox.
+3. tan 60° = E_{B}/E_{A} = p_{2}/(2p_{1}) = √3, so p_{2}/p_{1} = 2√3.
+Answer: (2)",Fields on the axial and equatorial lines of a short dipole.,The trap √3 comes from forgetting the factor 2 in the axial field. Revise 'Electric Charges and Fields': dipole fields.,
+37,2,conceptual,"Read the output graph: what happens in the positive half-cycle, and what happens in the negative half-cycle?",The output is held at +5 V in one half and at about −5 V in the other. The branch already drawn clips one side. What would clip the other side?,"1. The output is flat at +5 V in the positive half and at about −5 V in the negative half: a two-sided clipper.
+2. The drawn branch (ideal diode + 5 V Zener) conducts in one half-cycle once the Zener breaks down, holding the output at 5 V.
+3. To clip the other half, X–Y needs the same pair the other way round: an ideal diode and a Zener in series, opposite to the first branch.
+Answer: (2)",Zener diode clipping circuits.,"If this felt hard, revise how a forward diode in series with a reverse Zener behaves: it conducts only once the voltage passes V_{Z}. Revise 'Semiconductor Electronics'.",The figure's voltage scale is rough. A teacher should confirm the reading of part (C).
+38,1,arithmetic,"Power dissipated = ε^{2}/R. Which factors change ε, and which change R?","ε = NA(dB/dt). The wire length is N × (circumference) ∝ N√A, so R = ρ(length)/(πr^{2}) ∝ N√A/r^{2}.","1. ε ∝ NA, so ε^{2} ∝ N^{2}A^{2}.
+2. R ∝ (wire length)/(wire cross-section) ∝ N√A/r^{2}.
+3. P = ε^{2}/R ∝ N A^{3/2} r^{2}.
+4. New/old = 2 × (2)^{3/2} × 9 = 36√2, so √2·α = 36√2 and α = 36.
+Answer: (1)",Faraday's law combined with how resistance depends on wire length and thickness.,"The usual slip is keeping R the same. A bigger coil needs more wire, and a thicker wire has less resistance. Revise 'Electromagnetic Induction' and 'Current Electricity' (R = ρL/A).",
+39,1,conceptual,"Break each shape into straight wires and a semicircle. For each straight wire, where is the centre relative to it?",Semi-infinite wire with its end level with the point: μ_{0}I/(4πr). A wire whose line passes through the point: 0. Semicircle: μ_{0}I/(4r).,"1. (I): two semi-infinite wires, each at distance r and ending level with P, each give μ_{0}I/(4πr), both in the same direction. The semicircle adds μ_{0}I/(4r). B_{1} = (μ_{0}I/4πr)(2 + π).
+2. (II): the incoming wire gives μ_{0}I/(4πr), the semicircle gives μ_{0}I/(4r), and the outgoing wire lies on a line through Q, giving 0. B_{2} = (μ_{0}I/4πr)(1 + π).
+3. B_{1}/B_{2} = (2 + π)/(1 + π).
+Answer: (1)",Magnetic field of straight wire segments and arcs (Biot–Savart).,Revise 'Moving Charges and Magnetism': the semi-infinite wire result μ_{0}I/(4πr) and the arc result μ_{0}Iθ/(4πr). Check the direction of each part before adding.,"Figure (II) is drawn loosely. The solution assumes the outgoing straight wire lies on a line through Q, which is the only reading that gives one of the options."
+40,2,arithmetic,"For a thin prism, what is the deviation? At minimum deviation, how are i and δ related?",Thin prism: δ = (μ − 1)A. At minimum deviation: i = (A + δ)/2.,"1. δ_{min} = (1.5 − 1)A = A/2.
+2. i = (A + δ)/2 = (A + A/2)/2 = 3A/4.
+3. i : δ = (3A/4) : (A/2) = 3 : 2.
+Answer: (2)",Thin prism deviation and the minimum deviation condition.,Revise 'Ray Optics': prism formula. Remember at minimum deviation r = A/2 and i = (A + δ)/2.,
+41,1,arithmetic,This is refraction at a single curved surface. Note C is on the object's side: what is the sign of R?,Use μ_{2}/v − μ_{1}/u = (μ_{2} − μ_{1})/R with u = −40 cm and R = −20 cm. Magnification m = μ_{1}v/(μ_{2}u).,"1. u = −40 cm, R = −20 cm (centre on the incoming side).
+2. 1.54/v + 1/40 = 0.54/(−20), so v ≈ −29.6 cm (virtual, on the same side).
+3. m = (1)(−29.6)/(1.54 × −40) ≈ 0.48, so the image is ≈ 0.96 cm tall.
+4. The nearest option is 1 cm (with μ = 1.5 it is exactly 1 cm).
+Answer: (1)",Refraction at a spherical surface: sign convention and magnification.,Sign of R is where most slips happen: R is negative when the centre is on the side the light comes from. Revise 'Ray Optics': refraction at spherical surfaces.,"The exact value with μ = 1.54 is 0.96 cm; NTA's key takes the nearest option, 1 cm."
+42,2,arithmetic,Write Einstein's equation eV = hc/λ − φ for both wavelengths.,"3eV_{0} = hc/λ − φ and eV_{0} = hc/(2λ) − φ. Subtract to find eV_{0}, then find φ. Threshold wavelength λ_{0} = hc/φ.","1. Subtract the two equations: 2eV_{0} = hc/λ − hc/(2λ) = hc/(2λ), so eV_{0} = hc/(4λ).
+2. φ = hc/(2λ) − eV_{0} = hc/(2λ) − hc/(4λ) = hc/(4λ).
+3. λ_{0} = hc/φ = 4λ, so α = 4.
+Answer: (2)",Photoelectric equation with two wavelengths.,"Revise 'Dual Nature of Matter and Radiation'. Two equations, two unknowns: subtracting removes φ.",
+43,1,arithmetic,Electric force = qE. Magnetic force = qvB. How are E and B related in an EM wave?,"B_{0} = E_{0}/c, so F_{E}/F_{B} = E_{0}/(vB_{0}) = c/v.","1. F_{E} = eE_{0} and F_{B} = evB_{0} = evE_{0}/c.
+2. F_{E}/F_{B} = c/v = (3 × 10^{8})/(1.5 × 10^{6}) = 200.
+Answer: (1)","Electric and magnetic forces in an EM wave, B = E/c.",Revise 'Electromagnetic Waves': E_{0} = cB_{0}. The 300 in E_{y} is a distractor: it cancels.,
+44,3,arithmetic,Bohr's quantisation: L = nh/(2π). What is n?,3h/π = nh/(2π) gives n = 6. Then E_{n} = −13.6/n^{2} eV.,"1. nh/(2π) = 3h/π, so n = 6.
+2. E = −13.6/36 ≈ −0.38 eV.
+Answer: (3)",Bohr model: angular momentum quantisation and energy levels.,The trap −0.85 (n = 4) or −1.51 (n = 3) comes from equating 3h/π with nh/π. Write L = nh/2π every time. Revise 'Atoms'.,
+45,2,arithmetic,Volume stays the same when the drop breaks up. What is the radius of each droplet?,"512r^{3} = R^{3}, so r = R/8. Surface energy change = T × (increase in area) = T × 4π(512r^{2} − R^{2}).","1. R = 1 mm = 10^{−3} m and r = R/8.
+2. New area − old area = 4π(512 × R^{2}/64 − R^{2}) = 4πR^{2}(8 − 1) = 28π × 10^{−6} m^{2}.
+3. ΔE = 0.08 × 28π × 10^{−6} ≈ 7.0 × 10^{−6} J.
+Answer: (2), α = 7",Surface energy when a drop splits into droplets.,"Common slip: using the diameter (2 mm) as the radius, which gives 4 times the answer. Revise 'Mechanical Properties of Fluids': surface tension.",
+46,36,arithmetic,The central maximum spans from the first minimum on one side to the first minimum on the other.,First minimum: sin θ ≈ θ = λ/a. Angular width = 2λ/a in radians. Then convert to degrees.,"1. 2λ/a = 2 × 628 × 10^{−9}/(0.2 × 10^{−3}) = 6.28 × 10^{−3} rad.
+2. In degrees: 6.28 × 10^{−3} × 180/π = 0.36° = 36 × 10^{−2} degrees.
+Answer: 36",Single slit diffraction: width of the central maximum.,Common slips: using λ/a (half-width) or forgetting to convert radians to degrees. Revise 'Wave Optics': single slit.,Exact value 35.98 (with π = 3.14 it is exactly 36); JEE numerical answers are integers.
+47,120,arithmetic,"Adiabatic process: find γ first, then the final volume.",γ = C_{p}/C_{v} = 1.5. P_{1}V_{1}^{γ} = P_{2}V_{2}^{γ}. Work done = (P_{1}V_{1} − P_{2}V_{2})/(γ − 1).,"1. γ = 3R/2R = 1.5.
+2. V_{2} = V_{1}(P_{1}/P_{2})^{1/γ} = 0.15 × 8^{2/3} = 0.15 × 4 = 0.6 m^{3}.
+3. W = (8×10^{5} × 0.15 − 1×10^{5} × 0.6)/0.5 = (1.2×10^{5} − 0.6×10^{5})/0.5 = 1.2 × 10^{5} J = 120 kJ.
+Answer: 120",Work in an adiabatic expansion.,The temperature (140 °C) is not needed. Don't let extra data distract you. Revise 'Thermodynamics': adiabatic work.,
+48,171,arithmetic,Magnetic force F = q(v × B). Compute the cross product first.,"v × B = (1, −2, 3) × (2, 3, −5). Use the determinant with i, j, k.","1. v × B = i[(−2)(−5) − (3)(3)] − j[(1)(−5) − (3)(2)] + k[(1)(3) − (−2)(2)] = (1, 11, 7).
+2. |v × B| = √(1 + 121 + 49) = √171.
+3. F = 10^{−6} × √171 N, so α = 171.
+Answer: 171",Lorentz force using the vector cross product.,Sign slips in the j-component are the usual error: remember the minus sign in front. Revise 'Moving Charges and Magnetism' and the vector cross product.,
+49,3,arithmetic,Stress at a point = tension there / area. What hangs below the point l/3 from the top?,Below that point: the weight W plus 2/3 of the wire (weight 2w/3).,"1. Tension at l/3 from the top = W + (2/3)w.
+2. Stress = W/A + (2/3)(w/A).
+3. Compare with W/A + (2/γ)(w/A): γ = 3.
+Answer: 3",Stress in a hanging wire that has its own weight.,The trap is taking the wire above the point (w/3) instead of below it (2w/3). Revise 'Mechanical Properties of Solids'.,
+50,387,arithmetic,"By Archimedes, the extra weight floated equals the weight of extra water pushed aside.",Extra submerged volume = 10 × 10 × 3.87 cm^{3}. Its mass in water = the coin's mass.,"1. Extra volume submerged = 10 × 10 × 3.87 = 387 cm^{3}.
+2. Water displaced = 387 g, which equals the coin's mass.
+3. The wood's density isn't needed.
+Answer: 387",Archimedes' principle for floating bodies.,Revise 'Mechanical Properties of Fluids': buoyancy. Extra data (wood density) is a common distraction in JEE.,
+51,4,arithmetic,Write the balanced equation for iron reacting with steam to form Fe_{3}O_{4}.,3Fe + 4H_{2}O → Fe_{3}O_{4} + 4H_{2}. 18 g of steam is 1 mol.,"1. 3Fe + 4H_{2}O → Fe_{3}O_{4} + 4H_{2}.
+2. 4 mol H_{2}O react with 3 mol Fe, so 1 mol H_{2}O reacts with 3/4 mol Fe.
+3. Mass of Fe = 0.75 × 56 = 42 g.
+Answer: (4)",Stoichiometry from a balanced equation.,The trap 21 g comes from a wrong mole ratio. Always balance first. Revise 'Some Basic Concepts of Chemistry': mole concept.,
+52,3,arithmetic,"Li^{2+} has one electron, so it is hydrogen-like. How does ionisation energy depend on Z?",IE = Z^{2} × IE(H) for a one-electron species from n = 1.,"1. Li^{2+}: Z = 3, one electron in n = 1.
+2. IE = 3^{2} × 2.18 × 10^{−18} = 1.962 × 10^{−17} J per atom.
+Answer: (3)","Energy of hydrogen-like species, E ∝ Z^{2}/n^{2}.",The trap 6.54 × 10^{−18} comes from multiplying by Z instead of Z^{2}. Revise 'Structure of Atom': Bohr energies.,
+53,3,conceptual,Use molecular orbital theory: work out the bond order and the unpaired electrons for each species.,"Bond orders: O_{2}^{+} 2.5, O_{2} 2, O_{2}^{−} 1.5, O_{2}^{2−} 1. Count electrons in the π* orbitals for the unpaired ones.","1. Higher bond order means a shorter bond, so the length order O_{2}^{+} < O_{2} < O_{2}^{−} < O_{2}^{2−} is right. Statement I is true.
+2. Unpaired electrons: O_{2} 2, O_{2}^{+} 1, O_{2}^{−} 1, O_{2}^{2−} 0.
+3. O_{2}^{+} and O_{2}^{−} both have 1, so 'O_{2}^{+} > O_{2}^{−}' is false. Statement II is false.
+Answer: (3)","MO theory for O_{2} and its ions: bond order, bond length, magnetism.",Watch strict '>' signs in order statements: equal values make them false. Revise 'Chemical Bonding': the MO diagram of O_{2}.,
+54,4,arithmetic,Target: 2Al(s) + 3Cl_{2}(g) → Al_{2}Cl_{6}(s). Heat written on the product side means ΔH is negative.,"Combine (i) + 3×(ii) + 6×(iii) − (iv) so that HCl, H_{2} and Al_{2}Cl_{6}(aq) cancel.","1. ΔH values: (i) −1200, (ii) −164, (iii) −83, (iv) −663 kJ.
+2. (i) + 3(ii) + 6(iii) − (iv) gives 2Al + 3Cl_{2} → Al_{2}Cl_{6}(s).
+3. ΔH_{f} = −1200 − 492 − 498 + 663 = −1527 kJ/mol.
+Answer: (4)",Hess's law; reading heat written as a product.,"The usual slips are the sign of (iv) when reversing it, or forgetting the 6× for HCl. Revise 'Thermodynamics' (Chemistry): Hess's law.",
+55,4,arithmetic,Find the van't Hoff factor i from the freezing-point depression first.,"m = 0.5 mol/kg. ΔT_{f} = iK_{f}m gives i. For a weak acid i = 1 + α, and K_{a} = cα^{2}/(1 − α).","1. Moles = 19.5/78 = 0.25 in 0.5 kg, so m = 0.5.
+2. 1 = i × 1.86 × 0.5, so i = 1.075 and α = 0.075.
+3. K_{a} = 0.5 × (0.075)^{2}/0.925 ≈ 3 × 10^{−3}.
+Answer: (4)",Colligative properties linked to the degree of dissociation.,Revise 'Solutions' (van't Hoff factor) and 'Equilibrium' (K_{a} = cα^{2}/(1−α)). Keeping α to 2–3 significant figures avoids wrong-power answers.,
+56,4,arithmetic,Write K_{sp} in terms of solubility s for each salt.,Ag_{2}CrO_{4}: K_{sp} = (2s)^{2}s = 4s^{3}. AgBr: K_{sp} = s^{2}.,"1. Ag_{2}CrO_{4}: 4s^{3} = 32x, so s^{3} = 8x and s = 2x^{1/3}.
+2. AgBr: s^{2} = 4y, so s = 2√y.
+3. Ratio = 2x^{1/3}/(2√y) = ∛x/√y.
+Answer: (4)",Solubility product for salts of different types.,The trap is writing K_{sp} = 2s·s for Ag_{2}CrO_{4}: the 2 Ag^{+} gives (2s)^{2}. Revise 'Equilibrium': solubility product.,
+57,1,conceptual,Which couple has the higher reduction potential? That one is reduced at the cathode.,AgBr/Ag (+0.07 V) is the cathode; Fe/Fe(OH)_{2} (−0.88 V) is the anode. E°_{cell} = E°_{cathode} − E°_{anode}.,"1. Cathode: AgBr + e^{−} → Ag + Br^{−}. Anode: Fe + 2OH^{−} → Fe(OH)_{2} + 2e^{−}.
+2. Overall: Fe + 2OH^{−} + 2AgBr → Fe(OH)_{2} + 2Ag + 2Br^{−}. That's option 1.
+3. E°_{cell} = 0.07 − (−0.88) = +0.95 V (not −0.95). Fe is oxidised, not reduced. E°_{cell} is intensive.
+Answer: (1)",Writing a galvanic cell from two half-cells.,Revise 'Electrochemistry': the higher E° is reduced; E°_{cell} doesn't change when you multiply a half-reaction (intensive).,
+58,2,conceptual,Write the integrated rate laws. When does [A] reach zero in each case?,Zero order: [A] = [A]_{0} − kt. First order: [A] = [A]_{0}e^{−kt}.,"1. Zero order: [A] = 0 at t = [A]_{0}/k. Since t_{1/2} = [A]_{0}/(2k), t_{100%} = 2t_{1/2}.
+2. First order: e^{−kt} never becomes 0, so t_{100%} is infinite (the option writes this as (t_{1/2})^{∞}).
+Answer: (2)",Integrated rate laws for zero and first order reactions.,"Revise 'Chemical Kinetics': half-life for zero order depends on [A]_{0}, while first order never reaches completion.",
+59,4,conceptual,"Check each statement on its own. For Statement I, recall the trend of first IE across period 3.","IE increases across a period: Na < Mg < Cl < Ar. For Statement II, think about which element's third electron comes from a noble-gas core.","1. First IE (kJ/mol): Na 496, Mg 738, Cl 1251, Ar 1521. The order in Statement I is reversed, so it is false.
+2. Ca → Ca^{3+} removes an electron from the [Ar] core, so its third IE is very high (about 4912 kJ/mol), more than for Al, Fe or B. Statement II is true.
+Answer: (4)",Periodic trends in ionisation enthalpy.,"Revise 'Classification of Elements and Periodicity': IE rises across a period, and it jumps hugely once you break into a noble-gas core.",
+60,1,conceptual,A halogen higher in the group can oxidise the halide ions of the ones below it. How is that used to detect Br^{−} and I^{−}?,"Cl_{2} water oxidises Br^{−} to Br_{2} and I^{−} to I_{2}, which colour an organic layer (layer test).","1. Oxidising power: F_{2} > Cl_{2} > Br_{2} > I_{2}. True, and this is why the layer test works.
+2. Cl_{2} + 2Br^{−} → 2Cl^{−} + Br_{2} (orange layer); Cl_{2} + 2I^{−} → 2Cl^{−} + I_{2} (violet layer). This is a displacement redox reaction. True.
+Answer: (1)",Oxidising power of halogens and the layer test.,Revise 'p-Block Elements' (halogens) and the salt-analysis layer test.,
+61,1,conceptual,Orange dichromate turns green when it is reduced to Cr^{3+}. So which species are reducing agents?,"Look for species that can be oxidised further: Fe^{2+}, Sn^{2+}, I^{−}, S^{2−}, SO_{2}, NO_{2}^{−} can. Fe^{3+}, Sn^{4+} and SO_{4}^{2−} cannot.","1. Every species in the set must reduce Cr_{2}O_{7}^{2−}.
+2. Option 1: Fe^{2+} → Fe^{3+}, Sn^{2+} → Sn^{4+}, I^{−} → I_{2}, S^{2−} → S. All reduce it.
+3. Each other option contains a species already in its highest common state (Fe^{3+}, Sn^{4+} or SO_{4}^{2−}), which cannot reduce it.
+Answer: (1)",Reducing agents for acidified dichromate.,Revise 'd- and f-Block Elements': K_{2}Cr_{2}O_{7} reactions. Ask 'can this species lose electrons?' for each one.,
+62,4,conceptual,"Δ_{0} grows with ligand field strength. Recall the spectrochemical series for F^{−}, H_{2}O, en and CN^{−}.",F^{−} < H_{2}O < en < CN^{−}. Match the smallest Δ_{0} to F^{−} and the largest to CN^{−}.,"1. Order of Δ_{0}: [CrF_{6}]^{3−} < [Cr(H_{2}O)_{6}]^{3+} < [Cr(en)_{3}]^{3+} < [Cr(CN)_{6}]^{3−}.
+2. So 15,060 for F^{−}, 17,400 for H_{2}O, 22,300 for en and 26,600 for CN^{−}.
+3. A-IV, B-I, C-II, D-III.
+Answer: (4)",Spectrochemical series and crystal field splitting.,Revise 'Coordination Compounds': the spectrochemical series (I^{−} < Br^{−} < Cl^{−} < F^{−} < OH^{−} < H_{2}O < NH_{3} < en < CN^{−} < CO).,
+63,4,conceptual,What happens to glycerol near its boiling point? And what is special about an azeotrope?,"Glycerol decomposes before it boils, so it is purified by distillation under reduced pressure. An azeotrope boils at a constant composition.","1. Glycerol (1,2,3-trihydroxypropane) decomposes at its boiling point, so it is separated by distillation under reduced pressure, not simple distillation. Statement I is false.
+2. An azeotrope boils with the same composition in liquid and vapour, so fractional distillation cannot separate it. Statement II is true.
+Answer: (4)","Purification methods: reduced-pressure distillation, azeotropes.",Revise 'Purification and Characterisation of Organic Compounds' (NCERT Class 11): which compounds need distillation under reduced pressure.,NCERT-based. A teacher should confirm how Statement I is meant to be read.
+64,1,conceptual,S_{N}1 speed depends on how stable the carbocation is. Compare the benzyl and ethyl carbocations.,The benzyl cation is stabilised by resonance with the ring; the ethyl cation only by hyperconjugation.,"1. The benzyl cation's positive charge spreads over the ring by resonance, so it forms easily and S_{N}1 is fast. Statement I is true.
+2. The ethyl cation has only hyperconjugation, which is weaker than resonance. Statement II is true.
+Answer: (1)",Carbocation stability and S_{N}1 rates.,"Revise 'Haloalkanes and Haloarenes': S_{N}1 reactivity, and 'Basic Principles of Organic Chemistry': resonance vs hyperconjugation.",
+65,3,conceptual,"Recall the IUPAC seniority order of functional groups, from acids down to multiple bonds.",Acid > ester > acid halide > amide > nitrile > aldehyde > ketone > alcohol > amine > alkene/alkyne.,"1. Option 1 puts ketone before aldehyde: wrong.
+2. Option 2 puts amide before ester: wrong (ester is higher).
+3. Option 4 puts aldehyde before nitrile: wrong (nitrile is higher).
+4. Option 3: −CONH_{2} > −CHO > >C=O > −NH_{2} > −C≡C−. Correct.
+Answer: (3)",IUPAC priority of functional groups.,"A short way to remember: acid, ester, halide, amide, nitrile, aldehyde, ketone, alcohol, amine. Revise 'Basic Principles of Organic Chemistry': nomenclature.",
+66,4,conceptual,"Which ring is activated: the one attached to C=O, or the one attached to −NH−?","The N lone pair activates its own ring (ortho/para). C=O deactivates the other ring. Between ortho and para, think about the size of the −NHCOPh group.","1. The −NH− ring gets electron density from the nitrogen lone pair: activated, ortho/para directing.
+2. The C=O pulls electrons from the benzoyl ring: deactivated.
+3. −NHCOPh is bulky, so the para position (u) is preferred over ortho (s).
+Answer: (4)",Directing effects and sterics in electrophilic substitution.,Revise 'Amines' (acetanilide-type groups direct para) and 'Hydrocarbons': directing effects.,
+67,4,conceptual,"For each pair, find a test that works for one compound and not the other.","Carbylamine test: primary amines only. Tollens': aldehydes, not ketones. Neutral FeCl_{3}: phenols. Bromine water: C=C.","1. Diethylamine (2°) vs ethylamine (1°): carbylamine (CHCl_{3} + KOH) works only for 1°. II.
+2. Acetaldehyde vs acetone: Tollens' reagent gives a silver mirror only with the aldehyde. IV.
+3. Ethanol vs phenol: neutral FeCl_{3} gives violet with phenol. III.
+4. Benzoic acid vs cinnamic acid: bromine water is decolourised by cinnamic acid's C=C. I.
+Answer: (4), A-II, B-IV, C-III, D-I",Distinguishing tests for organic functional groups.,Revise the tests in 'Principles Related to Practical Chemistry'. A small table (test → which group gives it) is worth making.,
+68,1,conceptual,The diazonium ion attacks the para position. How well does NMe_{2} activate the ring in each molecule?,"Ortho methyl groups twist NMe_{2} out of the ring's plane, so its lone pair can't conjugate (steric inhibition of resonance).","1. P: NMe_{2} is flat with the ring and strongly activating, so it is most reactive.
+2. Q: one ortho Me partly twists NMe_{2}, so it is less activating.
+3. R: two ortho Me groups twist it strongly, so it is least activating.
+Order: P > Q > R.
+Answer: (1)",Azo coupling and steric inhibition of resonance.,"This is a step beyond NCERT: methyl groups normally activate, but here they block resonance. Revise 'Amines': coupling reactions, and the idea of steric inhibition of resonance.",
+69,3,conceptual,Recall the chemical names of the B vitamins and vitamin C.,"B_{1} thiamine, B_{2} riboflavin, B_{6} pyridoxine, C ascorbic acid.","1. B_{1} = thiamine (III), B_{2} = riboflavin (IV), B_{6} = pyridoxine (I), C = ascorbic acid (II).
+2. A-III, B-IV, C-I, D-II.
+Answer: (3)",Vitamins and their chemical names (NCERT Biomolecules).,"Pure recall, so make a 4-line flashcard. Revise 'Biomolecules': vitamins.",
+70,2,conceptual,Apple-green flame: which cation? Canary-yellow precipitate with ammonium molybdate: which anion?,Ba^{2+} gives an apple-green flame and yellow BaCrO_{4}. Ammonium molybdate with HNO_{3} gives canary yellow with PO_{4}^{3−}.,"1. Apple-green flame, and a yellow precipitate with K_{2}CrO_{4} in acetic acid (BaCrO_{4}): Ba^{2+}.
+2. Canary-yellow precipitate with ammonium molybdate + conc. HNO_{3}: phosphate, PO_{4}^{3−}.
+Answer: (2)",Salt analysis: flame tests and the anion test for phosphate.,The trap Ba^{2+} with SO_{4}^{2−} comes from knowing the cation but not the molybdate test. Revise salt analysis in 'Principles Related to Practical Chemistry'.,
+71,33,arithmetic,Find the moles of the complex and the moles of AgCl formed.,M(CrCl_{3}·6H_{2}O) = 266.5 g/mol and M(AgCl) = 143.5 g/mol. A 1:3 electrolyte releases all 3 Cl^{−}.,"1. Moles of complex = 5.33/266.5 = 0.02.
+2. Moles of AgCl = 8.61/143.5 = 0.06 (3 Cl^{−} per complex, as expected for [Cr(H_{2}O)_{6}]Cl_{3}).
+3. Ratio = 0.02/0.06 = 0.333 = 33 × 10^{−2}.
+Answer: 33",Moles of ionisable chloride in a coordination compound.,Revise 'Coordination Compounds': Werner's theory and ionisable chlorides. Keep the molar mass sum tidy: 52 + 106.5 + 108.,
+72,14,conceptual,Not decolourising KMnO_{4} means no C=C. So which C_{5}H_{10} isomers are possible?,"Only rings: cyclopentane, methylcyclobutane, ethylcyclopropane, 1,1-dimethylcyclopropane, 1,2-dimethylcyclopropane. For each, count the different kinds of H.","1. Cyclopentane: all H equivalent, 1 product.
+2. Methylcyclobutane: CH_{3}, C1, C2, C3, 4 products.
+3. Ethylcyclopropane: CH_{3}, CH_{2}, ring C1, ring C2, 4 products.
+4. 1,1-Dimethylcyclopropane: CH_{3}, ring CH_{2}, 2 products.
+5. 1,2-Dimethylcyclopropane: CH_{3}, C1, C3, 3 products (structural only).
+6. Total = 14.
+Answer: 14",Cycloalkane isomers and counting distinct monochloro products.,The usual slips are missing an isomer (ethylcyclopropane is often forgotten) or double-counting equivalent carbons. Revise 'Hydrocarbons' and isomerism in 'Basic Principles of Organic Chemistry'.,
+73,17,arithmetic,Write the combustion equation for a general alkane C_{n}H_{2n+2}.,C_{n}H_{2n+2} needs (3n + 1)/2 mol O_{2}. Set this equal to 8.,"1. (3n + 1)/2 = 8, so n = 5.
+2. The alkane is C_{5}H_{12}: 5 + 12 = 17.
+Answer: 17",Combustion stoichiometry of alkanes.,"Revise 'Hydrocarbons': the general combustion equation. Balancing C first, then H, then O always works.",
+74,41,arithmetic,Use the Arrhenius equation in its two-temperature form.,"log(k_{2}/k_{1}) = [E_{a}/(2.3R)] × (1/T_{1} − 1/T_{2}), with k_{2}/k_{1} = 3 and T_{1} = 300 K.","1. log 3 = 0.48 = [60000/(2.3 × 8.3)] × (1/300 − 1/T_{2}) = 3143 × (1/300 − 1/T_{2}).
+2. 1/T_{2} = 1/300 − 0.48/3143 ≈ 0.003181, so T_{2} ≈ 314.4 K.
+3. In °C: 314.4 − 273 ≈ 41.
+Answer: 41",Arrhenius equation for two temperatures.,"Common slips: forgetting to convert 27 °C to 300 K, or giving the answer in K. Revise 'Chemical Kinetics'.",
+75,727,arithmetic,At the transition temperature the two forms are in equilibrium. What is ΔG° then?,"ΔG° = 0, so 35 log T = 105. Solve for T in kelvin and convert to °C.","1. 105 − 35 log T = 0, so log T = 3 and T = 1000 K.
+2. In °C: 1000 − 273 = 727.
+Answer: 727",ΔG = 0 at a phase or transition equilibrium.,Revise 'Thermodynamics' (Chemistry): ΔG = 0 at equilibrium between two phases. Don't forget the K to °C step.,

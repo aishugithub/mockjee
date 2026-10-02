@@ -37,6 +37,14 @@ python tools/build_pyq_bank.py
 
 Check each shift's `review.csv` for flags. Serve the folder over http (below) so the images appear in the PDF report.
 
+### Hints and worked solutions in the review
+
+Worked solutions for NTA questions are written by Claude and checked against NTA's final key (they are never presented as NTA's). Each has two hints, short steps, a "what this question tests" line and a "if this felt hard" suggestion; the format is in `tools/SOLUTION_STYLE.md`, the files are `pyq/<year>/<shift>/solutions.csv`.
+
+In the answer review, a wrong or skipped question that has hints opens with the answer hidden. The student can have another go (practice only, the score never changes), open hint 1 and hint 2, ask for the solution, or skip it; skipping is fine and is recorded as a choice. Each step is saved with the attempt (`practice` table in `data/akil.db`): solved without a hint, after hint 1, after hint 2, looked at the solution, or skipped. Questions answered correctly keep their solution folded away.
+
+The `jee-analysis` skill (`.claude/skills/jee-analysis/`) turns those records into a diagnosis: `tools/analysis_data.py` collects the counts, Claude writes the report and concept flags, `tools/save_analysis.py` stores them.
+
 ### How the sample answers were checked
 
 `verify_answers.py` recomputes the 65 calculation-based answers independently (SymPy and plain arithmetic) and confirms each one matches the key stored in `questions.js`:

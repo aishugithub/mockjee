@@ -6,3 +6,6 @@ Thumbs.db
 # personal data and keys
 data/
 .secrets
+
+# local test launcher (scratch paths)
+.claude/launch.json

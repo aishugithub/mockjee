@@ -75,6 +75,26 @@ CREATE TABLE IF NOT EXISTS responses (
 CREATE INDEX IF NOT EXISTS idx_resp_q ON responses(question_id);
 CREATE INDEX IF NOT EXISTS idx_resp_chapter ON responses(subject, chapter);
 
+-- What Akil did in the answer review with each wrong or skipped question (hint ladder).
+-- outcome: solved_no_hint | solved_hint1 | solved_hint2 | saw_solution | skipped | open (started, no result yet)
+CREATE TABLE IF NOT EXISTS practice (
+  attempt_id      TEXT NOT NULL REFERENCES attempts(id) ON DELETE CASCADE,
+  q_index         INTEGER NOT NULL,
+  question_id     TEXT,
+  subject         TEXT,
+  chapter         TEXT,
+  in_test         TEXT,                    -- wrong | skipped (how it went in the timed test)
+  outcome         TEXT,
+  hints_used      INTEGER,                 -- 0, 1 or 2 hints opened before the outcome
+  tries           INTEGER,                 -- answers tried in the review
+  wrong_tries     INTEGER,
+  practice_ms     INTEGER,                 -- time from opening the question in review to the outcome
+  events          TEXT,                    -- JSON list of {t: try|hint1|hint2|solution|skip|reopen, v?, ok?, at (ms epoch)}
+  updated_at      TEXT,
+  PRIMARY KEY (attempt_id, q_index)
+);
+CREATE INDEX IF NOT EXISTS idx_prac_chapter ON practice(subject, chapter);
+
 -- Written by Claude during analysis (jee-analysis skill), shown read-only in the app.
 CREATE TABLE IF NOT EXISTS flags (
   id            INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -119,6 +139,15 @@ def db():
 def init_db():
     with db() as con:
         con.executescript(SCHEMA)
+        # attempts saved by an older server kept the hint-ladder log only in raw_json: rebuild those practice rows
+        todo = [r[0] for r in con.execute(
+            "SELECT raw_json FROM attempts a WHERE raw_json LIKE '%\"practice\"%' "
+            "AND NOT EXISTS (SELECT 1 FROM practice p WHERE p.attempt_id = a.id)")]
+    for raw in todo:
+        try:
+            save_attempt(json.loads(raw))
+        except (KeyError, TypeError, ValueError):
+            pass
 
 
 def export_key():
@@ -152,13 +181,32 @@ def is_correct(q, given):
         return False
 
 
+def practice_outcome(events):
+    """The result of the hint ladder, recomputed from the event log (the last result counts if he reopened it)."""
+    out, hints = 'open', 0
+    for e in events:
+        t = e.get('t')
+        if t == 'reopen':
+            out = 'open'
+        elif t in ('hint1', 'hint2'):
+            hints = max(hints, int(t[-1]))
+        elif t == 'try' and e.get('ok') and out == 'open':
+            out = ('solved_no_hint', 'solved_hint1', 'solved_hint2')[hints]
+        elif t == 'solution' and out == 'open':
+            out = 'saw_solution'
+        elif t == 'skip' and out == 'open':
+            out = 'skipped'
+    return out
+
+
 def save_attempt(ex):
     """Recompute marks on the server from the exam object so the database never depends on the browser's arithmetic."""
     cfg, qs, resp = ex['cfg'], ex['qs'], ex['resp']
     if len(qs) != len(resp):
         raise ValueError('qs and resp differ in length')
     reasons = ex.get('reasons') or {}
-    rows, score, mx, nc, nw, ns = [], 0.0, 0.0, 0, 0, 0
+    practice = ex.get('practice') or {}
+    rows, prows, score, mx, nc, nw, ns = [], [], 0.0, 0.0, 0, 0, 0
     for i, (q, r) in enumerate(zip(qs, resp)):
         given = r.get('v')
         att = given is not None and given != ''
@@ -181,11 +229,20 @@ def save_attempt(ex):
             int(att), int(ok), marks, int(r.get('t') or 0), int(r.get('visits') or (1 if visited else 0)),
             int(r.get('changes') or 0), int(marked), st, reasons.get(str(i))
         ))
+        p = practice.get(str(i))
+        if p and p.get('events'):
+            ev = p['events']
+            tries = [e for e in ev if e.get('t') == 'try']
+            prows.append((ex['id'], i, str(q.get('id', '')), q.get('subject'), q.get('chapter'),
+                          'skipped' if not att else 'wrong' if not ok else 'correct', practice_outcome(ev),
+                          max([int(e['t'][-1]) for e in ev if e.get('t') in ('hint1', 'hint2')] or [0]), len(tries), sum(1 for e in tries if not e.get('ok')),
+                          int(p.get('ms') or 0), json.dumps(ev), now_iso()))
     started, submitted = ex.get('startedAt'), ex.get('submittedAt')
     t = now_iso()
     with db() as con:
         existing = con.execute('SELECT saved_at FROM attempts WHERE id = ?', (ex['id'],)).fetchone()
         con.execute('DELETE FROM responses WHERE attempt_id = ?', (ex['id'],))
+        con.execute('DELETE FROM practice WHERE attempt_id = ?', (ex['id'],))
         con.execute('DELETE FROM attempts WHERE id = ?', (ex['id'],))
         con.execute('INSERT INTO attempts VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', (
             ex['id'], cfg.get('candidate') or 'Candidate', cfg.get('testName'), ms_iso(started), ms_iso(submitted),
@@ -195,6 +252,7 @@ def save_attempt(ex):
             score, mx, len(qs), nc, nw, ns, json.dumps(ex, ensure_ascii=False),
             existing['saved_at'] if existing else t, t))
         con.executemany('INSERT INTO responses VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', rows)
+        con.executemany('INSERT INTO practice VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)', prows)
     return {'id': ex['id'], 'score': score, 'max': mx}
 
 

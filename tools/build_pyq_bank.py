@@ -21,7 +21,7 @@ from chapters import CODES
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 KEEP = ['id', 'subject', 'chapter', 'subtopic', 'secondary_chapter', 'tag_confidence', 'year', 'type',
         'source', 'question', 'image', 'options', 'option_images', 'answer', 'accept', 'solution',
-        'solution_by', 'solution_check', 'solution_note']
+        'solution_by', 'solution_check', 'solution_note', 'hints', 'concept', 'revise']
 CHECKS = ('sympy', 'arithmetic', 'conceptual')
 
 
@@ -75,6 +75,12 @@ def load_solutions(folder, questions):
         s = {'solution': row['solution'].strip(), 'solution_by': 'claude', 'solution_check': row['check']}
         if row.get('note', '').strip():
             s['solution_note'] = row['note'].strip()
+        hints = [row.get(h, '').strip() for h in ('hint1', 'hint2') if row.get(h, '').strip()]
+        if hints:
+            s['hints'] = hints
+        for k in ('concept', 'revise'):
+            if row.get(k, '').strip():
+                s[k] = row[k].strip()
         sols[q['id']] = s
     if errors:
         raise SystemExit(f'{path}:' + ''.join('\n  ' + e for e in errors))

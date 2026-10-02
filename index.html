@@ -125,6 +125,9 @@ input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--blue); }
 .btn-primary:disabled { background: #9fb3cc; cursor: not-allowed; }
 .btn-line { background: #fff; border-color: var(--line); color: var(--ink); }
 .btn-line:hover { border-color: var(--blue); color: var(--blue); }
+.btn-ghost { background: transparent; color: var(--muted); }
+.btn-ghost:hover { color: var(--ink); text-decoration: underline; }
+.btn-sm { padding: 7px 12px; font-size: 13.5px; }
 .btn-block { width: 100%; margin-top: 14px; font-size: 16px; padding: 13px; }
 .resume { display: flex; gap: 14px; align-items: center; justify-content: space-between; flex-wrap: wrap; background: #fff8e1; border: 1px solid #f0d27a; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px; }
 .hist { list-style: none; margin: 0; padding: 0; font-size: 13.5px; }
@@ -353,6 +356,21 @@ code { font-family: var(--font-num); font-size: .92em; background: #f1f4f8; padd
 .rp-sol { font-size: 10.5px; color: #3d4a5c; margin-top: 5px; border-top: 1px dashed #d4dbe5; padding-top: 4px; }
 .sol-by { font-weight: normal; color: #6b7686; font-size: 0.9em; }
 .sol-note { margin-top: 4px; font-style: italic; color: #6b5a2e; }
+.sol-concept { margin-bottom: 6px; } .sol-body { margin-top: 3px; } .sol-revise { margin-top: 7px; color: #2f5d3a; }
+.sol-fold { margin-top: 8px; font-size: 13.5px; } .sol-fold summary { cursor: pointer; color: var(--muted); }
+.rev-item.prac { border-color: #b9c9e4; }
+.prac-intro { font-size: 13.5px; color: #34404f; background: #f2f6fc; border-radius: 5px; padding: 6px 10px; margin: 8px 0; }
+.prac-opt { width: 100%; text-align: left; font: inherit; cursor: pointer; }
+.prac-opt:hover:not([disabled]) { border-color: #7b9ad0; background: #f5f8fe; }
+.prac-opt.tried { opacity: .6; cursor: default; }
+.prac-numrow { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin: 8px 0; }
+.prac-num { font: inherit; padding: 6px 8px; border: 1px solid var(--line); border-radius: 5px; width: 160px; }
+.prac-fb { font-size: 13.5px; color: #8a4b0c; margin-top: 6px; }
+.prac-hint { font-size: 13.5px; background: #fff8e6; border-left: 3px solid #e2b33b; border-radius: 4px; padding: 6px 10px; margin-top: 8px; }
+.prac-acts { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+.prac-skip { font-size: 13.5px; color: var(--muted); display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 6px; }
+.prac-done { font-size: 13.5px; border-radius: 5px; padding: 6px 10px; margin: 8px 0; }
+.prac-done.ok { background: #e6f4e4; color: #23602d; } .prac-done.info { background: #eef2f8; color: #34404f; }
 .rp-legend { font-size: 10px; color: #5a6677; }
 .why{margin-top:10px;padding-top:8px;border-top:1px dashed var(--line,#e3e7ee)}
 .why>span{display:block;font-size:13.5px;color:var(--muted);margin-bottom:6px}
@@ -642,10 +660,12 @@ const optHtml = (q, k, o) => q.option_images && q.option_images[k] ? imgTag(q.op
 /* worked solution; Claude's solutions to NTA PYQs are always labelled as Claude's, never as NTA's */
 const SOL_CHECK = { sympy: 'answer recomputed with SymPy', arithmetic: 'answer recomputed by script', conceptual: 'theory question, awaiting a teacher’s review' };
 const solHtml = (q, cls) => !q.solution ? '' : q.solution_by === 'claude'
-  ? `<div class="${cls}"><b>Solution</b> <span class="sol-by">(written by Claude, checked against NTA's final key; ${SOL_CHECK[q.solution_check] || 'not independently checked'})</span>: ${rich(q.solution)}${q.solution_note ? `<div class="sol-note">Note: ${esc(q.solution_note)}</div>` : ''}</div>`
+  ? `<div class="${cls}">${q.concept ? `<div class="sol-concept"><b>What this question tests:</b> ${rich(q.concept)}</div>` : ''}<b>Solution</b> <span class="sol-by">(written by Claude, checked against NTA's final key; ${SOL_CHECK[q.solution_check] || 'not independently checked'})</span>:<div class="sol-body">${rich(q.solution)}</div>${q.revise ? `<div class="sol-revise"><b>If this felt hard:</b> ${rich(q.revise)}</div>` : ''}${q.solution_note ? `<div class="sol-note">Note: ${esc(q.solution_note)}</div>` : ''}</div>`
   : `<div class="${cls}"><b>Solution:</b> ${rich(q.solution)}</div>`;
 /* NTA's final key sometimes accepts more than one answer (q.accept) */
 const isKey = (q, k) => Array.isArray(q.accept) ? q.accept.includes(k) : k === q.answer;
+const numOk = (q, v) => Array.isArray(q.accept) ? q.accept.some(a => Math.abs(v - a) < 1e-9)
+  : Array.isArray(q.answer) ? v >= Math.min(...q.answer) - 1e-9 && v <= Math.max(...q.answer) + 1e-9 : Math.abs(v - q.answer) < 1e-9;
 const fmtMarks = n => (Math.round(n * 100) / 100).toString();
 const posT = n => n ? '+' + fmtMarks(n) : '0';
 const negT = n => n ? '−' + fmtMarks(n) : '0';
@@ -1161,12 +1181,92 @@ function renderReview() {
     let body;
     if (q.type === 'MCQ') body = `<div class="rev-opts">${q.options.map((o, k) => { const isC = isKey(q, k), isY = x.att && +x.given === k; return `<div class="rev-opt${isC ? ' correct' : isY ? ' wrong' : ''}"><b>(${k + 1})</b><span>${optHtml(q, k, o)}</span>${isC && isY ? '<em class="pos">Your answer · correct</em>' : isC ? '<em class="pos">Correct answer</em>' : isY ? '<em class="negc">Your answer</em>' : ''}</div>`; }).join('')}</div>`;
     else body = `<div class="rev-opts"><div class="rev-opt${x.att ? (x.ok ? ' correct' : ' wrong') : ''}">Your answer: <b class="num">${esc(answerText(q, x.given))}</b></div><div class="rev-opt correct">Correct answer: <b class="num">${esc(correctText(q))}</b></div></div>`;
-    return `<div class="rev-item"><div class="rev-top"><span><b style="color:var(--ink)">Q${x.i + 1}</b> · ${esc(q.subject)} · ${esc(q.chapter)} · ${esc(srcLabel(q))} · ${q.type === 'MCQ' ? 'MCQ' : 'Numerical'} · ${Math.round(x.time / 1000)} s spent</span>${pill}</div><div class="rev-q">${rich(q.question)}${qImg(q)}</div>${body}${solHtml(q, 'rev-sol')}${x.att && !x.ok ? whyHtml(shown, x) : ''}</div>`;
+    if (inPractice(x)) return practiceHtml(x, pill);
+    const done = pracDoneHtml(x);
+    return `<div class="rev-item" data-rq="${x.i}"><div class="rev-top"><span><b style="color:var(--ink)">Q${x.i + 1}</b> · ${esc(q.subject)} · ${esc(q.chapter)} · ${esc(srcLabel(q))} · ${q.type === 'MCQ' ? 'MCQ' : 'Numerical'} · ${Math.round(x.time / 1000)} s spent</span>${pill}</div><div class="rev-q">${rich(q.question)}${qImg(q)}</div>${done}${body}${x.ok && q.solution ? `<details class="sol-fold"><summary>Show the solution</summary>${solHtml(q, 'rev-sol')}</details>` : solHtml(q, 'rev-sol')}${x.att && !x.ok ? whyHtml(shown, x) : ''}</div>`;
   }).join('') || '<p style="color:var(--muted)">No questions in this group.</p>';
 }
 $('#btnReview').addEventListener('click', () => { const c = $('#reviewCard'); c.hidden = !c.hidden; if (!c.hidden) { renderReview(); c.scrollIntoView({ behavior: 'smooth', block: 'start' }); } });
 $('#revFilter').addEventListener('click', e => { const b = e.target.closest('[data-rf]'); if (!b) return; revFilter = b.dataset.rf; renderReview(); });
 $('#btnNew').addEventListener('click', () => { exam = null; show('scr-setup'); renderSetup(); });
+
+/* ---------- hint ladder in the answer review ----------
+   A wrong or skipped question that has hints opens with the answer hidden. Akil can try again
+   (practice only, the test score never changes), open hint 1 and hint 2, ask for the solution,
+   or skip it. Every step is logged in exam.practice[i].events and saved with the attempt;
+   the server recomputes the outcome from the log (practice table) for the analysis. */
+const pracOf = i => { shown.practice = shown.practice || {}; return (shown.practice[i] = shown.practice[i] || { events: [] }); };
+function pracOutcome(ev) {
+  let out = 'open', h = 0;
+  for (const e of ev) {
+    if (e.t === 'reopen') out = 'open';
+    else if (e.t === 'hint1' || e.t === 'hint2') h = Math.max(h, +e.t.slice(-1));
+    else if (out !== 'open') continue;
+    else if (e.t === 'try' && e.ok) out = ['solved_no_hint', 'solved_hint1', 'solved_hint2'][h];
+    else if (e.t === 'solution') out = 'saw_solution';
+    else if (e.t === 'skip') out = 'skipped';
+  }
+  return out;
+}
+const sinceReopen = ev => ev.slice(ev.map(e => e.t).lastIndexOf('reopen') + 1);
+const hintsOpen = ev => sinceReopen(ev).reduce((h, e) => e.t === 'hint1' || e.t === 'hint2' ? Math.max(h, +e.t.slice(-1)) : h, 0);
+const canPractise = x => (!x.att || !x.ok) && Array.isArray(x.q.hints) && x.q.hints.length > 0;
+const inPractice = x => canPractise(x) && ['open', 'skipped'].includes(pracOutcome(pracOf(x.i).events));
+const OUTCOME_TEXT = {
+  solved_no_hint: ['ok', 'You solved it on your own this time. Well done!'],
+  solved_hint1: ['ok', 'You solved it after the first hint. Good work: the idea was there.'],
+  solved_hint2: ['ok', 'You solved it after two hints. Nice, you got there.'],
+  saw_solution: ['info', 'You looked at the solution. Go through it slowly, then try a similar question soon.'],
+};
+function pracDoneHtml(x) {
+  if (!canPractise(x)) return '';
+  const o = OUTCOME_TEXT[pracOutcome(pracOf(x.i).events)];
+  return o ? `<div class="prac-done ${o[0]}">${o[1]}</div>` : '';
+}
+function practiceHtml(x, pill) {
+  const q = x.q, p = pracOf(x.i), h = hintsOpen(p.events), tried = sinceReopen(p.events).filter(e => e.t === 'try');
+  if (!p.open) p.open = Date.now();
+  const top = `<div class="rev-top"><span><b style="color:var(--ink)">Q${x.i + 1}</b> · ${esc(q.subject)} · ${esc(q.chapter)} · ${esc(srcLabel(q))} · ${q.type === 'MCQ' ? 'MCQ' : 'Numerical'}</span>${pill}</div>`;
+  if (pracOutcome(p.events) === 'skipped')
+    return `<div class="rev-item prac" data-pq="${x.i}" data-rq="${x.i}">${top}<div class="prac-skip">You skipped this one for now. That's completely fine: nobody needs every question. <button type="button" class="btn btn-line btn-sm" data-pa="reopen">Have another go</button></div></div>`;
+  const intro = x.att ? `In the test you chose <b>${esc(answerText(q, x.given))}</b>, which wasn't right.` : 'You left this one in the test.';
+  const ans = q.type === 'MCQ'
+    ? `<div class="rev-opts">${q.options.map((o, k) => { const t = tried.some(e => +e.v === k); return `<button type="button" class="rev-opt prac-opt${t ? ' tried' : ''}" data-pa="try" data-v="${k}"${t ? ' disabled' : ''}><b>(${k + 1})</b><span>${optHtml(q, k, o)}</span>${t ? '<em class="negc">Not this one</em>' : ''}</button>`; }).join('')}</div>`
+    : `<div class="prac-numrow"><input class="prac-num" inputmode="decimal" placeholder="Your answer" aria-label="Your answer"><button type="button" class="btn btn-line btn-sm" data-pa="trynum">Check</button>${tried.length ? `<span class="negc">Tried: ${tried.map(e => esc(String(e.v))).join(', ')}</span>` : ''}</div>`;
+  const fb = tried.length ? `<div class="prac-fb">Not quite. Have another go${h < q.hints.length ? ', or take a hint' : ''}.</div>` : '';
+  const hints = q.hints.slice(0, h).map((t, k) => `<div class="prac-hint"><b>Hint ${k + 1}:</b> ${rich(t)}</div>`).join('');
+  const more = h < q.hints.length ? `<button type="button" class="btn btn-line btn-sm" data-pa="hint">${h ? 'Another hint' : 'Need a hint?'}</button>` : '';
+  return `<div class="rev-item prac" data-pq="${x.i}" data-rq="${x.i}">${top}<div class="rev-q">${rich(q.question)}${qImg(q)}</div>
+    <div class="prac-intro">${intro} The answer is hidden so you can have another go. This is practice only: your test score doesn't change.</div>
+    ${ans}${fb}${hints}<div class="prac-acts">${more}<button type="button" class="btn btn-line btn-sm" data-pa="solution">Show me the solution</button><button type="button" class="btn btn-ghost btn-sm" data-pa="skip">Skip this one for now</button></div></div>`;
+}
+let pracTimer = null;
+function pracEvent(i, e) {
+  const p = pracOf(i); e.at = Date.now(); p.events.push(e);
+  if (e.t === 'reopen') p.open = e.at;
+  else if (pracOutcome(p.events) !== 'open' && !/^hint/.test(e.t)) p.ms = e.at - (p.open || e.at);
+  updateHist(shown);
+  clearTimeout(pracTimer); pracTimer = setTimeout(() => syncAttempt(shown), 1500);
+}
+$('#reviewList').addEventListener('click', e => {
+  const b = e.target.closest('[data-pa]'); if (!b) return;
+  const card = b.closest('[data-pq]'), i = +card.dataset.pq, q = shownRes.rows.find(r => r.i === i).q, a = b.dataset.pa;
+  if (a === 'try') pracEvent(i, { t: 'try', v: +b.dataset.v, ok: isKey(q, +b.dataset.v) });
+  else if (a === 'trynum') {
+    const inp = $('.prac-num', card), v = inp.value.trim();
+    if (v === '' || !Number.isFinite(+v)) { inp.focus(); return; }
+    pracEvent(i, { t: 'try', v: +v, ok: numOk(q, +v) });
+  }
+  else if (a === 'hint') pracEvent(i, { t: 'hint' + (hintsOpen(pracOf(i).events) + 1) });
+  else pracEvent(i, { t: a });   // solution | skip | reopen
+  const y = card.getBoundingClientRect().top;
+  renderReview();
+  const again = $(`[data-rq="${i}"]`);
+  if (again) window.scrollBy(0, again.getBoundingClientRect().top - y);
+});
+$('#reviewList').addEventListener('keydown', e => {
+  if (e.key === 'Enter' && e.target.classList.contains('prac-num')) e.target.closest('[data-pq]').querySelector('[data-pa="trynum"]').click();
+});
 
 /* ---------- saving attempts to the server (server.py) ----------
    Each finished exam is posted to /api/attempts. If the server is not reachable

@@ -10,7 +10,7 @@ no check here; their solutions need a subject teacher's review.
 
 Usage:  python tools/verify_pyq_solutions.py
 """
-import csv, json, math, os, sys
+import csv, json, math, os, re, sys
 from fractions import Fraction
 from itertools import product
 
@@ -296,6 +296,12 @@ def check_solutions_csv(year, shift, qs):
         if q.get('exclude') or q.get('answer') is None:
             continue
         mine, key = r['claude_answer'].strip(), key_of(q)
+        m = re.search(r'Answer: \(?(-?[\d.]+)', r['solution'])
+        if not m or float(m.group(1)) != float(mine):
+            bad += 1; print(f"{year} {shift} Q{r['q']}: the solution's Answer line ({m and m.group(1)}) differs from claude_answer {mine}")
+        for col in ('hint1', 'hint2', 'concept', 'revise'):
+            if col in r and not r[col].strip():
+                bad += 1; print(f"{year} {shift} Q{r['q']}: {col} is empty")
         accept = [a + 1 for a in q.get('accept', [])] if q['type'] == 'MCQ' else q.get('accept', [])
         ok = (float(mine) == float(key)) or any(float(mine) == float(a) for a in accept)
         if not ok:
