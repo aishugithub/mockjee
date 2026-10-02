@@ -280,6 +280,21 @@ def s26_02a1():
 SHIFTS = {('2026', '02Apr_Shift1'): s26_02a1}
 
 
+def load_check_modules():
+    """Later shifts keep their checks in tools/pyq_checks/y<year>_<shift>.py, each with checks() -> {q: fn}."""
+    import glob, importlib.util
+    sys.path.insert(0, os.path.join(ROOT, 'tools'))
+    for path in sorted(glob.glob(os.path.join(ROOT, 'tools', 'pyq_checks', 'y*.py'))):
+        name = os.path.basename(path)[1:-3]           # 2026_02Apr_Shift2
+        year, shift = name.split('_', 1)
+        spec = importlib.util.spec_from_file_location('pyq_checks.' + name, path)
+        m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
+        SHIFTS[(year, shift)] = m.checks
+
+
+load_check_modules()
+
+
 def key_of(q):
     return q['answer'] + 1 if q['type'] == 'MCQ' else q['answer']
 

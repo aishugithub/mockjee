@@ -1,0 +1,288 @@
+q,claude_answer,check,hint1,hint2,solution,concept,revise,note
+1,4,sympy,"Use sum and product of roots for both equations. Notice the second pair (α/2, 2β) has the same product αβ as the first.","α + β = 3 and α/2 + 2β = −3. Solve for α and β, then r = αβ. For x^{2} + 6x − m = 0 the product of roots is −m.","1. From the two sums: α + β = 3 and α/2 + 2β = −3. Solving: β = −3, α = 6, so r = αβ = −18.
+2. Roots of the third equation: 2α + β + 2r = 12 − 3 − 36 = −27 and α − 2β − r/2 = 6 + 6 + 9 = 21.
+3. Check: the sum is −6 ✓. Product = −27 × 21 = −567 = −m.
+4. m = 567.
+Answer: (4)",Relations between roots and coefficients of quadratics.,"A common slip is the sign at the end: the product of roots of x^{2} + 6x − m = 0 is −m, not m. Revise 'Quadratic Equations'.",
+2,3,sympy,"C_{2} has centre 3 + 4i and radius 5. How far is its centre from the origin, the centre of C_{1}?","|3 + 4i| = 5. Since C_{2} lies inside C_{1}, the minimum distance between the circles is r − (5 + 5), and the maximum is r + (5 + 5).","1. Centre of C_{2} is 5 away from O and its radius is 5, so its farthest point from O is 10 away.
+2. Minimum |z_{1} − z_{2}| = r − 10 = 2, so r = 12.
+3. Maximum |z_{1} − z_{2}| = r + 10 = 22.
+Answer: (3)",Distances between points on two circles in the complex plane.,Draw the two circles on a line through both centres: the nearest and farthest points lie on that line. Revise 'Complex Numbers' (geometry of |z − z_{0}| = r).,
+3,2,sympy,Infinitely many solutions needs the coefficient determinant to be zero AND the equations to be consistent.,"det of [[1,5,6],[2,3,4],[1,6,a]] = 50 − 7a, so a = 50/7. Then pick b so that the third equation is a combination of the first two.","1. det = 1(3a − 24) − 5(2a − 4) + 6(12 − 3) = 50 − 7a = 0, so a = 50/7.
+2. For infinitely many solutions the determinant formed by replacing a column with the constants must also be 0. This gives b = 29/7.
+3. a − b = 21/7 = 3, so (a, b) lies on x − y = 3.
+Answer: (2)",Conditions for infinitely many solutions of a linear system.,Remember both conditions: Δ = 0 and Δ_{x} = Δ_{y} = Δ_{z} = 0. Revise 'Matrices and Determinants'.,
+4,4,sympy,"Let the AP have difference d and the GP have ratio r, both starting from 1.","a_{2} + g_{2} = 1 + d + r = 1 and a_{3} + g_{3} = 1 + 2d + r^{2} = 4. The GP is increasing, so choose r > 1.","1. From the first: d = −r. Then 1 − 2r + r^{2} = 4, so r^{2} − 2r − 3 = 0 and r = 3 (increasing GP), d = −3.
+2. a_{10} = 1 + 9(−3) = −26 and g_{5} = 3^{4} = 81.
+3. a_{10} + g_{5} = 55.
+Answer: (4)",General terms of an AP and a GP.,The word 'increasing' is what rules out r = −1. Underline such words. Revise 'Sequences and Series'.,
+5,2,sympy,"Simplify the n-th term first. What is 1^{3} + … + n^{3}, and what is 1 + 3 + … + (2n−1)?","Numerator = (n(n+1)/2)^{2}, denominator = n^{2}. So the n-th term is (n+1)^{2}/4.","1. n-th term = [n(n+1)/2]^{2}/n^{2} = (n+1)^{2}/4.
+2. Sum for n = 1 to 8 = (2^{2} + 3^{2} + … + 9^{2})/4 = (285 − 1)/4 = 71.
+Answer: (2)",Sum of cubes and of odd numbers; summing a simplified general term.,Revise the standard sums Σk^{3} = (n(n+1)/2)^{2} and 1 + 3 + … + (2n−1) = n^{2} ('Sequences and Series').,
+6,3,sympy,Use ^{n}C_{r} = ^{n}C_{n−r} to rewrite every term as ^{30}C of something close to r.,"The sum becomes ^{30}C_{r} + 3·^{30}C_{r−1} + 3·^{30}C_{r−2} + ^{30}C_{r−3}. The coefficients 1, 3, 3, 1 should remind you of something.","1. ^{30}C_{30−r} = ^{30}C_{r}, ^{30}C_{31−r} = ^{30}C_{r−1}, and so on.
+2. Sum = ^{30}C_{r} + 3·^{30}C_{r−1} + 3·^{30}C_{r−2} + ^{30}C_{r−3}.
+3. Applying Pascal's rule three times, this equals ^{33}C_{r} (like (1+x)^{3}(1+x)^{30}).
+4. m = 33.
+Answer: (3)",Pascal's rule / Vandermonde-type sums of binomial coefficients.,"Coefficients 1, 3, 3, 1 mean 'multiply by (1+x)^{3}'. Revise 'Binomial Theorem' and Pascal's rule.",
+7,3,sympy,The number of triangles from n vertices is ^{n}C_{3}. What is ^{n+1}C_{3} − ^{n}C_{3}?,^{n+1}C_{3} − ^{n}C_{3} = ^{n}C_{2} = n(n−1)/2.,"1. p_{n+1} − p_{n} = ^{n}C_{2} = 66, so n(n − 1) = 132 and n = 12.
+2. 12 = 2^{2} × 3, so the distinct primes are 2 and 3.
+3. Sum = 5.
+Answer: (3)",Counting triangles from polygon vertices; Pascal's rule.,Revise 'Permutations and Combinations': ^{n+1}C_{r} − ^{n}C_{r} = ^{n}C_{r−1}.,
+8,3,sympy,"Think in steps of 5 points. To land exactly on 30, the last throw comes from 25 (a tail) or from 20 (a head).","Let p_{k} = probability of ever reaching 5k points. Then p_{k} = ½p_{k−1} + ½p_{k−2}, with p_{0} = 1 and p_{1} = ½.","1. p_{0} = 1, p_{1} = 1/2.
+2. p_{2} = 3/4, p_{3} = 5/8, p_{4} = 11/16, p_{5} = 21/32, p_{6} = 43/64.
+3. 30 points means k = 6: probability 43/64, so m + n = 107.
+Answer: (3)",Probability with a recursion (reaching an exact total).,"If the recursion idea was new, try small cases (exactly 10 points, exactly 15) to see the pattern. Revise 'Probability'.",
+9,4,sympy,Write the last observation and its square using the totals: Σx = 8n and Σx^{2} = n(variance + mean^{2}).,"Last observation = 8n − 48. Σx^{2} = n(16 + 64) = 80n, so (last)^{2} = 80n − 496.","1. (8n − 48)^{2} = 80n − 496.
+2. 64n^{2} − 848n + 2800 = 0, i.e. 4n^{2} − 53n + 175 = 0.
+3. n = 7 or n = 25/4. n must be a whole number, so n = 7.
+Answer: (4)",Mean and variance relations (Σx^{2} = n(σ^{2} + x̄^{2})).,Revise 'Statistics': σ^{2} = Σx^{2}/n − x̄^{2}. Rearranging it is the key step.,
+10,3,sympy,Perpendicular lines: the product of their slopes is −1. Use it to find k first.,"Slopes −1/(k−1) and −2/k^{2}: product = −1 gives k^{3} − k^{2} + 2 = 0, so k = −1. Then find the centre, the radius (the circle passes through O), and the chord on x − y + 2 = 0.","1. k = −1 gives the lines x − 2y + 3 = 0 and 2x + y − 4 = 0, which meet at (1, 2) (the centre).
+2. The circle passes through O, so r^{2} = 1 + 4 = 5.
+3. Distance from (1, 2) to x − y + 2 = 0 is 1/√2.
+4. (AB/2)^{2} = 5 − 1/2 = 9/2, so AB^{2} = 18.
+Answer: (3)",Perpendicular lines and chord length of a circle.,Revise 'Straight Lines' (slopes) and 'Conic Sections' (chord = 2√(r^{2} − d^{2})).,
+11,3,sympy,"Write P = (x_{1}, 12/x_{1}) and Q = (x_{2}, 12/x_{2}) and use the midpoint.","x_{1} + x_{2} = 1 and 12(1/x_{1} + 1/x_{2}) = −1, so x_{1}x_{2} = −12. Area of OPQ = ½|x_{1}y_{2} − x_{2}y_{1}|.","1. x_{1} + x_{2} = 1 and x_{1}x_{2} = −12.
+2. Area = ½|12x_{1}/x_{2} − 12x_{2}/x_{1}| = 6|x_{1}^{2} − x_{2}^{2}|/|x_{1}x_{2}| = ½|x_{1} − x_{2}|·|x_{1} + x_{2}|.
+3. (x_{1} − x_{2})^{2} = 1 + 48 = 49, so area = ½ × 7 × 1 = 7/2.
+Answer: (3)",Points on a rectangular hyperbola; area of a triangle with a vertex at the origin.,Revise 'Conic Sections' (parametric points on xy = c^{2}) and the area formula ½|x_{1}y_{2} − x_{2}y_{1}|.,
+12,2,sympy,"The point (1, −1) gives one equation between p and q. Then write the vertex's y-coordinate in terms of p alone.",q = −2 − p. Vertex y = q − p^{2}/4 = −[(p/2 + 1)^{2} + 1]. Its distance from the x-axis is smallest when p/2 + 1 = 0.,"1. 1 + p + q = −1, so q = −2 − p.
+2. Vertex y = −(p^{2}/4 + p + 2) = −[(p/2 + 1)^{2} + 1], so |y| is smallest (= 1) at p = −2.
+3. Then q = 0, so p^{2} + q^{2} = 4.
+Answer: (2)",Vertex of a parabola and minimising by completing the square.,"Revise 'Quadratic Equations': the vertex is at (−b/2a, −D/4a). Completing the square is the quick route.",
+13,1,sympy,"Factor cos^{8}θ − sin^{8}θ as a difference of squares, twice.",cos^{8} − sin^{8} = cos 2θ (1 − ½ sin^{2} 2θ). So the left side is 2 − sin^{2} 2θ. What values can it take when tan^{2}θ ≠ 1?,"1. cos^{8}θ − sin^{8}θ = (cos^{2} − sin^{2})(cos^{2} + sin^{2})(cos^{4} + sin^{4}) = cos 2θ(1 − ½ sin^{2} 2θ).
+2. Multiply by 2 sec 2θ: 2 − sin^{2} 2θ.
+3. tan^{2}θ ≠ 1 means cos 2θ ≠ 0, so sin^{2} 2θ ≠ 1. The value lies in (1, 2].
+4. a^{2} must lie in (1, 2]: no integer works. n(S) = 0.
+Answer: (1)","Trig identities and range, with an excluded case.","The trap is allowing a = ±1. That would need sin^{2} 2θ = 1, which the condition tan^{2}θ ≠ 1 rules out. Revise 'Trigonometric Functions'.",
+14,2,sympy,"Write c = λa + μb in components, then turn the two dot-product conditions into two equations in λ and μ.","c = (μ − λ, λ + 3μ, 3λ + μ). c·(1,1,1) = 3λ + 5μ = −2 and c·(3,−6,2) = −3λ − 13μ = 10.","1. Adding the two equations: −8μ = 8, so μ = −1, and then λ = 1.
+2. c = (−2, −2, 2).
+3. |c|^{2} = 4 + 4 + 4 = 12.
+Answer: (2)",Linear combinations of vectors and dot products.,Revise 'Vector Algebra'. Writing c in components first keeps it simple.,
+15,1,sympy,"If M is the midpoint of PA, then A = 2M − P. A must also lie on the line, and PA must be perpendicular to it.","A = (−a, 3/2 − b, −1/2). Set A = (1 + 2t, 2 + t, α + 3t) and use (A − P)·(2, 1, 3) = 0.","1. A = 2M − P = (−a, 3/2 − b, −1/2).
+2. Perpendicular: (−2a)(2) + (3/2 − 2b)(1) + (−1/2)(3) = 0, so b = −2a.
+3. On the line: −a = 1 + 2t and 3/2 − b = 2 + t, which give b = a/2. Together with b = −2a: a = b = 0, t = −1/2.
+4. z: −1/2 = α + 3t, so α = 1.
+5. a^{2} + b^{2} + α^{2} = 1.
+Answer: (1)",Foot of the perpendicular from a point to a line in 3D.,Revise 'Three Dimensional Geometry'. The midpoint trick A = 2M − P saves a lot of algebra.,
+16,2,sympy,Find the angle between PQ and PS using the dot product.,"cos θ = PQ·PS/(|PQ||PS|) = −1/2, so θ = 120°. Turning PS until it is perpendicular to PQ means α = 30°.","1. PQ·PS = 0 − 1 + 0 = −1, |PQ| = |PS| = √2, so cos θ = −1/2 and θ = 120°.
+2. It must become 90°, so α = 30°.
+3. sin^{2}75° − sin^{2}15° = sin(75° + 15°)·sin(75° − 15°) = sin 90° sin 60° = √3/2.
+Answer: (2)",Angle between vectors; the identity sin^{2}A − sin^{2}B = sin(A+B)sin(A−B).,Revise 'Vector Algebra' (dot product) and the sin^{2}A − sin^{2}B identity ('Trigonometric Functions').,
+17,3,sympy,Rewrite sin^{4}x + cos^{4}x using (sin^{2} + cos^{2})^{2}.,sin^{4}x + cos^{4}x = 1 − ½ sin^{2}2x = 3/4 + (1/4)cos 4x. The cosine part integrates to 0 over whole periods.,"1. sin^{4} + cos^{4} = 1 − 2sin^{2}cos^{2} = 1 − ½sin^{2}2x = 3/4 + ¼cos 4x.
+2. ∫ from 0 to 20π of ¼cos 4x dx = 0 (whole periods).
+3. ∫ from 0 to 20π of 3/4 dx = 15π.
+Answer: (3)",Definite integrals using power reduction and periodicity.,Revise 'Definite Integrals' (periodic functions) and the power-reduction identities.,
+18,4,sympy,"If f(x)/x^{3} → −5 as x → 0, what does f look like near 0? It has degree 5.",f(x) = −5x^{3} + ax^{4} + bx^{5}. Use f′(1) = 0 and f′(−1) = 0.,"1. f′(x) = −15x^{2} + 4ax^{3} + 5bx^{4}.
+2. f′(1) = −15 + 4a + 5b = 0 and f′(−1) = −15 − 4a + 5b = 0, so a = 0 and b = 3.
+3. f(x) = 3x^{5} − 5x^{3}: f(2) = 96 − 40 = 56 and f(−2) = −56.
+4. f(2) − f(−2) = 112.
+Answer: (4)",Building a polynomial from a limit condition and extrema.,The key idea: the limit tells you the lowest-degree term. Revise 'Limits' and 'Application of Derivatives' (extrema).,
+19,3,sympy,Factor the denominator and use partial fractions.,x^{2} + 2x − 15 = (x + 5)(x − 3). (16x + 24)/((x+5)(x−3)) = 7/(x+5) + 9/(x−3).,"1. f(x) = 7 ln|x + 5| + 9 ln|x − 3| + C.
+2. f(4) = 7 ln 9 + 0 + C = 14 ln 3, so C = 0.
+3. f(7) = 7 ln 12 + 9 ln 4 = 7(2 ln 2 + ln 3) + 18 ln 2 = 32 ln 2 + 7 ln 3.
+4. α = 32, β = 7, so α + β = 39.
+Answer: (3)",Integration by partial fractions; log laws.,Revise 'Integrals' (partial fractions) and log rules: ln 12 = 2 ln 2 + ln 3.,
+20,2,sympy,Here x is a function of y. Rearrange to get dx/dy. Is it homogeneous?,dx/dy = (2xy − x^{2})/(2y^{2}). Put x = vy: v + y dv/dy = v − v^{2}/2.,"1. y dv/dy = −v^{2}/2, so dv/v^{2} = −dy/(2y).
+2. Integrating: 1/v = ½ ln y + C. At y = e, x = e means v = 1: 1 = ½ + C, so C = ½.
+3. At y = e^{2}: 1/v = 1 + ½ = 3/2, so v = 2/3 and x = (2/3)e^{2}.
+Answer: (2)",Homogeneous differential equations (with x as the dependent variable).,"When the equation is in dx/dy, treat y as the independent variable. Revise 'Differential Equations': homogeneous equations.",
+21,120,sympy,"The two conditions are independent: x divides z, and y ≤ w. Count each separately and multiply.","Count pairs (x, z) from A with x | z, and pairs (y, w) with y ≤ w.","1. x | z: x = 2 → z = 2, 4, 6 (3); x = 3 → 3, 6 (2); x = 4, 5, 6 → 1 each. Total 8.
+2. y ≤ w: 5 equal pairs + C(5, 2) = 10 unequal = 15.
+3. Total = 8 × 15 = 120.
+Answer: 120",Counting elements of a relation.,Revise 'Relations and Functions'. Splitting into independent conditions is the key step.,
+22,34,sympy,P = BA^{−1} and Q = A^{−1}B. Is there a reason their traces are equal?,"trace(XY) = trace(YX), so trace(P) = trace(Q). Compute A^{−1}B and its trace.","1. det A = −4 + 8 = 4, A^{−1} = ¼[[−2, 2], [−4, 2]].
+2. A^{−1}B = ¼[[−4, −12], [−10, −30]], trace = −34/4 = −17/2.
+3. trace(2(P + Q)) = 2(−17/2 − 17/2) = −34. Absolute value: 34.
+Answer: 34",Matrix inverse and the property trace(XY) = trace(YX).,Revise 'Matrices': the inverse of a 2×2 matrix. Knowing trace(XY) = trace(YX) halves the work.,
+23,18,sympy,"Let B = (x, y) and M be the midpoint of AB. Internal touching means |OM| = 6 − |AB|/2.","2|OM| = |B − (−3, 0)| (since 2M = A + B). So |BA′| + |BA| = 12, where A′ = (−3, 0). That is an ellipse.","1. Touching internally: |OM| = 6 − |AB|/2.
+2. 2|OM| = |A + B| = distance from B to (−3, 0). So dist(B, (−3,0)) + dist(B, (3,0)) = 12.
+3. Ellipse with foci (±3, 0) and 2a = 12: a = 6, c = 3, e = 1/2.
+4. 72e^{2} = 18.
+Answer: 18",Locus as an ellipse (sum of focal distances constant).,Revise 'Conic Sections': an ellipse is where the sum of the distances to two foci is constant. Spotting it here takes practice.,
+24,24,sympy,"Find where the line meets the hyperbola, then decide which curve is on top between those points.",x^{2}/9 − y^{2}/16 = 1 and y = (8x − 24)/3 meet at x = 3 and x = 5. Area = ∫ from 3 to 5 of [(4/3)√(x^{2} − 9) − (8x − 24)/3] dx.,"1. Intersections: x^{2} − 8x + 15 = 0, so x = 3, 5.
+2. ∫ from 3 to 5 of √(x^{2} − 9) dx = [x√(x^{2}−9)/2 − (9/2)ln(x + √(x^{2}−9))] = 10 − (9/2)ln 3.
+3. Hyperbola part: (4/3)(10 − (9/2)ln 3) = 40/3 − 6 ln 3. Line part: 16/3.
+4. A = 8 − 6 ln 3, so 3(A + 6 ln 3) = 24.
+Answer: 24",Area between a hyperbola and a line; ∫√(x^{2} − a^{2}) dx.,Revise 'Application of Integrals' and the standard integral ∫√(x^{2} − a^{2}) dx.,
+25,10,sympy,"[g(x)] jumps wherever g(x) passes through an integer. What range does g take on [2, 4]?","g(x) = x^{2} − x − ½ is increasing on [2, 4], from 1.5 to 11.5. Count the integers it crosses.","1. g(2) = 1.5 and g(4) = 11.5, and g is increasing on [2, 4].
+2. g passes through 2, 3, …, 11: 10 integers, each at an interior point.
+3. So [g] is discontinuous at 10 points.
+Answer: 10",Discontinuities of the greatest integer function of a continuous function.,Revise 'Continuity and Differentiability'. Check whether the endpoints give integer values (here they don't).,
+26,2,conceptual,Write the dimensions of G and of h first.,[G] = M^{−1}L^{3}T^{−2} and [h] = ML^{2}T^{−1}. Test each option.,"1. [G] = M^{−1}L^{3}T^{−2}.
+2. Option 2: h T^{−1} L M^{−2} = (ML^{2}T^{−1})(T^{−1})(L)(M^{−2}) = M^{−1}L^{3}T^{−2} ✓.
+3. The others don't match (for example, option 1 gives M^{−1}L^{3}T^{0}).
+Answer: (2)",Dimensional analysis with a new set of base quantities.,Revise 'Units and Measurements'. Testing options is fastest when the options are given.,
+27,1,arithmetic,"Which force pushes the mass towards the axis, and which force holds it up?",The wall's normal force gives the centripetal force: N = mω^{2}r. Friction μN must balance mg.,"1. N = mω^{2}r.
+2. μmω^{2}r = mg, so μ = g/(ω^{2}r) = 10/(25 × 4) = 0.1.
+Answer: (1)",Circular motion with friction (rotor).,"Revise 'Laws of Motion' (circular motion). Mass cancels, so 0.5 kg is not needed.",
+28,3,arithmetic,First find the acceleration of the blocks (Atwood machine). Then how does the centre of mass move?,a = (m_{1} − m_{2})g/(m_{1} + m_{2}) = 10/3 m/s^{2}. Each block moves ½at^{2} in 2 s; the COM moves (m_{1}s − m_{2}s)/(m_{1} + m_{2}).,"1. a = 10/3 m/s^{2}; in 2 s each block moves s = ½ × (10/3) × 4 = 20/3 m (2 kg down, 1 kg up).
+2. COM displacement = (2 × 20/3 − 1 × 20/3)/3 = 20/9 ≈ 2.22 m (downward).
+Answer: (3)",Atwood machine and centre of mass motion.,The trap 3.33 comes from giving a block's distance (6.67) or other mix-ups. Revise 'System of Particles': COM displacement.,
+29,1,arithmetic,Total force = q(E + v × B). Subtract the electric part first.,"qE = 4 × 10^{−10} ĵ. So q(v × B) = (4î − 2ĵ) × 10^{−10}. With v = (v_{x}, v_{y}, 0) and B = 4×10^{−3} k̂: v × B = 4×10^{−3}(v_{y}, −v_{x}, 0).","1. qE = 10^{−9} × 0.4 ĵ = 4 × 10^{−10} ĵ.
+2. Magnetic part = (4î − 2ĵ) × 10^{−10}, so v × B = 0.4î − 0.2ĵ.
+3. 4×10^{−3}v_{y} = 0.4 gives v_{y} = 100; −4×10^{−3}v_{x} = −0.2 gives v_{x} = 50.
+Answer: (1), v = 50î + 100ĵ m/s",Lorentz force with both E and B.,Signs in the cross product decide between options 1 and 4. Revise 'Moving Charges and Magnetism'.,
+30,4,conceptual,A NAND gate with both inputs joined acts as a NOT gate. Find what each stage does.,The first two NANDs give X̄ and Ȳ. The middle NAND gives (X̄·Ȳ)′ = X + Y. The last NAND (as NOT) inverts it.,"1. Inputs: X̄ and Ȳ (NANDs used as NOT).
+2. Middle NAND: (X̄Ȳ)′ = X + Y (De Morgan).
+3. Last NAND as NOT: (X + Y)′, which is NOR.
+Answer: (4)",Logic gates and De Morgan's laws.,Revise 'Semiconductor Electronics': NAND as a universal gate.,
+31,1,arithmetic,"Falling from infinity, gravitational PE turns into KE. What is the PE at the surface?","½mv^{2} = GMm/R = mgR, so v = √(2gR) and K = mgR.","1. v = √(2gR) = √(2 × 9.8 × 6.4×10^{6}) ≈ 11.2 km/s.
+2. K = mgR = 1 × 9.8 × 6.4×10^{6} ≈ 6.27 × 10^{7} J.
+Answer: (1)",Energy conservation in gravitation (escape speed).,The trap 12.54 × 10^{7} J comes from using 2mgR. Revise 'Gravitation': escape velocity.,
+32,1,arithmetic,First find the least count and the zero error. Is the zero error positive or negative here?,LC = 0.1 mm/100 = 0.001 mm. Zero of the main scale matches the 5th circular division: zero error = +5 × LC.,"1. LC = 0.001 mm; zero error = +0.005 mm.
+2. Observed reading = 5 + 50 × 0.001 = 5.050 mm.
+3. Correct reading = observed − zero error = 5.045 mm.
+Answer: (1)",Screw gauge reading with zero error.,The trap 5.055 comes from adding the zero error instead of subtracting it. Revise 'Units and Measurements': screw gauge.,
+33,3,arithmetic,A soap bubble has two surfaces. Work = surface tension × increase in total area.,W = T × 2 × 4π(r_{2}^{2} − r_{1}^{2}) with r_{1} = 1 cm and r_{2} = 3 cm.,"1. W = 0.03 × 8π × (9 − 1) × 10^{−4} = 1.92π × 10^{−4} J.
+2. α = 1.92.
+Answer: (3)",Surface energy of a soap bubble.,"Common slips: using diameters as radii, or forgetting the second surface (0.96). Revise 'Mechanical Properties of Fluids'.",
+34,3,arithmetic,"Find the total moles from PV = nRT, then use the total mass.",n = PV/RT = 1/3 mol. Then 44x + 32y = 13.2 with x + y = 1/3.,"1. n = (10^{5} × 8.31×10^{−3})/(8.31 × 300) = 1/3 mol.
+2. 44x + 32(1/3 − x) = 13.2, so 12x = 2.53 and x ≈ 0.21 (CO_{2}); y ≈ 0.12 (O_{2}).
+Answer: (3)",Ideal gas mixtures.,Watch units: cm^{3} to m^{3} (8310 cm^{3} = 8.31 × 10^{−3} m^{3}). Revise 'Kinetic Theory of Gases'.,
+35,2,arithmetic,At steady speed the forces balance. The air in the bubble is almost weightless.,"Buoyancy = viscous drag: (4/3)πr^{3}ρg = 6πηrv, so η = 2r^{2}ρg/(9v).","1. η = 2 × (10^{−3})^{2} × 2000 × 10/(9 × 0.005) ≈ 0.889 Pa·s.
+2. 1 Pa·s = 10 poise, so η ≈ 8.8 poise.
+Answer: (2)",Terminal velocity and Stokes' law.,The unit change (Pa·s to poise) is where 0.88 comes from. Revise 'Mechanical Properties of Fluids'.,
+36,2,arithmetic,Use work–energy over the whole motion: falling 10 m plus going 10 cm into the sand.,mg(h + d) = F × d.,"1. mg(h + d) = 2 × 10 × 10.1 = 202 J.
+2. F = 202/0.1 = 2020 N.
+Answer: (2)",Work–energy theorem with a resistive force.,"The trap 2000 N comes from ignoring the extra 10 cm of fall inside the sand. Revise 'Work, Energy and Power'.",
+37,2,conceptual,"In an EM wave, E × B points along the direction of travel. The wave goes along +x and B is along +ĵ.",|E| = cB. Which direction of E (±k̂) makes E × B point along +î?,"1. |E| = cB = 3×10^{8} × 2×10^{−7} = 60 V/m.
+2. (−k̂) × ĵ = î, so E must be along −k̂.
+3. E = −60 k̂ V/m.
+Answer: (2)","Relation between E, B and propagation direction in EM waves.",Revise 'Electromagnetic Waves'. The cross-product direction picks between +60 and −60.,
+38,2,arithmetic,Find the bulb's resistance from its rating. It sits in parallel with the 400 Ω resistor.,"R_{bulb} = V^{2}/P = 400 Ω. 400 ∥ 400 = 200 Ω, in series with 200 Ω.","1. Bulb: 200^{2}/100 = 400 Ω.
+2. Parallel combination = 200 Ω; total = 400 Ω; I = 0.25 A.
+3. Voltage across the parallel part = 0.25 × 200 = 50 V.
+Answer: (2)",Series–parallel circuits with a rated bulb.,The trap 66.6 V ignores the bulb's own resistance. Revise 'Current Electricity'.,
+39,1,arithmetic,The droplet floats when the electric force upward equals its weight. Which plate must be at the higher potential?,"mg = qE with m = ρ(4/3)πr^{3}. V = E × d. The field must point up (positive charge), so the lower plate B is at the higher potential.","1. m = 1500 × (4/3)π × 10^{−9} ≈ 6.28 × 10^{−6} kg.
+2. E = mg/q ≈ 6.28×10^{−5}/(5×10^{−9}) ≈ 1.26 × 10^{4} V/m.
+3. V = E × (12/π) × 10^{−2} ≈ 480 V, with B higher than A.
+4. Only option 1 (V_{A} = 100 V, V_{B} = 580 V) has V_{B} − V_{A} = 480 V.
+Answer: (1)",Charged drop in a uniform electric field (Millikan-type).,The trap '580 V and 100 V' has the right difference but the wrong direction. Revise 'Electric Charges and Fields' and 'Electrostatic Potential'.,
+40,3,arithmetic,Gauss's law: flux depends only on the charge inside each sphere.,The 3 cm sphere contains only 8 μC. The 5 cm sphere contains 8 − 2 = 6 μC.,"1. Flux ∝ enclosed charge.
+2. Ratio = 8 : 6 = 4 : 3.
+Answer: (3)",Gauss's law (enclosed charge).,Revise 'Electric Charges and Fields': Gauss's law. Charges outside a surface add no net flux.,
+41,4,arithmetic,The ray enters the first face normally. Find its angle of incidence on the painted base.,"Inside, the ray meets the base at 60° to the normal. TIR needs sin 60° ≥ n_{2}/1.6.","1. Angle of incidence on the base = 60°.
+2. TIR at the prism–paint boundary: 1.6 sin 60° ≥ n_{2}, so n_{2} ≤ 1.6 × √3/2 = 4√3/5.
+3. The limiting value is 4√3/5.
+Answer: (4)",Total internal reflection at an interface between two media.,Revise 'Ray Optics': the critical angle between two media is sin C = n_{2}/n_{1}.,The question says 'minimum value of n_{2}'; physically 4√3/5 is the largest n_{2} that still gives TIR. NTA's key is option 4.
+42,2,arithmetic,Work out which inductor is shorted when S_{1} is closed and which when S_{2} is closed.,"S_{1} closed shorts L_{2}, leaving L_{1}: tan 30° = (ωL_{1} − X_{C})/R. S_{2} closed shorts L_{1}, leaving L_{2}: tan 60° = (ωL_{2} − X_{C})/R. Divide to remove R.","1. X_{C} = 1/(300 × 10^{−4}) = 100/3 Ω.
+2. Dividing: 3 = (ωL_{2} − X_{C})/(ωL_{1} − X_{C}), so 3ωL_{1} − ωL_{2} = 2X_{C}.
+3. 3L_{1} − L_{2} = 2X_{C}/ω = (200/3)/300 = 2/9 H.
+Answer: (2)",Phase angle in a series LCR circuit.,Revise 'Alternating Current': tan φ = (X_{L} − X_{C})/R. Dividing the two equations removes the unknown R.,
+43,4,conceptual,"Mutual inductance is the same either way. Which is easier: the field of the small circle at the square, or the field of the square at the small circle?",Use the square's field at its centre (almost uniform over the small circle): B = 2√2μ_{0}I/(πL). Flux = B × πR^{2}.,"1. Each side of the square at distance L/2: B = μ_{0}I/(4π(L/2)) × 2 sin 45°. For four sides: B = 2√2 μ_{0}I/(πL).
+2. Flux through the circle = B × πR^{2} = 2√2 μ_{0}IR^{2}/L.
+3. M = 2√2 μ_{0}R^{2}/L.
+Answer: (4)",Mutual inductance using the simpler field.,Revise 'Electromagnetic Induction' (M_{12} = M_{21}) and the field of a finite straight wire.,
+44,2,arithmetic,Mass defect = (mass of protons + neutrons) − nucleus mass. Bi has 83 protons and 126 neutrons.,Δm = 83(1.007825) + 126(1.008665) − 208.980388. Multiply by 931 MeV and divide by 209.,"1. Δm = 83.649475 + 127.091790 − 208.980388 = 1.760877 u.
+2. BE = 1.760877 × 931 ≈ 1639.4 MeV.
+3. Per nucleon: 1639.4/209 ≈ 7.84 MeV.
+Answer: (2)",Binding energy per nucleon.,The trap 7.48 is a digit swap; 8.79 comes from dividing by 83 + 103. Revise 'Nuclei'.,
+45,1,arithmetic,Velocity is zero at the extreme position; acceleration is zero at the mean position.,v ∝ cos(50t + π/3) = 0 first when 50t + π/3 = π/2. a ∝ sin(50t + π/3) = 0 next when 50t + π/3 = π.,"1. 50t_{1} = π/2 − π/3 = π/6, so t_{1} = π/300 s.
+2. 50t_{2} = π − π/3 = 2π/3, so t_{2} = π/75 s.
+Answer: (1)",SHM: velocity and acceleration from the phase.,"Revise 'Oscillations'. The phase at t = 0 is π/3, so start counting from there.",
+46,6,arithmetic,"In YDSE, I = I_{max}cos^{2}(φ/2).",cos^{2}(φ/2) = 3/4 gives φ = π/3. Path difference = (λ/2π) × φ.,"1. cos(φ/2) = √3/2, so φ/2 = π/6 and φ = π/3.
+2. Path difference = λ/6, so x = 6.
+Answer: 6",Intensity in Young's double slit experiment.,"Revise 'Wave Optics': I = I_{max}cos^{2}(φ/2), and phase difference = (2π/λ) × path difference.",
+47,32,arithmetic,The electron's orbit is a current loop. How do r and v depend on n?,"B at the centre = μ_{0}I/(2r), with I = ev/(2πr). In Bohr's model r ∝ n^{2} and v ∝ 1/n.","1. B ∝ I/r ∝ v/r^{2} ∝ (1/n)/n^{4} = 1/n^{5}.
+2. B_{2}/B_{4} = (4/2)^{5} = 32.
+Answer: 32",Magnetic field of an orbiting electron in the Bohr model.,"Revise 'Atoms': r_{n} ∝ n^{2}, v_{n} ∝ 1/n. Then build B step by step.",
+48,300,arithmetic,"At constant volume, ΔU = nC_{v}ΔT. Find C_{v} from C_{p} − C_{v} = R, in calories.",R = 8.36 J/mol°C = 2 cal/mol°C (1 cal = 4.18 J). So C_{v} = 8 − 2 = 6 cal/mol°C.,"1. C_{v} = 6 cal/mol°C.
+2. ΔU = 5 × 6 × 10 = 300 cal.
+Answer: 300",Specific heats of gases and the first law.,The unit change of R to calories is the key step. Revise 'Thermodynamics'.,
+49,20,arithmetic,The paper burns fastest when it is at the focus. So what is the focal length?,"f = 30 cm. For a lens with both surfaces of radius 60 cm, 1/f = (μ − 1)(2/R).","1. f = 30 cm.
+2. 1/30 = (μ − 1)(2/60) = (μ − 1)/30, so μ = 2.
+3. α/10 = 2, so α = 20.
+Answer: 20",Lens maker's formula.,Revise 'Ray Optics': lens maker's formula 1/f = (μ − 1)(1/R_{1} − 1/R_{2}).,"Assumes an equi-biconvex lens (both radii 60 cm), the only reading that matches NTA's key."
+50,60,arithmetic,The rod rotates about an axis through one end. The sphere rotates about its own diameter (the axis parallel to AB).,I_{rod} = ML^{2}/3 = 120 kg m^{2}. I_{sphere} = (2/5)mR^{2} = 4R^{2}.,"1. Rod about its end: 40 × 9/3 = 120 kg m^{2}.
+2. Sphere about its own axis: (2/5) × 10 × R^{2} = 4R^{2}.
+3. 4R^{2} = 120, so R^{2} = 30 = α/2 and α = 60.
+Answer: 60",Moment of inertia of a rod and a sphere.,Revise 'System of Particles and Rotational Motion': standard moments of inertia.,"Read with the sphere rotating about its own diameter (the axis shown through its centre), which matches NTA's key."
+51,2,arithmetic,"From the mass ratio C : H = 12 : 1, what is the atom ratio? With two carbons, which hydrocarbon is it?","Atom ratio 1 : 1, so with 2 carbons it is C_{2}H_{2} (M = 26). Each mole gives 2 mol CO_{2}.","1. Moles of C_{2}H_{2} = 3.38/26 = 0.13.
+2. CO_{2} formed = 0.26 mol = 0.26 × 44 = 11.44 g.
+Answer: (2)",Empirical formula and combustion stoichiometry.,Revise 'Some Basic Concepts of Chemistry'. Converting mass ratio to mole ratio is the first step.,
+52,3,arithmetic,"With 0.1 M HCl present, [H^{+}] is fixed at 0.1 M. The weak acid barely ionises.","K_{a1} = [H^{+}][HA^{−}]/[H_{2}A], so [HA^{−}] = K_{a1}[H_{2}A]/[H^{+}].","1. [H_{2}A] ≈ 0.1 M and [H^{+}] ≈ 0.1 M.
+2. [HA^{−}] = 8.1×10^{−8} × 0.1/0.1 = 8.1 × 10^{−8} M.
+Answer: (3)",Common-ion effect on a weak diprotic acid.,Revise 'Equilibrium': the common ion effect. The strong acid fixes [H^{+}].,
+53,2,conceptual,SF_{4} has 4 bond pairs and 1 lone pair: see-saw. Find the bond and lone pairs for each species.,BrF_{4}^{−}: 4 bp + 2 lp. CH_{4}: 4 bp. IF_{4}^{+}: 4 bp + 1 lp. XeF_{4}: 4 bp + 2 lp. XeO_{2}F_{2}: 4 bonding positions + 1 lp.,"1. See-saw needs 4 bonding positions + 1 lone pair.
+2. IF_{4}^{+} (I: 7 − 1 = 6 electrons, 4 used in bonds, 1 lone pair) is see-saw. XeO_{2}F_{2} is see-saw.
+3. BrF_{4}^{−} and XeF_{4} are square planar; CH_{4} is tetrahedral.
+Answer: (2), C and E",VSEPR shapes.,Revise 'Chemical Bonding': VSEPR. Count the lone pairs carefully for ions.,
+54,4,arithmetic,"Over a full cycle back to X, ΔU = 0. Find ΔU for X → Y first.",ΔU(X→Y) = q − w = 10 − 18 = −8 J (w = work done by the gas). So ΔU(Y→X) = +8 J.,"1. Y → X: ΔU = +8 = q − w with q = −6 J.
+2. w = −14 J: the gas does −14 J of work, i.e. 14 J of work is done ON the gas.
+Answer: (4)",First law of thermodynamics; ΔU is a state function.,Keep the sign convention fixed (w = work by the gas) all the way through. Revise 'Thermodynamics'.,
+55,1,arithmetic,π = CRT. What is the molar concentration in each solution?,A: (1/50000)/0.5 = 4×10^{−5} M. B: (2/50000)/1 = 4×10^{−5} M. After mixing: (3/50000)/1.5 L.,"1. All three solutions have 4 × 10^{−5} M.
+2. π = 4×10^{−5} × 0.083 × 300 = 9.96 × 10^{−4} bar for each.
+Answer: (1)",Osmotic pressure depends on concentration.,The trap is adding the pressures. Mixing equal concentrations keeps the same concentration. Revise 'Solutions'.,
+56,2,arithmetic,"(a) A weak acid alone: [H^{+}] = √(K_{a}C). (b) After 10 mL of NaOH, how much acid is neutralised?","(b) Half the acid is neutralised, so [HX] = [X^{−}] and pH = pK_{a}.","1. (a) [H^{+}] = √(5×10^{−4} × 0.2) = 10^{−2}, so pH = 2.0.
+2. (b) 2 mmol NaOH with 4 mmol HX: half-neutralised, so pH = pK_{a} = 3.3.
+Answer: (2)",pH of a weak acid and of a buffer at half-neutralisation.,Revise 'Equilibrium': the Henderson equation pH = pK_{a} + log([salt]/[acid]).,
+57,1,conceptual,Look at the units of k: mol^{−1} L s^{−1}. What order does that mean?,Units (mol L^{−1})^{1−n} s^{−1}: here n = 2. Then check each statement for a second-order reaction.,"1. Second order (B true). Rate ∝ [X]^{2}, so 4× concentration gives 16× rate (A true).
+2. Half-life depends on concentration for second order (C false).
+3. N_{2}O_{5} decomposition is first order (D false), and the ln[R_{0}]/[R] vs t line is for first order (E false).
+Answer: (1), A and B",Order of reaction from the units of k.,Revise 'Chemical Kinetics': units of k for each order and which plots are linear.,
+58,3,conceptual,"You need one basic, one acidic, one amphoteric and one neutral oxide in the set.","Neutral oxides: CO, NO, N_{2}O. Amphoteric: Al_{2}O_{3}, As_{2}O_{3}. Acidic: Cl_{2}O_{7}. Basic: Na_{2}O, K_{2}O.","1. Option 3: K_{2}O (basic), Cl_{2}O_{7} (acidic), As_{2}O_{3} (amphoteric), NO (neutral). All four kinds ✓.
+2. Option 1 has no neutral oxide; option 2 has no basic oxide; option 4 has no acidic oxide.
+Answer: (3)",Classification of oxides.,"Revise 'p-Block Elements' and 'Classification of Elements': nature of oxides. Remember the neutral ones: CO, NO, N_{2}O.",
+59,2,conceptual,Recall the irregularities in group 13 and group 14 ionisation enthalpies.,"Second IE (kJ/mol): B 2427, Al 1817, Ga 1979. First IE: Si 786, Ge 762, Sn 709, Pb 716.","1. Statement I: B > Ga > Al, not B > Al > Ga. False.
+2. Statement II: Si has the highest first IE, so Si < Ge < Pb < Sn is wrong. False.
+Answer: (2)",Ionisation enthalpy anomalies (d- and f-contraction effects).,Revise 'Classification of Elements and Periodicity': Ga > Al and Pb > Sn because of poor shielding by d and f electrons.,
+60,1,conceptual,Third IE: think of the configuration after removing two electrons (M^{2+}).,"Zn^{2+} is 3d^{10} (very stable), so its third IE is the highest. Sc^{2+} is 3d^{1}, so it loses the next electron easily. For CFSE, consider the oxidation state and the ligand strength.","1. Third IE: Zn highest (breaks a full d^{10}), Sc lowest (reaches the stable [Ar]). True.
+2. CFSE: Co^{3+} > Co^{2+} (higher charge), and en > H_{2}O (stronger field). True.
+Answer: (1)",Ionisation enthalpy trends in the 3d series; crystal field splitting.,Revise 'd- and f-Block Elements' and 'Coordination Compounds' (factors affecting Δ_{0}).,
+61,2,conceptual,Coordination isomerism means swapping ligands between the cationic and anionic complex. That changes the compound only if the metals are different.,Look for salts where both ions are complexes of different metals.,"1. B [Co(NH_{3})_{6}][Cr(CN)_{6}] ↔ [Cr(NH_{3})_{6}][Co(CN)_{6}]: different metals ✓.
+2. D (Fe and Co) ✓ and E (Co and Fe) ✓.
+3. A and C have the same metal in both ions.
+Answer: (2), B, D and E",Coordination isomerism.,Revise 'Coordination Compounds': structural isomerism (NCERT example [Co(NH_{3})_{6}][Cr(CN)_{6}]).,"NTA's key treats same-metal salts (A, C) as not showing coordination isomerism. A teacher may want to discuss partial ligand exchange."
+62,1,arithmetic,Mass of C in the CO_{2} = (12/44) × 0.25 g. That is 25% of X.,X = mass of C/0.25. Check with H: (2/18) × 0.12 g should be 4.89% of X.,"1. Mass of C = 0.25 × 12/44 = 0.0682 g.
+2. X = 0.0682/0.25 = 0.273 g = 273 × 10^{−3} g.
+3. Check H: 0.12 × 2/18 = 0.0133 g = 4.89% of 0.273 ✓.
+Answer: (1)",Percentage composition from combustion data.,Revise 'Purification and Characterisation of Organic Compounds': estimation of C and H.,
+63,1,conceptual,"Which group donates electrons by resonance, and which withdraws? Where is each charge?","−OCH_{3} is +R (donates), so it stabilises a carbocation. −NO_{2} is −R (withdraws), so it stabilises a carbanion.","1. The carbocation is conjugated with the para-OCH_{3} ring, and +R donation stabilises it. True.
+2. The carbanion is conjugated with the para-NO_{2} ring, and −R withdrawal stabilises it. True.
+Answer: (1)",Resonance effects on carbocations and carbanions.,Revise 'Basic Principles of Organic Chemistry': +R/−R groups.,
+64,3,conceptual,"Which C_{7} compound can isomerise to 2,4-dimethylpentane, aromatise to toluene and cyclise to methylcyclohexane?","Isomerisation with AlCl_{3}/HCl, aromatisation and cyclisation are reactions of alkanes (n-heptane).","1. n-Heptane (C_{7}H_{16}) isomerises to branched heptanes like 2,4-dimethylpentane.
+2. Aromatisation of n-heptane gives toluene; cyclisation gives methylcyclohexane.
+Answer: (3), heptane",Reactions of alkanes: isomerisation and aromatisation.,Revise 'Hydrocarbons' (alkanes): isomerisation and aromatisation.,
+65,3,conceptual,"Check each statement on its own, especially the S_{N}1 order and the haloalkene/haloalkyne naming.",S_{N}1 rate follows carbocation stability: Ph_{2}CH^{+} is more stable than PhCH_{2}^{+}. Allyl chloride is CH_{2}=CH−CH_{2}Cl.,"1. A: true (alcoholic KOH favours elimination).
+2. B: false; C_{6}H_{5}CHClC_{6}H_{5} reacts faster (two rings stabilise the cation).
+3. C: false; aryl halides behave very differently.
+4. D: false; allyl chloride is a haloalkene, not a haloalkyne.
+5. E: true; phenols don't give aryl chlorides with SOCl_{2}.
+Answer: (3), A and E",Properties of alkyl and aryl halides.,Revise 'Haloalkanes and Haloarenes'.,
+66,3,conceptual,"C, O and H in equal moles: (CHO)_{n}. With M = 58, what is x?","x = C_{2}H_{2}O_{2} = glyoxal, OHC−CHO, with no α-hydrogen. Hot concentrated KOH causes an intramolecular Cannizzaro reaction.","1. (CHO)_{2} = 58, so x is glyoxal.
+2. Intramolecular Cannizzaro: one CHO is oxidised (COO^{−}) and the other reduced (CH_{2}OH).
+3. Acidification gives HOCH_{2}−COOH (glycolic acid).
+Answer: (3)",Cannizzaro reaction (intramolecular).,"Revise 'Aldehydes, Ketones and Carboxylic Acids': Cannizzaro for aldehydes without α-H.",
+67,4,conceptual,X is a divinyl-type ether (enol ether). What do enol ethers give on mild acid hydrolysis?,Each side becomes an enol and then a carbonyl: the propenyl side gives propanal and the isopropenyl side gives acetone.,"1. Y and Z are propanal (CH_{3}CH_{2}CHO) and acetone. Both are C_{3}H_{6}O, M = 58 (A true).
+2. Neither reacts with NaHCO_{3} (B false). The aldehyde adds HCN faster (C false).
+3. Both give 2,4-DNP derivatives (D true).
+Answer: (4), A and D",Hydrolysis of enol ethers; tests for carbonyl compounds.,"Revise 'Alcohols, Phenols and Ethers' and 'Aldehydes and Ketones' (tests and reactivity).",
+68,2,conceptual,Where does Br go? Both −C_{2}H_{5} (ortho/para) and −NO_{2} (meta) direct to the same position.,Br goes ortho to the ethyl group (meta to NO_{2}). Then NO_{2} → NH_{2} → diazonium → H (ethanol reduces it). KMnO_{4} oxidises the ethyl group to COOH.,"1. A: bromine ortho to C_{2}H_{5}.
+2. B = amine, C = diazonium salt, D = after replacing N_{2}^{+} with H: 1-bromo-2-ethylbenzene.
+3. E = 2-bromobenzoic acid.
+Answer: (2)",Directing effects and diazonium chemistry.,Revise 'Amines' (diazonium salts; ethanol replaces N_{2}^{+} with H) and 'Hydrocarbons' (directing effects).,
+69,3,conceptual,Which hormone contains iodine?,Thyroxine is an iodinated derivative of tyrosine. Tyrosine's one-letter code is Y.,"1. Thyroxine contains iodine and is made from tyrosine.
+2. Tyrosine = Y (T is threonine).
+Answer: (3), Y and thyroxine",Biomolecules: amino acids and hormones.,"Revise 'Biomolecules': hormones, and one-letter codes for common amino acids (Y = tyrosine, T = threonine).",
+70,4,conceptual,The borax bead test needs a coloured transition-metal ion. Which of these ions has partly filled d orbitals?,"Zn^{2+} (3d^{10}) gives no colour. Among Fe^{2+}, Fe^{3+} and Cr^{2+}, which is hardest to ionise further?","1. Fe^{2+}, Fe^{3+} and Cr^{2+} give coloured beads; Zn^{2+} does not.
+2. Fe^{3+} is 3d^{5} (half-filled), and removing another electron from it needs the most energy.
+Answer: (4)",Borax bead test; stability of the half-filled d^{5} configuration.,Revise salt analysis ('Principles Related to Practical Chemistry') and 'd- and f-Block Elements'.,'Highest ionisation enthalpy' is read as the energy to remove the next electron from the ion.
+71,5,arithmetic,Photon energy = work function + kinetic energy.,E = 2.8×10^{−20} + 2.3 × 1.6×10^{−19} J. Then λ = hc/E.,"1. E = 2.8×10^{−20} + 3.68×10^{−19} = 3.96 × 10^{−19} J.
+2. λ = 6.6×10^{−34} × 3×10^{8}/3.96×10^{−19} = 5.0 × 10^{−7} m = 500 nm = 5 × 10^{2} nm.
+Answer: 5",Photoelectric equation.,Revise 'Structure of Atom': photoelectric effect. Convert eV to J before adding.,
+72,20,arithmetic,"Let the initial pressure of A be p_{0}. At ∞, all of A has reacted.","2A → 4B + C: at ∞, total = 2p_{0} + p_{0}/2 = 2.5p_{0} = 600. At 30 min with 2x of A used: total = p_{0} + 3x.","1. p_{0} = 240 mm Hg.
+2. 240 + 3x = 300, so x = 20 mm Hg.
+3. p(C) = x = 20 mm Hg.
+Answer: 20",Following a gas-phase reaction with total pressure.,Revise 'Chemical Kinetics': pressure tables (initial / change / at time t).,
+73,560,arithmetic,Combine the half-cells into the fuel cell: methanol is oxidised and O_{2} is reduced. How many electrons per CH_{3}OH?,"E°_{cell} = 1.23 − 0.02 = 1.21 V, n = 6. ΔG = −nFE. Useful work = 80% of |ΔG|. For constant pressure, W = PΔV.","1. |ΔG| = 6 × 96500 × 1.21 = 700,590 J.
+2. Work = 0.8 × 700,590 ≈ 560,472 J.
+3. ΔV = W/P = 560,472/1000 ≈ 560 m^{3}.
+Answer: 560",Fuel cell energy and pressure–volume work.,Revise 'Electrochemistry' (ΔG = −nFE) and 'Thermodynamics' (W = PΔV).,
+74,3,conceptual,Write the d or f electron count of each ion. Paramagnetic ions have unpaired electrons.,"Mn^{2+} d^{5}, Cu^{2+} d^{9}, Zn^{2+} d^{10}, Yb^{2+} f^{14}, Sc^{3+} d^{0}, La^{3+} f^{0}, Gd^{3+} f^{7}, Lu^{3+} f^{14}, Ti^{4+} d^{0}, Ce^{4+} f^{0}.","1. Unpaired electrons: Mn^{2+} (5), Cu^{2+} (1), Gd^{3+} (7).
+2. All the others are d^{0}, d^{10}, f^{0} or f^{14}.
+3. Count = 3.
+Answer: 3",Electronic configurations of d- and f-block ions; magnetism.,Revise 'd- and f-Block Elements': configurations of lanthanide ions (Gd^{3+} is f^{7}).,
+75,1,arithmetic,"Follow the sequence: reduce NO_{2}, protect NH_{2}, brominate, deprotect. Where does Br go?","Sn/HCl gives p-toluidine. Acetylation gives the acetanilide, which brominates ortho to NHCOCH_{3}. Hydrolysis gives 2-bromo-4-methylaniline, C_{7}H_{8}BrN (M = 186).","1. P = 2-bromo-4-methylaniline, M = 186 g/mol.
+2. 1.0 g has 1/186 mol of Br, giving 1/186 mol of AgBr (M = 188).
+3. Mass of AgBr = 188/186 ≈ 1.01 g, so 1 g to the nearest integer.
+Answer: 1",Protection of amines in aromatic substitution; Carius estimation.,Revise 'Amines' (acetylation to control bromination) and Carius analysis in 'Purification and Characterisation of Organic Compounds'.,
