@@ -6,7 +6,7 @@ Every PYQ gets one row in `pyq/<year>/<shift>/solutions.csv`:
 |---|---|
 | `q` | question number in the paper (1–75) |
 | `claude_answer` | option number 1–4 (MCQ) or the value (numerical) Claude got. Must equal NTA's final key; if it does not, stop and flag it to the owner. Never change the key. |
-| `check` | `sympy` or `arithmetic` = the answer is recomputed in `tools/verify_pyq_solutions.py`; `conceptual` = theory, needs a teacher. |
+| `check` | `sympy` or `arithmetic` = the answer is recomputed in `tools/verify_pyq_solutions.py`; `conceptual` = theory, needs a teacher; `disputed` = Claude's answer differs from NTA's final key: write Claude's own answer in `claude_answer`, explain in `note`, and the solution is held back from the app until the owner decides. Never change the key. |
 | `hint1` | A nudge towards the idea, usually a question. Names what to notice or which concept applies. Gives away no number and no option. |
 | `hint2` | The key formula, relation or first step, written out. Still stops before the answer. |
 | `solution` | Short numbered steps (1. 2. 3. …), one idea per step, plain words, then `Answer: (k)` or `Answer: value`. Written for a student, not for a checker. Say why a tempting wrong option is wrong when that is quick. |

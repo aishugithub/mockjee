@@ -23,6 +23,7 @@ KEEP = ['id', 'subject', 'chapter', 'subtopic', 'secondary_chapter', 'tag_confid
         'source', 'question', 'image', 'options', 'option_images', 'answer', 'accept', 'solution',
         'solution_by', 'solution_check', 'solution_note', 'hints', 'concept', 'revise']
 CHECKS = ('sympy', 'arithmetic', 'conceptual')
+HELD = []   # solutions Claude disputes with NTA's key: not bundled until the owner decides
 
 
 def load_tags(folder, questions):
@@ -67,6 +68,9 @@ def load_solutions(folder, questions):
         if q.get('exclude') or q.get('answer') is None:
             continue
         key = q['answer'] + 1 if q['type'] == 'MCQ' else q['answer']
+        if row['check'] == 'disputed':
+            HELD.append(f"{q['source']}: Claude gets {row['claude_answer']}, NTA's final key {key}")
+            continue
         ok = [key] + ([a + 1 for a in q.get('accept', [])] if q['type'] == 'MCQ' else q.get('accept', []))
         if not any(float(row['claude_answer']) == float(a) for a in ok):
             errors.append(f"Q{n}: Claude's answer {row['claude_answer']} differs from NTA's final key {key}: flag it for the owner"); continue
@@ -86,6 +90,7 @@ def load_solutions(folder, questions):
         raise SystemExit(f'{path}:' + ''.join('\n  ' + e for e in errors))
     return sols
 
+sys.stdout.reconfigure(encoding='utf-8')
 bank, skipped, papers = [], [], []
 for path in sorted(glob.glob(os.path.join(ROOT, 'pyq', '*', '*', 'questions.json'))):
     folder = os.path.relpath(os.path.dirname(path), ROOT).replace(os.sep, '/')
@@ -116,5 +121,8 @@ with open(os.path.join(ROOT, 'pyq_bank.js'), 'w', encoding='utf-8') as f:
     json.dump(bank, f, ensure_ascii=False, separators=(',', ':'))
     f.write(';\n')
 print('\n'.join(papers))
+if HELD:
+    print(f'{len(HELD)} worked solutions held back (Claude disagrees with the key; owner to review):')
+    print('\n'.join('  ' + h for h in HELD))
 print(f'{len(bank)} questions in pyq_bank.js; left out {len(skipped)}:')
 print('\n'.join('  ' + s for s in skipped))

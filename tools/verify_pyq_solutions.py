@@ -319,14 +319,17 @@ def check_solutions_csv(year, shift, qs):
                 bad += 1; print(f"{year} {shift} Q{r['q']}: {col} is empty")
         accept = [a + 1 for a in q.get('accept', [])] if q['type'] == 'MCQ' else q.get('accept', [])
         ok = (float(mine) == float(key)) or any(float(mine) == float(a) for a in accept)
-        if not ok:
+        if r['check'] == 'disputed':
+            print(f"{year} {shift} Q{r['q']}: DISPUTED (held back, owner to review): Claude {mine}, NTA final key {key}. {r.get('note', '')}")
+        elif not ok:
             bad += 1
-            print(f"{year} {shift} Q{r['q']}: Claude's solution gives {mine}, NTA final key {key}: FLAG FOR OWNER")
+            print(f"{year} {shift} Q{r['q']}: Claude's solution gives {mine}, NTA final key {key}: FLAG FOR OWNER (mark it 'disputed' with a note)")
     print(f'{year} {shift}: {len(rows)} written solutions, {bad} disagree with the key')
     return bad
 
 
 def main():
+    sys.stdout.reconfigure(encoding='utf-8')
     bad = 0
     for (year, shift), make in SHIFTS.items():
         qs = json.load(open(os.path.join(ROOT, 'pyq', year, shift, 'questions.json'), encoding='utf-8'))['questions']

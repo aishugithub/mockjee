@@ -1,0 +1,224 @@
+q,claude_answer,check,hint1,hint2,solution,concept,revise,note
+1,1,sympy,"f is increasing on [1, ∞). For an increasing function, where can the graphs of f and f^{−1} meet?","They meet only on the line y = x, so f(x) = f^{−1}(x) ⇔ f(x) = x. For (II), f^{−1}(y) = 1 + (y − 1)^{1/4}, so f^{−1}(x + 1) = 1 + x^{1/4}.","1. (I): (x − 1)^{4} + 1 = x ⇔ (x − 1)^{4} = x − 1 ⇔ x − 1 = 0 or 1, so x = 1 or 2. Exactly two elements: TRUE.
+2. (II): (x − 1)^{4} = x^{1/4}. At x = 2 the left side is 1 and the right is about 1.19; at x = 3 it is 16 vs 1.32. They cross between 2 and 3, so S is not empty: FALSE.
+Answer: (1)",Intersections of a function with its inverse.,"For increasing functions, f(x) = f^{−1}(x) reduces to f(x) = x. Revise 'Relations and Functions' (inverse functions).",
+2,4,sympy,Solve the quadratic first. Then add √3 i to each root.,z = −2 ± 2√3 i. Find |z + √3 i|^{2} for each root.,"1. z + √3 i = −2 + 3√3 i, so |·|^{2} = 4 + 27 = 31.
+2. z + √3 i = −2 − √3 i, so |·|^{2} = 4 + 3 = 7.
+3. Sum = 38.
+Answer: (4)",Roots of a quadratic with complex roots; modulus.,Revise 'Complex Numbers' and 'Quadratic Equations'.,
+3,2,sympy,Infinitely many solutions: the coefficient determinant is 0 and the system is consistent.,"det = λ − 5, so λ = 5. Notice equation 3 must equal 2 × (equation 2) − (equation 1).","1. det[[1,1,1],[1,2,3],[1,3,λ]] = λ − 5 = 0, so λ = 5.
+2. 2(x + 2y + 3z) − (x + y + z) = x + 3y + 5z = 2(9) − 5 = 13, so μ = 13.
+3. λ + μ = 18.
+Answer: (2)",Infinitely many solutions of a linear system.,Spotting the third equation as a combination of the first two is the fastest route. Revise 'Matrices and Determinants'.,
+4,3,sympy,Real coefficients mean complex roots come in conjugate pairs. What is the third root?,"Roots 1, 1 + i√2, 1 − i√2. The cubic is (x − 1)(x^{2} − 2x + 3).","1. Cubic = x^{3} − 3x^{2} + 5x − 3.
+2. Over [−1, 1], the odd terms x^{3} and 5x integrate to 0.
+3. ∫(−3x^{2} − 3) dx from −1 to 1 = −2 − 6 = −8.
+Answer: (3)",Conjugate roots; integrals of odd and even functions.,Revise 'Quadratic Equations' (conjugate roots) and 'Definite Integrals' (odd/even properties).,
+5,2,sympy,"Two positive roots needs: discriminant ≥ 0, sum > 0 and product > 0.","Sum = 3λ/(λ + 2), product = 4λ/(λ + 2), D = 9λ^{2} − 16λ(λ + 2) = −λ(7λ + 32).","1. Product > 0: λ > 0 or λ < −2.
+2. D ≥ 0: −32/7 ≤ λ ≤ 0.
+3. Together: −32/7 ≤ λ < −2 (sum > 0 holds here too).
+4. Integers: −4 and −3, so 2 values.
+Answer: (2)",Conditions on the roots of a quadratic.,Write all three conditions before solving. Missing one is the usual slip. Revise 'Quadratic Equations'.,
+6,3,sympy,det(A − αI) = 0 means α is an eigenvalue. Find the characteristic polynomial and its largest real root.,The characteristic polynomial factors as (λ − 8)(λ^{2} + 16λ + 40). So p = 8. Check where the circle meets each axis.,"1. p = 8: circle (x − 8)^{2} + (y − 16)^{2} = 320.
+2. y = 0: (x − 8)^{2} = 64, so x = 0 or 16. x = 0: (y − 16)^{2} = 256, so y = 0 or 32.
+3. The origin is counted twice, so the distinct points are (0,0), (16,0), (0,32): 3 points.
+Answer: (3)",Eigenvalues and circle–axis intersections.,"The trap is answering 4: the circle passes through the origin, so one point is shared. Revise 'Matrices' and 'Conic Sections' (circle).",
+7,3,sympy,Sum the two GPs first.,α = (1/4)/(1 − 1/2) = 1/2 and β = (1/3)/(1 − 1/3) = 1/2. Then write 0.2 = 5^{−1} and 0.04 = 5^{−2}.,"1. (0.2)^{log_{√5}(1/2)} = 5^{−2log_{5}(1/2)} = (1/2)^{−2} = 4.
+2. (0.04)^{log_{5}(1/2)} = 5^{−2log_{5}(1/2)} = 4.
+3. Sum = 8.
+Answer: (3)",Infinite GP sums and log laws.,Revise 'Sequences and Series' and the rules a^{log_{a}b} = b and log_{√a} = 2log_{a}.,
+8,4,sympy,Expand both sums in terms of Σx and Σx^{2}.,Σx^{2} + 4Σx + 40 = 180 and Σx^{2} − 2Σx + 10 = 90.,"1. Subtracting: 6Σx + 30 = 90, so Σx = 10 and Σx^{2} = 100.
+2. Variance = 100/10 − 1^{2} = 9, so SD = 3.
+Answer: (4)",Mean and variance from shifted sums.,Revise 'Statistics': σ^{2} = Σx^{2}/n − (Σx/n)^{2}.,
+9,1,sympy,Write the general term and set the power of x to 0.,T_{r+1} = ^{18}C_{r}(9x)^{18−r}(−1/(3√x))^{r}: power of x = 18 − 3r/2.,"1. 18 − 3r/2 = 0, so r = 12.
+2. Term = ^{18}C_{12} × 9^{6} × (1/3)^{12} = ^{18}C_{12} = 18564.
+3. 18564 = 221 × 84, so k = 84.
+Answer: (1)",Term independent of x in a binomial expansion.,Revise 'Binomial Theorem'. Notice 9^{6} = 3^{12} cancels neatly.,
+10,4,sympy,The centroid gives P + Q + R. Subtract P to get Q + R.,"Q + R = (6, 9). R is on x + y = 5, so Q is on x + y = 10. Q is also on the circle with centre (7, 7) and radius 4.","1. Circle (x − 7)^{2} + (y − 7)^{2} = 16 meets x + y = 10 where x^{2} − 10x + 21 = 0: Q = (3, 7) or (7, 3).
+2. R = (6, 9) − Q = (3, 2) or (−1, 6).
+3. Sum of the ordinates of R = 2 + 6 = 8.
+Answer: (4)",Centroid and loci with a circle and a line.,Revise 'Straight Lines' and 'Conic Sections'. Turning 'R on a line' into 'Q on a line' is the key step.,
+11,2,sympy,Foci distance 2ae = 6 and directrix distance 2a/e = 8/3. Find a and e.,"a^{2} = 4, e = 3/2, b^{2} = a^{2}(e^{2} − 1) = 5. Area of AOB = |α| × |y|, where y^{2} = 5(α^{2}/4 − 1).","1. ae = 3 and a/e = 4/3, so a^{2} = 4 and e = 3/2; b^{2} = 5.
+2. Area^{2} = α^{2} × 5(α^{2}/4 − 1) = 240, so α^{2}(α^{2} − 4) = 192.
+3. α^{2} = 16.
+Answer: (2)","Hyperbola: foci, directrices, chord area.",Revise 'Conic Sections': hyperbola (b^{2} = a^{2}(e^{2} − 1)).,
+12,2,sympy,"Put t = x/2 in [0, π/2] and maximise 16 sin t cos^{3}t.","Derivative: cos^{4}t − 3sin^{2}t cos^{2}t = 0, so tan^{2}t = 1/3.","1. t = π/6.
+2. 16 × (1/2) × (√3/2)^{3} = 16 × 3√3/16 = 3√3.
+Answer: (2)",Maximum of a trigonometric product using derivatives.,Revise 'Application of Derivatives' (maxima and minima).,
+13,2,sympy,Shortest distance between skew lines = |(a_{2} − a_{1})·(b_{1} × b_{2})|/|b_{1} × b_{2}|.,"b_{1} × b_{2} = (2, −5, 6) × (0, 1, −1) = (−1, 2, 2), with magnitude 3. a_{2} − a_{1} = (−1, −2, −3).","1. (a_{2} − a_{1})·(b_{1} × b_{2}) = 1 − 4 − 6 = −9.
+2. Distance = 9/3 = 3.
+Answer: (2)",Shortest distance between skew lines.,Revise 'Three Dimensional Geometry'.,
+14,1,sympy,"For a mirror image in a line, the segment is perpendicular to the line and its midpoint lies on the line.","(Q − P)·(3, 2, 1) = 0 gives candidate values of α. Then check the midpoint condition for each.","1. Perpendicular condition: α = 3 or α = 1/4.
+2. α = 3: midpoint (5, 3, 1) satisfies (x − 2)/3 = (y − 1)/2 = z = 1 ✓.
+3. α = 1/4: midpoint (7/8, −3/32, 5/16) is not on the line ✗.
+4. Only α = 3.
+Answer: (1)",Image of a point in a line.,The trap is keeping α = 1/4 without checking the midpoint. Revise 'Three Dimensional Geometry'.,
+15,1,sympy,Dot A with u and with v. Note u·(u × v) = v·(u × v) = 0.,|u × v| = √3/2 with an acute angle gives u·v = 1/2. So A·u = λ + 1/2 and A·v = λ/2 + 1.,"1. Eliminate the constants: (4/3)(A·u) − (2/3)(A·v) = (4/3)λ + 2/3 − λ/3 − 2/3 = λ.
+Answer: (1)",Dot and cross products of unit vectors.,Revise 'Vector Algebra'. Dotting with each vector is the standard way to pull out coefficients.,
+16,2,sympy,Put x = 0 in the functional equation.,f(y) = f(0) + 2y^{2} + y = 2y^{2} + y − 1. Substitute back to find α.,"1. f(x) = 2x^{2} + x − 1, and f(1) = 2 ✓.
+2. f(x + y) − f(x) − 2y^{2} − y = 4xy, so α = 4.
+3. Σ_{n=1..5}(4 + 2n^{2} + n − 1) = 2(55) + 15 + 15 = 140.
+Answer: (2)",Functional equations.,Revise 'Relations and Functions'. Substituting 0 is usually the first move.,
+17,3,sympy,Fix c. Then a + b = 22 − 2c has 23 − 2c solutions in non-negative integers.,c goes from 0 to 11.,"1. n(A) = Σ_{c=0..11}(23 − 2c) = 12 × 23 − 2 × 66 = 144.
+Answer: (3)",Counting non-negative integer solutions.,Revise 'Permutations and Combinations'. Fixing the variable with the coefficient 2 is the easy route.,
+18,3,sympy,Both curves are parabolas opening along the x-axis. Integrate with respect to y.,x = −3y^{2} and x = 1 − 4y^{2} meet at y = ±1. Area = ∫ from −1 to 1 of [(1 − 4y^{2}) − (−3y^{2})] dy.,"1. Area = ∫ from −1 to 1 of (1 − y^{2}) dy = 2 − 2/3 = 4/3.
+Answer: (3)",Area between curves (horizontal strips).,"Revise 'Application of Integrals'. When curves are x = f(y), integrate in y.",
+19,4,sympy,This is linear in y. Try to split the coefficient of y into two simple log-derivatives.,P = 3x^{2}/(x^{3} + 2) + 2e^{−2x}/(2 + e^{−2x}). So the integrating factor is (x^{3} + 2)/(2 + e^{−2x}).,"1. d/dx[y·(x^{3} + 2)/(2 + e^{−2x})] = x^{3} + 2.
+2. y(x^{3} + 2)/(2 + e^{−2x}) = x^{4}/4 + 2x + C. At x = 0: (3/2)(2/3) = 1 = C.
+3. At x = 1: y × 3/(2 + e^{−2}) = 13/4, so y(1) = (13/12)(2 + e^{−2}).
+Answer: (4), α = 13/12",Linear differential equations with a tricky integrating factor.,Splitting P into f′/f pieces is the key. Revise 'Differential Equations'.,
+20,4,sympy,cot^{−1}(1 + x + x^{2}) = tan^{−1}(1/(1 + x(x + 1))). Does that look like a tan(A − B) form?,tan^{−1}[((x + 1) − x)/(1 + x(x + 1))] = tan^{−1}(x + 1) − tan^{−1}x. Use ∫tan^{−1}u du = u tan^{−1}u − ½ln(1 + u^{2}).,"1. ∫ from 0 to 1 = ∫ from 1 to 2 of tan^{−1}u du − ∫ from 0 to 1 of tan^{−1}x dx.
+2. = [2tan^{−1}2 − ½ln5 − π/4 + ½ln2] − [π/4 − ½ln2].
+3. = 2tan^{−1}2 − ½ln(5/4) − π/2.
+Answer: (4)",Telescoping inverse-tan integrals.,Revise 'Inverse Trigonometric Functions' (tan^{−1}a − tan^{−1}b) and 'Integrals' (by parts).,
+21,944,sympy,Count the 3-term increasing APs from 1 to 31: choose the first term a and the difference d with a + 2d ≤ 31.,For each d from 1 to 15 there are 31 − 2d choices of a. Total ways to choose 3 dates = ^{31}C_{3}.,"1. APs = Σ_{d=1..15}(31 − 2d) = 465 − 240 = 225.
+2. ^{31}C_{3} = 4495. Probability = 225/4495 = 45/899.
+3. a + b = 944.
+Answer: 944",Probability of an AP among chosen numbers.,Revise 'Probability'. Counting by the common difference is the clean way.,
+22,4,sympy,Write g on x < 0 and on x ≥ 0 separately. f(|x|) always uses the x ≥ 0 formula.,"g = (x^{2} − 5|x| + 6) + |f(x)|. At x = 0, |f| jumps from e^{−1} to 6. For x ≥ 0, |x^{2} − 5x + 6| has corners at 2 and 3.","1. Discontinuous only at x = 0: α = 1.
+2. Not differentiable at x = 0 (discontinuous), 2 and 3 (corners of |(x − 2)(x − 3)|): β = 3.
+3. α + β = 4.
+Answer: 4",Continuity and differentiability of piecewise and modulus functions.,Remember a discontinuous point is also non-differentiable. Revise 'Continuity and Differentiability'.,
+23,9,sympy,"x − √3|y| = α gives two half-lines from P(α, 0) at ±30° to the x-axis. What triangle is PAB?","PA = PB = α with angle 60° between them, so PAB is equilateral. Q is the midpoint of AB on the bisector (the x-axis).","1. PQ = α cos 30° = α√3/2 = 9/2, so α = 3√3.
+2. Circumradius of an equilateral triangle = side/√3 = 3.
+3. α^{2}/R = 27/3 = 9.
+Answer: 9",Geometry of half-lines; equilateral triangle.,A quick sketch makes it obvious. Revise 'Straight Lines'.,
+24,16,sympy,"Take A and C as (4t^{2}, 8t) on the parabola. B is t = 1. Use the chord slope 2/(t_{1} + t_{2}).","Right angle at B: (2/(t_{1} + 1))(2/(t_{2} + 1)) = −1, so (t_{1} + 1)(t_{2} + 1) = −4. Write the centroid in terms of s = t_{1} + t_{2}.","1. t_{1}t_{2} = −5 − s and t_{1}^{2} + t_{2}^{2} = s^{2} + 2s + 10.
+2. Centroid: y = 8(1 + s)/3 and x = (4(s + 1)^{2} + 40)/3.
+3. Eliminate s: x = 3y^{2}/16 + 40/3, i.e. y^{2} = (16/3)(x − 40/3). Latus rectum = 16/3.
+4. Three times = 16.
+Answer: 16",Parametric points on a parabola; locus of a centroid.,"Revise 'Conic Sections': the parabola y^{2} = 4ax with point (at^{2}, 2at).",
+25,5,sympy,"Evaluate the first integral directly, then differentiate the whole equation.",∫ from 0 to x of tan(t − x) dt = ln cos x. Differentiating: f′ = −tan x − f tan x.,"1. f′ = −tan x (1 + f). With g = 1 + f: g′/g = −tan x, so g = C cos x. f(0) = 0 gives C = 1.
+2. f = cos x − 1.
+3. f″(π/6) = −√3/2, 12f′(−π/6) = 12 × (1/2) = 6, f(π/6) = √3/2 − 1.
+4. Sum = 5.
+Answer: 5",Integral equations solved by differentiating.,Revise 'Differential Equations' and the Leibniz rule for differentiating integrals.,
+26,1,conceptual,"Write each quantity in terms of a formula you know: E = hν, eV_{0} = KE, φ is an energy, ν_{0} is a frequency.",h = E/ν = ML^{2}T^{−1}. V = W/q = ML^{2}T^{−3}A^{−1}. Energy = ML^{2}T^{−2}. Frequency = T^{−1}.,"1. A-III, B-IV, C-I, D-II.
+Answer: (1)",Dimensions of photoelectric quantities.,Revise 'Units and Measurements'.,
+27,3,arithmetic,Work relative to car A.,"The stone leaves B with speed v relative to B, so its ground speed is 80 + v. Relative to A it is 80 + v − 100.","1. 5 m/s = 18 km/h.
+2. 80 + v − 100 = 18, so v = 38 km/h.
+Answer: (3)",Relative velocity in one dimension.,Revise 'Motion in a Straight Line' (relative velocity). Convert m/s to km/h (× 18/5).,
+28,4,arithmetic,Constant force from rest: r = ½at^{2}.,"a = F/m = (50, 100) m/s^{2}. At t = 2 s: r = (100, 200) m.","1. 2x = 100, so x = 50; 5y = 200, so y = 40.
+2. x : y = 5 : 4.
+Answer: (4)",Kinematics under constant force.,Revise 'Laws of Motion'. Convert 100 g to 0.1 kg.,
+29,2,arithmetic,The angle with the horizontal is given by tan θ = v_{y}/v_{x}.,v_{x} = 24 and v_{y} = 43.6 − 9.8t.,"1. At t = 2: v_{y} = 24, so tan θ = 1 and θ = 45°.
+Answer: (2)",Velocity direction of a projectile.,Revise 'Motion in a Plane'.,
+30,3,arithmetic,g at height h: g′ = gR^{2}/(R + h)^{2}.,g/9 means (R + h)^{2} = 9R^{2}.,"1. R + h = 3R, so h = 2R.
+Answer: (3)",Variation of g with height.,The trap √3R comes from forgetting the square. Revise 'Gravitation'.,
+31,4,arithmetic,Find the tension in each string first. String A holds both blocks.,T_{A} = 3Mg and T_{B} = 2Mg. Elongation = TL/(AY).,"1. ΔL_{A}/ΔL_{B} = (3/2) × (L_{A}/L_{B}) × (Y_{B}/Y_{A}) = 1.5 × 2 × 2 = 6.
+Answer: (4)",Elongation of wires under load.,The usual slip is taking T_{A} = Mg. Revise 'Mechanical Properties of Solids'.,
+32,2,arithmetic,Use continuity: A_{1}v_{1} = (total outlet area) × v_{2}.,Hose 30 cm^{2} at 0.5 m/s. Outlets: 10 × 15 mm^{2} = 1.5 cm^{2}.,"1. 30 × 0.5 = 1.5 × v_{2}, so v_{2} = 10 m/s.
+Answer: (2)",Equation of continuity.,Convert mm^{2} to cm^{2} carefully (1 cm^{2} = 100 mm^{2}). Revise 'Mechanical Properties of Fluids'.,
+33,3,conceptual,Average KE of a molecule depends only on temperature. Does v_{rms} depend on mass?,KE_{avg} = (3/2)kT; v_{rms} = √(3RT/M).,"1. A: same KE means same T. True.
+2. R: v_{rms} depends on M, so H_{2} is faster. False.
+Answer: (3)",Kinetic theory: KE and r.m.s. speed.,Revise 'Kinetic Theory'.,
+34,4,conceptual,"Linear expansion: ΔL = L α ΔT, where L is the length at the start of that step.",T_{3} − T_{2} = T_{2} − T_{1} = ΔT. The second step starts from length L + ΔL_{1}.,"1. ΔL_{1} = LαΔT.
+2. ΔL_{2} = (L + ΔL_{1})αΔT = LαΔT(1 + αΔT) = ΔL_{1}(1 + αΔT).
+Answer: (4)",Thermal expansion.,Revise 'Thermal Properties of Matter'.,
+35,1,arithmetic,The axis A is a tangent in the plane of the disc. Find I about it.,I about a diameter = MR^{2}/4. Parallel axes: I_{A} = MR^{2}/4 + MR^{2} = 5MR^{2}/4. Physical pendulum: T = 2π√(I/(Mgd)) with d = R.,"1. T = 2π√((5MR^{2}/4)/(MgR)) = 2π√(5R/4g).
+Answer: (1)",Physical pendulum; parallel axis theorem.,Revise 'Oscillations' and 'Rotational Motion'.,
+36,1,arithmetic,"For a dipole in a field, ω = √(pE/I). How does the net field change?","Net field = E_{0}(î + 2ĵ + 2k̂), with magnitude 3E_{0}. So ω becomes √3 times.","1. ω′/ω = √3 ≈ 1.73.
+2. Change ≈ 73%.
+Answer: (1)",Oscillation of a dipole in an electric field.,Revise 'Electric Charges and Fields': torque on a dipole.,
+37,1,arithmetic,Follow the wires: the top wire joins A to the node between C_{2} and C_{3}. Name the nodes and redraw.,C_{1} and C_{2} both lie between A and node N_{1}: parallel (2 μF). C_{4} goes from N_{1} to B. C_{3} goes directly from A to B.,"1. (C_{1} ∥ C_{2}) = 2 μF in series with C_{4} = 2 μF gives 1 μF.
+2. In parallel with C_{3} = 1 μF: total 2 μF.
+Answer: (1)",Capacitor networks (node method).,Label the nodes and redraw: wires make some points the same node. Revise 'Electrostatic Potential and Capacitance'.,
+38,2,conceptual,"Check each statement on its own, then ask whether R explains A.","Inside a conductor in electrostatics E = 0, so net charge stays on the surface. Between capacitor plates there is a field.","1. A: true. R: true (charges between the plates feel qE).
+2. R is about the region between plates, not the inside of a conductor, so it is not the explanation.
+Answer: (2)",Conductors in electrostatics.,Revise 'Electrostatic Potential and Capacitance'.,
+39,2,arithmetic,B = μ_{0}μ_{r}H.,H = B/(μ_{0}μ_{r}) = 1/(4π × 10^{−7} × 400).,"1. H = 1/(1.6π × 10^{−4}) = 10^{5}/(16π) A/m.
+2. α = 1/(16π).
+Answer: (2)",Magnetic intensity and permeability.,Revise 'Magnetism and Matter'.,
+40,1,conceptual,The wave travels along +x (phase 2πνt − 2πx/λ). E × B must point along +x.,|E| = cB_{0} = νλB_{0}. B is along ĵ; (−k̂) × ĵ = î.,"1. E = −νλB_{0} sin(2πνt − 2πx/λ) k̂.
+Answer: (1)",E and B directions in an EM wave.,Revise 'Electromagnetic Waves'.,
+41,4,arithmetic,Lens maker's formula with R_{1} = R and R_{2} = −R.,1/f = (μ − 1)(2/R) = 0.8/R.,"1. f/R = 1/0.8 = 1.25.
+Answer: (4)",Lens maker's formula.,Revise 'Ray Optics'.,
+42,3,arithmetic,Unpolarised light loses half at the first polariser. Then use Malus's law for each angle step.,Without the third: I_{0}/2 × cos^{2}60°. With it: I_{0}/2 × cos^{2}30° × cos^{2}30°.,"1. Without: I_{0}/8. With: I_{0}/2 × 9/16 = 9I_{0}/32.
+2. Ratio = (9/32)/(1/8) = 9/4.
+Answer: (3)",Malus's law with several polarisers.,"Revise 'Wave Optics'. Use the angle between successive axes, not between each axis and the horizontal.",
+43,4,conceptual,"Rebounding needs a very close approach to a tiny, massive nucleus. Which statements describe that?","The nucleus is tiny (A); only a few particles have a very small impact parameter (C), i.e. nearly head-on (E).","1. A, C and E are correct. B (equal charge) and D (some much faster) are false.
+Answer: (4)",Rutherford scattering.,Revise 'Atoms'.,
+44,1,conceptual,λ = h/p and p = √(2mqV). Both particles have the same charge magnitude and V.,λ ∝ 1/√m.,"1. λ_{e}/λ_{p} = √(m_{p}/m_{e}).
+Answer: (1)",de Broglie wavelength of accelerated charges.,Revise 'Dual Nature of Matter and Radiation'.,
+45,3,conceptual,"In reverse bias, which carriers carry the tiny current: majority or minority?",The reverse saturation current is due to minority carriers.,"1. A: true (small, nearly constant reverse current, then breakdown).
+2. R: false (it is minority carriers).
+Answer: (3)",Reverse-biased p-n junction.,Revise 'Semiconductor Electronics'.,
+46,300,arithmetic,The maximum safe current through the Zener = P_{max}/V_{Z}.,I_{max} = 0.5/10 = 0.05 A. The series resistor drops 25 − 10 = 15 V.,"1. R_{min} = 15/0.05 = 300 Ω.
+Answer: 300",Zener diode current limiting.,Revise 'Semiconductor Electronics'.,
+47,8,arithmetic,"The farthest point on level ground is the maximum range, at 45°.",R_{max} = u^{2}/g.,"1. u^{2} = 6.4 × 10 = 64, so u = 8 m/s.
+Answer: 8",Maximum range of a projectile.,Revise 'Motion in a Plane'.,
+48,12,arithmetic,"P is on the axis of one magnet and on the equatorial line of the other, 5 cm from each.",Axial: B = (μ_{0}/4π)(2M/d^{3}); equatorial: B = (μ_{0}/4π)(M/d^{3}). They are perpendicular.,"1. Axial: 10^{−7} × 2 × 3√5/(0.05)^{3} = 4.8√5 × 10^{−3} T. Equatorial: 2.4√5 × 10^{−3} T.
+2. |B| = √5 × 10^{−3} × √(4.8^{2} + 2.4^{2}) = √5 × 2.4√5 × 10^{−3} = 12 × 10^{−3} T.
+Answer: 12",Fields of bar magnets on axial and equatorial lines.,Revise 'Magnetism and Matter'.,
+49,314,arithmetic,"τ = NIAB sin θ, where θ is the angle between the coil's axis and B.","N = 125, I = 1 A, A = π(0.02)^{2}, B = 0.4 T, θ = 30°.","1. τ = 125 × 3.14 × 4×10^{−4} × 0.4 × 0.5 = 0.0314 N m = 314 × 10^{−4} N m.
+Answer: 314",Torque on a current loop.,Revise 'Moving Charges and Magnetism'.,
+50,5625,arithmetic,A sheet of thickness t adds an extra path (μ − 1)t. The central fringe moves by that many wavelengths.,(μ − 1)t = 7λ.,"1. t = 7 × 450/0.56 nm = 5625 nm.
+Answer: 5625",Fringe shift due to a thin sheet in YDSE.,Revise 'Wave Optics'.,
+51,4,arithmetic,Convert each to moles of atoms.,"Cyclohexane C_{6}H_{12}: 18 atoms. Sucrose C_{12}H_{22}O_{11}: 45 atoms, M = 342. At STP (1 bar), 1 mol of gas = 22.7 L.","1. A: 2 × 18 = 36 mol atoms. B: 2 mol × 45 = 90. C: 90.8/22.7 = 4 mol H_{2}, so 8 mol atoms.
+2. B > A > C.
+Answer: (4)",Mole concept.,Revise 'Some Basic Concepts of Chemistry'. The current STP (1 bar) uses 22.7 L/mol.,
+52,2,arithmetic,Bohr radius r ∝ n^{2}/Z.,"Compute n^{2}/Z for each: A 1/1, B 1/2, C 4/2, D 1/3, E 4/4.","1. A and E both give 1.
+Answer: (2)",Bohr radius of hydrogen-like species.,Revise 'Structure of Atom'.,
+53,3,conceptual,π orbitals come from sideways overlap of p orbitals perpendicular to the axis. Antibonding means opposite phases meet.,Look for two side-by-side p lobes with opposite shading facing each other (a node between the nuclei).,"1. Option 3 shows p lobes perpendicular to z with opposite phases on the two atoms: π*.
+2. Option 4 is head-on overlap (σ), and option 2 shows in-phase lobes (π bonding).
+Answer: (3)",Shapes of molecular orbitals.,Revise 'Chemical Bonding': MO theory.,
+54,3,conceptual,Compare effective concentrations: i × C on each side.,"K_{4}[Fe(CN)_{6}]: i = 5, so 0.5 M. FeCl_{3}: i = 4, so 0.4 M. Ions don't cross a semipermeable membrane.","1. Side y is less concentrated: hypotonic. True.
+2. No blue colour (ions can't meet), ions don't pass, and reversing osmosis needs more than the osmotic pressure difference, not 'any' pressure.
+Answer: (3)",Osmosis with electrolytes (van't Hoff factor).,Revise 'Solutions'.,
+55,2,arithmetic,How much of the acid does 14.2 mL of NaOH neutralise?,"The full amount needs 28.4 mL, so 14.2 mL neutralises half: [salt] = [acid].","1. pH = pK_{a} + log 1 = 4.75.
+Answer: (2)",Buffer at half-neutralisation.,Revise 'Equilibrium': the Henderson equation.,
+56,3,conceptual,Name each mechanism: who attacks whom?,Williamson: alkoxide (nucleophile) on an alkyl halide. Friedel–Crafts: carbocation on the ring. Br_{2} with styrene: addition to C=C. Toluene + Cl_{2} in light: radicals.,"1. A-III, B-IV, C-I, D-II.
+Answer: (3)",Reaction mechanisms.,"Revise 'Haloalkanes', 'Hydrocarbons' and 'Ethers'.",
+57,3,conceptual,The second IE is always larger than the first: it removes an electron from a positive ion.,"IE values are positive. Mg's second electron is still from 3s, so expect roughly double the first.","1. Only +1450 kJ/mol is positive and larger than 737.
+Answer: (3)",Successive ionisation enthalpies.,Revise 'Classification of Elements and Periodicity'.,
+58,3,conceptual,Pauling electronegativity of Ge is 1.8 (NCERT). Which group 13 element has 1.8?,"Tl (1.8). For Tl, the inert pair effect makes Tl^{+} more stable than Tl^{3+}.","1. E = Tl. Tl^{3+} tends to gain electrons, so it is an oxidising agent (B) and E°(Tl^{3+}/Tl) is positive (D).
+2. Tl^{3+} is less stable than Tl^{+}, so C is false; it is not a reducing agent, so A is false.
+Answer: (3)",Inert pair effect in group 13.,Revise 'p-Block Elements' (group 13): NCERT electronegativity values and the inert pair effect.,
+59,4,conceptual,"Write the 4f counts: Eu 4f^{7}, Gd 4f^{7}5d^{1}, Dy 4f^{10}, Ho 4f^{11}, Yb 4f^{14}, Hf 4f^{14}5d^{2}, Lu 4f^{14}5d^{1}, Tm 4f^{13}.",Find the pairs with equal 4f counts.,"1. Eu and Gd: 7 and 7 ✓. Yb and Hf: 14 and 14 ✓.
+2. Dy/Ho and Lu/Tm differ.
+Answer: (4), A and C",Electronic configurations of lanthanides.,Revise 'd- and f-Block Elements'. Gd keeps 4f^{7} by putting one electron in 5d.,
+60,1,conceptual,"Ni^{2+} is d^{8}. In both octahedral and tetrahedral fields, how many electrons are unpaired?",d^{8} has 2 unpaired electrons in octahedral and in tetrahedral complexes. Absorption frequency ∝ Δ: en > NH_{3} > Cl^{−} (and Δ_{t} is smaller).,"1. Unpaired electrons: 2, 2, 2.
+2. Frequency order: (A) > (C) > (B).
+Answer: (1)",Crystal field theory for Ni(II) complexes.,Revise 'Coordination Compounds'.,
+61,3,disputed,Bond length rises as bond order falls. Which C−O bond has the most single-bond character?,Acetone has a normal C=O. In acetate the negative charge is shared over two O atoms (bond order 1.5). Tropone's C=O is polarised by the aromatic tropylium form.,"1. Acetate: the C−O bond order is 1.5, so it is the longest.
+2. Tropone: the C=O is partly single (aromatic C^{+}−O^{−} form), so it is longer than acetone's.
+3. Claude's order: z > x > y.
+Answer: (3)",Resonance and bond length.,Revise resonance in 'Basic Principles of Organic Chemistry'.,"DISPUTED: NTA's final key is option 4 (x > z > y). Claude's reasoning gives z > x > y (option 3): acetate's C−O has bond order 1.5 and typical lengths are about 1.26 Å, versus about 1.24 Å reported for tropone. Not certain; the key is unchanged. Please ask a chemistry teacher."
+62,3,conceptual,Highest Mn fluoride: MnF_{4} (+4). Highest Mn oxide: Mn_{2}O_{7} (+7). So |x| = 3.,"Find the ions with 3 unpaired electrons: Sc^{3+} d^{0}, Zn^{2+} d^{10}, V^{2+} d^{3}, Fe^{2+} d^{6}, Co^{2+} d^{7}.","1. V^{2+} (d^{3}): 3 unpaired. Co^{2+} (d^{7}, high spin): 3 unpaired. Fe^{2+} has 4.
+Answer: (3), C and E",Oxidation states of Mn; unpaired electrons.,Revise 'd- and f-Block Elements'. F can't stabilise Mn(VII) the way oxygen does (multiple bonding).,
+63,2,conceptual,A straight line [R] vs t means zero order. Curves 2 and 3 are not zero order.,"If 2 and 3 have the same order, the one that falls faster has the larger k.","1. Not all the same order (1 is zero order). 3 falls faster than 2, so k_{3} > k_{2} if the orders match. True.
+2. k for zero order has units mol L^{−1} s^{−1}, not s^{−1}. HI on gold is zero order (like reaction 1, not 2).
+Answer: (2)",Concentration–time graphs and order.,Revise 'Chemical Kinetics'.,
+64,2,arithmetic,Follow the steps: Br_{2} adds to C=C; excess NaNH_{2} does a double elimination to an alkyne; CH_{3}I alkylates the terminal alkyne; Na/NH_{3} reduces it.,Styrene → dibromide → phenylacetylene (as its anion) → PhC≡CCH_{3} → trans-PhCH=CHCH_{3}.,"1. Y = trans-1-phenylpropene, C_{9}H_{10}.
+2. M = 108 + 10 = 118 g/mol.
+Answer: (2)",Alkyne synthesis and Birch-type (Na/NH_{3}) reduction.,Revise 'Hydrocarbons': alkynes from dihalides; Na/NH_{3} gives trans-alkenes.,
+65,2,conceptual,Look carefully at the four groups on the carbon. Are they all different?,CH_{3} and Me are the same group. A carbon with two identical groups is not a stereocentre.,"1. The carbon carries Br, Cl and two methyls, so it is achiral.
+2. The two drawings are the same molecule.
+Answer: (2)",Chirality: a stereocentre needs four different groups.,A neat trap: the same group written two ways. Revise 'Haloalkanes' (stereochemistry).,
+66,4,conceptual,"Carboxylic acids are stronger than phenols. Within each type, an EWG (NO_{2}) increases acidity and an EDG (OCH_{3}) decreases it.",p-Nitrobenzoic > benzoic > p-nitrophenol > phenol > p-methoxyphenol.,"1. D > E > B > A > C.
+Answer: (4)",Acidity of phenols and carboxylic acids.,"Revise 'Alcohols, Phenols and Ethers' and 'Carboxylic Acids'.",
+67,3,conceptual,The strongest conjugate acid comes from the weakest base.,"−NO_{2} withdraws electrons from N, making p-nitroaniline the weakest base.","1. p-Nitroaniline gives the strongest conjugate acid.
+Answer: (3)",Basicity of substituted anilines.,Revise 'Amines'.,
+68,3,conceptual,HNO_{3} oxidises both ends to COOH. Which tetrose gives a meso (optically inactive) diacid?,Meso tartaric acid needs both OH groups on the same side in the Fischer projection. D means the lowest OH is on the right.,"1. D-erythrose (both OH on the right) gives meso-tartaric acid.
+Answer: (3)",Fischer projections; meso compounds from sugars.,"Revise 'Biomolecules' (Fischer projections, D/L) and stereochemistry (meso).",
+69,4,conceptual,H_{2}S in NH_{4}OH is the group IV reagent. Which of these ions is in group IV?,"Group II: Pb^{2+}, Cu^{2+} (H_{2}S in acid). Group III: Fe^{3+} (hydroxide). Group IV: Mn^{2+} (MnS).","1. Mn^{2+} precipitates as MnS.
+2. The highest oxidation state of Mn is +7.
+Answer: (4)",Group reagents in salt analysis.,Revise salt analysis in 'Principles Related to Practical Chemistry'.,
+70,1,conceptual,Match each functional group with its test.,Lucas: alcohols. Hinsberg: amines. Tollens: aldehydes. Phthalein dye: phenols.,"1. A-III, B-I, C-IV, D-II.
+Answer: (1)",Tests for functional groups.,Revise 'Principles Related to Practical Chemistry'.,
+71,3,arithmetic,"A bomb calorimeter measures ΔU. Convert it to ΔH, then use Hess's law.",Moles of ethanol = 3.365/46. ΔH_{c} = ΔU_{c} + Δn_{g}RT with Δn_{g} = 2 − 3 = −1.,"1. ΔU_{c} = −99.472/0.07315 ≈ −1359.8 kJ/mol; ΔH_{c} ≈ −1362.3 kJ/mol.
+2. ΔH_{f} = 2(−393.5) + 3(−285.8) − (−1362.3) ≈ −282 kJ/mol.
+3. |ΔH_{f}| ≈ 2.82 × 10^{2}, i.e. 3 to the nearest integer.
+Answer: 3",Bomb calorimetry (ΔU to ΔH) and enthalpy of formation.,"Revise 'Thermodynamics'. Water is liquid here, so count only gas moles in Δn_{g}.",
+72,2474,arithmetic,Make a table: start with 1 mol of N_{2}O_{5}; 50% dissociates.,"At equilibrium: N_{2}O_{5} 0.5, N_{2}O_{4} 0.5, O_{2} 0.25 (total 1.25). Partial pressures at 2 atm: 0.8, 0.8, 0.4.","1. K_{p} = (0.8)^{2}(0.4)/(0.8)^{2} = 0.4.
+2. ΔG° = −2.303RT log K_{p} = −2.303 × 8.314 × 323 × (−0.40) ≈ 2474 J/mol.
+Answer: 2474",ΔG° from an equilibrium constant.,Revise 'Equilibrium' and 'Thermodynamics'. log 0.4 = 2 log 2 − 1 = −0.40.,
+73,2,arithmetic,M^{x+}/M (+0.15 V) is the cathode and Fe is the anode. Use the Nernst equation to find n.,E°_{cell} = 0.15 + 0.036 = 0.186 V. E = E° − (0.059/n) log Q with log Q = −2.,"1. 0.2057 = 0.186 + 0.118/n, so n = 6.
+2. n = lcm(x, 3) = 6 for a p-block metal ion M^{x+}, so x = 2.
+Answer: 2",Nernst equation; electrons transferred.,Revise 'Electrochemistry'.,
+74,7,arithmetic,"For first order, each equal time interval cuts the concentration by the same factor.",0.65 → 0.00065 is a factor of 1000 in 20 min. 0.65 → 0.065 is a factor of 10.,"1. A factor of 10 takes one third of the time taken for a factor of 1000.
+2. x = 20/3 ≈ 7 min.
+Answer: 7",First-order kinetics (logarithmic decay).,Revise 'Chemical Kinetics': t = (2.303/k) log([A]_{0}/[A]).,
+75,435,arithmetic,Each mole of S ends up as 1 mole of BaSO_{4}.,Moles of S = 0.4813/233. Mass of compound = 2.0×10^{−3} × 76 g.,"1. S = 2.066×10^{−3} mol = 0.0661 g. Compound = 0.152 g.
+2. %S = 43.5% = 435 × 10^{−1}%.
+Answer: 435",Estimation of sulphur.,Revise 'Purification and Characterisation of Organic Compounds'.,
