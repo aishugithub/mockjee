@@ -146,6 +146,14 @@ def checks():
                 (Rational(15, 8), Rational(15, 8), Rational(5, 2)), (Rational(5, 2), Rational(5, 2), Rational(15, 8))].index((I1, I2, I3)) + 1
     c[34] = q34
 
+    def q35():
+        h, m, v0, e, E0, t = symbols('h m v0 e E0 t', positive=True)
+        v = v0 + (-e) * (-2 * E0) / m * t            # force on the electron = (-e)(-2E0) along +x
+        lam0 = h / (4 * m * v0)
+        opts = [4 * lam0 / (1 - E0 * e * t / (2 * m * v0)), 4 * lam0 / (1 + E0 * e * t / (2 * m * v0)),
+                4 * lam0 / (1 + 2 * E0 * e * t / (m * v0)), 4 * lam0 / (1 - 2 * E0 * e * t / (m * v0))]
+        return opt(h / (m * v), opts)
+    c[35] = q35
     c[36] = lambda: nearest(16 / (3 * 1.0973e7) * 1e9, [121, 242, 486, 974])
     c[37] = lambda: nearest(4 / 6e-6 / 1e6, [0.58, 0.67, 0.82, 0.75])
     c[38] = lambda: nearest(15 / (9 / 3 + 9), [12.5, 1.25, 7.5, 5])
