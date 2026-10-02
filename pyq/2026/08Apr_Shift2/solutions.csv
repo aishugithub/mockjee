@@ -1,0 +1,276 @@
+q,claude_answer,check,hint1,hint2,solution,concept,revise,note
+1,1,sympy,"1 + ab > 0 with integers means ab ≥ 0. Count those pairs. For II, look for a chain through 0.","Pairs with a = 0 or b = 0, plus pairs with a and b non-zero and of the same sign. For transitivity, try (−1, 0) and (0, 1).","1. a = 0 or b = 0: 9 pairs. Both positive: 4. Both negative: 4. Total 17, so I is true.
+2. (−1, 0) and (0, 1) are in R, but (−1, 1) gives 1 − 1 = 0, not > 0. Not transitive, so II is false.
+Answer: (1)",Counting a relation; checking an equivalence relation.,Revise 'Relations and Functions'. Zero is often the element that breaks transitivity.,
+2,2,sympy,"The first equation is a circle and the second an ellipse. Find the ellipse's centre, a and b.","Foci (3, 5) and (5, 11): centre (4, 8), 2c = √40. 2a = 4√5. Then b² = a² − c².","1. a = 2√5, c = √10, so b² = 20 − 10 = 10 and b = √10.
+2. The circle has the same centre (4, 8) and radius √10 = b.
+3. It touches the ellipse only at the two ends of the minor axis: 2 points.
+Answer: (2)",Loci in the complex plane: circle and ellipse.,Revise 'Complex Numbers' (loci) and 'Conic Sections' (ellipse from the focal-distance definition).,
+3,3,sympy,"For infinitely many solutions the coefficient determinant must be 0, and the system must stay consistent.","det = λ − 6. With λ = 6, check whether row 3 is a combination of rows 1 and 2.","1. λ = 6. Row 1 + row 2 = (2, 3, 6), which is row 3's left side.
+2. So μ must be 6 + 10 = 16.
+3. λ + μ = 22.
+Answer: (3)",Consistency of a 3×3 linear system.,"Revise 'Determinants' (solving systems, infinitely many solutions).",
+4,3,sympy,"Write adj(A) entry by entry (transpose of the cofactor matrix), then add the given matrix.","adj(A) = [[15, 3, −6], [−10, 5α, 4], [8, −4α, 3α − 2]] and det A = 15α + 6.","1. B = [[16, 3, −6], [−10, 0, 4], [8, 0, α − 2]]. Expand along column 2: det B = −3(−10(α − 2) − 32) = 30α + 36.
+2. 30α + 36 = 66 gives α = 1, so det A = 21.
+3. det(adj A) = (det A)² = 441.
+Answer: (3)",Adjoint of a matrix; det(adj A) = (det A)^{n−1}.,Revise 'Determinants' (adjoint and its properties).,
+5,1,sympy,"Group the terms in pairs: (3 + 4), (8 + 9), (13 + 14), … What kind of sequence do the pair sums form?","Pair sums 7, 17, 27, … form an AP with difference 10; 40 terms make 20 pairs.","1. α = (20/2)(2 × 7 + 19 × 10) = 2040, so α/1020 = 2.
+2. (tan β)² is a root of x² + x − 2 = 0, i.e. 1 or −2. A square cannot be −2, so tan²β = 1 and β = π/4.
+3. sin²β + 3cos²β = 1/2 + 3/2 = 2.
+Answer: (1)",AP sums; quadratic roots; trigonometric values.,Revise 'Sequences and Series' (grouping terms).,
+6,2,sympy,This is Bayes' theorem: P(bus | late) = P(bus and late)/P(late).,P(late) = (2/5)(1/5) + (1/5)(1/3) + (2/5)(1/4).,"1. P(late) = 2/25 + 1/15 + 1/10 = (24 + 20 + 30)/300 = 74/300.
+2. P(bus and late) = 24/300.
+3. P(bus | late) = 24/74 = 12/37.
+Answer: (2)",Bayes' theorem.,Revise 'Probability' (total probability and Bayes' theorem).,
+7,3,sympy,Recover Σx and Σx² for each group from its mean and variance.,"Σx² = n(variance + mean²). Group 1: Σx = 4, Σx² = 56. Group 2: Σx = 12, Σx² = 30.","1. Combined: n = 10, Σx = 16, Σx² = 86.
+2. Variance = 8.6 − 1.6² = 8.6 − 2.56 = 6.04.
+Answer: (3)",Combined variance of two groups.,Revise 'Statistics'.,
+8,3,sympy,"Absorb the 1/(2k + 1) into the binomial coefficient: C(12, r)/(r + 1) = C(13, r + 1)/13.","The sum becomes (1/13) Σ C(13, 2k + 1)2^{2k+1} for k = 1 to 6. The full odd-index sum is ((1 + 2)^{13} − (1 − 2)^{13})/2.","1. Odd-index sum from k = 0: (3^{13} + 1)/2. Remove the k = 0 term C(13, 1) × 2 = 26.
+2. 26 × (1/13) × ((3^{13} + 1)/2 − 26) = 3^{13} + 1 − 52 = 3^{13} − 51.
+3. α = 51.
+Answer: (3)","Binomial coefficient sums (odd terms, absorbing 1/(r + 1)).","Revise 'Binomial Theorem'. The identity C(n, r)/(r + 1) = C(n + 1, r + 1)/(n + 1) is worth remembering.",
+9,2,sympy,Each book chooses a bag: 3⁴ ways in all. Remove the ways that leave some bag empty.,"Inclusion–exclusion: 3⁴ − C(3, 1)2⁴ + C(3, 2)1⁴.","1. 81 − 48 + 3 = 36.
+Answer: (2)",Distributing distinct objects into distinct boxes with none empty (onto functions).,Revise 'Permutations and Combinations' (inclusion–exclusion).,
+10,2,sympy,Find the common point of the two lines first.,"They meet at (1/7, 1/7). Write the line as x/a + y/b = 1; the midpoint of PQ is (a/2, b/2).","1. 1/(7a) + 1/(7b) = 1.
+2. Put a = 2h, b = 2k: 1/(14h) + 1/(14k) = 1, so h + k = 14hk.
+3. Locus: x + y − 14xy = 0.
+Answer: (2)",Locus of a midpoint; intercept form of a line.,Revise 'Straight Lines'.,
+11,2,sympy,"Take P(t_{1}², 2t_{1}) and Q(t_{2}², 2t_{2}). What does OP ⊥ OQ say about t_{1}t_{2}?","Slopes 2/t_{1} and 2/t_{2} multiply to −1, so t_{1}t_{2} = −4. Midpoint: h = (t_{1}² + t_{2}²)/2, k = t_{1} + t_{2}.","1. k² = t_{1}² + t_{2}² + 2t_{1}t_{2} = 2h − 8.
+2. Locus y² = 2(x − 4), a parabola with 4a = 2.
+3. Latus rectum = 2.
+Answer: (2)",Parametric points on a parabola; locus of a midpoint.,"Revise 'Conic Sections' (parabola, parametric form).",
+12,1,sympy,Estimate each angle in degrees. sin^{−1}(6/11) is a bit more than 30°; cos^{−1}(4/9) is a bit more than 60°.,sin^{−1}(6/11) ≈ 33.1° and cos^{−1}(4/9) ≈ 63.6°.,"1. α ≈ 99.3°, just past 90°, so cos α < 0: Statement II is true.
+2. β ≈ 190.8°, so α + β ≈ 290.1°, in the fourth quadrant: cos(α + β) > 0. Statement I is true.
+(Exact check: sin^{−1}(6/11) > 30° since 6/11 > 1/2, and < 45°, so α is in (90°, 135°).)
+Answer: (1)",Principal values of inverse trigonometric functions; signs of cosine.,Revise 'Inverse Trigonometric Functions'. Bounding angles between known values is often enough.,
+13,1,sympy,"f is even. Only x = 0 needs care for differentiability. For II, write f on negative x without the modulus.","For x > 0: f'(x) = cos x e^{sin x} − 1, which → 0 as x → 0⁺. For x < 0: f(x) = e^{−sin x} + x, f'(x) = 1 − cos x e^{−sin x}.","1. Both one-sided derivatives at 0 are 0, so f is differentiable everywhere: I is true.
+2. In (−π, −π/2), cos x < 0, so f'(x) = 1 − cos x e^{−sin x} > 1 > 0: f is increasing. II is true.
+Answer: (1)",Differentiability with |x|; monotonicity.,Revise 'Continuity and Differentiability' and 'Application of Derivatives'.,
+14,2,sympy,Rewrite the condition as b × (something) = 0. What does that say about the something?,"2(a × b) + 3(b × c) = b × (3c − 2a) = 0, so 3c − 2a = t b for some t.","1. c = (2a + tb)/3. a·c = (2 × 26 + 35t)/3 = 15 gives t = −1/5.
+2. a·(1, 1, −3) = −6 and b·(1, 1, −3) = 15.
+3. c·(1, 1, −3) = (2(−6) − 15/5)/3 = −5.
+Answer: (2)",Vector equations with cross products (parallel vectors).,Revise 'Vector Algebra'. u × v = 0 means u is parallel to v.,
+15,3,sympy,The foot lies on the line: find its parameter and μ. Then use perpendicularity to find λ.,"Line point (4 + t, 9 + 2t, 5 + t). The vector from (λ, 2, 3) to the foot is perpendicular to (1, 2, 1). The final two lines are parallel, so use |AB × d|/|d|.","1. 4 + t = 1 gives t = −3, foot (1, 3, 2), μ = 3.
+2. (λ − 1, −1, 1)·(1, 2, 1) = λ − 2 = 0, so λ = 2.
+3. A(1, 2, −4), B(2, 3, −5), d = (2, 3, 6): AB × d = (9, −8, 1), length √146.
+4. Distance = √146/7.
+Answer: (3)",Foot of a perpendicular; distance between parallel lines.,Revise 'Three Dimensional Geometry'.,
+16,3,sympy,Factor x⁴ + x² + 1 = (x² + x + 1)(x² − x + 1) and cancel.,"The integrand becomes √x/√(x³ + 1). Substitute u = x^{3/2}, so du = (3/2)√x dx.","1. Integral = (2/3)∫ du/√(1 + u²) = (2/3) ln(u + √(1 + u²)).
+2. Limits: u from 0 to 2√2, and √(1 + 8) = 3.
+3. Value = (2/3) ln(3 + 2√2).
+Answer: (3)",Simplifying an integrand; substitution leading to ∫ du/√(1 + u²).,Revise 'Integrals'. x⁴ + x² + 1 = (x² + 1)² − x² is a factorisation worth knowing.,
+17,1,sympy,Divide by x√(1 − x²) to get a linear equation dy/dx + P(x)y = Q(x).,"dy/dx + y/x = cos^{−1}x/√(1 − x²). The integrating factor is x. For ∫ x cos^{−1}x/√(1 − x²) dx, put x = cos θ.","1. (xy)' = x cos^{−1}x/√(1 − x²). With x = cos θ the integral is −∫θ cos θ dθ = −(θ sin θ + cos θ).
+2. xy = −(√(1 − x²) cos^{−1}x + x) + C. As x → 1, y → 1: 1 = −1 + C, so C = 2.
+3. x = 1/2 (θ = π/3): y/2 = 2 − 1/2 − (√3/2)(π/3), so y = 3 − π/√3.
+Answer: (1)",Linear differential equation; integration by parts with an inverse function.,"Revise 'Differential Equations' (linear) and 'Integrals' (substitution x = cos θ, by parts).",
+18,1,sympy,Compute f(f(x)) first. Then see what happens after four steps.,"f²(x) = −1/x, so f⁴(x) = x. Then f^{26} = f². The line 2y = 2x − 3 meets y = 1/x where 2x² − 3x − 2 = 0.","1. g(x) = −f^{26}(x) = 1/x.
+2. The line y = x − 3/2 crosses y = 0 at x = 3/2 and meets y = 1/x at x = 2.
+3. Area = ∫_{3/2}^{2} (x − 3/2) dx + ∫_{2}^{4} dx/x = 1/8 + log_{e}2.
+Answer: (1)",Iterating a function (periodic composition); area between curves.,Revise 'Relations and Functions' (composition) and 'Application of Integrals'.,
+19,4,sympy,Continuity at π/2: find the right-hand limit using x = π/2 + h.,1 − sin(π/2 + h) = 1 − cos h ≈ h²/2 and (π − 2x)² = 4h². So the limit is b/8.,"1. b/8 = 1/3, so b = 8/3 and 3b − 6 = 2.
+2. x² + 2x − 3 = (x + 3)(x − 1) is negative on (0, 1) and positive on (1, 2).
+3. ∫_{0}^{1} (3 − 2x − x²) dx = 5/3 and ∫_{1}^{2} (x² + 2x − 3) dx = 7/3. Total 4.
+Answer: (4)",Continuity with a limit; integral of a modulus.,Revise 'Continuity and Differentiability' and 'Integrals' (splitting at the sign change).,
+20,2,sympy,Major axis along y means the y² denominator is larger. f is decreasing: what does that do to the inequality?,f(3a + 15) > f(a² + 7a + 3) and f decreasing give 3a + 15 < a² + 7a + 3.,"1. a² + 4a − 12 > 0, i.e. (a + 6)(a − 2) > 0.
+2. a < −6 or a > 2, so the excluded set is [−6, 2].
+3. α² + β² = 36 + 4 = 40.
+Answer: (2)",Ellipse orientation; inequalities with a decreasing function.,Revise 'Conic Sections' and 'Linear Inequalities' / quadratic inequalities.,
+21,2,sympy,Factor 2x² + 5x + 3 = (2x + 3)(x + 1) and x² + 2x + 1 = (x + 1)². Then put t = log_{x+1}(2x + 3).,"The equation becomes 1 + t = 4 − 2/t, i.e. t² − 3t + 2 = 0.","1. t = 1: 2x + 3 = x + 1, x = −2, but the base x + 1 = −1 is not allowed.
+2. t = 2: 2x + 3 = (x + 1)², so x² = 2.
+3. Bases must be positive and not 1: x > −1, x ≠ 0. Only x = √2 works.
+4. Sum of squares = 2.
+Answer: 2",Logarithmic equations with variable bases (domain checks).,Revise 'Logarithms' (change of base) and check domain conditions at the end.,
+22,12,sympy,Use cot(B − A) = (cot A cot B + 1)/(cot A − cot B) with B − A = 2π/3.,cot A cot B + 1 = cot(2π/3)(cot A − cot B) = −(1/√3)(cot(x − π/3) − cot(x + π/3)).,"1. Integral = −(1/√3)[ln|sin(x − π/3)| − ln|sin(x + π/3)|] from π/6 to π/4.
+2. At π/4: ln(sin 15°/sin 75°) = ln(2 − √3). At π/6: ln((1/2)/1).
+3. Difference = ln(4 − 2√3) = 2 ln(√3 − 1). So α = −2/√3.
+4. 9α² = 12.
+Answer: 12",Integration using a cotangent difference identity.,Revise 'Trigonometric Functions' (compound angles) and 'Integrals'.,
+23,4,sympy,"L_{1} is perpendicular to both direction vectors, so it is along their cross product.","d_{2} = (1, 2, 2), d_{3} = (2, 2, 1), d_{2} × d_{3} = (−2, 3, −2). Find where s(−2, 3, −2) meets L_{2}.","1. 3 + t = −2s and 2t + 4 = −2s give t = −1, s = −1. Intersection P = (2, −3, 2).
+2. On L_{3}: Q = (3 + 2s, 3 + 2s, 2 + s). |PQ|² = 9s² + 28s + 37 = 17, so s = −2 or −10/9.
+3. a = 3 + 2s is an integer only for s = −2: Q = (−1, −1, 0).
+4. (a + b + c)² = 4.
+Answer: 4","Lines in 3D: common perpendicular direction, intersection, distance.",Revise 'Three Dimensional Geometry'.,
+24,18,sympy,"Let the foot be M(h, k). Then the chord is hx + ky = h² + k². Homogenise the circle with this line.",A pair of lines through the origin is perpendicular when (coefficient of x²) + (coefficient of y²) = 0.,"1. Write p = h² + k². Homogenised: x² + y² − (6x + 8y)(hx + ky)/p − 11(hx + ky)²/p² = 0.
+2. Sum of x² and y² coefficients: 2 − (6h + 8k)/p − 11/p = 0.
+3. So 2(h² + k²) − 6h − 8k − 11 = 0: x² + y² − 3x − 4y − 11/2 = 0.
+4. α + β + 2γ = 3 + 4 + 11 = 18.
+Answer: 18",Chord subtending a right angle at the origin (homogenisation).,"Revise 'Straight Lines' (pair of lines) and 'Conic Sections' (circle, chord with a given foot).",
+25,395,sympy,First sum the GP inside the logarithm. You will see log_{2}3 appear.,"2 + 2/3 + 2/9 + … = 3, so log_{2}f = log_{2}3 × log_{3}(1 + f(x)/f(1/x)) = log_{2}(1 + f(x)/f(1/x)).","1. f(x) = 1 + f(x)/f(1/x), i.e. f(x)f(1/x) = f(x) + f(1/x). Polynomials with this property: f(x) = 1 ± xⁿ.
+2. f(6) = 37 = 1 + 6², so f(x) = 1 + x².
+3. Σ_{n=1}^{10} (1 + n²) = 10 + 385 = 395.
+Answer: 395",Functional equation f(x)f(1/x) = f(x) + f(1/x); GP sum; change of base.,Revise 'Relations and Functions' (standard functional equations) and 'Sequences and Series'.,
+26,2,arithmetic,The new unit is the distance light travels in one second. How many seconds does light take here?,6 min 40 s = 400 s.,"1. Distance = 400 × (distance light covers in 1 s) = 400α.
+Answer: (2)",Units of length defined through the speed of light.,Revise 'Units and Measurements'.,"The question calls α ""equal to the speed of light""; it means the distance light travels in 1 s."
+27,1,sympy,"Write the dimensions of H (A/m), ε, E and x, t in M, L, T, A. Then match powers.","[H] = L^{−1}A, [ε] = M^{−1}L^{−3}T⁴A², [E] = MLT^{−3}A^{−1}.","1. Try p = q = r = s = 1: L × M^{−1}L^{−3}T⁴A² × MLT^{−3}A^{−1} ÷ T = M⁰L^{−1}T⁰A.
+2. That equals [H]. (Physically: H ~ ε E x/t, from the displacement current.)
+Answer: (1)",Dimensional analysis with electromagnetic quantities.,Revise 'Units and Measurements' (dimensions of ε and E).,
+28,3,arithmetic,"In the car's frame, the bob feels mg down and a centrifugal force mv²/r sideways.","tan θ = v²/(rg), with v = 54 km/h = 15 m/s.","1. tan θ = 225/(20 × 10) = 1.125.
+2. θ = tan^{−1}(1.125).
+Answer: (3)",Pendulum in a turning car (circular motion).,"Revise 'Laws of Motion' (circular motion, pseudo force). Convert km/h to m/s first.",
+29,4,arithmetic,A stone dropped from a rising balloon starts with the balloon's velocity: 10 m/s upward.,Take up as positive: −75 = 10t − 5t².,"1. t² − 2t − 15 = 0, so t = 5 s.
+2. Balloon height = 75 + 10 × 5 = 125 m.
+Answer: (4)",Relative motion; free fall with initial velocity.,Revise 'Motion in a Straight Line'. A common slip is to take the stone's initial velocity as 0.,
+30,1,arithmetic,A silvered lens acts as a mirror. The image coincides with the object when the object is at the centre of curvature of this equivalent mirror.,Power of the system = 2P_{lens} + P_{mirror}. Lens: 1/f = 0.5 × (2/20). Silvered surface: concave mirror with f = R/2 = 10 cm.,"1. Lens f = 20 cm. P = 2/20 + 1/10 = 1/5, so the equivalent concave mirror has F = 5 cm.
+2. Object at 2F = 10 cm.
+Answer: (1)",Silvered lens as an equivalent mirror.,Revise 'Ray Optics and Optical Instruments' (silvered lenses).,
+31,1,arithmetic,Same speed and same range means the angles are θ and 90° − θ. Multiply the two flight times.,T_{1}T_{2} = (2u sin θ/g)(2u cos θ/g) = 2R/g.,"1. R = gT_{1}T_{2}/2 = 10 × 5 × 10/2 = 250 m.
+Answer: (1)",Projectile motion: complementary angles.,Revise 'Motion in a Plane'.,
+32,2,sympy,Friction acts backwards at the contact point: it slows the centre down and speeds up the spin.,"v = v_{0} − μgt. α = μmgR/(mR²/2) = 2μg/R, so ω = v_{0}/(4R) + 2μgt/R. Rolling starts when v = ωR.","1. v_{0} − μgt = v_{0}/4 + 2μgt.
+2. 3μgt = 3v_{0}/4, so t = v_{0}/(4μg).
+3. t = 49/(4 × 0.25 × 9.8) = 5 s.
+Answer: (2)",Slipping to pure rolling under kinetic friction.,Revise 'System of Particles and Rotational Motion'.,Takes the initial spin in the same sense as rolling (forward).
+33,4,arithmetic,"Use continuity A_{1}v_{1} = A_{2}v_{2}, then Bernoulli for the same height.","1.0 cm² = 100 mm², so v_{B} = 5 × 0.1 = 0.5 m/s. ΔP = (1/2)ρ(v_{B}² − v_{A}²).","1. ΔP = 0.5 × 600 × (0.25 − 0.01) = 72 Pa.
+Answer: (4)",Equation of continuity and Bernoulli's principle.,Revise 'Mechanical Properties of Fluids'. Watch the unit change cm² → mm².,
+34,4,arithmetic,Volume is conserved when the drop breaks up. How does terminal velocity depend on radius?,"64 droplets of radius r: 64r³ = R³, so r = R/4. Terminal velocity ∝ r².","1. v_{1}/v_{2} = (R/r)² = 16.
+Answer: (4)",Terminal velocity (Stokes' law).,Revise 'Mechanical Properties of Fluids' (viscosity).,
+35,2,conceptual,Heat supplied = ΔU + work done by the gas. Which C_{V} applies to a diatomic gas with translational and rotational modes?,"C_{V} = (5/2)R, so ΔU = nC_{V}ΔT. The piston does work W = P × A × Δx against the atmosphere.","1. ΔU = 1 × 2.5 × 8.3 × 1.2 ≈ 24.9 J.
+2. W = 10⁵ × 4 × 10^{−4} × 0.025 = 1 J.
+3. The numbers in the question do not fit together exactly (for 1 mol, PΔV should equal RΔT ≈ 10 J), so no option is exact. The heat is about 25 J; NTA's final key accepts both 24.8 and 25.
+Answer: (2)",First law of thermodynamics for a gas heated at constant pressure.,"Revise 'Thermodynamics' and 'Kinetic Theory' (degrees of freedom, C_{V} of a diatomic gas).","Flawed data: 1 mol heated by 1.2 °C at 100 kPa should do about 10 J of work, but the piston data give 1 J. NTA accepted options 1 (24.8) and 2 (25). Worth a teacher look."
+36,3,sympy,"For an adiabatic process, ΔU = −W = (P_{2}V_{2} − P_{1}V_{1})/(γ − 1). Find P_{2} first.",Monoatomic: γ = 5/3. P_{2} = P(V/27V)^{5/3} = P/243.,"1. P_{2}V_{2} = (P/243)(27V) = PV/9.
+2. ΔU = (PV/9 − PV)/(2/3) = −(8/9)(3/2)PV = −(4/3)PV.
+Answer: (3)",Adiabatic process: change in internal energy.,Revise 'Thermodynamics' (adiabatic relations).,
+37,3,arithmetic,What happens to the spring constant when a spring is cut in half?,"k ∝ 1/length, so the half spring has 2k. Frequency ∝ √k.","1. ν_{2}/ν_{1} = √(2k/k) = √2.
+Answer: (3)",Spring constant of a cut spring; SHM frequency.,Revise 'Oscillations'.,
+38,4,arithmetic,Find the energy of one photon from the power and the photon rate.,"E = P/N, then λ = hc/E.","1. E = 15000/(2.5 × 10^{22}) = 6 × 10^{−19} J.
+2. λ = (6.6 × 10^{−34} × 3 × 10⁸)/(6 × 10^{−19}) = 3.3 × 10^{−7} m = 330 nm.
+3. Below 400 nm: ultraviolet.
+Answer: (4)",Photon energy and the EM spectrum.,Revise 'Dual Nature of Radiation and Matter' and 'Electromagnetic Waves' (wavelength ranges).,
+39,4,arithmetic,"Torque on a loop: τ = m × B, with m = IA n̂.",m = 100√2 × π(0.02)² × (î + k̂)/√2 = 0.1256(î + k̂). Then (î + k̂) × (3î + 2k̂).,"1. (î + k̂) × (3î + 2k̂) = 2(î × k̂) + 3(k̂ × î) = −2ĵ + 3ĵ = ĵ.
+2. τ = 0.1256 × 4 × 10^{−3} ĵ = 5.024 × 10^{−4} ĵ = 5024 × 10^{−7} ĵ.
+Answer: (4)",Torque on a current loop (magnetic moment).,Revise 'Moving Charges and Magnetism'. Cross products of unit vectors: î × k̂ = −ĵ.,
+40,2,arithmetic,"Find the self-inductance of the solenoid, then ε = L dI/dt.","L = μ_{0}n²Al with n = 1000 per metre, A = 5 × 10^{−4} m², l = 0.3 m.","1. L = 4π × 10^{−7} × 10⁶ × 5 × 10^{−4} × 0.3 = 0.6π × 10^{−4} H.
+2. dI/dt = 2/3.14 A/s.
+3. ε = 0.6π × 10^{−4} × 2/π = 1.2 × 10^{−4} V = 12 × 10^{−5} V.
+Answer: (2)",Self-inductance of a solenoid; induced emf.,Revise 'Electromagnetic Induction'. Convert turns per cm to turns per metre.,
+41,2,arithmetic,Force on q_{2} points along the vector from q_{1} to q_{2} (times the sign of q_{1}q_{2}).,"r = r_{2} − r_{1} = (−1, −2, −2), |r| = 3. F = kq_{1}q_{2} r/|r|³.","1. kq_{1}q_{2} = 9 × 10⁹ × 3 × 10^{−6} × (−4 × 10^{−6}) = −0.108.
+2. F = −0.108 × (−1, −2, −2)/27 = 0.004(1, 2, 2) = (4î + 8ĵ + 8k̂) × 10^{−3} N.
+3. It points towards q_{1}, as expected for attraction.
+Answer: (2)",Coulomb's law in vector form.,Revise 'Electric Charges and Fields'.,
+42,1,arithmetic,Measure both angles from the normal (the vertical line). Write sin α and sin β from the vector components.,sin α = 2/√13 and sin β = C/√(C² + 16). Snell: 1 × sin α = 1.5 × sin β.,"1. 4/13 = 2.25C²/(C² + 16).
+2. 4C² + 64 = 29.25C², so C² ≈ 2.53 and C ≈ 1.6.
+Answer: (1)",Snell's law with direction vectors.,Revise 'Ray Optics and Optical Instruments' (refraction).,
+43,4,sympy,Write Einstein's equation for both wavelengths. λ_{2} = λ_{1}/2 means the photon energy doubles.,K_{1} = hc/λ_{1} − φ and K_{2} = 2hc/λ_{1} − φ. Eliminate hc/λ_{1}.,"1. hc/λ_{1} = K_{1} + φ.
+2. K_{2} = 2(K_{1} + φ) − φ = 2K_{1} + φ.
+3. φ = K_{2} − 2K_{1}.
+Answer: (4)",Photoelectric equation.,Revise 'Dual Nature of Radiation and Matter'.,
+44,3,sympy,"In α-decay the daughter nucleus recoils, so the α-particle does not get all of Q. Use momentum conservation.","K_{α} = Q(A − 4)/A, where A is the mass number of the parent.","1. A: K = 196/200 MeV. B: K = 208/212 MeV.
+2. Ratio = (196 × 212)/(200 × 208) = 41552/41600 = 2597/2600.
+Answer: (3)",Kinetic energy of α-particles (recoil of the daughter).,Revise 'Nuclei' (α-decay energetics).,
+45,2,arithmetic,"Write the Boolean expression for each AND gate (one input has a bubble), then OR them.",Top AND: A·B. Bottom AND: Ā·B. Y = AB + ĀB.,"1. Y = B(A + Ā) = B.
+2. So Y copies B: 1 from t = 0 to 2, 0 from 2 to 3.
+Answer: (2)",Logic gates and Boolean simplification; timing diagrams.,Revise 'Semiconductor Electronics' (logic gates).,Figure reading: the bubble is on the A input of the lower AND gate; B feeds both gates.
+46,2,arithmetic,"Use the resistance to find the plate area, then the capacitance to find ε_{r}.",R = ρd/A gives A. C = ε_{0}ε_{r}A/d gives ε_{r}.,"1. A = ρd/R = 10^{13} × 0.885 × 10^{−3}/(17.7 × 10^{14}) = 5 × 10^{−6} m².
+2. ε_{r} = Cd/(ε_{0}A) = 10^{−6} × 0.885 × 10^{−3}/(8.85 × 10^{−12} × 5 × 10^{−6}) = 2 × 10⁷.
+3. α = 2.
+Answer: 2",Capacitance and resistance of the same slab.,Revise 'Electrostatic Potential and Capacitance' and 'Current Electricity' (resistivity).,
+47,203,arithmetic,Use the Rayleigh criterion for a circular aperture.,"θ = 1.22λ/D, so D = 1.22λ/θ.","1. D = 1.22 × 500 × 10^{−9}/(3 × 10^{−7}) = 2.033 m.
+2. ≈ 203 cm.
+Answer: 203",Resolving power of a telescope.,Revise 'Wave Optics' (resolving power).,
+48,2,arithmetic,The velocity has a part along B and a part across B. The particle moves on a helix.,Period T = 2πm/(qB). Distance along k̂ = v_{∥} × (number of turns) × T.,"1. T = 2π × 5 × 10^{−6}/(5π × 10^{−6} × 0.1) = 20 s.
+2. v_{∥} = 2 × 10^{−2} m/s.
+3. Distance = 0.02 × 5 × 20 = 2 m.
+Answer: 2",Helical motion of a charge in a magnetic field.,Revise 'Moving Charges and Magnetism'. Convert 5 mg to kg.,
+49,200,arithmetic,In steady state no current flows into the capacitor. Remove its branch and simplify the network.,"The 12 Ω is directly across the battery. The rest: 5 Ω, then (10 Ω in parallel with 4 + 4 + 2 = 10 Ω), then 2 Ω, all in series.","1. Series total = 5 + 5 + 2 = 12 Ω, so the current is 1 A.
+2. It splits equally: 0.5 A through the 4 Ω, 4 Ω, 2 Ω branch.
+3. The capacitor is across the vertical 4 Ω (the 10 Ω before it carries no current): V = 0.5 × 4 = 2 V.
+4. Q = 100 μF × 2 V = 200 μC.
+Answer: 200",Capacitor in a DC circuit at steady state.,Revise 'Current Electricity' and 'Electrostatic Potential and Capacitance'.,Figure reading of the network as described in hint 2.
+50,9,arithmetic,Distance in the n-th second: s_{n} = u + a(n − 1/2). Find each acceleration.,104 = 5 + 4.5a_{1} and 129 = 12 + 4.5a_{2}.,"1. a_{1} = 22 m/s², a_{2} = 26 m/s².
+2. After 10 s: v_{1} = 225 m/s, v_{2} = 272 m/s.
+3. p_{1}/p_{2} = (3.4 × 225)/(2.5 × 272) = 765/680 = 9/8. x = 9.
+Answer: 9",Distance in the n-th second; momentum.,Revise 'Motion in a Straight Line'.,
+51,3,arithmetic,"Convert each mass to moles of substance (all come out as simple numbers), then multiply by atoms per formula unit.","H_{2}O: 18, H_{2}SO_{4}: 98, C: 12, NaCl: 58.5 g/mol. Atoms per unit: 3, 7, 1, 2.","1. A: 1.8 mg water = 10^{−4} mol × 3 = 3 × 10^{−4} N_{A} (III).
+2. B: 9.8 mg H_{2}SO_{4} = 10^{−4} mol × 7 = 7 × 10^{−4} N_{A} (IV).
+3. C: 1.8 mg C = 1.5 × 10^{−4} N_{A} (II).
+4. D: 5.85 mg NaCl = 10^{−4} mol × 2 = 2 × 10^{−4} N_{A} (I).
+Answer: (3)",Mole concept: counting atoms.,Revise 'Some Basic Concepts of Chemistry'. Remember mg → g.,
+52,1,arithmetic,Take 100 g of solution: 30 g methanol and 70 g CCl_{4}.,"Moles: methanol 30/32, CCl_{4} 70/154. In the mixture, methanol's hydrogen bonds are partly broken.","1. n(CH_{3}OH) = 0.9375, n(CCl_{4}) = 0.4545.
+2. x(CCl_{4}) = 0.4545/1.392 ≈ 0.33: Statement I is true.
+3. Weaker interactions in the mixture than in pure methanol mean a higher vapour pressure: positive deviation. Statement II is true.
+Answer: (1)",Mole fraction from mass percent; deviations from Raoult's law.,Revise 'Solutions' (non-ideal solutions).,
+53,1,conceptual,"Count the valence electrons on Br in each ion, then use VSEPR.","BrF_{2}⁺: 7 − 1 = 6 electrons, 2 bonds, 2 lone pairs. BrF_{4}⁻: 7 + 1 = 8 electrons, 4 bonds, 2 lone pairs.","1. BrF_{2}⁺: 4 electron pairs, 2 of them lone: bent.
+2. BrF_{4}⁻: 6 electron pairs, 2 lone pairs opposite each other: square planar.
+Answer: (1)",VSEPR shapes of interhalogen ions.,Revise 'Chemical Bonding and Molecular Structure' (VSEPR).,
+54,3,conceptual,"Recall K_{b} and K_{f} for water, and how benzoic acid dimerises.",For water K_{b} = 0.52 and K_{f} = 1.86 K kg/mol. Benzoic acid forms a cyclic dimer held by two hydrogen bonds.,"1. A: K_{b} < K_{f}, so A is not correct.
+2. B: for the same molality ΔT_{b} < ΔT_{f}, so B is not correct.
+3. C: osmotic pressure is the preferred method for proteins and polymers: correct.
+4. D: the dimer shown has one hydrogen bond and a wrong structure; the real dimer is cyclic with two O–H···O bonds. Not correct.
+5. A, B and D are not correct.
+Answer: (3)",Colligative properties; association of benzoic acid.,"Revise 'Solutions' (colligative properties, abnormal molar mass).",
+55,3,sympy,Build the target reaction from the two given ones. Reversing a reaction inverts K; halving it takes the square root.,"Reverse half of reaction 1: (1/2)x_{2} + (1/2)y_{2} ⇌ xy, with K = K_{1}^{−1/2}. Then add reaction 2.","1. K_{1}^{−1/2} = 1/√(2.5 × 10⁵) = 1/500 = 2 × 10^{−3}.
+2. K_{3} = 2 × 10^{−3} × 5 × 10^{−3} = 1.0 × 10^{−5}.
+Answer: (3)",Combining equilibrium constants.,Revise 'Equilibrium'.,
+56,2,sympy,Electrode potentials do not add directly. Add the ΔG° values instead (ΔG° = −nFE°).,Fe³⁺ + 3e⁻ → Fe: ΔG° = −3FY. Fe²⁺ + 2e⁻ → Fe: ΔG° = −2FX. Subtract to get Fe³⁺ + e⁻ → Fe²⁺.,"1. ΔG° = −3FY − (−2FX) = −F(3Y − 2X).
+2. With n = 1, E° = 3Y − 2X.
+Answer: (2)",Combining electrode potentials through ΔG°.,Revise 'Electrochemistry'. A common slip is to subtract the potentials directly (Y − X).,
+57,3,sympy,Statement I: use the Arrhenius equation for two temperatures. Statement II: how does t_{1/2} of a first-order reaction depend on [A]_{0}?,"ln(k_{2}/k_{1}) = (Ea/R)(1/T_{1} − 1/T_{2}), with Ea = 12.6 × 4.2 × 1000 J/mol. First order: t_{1/2} = 0.693/k.","1. Ea/R = 52920/8.314 ≈ 6365 K. 1/298 − 1/308 ≈ 1.09 × 10^{−4}. ln(k_{2}/k_{1}) ≈ 0.693, so k doubles: Statement I is true.
+2. First-order t_{1/2} does not depend on [A]_{0}, so the graph should be a horizontal line, not a rising one. Statement II is false.
+Answer: (3)",Arrhenius equation; half-life of first-order reactions.,Revise 'Chemical Kinetics'. A rising t_{1/2} vs [A]_{0} line is zero order.,
+58,1,conceptual,"With n = 2 these are Be, B, N and Ne. Which one is the noble gas? Which two are the well-known exceptions?","Be (2s²) has a higher IE than B (2s²2p¹), because B's 2p electron is easier to remove. N (half-filled 2p) is high. Ne is highest.","1. Ne (2s²2p⁶): 2080 (I).
+2. N (2s²2p³): 1402 (IV).
+3. Be (2s²): 899 (II); B (2s²2p¹): 800 (III).
+4. A-II, B-III, C-IV, D-I.
+Answer: (1)",Ionisation enthalpy across period 2 (exceptions).,Revise 'Classification of Elements and Periodicity in Properties'.,
+59,3,conceptual,"Down group 15 the E–H bond gets longer and weaker, and the central atom gets bigger and less electronegative.",Weaker E–H bonds mean less stable hydrides and stronger reducing agents. Lone pair availability (basicity) falls. Bond angle falls as bond pairs move away from the central atom.,"1. A: reducing nature increases NH_{3} → BiH_{3}: true.
+2. B: lone pair donation (basicity) decreases: true.
+3. C: thermal stability decreases: true.
+4. D: H–E–H angle: NH_{3} 107.8°, PH_{3} 93.6°, AsH_{3} 91.8°, SbH_{3} 91.3°: decreases, true.
+Answer: (3)",Trends in group 15 hydrides.,"Revise 'p-Block Elements' (group 15, NCERT table of hydride properties).",
+60,1,conceptual,Write the d (or f) electron count for each ion. d⁰/f⁰ and fully filled ions are colourless and diamagnetic.,"Ti⁴⁺ d⁰, V²⁺ d³, Mn²⁺ d⁵, Fe³⁺ d⁵, Cr²⁺ d⁴. La³⁺ 4f⁰, Yb²⁺ 4f^{14}, Lu³⁺ 4f^{14}, Ce⁴⁺ 4f⁰, Ac³⁺ 5f⁰, Lr³⁺ 5f^{14}.","1. Ti⁴⁺ is colourless, so only [V²⁺, Mn²⁺], [Mn²⁺, Fe³⁺], [V²⁺, Cr²⁺] are both coloured: 3. Statement I is correct.
+2. All six f-block ions have f⁰ or f^{14}: all diamagnetic, so all 3 pairs count. Statement II is correct.
+Answer: (1)",Colour and magnetism of d- and f-block ions.,Revise 'd- and f-Block Elements'.,
+61,2,conceptual,"Which electrons do transition metal catalysts use for bonding: 3d only, or more? What happens to the reactants' bonds on the surface?","NCERT: catalysts use both 3d and 4s electrons, and adsorption increases the concentration of reactants at the surface and weakens the bonds in the reacting molecules.","1. Statement I says 3d only: incorrect (3d and 4s).
+2. Statement II says the bonds are strengthened: incorrect (they are weakened, which lowers the activation energy).
+Answer: (2)",Catalytic properties of transition metals.,"Revise 'd- and f-Block Elements' (catalytic properties, NCERT).",
+62,3,conceptual,"Picture the fractionating column: which component keeps condensing and dripping back, and which one reaches the top?",The higher-boiling liquid condenses lower in the column. The vapour that goes on rising gets richer in the lower-boiling component.,"1. Statement I: the higher-boiling vapour condenses first: true.
+2. Statement II: rising vapours become richer in the LOW-boiling component, not the high-boiling one: false.
+Answer: (3)",Fractional distillation.,Revise 'Organic Chemistry: Some Basic Principles and Techniques' (methods of purification).,
+63,2,conceptual,"In each reaction, is the carbon skeleton of the product the same as that of the reactant? Look for hydride or methyl shifts.","A rearrangement happens when a carbocation can become more stable by a 1,2-shift. A tertiary carbocation has nothing better to shift to.","1. 1-Chloropropane + AlCl_{3}: the 1° cation shifts to 2°, giving cumene: rearranged.
+2. tert-Butyl alcohol + H_{3}O⁺: the 3° cation simply loses H⁺ to give 2-methylpropene: no rearrangement.
+3. n-Hexane + AlCl_{3}/HCl → 2-methylpentane: isomerisation (rearranged).
+4. The neopentyl-type alcohol gives a methyl shift before forming the alkene: rearranged.
+Answer: (2)",Carbocation rearrangements.,"Revise 'Hydrocarbons' and 'Alcohols, Phenols and Ethers' (dehydration, carbocation stability).",
+64,2,disputed,"For each species ask: is the ring cyclic, planar, fully conjugated, and does it have (4n + 2) π electrons?",Tropylium ion: 6π. Phenanthrene: benzenoid. Cyclobutadienyl dication: 2π (n = 0). p-Benzoquinone and the cyclohexadienyl anion with an sp³ CH_{2} are not aromatic.,"1. Aromatic: tropylium cation (6π), phenanthrene, cyclobutadienyl dication (2π).
+2. Not aromatic: p-benzoquinone (no cyclic 6π system in the ring), the cyclohexadienyl anion (an sp³ CH_{2} breaks the conjugation).
+3. The dihydronaphthalene contains an intact benzene ring, so as a compound it is aromatic. That makes 4.
+4. NTA's final key gives 3, which would mean the dihydronaphthalene is not counted (its two-ring system as a whole is not fully conjugated).
+Answer: (2)",Hückel's rule for aromaticity.,"Revise 'Hydrocarbons' (aromaticity, Hückel's rule).","DISPUTED: Claude counts 4 (tropylium, phenanthrene, dihydronaphthalene with its benzene ring, cyclobutadienyl dication). NTA's final key is 3. The difference is whether a partly saturated fused system with a benzene ring counts as an aromatic compound. Owner/teacher to decide."
+65,2,conceptual,Which monochlorobutane is chiral? Then put a second Cl on each different carbon of it.,"P = 2-chlorobutane, CH_{3}CHClCH_{2}CH_{3}. A second Cl can go on C1, C2, C3 or C4.","1. C1: 1,2-dichlorobutane. C2: 2,2-dichlorobutane. C3: 2,3-dichlorobutane. C4: 1,3-dichlorobutane.
+2. 4 structural products.
+Answer: (2)",Free-radical halogenation; counting structural isomers.,Revise 'Hydrocarbons' (halogenation of alkanes) and 'Haloalkanes and Haloarenes'.,
+66,1,conceptual,Boiling point depends on intermolecular forces; melting point also depends on how well molecules pack in the crystal.,Larger alkyl iodides have stronger van der Waals forces. p-Dichlorobenzene packs better (higher m.p.) but is non-polar (lower b.p. than the polar o-isomer).,"1. Statement I: C_{3}H_{7}I > C_{2}H_{5}I > CH_{3}I in boiling point: true.
+2. Statement II: p-isomer m.p. 323 K vs o-isomer 256 K; b.p. p-isomer 447 K vs o-isomer 453 K: true.
+Answer: (1)",Physical properties of haloalkanes and haloarenes.,"Revise 'Haloalkanes and Haloarenes' (physical properties, NCERT table).",
+67,3,conceptual,Which group does NaBH_{4} reduce: the aldehyde or the lactam (cyclic amide)? Then what does hot NaOH do to an amide?,"NaBH_{4} reduces aldehydes but not amides. Hot aqueous NaOH hydrolyses the lactam, opening the ring to a carboxylate and a secondary amine.","1. NaBH_{4}: –CHO → –CH_{2}OH.
+2. NaOH, Δ: the ring opens: ⁻OOC–(CH_{2})_{4}–NH–CH(CH_{3})–CH_{2}OH.
+3. H_{3}O⁺: HOOC–(CH_{2})_{4}–NH–CH(CH_{3})–CH_{2}OH.
+Answer: (3)",Selective reduction by NaBH_{4}; hydrolysis of a lactam.,"Revise 'Aldehydes, Ketones and Carboxylic Acids' and 'Amines' (amide hydrolysis).",
+68,3,conceptual,Write the balanced Hofmann bromamide equation and read off the reagents and by-products.,RCONH_{2} + Br_{2} + 4NaOH → RNH_{2} + Na_{2}CO_{3} + 2NaBr + 2H_{2}O. It needs an –NH_{2} on the amide.,"1. A: 4 NaOH but only 1 Br_{2} per mole: false.
+2. B: alkyl amides (e.g. acetamide) do give it: false.
+3. C: it is a standard way to make primary amines: true.
+4. D: secondary amides do not react this way: false.
+5. E: by-products Na_{2}CO_{3}, NaBr, H_{2}O: true.
+Answer: (3)",Hofmann bromamide degradation.,Revise 'Amines' (preparation of amines).,
+69,2,conceptual,Think of sucrose. What do you get when you hydrolyse it?,"Oligosaccharides can contain different monosaccharides: sucrose → glucose + fructose, lactose → glucose + galactose.","1. 'The units from hydrolysis of oligosaccharides are always the same' is false (sucrose gives two different sugars).
+2. The others are true: all monosaccharides are reducing; starch and cellulose are polysaccharides of many units; glucose's open-chain and cyclic forms coexist.
+Answer: (2)",Classification and properties of carbohydrates.,Revise 'Biomolecules' (carbohydrates).,
+70,3,conceptual,Neutral FeCl_{3} gives a violet colour with phenols. Which amino acid has a phenolic –OH?,Tyrosine's side chain is a p-hydroxyphenyl group (–CH_{2}–C_{6}H_{4}–OH).,"1. Threonine and serine have alcoholic –OH, cysteine has –SH.
+2. Only tyrosine has a phenol, so it gives the violet complex.
+Answer: (3)",Test for phenols; side chains of amino acids.,"Revise 'Alcohols, Phenols and Ethers' (FeCl_{3} test) and 'Biomolecules' (amino acids).",
+71,6,conceptual,"Find the metal's oxidation state and d-electron count in each, then decide high spin or low spin from the ligand.","Strong-field ligands (CN⁻, CO, and for Co³⁺ also oxalate) pair electrons. d¹ and d⁹ ions are always paramagnetic.","1. Paramagnetic: [MnBr_{4}]²⁻ (d⁵), [NiCl_{4}]²⁻ (d⁸ tetrahedral), [CoF_{6}]³⁻ (d⁶ high spin), [Mn(CN)_{6}]³⁻ (d⁴ low spin, 2 unpaired), [Ti(CN)_{6}]³⁻ (d¹), [Cu(H_{2}O)_{6}]²⁺ (d⁹).
+2. Diamagnetic: [Ni(CN)_{4}]²⁻, [Ni(CO)_{4}], [Fe(CN)_{6}]⁴⁻, [Co(C_{2}O_{4})_{3}]³⁻.
+3. Count = 6.
+Answer: 6",Magnetic properties of complexes (crystal field theory).,Revise 'Coordination Compounds'. A low-spin d⁴ ion still has 2 unpaired electrons.,
+72,16,conceptual,Name the two named reactions first: benzene + CO/HCl and benzene + CH_{3}COCl/AlCl_{3}.,"x = benzaldehyde (Gattermann–Koch), y = acetophenone (Friedel–Crafts acylation). With alkali they undergo cross-aldol (Claisen–Schmidt) condensation.","1. z = C_{6}H_{5}–CH=CH–CO–C_{6}H_{5} (benzalacetophenone).
+2. π electrons: two benzene rings 12, C=C 2, C=O 2.
+3. Total 16.
+Answer: 16","Gattermann–Koch, Friedel–Crafts acylation, Claisen–Schmidt condensation.","Revise 'Aldehydes, Ketones and Carboxylic Acids'.",
+73,3,arithmetic,How does photon energy depend on wavelength?,"E = hc/λ, so E_{1}/E_{2} = λ_{2}/λ_{1}.","1. E_{1}/E_{2} = 6000/2000 = 3.
+Answer: 3",Energy of radiation and wavelength.,Revise 'Structure of Atom'.,
+74,1126,arithmetic,ΔH = Σ ΔfH(products) − Σ ΔfH(reactants). ΔfH of O_{2} is 0.,Products: 2(−286.0) + 2(−297.0). Reactants: 2(−20.1).,"1. ΔH = −572 − 594 + 40.2 = −1125.8 kJ/mol.
+2. Magnitude ≈ 1126.
+Answer: 1126",Enthalpy of reaction from enthalpies of formation.,Revise 'Thermodynamics' (Hess's law).,
+75,4,arithmetic,Solids do not appear in K_{p}. What does the first equilibrium fix?,K_{p1} = p(CO_{2}) = 0.08 atm. K_{p2} = p(CO)²/p(CO_{2}).,"1. p(CO)² = 2 × 0.08 = 0.16.
+2. p(CO) = 0.4 atm = 4 × 10^{−1} atm.
+Answer: 4",Simultaneous heterogeneous equilibria.,Revise 'Equilibrium'.,
