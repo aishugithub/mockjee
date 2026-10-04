@@ -1,0 +1,272 @@
+q,claude_answer,check,hint1,hint2,solution,concept,revise,note
+1,3,sympy,"Is x³ − 3x + 1 increasing or decreasing on (−∞, −1]? That tells you the range of f, i.e. a and b.",On x < −1 the derivative 3x² − 3 is positive. At x = −1 the exponent is 3; as x → −∞ it tends to −∞.,"1. Range of f = (0, e³], so a = 0, b = e³ and P = (2e³ + 4, 2).
+2. Distance from x + e^{−3}y − 4 = 0: |2e³ + 2e^{−3}|/√(1 + e^{−6}).
+3. Multiply top and bottom by e³: 2(e⁶ + 1)/√(e⁶ + 1) = 2√(1 + e⁶).
+Answer: (3)",Range of a function; distance of a point from a line.,"Revise 'Relations and Functions' (one-one, onto) and 'Straight Lines'.",
+2,1,sympy,Put u = e^{sin x}. Which values can u take?,"u − 2/u = 2 gives u² − 2u − 2 = 0. Also u = e^{sin x} lies in [1/e, e].","1. u = 1 + √3 ≈ 2.732 (the other root is negative).
+2. But e^{sin x} ≤ e ≈ 2.718, so u = 1 + √3 is impossible.
+3. No solutions.
+Answer: (1)",Equations with bounded functions.,Revise 'Trigonometric Functions' and exponential bounds. Always check the range of the substituted variable.,
+3,4,sympy,Use s = z_{1} + z_{2} and p = z_{1}z_{2}. Write z_{1}³ + z_{2}³ in terms of s and p.,z_{1}³ + z_{2}³ = s³ − 3ps. Then z_{1}⁴ + z_{2}⁴ = (s² − 2p)² − 2p².,"1. 125 − 15p = 20 + 15i, so p = 7 − i.
+2. s² − 2p = 11 + 2i; (11 + 2i)² = 117 + 44i; 2p² = 2(48 − 14i) = 96 − 28i.
+3. z_{1}⁴ + z_{2}⁴ = 21 + 72i, modulus √(441 + 5184) = 75.
+Answer: (4)",Symmetric functions of two complex numbers.,Revise 'Complex Numbers' and identities for sums of powers.,
+4,3,sympy,The given equations say the three vectors are eigenvectors of A. What are the eigenvalues of A − 3I?,"Eigenvalues of A: 2, 4, 2 with independent eigenvectors. A − 3I has eigenvalues −1, 1, −1.","1. None of the eigenvalues of A − 3I is 0, so det(A − 3I) = (−1)(1)(−1) = 1 ≠ 0.
+2. A − 3I is invertible: the system has a unique solution.
+Answer: (3)",Eigenvalues and invertibility (consistency of systems).,Revise 'Matrices' and 'Determinants'.,
+5,2,sympy,Give each child 2 apples first. How many are left to share freely?,"15 apples among 3 children with no restriction: stars and bars, C(15 + 2, 2).","1. C(17, 2) = 136.
+Answer: (2)",Distributing identical objects (stars and bars).,Revise 'Permutations and Combinations'.,
+6,1,sympy,"Combine the left side with Pascal's rule twice. For the second condition, write both P's with factorials.",⁶C_{m} + 2⁶C_{m+1} + ⁶C_{m+2} = ⁸C_{m+2}. And ⁽ⁿ⁻¹⁾P_{3}/ⁿP_{4} = 1/n.,"1. ⁸C_{m+2} > ⁸C_{3} = 56 with m + 2 ≤ 6 (for ⁶C_{m+2}): only m + 2 = 4, so m = 2.
+2. 1/n = 1/8, so n = 8.
+3. ⁸P_{3} + ⁹C_{2} = 336 + 36 = 372.
+Answer: (1)",Pascal's rule; permutations and combinations formulas.,Revise 'Permutations and Combinations' and 'Binomial Theorem' (Pascal's rule).,
+7,2,sympy,"Write the 2nd, 8th and 44th terms with a = 1 and difference d. Three numbers in GP: middle² = product of the ends.",(1 + 7d)² = (1 + d)(1 + 43d).,"1. 14d + 49d² = 44d + 43d², so 6d² = 30d and d = 5 (d ≠ 0).
+2. S_{20} = 10(2 + 19 × 5) = 970.
+Answer: (2)",AP terms forming a GP.,Revise 'Sequences and Series'.,
+8,2,sympy,Write f without the modulus: what is f for x < 1 and for x ≥ 1?,"For x < 1, |ln x| = −ln x, so f(x) = x. For x ≥ 1, f(x) = 1/x.","1. Both pieces equal 1 at x = 1, so f is continuous everywhere: m = 0.
+2. Slopes at x = 1: 1 from the left, −1 from the right. Not differentiable only there: n = 1.
+3. m + n = 1.
+Answer: (2)",Continuity and differentiability with modulus.,Revise 'Continuity and Differentiability'.,
+9,4,sympy,f is increasing and positive. Where does f(5x) sit compared with f(x) and f(7x)?,"f(x) ≤ f(5x) ≤ f(7x), so 1 ≤ f(5x)/f(x) ≤ f(7x)/f(x).","1. The right side tends to 1, so f(5x)/f(x) → 1 (sandwich theorem).
+2. The limit is 1 − 1 = 0.
+Answer: (4)",Sandwich theorem for limits.,Revise 'Limits and Derivatives'.,
+10,2,sympy,Write the line in intercept form x/a + y/b = 1 and make it pass through the centre.,"Centre (8, 2): 8/a + 2/b = 1. Minimise a + b.","1. (a + b)(8/a + 2/b) ≥ (√8 + √2)² by Cauchy–Schwarz.
+2. Minimum a + b = (2√2 + √2)² = 18.
+Answer: (2)",Minimising intercept sums (Cauchy–Schwarz / calculus).,Revise 'Straight Lines' and 'Application of Derivatives'.,
+11,2,sympy,"Find where the parabolas meet, then integrate the top curve minus the bottom one.","4x − x² = (x − 4)²/3 gives x² − 5x + 4 = 0, so x = 1, 4.","1. Area = ∫_{1}^{4} (4x − x² − (x − 4)²/3) dx = (4/3)∫_{1}^{4} (−x² + 5x − 4) dx.
+2. ∫_{1}^{4} (−x² + 5x − 4) dx = 9/2.
+3. Area = (4/3)(9/2) = 6.
+Answer: (2)",Area between two parabolas.,Revise 'Application of Integrals'.,
+12,1,sympy,"f's integrand has an even part: write f as 2∫_{0}^{x}. For g, substitute t = u².",f(x) = 2∫_{0}^{x} (t − t²)e^{−t²} dt and g(x) = ∫_{0}^{x} 2u² e^{−u²} du.,"1. f(x) + g(x) = 2∫_{0}^{x} t e^{−t²} dt = 1 − e^{−x²}.
+2. With x² = ln 9: 1 − 1/9 = 8/9.
+3. 9 × 8/9 = 8.
+Answer: (1)",Definite integrals with substitution and symmetry.,Revise 'Integrals'.,
+13,3,sympy,This is Newton's law of cooling: T − 80 decays exponentially.,T − 80 = 80e^{−Kt}. T(15) = 120 gives e^{−15K} = 1/2.,"1. T(45) − 80 = 80(1/2)³ = 10.
+2. T(45) = 90 °F.
+Answer: (3)",Exponential decay (Newton's law of cooling).,Revise 'Differential Equations'.,
+14,3,sympy,The vertex is midway between the focus and the directrix. Find the foot of the perpendicular from the vertex to the directrix first.,"Distance from (2, 3) to 2x + y = 6 is 1/√5 along (2, 1)/√5. The focus is the same distance on the other side: (2, 3) + (1/5)(2, 1). With e² = 1/2, b² = a²/2.","1. Focus = (12/5, 16/5).
+2. On the ellipse: x² + 2y² = a², so a² = 144/25 + 512/25 = 656/25 and b² = a²/2.
+3. (Latus rectum)² = 4b⁴/a² = a² = 656/25.
+Answer: (3)",Parabola focus from vertex and directrix; ellipse latus rectum.,Revise 'Conic Sections'.,
+15,2,sympy,The centroid divides the line from the circumcentre to the orthocentre in the ratio 1 : 2 (Euler line).,"G = (2O + H)/3 with O = (3, 4), H = (−6, −8). Then move from P along the direction (2, 1) of x − 2y − 1 = 0 until you hit the line.","1. G = (0, 0), so a = b = 0 and P = (3, 5).
+2. P + t(2, 1) on 2x + 3y − 4 = 0: 17 + 7t = 0, t = −17/7.
+3. Distance = |t| × √5 = 17√5/7.
+Answer: (2)",Euler line; distance measured along a given direction.,Revise 'Straight Lines'.,
+16,3,sympy,Find the foot of the perpendicular F from the point to the line. The image is 2F − P.,"Line point (1, 2, 3) + t(2, 3, 4). t = ((1, 1, 2)·(2, 3, 4))/29 = 13/29.","1. F = (1 + 26/29, 2 + 39/29, 3 + 52/29).
+2. Image = 2F − P = (52/29, 1 + 78/29, 1 + 104/29).
+3. 2α + 3β + 4γ = 7 + (104 + 234 + 416)/29 = 7 + 26 = 33.
+Answer: (3)",Image of a point in a line.,Revise 'Three Dimensional Geometry'.,
+17,4,sympy,"L_{2} passes through A and B, so its direction is AB. Check that AB really is perpendicular to the given line.","AB = (3, 2, 0); (3, 2, 0)·(−2, 3, 1) = 0. SD = |(A − P)·(d_{1} × d_{2})|/|d_{1} × d_{2}| with P = (1, −1, −4), d_{1} = (2, −3, 2).","1. d_{1} × d_{2} = (2, −3, 2) × (3, 2, 0) = (−4, 6, 13), length √221.
+2. A − P = (−5, 5, 7); dot product = 20 + 30 + 91 = 141.
+3. SD = 141/√221.
+Answer: (4)",Shortest distance between skew lines.,Revise 'Three Dimensional Geometry'.,
+18,1,sympy,Use the mean for a + b and the variance for a² + b².,"Sum = 330, so a + b = 110. Σx² = 6(194 + 55²) = 19314.","1. a² + b² = 19314 − 12464 = 6850, so ab = (12100 − 6850)/2 = 2625.
+2. a, b are roots of t² − 110t + 2625 = 0: 75 and 35. a = 75, b = 35.
+3. a + 3b = 180.
+Answer: (1)",Mean and variance with unknown values.,Revise 'Statistics'.,
+19,4,sympy,P(H) = 2P(T) and P(H) + P(T) = 1.,"P(T) = 1/3, P(H) = 2/3. Use the binomial distribution.","1. P = C(3, 2)(1/3)²(2/3) = 6/27 = 2/9.
+Answer: (4)",Binomial probability with a biased coin.,Revise 'Probability'.,
+20,4,sympy,5 radians is not in the principal range of sin^{−1} or cos^{−1}. Shift it into range.,"sin^{−1}(sin 5) needs an angle in [−π/2, π/2] with the same sine: 5 − 2π. cos^{−1}(cos 5) needs an angle in [0, π]: 2π − 5.","1. a = 5 − 2π, b = 2π − 5.
+2. a² + b² = 2(2π − 5)² = 8π² − 40π + 50.
+Answer: (4)",Principal values of inverse trigonometric functions.,Revise 'Inverse Trigonometric Functions'.,
+21,66,sympy,"List the pairs in R: 2x = 3y means x = 3k, y = 2k.","x = 3k ≤ 100 gives k = 1, …, 33. The smallest symmetric relation containing R adds each reversed pair.","1. R has 33 pairs, none of the form (a, a).
+2. Adding the 33 reverses gives n = 66.
+Answer: 66",Symmetric closure of a relation.,Revise 'Relations and Functions'.,
+22,7,sympy,"For a 3 × 3 matrix, det(adj A) = (det A)². What happens after k adjoints?",After k adjoints the determinant is 2^{2^k}. So n = 2^{2^{2024}}. Powers of 2 mod 9 repeat every 6.,"1. 2^{2024} mod 6: powers of 2 (from 2¹) alternate 2, 4 mod 6; even exponent gives 4.
+2. n ≡ 2⁴ = 16 ≡ 7 (mod 9).
+Answer: 7",Determinant of adjoint; modular arithmetic.,Revise 'Determinants' (adjoint) and remainders of large powers.,
+23,25,sympy,The sum of all coefficients of a polynomial is its value at x = 1.,"At x = 1 the sum is 4^{n−1} + 4^{n−2}·3 + … + 3^{n−1}, a GP-type sum equal to (4ⁿ − 3ⁿ)/(4 − 3).","1. Σα_{r} = 4ⁿ − 3ⁿ, so β = 4, γ = 3.
+2. β² + γ² = 25.
+Answer: 25",Sum of coefficients; aⁿ − bⁿ factorisation.,Revise 'Binomial Theorem' and 'Sequences and Series'.,
+24,36,sympy,Write the quadratic as a sum of two squares. When can a sum of squares be 0?,"(ax − b)² + (bx − c)² = 0, so x = b/a = c/b: the sides are a, ax, ax².","1. Triangle inequalities: 1 + x > x² and x + x² > 1 (the third always holds).
+2. (√5 − 1)/2 < x < (√5 + 1)/2, so α² + β² = 3.
+3. 12 × 3 = 36.
+Answer: 36",Sum of squares equal to zero; triangle inequality.,Revise 'Quadratic Equations' and 'Sequences and Series' (GP).,
+25,81,sympy,The denominator behaves like x³. Expand the numerator up to x³: the x and x² terms must vanish.,Numerator = (c − b)x + (a + b/2 − c)x² + (a − b/3 + c/2)x³ + …,"1. c = b, a = b/2, and a − b/3 + c/2 = 1 gives (2/3)b = 1.
+2. b = c = 3/2, a = 3/4.
+3. 16(9/16 + 9/4 + 9/4) = 9 + 36 + 36 = 81.
+Answer: 81",Limits with series expansions.,Revise 'Limits and Derivatives'.,
+26,15,sympy,"Use x → π − x. sin x cos x changes sign. Then do the same trick once more on [0, π/2].",With f = sin x cos x/(sin⁴x + cos⁴x): I = π∫_{0}^{π} x f dx and ∫_{0}^{π} x f dx = −(π/2)∫_{0}^{π/2} f dx. Put u = tan²x for the last integral.,"1. ∫_{0}^{π/2} f dx = (1/2)∫_{0}^{∞} du/(1 + u²) = π/4.
+2. ∫_{0}^{π} x f dx = −π²/8, so I = −π³/8.
+3. |120 I/π³| = 15.
+Answer: 15",Definite integrals with the king property.,Revise 'Integrals' (properties of definite integrals).,
+27,9,sympy,Treat x as a function of y and put t = tan x.,dt/dy = −(e^{2y}t² + t): a Bernoulli equation. Put w = 1/t: dw/dy − w = e^{2y}.,"1. w = e^{2y} + Ce^{y}. At y = 0, x = π/4: w = 1, so C = 0. So cot x = e^{2y}.
+2. At x = π/6: e^{2α} = √3.
+3. e^{8α} = (√3)⁴ = 9.
+Answer: 9",Bernoulli differential equation.,Revise 'Differential Equations'.,
+28,32,sympy,"In parallelogram ABCD the diagonals bisect each other, so A + C = B + D.",α = γ + 3 and β = δ + 1. Put these into the two line equations.,"1. 2(γ + 3) − (δ + 1) = 5 gives δ = 2γ.
+2. 3γ − 2δ = 6 gives −γ = 6, so γ = −6, δ = −12, α = −3, β = −11.
+3. |α + β + γ + δ| = 32.
+Answer: 32",Parallelogram vertices from midpoint conditions.,Revise 'Straight Lines'.,
+29,22,sympy,Move 21 units from A along the unit vector of AB (either way) and keep the point with non-negative coordinates.,"AB = (12, 4, 6), length 14, unit vector (6, 2, 3)/7. 21 units along it is (18, 6, 9).","1. P = (22, 0, 7) (the other choice has negative coordinates).
+2. PQ = (18, 12, 4), |PQ| = √484 = 22.
+Answer: 22",Points on a line at a given distance.,Revise 'Three Dimensional Geometry'.,
+30,38,sympy,"Write c = (c_{1}, c_{2}, c_{3}) and turn both conditions into linear equations.","a + b = (5, 1, 4), a × b = (7, −7, −7), a − b + î = (2, 3, −2).","1. (5, 1, 4) × c = (14, 10, −20): c_{3} − 4c_{2} = 14, 4c_{1} − 5c_{3} = 10, 5c_{2} − c_{1} = −20.
+2. With 2c_{1} + 3c_{2} − 2c_{3} = −3: c = (5, −3, 2).
+3. |c|² = 25 + 9 + 4 = 38.
+Answer: 38",Vector equations with cross and dot products.,Revise 'Vector Algebra'.,
+31,2,sympy,"B is subtracted from x², so it has the dimension of length². Then find A from E = (B − x²)/(At).",[B] = L². [A] = L²/([E]T) = L²/(ML²T^{−2} · T).,"1. [A] = M^{−1}T.
+2. [AB] = L²M^{−1}T.
+Answer: (2)",Dimensional analysis.,Revise 'Units and Measurements'.,
+32,3,sympy,Use |A + B|² = A² + B² + 2AB cos θ with A = B = R.,|A + B|² = 2R²(1 + cos θ) = 4R²cos²(θ/2).,"1. |A + B| = 2R cos(θ/2).
+2. (Also |A − B| = 2R sin(θ/2), so the other options are wrong.)
+Answer: (3)",Vector addition (resultant of equal vectors).,Revise 'Motion in a Plane' (vectors).,
+33,4,sympy,Atwood machine: a = (m_{1} − m_{2})g/(m_{1} + m_{2}).,(m_{1} − m_{2})/(m_{1} + m_{2}) = 1/8.,"1. 8m_{1} − 8m_{2} = m_{1} + m_{2}, so 7m_{1} = 9m_{2}.
+2. m_{1}/m_{2} = 9/7.
+Answer: (4)",Atwood machine.,Revise 'Laws of Motion'.,
+35,4,sympy,"Find the velocity by integrating a = F/m from rest, then P = F · v.","a = (3t, 3t²), so v = (3t²/2, t³).","1. P = 6t × (3t²/2) + 6t² × t³ = 9t³ + 6t⁵ W.
+Answer: (4)",Power with a time-varying force.,"Revise 'Work, Energy and Power'.",Assumes the body starts from rest.
+36,4,sympy,Escape velocity = √(2GM/R). How does it scale?,v ∝ √(M/R). M/R for the moon = (1/144)/(1/16) of the planet's.,"1. v_{moon} = v√(1/9) = v/3.
+Answer: (4)",Escape velocity.,Revise 'Gravitation'.,
+37,1,sympy,"At terminal velocity, weight = viscous drag 6πηrv (buoyancy is negligible here). What stays the same: the mass or the density?","Same mass, so the weight is the same. 6πηrv = mg gives v ∝ 1/r.","1. Doubling r halves v: v/2.
+2. (A common slip is v ∝ r², which holds only for balls of the same density.)
+Answer: (1)",Terminal velocity (Stokes' law).,Revise 'Mechanical Properties of Fluids'.,
+38,4,sympy,Use Laplace's formula v = √(γRT/M). Use SI units for M.,"T = 273 K, M = 0.032 kg/mol.","1. v = √(1.4 × 8.3 × 273/0.032) = √99134 ≈ 315 m/s.
+2. The nearest option is 310 m/s.
+Answer: (4)",Speed of sound in a gas.,Revise 'Waves'.,The exact value is about 315 m/s; NTA's key (310 m/s) is the nearest option.
+39,2,sympy,"Internal energy = (f/2)nRT. Argon is monoatomic (f = 3), oxygen diatomic (f = 5, no vibration).",U = 8 × (3/2)RT + 6 × (5/2)RT.,"1. U = 12RT + 15RT = 27RT.
+Answer: (2)",Internal energy of a gas mixture (equipartition).,Revise 'Kinetic Theory'.,
+40,2,sympy,Coulomb force in a medium: F = q_{1}q_{2}/(4πε_{0}Kr²).,K = 5 divides the force by 5; r → r/5 multiplies it by 25.,"1. F' = 25F/5 = 5F.
+Answer: (2)",Coulomb's law in a dielectric.,Revise 'Electric Charges and Fields'.,
+41,1,sympy,"Illumination is proportional to the power, and P = I²R.","New current = 0.8I, so new power = 0.64P.","1. Decrease = 36%.
+Answer: (1)",Power in a resistor.,Revise 'Current Electricity'.,
+42,2,sympy,Find the magnetic moment vector m = IA n̂. Which way does n̂ point for anticlockwise current seen from −X?,Anticlockwise when viewed from the negative X side means n̂ = −x̂. τ = m × B.,"1. m = 5 × 0.2 × 0.1 = 0.1 A m², along −x̂.
+2. τ = 0.1(−x̂) × 2 × 10^{−3}ŷ = −2 × 10^{−4} ẑ N m.
+3. 2 × 10^{−4} N m along negative Z.
+Answer: (2)",Torque on a current loop.,Revise 'Moving Charges and Magnetism'.,
+43,3,sympy,Average power in AC = V_{rms}I_{rms} cos φ = (1/2)V_{0}I_{0} cos φ.,"V_{0} = 20, I_{0} = 10, φ = π/3.","1. P = (1/2) × 20 × 10 × (1/2) = 50 W.
+Answer: (3)",Power in AC circuits (power factor).,Revise 'Alternating Current'.,
+44,1,conceptual,"In an EM wave, how do the average electric and magnetic energy densities compare? Do EM waves carry momentum?","u_{E} = u_{B} on average. Momentum p = U/c, so radiation exerts pressure.","1. Statement I: energy is shared equally: correct.
+2. Statement II: radiation pressure exists: correct.
+Answer: (1)",Energy and momentum of EM waves.,Revise 'Electromagnetic Waves'.,
+45,1,sympy,Completely polarised reflected light means Brewster's angle. What is the angle between reflected and refracted rays then?,At Brewster's angle the reflected and refracted rays are perpendicular: i + r = 90°.,"1. r = 90° − 60° = 30°.
+Answer: (1)",Brewster's law.,Revise 'Wave Optics'.,
+46,1,sympy,Compare the new frequency with the threshold frequency.,"1.5ν_{0} halved is 0.75ν_{0}, below the threshold.","1. Below threshold no electrons are emitted, whatever the intensity.
+2. Zero.
+Answer: (1)",Threshold frequency in the photoelectric effect.,Revise 'Dual Nature of Radiation and Matter'.,
+47,3,sympy,Nuclear radius R = R_{0}A^{1/3}.,Half the radius means A is divided by 2³ = 8.,"1. A = 192/8 = 24.
+Answer: (3)",Nuclear radius and mass number.,Revise 'Nuclei'.,
+48,2,sympy,Trace each wire: which signals go into the two OR gates? The final gate has a bubble: it is a NOR.,Top OR: A and B̄. Bottom OR: B (the line after the hop) and Ā (through the lower NOT).,"1. Y = NOT((A + B̄) + (Ā + B)).
+2. (A + Ā) + (B + B̄) = 1 always, so Y = 0 for every input.
+Answer: (2)",Logic gates and Boolean algebra.,Revise 'Semiconductor Electronics' (logic gates).,Figure reading: A feeds the lower NOT and the top OR; B feeds the upper NOT and the lower OR (the hop marks B crossing A's wire).
+49,4,sympy,The balance condition is X/25 = l/(100 − l). Does the resistance per cm appear in it?,"For a uniform wire, the ratio of the two parts' resistances depends only on the lengths.","1. Doubling the resistance per cm doubles both parts, so the ratio is unchanged.
+2. The balance point stays at 40 cm.
+Answer: (4)",Metre bridge (Wheatstone bridge) balance.,Revise 'Current Electricity'.,
+50,1,sympy,g = 4π²L/T². How do the relative errors combine?,"Δg/g = ΔL/L + 2ΔT/T, with ΔL = 0.2 cm, L = 20 cm, ΔT = 1 s on 40 s.","1. Δg/g = 0.01 + 2 × 0.025 = 0.06 = 6%.
+Answer: (1)",Propagation of errors (simple pendulum).,Revise 'Units and Measurements'.,
+51,8,sympy,At the highest point the velocity is horizontal. L = m × (horizontal speed) × (height).,Horizontal speed u cos 45° = u/√2. Maximum height H = u² sin²45°/(2g) = u²/(4g).,"1. L = m(u/√2)(u²/(4g)) = mu³/(4√2 g) = √2mu³/(8g).
+2. X = 8.
+Answer: 8",Angular momentum of a projectile.,Revise 'System of Particles and Rotational Motion' and 'Motion in a Plane'.,
+52,53,sympy,Each sphere: its own MI about its centre plus the parallel-axis term.,"I = 2[(2/5)MR² + Md²] with M = 2 kg, R = 0.5 m, d = 0.75 m.","1. One sphere: 0.2 + 1.125 = 1.325 kg m².
+2. Two spheres: 2.65 = 53/20 kg m².
+Answer: 53",Moment of inertia; parallel axis theorem.,Revise 'System of Particles and Rotational Motion'.,
+53,12,sympy,"Find the tension in the wire of an Atwood machine, then strain = T/(AY).",T = 2m_{1}m_{2}g/(m_{1} + m_{2}). A = π(4 × 10^{−5})² = 16π × 10^{−10} m².,"1. T = 2 × 2 × 4 × 10/6 = 80/3 N.
+2. Strain = (80/3)/(16π × 10^{−10} × 2 × 10^{11}) = (80/3)/(320π) = 1/(12π).
+3. α = 12.
+Answer: 12",Atwood machine tension; Young's modulus.,Revise 'Laws of Motion' and 'Mechanical Properties of Solids'.,
+54,12,sympy,"Combine the springs step by step: the two upper right springs are side by side (parallel), then that pair is in series with the lower one.",Parallel: k + k = 2k. In series with k: (2k × k)/(3k) = 2k/3. That branch is in parallel with the left spring.,"1. k_{eff} = k + 2k/3 = 5k/3.
+2. T = 2π√(3M/(5k)) = π√(12M/(5k)).
+3. α = 12.
+Answer: 12",Spring combinations; SHM period.,Revise 'Oscillations'.,"Figure reading: left spring from the ceiling to M; on the right two parallel springs from the ceiling, then one spring down to M."
+55,27,sympy,The arrangement is two dipoles centred at O. Find the net dipole moment (with direction).,"Inner pair: −q at −l, +q at +l, p = 2ql along +x. Outer pair: +2q at −2l, −2q at +2l, p = 8ql along −x. Far-field potential V = kp cos θ/r².","1. Net p = 6ql along −x.
+2. At 60° from +x: V = k(−6ql)(1/2)/r² = −3kql/r² = −27 × 10⁹ ql/r².
+3. α = 27.
+Answer: 27",Potential of an electric dipole (superposition).,Revise 'Electrostatic Potential and Capacitance'.,"Uses the dipole (far-field) approximation r ≫ l, as the question intends."
+56,3,sympy,The left and right sides of the square are plain wires. So which corners are really the same point?,Top-left = bottom-left (node L) and top-right = bottom-right (node R). The four slanted resistors meet at the centre.,"1. Top 2 Ω and bottom 2 Ω join L to R directly.
+2. Through the centre: two 2 Ω in parallel (1 Ω) to the centre, then 1 Ω to R: 2 Ω.
+3. 2 ∥ 2 ∥ 2 = 2/3 Ω. With the internal 2/3 Ω: total 4/3 Ω, I = 1.5 A.
+4. Power from the battery = EI = 2 × 1.5 = 3 W.
+Answer: 3",Equivalent resistance (shorted nodes); power.,Revise 'Current Electricity'. Look for plain wires that join nodes.,Figure reading: the square's vertical sides are wires. 'Entire circuit' includes the internal resistance (EI = 3 W); the external network alone takes 1.5 W.
+57,20,sympy,"Find each coil's field at the centre, B = μ_{0}NI/(2R). The coils are perpendicular, so the fields are too.","R = π cm = 0.01π m, N = 100.","1. B_{P} = 4π × 10^{−7} × 100 × 1/(0.02π) = 2 mT; B_{Q} = 4 mT.
+2. Resultant = √(4 + 16) = √20 mT.
+Answer: 20",Field at the centre of a coil; perpendicular fields.,Revise 'Moving Charges and Magnetism'.,
+58,2,sympy,emf = −dφ/dt. Then I = emf/R.,dφ/dt = 10t − 36.,"1. At t = 2: |emf| = |20 − 36| = 16 V.
+2. I = 16/8 = 2 A.
+Answer: 2",Faraday's law.,Revise 'Electromagnetic Induction'.,
+59,200,sympy,Use refraction at a single spherical surface: μ_{2}/v − μ_{1}/u = (μ_{2} − μ_{1})/R.,"u = −100 cm, R = +20 cm, μ_{1} = 1, μ_{2} = 1.5.","1. 1.5/v + 1/100 = 0.5/20, so 1.5/v = 0.015 and v = 100 cm (inside the medium).
+2. Distance from the object = 100 + 100 = 200 cm.
+Answer: 200",Refraction at a spherical surface.,Revise 'Ray Optics and Optical Instruments'.,
+60,4,sympy,R = R_{0}A^{1/3}. What does that make the volume proportional to?,V ∝ R³ ∝ A.,"1. V_{2}/V_{1} = A_{2}/A_{1} = 4.
+Answer: 4",Nuclear size and density.,Revise 'Nuclei'.,
+61,2,sympy,"On heating, CaCO_{3} → CaO and MgCO_{3} → MgO. Write two equations: total mass before and after.",x + y = 2.21; (56/100)x + (40/84)y = 1.152.,"1. Solving: x ≈ 1.187 g CaCO_{3}, y ≈ 1.023 g MgCO_{3}.
+Answer: (2)",Stoichiometry of mixtures (thermal decomposition).,Revise 'Some Basic Concepts of Chemistry'.,
+62,3,conceptual,Write potassium's configuration. Which orbital holds its last electron?,K: [Ar] 4s¹.,"1. 4s: n = 4, l = 0, m = 0, s = +1/2.
+Answer: (3)",Quantum numbers.,Revise 'Structure of Atom'.,
+63,2,conceptual,"Use Fajans' rules: small, highly polarising cations and cations with a pseudo-noble-gas (d^{10}) shell give more covalent character.",K⁺ and Ba²⁺ are large s-block ions (very ionic). Ag⁺ (4d^{10}) polarises Cl⁻ strongly.,"1. AgCl has the most covalent character, so it is the least ionic.
+Answer: (2)",Fajans' rules.,Revise 'Chemical Bonding and Molecular Structure'.,CoCl_{2} also has considerable covalent character; NTA's key gives AgCl. Worth a teacher look.
+64,1,sympy,"Start with 1 mol of A. Write the moles of A, B, C at equilibrium and the total.","A: 1 − α, B: α, C: α/2. Total = (2 + α)/2. Partial pressure = (moles/total) × P.","1. K_{p} = p_{B}p_{C}^{1/2}/p_{A} = [α/(1 − α)] × [αP/(2 + α)]^{1/2}.
+2. = α^{3/2}P^{1/2}/((2 + α)^{1/2}(1 − α)).
+Answer: (1)",K_{p} in terms of degree of dissociation.,Revise 'Equilibrium'.,
+65,3,conceptual,Disproportionation needs an element in an intermediate oxidation state. What is Cl's oxidation state in ClO₄⁻?,"S_{8} (0) → S²⁻ (−2) and S_{2}O_{3}²⁻ (+2) in alkali. Cl in ClO₄⁻ is +7, its maximum.","1. Statement I is correct.
+2. ClO₄⁻ cannot be oxidised further, so it cannot disproportionate: Statement II is incorrect.
+Answer: (3)",Disproportionation reactions.,Revise 'Redox Reactions'.,
+66,1,conceptual,A' and B' are in the same period (B' to the right); C' and D' are just below them. How do size and metallic character change across a period and down a group?,Across a period: atoms shrink and become less metallic. Down a group: atoms grow and become more metallic.,"1. Radii: B' < A' and D' < C', with the lower row bigger: B' < A' < D' < C'. A is true.
+2. Metallic character follows the same pattern: B is true.
+3. C reverses the order: false.
+4. Ionic radii of the +1 ions follow the same trend: D is true.
+Answer: (1)",Periodic trends in size and metallic character.,Revise 'Classification of Elements and Periodicity in Properties'.,Assumes the usual case where the lower-row element is larger than the element diagonally above it.
+67,1,conceptual,"Why do covalent halides like AlCl_{3} react with water, while ionic ones simply dissolve? What does Al³⁺ become in acidic water?",Covalent group 13 halides are electron deficient and get hydrolysed. In acidified water Al³⁺ exists as [Al(H_{2}O)_{6}]³⁺.,"1. Statement I: true (covalent nature, easy hydrolysis).
+2. Statement II: true; [Al(H_{2}O)_{6}]³⁺ is octahedral.
+Answer: (1)",Group 13 halides.,"Revise 'p-Block Elements' (group 13, NCERT).",
+68,2,conceptual,"Check each against NCERT group 16: oxides, oxidising/reducing behaviour of SO_{2} and TeO_{2}, the hydride trend, and O_{3}'s Lewis structure.",NCERT: EO_{2} and EO_{3} oxides are acidic; SO_{2} is a reducing agent while TeO_{2} is an oxidising agent; reducing character of hydrides INCREASES from H_{2}S to H_{2}Te. O_{3} has 6 lone pairs.,"1. A true (as stated in NCERT). B true.
+2. C false: the reducing property increases down the group.
+3. D false: ozone has 6 lone pairs (2 on one end O, 3 on the other, 1 on the centre).
+Answer: (2)",Group 16 oxides and hydrides; ozone.,Revise 'p-Block Elements' (group 16).,Statement A follows NCERT's general statement; polonium's oxides are not acidic in reality. Worth a teacher look.
+69,4,conceptual,"Recall NCERT's notes on transition metal oxides: which is an oil, which are basic, and how vanadium oxides behave with acids.",Mn_{2}O_{7} is a green oil. CrO is basic. V_{2}O_{5} is amphoteric (reacts with acids and alkalis). V_{2}O_{4} dissolves in acid to give VO²⁺.,"1. A true. C true.
+2. B false: V_{2}O_{4} gives VO²⁺, not VO_{2}²⁺.
+3. D false: V_{2}O_{5} does react with acids.
+Answer: (4)",Oxides of transition metals.,Revise 'd- and f-Block Elements'.,
+70,2,conceptual,Find the oxidation state and d count of Ni in each. Is the ligand strong field?,"[Ni(CO)_{4}]: Ni(0), 3d^{10} after rearrangement, sp³. [NiCl_{4}]²⁻: Ni²⁺, 3d⁸, Cl⁻ weak field, sp³.","1. [Ni(CO)_{4}] is diamagnetic.
+2. [NiCl_{4}]²⁻ has 2 unpaired electrons: paramagnetic.
+Answer: (2)",Magnetic behaviour of nickel complexes.,Revise 'Coordination Compounds'.,
+71,1,conceptual,Water is a weak-field ligand. Find each metal's d count and fill t_{2g} then e_{g} (high spin).,"Cr³⁺ d³, Fe³⁺ d⁵, Ni²⁺ d⁸, V³⁺ d².","1. Cr³⁺: t_{2g}³e_{g}⁰ (II). Fe³⁺: t_{2g}³e_{g}² (III). Ni²⁺: t_{2g}⁶e_{g}² (IV). V³⁺: t_{2g}²e_{g}⁰ (I).
+Answer: (1)",Crystal field splitting (d-electron configurations).,Revise 'Coordination Compounds' (crystal field theory).,
+72,4,conceptual,The oils are steam-volatile and immiscible with water. Which method suits that?,Steam distillation lets such substances distil below their boiling points.,"1. Steam distillation.
+Answer: (4)",Purification methods.,Revise 'Organic Chemistry: Some Basic Principles and Techniques'.,
+73,4,conceptual,Is each substituent activating or deactivating towards electrophiles? How strongly?,"–CH_{3}: activating (+I, hyperconjugation). –Cl: weakly deactivating (−I outweighs +R). –NO_{2}: strongly deactivating.","1. Toluene > benzene > chlorobenzene > nitrobenzene.
+2. B > A > C > D.
+Answer: (4)",Activating and deactivating groups in electrophilic substitution.,Revise 'Hydrocarbons' (directive influence).,
+74,3,conceptual,Pentane means a 5-carbon chain. C1 carries the phenyl group; Br sits on C2 and C3.,Ph–CH_{2}–CHBr–CHBr–CH_{2}–CH_{3}.,"1. Count the chain in each option: only the third has five chain carbons with Br on the 2nd and 3rd from the phenyl end.
+Answer: (3)",IUPAC names to structures.,Revise 'Organic Chemistry: Some Basic Principles and Techniques' (nomenclature).,
+75,1,conceptual,D–Cl adds like H–Cl: Markovnikov. Where does the more stable carbocation form?,"D⁺ adds to the CH carbon of the double bond, giving a tertiary carbocation on the carbon bearing CH_{3}. Cl⁻ then attacks there.","1. Product: 1-chloro-1-methyl-2-deuteriocyclopentane (D on the former CH carbon, Cl and CH_{3} on the same carbon).
+Answer: (1)",Markovnikov addition (tracking with deuterium).,Revise 'Hydrocarbons' (addition of HX).,
+76,3,conceptual,Aryl halides normally resist NaOH. What makes them react easily?,"Nitro groups at ortho and para positions activate nucleophilic substitution of the halogen. With three nitro groups, warm NaOH replaces Br by OH.","1. A = 1-bromo-2,4,6-trinitrobenzene.
+2. B = 2,4,6-trinitrophenol (picric acid), after acidifying with HCl.
+Answer: (3)",Nitration; nucleophilic aromatic substitution.,Revise 'Haloalkanes and Haloarenes' (reactions of haloarenes).,"NTA's key assumes strong nitration gives the trinitro compound. One nitro group (option 1) also allows substitution, but only under harsher conditions. Worth a teacher look."
+77,2,conceptual,Benzene + an acid chloride with anhydrous AlCl_{3}: which named reaction is this?,Friedel–Crafts acylation: the acylium ion C_{6}H_{5}CO⁺ attacks benzene.,"1. P = benzophenone, C_{6}H_{5}COC_{6}H_{5}.
+Answer: (2)",Friedel–Crafts acylation.,"Revise 'Aldehydes, Ketones and Carboxylic Acids'.",
+78,3,conceptual,Benzene + CO + HCl with AlCl_{3}/CuCl gives benzaldehyde. Name it.,This is the Gattermann–Koch reaction.,"1. Gattermann–Koch reaction.
+2. Etard uses CrO_{2}Cl_{2}; Stephen reduces nitriles; Rosenmund reduces acid chlorides.
+Answer: (3)",Named reactions for aldehydes.,"Revise 'Aldehydes, Ketones and Carboxylic Acids'.",
+79,1,conceptual,Statement I: sulphanilic acid contains both N and S. What does Lassaigne's extract give then? Statement II: what does AlCl_{3} (a Lewis acid) do to the –NH_{2} group?,"N and S together give NaSCN, which gives a blood-red colour with Fe³⁺. Aniline's N donates its lone pair to AlCl_{3}.","1. Statement I true: sulphonation gives p-aminobenzenesulphonic acid, which shows blood-red with Fe³⁺ in Lassaigne's test.
+2. Statement II true: the N becomes positively charged and deactivates the ring, so aniline does not undergo Friedel–Crafts reactions.
+Answer: (1)",Sulphonation of aniline; Lassaigne's test; Friedel–Crafts limitation.,Revise 'Amines' and 'Organic Chemistry: Some Basic Principles and Techniques' (detection of elements).,
+80,1,conceptual,X is a diazonium salt. Where does a diazonium ion attack 1-naphthylamine?,Sulphanilic acid + HNO_{2} gives the diazonium salt of HO_{3}S–C_{6}H_{4}–. Coupling with 1-naphthylamine happens para to –NH_{2} (position 4).,"1. Y = HO_{3}S–C_{6}H_{4}–N=N– at C4 of the naphthalene ring, with NH_{2} at C1.
+Answer: (1)",Diazotisation and azo coupling.,Revise 'Amines' (diazonium salts).,
+81,0,arithmetic,Dipole moment μ = q × d. Convert everything to esu and cm.,1 D = 10^{−18} esu cm and 1 Å = 10^{−8} cm.,"1. q = 1.2 × 10^{−18}/10^{−8} = 1.2 × 10^{−10} esu.
+2. In units of 10^{−1} esu this is 1.2 × 10^{−9}, which rounds to 0.
+Answer: 0",Dipole moment and partial charge.,Revise 'Chemical Bonding and Molecular Structure' (dipole moment).,The question's units make the answer 0 (q = 1.2 × 10^{−10} esu); as a fraction of the electron's charge (4.8 × 10^{−10} esu) it is 0.25. NTA's key is 0. Worth a teacher look.
+82,28721,arithmetic,Reversible isothermal work: w = −2.303 nRT log(V_{2}/V_{1}).,"n = 5, T = 300 K, V_{2}/V_{1} = 10.","1. w = −2.303 × 5 × 8.314 × 300 × 1 = −28721 J.
+2. x = 28721.
+Answer: 28721",Work in a reversible isothermal expansion.,Revise 'Thermodynamics' (Chemistry).,"Uses ln 10 = 2.303, as NTA's key does."
+83,11,arithmetic,"Find the mass of 1 L of solution from the specific gravity, then the mass of pure H_{3}PO_{4}.",1 L weighs 1540 g; 70% of it is H_{3}PO_{4}.,"1. Mass of H_{3}PO_{4} = 1078 g; moles = 1078/98 = 11.
+2. Molarity = 11 M.
+Answer: 11",Molarity from mass percent and density.,Revise 'Some Basic Concepts of Chemistry' and 'Solutions'.,
+84,4,conceptual,"Compare with NCERT's table of conductivities (in S m^{−1}) of conductors, solutions, semiconductors and insulators.","NCERT: sodium 2.1 × 10³, iron 1.0 × 10³, graphite 1.2 × 10 (conductors); 0.1 M HCl 3.91 (conducting solution); Si 1.5 × 10^{−2} and CuO 1 × 10^{−7} (semiconductors); glass 1.0 × 10^{−16} (insulator).","1. Conductors: 2.1 × 10³, 1.2 × 10, 3.91, 1.0 × 10³.
+2. Count = 4.
+Answer: 4",Conductivity of materials.,Revise 'Electrochemistry' (NCERT table of conductivities).,Classification follows NCERT's table (it lists 0.1 M HCl with the conductors).
+85,399,arithmetic,r = k[A] means first order. Find k from the half-life.,"t_{1/2} = 120 min. For 90% decomposition, t = (2.303/k) log 10.","1. t_{90} = t_{1/2} × log 10/log 2 = 120 × 3.32 ≈ 399 min.
+Answer: 399",First-order kinetics.,Revise 'Chemical Kinetics'.,
+86,8,disputed,"Balance the reaction of MnO₄⁻ with oxalate in acid, using electrons first.",MnO₄⁻ → Mn²⁺ takes 5 e⁻; C_{2}O_{4}²⁻ → 2CO_{2} gives 2 e⁻. So 2MnO₄⁻ react with 5C_{2}O_{4}²⁻.,"1. 2MnO₄⁻ + 5C_{2}O_{4}²⁻ + 16H⁺ → 2Mn²⁺ + 10CO_{2} + 8H_{2}O.
+2. 16 H⁺ for 2 MnO₄⁻, so 8 per mole of MnO₄⁻.
+Answer: 8",Balancing redox equations.,Revise 'Redox Reactions'.,DISPUTED: the balanced equation gives 8 H⁺ per MnO₄⁻ (with oxalic acid H_{2}C_{2}O_{4} it would be 3). NTA's final key is 4. Owner/teacher to decide.
+87,6,conceptual,"List the different kinds of H in 2-methylbutane, then check each product for a chiral centre.","Four structural products: 1-chloro-2-methylbutane, 2-chloro-2-methylbutane, 2-chloro-3-methylbutane, 1-chloro-3-methylbutane.","1. 1-chloro-2-methylbutane and 2-chloro-3-methylbutane are chiral: 2 each.
+2. The other two are achiral: 1 each.
+3. Total = 6 isomeric products.
+Answer: 6",Free-radical chlorination; counting isomers with stereoisomers.,Revise 'Hydrocarbons' and 'Haloalkanes and Haloarenes'.,"Counts stereoisomers too (4 structural products, 6 in all), as NTA's key does."
+88,2,arithmetic,Acetylation replaces one H of each –NH_{2} by –COCH_{3}. How much mass does that add?,Each acetylation adds CH_{3}CO − H = 42 g/mol.,"1. (192 − 108)/42 = 2 amino groups.
+Answer: 2",Acetylation of amines.,Revise 'Amines'.,
+89,5,conceptual,Fat-soluble vitamins are stored in the body. Which water-soluble vitamin is the exception?,"Fat-soluble: A, D, E, K (stored in liver and adipose tissue). Vitamin B_{12} is also stored (in the liver).","1. A, D, E, K and B_{12}: 5.
+Answer: 5",Vitamins.,Revise 'Biomolecules' (vitamins).,
+90,6,conceptual,K_{2}Cr_{2}O_{7} + KCl + conc. H_{2}SO_{4}: this is the chromyl chloride test.,The red vapour is CrO_{2}Cl_{2}.,"1. In CrO_{2}Cl_{2}: x − 4 − 2 = 0, so Cr is +6.
+Answer: 6",Chromyl chloride test; oxidation states.,Revise salt analysis and 'd- and f-Block Elements'.,
