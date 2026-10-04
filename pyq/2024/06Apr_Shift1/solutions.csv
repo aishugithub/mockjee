@@ -1,0 +1,272 @@
+q,claude_answer,check,hint1,hint2,solution,concept,revise,note
+1,2,arithmetic,"List the pairs in each relation first. For symmetry, every (x, y) needs its (y, x).",R_{1}: 2x = 3y + 2 with y even. R_{2}: 4y = 5x with x a multiple of 4. Check whether any reverse pair is already present.,"1. R_{1} = {(4,2), (7,4), (10,6), (13,8), (16,10), (19,12)}: 6 pairs, no reverse pair inside, so M = 6.
+2. R_{2} = {(4,5), (8,10), (12,15), (16,20)}: N = 4.
+3. M + N = 10.
+Answer: (2)",Symmetric relations,Revise Relations and Functions: making a relation symmetric.,
+2,4,sympy,"Check whether two inputs give the same output, and whether the range is all of R.","Numerator (x + 5)(x − 3); denominator x^{2} − 4x + 9 > 0 always. For the range, treat y = f(x) as a quadratic in x.","1. f(−5) = f(3) = 0: not one-one.
+2. y(x^{2} − 4x + 9) = x^{2} + 2x − 15 needs discriminant ≥ 0: 5y^{2} + 2y − 16 ≤ 0, a bounded interval. Not onto.
+Answer: (4)",One-one and onto for rational functions,Revise Relations and Functions (range by discriminant).,
+3,1,arithmetic,Count triangles with no side of the octagon: avoid choosing two adjacent vertices.,Number of ways to choose 3 non-adjacent vertices of an n-gon = n(n − 4)(n − 5)/6.,"1. n = 8: 8 × 4 × 3/6 = 16.
+2. (Check: 56 total − 8 with two sides − 32 with exactly one side = 16.)
+Answer: (1)",Counting triangles in a polygon,Revise Permutations and Combinations.,
+4,1,sympy,Find a recurrence for a_{n} = α^{n} + β^{n}.,"αβ = 1 and α + β = s, so a_{n+1} = s a_{n} − a_{n−1}.","1. a_{2025} + a_{2023} = s a_{2024}, so the ratio is s = t^{2} − 5t + 6.
+2. Its minimum is at t = 5/2: −1/4.
+Answer: (1)",Newton's sums / recurrence for power sums,Revise Quadratic Equations.,"At s = −1/4 the roots are complex but distinct, so the condition still holds."
+5,4,sympy,Split the first column into an r-part and a constant part.,"The r-part has its first column proportional to the second column, so that determinant is 0: A_{r} does not depend on r.","1. Column 1 = r(1, 2, 3) + (0, 0, −2); the r-part matches column 2, so it gives 0.
+2. A_{r} = det[[0, 1, n^{2}/2 + α],[0, 2, n^{2} − β],[−2, 3, n(3n − 1)/2]] = −2(n^{2} − β − n^{2} − 2α) = 4α + 2β.
+3. 2A_{10} − A_{8} = 4α + 2β.
+Answer: (4)",Properties of determinants,Revise splitting a determinant column-wise.,
+7,3,arithmetic,Count the complement: multiples of 3 or 4 between 100 and 700.,"Inclusion–exclusion with multiples of 3, of 4 and of 12.","1. Total 601 numbers.
+2. Multiples of 3: 200; of 4: 151; of 12: 50. Union = 301.
+3. Neither = 601 − 301 = 300.
+Answer: (3)",Inclusion–exclusion,Revise Sets.,
+8,2,sympy,Differentiate twice for x ≠ 0 and substitute x = 2/π.,f'(x) = 3x^{2} sin(1/x) − x cos(1/x).,"1. f''(x) = 6x sin(1/x) − 4 cos(1/x) − sin(1/x)/x.
+2. At x = 2/π: sin = 1, cos = 0: f'' = 12/π − π/2 = (24 − π^{2})/(2π).
+3. (f''(0) does not exist, so options 1 and 3 fail.)
+Answer: (2)",Second derivative,Revise Continuity and Differentiability.,
+9,1,sympy,Use logarithmic differentiation.,f'(x) = x^{x}(1 + ln x).,"1. f' > 0 when ln x > −1, i.e. x > 1/e.
+2. Strictly increasing on [1/e, ∞).
+Answer: (1)",Monotonicity,Revise Application of Derivatives.,
+10,2,sympy,"Write both intercepts in terms of m, and remember m > 0.","Line: y + 9 = m(x − 4). OA = 4 + 9/m, OB = 9 + 4m.","1. Sum = 13 + 9/m + 4m.
+2. By AM–GM, 9/m + 4m ≥ 12 (at m = 3/2).
+3. Minimum = 25.
+Answer: (2)",Straight lines and AM–GM,Revise intercepts and AM–GM.,
+11,2,sympy,Divide numerator and denominator by cos^{6}x.,Integrand becomes tan^{2}x sec^{2}x/(1 + tan^{3}x)^{2}; put t = tan x.,"1. ∫_{0}^{1} t^{2}/(1 + t^{3})^{2} dt.
+2. = [−1/(3(1 + t^{3}))]_{0}^{1} = −1/6 + 1/3 = 1/6.
+Answer: (2)",Integration by substitution,Revise Integrals.,
+12,2,sympy,Find the three intersection points first.,"y = 3x and 2y = 27 − 3x meet at (3, 9); the curve y = 3x − x√x meets y = 3x at 0 and the line at (9, 0).","1. Area = ∫_{0}^{3} x^{3/2} dx + ∫_{3}^{9} [(27 − 3x)/2 − 3x + x^{3/2}] dx.
+2. = 18√3/5 + (81 − 162 + 97.2 − 18√3/5) = 16.2.
+3. 10A = 162.
+Answer: (2)",Area bounded by curves,Revise Application of Integrals.,
+13,3,sympy,Linear DE: divide by 1 + x^{2}.,IF = e^{tan^{−1}x}.,"1. y e^{tan^{−1}x} = ∫ e^{2tan^{−1}x}/(1 + x^{2}) dx = e^{2tan^{−1}x}/2 + C.
+2. y(1) = 0: C = −e^{π/2}/2.
+3. y(0) = (1 − e^{π/2})/2.
+Answer: (3)",Linear differential equations,Revise Differential Equations.,
+14,2,sympy,Divide by 2x ln x to get a linear DE.,y' + y/(x ln x) = 3/(2x^{2}); IF = ln x.,"1. d(y ln x)/dx = (3/2) ln x/x^{2}.
+2. y ln x = −(3/2)(ln x + 1)/x + C; at x = e^{−1} both sides are 0, so C = 0.
+3. y(e) = −(3/2)(2)/e = −3/e.
+Answer: (2)",Linear differential equations,Revise integration by parts.,
+15,1,arithmetic,Inradius of an equilateral triangle = side/(2√3).,The square's diagonal is the circle's diameter.,"1. r = 2√3, diameter 4√3.
+2. Square side 2√6: m = 24, n = 8√6, n^{2} = 384.
+3. m + n^{2} = 408.
+Answer: (1)",Incircle and inscribed square,Revise basic geometry.,
+17,3,sympy,SD = |(b − a)·(d_{1} × d_{2})|/|d_{1} × d_{2}|.,"d_{1} × d_{2} = (16, 16, 16).","1. b − a = (−4, 16, 0).
+2. SD = |−4 + 16 + 0|/√3 = 12/√3 = 4√3.
+Answer: (3)",Shortest distance between skew lines,Revise Three Dimensional Geometry.,
+18,2,arithmetic,"Recover Σx and Σx^{2}, correct them, then recompute.","Σx = 200, Σx^{2} = 20(4 + 100) = 2080.","1. Corrected Σx = 204, Σx^{2} = 2080 − 64 + 144 = 2160.
+2. Mean 10.2; variance = 108 − 104.04 = 3.96.
+3. SD = √3.96.
+Answer: (2)",Correcting mean and variance,Revise Statistics.,
+19,4,sympy,"For a plane quadrilateral, area = (1/2)|AC × BD|.","AC = (−1, 1, 2), BD = (5/3, −5/3, −2/3).","1. AC × BD = (8/3, 8/3, 0), magnitude 8√2/3.
+2. Area = 4√2/3.
+Answer: (4)",Vector area,Revise Vector Algebra.,The points are coplanar (checked).
+20,4,arithmetic,Bayes' theorem.,P(B | standard) = 0.4 × 0.9/(0.6 × 0.8 + 0.4 × 0.9).,"1. p = 0.36/0.84 = 3/7.
+2. 126p = 54.
+Answer: (4)",Bayes' theorem,Revise Probability.,
+21,221,sympy,4 + x^{2} = (2i − x)(−2i − x). Use the polynomial's value at ±2i.,Π(4 + x_{i}^{2}) = P(2i)P(−2i)/16 = |P(2i)|^{2}/16.,"1. P(2i) = 64 − 64i + 68 − 24i + 9 = 141 − 88i.
+2. |P(2i)|^{2} = 19881 + 7744 = 27625.
+3. 27625/16 = 125m/16 gives m = 221.
+Answer: 221",Roots of polynomials and complex numbers,Revise Quadratic and polynomial equations.,
+22,55,sympy,A non-trivial combination giving zero means the three vectors are dependent.,"det[[α, 1, 2],[1, β, 2],[2, 3, γ]] = 0.","1. det = αβγ − 6α − 4β − γ + 10 = 0.
+2. With αβγ = 45: 6α + 4β + γ = 55.
+Answer: 55",Linear dependence and determinants,Revise Determinants.,
+23,806,sympy,Divide consecutive terms.,T_{3}/T_{2} = ((n − 1)/2)(y/x) = 2/9 and T_{4}/T_{3} = ((n − 2)/3)(y/x) = 1/9.,"1. Dividing: 3(n − 1) = 4(n − 2), so n = 5, y/x = 1/9.
+2. 5x^{4}y = 135 gives x^{5} = 243, x = 3, y = 1/3.
+3. 6(125 + 9 + 1/3) = 806.
+Answer: 806",Binomial terms ratio,Revise Binomial Theorem.,
+24,6,sympy,Find T_{r} in closed form: try A·3^{r} + B·6^{r}.,B = 2 and T_{1} = 6 gives A = −2: T_{r} = 2·6^{r} − 2·3^{r}.,"1. Sum = (12/5)(6^{n} − 1) − 3(3^{n} − 1) = (3/5)(4·6^{n} − 5·3^{n} + 1).
+2. So n^{2} − 12n + 39 = 3, (n − 6)^{2} = 0, n = 6.
+Answer: 6",Recurrence relations and GP sums,Revise Sequences and Series.,
+25,65,sympy,Find a relation between I_{k} and I_{k+1} by integration by parts.,I_{k+1} = 7(k + 1)(I_{k} − I_{k+1}).,"1. r_{k} = I_{k}/I_{k+1} = (7k + 8)/(7k + 7), so r_{k} − 1 = 1/(7(k + 1)).
+2. 1/(7(r_{k} − 1)) = k + 1.
+3. Σ_{k=1}^{10}(k + 1) = 65.
+Answer: 65",Reduction formulas,Revise Integrals (integration by parts).,
+26,68,sympy,"First find the slopes of the two tangents from P(0, 1).",Put y = mx + 1 into the parabola: 9x^{2} + (12 + 18m)x + 4 = 0; tangency gives m = 0 or −4/3.,"1. Tangent lines: slopes 0 and −4/3.
+2. PQR isosceles with apex P: QR is perpendicular to an angle bisector at P.
+3. Bisectors have slopes 2 and −1/2, so QR has slope −1/2 or 2.
+4. 16(1/4 + 4) = 68.
+Answer: 68",Tangents to a parabola; angle bisectors,Revise Conic Sections and Straight Lines.,
+27,75,sympy,Turn the condition into a differential equation for the conic.,dy/dx = (y + 5)/(2(x − 3)).,"1. Separating: (y + 5)^{2} = c(x − 3); (4, −2) gives c = 9.
+2. Parabola with vertex (3, −5), a = 9/4.
+3. Focal distance of (7, 1) = (x − 3) + a = 4 + 9/4 = 25/4.
+4. 12d = 75.
+Answer: 75",Differential equation of a curve; parabola,Revise focal distance in Conic Sections.,
+28,13,sympy,Find the foot Q first.,"Line through (2, −5, 11) with direction (2, −3, 4).","1. Q = (2, −5, 11) + t(2, −3, 4) with t = −2: Q = (−2, 1, 3).
+2. PQ = |(12, −3, −4)| = 13.
+Answer: 13",Foot of perpendicular in 3D,Revise Three Dimensional Geometry.,
+29,46,sympy,"Expand: a × b + (a + b) × c = (1, 8, 13).","a × b = (−1, 22, 17), so (a + b) × c = (2, −14, −4) with a + b = (5, 1, −1).","1. c = λ(a + b) + (w × (a + b))/27 with w = (2, −14, −4): c = λ(5, 1, −1) + (2/3, −2/3, 8/3).
+2. a·c = 3λ + 14 = 13, so λ = −1/3.
+3. b·c = 24λ − 14 = −22.
+4. 24 − b·c = 46.
+Answer: 46",Vector equations,Revise Vector Algebra.,
+30,47,sympy,cot^{−1}k = tan^{−1}(1/k). Add them in pairs.,tan^{−1}(1/3) + tan^{−1}(1/4) + tan^{−1}(1/5) = tan^{−1}(23/24).,"1. Need tan^{−1}(1/n) = π/4 − tan^{−1}(23/24).
+2. 1/n = (1 − 23/24)/(1 + 23/24) = 1/47.
+3. n = 47.
+Answer: 47",Inverse trigonometric sums,Revise Inverse Trigonometric Functions.,
+31,1,arithmetic,Same momentum: write KE in terms of p.,KE = p^{2}/(2m).,"1. With p fixed, KE is largest for the smallest mass.
+2. A (mass m/2).
+Answer: (1)",Kinetic energy and momentum,"Revise Work, Energy and Power.",
+32,1,sympy,Atwood machine: a = (m_{2} − m_{1})g/(m_{1} + m_{2}).,With r = m_{1}/m_{2}: (1 − r)/(1 + r) = 1/√2.,"1. √2(1 − r) = 1 + r.
+2. r = (√2 − 1)/(√2 + 1).
+Answer: (1)",Atwood machine,Revise Laws of Motion.,
+33,4,conceptual,"To reach infinity, KE must cancel the (negative) potential energy at the surface.","KE = GMm/R_{E}, and GM = gR_{E}^{2}.","1. KE = GMm/R_{E} = mgR_{E}.
+Answer: (4)",Escape energy,Revise Gravitation.,
+34,1,arithmetic,Average speed = total distance/total time.,Distance in the first part = (80/2)t.,"1. Distance = 40t + 240t = 280t.
+2. Time = 4t; average = 70 km/h.
+Answer: (1)",Average speed,Revise Motion in a Straight Line.,
+35,1,conceptual,At terminal velocity the net force is zero. Which forces act?,mg = buoyancy + viscous force; buoyancy = mgρ_{0}/ρ.,"1. Viscous force = mg − mgρ_{0}/ρ = mg(1 − ρ_{0}/ρ).
+Answer: (1)",Terminal velocity,Revise Mechanical Properties of Fluids.,
+36,1,sympy,C_{P} − C_{V} = P(∂V/∂T)_{P} when U depends only on T.,From PV^{2} = RT: 2PV dV = R dT at constant P.,"1. (∂V/∂T)_{P} = R/(2PV).
+2. C_{P} = C_{V} + R/(2V).
+Answer: (1)",Heat capacities,Revise Thermodynamics.,Treats U as depending on T only (as the options assume).
+37,1,arithmetic,In a mixture both gases are at the same temperature.,v_{rms} ∝ 1/√M.,"1. v_{He}/v_{O2} = √(32/4) = 2√2.
+Answer: (1)",RMS speed,Revise Kinetic Theory.,
+38,1,conceptual,Use Gauss's law for a sphere just outside the shell.,E = Q/(4πε_{0}R^{2}) with Q = 4πR^{2}σ.,"1. E = σ/ε_{0} at the surface (taken as just outside).
+Answer: (1)",Field of a charged spherical shell,Revise Electric Charges and Fields.,Teacher look: exactly on the surface the field is sometimes taken as σ/(2ε_{0}) (average of inside and outside); NTA's key uses σ/ε_{0}.
+39,2,arithmetic,v = c/√(μ_{r}ε_{r}).,√(2ε_{r}) = 3 × 10^{8}/1.5 × 10^{8} = 2.,"1. 2ε_{r} = 4.
+2. ε_{r} = 2.
+Answer: (2)",Speed of EM waves in a medium,Revise Electromagnetic Waves.,
+40,2,arithmetic,B and D at the same potential means a balanced Wheatstone bridge. First reduce each arm to one resistance.,AB: 24 Ω in parallel with (12 + 12) Ω. BC: 1 ∥ 1. AD: x in series with (12 ∥ 12). DC: 0.5 Ω.,"1. R_{AB} = 24 ∥ 24 = 12 Ω; R_{BC} = 0.5 Ω; R_{AD} = x + 6; R_{DC} = 0.5 Ω.
+2. Balance: R_{AB}/R_{BC} = R_{AD}/R_{DC}, so 12 = x + 6.
+3. x = 6 Ω.
+Answer: (2)",Wheatstone bridge,Revise Current Electricity: reduce each arm before applying the balance condition.,Figure reading: 24 Ω parallel to two 12 Ω in series on AB; two 1 Ω in parallel on BC; x in series with two parallel 12 Ω on AD.
+41,3,arithmetic,Reading = MSR + CSR × least count.,LC = 1 mm/100 = 0.01 mm.,"1. d = 1 + 42 × 0.01 = 1.42 mm = 71/50 mm.
+2. x = 71.
+Answer: (3)",Screw gauge,Revise Units and Measurements.,No zero error given.
+42,3,conceptual,Write each quantity's SI unit and turn it into dimensions.,Torque: N m; B: N/(A m); magnetic moment: A m^{2}; μ_{0}: N/A^{2}.,"1. A → IV (ML^{2}T^{−2}).
+2. B → III (MT^{−2}A^{−1}).
+3. C → II (L^{2}A).
+4. D → I (MLT^{−2}A^{−2}).
+Answer: (3)",Dimensions of electromagnetic quantities,Revise Units and Measurements.,
+43,1,arithmetic,Biot–Savart for a short element; the point is perpendicular to it.,dB = (μ_{0}/4π) I dl/r^{2}.,"1. dB = 10^{−7} × 10 × 0.01/0.25 = 4 × 10^{−8} T.
+Answer: (1)",Biot–Savart law,Revise Moving Charges and Magnetism.,
+44,1,conceptual,Compare Z with R.,"Z = √(R^{2} + (X_{L} − X_{C})^{2}) ≥ R, minimum at resonance.","1. At resonance Z = R is least, so current is maximum. I true.
+2. Z ≥ R, so V/R ≥ V/Z. II true (same R).
+Answer: (1)",Series LCR resonance,Revise Alternating Current.,
+45,2,arithmetic,"T = 2π√(m/k), so k = 4π^{2}m/T^{2}.",Δk/k = Δm/m − 2ΔT/T.,"1. Δk/k = (−1%) − 2(+2%) = −5%.
+2. Error magnitude 5%.
+Answer: (2)",Error propagation,Revise Units and Measurements.,
+46,3,conceptual,Which phenomenon needs photons?,The photoelectric effect is explained by the particle nature.,"1. Reflection, diffraction, interference, polarisation: wave nature.
+2. Photoelectric effect: not explained by waves.
+Answer: (3)",Wave vs particle nature of light,Revise Dual Nature of Radiation and Matter.,
+47,1,arithmetic,Einstein's equation: KE_{max} = hν − φ.,KE_{max} = eV_{0} = 0.5 eV.,"1. φ = 2.48 − 0.5 = 1.98 eV.
+Answer: (1)",Photoelectric equation,Revise Dual Nature.,
+48,4,arithmetic,Shortest wavelength = series limit (n_{2} → ∞).,Balmer: 1/λ = R/4; Lyman: 1/λ = R.,"1. λ_{B}/λ_{L} = 4/1.
+Answer: (4)",Hydrogen spectrum,Revise Atoms.,
+49,2,conceptual,"Write Y from the gates: one input of the OR is NOT A, the other is A AND B.",Y = Ā + AB = Ā + B.,"1. Y = Ā + B: 00 → 1, 01 → 1, 10 → 0, 11 → 1.
+Answer: (2)",Logic circuits,Revise Semiconductor Electronics.,
+50,2,arithmetic,KE ∝ v^{2}.,Fraction left = (40/100)^{2}.,"1. Fraction left 0.16, so 84% lost.
+Answer: (2)",Kinetic energy,"Revise Work, Energy and Power.",
+51,60,sympy,δ_{m} = A. Use the prism formula.,μ = sin((A + δ_{m})/2)/sin(A/2) = sin A/sin(A/2) = 2cos(A/2).,"1. 2cos(A/2) = √3.
+2. A/2 = 30°, A = 60°.
+Answer: 60",Prism and minimum deviation,Revise Ray Optics.,
+52,12,arithmetic,v_{max} = Aω.,ω = 2π/3.14 = 2 rad/s.,"1. v_{max} = 0.06 × 2 = 0.12 m/s = 12 cm/s.
+Answer: 12",SHM,Revise Oscillations.,
+53,4,sympy,A·(B × C) = 0 is the determinant of the three vectors.,"det[[−x, −6, −2],[−1, 4, 3],[−8, −1, 3]] = 0.","1. det = −15x + 126 − 66 = −15x + 60.
+2. x = 4.
+Answer: 4",Scalar triple product,Revise Vector Algebra.,
+54,1,arithmetic,Volume is conserved: R^{3} = 1000r^{3}.,R = 10r; surface energy ∝ total area.,"1. Area of droplets: 1000 × 4πr^{2}; big drop: 4π(10r)^{2} = 400πr^{2}.
+2. Ratio 10 = 10/x, x = 1.
+Answer: 1",Surface energy,Revise Mechanical Properties of Fluids.,
+55,250,arithmetic,DC gives the coil's resistance. Then use Z and the rms current.,R = 100/5 = 20 Ω; Z = √(20^{2} + (20√3)^{2}) = 40 Ω.,"1. I_{rms} = (200/√2)/40.
+2. P = I_{rms}^{2}R = (20000/1600) × 20 = 250 W.
+Answer: 250",Power in AC circuits,Revise Alternating Current.,
+56,13,arithmetic,No external torque: angular momentum is conserved.,"I ∝ R^{2}, so T ∝ R^{2}.","1. T' = 24 × (3/4)^{2} = 13.5 h = 13 h 30 min.
+Answer: 13",Conservation of angular momentum,Revise Rotational Motion.,
+57,5,arithmetic,W = MB(cos θ_{1} − cos θ_{2}).,M = NIA.,"1. M = 200 × 100 × 10^{−6} × 2.5 × 10^{−4} = 5 × 10^{−6} A m^{2}.
+2. W = MB(1 − 0) = 5 μJ.
+Answer: 5",Work on a magnetic dipole,Revise Magnetism.,
+58,16,arithmetic,Volume stays the same when the wire is stretched.,A → A/4 so L → 4L.,"1. R' = ρ(4L)/(A/4) = 16R.
+Answer: 16",Resistance on stretching,Revise Current Electricity.,
+59,2,arithmetic,"Each sheet gives σ/(2ε_{0}), pointing away from positive and towards negative sheets.",P lies between x = a and x = 3a.,"1. From −σ at −a: σ/(2ε_{0}) towards −x.
+2. From −2σ at a: σ/ε_{0} towards −x.
+3. From σ at 3a: σ/(2ε_{0}) towards −x.
+4. Total 2σ/ε_{0}: x = 2.
+Answer: 2",Field of infinite sheets,Revise Electric Charges and Fields.,
+60,16,arithmetic,r_{n} = n^{2}a_{0}.,"8.48/0.529 ≈ 16, so n = 4.","1. n = 4.
+2. E_{n} = E/n^{2} = E/16.
+Answer: 16",Bohr model,Revise Atoms.,
+61,3,sympy,Take 1 L of solution and split its mass into solute and water.,Mass of solution 1120 g; NaOH 40x g; water 1120 − 40x g.,"1. Molality = x/((1120 − 40x)/1000) = 3.
+2. 1000x = 3360 − 120x, so x = 3.
+Answer: (3)",Molarity and molality,Revise Solutions.,
+62,2,conceptual,Count unpaired electrons and VSEPR pairs.,NO has 11 valence electrons (odd). NO_{2}^{−} has 18 (even).,"1. SO_{2}Cl_{2}: tetrahedral (III).
+2. NO: paramagnetic (I).
+3. NO_{2}^{−}: diamagnetic (II).
+4. I_{3}^{−}: linear (IV).
+Answer: (2)",Shapes and magnetism,Revise Chemical Bonding.,
+63,2,arithmetic,Equal numbers of molecules means equal partial pressures.,K_{p} = p_{HI}^{2}/(p_{H2}p_{I2}).,"1. All partial pressures equal p: K_{p} = p^{2}/p^{2} = 1.
+2. 1 = 10 × 10^{−1}: x = 10.
+Answer: (2)",Equilibrium constant,Revise Equilibrium (Δn_{g} = 0).,"The data (−20 °C, R) are not needed."
+64,2,conceptual,Which of these conducts like a metal?,Graphite conducts well along its layers (delocalised electrons).,"1. Ge and Si are semiconductors; copper oxide is a semiconductor.
+2. Graphite is a conductor.
+Answer: (2)",Conductors and semiconductors,Revise Semiconductor Electronics / solid properties.,
+65,3,conceptual,What happens to molar conductivity when a solution is already at infinite dilution?,Λ_{m} approaches Λ^{0} and stops changing with dilution.,"1. At infinite dilution Λ_{m} = Λ^{0}, so more water does not change it (and very dilute conductance is hard to measure).
+Answer: (3)",Molar conductivity,Revise Electrochemistry.,
+66,2,conceptual,"Read 'electron affinity value negative' as the electron gain enthalpy being negative, i.e. energy released.","Electron gain enthalpy is negative (exothermic) for Na and Al, positive for Be, N and O → O^{2−}.","1. Be, N: positive electron gain enthalpy (stable configurations).
+2. O → O^{2−}: overall positive.
+3. Na, Al: negative (energy released).
+4. D and E only.
+Answer: (2)",Electron gain enthalpy,Revise Classification of Elements and Periodicity.,"Teacher look: NTA uses 'electron affinity value' with the sign of Δ_{eg}H. With the textbook sign of electron affinity (energy released = positive) the answer would be A, B and C."
+67,3,conceptual,What is gallium's melting point?,Ga melts at about 303 K and boils near 2500 K.,"1. Ga is used in high-temperature thermometers. I true.
+2. At 256 K gallium is solid, so it cannot measure that. II false.
+Answer: (3)",Uses of gallium,Revise The p-Block Elements.,
+68,3,conceptual,Count bond pairs and lone pairs on the central atom.,SF_{4}: 4 + 1; BrF_{3}: 3 + 2; BrO_{3}^{−}: 3 + 1; NH_{4}^{+}: 4 + 0.,"1. SF_{4}: see-saw (III). BrF_{3}: bent T (IV). BrO_{3}^{−}: pyramidal (II). NH_{4}^{+}: tetrahedral (I).
+Answer: (3)",VSEPR,Revise Chemical Bonding.,
+69,2,conceptual,Lanthanoids are Ce to Lu (Z = 58–71).,"Cm (curium, Z = 96) is an actinoid.","1. Eu, Er, Tb, Yb, Lu are lanthanoids.
+2. Only Cm is not.
+Answer: (2)",f-block classification,Revise The d- and f-Block Elements.,
+70,1,conceptual,Match each hybridisation with its geometry.,sp^{3} tetrahedral; dsp^{2} square planar; sp^{3}d TBP; sp^{3}d^{2} octahedral.,"1. A-III, B-IV, C-I, D-II.
+Answer: (1)",Hybridisation and geometry,Revise Chemical Bonding.,
+71,1,conceptual,Wavenumber absorbed ∝ Δ_{o}. Compare ligands and metal ions.,CN^{−} > NH_{3} > H_{2}O > Cl^{−}; Co^{3+} > Cu^{2+}.,"1. B ([Co(CN)_{6}]^{3−}) largest.
+2. C (one H_{2}O) > A (one Cl^{−}).
+3. D (Cu^{2+} with water) smallest.
+4. D < A < C < B.
+Answer: (1)",Spectrochemical series,Revise Coordination Compounds.,
+72,2,conceptual,Recall the group reagents of cation analysis.,Group I: dil. HCl; III: NH_{4}Cl + NH_{4}OH; IV: + H_{2}S; V: (NH_{4})_{2}CO_{3}.,"1. A: Al^{3+} (III). B: Sr^{2+} (IV). C: Mn^{2+} (I). D: Pb^{2+} (II).
+Answer: (2)",Qualitative analysis,Revise salt analysis.,
+73,3,conceptual,Steam distillation suits liquids that are immiscible with water.,Aniline is immiscible with water.,"1. A true. B false (aniline is steam distilled because it is immiscible). C true. D true.
+Answer: (3)",Purification methods,Revise Organic Chemistry: Some Basic Principles.,
+74,1,conceptual,Metamers keep the same formula and functional group but change the groups on either side.,X: C_{6}H_{5}–NH–CO–C_{6}H_{11}.,"1. C_{6}H_{11}–NH–CO–C_{6}H_{5} has the same formula and amide group, groups swapped: metamer.
+2. The others change the formula or functional group.
+Answer: (1)",Metamerism,Revise isomerism.,
+75,3,conceptual,Benzenesulphonic acid is C_{6}H_{5}SO_{3}H.,Write the formula of benzenesulphonic acid and look at the group attached to the ring.,"1. The group is –SO_{3}H.
+Answer: (3)",Functional groups,Revise nomenclature.,
+76,3,conceptual,Recall NCERT's uses of polyhalogen compounds.,"Think: which one kills germs, which puts out fires, which cools, which kills insects?","1. Iodoform: antiseptic (III). CCl_{4}: fire extinguisher (I). CFC: refrigerant (IV). DDT: insecticide (II).
+Answer: (3)",Polyhalogen compounds,Revise Haloalkanes.,
+77,4,conceptual,What is picric acid's structure?,"Picric acid is 2,4,6-trinitrophenol.","1. I false (trinitrotoluene is TNT).
+2. II true (phenol-2,4-disulphonic acid + conc. HNO_{3} gives picric acid).
+Answer: (4)",Picric acid,Revise Phenols.,
+78,4,conceptual,CHCl_{3}/NaOH makes dichlorocarbene; it attacks the phenoxide ring.,"The intermediate is the o-(dichloromethyl) phenoxide, then hydrolysed to CHO.","1. Intermediate: sodium 2-(dichloromethyl)phenoxide.
+Answer: (4)",Reimer–Tiemann reaction,Revise Phenols.,
+79,1,conceptual,Fewer electron-donating alkyl groups and less crowding means faster nucleophilic addition.,Compare H–CHO with R–CHO: alkyl groups push electrons into the carbonyl carbon and block the nucleophile.,"1. HCHO is most reactive.
+Answer: (1)",Reactivity of aldehydes,Revise Aldehydes and Ketones.,
+80,2,conceptual,Guanine has an –NH_{2} and a C=O but no methyl group.,Thymine is the base with a methyl.,"1. Structure 2 puts a CH_{3} on guanine's ring: incorrect.
+Answer: (2)",Nucleic acid bases,Revise Biomolecules.,
+81,661,arithmetic,"Frequency of a wave = speed/wavelength, with λ = h/(mv).",ν = v/λ = mv^{2}/h = 2KE/h; KE in the first orbit = 2.18 × 10^{−18} J.,"1. ν = 2 × 2.18 × 10^{−18}/6.6 × 10^{−34} = 6.61 × 10^{15} Hz.
+2. = 661 × 10^{13}.
+Answer: 661",de Broglie waves,Revise Structure of Atom.,
+82,5,conceptual,"H-bonding needs H on N, O or F.",C_{2}H_{6} and C_{6}H_{6} cannot.,"1. CH_{3}OH, H_{2}O, o-nitrophenol (intramolecular), HF, NH_{3}: 5.
+Answer: 5",Hydrogen bonding,Revise Chemical Bonding.,
+83,274,arithmetic,"Adiabatic, against constant 1 atm: ΔU = w = −P_{ext}ΔV.",V_{1} = nR(298)/5; ΔV = V_{1}.,"1. n(5/2)R(T_{2} − 298) = −nR(298)/5.
+2. T_{2} = 298 − 23.84 = 274.2 K.
+Answer: 274",Irreversible adiabatic expansion,Revise Thermodynamics.,
+84,76,arithmetic,"Find α, then i = 1 + α.",α = √(K_{a}/C).,"1. α = √(1.2 × 10^{−5}/0.03) = 0.02, i = 1.02.
+2. π = 1.02 × 0.03 × 0.083 × 300 = 0.762 bar = 76 × 10^{−2}.
+Answer: 76",Osmotic pressure of a weak electrolyte,Revise Solutions.,
+85,3,arithmetic,t = (2.303/k) log(a/(a − x)).,"For first order, t is proportional to log([A]_{0}/[A]). After 99.9% only 1/1000 is left; after 90%, 1/10.","1. t_{99.9}/t_{90} = log 1000/log 10 = 3.
+Answer: 3",First-order kinetics,Revise Chemical Kinetics.,
+86,877,arithmetic,"CrO is basic, Cr_{2}O_{3} amphoteric, CrO_{3} acidic.","Cr^{2+} d^{4}, Cr^{3+} d^{3}.","1. √24 + √15 = 4.90 + 3.87 = 8.77 BM.
+2. = 877 × 10^{−2}.
+Answer: 877",Oxides of chromium,Revise The d- and f-Block Elements.,
+87,6,arithmetic,"In acid, MnO_{4}^{−} is reduced to Mn^{2+}.","Mn(VII) d^{0}, Mn^{2+} d^{5}.","1. 5.92 − 0 ≈ 6 BM.
+Answer: 6",KMnO_{4} titration,Revise The d- and f-Block Elements.,
+88,2,conceptual,Na/liq. NH_{3} gives a trans alkene; cold dilute KMnO_{4} gives a diol.,Na in liquid NH_{3} adds H atoms anti; cold dilute KMnO_{4} adds two OH groups to the C=C.,"1. But-2-yne → trans-but-2-ene → butane-2,3-diol.
+2. 2 oxygen atoms.
+Answer: 2",Birch-type reduction; Baeyer's reagent,Revise Hydrocarbons.,
+89,6,disputed,"Br_{2} gives trans-1,2-dibromocyclohexane. Then count how many HBr each base can remove or replace.",3 eq alcoholic KOH removes 2 HBr; 1 eq allyl oxide reacts once.,"1. B: double dehydrobromination gives cyclohexa-1,3-diene: 4 π electrons.
+2. A: one equivalent of CH_{2}=CHCH_{2}O^{−} replaces one Br (or removes one HBr), giving a product with one C=C: 2 π electrons.
+3. Total 6.
+Answer: 6",Elimination and substitution of vicinal dibromides,Revise Haloalkanes and Hydrocarbons.,"DISPUTED: NTA's final key is 8. Claude gets 6 (B = cyclohexa-1,3-diene, 4 π e; A has one C=C, 2 π e). 8 would need A to contain two C=C bonds (e.g. an allyl cyclohexenyl ether), which needs two equivalents of base, but only 1.0 eq is given. Owner/teacher to check."
+90,20,arithmetic,"Aniline → benzenediazonium chloride → p-hydroxyazobenzene, 1 : 1.","p-Hydroxyazobenzene C_{12}H_{10}N_{2}O, M = 198.","1. 9.3/93 = 0.1 mol.
+2. 0.1 × 198 = 19.8 ≈ 20 g.
+Answer: 20",Diazo coupling,Revise Amines.,
