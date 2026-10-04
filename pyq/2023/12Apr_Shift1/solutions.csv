@@ -1,0 +1,251 @@
+q,claude_answer,check,hint1,hint2,solution,concept,revise,note
+2,3,sympy,Write the roots in polar form. What are |α| and the argument?,"α, β = √3 e^{±3πi/4}, so α^{n} + β^{n} = 2 × 3^{n/2} cos(3nπ/4).","1. n = 14 and n = 10 give cos = 0, so those terms vanish.
+2. n = 23 and n = 15 both give cos = −1/√2.
+3. Ratio = 3^{23/2}/3^{15/2} = 3^{4} = 81.
+Answer: (3)",Powers of complex roots,Revise Complex Numbers (polar form).,
+3,3,sympy,Multiply the two outer matrices. What do you get?,"[[1, 2], [−1, −1]] and [[−1, −2], [1, 1]] are inverses, so B^{n} = PA^{n}P^{−1}.","1. A^{n} = [[1, n/51], [0, 1]]; ΣA^{n} = [[50, 25], [0, 50]].
+2. P(ΣA^{n})P^{−1} = [[75, 25], [−25, 25]].
+3. Sum of entries = 100.
+Answer: (3)",Similar matrices,Revise Matrices.,
+4,3,arithmetic,"First digit 5, 7 or 9; last digit 0 or 5.",Treat last digit 0 and last digit 5 separately.,"1. Last 0: 3 × 4 × 3 × 2 = 72.
+2. Last 5: first 7 or 9, then 4 × 3 × 2: 48.
+3. Total 120.
+Answer: (3)",Counting numbers,Revise Permutations and Combinations.,
+5,2,sympy,"Use C(n, r) = C(n − 1, r) + C(n − 1, r − 1); the alternating sum telescopes.","Σ_{r=0}^{k}(−1)^{r}C(n, r) = (−1)^{k}C(n − 1, k).","1. First 50 terms: r = 0 to 49.
+2. Sum = (−1)^{49}C(99, 49) = −C(99, 49).
+Answer: (2)",Alternating binomial sums,Revise Binomial Theorem.,
+6,4,sympy,Integrate (1 + x)^{n} from 0 to 1.,"Σ C(n, r)/(r + 1) = (2^{n+1} − 1)/(n + 1).","1. (2^{n+1} − 1)/(n + 1) = 1023/10.
+2. n = 9.
+Answer: (4)",Binomial sums by integration,Revise Binomial Theorem.,
+7,2,sympy,Find |z_{1} − z_{0}| first.,"z_{1} − z_{0} = (1 − i)/2, so |z_{2} − z_{0}| = √2, on the same line.","1. z_{2} = z_{0} ± (1 − i) = (3 + i)/2 or (−1 + 5i)/2.
+2. |z_{2}|^{2} = 5/2 or 13/2; both outside C.
+3. Smaller: 5/2.
+Answer: (2)",Complex numbers and lines,Revise Complex Numbers.,
+8,2,sympy,Write S_{n} = 1 − 2/((n + 1)(n + 2)) and subtract.,a_{n} = 4/(n(n + 1)(n + 2)).,"1. Σ_{1}^{10} k(k + 1)(k + 2)/4 = (10 × 11 × 12 × 13)/16 = 1072.5.
+2. 28 × 1072.5 = 30030 = 2 × 3 × 5 × 7 × 11 × 13.
+3. m = 6.
+Answer: (2)",Sequences from partial sums,Revise Sequences and Series.,
+9,4,sympy,Take logs: ln f = t^{2}(ln(√(3e)/2) − ln t) with t = sin x.,Differentiate in t: maximum where ln t = ln(√3/2).,"1. t = √3/2: ln f = (3/4)(1/2) = 3/8.
+2. k/e = e^{3/8}, so k^{8} = e^{11}.
+3. (k/e)^{8} + k^{8}/e^{5} + k^{8} = e^{3} + e^{6} + e^{11}.
+Answer: (4)",Maxima with logarithms,Revise Application of Derivatives.,"Reads the base as √(3e)/(2 sin x); with √3 e the function has no local maximum in (0, π/2)."
+10,3,sympy,"Find the tangent at (−1, −1) and where it meets the curve again.",y = 3x + 2; x^{3} − 3x − 2 = (x + 1)^{2}(x − 2).,"1. Area = ∫_{−1}^{2}(3x + 2 − x^{3}) dx = 27/4.
+Answer: (3)",Area with a tangent,Revise Application of Integrals.,
+11,4,sympy,This is a Bernoulli equation. Put u = 1/y.,"du/dx + xu/(1 + x^{2}) = 1/(1 + x^{2}), IF √(1 + x^{2}).","1. u√(1 + x^{2}) = ln(x + √(1 + x^{2})) + 1 (from y(0) = 1).
+2. At x = 2√2: 3/β = ln(3 + 2√2) + 1.
+3. e^{3/β} = e(3 + 2√2).
+Answer: (4)",Bernoulli equations,Revise Differential Equations.,
+12,4,sympy,PQ and RS are perpendicular diameters. Use polar form r^{2}(cos^{2}θ/a^{2} + sin^{2}θ/b^{2}) = 1.,1/OP^{2} + 1/OR^{2} = 1/a^{2} + 1/b^{2} for perpendicular radii.,"1. 1/OP^{2} + 1/OR^{2} = 1/4 + 1/9 = 13/36.
+2. PQ = 2OP, RS = 2OR: sum = 13/144.
+3. p + q = 157.
+Answer: (4)",Perpendicular diameters of an ellipse,Revise Conic Sections.,
+13,3,sympy,"Find the intercepts and the mid-point (h, k).","h = 7/(2cos θ), k = 7/(2sin θ): 1/h^{2} + 1/k^{2} = 4/49.","1. k = 7/√3: 1/h^{2} = 4/49 − 3/49.
+2. h = 7 (positive for θ in (0, π/2)).
+Answer: (3)",Locus of mid-points,Revise Straight Lines.,
+14,4,sympy,The new plane contains the line and is perpendicular to P.,"P_{1} + λP_{2} = 0 with normal ⊥ (4, −1, 1).","1. 18 + 2λ = 0, λ = −9: 5x + 10y − 10z − 26 = 0.
+2. Distance of (2, 3, −4) = 54/15.
+3. 35α = 126.
+Answer: (4)",Rotating a plane,Revise Three Dimensional Geometry.,
+15,2,sympy,Coplanar: some plane through l_{2} contains l_{1}.,"Plane (3x + 2y + z − 2) + μ(x − 3y + 2z − 13) = 0 parallel to (3, 1, −2).","1. μ = 9/4: 21x − 19y + 22z = 125; (−5, −4, α) lies on it, so α = 7.
+2. Foot of Q on l_{1}: t = 1, P = (−2, −3, 5).
+3. |a| + |b| + |c| = 10.
+Answer: (2)",Coplanar lines,Revise Three Dimensional Geometry.,
+16,2,sympy,Coplanar: the determinant is 0.,abc − a − b − c + 2 = 0.,"1. Put a = 1 − p etc.: this becomes the condition 1/p + 1/q + 1/r = 1.
+Answer: (2)",Coplanar vectors,Revise Vector Algebra.,
+17,1,sympy,(a + b + c) × c = 0 means c ∥ a + b.,"c = t(λ + 3, 0, 1).","1. a·c = t(λ^{2} + 3λ − 1) = −17 and b·c = t(3λ + 11) = −20 give λ = 3, t = −1.
+2. c = (−6, 0, −1); c × (3, 1, 1) = (1, 3, −6).
+3. |.|^{2} = 46.
+Answer: (1)",Vector equations,Revise Vector Algebra.,
+18,3,arithmetic,Variance of a difference of independent variables.,Var(α − β) = Var α + Var β = 35/12 + 35/12.,"1. 35/6, so p = 35.
+2. Divisors 1 + 5 + 7 + 35 = 48.
+Answer: (3)",Variance,Revise Probability.,
+19,2,sympy,Turn the condition into one about the sides.,"It reduces to sin A + sin C = 2 sin B, so a + c = 2b.","1. b = 5.
+2. cos A = 65/70 = 13/14, cos C = −15/30 = −1/2.
+3. cos A − cos C = 10/7.
+Answer: (2)",Triangle identities,Revise Trigonometric Functions.,
+20,1,arithmetic,S1: p ∧ ∼q is exactly when p ⇒ q is false.,"S2 lists all four cases of p, q.","1. S1 is a contradiction.
+2. S2 is a tautology.
+Answer: (1)",Tautologies,Revise Mathematical Reasoning.,Mathematical reasoning is no longer in the JEE Main syllabus.
+21,3,arithmetic,"Start with the forced pairs: the diagonal, (1, 2), (2, 3) and (1, 3) for transitivity.","Try adding (2, 1), (3, 2), (3, 1) one at a time and check transitivity.","1. The base set works.
+2. Adding (2, 1) or (3, 2) alone works.
+3. Any other addition breaks transitivity or makes R symmetric.
+4. 3 relations.
+Answer: 3",Properties of relations,Revise Relations and Functions.,
+22,6,sympy,Expand D_{k}: it is linear in k.,D_{k} = n^{3} + 5n^{2} + 6n + 4 − 2kn(n + 4).,"1. Σ_{k=1}^{n} D_{k} = n(n^{3} + 5n^{2} + 6n + 4) − n^{2}(n + 1)(n + 4) = n^{2} + 4n... simplifies to 2n^{2} + 4n.
+2. 2n^{2} + 4n = 96 gives n = 6.
+Answer: 6",Determinants and sums,Revise Determinants.,
+23,944,arithmetic,Count the complement: arrangements with no three consecutive digits in AP.,"Take digits a < b < c in AP; 'in AP' here means a, b, c in some order with a common difference (b in the middle).","1. Total arrangements 9!/(3!)^{3} = 1680.
+2. A direct count of arrangements containing abc or cba consecutively gives 944.
+Answer: 944",Counting with patterns,Revise Permutations and Combinations.,Checked by brute force. NTA counts only non-constant APs (abc or cba); counting aaa as an AP too gives 1208.
+24,211,sympy,"In a GP, Σ1/a_{i} = Σa_{i}/a_{3}^{2} for 5 terms.",a_{3}^{2} = (31/2)/(31/8) = 4.,"1. a_{3} = 2; 2(1 + r + r^{2}) = 14 gives r = 2: terms 1/2, 1, 2, 4, 8.
+2. Variance = 85.25/5 − 3.1^{2} = 7.44 = 186/25.
+3. m + n = 211.
+Answer: 211",GP and variance,Revise Sequences and Series and Statistics.,
+25,2,conceptual,Check left and right limits at x = −1 and x = 0.,Near −1 from the left: [x] = −2.,"1. At −1: left limit 2 + 1 = 3, value 1.
+2. At 0: left limit 1 + 1 = 2, value 0.
+3. 2 points.
+Answer: 2",Continuity with greatest integer,Revise Continuity and Differentiability.,
+26,575,sympy,100x^{2} − 1 changes sign at x = ±0.1. Use symmetry.,2[∫_{0}^{0.1}(1 − 100x^{2}) dx + ∫_{0.1}^{0.15}(100x^{2} − 1) dx].,"1. = 2(1/15 + 7/240) = 23/120.
+2. k = 3000 × 23/120 = 575.
+Answer: 575",Integrals with modulus,Revise Definite Integrals.,
+27,64,sympy,Try differentiating √(x(x + 7)) + 7 ln(√x + √(x + 7)).,Its derivative is √((x + 7)/x).,"1. I(9) = 12 + 7 ln 7 + C, so C = 0.
+2. I(1) = 2√2 + 7 ln(1 + 2√2): α = 2√2.
+3. α^{4} = 64.
+Answer: 64",Indefinite integrals,Revise Integrals.,
+28,7,sympy,"Centre (r, r). Chord of length 2 means r^{2} − d^{2} = 1.",d = |2r − 2|/√2.,"1. r^{2} − 4r + 3 = 0: r = 1, 3.
+2. 1 + 9 − 3 = 7.
+Answer: 7",Chords of circles,Revise Circles.,
+29,288,sympy,"For a plane meeting the axes at A, B, C, the orthocentre of ABC is the foot of the perpendicular from O.",Foot = tn with n·(tn) + 6 = 0.,"1. t = −3/7: (−3/7, −9/7, 6/7).
+2. 98(−12/7)^{2} = 288.
+Answer: 288",Orthocentre in 3D,Revise Three Dimensional Geometry.,
+30,10,arithmetic,This is a geometric distribution with success probability (n − 1)/n.,Mean = n/(n − 1).,"1. n/(n − 1) = n/9 gives n = 10.
+Answer: 10",Geometric distribution,Revise Probability.,
+31,1,conceptual,Which quantities depend on the satellite's mass?,Orbital speed √(GM/r) does not.,"1. Speed is the same; KE, PE and total energy double for A.
+Answer: (1)",Satellites,Revise Gravitation.,
+32,2,arithmetic,Topic: Dimensions. Which rule or fact from it settles this question?,"Write each in M, L, T.","1. Spring constant MT^{−2} (II), angular speed T^{−1} (I), angular momentum ML^{2}T^{−1} (IV), MoI ML^{2} (III).
+Answer: (2)",Dimensions,Revise Units and Measurements.,
+33,3,conceptual,Topic: Work–energy and acceleration. Which rule or fact from it settles this question?,Work done by the brakes = KE. Is velocity changing in a turn?,"1. I true: F × d = KE.
+2. II false: the direction changes, so there is acceleration.
+Answer: (3)",Work–energy and acceleration,"Revise Work, Energy and Power.",
+34,1,arithmetic,"f_{c} = 500 Hz, f_{m} = 2 Hz.",AM contains f_{c} and f_{c} ± f_{m}.,"1. 500, 498, 502 Hz: A, D, E.
+Answer: (1)",Amplitude modulation,Revise Communication Systems.,Communication systems is no longer in the JEE Main syllabus.
+35,1,conceptual,Topic: LCR resonance. Which rule or fact from it settles this question?,What happens to the current through resonance?,"1. Current peaks at resonance: I true.
+2. Power factor 1 at resonance: II true.
+Answer: (1)",LCR resonance,Revise Alternating Current.,
+36,1,arithmetic,Topic: Escape velocity. Which rule or fact from it settles this question?,v_{e} = √(2GM/R).,"1. √(16/4) = 2: ratio 2 : 1.
+Answer: (1)",Escape velocity,Revise Gravitation.,
+37,2,arithmetic,Newton's law of cooling with average temperatures.,(T_{1} − T_{2})/t = k(T_{avg} − T_{s}).,"1. 20/5 = k(70 − 20): k = 2/25 per min.
+2. 20/t = (2/25)(30): t = 25/3 min = 500 s.
+Answer: (2)",Newton's law of cooling,Revise Thermal Properties of Matter.,
+38,2,arithmetic,Topic: Carnot efficiency. Which rule or fact from it settles this question?,Carnot efficiency between 373 K and 273 K.,"1. η_{Carnot} = 100/373 ≈ 27%.
+2. A real engine is less efficient: B and D.
+Answer: (2)",Carnot efficiency,Revise Thermodynamics.,Treats 'an engine' as a real (irreversible) engine.
+39,3,arithmetic,Topic: RMS speed. Which rule or fact from it settles this question?,v_{rms} ∝ 1/√M at the same T.,"1. 490 × √(70.9/39.9) ≈ 653 m/s; nearest option 651.7 m/s.
+Answer: (3)",RMS speed,Revise Kinetic Theory.,Exact value ≈ 653 m/s; option (3) is the closest.
+40,2,arithmetic,Topic: Energy in SHM. Which rule or fact from it settles this question?,"PE = kx^{2}/2, KE = k(A^{2} − x^{2})/2.","1. At x = A/2: 1/4 : 3/4 = 1 : 3.
+Answer: (2)",Energy in SHM,Revise Oscillations.,
+41,1,conceptual,Topic: Gauss's law. Which rule or fact from it settles this question?,Gauss's law: flux = enclosed charge/ε_{0}.,"1. Net charge of a dipole is 0: both true, R explains A.
+Answer: (1)",Gauss's law,Revise Electric Charges and Fields.,
+42,1,arithmetic,Volume is fixed: area changes 4 times when length is quartered.,R ∝ L^{2} at fixed volume.,"1. R = 160/16 = 10 Ω.
+Answer: (1)",Resistance on reshaping,Revise Current Electricity.,
+43,4,conceptual,Topic: Diamagnetism. Which rule or fact from it settles this question?,Does diamagnetism depend on temperature?,"1. I false.
+2. II true.
+Answer: (4)",Diamagnetism,Revise Magnetism and Matter.,
+44,1,arithmetic,Topic: Vertical motion. Which rule or fact from it settles this question?,v = u − gt.,"1. v(3) = 120, v(5) = 100: ratio 6/5.
+2. x = 5.
+Answer: (1)",Vertical motion,Revise Motion in a Straight Line.,
+45,1,arithmetic,"At rest, F_{1} balances the resultant of F_{2} and F_{3}.",√(64 + 36) = 10 N.,"1. Removing F_{1} leaves 10 N: a = 2 m/s^{2}.
+Answer: (1)",Equilibrium of forces,Revise Laws of Motion.,
+46,4,arithmetic,Apparent depth = real depth/μ from each side.,"x/μ = 12, (24 − x)/μ = 4.","1. 24/μ = 16: μ = 3/2.
+Answer: (4)",Apparent depth,Revise Ray Optics.,
+47,2,arithmetic,Topic: de Broglie wavelength. Which rule or fact from it settles this question?,λ = h/√(2mqV).,"1. Proton: m × e × 2. Alpha: 4m × 2e × 4 = 32me.
+2. λ_{p}/λ_{α} = √(32/2) = 4.
+Answer: (2)",de Broglie wavelength,Revise Dual Nature of Radiation and Matter.,
+48,3,arithmetic,Which level can 12.5 eV reach from n = 1?,E_{3} − E_{1} = 12.09 eV; E_{4} − E_{1} = 12.75 eV.,"1. Up to n = 3.
+2. Lines: 3 → 1, 3 → 2, 2 → 1: 3.
+Answer: (3)",Spectral lines,Revise Atoms.,
+49,3,arithmetic,Topic: Transistor gain. Which rule or fact from it settles this question?,β = ΔI_{C}/ΔI_{B}.,"1. 11 mA/0.1 mA = 110.
+Answer: (3)",Transistor gain,Revise Semiconductor Electronics.,
+50,4,conceptual,Topic: EM spectrum. Which rule or fact from it settles this question?,Compare wavelengths of IR/visible and microwaves.,"1. A false: optical waves have shorter wavelengths.
+2. R true: IR photons are more energetic.
+Answer: (4)",EM spectrum,Revise Electromagnetic Waves.,
+51,243,arithmetic,Topic: Oscillating compass needle. Which rule or fact from it settles this question?,f^{2} ∝ B_{H} = B cos δ.,"1. (20/30)^{2} = (B_{1}/B_{2})(cos 30°/cos 60°) = √3 B_{1}/B_{2}.
+2. B_{1}/B_{2} = 4/(9√3) = 4/√243.
+Answer: 243",Oscillating compass needle,Revise Magnetism and Matter.,
+52,784,arithmetic,"At constant speed, engine work = work against friction.",W = μmgd.,"1. W = 0.04 × 500 × 9.8 × 4000 = 784000 J = 784 kJ.
+Answer: 784",Work against friction,"Revise Work, Energy and Power.",NTA uses g = 9.8 m/s^{2} (g = 10 gives 800).
+53,2,arithmetic,Topic: Rolling. Which rule or fact from it settles this question?,Spherical shell: I = (2/3)MR^{2}.,"1. Rotational KE/total = (1/3)/(5/6) = 2/5.
+2. x = 2.
+Answer: 2",Rolling,Revise System of Particles and Rotational Motion.,
+54,4,arithmetic,Continuity and Bernoulli.,v_{2} = 2v_{1}; ΔP = (1/2)ρ(v_{2}^{2} − v_{1}^{2}).,"1. 3 = (1/2)(1250)(3v_{1}^{2}): v_{1} = 0.04 m/s.
+2. Q = 10^{−3} × 0.04 = 4 × 10^{−5} m^{3}/s.
+Answer: 4",Bernoulli's equation,Revise Mechanical Properties of Fluids.,
+55,1,arithmetic,Ratio 1 : 3 : 5 means a closed pipe.,"f_{n} = nv/(4L), n odd.","1. 5 × 324/(4L) = 405: L = 1 m.
+Answer: 1",Closed organ pipe,Revise Waves.,
+56,160,arithmetic,Topic: Combining drops. Which rule or fact from it settles this question?,"V = kq/r: charge ×64, radius ×4.","1. V = 64/4 × 10 = 160 mV.
+Answer: 160",Combining drops,Revise Electrostatic Potential.,
+57,15,arithmetic,Topic: Temperature dependence of resistance. Which rule or fact from it settles this question?,R = R_{0}(1 + αT); I ∝ 1/R.,"1. 1 + 100α = 2/1.2 = 5/3: α = 1/150.
+2. At 50 °C: R = (4/3)R_{0}, I = 2 × 3/4 = 1.5 A = 15 × 10^{2} mA.
+Answer: 15",Temperature dependence of resistance,Revise Current Electricity.,
+58,50,arithmetic,Topic: Faraday's law. Which rule or fact from it settles this question?,emf = B dA/dt = B × 2πr dr/dt.,"1. 0.4 × 2π × 0.02 × 0.001 ≈ 5.0 × 10^{−5} V = 50 μV.
+Answer: 50",Faraday's law,Revise Electromagnetic Induction.,
+59,100,arithmetic,The first lens forms an image at its focus.,That image is 40 cm in front of the second lens.,"1. 1/v = 1/20 − 1/40: v = 40 cm beyond lens 2.
+2. From lens 1: 60 + 40 = 100 cm.
+Answer: 100",Lens combinations,Revise Ray Optics.,
+60,4,arithmetic,Topic: Q value. Which rule or fact from it settles this question?,Q = Δm × 931.5 MeV.,"1. Δm = 0.0044 u.
+2. Q = 4.1 MeV ≈ 4.
+Answer: 4",Q value,Revise Nuclei.,
+61,2,arithmetic,Find the molar mass from the vapour density at STP.,M = 0.57 × 22400/100.,"1. M ≈ 127.7 g/mol.
+2. Cl = 0.55 × 127.7 = 70.2 g: 2 Cl.
+Answer: (2)",Molecular formula,Revise Some Basic Concepts of Chemistry.,
+62,3,conceptual,"C_{2}^{2−} has 14 electrons, like N_{2}.","Bond order 3, diamagnetic.","1. NO^{+} also has 14 electrons: same.
+Answer: (3)",MO theory,Revise Chemical Bonding.,
+63,2,conceptual,What happens at each plate during charging?,Electrodes are named by their role in discharge: cathode = PbO_{2} plate.,"1. Charging: PbSO_{4} on the cathode (PbO_{2} plate) → PbO_{2} (B true).
+2. ~38% H_{2}SO_{4} (D true).
+3. C false: PbO_{2} is the cathode. A false.
+Answer: (2)",Lead storage battery,Revise Electrochemistry.,"Teacher look: NTA names the plates by their discharge roles; strictly, during charging the PbO_{2} plate is the anode."
+64,1,conceptual,Topic: Adsorption of gases. Which rule or fact from it settles this question?,"Higher critical temperature, more easily liquefied, more adsorbed.","1. D > C > B > A.
+Answer: (1)",Adsorption of gases,Revise Surface Chemistry.,Surface chemistry is no longer in the JEE Main syllabus.
+65,1,conceptual,Topic: Alkali metals. Which rule or fact from it settles this question?,Density rises down the group except K.,"1. K < Na < Rb < Cs.
+Answer: (1)",Alkali metals,Revise The s-Block Elements.,
+66,1,conceptual,What happens to Mg near 1100 °C?,Mg boils; entropy changes sharply.,"1. Both true, R explains A.
+Answer: (1)",Ellingham diagram,Revise General Principles of Isolation of Elements.,Metallurgy is no longer in the JEE Main syllabus.
+67,3,conceptual,Topic: Types of hydrides. Which rule or fact from it settles this question?,Recall NCERT's classification of hydrides.,"1. B_{2}H_{6} deficient, HF rich, CH_{4} precise, MgH_{2} saline.
+Answer: (3)",Types of hydrides,Revise Hydrogen.,
+68,3,conceptual,Topic: Calcium compounds. Which rule or fact from it settles this question?,"Double displacement, then recycle CaCO_{3}.","1. X = CaCO_{3}, Y = NaCl, Z = HCl.
+Answer: (3)",Calcium compounds,Revise The s-Block Elements.,
+69,1,conceptual,Topic: Boron. Which rule or fact from it settles this question?,Recall NCERT on boron.,"1. Boron is extremely hard and has the highest melting point in group 13.
+Answer: (1)",Boron,Revise The p-Block Elements.,Teacher look: 'lattice energy' is used loosely for boron's covalent network (NCERT wording).
+70,1,conceptual,Topic: Covalency and oxides. Which rule or fact from it settles this question?,"Higher oxidation state, more covalent.","1. SbCl_{5} is more covalent: I true.
+2. NCERT: higher oxides of halogens are more stable: II true.
+Answer: (1)",Covalency and oxides,Revise The p-Block Elements.,
+71,1,conceptual,Topic: Actinoids. Which rule or fact from it settles this question?,Why do actinoids show more oxidation states?,"1. 5f orbitals extend further: both true, R explains A.
+Answer: (1)",Actinoids,Revise The d- and f-Block Elements.,
+72,2,conceptual,CFSE = (−0.4x + 0.6y)Δ_{0}.,"Cu^{2+} d^{9}, Ti^{3+} d^{1}, Fe^{3+} d^{5} low spin, Ni^{2+} d^{8}.","1. A −0.6 (I), B −0.4 (IV), C −2.0 (II), D −1.2 (III).
+Answer: (2)",CFSE,Revise Coordination Compounds.,
+73,3,conceptual,Topic: Pollution. Which rule or fact from it settles this question?,Match each pollutant to its effect.,"1. NO_{x}: acid rain. CH_{4}: global warming. CO_{2}: rain pH 5.6. Phosphate: eutrophication.
+Answer: (3)",Pollution,Revise Environmental Chemistry.,Environmental chemistry is no longer in the JEE Main syllabus.
+74,3,conceptual,Squaric acid loses two H^{+}. What is special about the dianion?,Squarate: 4-membered ring with 2π electrons delocalised.,"1. B aromatic (A), A tautomerises (C), equal C–C bonds in B (D).
+2. The acid–base reaction is fast, so B is false.
+Answer: (3)",Aromaticity,Revise Hydrocarbons.,Squaric acid goes beyond NCERT.
+75,1,conceptual,Topic: Ozonolysis. Which rule or fact from it settles this question?,"With water (no Zn), H_{2}O_{2} formed in work-up oxidises the aldehydes.","1. CH_{3}CH=CHCH_{2}CH_{2}CH_{3} → acetic acid + butanoic acid.
+Answer: (1)",Ozonolysis,Revise Hydrocarbons.,Teacher look: NTA takes O_{3}/H_{2}O as oxidative work-up (acids).
+76,2,conceptual,Mg turns the C–Br into a Grignard carbon. Which C=O is it most likely to attack: its own (making a three-membered ring) or another molecule's?,"Closing a three-membered ring is very strained, so the Grignard end of one molecule adds to the C=O of a second molecule.","1. 4-Bromopentan-2-one forms a Grignard at C-4.
+2. It adds to the ketone of another molecule (the second molecule keeps its C–Br).
+3. Work-up gives the tertiary alcohol: CH_{3}COCH_{2}CH(CH_{3})–C(OH)(CH_{3})–CH_{2}CH(CH_{3})Br.
+Answer: (2)",Grignard reagents with carbonyl groups,Revise Haloalkanes and Alcohols (Grignard reagents).,Teacher look: NTA's key is the intermolecular addition product; the intramolecular cyclopropanol (option 1) is rejected because of ring strain.
+77,3,conceptual,Intramolecular aldol: which ring size forms?,"Octane-2,7-dione gives a five-membered ring.","1. Enolate of one CH_{3}CO attacks the other C=O; dehydration gives 1-acetyl-2-methylcyclopentene.
+Answer: (3)",Intramolecular aldol,Revise Aldehydes and Ketones.,
+78,3,conceptual,Acid → acid chloride → amide → LiAlH_{4}.,LiAlH_{4} reduces C(=O)NHR to CH_{2}NHR; isolated C=C stays.,"1. Ph–CH=CH–CH_{2}–CH_{2}–NHR.
+Answer: (3)",Amides to amines,Revise Amines.,
+79,4,conceptual,Topic: Nitrous acid with amines. Which rule or fact from it settles this question?,Tertiary aromatic amines undergo C-nitrosation.,"1. B is p-nitroso-N,N-dimethylaniline, formed at low temperature via NO^{+}.
+2. 'B is an N-nitroso ammonium compound' is incorrect.
+Answer: (4)",Nitrous acid with amines,Revise Amines.,
+80,2,conceptual,Topic: Polymers. Which rule or fact from it settles this question?,Classify each polymer.,"1. Chloroprene: synthetic rubber. Nylon-2-nylon-6: biodegradable. PAN: addition. Dacron: polyester.
+Answer: (2)",Polymers,Revise Polymers.,Polymers are no longer in the JEE Main syllabus.
+81,4,arithmetic,Topic: Molecular speeds. Which rule or fact from it settles this question?,"v_{rms} = √(3RT/M), v_{mp} = √(2RT/M).","1. 3 × 600/40 = 2 × 90/M.
+2. M = 4.
+Answer: 4",Molecular speeds,Revise States of Matter.,
+82,3,arithmetic,Photon energy at 400 nm.,E = hc/λ.,"1. E = 4.95 × 10^{−19} J = 3.09 eV.
+2. Li, Na, K have W_{0} below 3.09 eV.
+Answer: 3",Photoelectric effect,Revise Structure of Atom.,
+83,3,arithmetic,"For a reversible isothermal process, q_{surr} = −q_{sys}.",ΔS_{surr} = −nR ln(V_{2}/V_{1}).,"1. ΔS_{surr} = −8.314 ln 1.5 = −3.37 J/K.
+2. Magnitude ≈ 3.
+Answer: 3",Entropy of surroundings,Revise Thermodynamics.,Teacher look: the wording mixes 'reversible' with 'against constant 4 atm'; NTA's 3 is the magnitude for the reversible case (−3.37 J/K). The irreversible reading gives −1.16 J/K.
+84,48,arithmetic,i = 1 + 2α for MgCl_{2}.,Mole fraction of water with i × 1 mol of particles.,"1. i = 2.6; water 55.5 mol.
+2. P = 50 × 55.5/(55.5 + 2.6) ≈ 47.8 ≈ 48 mm Hg.
+Answer: 48",Raoult's law with dissociation,Revise Solutions.,
+85,9000,arithmetic,Topic: Dilution. Which rule or fact from it settles this question?,pH up by 1 means diluting 10 times.,"1. 1 L → 10 L: add 9 L = 9000 mL.
+Answer: 9000",Dilution,Revise Equilibrium.,
+86,3,conceptual,Rate = k[NOBr_{2}][NO]; replace [NOBr_{2}] from the fast equilibrium.,[NOBr_{2}] = K[NO][Br_{2}].,"1. Rate = kK[NO]^{2}[Br_{2}]: order 3.
+Answer: 3",Reaction mechanisms,Revise Chemical Kinetics.,
+87,25,arithmetic,Most polar = travels least.,R_{f} = distance by spot/distance by solvent.,"1. C: 2/8 = 0.25 = 25 × 10^{−2}.
+Answer: 25",TLC,Revise Organic Chemistry: Some Basic Principles.,"Figure reading: solvent front 8 cm; A near the front, B 6 cm, C 2 cm."
+88,15,arithmetic,"Follow each step: Strecker, nitration, protection, esterification, reduction, diazotisation, iodination.",D = EtO–C_{6}H_{2}I_{2}–CH_{2}–CH(NHCOCH_{3})–COOEt.,"1. Carbons: 2 (OEt) + 6 (ring) + 2 (CH_{2}CH) + 3 (COOEt) + 2 (acetyl) = 15.
+2. H 19, N 1, O 4 check.
+Answer: 15",Multistep synthesis,Revise Amines and Aldehydes.,
+89,10,arithmetic,Topic: Peptides. Which rule or fact from it settles this question?,sp^{2} carbons: C=O carbons and the benzene ring.,"1. 4 carbonyl carbons (3 amide + 1 acid) + 6 ring carbons of Phe = 10.
+Answer: 10",Peptides,Revise Biomolecules.,
+90,60,arithmetic,Write Tollens' reaction with the ammonium salt as product.,RCHO + 2[Ag(NH_{3})_{2}]OH → RCOONH_{4} + 2Ag + 3NH_{3} + H_{2}O.,"1. Aldehyde: 131.8/112 = 1.177 kmol.
+2. NH_{3} = 3 × 1.177 × 17 = 60 kg.
+Answer: 60",Tollens' test,Revise Aldehydes and Ketones.,NTA's 60 counts 3 NH_{3} (the acid ends as RCOONH_{4}); writing RCOO^{−} gives 4 NH_{3} (80 kg).
