@@ -1,0 +1,250 @@
+q,claude_answer,check,hint1,hint2,solution,concept,revise,note
+1,2,sympy,"Write the two conditions: −1 ≤ (3x − 22)/(2x − 19) ≤ 1, and the log's argument > 0.",(3x − 22)/(2x − 19) ≤ 1 gives (x − 3)/(2x − 19) ≤ 0; ≥ −1 gives (5x − 41)/(2x − 19) ≥ 0. Factor 3x² − 8x + 5 = (3x − 5)(x − 1) and x² − 3x − 10 = (x − 5)(x + 2).,"1. The sin^{−1} part gives x ∈ [3, 41/5].
+2. The log part (sign chart) gives x < −2, 1 < x < 5/3, or x > 5.
+3. Together: (5, 41/5], so α = 5, β = 41/5.
+4. 3α + 10β = 15 + 82 = 97.
+Answer: (2)",Domain of a function (rational inequalities).,Revise 'Relations and Functions' and 'Inverse Trigonometric Functions'.,
+2,2,sympy,z̄² = −|z| is a negative real number. What does that say about z̄?,z̄² negative real means z̄ is purely imaginary: z = iy. Then −y² + |y| = 0.,"1. |y| = 1 (non-zero), so z = i or −i.
+2. α = i + (−i) = 0, β = i × (−i) = 1.
+3. 4(α² + β²) = 4.
+Answer: (2)",Solving equations in complex numbers.,Revise 'Complex Numbers'.,
+3,1,sympy,Find a and b from the sum and product of the roots.,"Sum 8 = −b/a, product 12 = 1/a. So a = 1/12, b = −2/3.","1. 2a + b = −1/2, so the first root is −2. 6a + b = −1/6, so the second root is −6.
+2. Equation: (x + 2)(x + 6) = x² + 8x + 12 = 0.
+Answer: (1)",Forming a quadratic from its roots.,Revise 'Quadratic Equations'.,
+4,3,sympy,A non-trivial solution needs the coefficient determinant to be zero.,"Expanding and using sin² + cos² = 1, the determinant simplifies to −1 − √2(cos 2α − sin 2α) = −1 − 2cos(2α + π/4).","1. cos(2α + π/4) = −1/2, so 2α + π/4 = 2π/3 (for α in (0, π/2)).
+2. 2α = 2π/3 − π/4 = 5π/12, so α = 5π/24.
+Answer: (3)",Homogeneous systems with trigonometric coefficients.,Revise 'Determinants' and 'Trigonometric Functions'.,
+5,2,sympy,"For 3 × 3 matrices, det(adj M) = (det M)². Also det(Mᵀ) = det M.","det(2A − Aᵀ) and det(A − 2Aᵀ): note A − 2Aᵀ = −(2A − Aᵀ)ᵀ, so their determinants have equal size.","1. det A = α − 5, and the product of the two adjoint determinants is (det(2A − Aᵀ))²(det(A − 2Aᵀ))² = 2⁸. This gives α = 1 for α > 0 (then both determinants are ±4).
+2. det A = −4, so (det A)² = 16.
+Answer: (2)",Determinant of adjoint and transpose.,Revise 'Determinants'.,
+6,3,sympy,"Find the left limit, the right limit and f(0), and set them equal.","(1 − cos 2x)/x² → 2. √(1 − cos x) = √2|sin(x/2)|, so the right limit is β/√2.","1. α = 2 and β/√2 = 2, so β = 2√2.
+2. α² + β² = 4 + 8 = 12.
+Answer: (3)",Continuity with standard limits.,Revise 'Continuity and Differentiability'.,
+7,4,sympy,"Choose any 3 of the 18 points, then remove the choices that lie on one side (collinear).","C(18, 3) − C(5, 3) − C(6, 3) − C(7, 3).","1. 816 − 10 − 20 − 35 = 751.
+Answer: (4)",Counting triangles (excluding collinear points).,Revise 'Permutations and Combinations'.,
+8,2,sympy,"General term C(15, r) 2^{(15 − r)/5} 5^{r/3}. When are both powers integers?",Need 15 − r divisible by 5 and r divisible by 3: r = 0 or 15.,"1. r = 0: 2³ = 8. r = 15: 5⁵ = 3125.
+2. Sum = 3133.
+Answer: (2)",Rational terms in a binomial expansion.,Revise 'Binomial Theorem'.,
+9,2,sympy,"Write the AP terms with a and d: a + 6d = 2, a + 7d = p, a + 12d = q. The GP has ratio r: p = 2r, q = 2r².",a + 7d = 2r and a + 12d = 2r². Subtract the first equation to get d in terms of r twice.,"1. d = 2r − 2 and 6d = 2r² − 2, so 6(2r − 2) = 2r² − 2: r² − 6r + 5 = 0, r = 5 (r = 1 gives q = 2).
+2. d = 8, a = −46. 5th GP term = 2 × 5⁴ = 1250.
+3. −46 + (n − 1)8 = 1250 gives n = 163.
+Answer: (2)",AP and GP together.,Revise 'Sequences and Series'.,
+10,2,sympy,"Work out h on [−2, 0] and on [0, 2] separately.","For x in [−2, 0]: f(|x|) = |x| − 2 = −x − 2 and |f(x)| = 2. For x in (0, 2]: f(x) = x − 2, so h = (x − 2) + (2 − x) = 0.","1. On [−2, 0], h(x) = −x, so ∫ = 2.
+2. On [0, 2], h = 0.
+3. Total = 2.
+Answer: (2)",Integrals of piecewise functions with modulus.,Revise 'Integrals'.,
+11,4,sympy,g is the inverse of f. Which x gives f(x) = 2?,"f(0) = 2, so g(2) = 0 and g'(2) = 1/f'(0).","1. f'(x) = 5x⁴ + (1/2)e^{x/4}, so f'(0) = 1/2.
+2. g'(2) = 2, so 8g'(2) = 16.
+Answer: (4)",Derivative of an inverse function.,Revise 'Continuity and Differentiability'.,
+12,3,sympy,Set f(x) = y and ask for which y the resulting quadratic in x has real roots.,(2y − 2)x² + (3y + 3)x + 8y − 8 = 0. Discriminant ≥ 0.,"1. 9(y + 1)² − 64(y − 1)² ≥ 0 gives (3y + 3 − 8y + 8)(3y + 3 + 8y − 8) ≥ 0, so 5/11 ≤ y ≤ 11/5.
+2. Sum = 11/5 + 5/11 = 146/55, so m + n = 201.
+Answer: (3)",Range of a rational function.,Revise 'Quadratic Equations'.,
+13,1,sympy,Find the other intersection: x(1 + 3x − 2x²) = 1.,"2x³ − 3x² − x + 1 = 0 has root x = 1/2, so it factors as (2x − 1)(x² − x − 1). The other positive root is (1 + √5)/2.","1. Area = ∫ from 1/2 to (1 + √5)/2 of (1 + 3x − 2x² − 1/x) dx.
+2. = 5/8 + 7√5/12 − ln(1 + √5) = (1/24)(14√5 + 15) − ln(1 + √5).
+3. l + m + n = 14 + 15 + 1 = 30.
+Answer: (1)",Area between a parabola and a hyperbola.,Revise 'Application of Integrals'.,
+14,1,sympy,Factor the quartic: try (x² + 1)(x² + 2x + 2).,x⁴ + 2x³ + 3x² + 2x + 2 = (x² + 1)(x² + 2x + 2) and 2x² + 2x + 3 = (x² + 1) + (x² + 2x + 2).,"1. dy/dx = 1/(x² + 2x + 2) + 1/(x² + 1), so y = tan^{−1}(x + 1) + tan^{−1}x + C.
+2. y(−1) = 0 − π/4 + C = −π/4, so C = 0.
+3. y(0) = π/4.
+Answer: (1)",Variable separable differential equation with partial fractions.,Revise 'Differential Equations' and 'Integrals'.,
+15,2,sympy,"The vertices lie on the circle. Write each vertex as centre + v_{i}, where the v_{i} add to zero.","Centre (5, 3), radius 2. Σ|centre + v_{i}|² = 4|centre|² + 2 centre·Σv_{i} + Σ|v_{i}|².","1. Σv_{i} = 0 and |v_{i}| = 2.
+2. Σ(x² + y²) = 4 × 34 + 4 × 4 = 152.
+Answer: (2)",Square inscribed in a circle.,Revise 'Conic Sections' (circle). The direction of the sides does not matter.,
+16,1,sympy,Find the three side lines. Shifting a side inwards by 1 means moving its line 1 unit towards the opposite vertex.,AB: x − y + 4 = 0; BC: 3x + 5y − 4 = 0; CA: x + y − 2 = 0.,"1. Shifted inward: AB → x − y + 4 − √2 = 0; BC → 3x + 5y − 4 − √34 = 0; CA → x + y − 2 + √2 = 0.
+2. Distances from O: (4 − √2)/√2 ≈ 1.83, (4 + √34)/√34 ≈ 1.69, (2 − √2)/√2 ≈ 0.41.
+3. Nearest: x + y − (2 − √2) = 0.
+Answer: (1)",Parallel lines at a given distance.,Revise 'Straight Lines'.,
+17,4,sympy,"Move 9 units from P along the unit vector of PQ, in both directions, and compare distances from O.","PQ = (4, −2, 4), |PQ| = 6. 9 units along it = (6, −3, 6).","1. Points: (7, −5, 9) and (−5, 1, −3).
+2. |(7, −5, 9)|² = 155, |(−5, 1, −3)|² = 35. The farther one gives 155.
+Answer: (4)",Points on a line at a given distance.,Revise 'Three Dimensional Geometry'.,
+18,3,sympy,"Write c = (a, b, c) with a² + b² + c² = 1 and turn each angle into a dot-product equation.","c·(2, 2, −1) = 3 cos 60° = 3/2 and c·(1, 0, −1) = √2 cos 45° = 1.","1. Solving with the unit condition: c = (√2/3 + 1/2, −1/(3√2), √2/3 − 1/2) is one solution.
+2. Adding (−1/2, 1/(3√2), −√2/3) gives (√2/3) î − (1/2) k̂.
+Answer: (3)",Unit vector from angle conditions.,Revise 'Vector Algebra'.,
+19,3,sympy,Bayes' theorem with each urn chosen with probability 1/3.,"P(black | A) = 5/12, P(black | B) = 7/12, P(black | C) = 6/12.","1. P(A | black) = (5/12)/((5 + 7 + 6)/12) = 5/18.
+Answer: (3)",Bayes' theorem.,Revise 'Probability'.,
+20,4,sympy,Use the mean for α + β and the variance for α² + β².,"Sum = 12, so α + β = 10. Σx² = 6(23 + 4) = 162, so α² + β² = 162 − 110 = 52.","1. α, β = 6 and 4.
+2. Deviations from 2: 5, 2, 5, 8, 4, 2: sum 26.
+3. Mean deviation = 26/6 = 13/3.
+Answer: (4)",Mean deviation about the mean.,Revise 'Statistics'.,
+21,45,sympy,210 students studied at least one subject. Write inclusion–exclusion with x = number studying all three.,"M + P + C − 120 + x = 210, so M + P + C = 330 − x. Each 'only' region must be non-negative.","1. Ranges: M ≤ 130, P ≤ 95, C ≤ 90 give 330 − x ≤ 315, so x ≥ 15.
+2. Pairwise counts force x ≤ 30 (both P and C are 30), and x = 30 works with M + P + C = 300 (e.g. 125 + 90 + 85, checking all 'only' regions ≥ 0).
+3. m + n = 15 + 30 = 45.
+Answer: 45",Venn diagrams with inequalities.,Revise 'Sets'.,
+22,27,sympy,"A(1, 1, 1)ᵀ = 3(1, 1, 1)ᵀ means every row adds up to 3.","Each row has non-negative entries summing to 3, so its length is at most 3. Hadamard's inequality: |det A| ≤ product of row lengths.","1. det A ≤ 3 × 3 × 3 = 27.
+2. A = 3I reaches it.
+Answer: 27",Bounding a determinant.,Revise 'Determinants'.,
+23,8,sympy,"b's numerators are row sums of Pascal's triangle. For a, simplify C(n, 2)/(n + 1)!.","Σ_{k} C(n, k) = 2ⁿ, so b = Σ 2ⁿ/n! = e². C(n, 2)/(n + 1)! = (n − 1)n/(2(n + 1)!) — use n(n − 1)/(n + 1)! = 1/(n − 1)! − 2/n! + 2/(n + 1)!.","1. Σ_{n≥2} n(n − 1)/(n + 1)! = (e − 1) − 2(e − 2) + 2(e − 5/2) = e − 2, so a = 1 + (e − 2)/2 = e/2.
+2. 2b/a² = 2e²/(e²/4) = 8.
+Answer: 8",Series for e.,Revise 'Sequences and Series' (exponential series).,
+24,100,sympy,Both top and bottom are 0 at x = 1. Use L'Hôpital or rationalise.,Numerator derivative at 1: (5/3)6^{−2/3} − (1/3)6^{−2/3} = (4/3)6^{−2/3}. Denominator: 1/√5 − 1/(2√5) = 1/(2√5).,"1. Limit = (8√5/3)6^{−2/3} = 8√5/(3 × 6^{2/3}).
+2. Compare with m√5/(n(2n)^{2/3}): n = 3, m = 8.
+3. 8m + 12n = 64 + 36 = 100.
+Answer: 100",Limits by L'Hôpital's rule.,Revise 'Limits and Derivatives'.,
+25,8,sympy,Divide top and bottom by cos²x and put t = tan x.,Integral = ∫_{0}^{1} t²/((1 + t²)(1 + t + t²)) dt. Partial fractions: t²/((1 + t²)(1 + t + t²)) = t/(1 + t²) − t/(1 + t + t²).,"1. ∫_{0}^{1} t/(1 + t²) dt = (1/2) ln 2. ∫_{0}^{1} t/(1 + t + t²) dt = (1/2) ln 3 − π/(6√3).
+2. Integral = (1/2) ln(2/3) + π/(6√3).
+3.
+2. So a = 2 and b = 6: a + b = 8.
+Answer: 8",Integration by substitution and partial fractions.,Revise 'Integrals'.,
+26,7,sympy,Linear equation with integrating factor e^{−x}.,(ye^{−x})' = (1 + 4 sin x)e^{−x}. ∫ sin x e^{−x} dx = −e^{−x}(sin x + cos x)/2.,"1. y = −1 − 2(sin x + cos x) + Ce^{x}. y(π) = −1 + 2 + Ce^{π} = 1 gives C = 0.
+2. y(π/2) = −1 − 2 = −3, so y(π/2) + 10 = 7.
+Answer: 7",Linear differential equation.,Revise 'Differential Equations'.,
+28,72,sympy,Focal chord length of y² = 4ax at angle θ is 4a cosec²θ.,"a = 3: 12 cosec²θ = 15, so sin²θ = 4/5. The chord passes through the focus (3, 0).","1. Distance from O to the chord = 3 sin θ, so p² = 9 × 4/5 = 36/5.
+2. 10p² = 72.
+Answer: 72",Focal chords of a parabola.,Revise 'Conic Sections'.,
+29,48,sympy,Find k from the shortest distance first. Then split the integral where x² crosses an integer.,"d_{1} × d_{2} = (2, 3, 4) × (1, −3, 2) = (18, 0, −9). AB = (5, 5, −9). SD = |90 + 81|/√405 = 171/(9√5) = 19/√5.","1. 19/√5 = (38/(3√5))k gives k = 3/2.
+2. ∫_{0}^{3/2}[x²] dx = 0 + 1(√2 − 1) + 2(3/2 − √2) = 2 − √2, so α = 2.
+3. 6α³ = 48.
+Answer: 48",Shortest distance between skew lines; integral of [x²].,Revise 'Three Dimensional Geometry' and 'Integrals'.,
+30,54,sympy,BC = AC − AB. The area is (1/2)|AB × AC|; use it to find d.,"AB × AC = (1, 2, −7) × (6, d, −2) = (7d − 4, −40, d − 12).","1. (7d − 4)² + 1600 + (d − 12)² = 4 × 450 = 1800 gives 50d² − 80d − 40 = 0, so d = 2 (d > 0).
+2. |AB|² = 54, |AC|² = 44, |BC|² = |(5, 0, 5)|² = 50.
+3. Largest side² = 54.
+Answer: 54",Area of a triangle with vectors.,Revise 'Vector Algebra'.,
+31,4,conceptual,The argument of a sine must be dimensionless. What does that make n?,"2πnt/λ is dimensionless, so [n] = [λ]/[t] = LT^{−1}. 2πx/λ is dimensionless too.","1. [nt] = L: correct. [x] = L: correct. [n] = LT^{−1}: correct.
+2. [n/λ] = T^{−1}, not T. That statement is NOT correct.
+Answer: (4)",Dimensional analysis of a wave equation.,Revise 'Units and Measurements' and 'Waves'.,
+32,3,sympy,Find the velocity and acceleration vectors. Is a constant? Is it along v?,"v = (4, 3 + 16t), a = (0, 16).","1. Constant acceleration, not parallel to the initial velocity (4, 3).
+2. So the path is a parabola: uniformly accelerated along a parabolic path.
+Answer: (3)",Motion in a plane with constant acceleration.,Revise 'Motion in a Plane'.,
+33,2,conceptual,Take the ground as smooth (no friction is mentioned). How does a depend on t if F = kt?,Newton's second law: a = F/m = (k/m)t.,"1. a is proportional to t: a straight line through the origin.
+Answer: (2)",Newton's second law with a time-varying force.,Revise 'Laws of Motion'.,"NTA's key assumes no friction. With friction the block would stay at rest until F exceeds the limiting friction, and the line would start later. Worth a teacher look."
+34,2,sympy,Distance in the n-th second: s_{n} = u + a(n − 1/2). Compare the n-th and (n + 2)-th seconds.,s_{n+2} − s_{n} = 2a.,"1. 2a = 115.0 − 102.5 = 12.5, so a = 6.25 m/s².
+Answer: (2)",Distance in the n-th second.,Revise 'Motion in a Straight Line'.,
+35,2,sympy,Energy just before impact is mgh; after the bounce it rises to h/2.,The ball keeps energy mgh/2. Speed before impact from v² = 2gh.,"1. Loss = 50%.
+2. v = √(2gh).
+Answer: (2)",Energy loss in a bounce.,"Revise 'Work, Energy and Power'.",
+36,3,sympy,The field at the centre of a uniform semicircular arc of radius R and linear density λ is 2Gλ/R.,"λ = M/L and πR = L, so R = L/π.","1. F = m × 2G(M/L)/(L/π) = 2πGMm/L².
+Answer: (3)",Gravitational field of an arc.,Revise 'Gravitation'.,
+37,3,conceptual,"Statement I is hydrostatics. For Statement II, apply Bernoulli between the two sections: which pressure is higher, and which speed?",Bernoulli: P_{1} + (1/2)ρv_{1}² = P_{2} + (1/2)ρv_{2}². The manometer gives P_{1} − P_{2} = ρgh.,"1. Statement I: for a fluid at rest, P_{1} − P_{2} = ρg(h_{2} − h_{1}): correct.
+2. Statement II: from Bernoulli, 2gh = v_{2}² − v_{1}², not v_{1}² − v_{2}²: incorrect.
+Answer: (3)",Hydrostatics; Bernoulli and the venturimeter.,Revise 'Mechanical Properties of Fluids'.,"Figure reading: the higher liquid column is above section 1, so P_{1} > P_{2} and v_{2} > v_{1}."
+38,1,sympy,A temperature change in °F is 9/5 of the change in °C (the 32 offset cancels).,ΔF = (9/5)ΔC.,"1. ΔF = (9/5)(40) = 72 °F.
+Answer: (1)",Temperature scales.,Revise 'Thermal Properties of Matter'.,
+39,4,conceptual,Write the ideal gas law in terms of density: P = ρRT/M.,On a P–T graph the slope is ρR/M: a steeper line means a larger density.,"1. ρ_{1} is steepest, then ρ_{2}, then ρ_{3}: ρ_{1} > ρ_{2} > ρ_{3}.
+Answer: (4)",Ideal gas law with density.,Revise 'Kinetic Theory'.,
+40,4,sympy,The line charge's field provides the centripetal force on the electron.,eλ/(2πε_{0}r) = mv²/r.,"1. mv² = eλ/(2πε_{0}), independent of r.
+2. KE = (1/2)mv² is constant: a horizontal line.
+Answer: (4)",Field of a line charge; circular motion.,Revise 'Electric Charges and Fields'.,
+41,3,sympy,Use R_{t} = R_{0}(1 + αt) with the ice and steam points.,"10 = 8(1 + 100α), so α = 1/400 per °C.","1. R_{400} = 8(1 + 1) = 16 Ω.
+Answer: (3)",Platinum resistance thermometer.,Revise 'Current Electricity'.,
+42,4,conceptual,Inside a long solenoid B is along the axis. What is the magnetic force on a charge moving parallel to B?,F = q(v × B) = 0 when v ∥ B.,"1. No force acts, so the electron keeps moving with uniform velocity along the axis.
+Answer: (4)",Magnetic force on a moving charge.,Revise 'Moving Charges and Magnetism'.,
+43,3,conceptual,Current zero when voltage is maximum means a 90° phase difference. Which elements give that?,Pure L: current lags by 90°. Pure C: current leads by 90°. A pure resistor keeps them in phase.,"1. Inductor (A), capacitor (B) and an L–C combination (D) all give a 90° phase difference.
+2. A pure resistor (C) does not.
+Answer: (3)",Phase in AC circuits.,Revise 'Alternating Current'.,
+44,3,sympy,"E, B and the direction of travel are mutually perpendicular, with B = E/c.","The wave travels along +z, E is along î, so B must be along ĵ (î × ĵ = k̂).","1. B = ĵ (40/c) cos ω(t − z/c).
+Answer: (3)",Relation between E and B in an EM wave.,Revise 'Electromagnetic Waves'.,
+45,1,sympy,Powers of lenses in contact add.,Each lens has power 25/5 = 5 D.,"1. f = 1/5 m = 20 cm.
+Answer: (1)",Lenses in contact.,Revise 'Ray Optics and Optical Instruments'.,
+46,2,conceptual,What changes with intensity: the stopping potential or the saturation current?,"Same wavelength means the same stopping potential. Higher intensity means more photoelectrons, so a higher saturation current.","1. Both curves start at the same −V_{0}; the I_{2} curve saturates higher.
+Answer: (2)",Photoelectric current–voltage graphs.,Revise 'Dual Nature of Radiation and Matter'.,
+47,2,sympy,Check that mass number and charge balance: 235 + 1 = 236 nucleons and 92 protons.,Add up the mass numbers and atomic numbers of the products in each option.,"1. ¹⁴⁴Ba + ⁸⁹Kr + 3n: 144 + 89 + 3 = 236 and 56 + 36 = 92. Balanced.
+2. The others fail one of the counts.
+Answer: (2)",Conservation in nuclear reactions.,Revise 'Nuclei'.,
+48,4,sympy,Current flows from −6 V to −8 V (left to right). Which diode is forward biased?,"The middle diode points right: forward biased, it conducts. The bottom diode points left: reverse biased, an open circuit.","1. The 5 Ω branch carries no current.
+2. Net resistance = 15 Ω ∥ 10 Ω = 150/25 = 6 Ω.
+Answer: (4)",Diodes in resistor networks.,Revise 'Semiconductor Electronics'.,
+49,4,sympy,Differentiate the lens formula 1/f = 1/v − 1/u.,df/f² = dv/v² + du/u² (taking the errors to add).,"1. Δf = f²(Δu/u² + Δv/v²).
+Answer: (4)",Error in focal length.,Revise 'Units and Measurements' and 'Ray Optics'.,
+50,3,sympy,The balance length is proportional to the terminal voltage V = ER/(R + r).,[10/(10 + r)]/[1/(1 + r)] = 500/400.,"1. 10(1 + r) = 1.25(10 + r), so 8.75r = 2.5.
+2. r ≈ 0.29 Ω ≈ 0.3 Ω.
+Answer: (3)",Potentiometer: internal resistance of a cell.,Revise 'Current Electricity'.,
+51,6,sympy,Take the forces F and 3F with angle θ. Use R² = F_{1}² + F_{2}² + 2F_{1}F_{2} cos θ with R = 3F.,9F² = F² + 9F² + 6F² cos θ.,"1. cos θ = −1/6, so |n| = 6.
+Answer: 6",Resultant of two forces.,Revise 'Motion in a Plane' (vectors).,
+52,7,sympy,All the kinetic energy (translational + rotational) becomes potential energy: mgh = (1/2)mv²(1 + k²/R²).,Solid sphere: k²/R² = 2/5. Hollow cylinder: k²/R² = 1.,"1. h_{1} = (7/10)v²/g, h_{2} = v²/g.
+2. h_{1} : h_{2} = 7/10, so n = 7.
+Answer: 7",Rolling bodies up an incline.,Revise 'System of Particles and Rotational Motion'.,
+53,7,sympy,A soap bubble has two surfaces. Work = T × increase in total area.,W = 2 × 4π(R² − r²)T with r = 3.5 cm and T = 40 dyne/cm.,"1. 36960 = 8 × (22/7) × 40 × (R² − 12.25), so R² − 12.25 = 36.75.
+2. R² = 49, R = 7 cm.
+Answer: 7",Surface energy of a soap bubble.,Revise 'Mechanical Properties of Fluids'.,
+54,5,sympy,Write T = k(L − L_{0}) for both cases.,"3 = k(a − L_{0}) and 2 = k(b − L_{0}), so a − b = 1/k and L_{0} = a − 3/k.","1. For length 3a − 2b: T = k(3a − 2b − a + 3/k) = 2k(a − b) + 3 = 2 + 3 = 5 N.
+Answer: 5",Hooke's law for a spring.,Revise 'Mechanical Properties of Solids' / 'Oscillations'.,
+55,16,sympy,"Sheet: E = σ/(2ε_{0}) at any distance. Line: E = λ/(2πε_{0}r). The point (0, 0, 2) is 2 m from the line at z = 4.",Ratio = [σ/(2ε_{0})]/[λ/(4πε_{0})] = 2πσ/λ.,"1. With σ = 2λ, the ratio is 4π = π√16.
+2. n = 16.
+Answer: 16",Fields of a charged sheet and a line charge.,Revise 'Electric Charges and Fields'.,
+56,1,sympy,Use symmetry about the plane through a and c. Which nodes are at equal potential?,a and c are ends of a face diagonal. Write the node equations (Kirchhoff) or use symmetry: e and f are the bottom ends of the edges from b and c.,"1. Solving the network with V_{a} = 6 V and V_{c} = 0: V_{e} − V_{f} = 1 V.
+Answer: 1",Resistor networks (cube).,Revise 'Current Electricity'.,Figure reading: e is below b and f is below c; the battery has no internal resistance.
+57,50,sympy,B depends only on x. Which edges' forces cancel and which do not?,Top and bottom edges see the same B along their lengths and carry opposite currents: they cancel. The two vertical edges are at x = 2 and x = 2.5.,"1. B(2) = 1.0 T, B(2.5) = 1.2 T.
+2. Net force = IL(B_{2} − B_{1}) = 0.5 × 0.5 × 0.2 = 0.05 N = 50 mN.
+Answer: 50",Force on a loop in a non-uniform field.,Revise 'Moving Charges and Magnetism'.,
+58,8,sympy,"For i = A + B sin ωt, the mean of i² over a cycle is A² + B²/2.","A = 6, B = √56.","1. i_{rms} = √(36 + 28) = 8 A.
+Answer: 8",RMS value of a current with a DC part.,Revise 'Alternating Current'.,
+59,9,sympy,Bright fringes overlap when n_{1}λ_{1} = n_{2}λ_{2}.,"450n_{1} = 650n_{2}, i.e. 9n_{1} = 13n_{2}.","1. Smallest whole numbers: n_{2} = 9, n_{1} = 13.
+Answer: 9",Overlapping fringes in Young's experiment.,Revise 'Wave Optics'.,
+60,7,sympy,"The atom recoils, taking kinetic energy E²/(2Mc²) from the photon. Compare that with E.",E = 13.6(1/4 − 1/9) ≈ 1.89 eV. Mc² = 1.6 × 10^{−27} × 9 × 10^{16} J = 9 × 10⁸ eV.,"1. Fractional change in λ ≈ E/(2Mc²) = 1.89/(1.8 × 10⁹) ≈ 1.05 × 10^{−9}.
+2. Percentage change ≈ 1 × 10^{−7}, so n = 7.
+Answer: 7",Recoil of an atom on emitting a photon.,Revise 'Atoms' and 'Dual Nature of Radiation and Matter'.,
+61,3,conceptual,Moles = mass/molar mass; molarity = moles/volume in litres.,58.5 g/mol for NaCl.,"1. 5.85/58.5 = 0.1 mol in 0.5 L: 0.2 M.
+Answer: (3)",Molarity.,Revise 'Some Basic Concepts of Chemistry'.,"Treats 500 mL of water as the solution volume, as intended."
+62,2,conceptual,"Symmetric molecules have zero dipole. In NH_{3} and NF_{3}, does the lone pair add to or oppose the bond dipoles?","CH_{4} and PF_{5} are symmetric. In NH_{3} the N–H dipoles point towards N, the same way as the lone pair.","1. NH_{3} (1.47 D) > NF_{3} (0.23 D) > CH_{4} = PF_{5} = 0.
+Answer: (2)",Dipole moments.,Revise 'Chemical Bonding and Molecular Structure'.,
+63,2,conceptual,"A stronger acid has a weaker conjugate base. Order the acids: ROH, H_{2}O, CH_{3}COOH, HCl.",Acid strength: HCl > CH_{3}COOH > H_{2}O > ROH.,"1. Base strength: RO⁻ > OH⁻ > CH_{3}COO⁻ > Cl⁻.
+Answer: (2)",Conjugate acid–base strength.,"Revise 'Equilibrium' and 'Alcohols, Phenols and Ethers'.",
+64,3,conceptual,The calomel electrode is Hg | Hg_{2}Cl_{2}(s) | Cl⁻. What kind is that?,A metal in contact with its insoluble salt and a solution of the salt's anion.,"1. Metal–insoluble salt–anion electrode.
+Answer: (3)",Types of electrodes.,Revise 'Electrochemistry'.,
+65,2,conceptual,Write the Nernst equation for 2H⁺ + 2e⁻ → H_{2} with [H⁺] = 10^{−7} M.,E = −(0.059/2) log(p_{H2}/[H⁺]²).,"1. E = 0 needs p_{H2} = [H⁺]² = 10^{−14} bar.
+Answer: (2)",Nernst equation for the hydrogen electrode.,Revise 'Electrochemistry'.,
+66,3,conceptual,"Across period 2, IE rises but with two dips: B < Be and O < N.","Values (kJ/mol): B 801, Be 899, O 1314, N 1402, F 1681.","1. B < Be < O < N < F, i.e. E < C < A < B < D.
+Answer: (3)",First ionisation enthalpy trends.,Revise 'Classification of Elements and Periodicity in Properties'.,
+67,2,conceptual,Group valency = number of valence electrons (or 8 minus it). Which period-2 elements cannot reach it?,"N, O and F have no d orbitals, so they cannot show 5, 6 and 7 bonds.","1. N, O, F cannot; B, C, S, P, Al, Si can.
+2. Count = 3.
+Answer: (2)",Valency and the octet rule.,Revise 'Classification of Elements and Periodicity in Properties' and 'p-Block Elements'.,
+68,2,conceptual,Count σ bonds plus lone pairs on the central atom: 4 means sp³.,NO₃⁻: 3 + 0. BCl_{3}: 3 + 0. ClO₂⁻: 2 + 2. ClO₃⁻: 3 + 1.,"1. sp³: ClO₂⁻ and ClO₃⁻: 2.
+Answer: (2)",Hybridisation.,Revise 'Chemical Bonding and Molecular Structure'.,
+69,2,conceptual,Which 3d element shows only +3 (besides 0)?,Scandium has 3d¹4s²: losing all three gives a noble-gas core.,"1. Scandium shows only +3.
+Answer: (2)",Oxidation states of 3d elements.,Revise 'd- and f-Block Elements'.,
+70,1,conceptual,Recall the spectrochemical series: I⁻ < Br⁻ < S²⁻ < … < F⁻ < OH⁻ < H_{2}O < NCS⁻ < … < NH_{3} < en < CN⁻ < CO.,CO is the strongest field ligand; halides and S²⁻ are weak.,"1. CO > H_{2}O > F⁻ > S²⁻ follows the series.
+Answer: (1)",Spectrochemical series.,Revise 'Coordination Compounds'.,
+71,2,conceptual,Water is weak field (high spin). Find each ion's d count and its unpaired electrons.,"V³⁺ d², Cr²⁺ d⁴, Fe³⁺ d⁵, Ni³⁺ d⁷, Cu²⁺ d⁹.","1. Unpaired: V³⁺ 2, Cr²⁺ 4, Fe³⁺ 5, Ni³⁺ 3, Cu²⁺ 1.
+2. Even: V³⁺ and Cr²⁺: 2.
+Answer: (2)",Unpaired electrons in high-spin complexes.,Revise 'Coordination Compounds'.,
+72,1,conceptual,"Group III hydroxides need a low OH⁻ concentration so that group IV/V hydroxides (Zn, Mn, Mg) do not precipitate.",NH_{4}Cl suppresses NH_{4}OH ionisation (common ion effect).,"1. It decreases the OH⁻ concentration.
+Answer: (1)",Common ion effect in salt analysis.,Revise 'Equilibrium' and salt analysis.,
+73,3,conceptual,Lassaigne's test detects N as NaCN. What element must the compound also contain?,NaCN forms only if carbon is present along with nitrogen.,"1. Hydrazine (N_{2}H_{4}) has no carbon, so it gives no NaCN and no Prussian blue.
+Answer: (3)",Lassaigne's test for nitrogen.,Revise 'Organic Chemistry: Some Basic Principles and Techniques'.,
+74,1,conceptual,Resonance (R) effects are permanent delocalisation; electromeric (E) effects happen when a reagent attacks. Which way do the electrons move?,A: lone pair of –NH_{2} into the ring (+R). B: π electrons move to the carbon that H⁺ attacks (+E). C: π electrons move away from where CN⁻ attacks (−E). D: ring electrons pulled into –NO_{2} (−R).,"1. A–IV, B–III, C–I, D–II.
+Answer: (1)",Resonance and electromeric effects.,Revise 'Organic Chemistry: Some Basic Principles and Techniques'.,
+75,4,conceptual,"In the +E effect, π electrons move towards the atom the reagent attacks. Which reagent attacks that way: H⁺ or a nucleophile?",An electrophile like H⁺ gives +E; a nucleophile gives −E.,"1. The electromeric effect is temporary, needs the reagent, and dominates over the inductive effect while it acts.
+2. H⁺ shows +E, not −E: that statement is incorrect.
+Answer: (4)",Electromeric effect.,Revise 'Organic Chemistry: Some Basic Principles and Techniques'.,
+76,2,conceptual,Alcoholic NaOH eliminates HBr from the side chain. HBr without peroxide adds by Markovnikov's rule.,Only the side-chain CH_{2}Br reacts; the aryl Br stays.,"1. B = 4-bromostyrene (Br–C_{6}H_{4}–CH=CH_{2}).
+2. C = Br–C_{6}H_{4}–CHBr–CH_{3}.
+3. A has Br on the end carbon, C on the benzylic carbon: position isomers.
+Answer: (2)",Elimination and Markovnikov addition; isomerism.,Revise 'Haloalkanes and Haloarenes'.,
+77,2,conceptual,The bromine moves from C1 to C2. Which two steps do that: elimination and then Markovnikov addition?,Hot concentrated alcoholic NaOH eliminates HBr to give propene. HBr (no peroxide) adds Markovnikov.,"1. X = conc. alc. NaOH, 80 °C (gives CH_{3}CH=CH_{2}).
+2. Y = HBr/acetic acid (gives CH_{3}CHBrCH_{3}).
+Answer: (2)",Moving a functional group: elimination then addition.,Revise 'Haloalkanes and Haloarenes' and 'Hydrocarbons'.,
+78,3,conceptual,Aldol needs an α-H to form the enolate. Can benzaldehyde and ethanal react together?,Ethanal has α-H; benzaldehyde does not but can accept the enolate (Claisen–Schmidt).,"1. Statement I is correct.
+2. Benzaldehyde + ethanal does give a cross-aldol product (cinnamaldehyde after dehydration): Statement II is incorrect.
+Answer: (3)",Aldol and cross-aldol reactions.,"Revise 'Aldehydes, Ketones and Carboxylic Acids'.",
+79,1,conceptual,Clemmensen reduction (Zn–Hg/HCl) turns C=O into CH_{2}. Does it pick only one carbonyl?,Both the aldehyde and the ketone are reduced.,"1. –CHO → –CH_{3} and –COCH_{3} → –CH_{2}CH_{3}.
+2. Product: 1-ethyl-3-methylbenzene.
+Answer: (1)",Clemmensen reduction.,"Revise 'Aldehydes, Ketones and Carboxylic Acids'.",
+80,3,conceptual,L-glucose is the mirror image of D-glucose. Write D-glucose's Fischer projection first.,"D-glucose (C2 to C5): OH right, left, right, right. Mirror every one.","1. L-glucose: OH left, right, left, left (C2 to C5).
+2. That is the third structure.
+Answer: (3)",D and L configurations of sugars.,Revise 'Biomolecules'.,
+81,8,sympy,"Bohr's condition: the orbit fits a whole number of wavelengths, 2πr_{n} = nλ.",r_{n} = n²a_{0} for hydrogen.,"1. λ = 2πr_{4}/4 = 2π(16a_{0})/4 = 8πa_{0}.
+Answer: 8",de Broglie wavelength in Bohr orbits.,Revise 'Structure of Atom'.,
+82,2,conceptual,Use MO theory: count unpaired electrons in each.,O_{2}: 2 unpaired. O₂⁻: 1. NO: 1. CN⁻: 0 (like N_{2}). O₂²⁻: 0.,"1. One unpaired electron: O₂⁻ and NO: 2.
+Answer: 2",Magnetic behaviour from MO theory.,Revise 'Chemical Bonding and Molecular Structure'.,
+83,125,sympy,ΔH = (bonds broken) − (bonds formed).,C_{2}H_{4} + H_{2} → C_{2}H_{6}: break one C=C and one H–H; form one C–C and two C–H.,"1. Broken: 615 + 435 = 1050 kJ. Formed: 347 + 2 × 414 = 1175 kJ.
+2. ΔH = −125 kJ.
+Answer: 125",Enthalpy from bond energies.,Revise 'Thermodynamics' (Chemistry).,
+84,707,sympy,"Find the molality from the boiling-point rise, then the mole fraction of solute.",m = ΔT_{b}/K_{b} = 2/0.52 mol/kg. Moles of water in 100 g = 100/18.,"1. Solute in 100 g water = 0.3846 mol; water = 5.556 mol; x_{solute} ≈ 0.0692.
+2. P = 760(1 − 0.0692) ≈ 707 mm Hg.
+Answer: 707",Colligative properties linked together.,Revise 'Solutions'.,"Water boils at 100 °C (760 mm); the relative lowering is taken at that temperature, as NTA's key does."
+85,100,arithmetic,Write each k with the Arrhenius equation k = Ae^{−Ea/RT} and combine k = k_{1}k_{2}/k_{3}.,Exponents add and subtract: Ea = Ea_{1} + Ea_{2} − Ea_{3}.,"1. 400 = 300 + 200 − Ea_{3}.
+2. Ea_{3} = 100 kJ/mol.
+Answer: 100",Activation energy of a composite rate constant.,Revise 'Chemical Kinetics'.,
+86,4,arithmetic,Fusing MnO_{2} with KOH in air gives the green manganate. What does manganate give in neutral or acidic solution?,A = K_{2}MnO_{4}. 3MnO₄²⁻ + 4H⁺ → 2MnO₄⁻ + MnO_{2} + 2H_{2}O.,"1. MnO₄⁻: Mn(VII), d⁰: 0 BM. MnO_{2}: Mn(IV), d³: √15 ≈ 3.87 BM.
+2. Sum ≈ 3.87, nearest integer 4.
+Answer: 4",Manganate disproportionation; spin-only moment.,Revise 'd- and f-Block Elements'.,
+87,8,arithmetic,Use the mole ratio 2MnO₄⁻ : 5H_{2}C_{2}O_{4}.,Oxalic acid = 0.020 × 2 = 0.04 mol.,"1. KMnO_{4} = 0.04 × 2/5 = 0.016 mol.
+2. Molarity = 0.016/0.002 = 8 M.
+Answer: 8",Redox titration stoichiometry.,Revise 'Redox Reactions'.,
+88,9,conceptual,"List the heptane skeletons by longest chain: 7, 6, 5 and 4 carbons.","Heptane; 2- and 3-methylhexane; 2,2-, 2,3-, 2,4-, 3,3-dimethylpentane and 3-ethylpentane; 2,2,3-trimethylbutane.","1. Total = 1 + 2 + 5 + 1 = 9 chain isomers.
+Answer: 9",Structural isomers of alkanes.,Revise 'Hydrocarbons' (isomerism).,
+89,1,conceptual,Check each product against what the reagent actually does.,Friedel–Crafts acylation gives a ketone; Rosenmund reduction gives an aldehyde; Gattermann–Koch gives benzaldehyde; amide hydrolysis gives an acid.,"1. A wrong (product is benzophenone). B wrong (product is benzaldehyde). D wrong (product is benzoic acid).
+2. Only C is correct: 1.
+Answer: 1",Named reactions of aromatic compounds.,"Revise 'Aldehydes, Ketones and Carboxylic Acids' and 'Amines'.",
+90,45,arithmetic,Primary aliphatic amines + HNO_{2} give one N_{2} each.,"2.24 L at STP = 0.1 mol N_{2}, so 0.1 mol ethylamine (45 g/mol).","1. X = 4.5 g = 45 × 10^{−1} g.
+Answer: 45",Reaction of amines with nitrous acid.,Revise 'Amines'.,
