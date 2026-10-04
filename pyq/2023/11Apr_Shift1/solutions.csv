@@ -1,0 +1,251 @@
+q,claude_answer,check,hint1,hint2,solution,concept,revise,note
+1,4,arithmetic,"Let e_{1}, e_{2}, e_{3} be the numbers of men with exactly 1, 2, 3 medals.",e_{1} + e_{2} + e_{3} = 60 and e_{1} + 2e_{2} + 3e_{3} = 48 + 25 + 18.,"1. Subtract: e_{2} + 2e_{3} = 31.
+2. e_{3} = 5, so e_{2} = 21.
+Answer: (4)",Counting with Venn diagrams,Revise Sets.,
+2,2,sympy,Image of a point: Q = P − 2t n with t = (n·P − d)/|n|^{2}.,"n·P − 6 = 4 + 3 − 15 − 6 = −14, |n|^{2} = 14.","1. Q = (2, 3, 5) + 2(2, 1, −3) = (6, 5, −1).
+2. α + β + γ = 10.
+Answer: (2)",Image of a point in a plane,Revise Three Dimensional Geometry.,
+3,2,sympy,The chord x/a + y/b = 1 is tangent to the circle. Use the distance from the centre.,"a^{2} = 1/k, b^{2} = 1/k^{2}; 1/r^{2} = 1/a^{2} + 1/b^{2}.","1. 1/r_{k}^{2} = k + k^{2}.
+2. Σ_{k=1}^{20}(k + k^{2}) = 210 + 2870 = 3080.
+Answer: (2)",Ellipse and tangent circles,Revise Conic Sections.,
+4,2,arithmetic,"Count all solutions, then remove those with equal values.","Total C(17,2) = 136. x = y: 2x + z = 15 has 8 solutions.","1. Solutions with some two equal: 3 × 8 − 2 × 1 = 22 (x = y = z = 5 counted once).
+2. Distinct: 136 − 22 = 114.
+Answer: (2)",Integer solutions,Revise Permutations and Combinations.,
+5,3,sympy,The base must be positive and not 1. Split into base > 1 and 0 < base < 1.,"log_{b}u ≥ 0 means u ≥ 1 if b > 1, u ≤ 1 if b < 1. Here u = ((x − 7)/(2x − 3))^{2}.","1. u ≥ 1 ⇔ (x − 7)^{2} ≥ (2x − 3)^{2} ⇔ −4 ≤ x ≤ 10/3.
+2. Base > 1 (x > −5/2): integers −2, −1, 0, 1, 2, 3.
+3. Base < 1 (−7/2 < x < −5/2): x = −3 fails.
+4. 6 solutions.
+Answer: (3)",Logarithmic inequalities,Remember the base condition. Revise Relations and Functions (logarithms).,
+6,1,sympy,Transpose the equation and substitute it back into itself.,"A = αA' + I = α(αA + I) + I, so A = I/(1 − α).","1. A = kI with k = 1/(1 − α).
+2. det(A^{2} − A) = (k^{2} − k)^{2} = 4, so k^{2} − k = 2: k = 2 or −1.
+3. α = 1/2 or 2; sum 5/2.
+Answer: (1)",Matrix equations,Revise Matrices.,
+7,4,arithmetic,Check left and right limits at 0 and at 1.,Just left of 0: [x^{2} − x] = 0 but |−x + [x]| ≈ 1.,"1. At 0: f(0) = 0 but the left limit is 1: discontinuous.
+2. At 1: left limit −1 + 1 = 0, right limit 0 + 0 = 0, f(1) = 0: continuous.
+Answer: (4)",Continuity with greatest integer,Revise Continuity and Differentiability.,
+8,1,sympy,The normal is perpendicular to both given normals.,"n = (2, 4, 5) × (3, −2, 3) = (22, 9, −16).","1. Plane: 22x + 9y − 16z + 97 = 0 (through (−2, 3, 5)).
+2. α + β + γ = 15.
+Answer: (1)",Plane perpendicular to two planes,Revise Three Dimensional Geometry.,
+9,2,sympy,"Sketch the circle (centre (0, 2), radius 2) and the parabola y = x^{2}/2. Where do they meet?",They meet at y = 0 and y = 2 (x = ±2).,"1. Region: between the lower semicircle y = 2 − √(4 − x^{2}) and the parabola, for |x| ≤ 2.
+2. Area = ∫_{−2}^{2}(x^{2}/2 − 2 + √(4 − x^{2})) dx = 8/3 − 8 + 2π.
+3. = 2π − 16/3.
+Answer: (2)",Area between curves,Revise Application of Integrals.,
+10,3,conceptual,The left side is the derivative of one product. Which?,"(x ln x · f(x))' ≥ 1, so h(x) = x ln x f(x) − x is increasing.","1. h(x) ≥ h(2) gives f(x) ≥ (x − 2 + ln 2)/(x ln x) ≥ 1/8 on [2, 4].
+2. h(x) ≤ h(4) gives f(x) ≤ (x − 4 + 2 ln 2)/(x ln x) ≤ 1.
+3. Both statements are true.
+Answer: (3)",Using monotonic functions to bound,Revise Application of Derivatives.,"Teacher look: the data are inconsistent (h(4) − h(2) = ln 2 − 2 < 0, so no such f exists); NTA's key uses the bounds above, and both statements hold."
+11,4,sympy,The normal of each plane is the cross product of its two vectors.,"n_{1} = (1, −1, −1), n_{2} = (1, 1, 1); a ∥ n_{1} × n_{2} ∥ (0, −1, 1).","1. a = t(0, −1, 1); a·b = 3t = 6, so a = (0, −2, 2), |a| = 2√2, |b| = 3.
+2. cos θ = 6/(6√2): θ = π/4.
+3. |a × b| = 2√2 × 3 × sin(π/4) = 6.
+Answer: (4)",Vectors and planes,Revise Vector Algebra.,
+12,3,conceptual,Compare |a| = √(a_{1}^{2} + a_{2}^{2} + a_{3}^{2}) with the largest |a_{i}|.,|a|^{2} ≤ 3 max^{2}.,"1. A: max |a_{i}| ≤ |a|: true.
+2. B: |a| ≤ √3 max ≤ 3 max: true.
+Answer: (3)",Vector magnitudes,Revise Vector Algebra.,The condition 10|a_{i}| < 1 does not matter.
+13,2,sympy,Find the common difference from the mean.,"Mean = 2 + 99d/2 = 200, so d = 4 and x_{i} = 4i − 2.","1. y_{i} = i(3i − 2) = 3i^{2} − 2i.
+2. Mean = (3 × 338350 − 2 × 5050)/100 = 10049.5.
+Answer: (2)",AP and sums of squares,Revise Sequences and Series.,
+14,3,sympy,Rotation by 90° anticlockwise multiplies by i; clockwise by −i.,"w_{1} = −4 + 5i, w_{2} = 5 − 3i.","1. w_{1} − w_{2} = −9 + 8i (second quadrant).
+2. Principal argument = π − tan^{−1}(8/9).
+Answer: (3)",Rotation of complex numbers,Revise Complex Numbers.,
+15,2,sympy,Put t = e^{x}. The log is sinh^{−1}t.,∫ ln(t + √(1 + t^{2})) dt = t ln(t + √(1 + t^{2})) − √(1 + t^{2}).,"1. Limits t = 1/2 to 2.
+2. Value = 2 ln(2 + √5) − √5 − (1/2)ln((1 + √5)/2) + √5/2.
+3. = ln(√2(2 + √5)^{2}/√(1 + √5)) − √5/2.
+Answer: (2)",Definite integrals by substitution,Revise Integrals.,
+16,2,sympy,Write everything in c = cos^{2}θ.,3c^{2} − 5c + 2 = (3c − 2)(c − 1) and sin^{6}θ = (1 − c)^{3}.,"1. Equation becomes c(1 − c)(1 − 2c) = 0.
+2. c = 0: 2 values; c = 1: 0, π, 2π (3); c = 1/2: 4 values.
+3. Total 9.
+Answer: (2)",Trigonometric equations,Count endpoints 0 and 2π carefully. Revise Trigonometric Functions.,
+17,4,arithmetic,Count singular matrices: ad = bc.,"Products from {0, 1, 2}: 0 (5 ways), 1 (1), 2 (2), 4 (1).","1. Singular = 5^{2} + 1^{2} + 2^{2} + 1^{2} = 31.
+2. Invertible = 81 − 31 = 50.
+3. P = 50/81.
+Answer: (4)",Probability with matrices,Revise Probability and Determinants.,
+18,1,arithmetic,"Shifting all values changes the mean, not the variance.","New sets: mean 2, variance 12; mean 10, variance 20.","1. Combined mean 6.
+2. Variance = (12 + 20)/2 + ((2 − 6)^{2} + (10 − 6)^{2})/2 = 16 + 16 = 32.
+3. Sum 38.
+Answer: (1)",Combined variance,Revise Statistics.,
+19,3,conceptual,The triangle OAB is the smaller part.,"Area of R = 10, so (1/2)αβ = 2.","1. αβ = 4.
+2. Mid-point (h, k) = (α/2, β/2): hk = 1, a hyperbola.
+Answer: (3)",Locus,Revise Straight Lines and Conic Sections.,
+20,3,sympy,y dx + x dy = d(xy). Put u = xy.,du/(1 − u^{2}) = dx.,"1. ln|(1 + u)/(1 − u)| = 2x + C; at (1, 2): u = 2, so C = ln 3 − 2.
+2. At x = 2: |(1 + u)/(1 − u)| = 3e^{2}; staying on the branch u > 1, (1 + u)/(1 − u) = −3e^{2}.
+3. u = (1 + 3e^{2})/(3e^{2} − 1), α = u/2.
+Answer: (3)",Exact differential equations,Revise Differential Equations.,
+21,2736,arithmetic,"Sum of all coefficients is 3^{9}. Remove those of x^{0}, x^{8}, x^{9}.","Coefficient of x^{r} = C(9,r)2^{9−r}.","1. 19683 − 512 − 18 − 1 = 19152.
+2. Mean = 19152/7 = 2736.
+Answer: 2736",Binomial coefficients,Revise Binomial Theorem.,
+22,5,sympy,l is along d_{1} × d_{2}.,"(1, 2, 3) × (2, 2, 1) = (−4, 5, −2).","1. P = l ∩ l_{1} = (4, −5, 2).
+2. Foot on l_{2}: μ = 1/9, Q = (−7/9, 2/9, 10/9).
+3. 9(α + β + γ) = 5.
+Answer: 5",Lines in space,Revise Three Dimensional Geometry.,
+23,7,arithmetic,When is an implication false?,Only when (p ∨ q) ∧ (p ∨ r) is true and q ∨ r is false.,"1. q = r = F forces p = T: one false case.
+2. 8 − 1 = 7.
+Answer: 7",Truth tables,Revise Mathematical Reasoning.,Mathematical reasoning is no longer in the JEE Main syllabus.
+24,51,sympy,a^{2} = 7a + 1 gives S_{n} = 7S_{n−1} + S_{n−2} with S_{n} = a^{n} + b^{n}.,"Write S_{21} and S_{17} in terms of S_{19}, S_{18}.","1. S_{21} = 50S_{19} + 7S_{18}; S_{17} = S_{19} − 7S_{18}.
+2. S_{21} + S_{17} = 51S_{19}.
+Answer: 51",Recurrences for powers of roots,Revise Quadratic Equations.,
+25,2175,sympy,"This is an arithmetico-geometric sum: Σ(109 − k)/5^{k}, k = 0..108.",Use S − S/5.,"1. S = (25/16)(87 + 5^{−110}).
+2. 16S = 2175 + 5^{−108} = 2175 + 25^{−54}.
+3. 16S − 25^{−54} = 2175.
+Answer: 2175",Arithmetico-geometric series,Revise Sequences and Series.,
+26,32,sympy,Differentiate t^{11}(1 + 3t)^{6}.,d/dt = 11t^{10}(1 + 3t)^{6} + 18t^{11}(1 + 3t)^{5}.,"1. 11α(10,6) + 18α(11,5) = [t^{11}(1 + 3t)^{6}]_{0}^{2} = 2^{11} × 7^{6}.
+2. = 32 × 14^{6}, so p = 32.
+Answer: 32",Integration by recognising a derivative,Revise Integrals.,
+27,171,arithmetic,General term: 3^{(680 − r)/2} × 5^{r/4}.,Need r ≡ 0 (mod 4); then 680 − r is even too.,"1. r = 0, 4, …, 680: 171 values.
+Answer: 171",Integral terms in binomial expansions,Revise Binomial Theorem.,
+28,306,sympy,e^{2} = 1 + (3 + n)/(1 + n) = 2(n + 2)/(n + 1). When is this a perfect square?,Try even n until 2(n + 2)(n + 1) is a perfect square.,"1. n = 48: e^{2} = 100/49, e = 10/7.
+2. a^{2} = 49, b^{2} = 51: l = 2b^{2}/a = 102/7.
+3. 21l = 306.
+Answer: 306",Hyperbola,Revise Conic Sections.,
+29,2,sympy,A^{3} = A means the eigenvalues are 0 or ±1. Trace = 0.,"So the eigenvalues are 0, 1, −1: det A = 0 and the sum of 2 × 2 principal minors = −1.","1. det A = 3 + 2ac = 0.
+2. −a − 2 − 3c = −1, so a + 3c = −1.
+3. 2a^{2} + 2a − 9 = 0: a = (√19 − 1)/2 ≈ 1.68, in (1, 2]. n = 2.
+Answer: 2",Matrix equations and eigenvalues,Revise Matrices (characteristic equation).,Uses eigenvalues (beyond NCERT); the result was checked by solving A^{3} = A directly.
+30,44,arithmetic,This is a derangement count.,D_{5} = 5!(1 − 1/1! + 1/2! − 1/3! + 1/4! − 1/5!).,"1. D_{5} = 44.
+Answer: 44",Derangements,Revise Permutations and Combinations.,
+31,3,arithmetic,Range d = √(2Rh).,h = d^{2}/2R.,"1. h = 16 × 10^{6}/(2 × 6.4 × 10^{6}) = 1.25 m = 125 × 10^{−2} m.
+Answer: (3)",Line-of-sight communication,Revise Communication Systems.,Communication systems is no longer in the JEE Main syllabus.
+32,3,conceptual,The first two gates have one input each: what do they do?,"Y = NOR(ā, b̄).","1. NOR(ā, b̄) = a·b (De Morgan): AND.
+Answer: (3)",Logic gates,Revise Semiconductor Electronics.,Figure reading: two NOT gates feeding a NOR gate.
+33,2,arithmetic,Topic: Half-life and mean life. Which rule or fact from it settles this question?,"T_{1/2} = ln 2/λ, mean life τ = 1/λ.","1. ln 2/λ_{A} = 1/λ_{B}, so λ_{A} = λ_{B} ln 2.
+Answer: (2)",Half-life and mean life,Revise Nuclei.,
+34,3,sympy,Write Einstein's equation for both wavelengths.,eV_{0} = hc/λ − φ and eV_{0}/4 = hc/2λ − φ.,"1. Subtract: (3/4)eV_{0} = hc/2λ, eV_{0} = 2hc/3λ.
+2. φ = hc/3λ, so λ_{0} = 3λ.
+Answer: (3)",Photoelectric effect,Revise Dual Nature of Radiation and Matter.,
+35,1,arithmetic,sin C = 1/μ.,"μ = √2, v = c/μ.","1. v = 3 × 10^{8}/√2 = 2.12 × 10^{8} m/s.
+Answer: (1)",Critical angle,Revise Ray Optics.,
+36,1,conceptual,Which reactance falls with frequency and which rises linearly?,X_{C} = 1/ωC; X_{L} = ωL.,"1. A (falling) = X_{C}; B (straight line) = X_{L}.
+Answer: (1)",Reactance,Revise Alternating Current.,
+37,1,arithmetic,Topic: Energy in EM waves. Which rule or fact from it settles this question?,Average energy density of an EM wave = ε_{0}E_{0}^{2}/2 (electric + magnetic).,"1. u = 0.5 × 8.85 × 10^{−12} × 400 = 1.77 × 10^{−9} J/m^{3}.
+2. Energy = 1.77 × 10^{−9} × 5 × 10^{−4} = 8.85 × 10^{−13} J.
+Answer: (1)",Energy in EM waves,Revise Electromagnetic Waves.,
+38,1,arithmetic,Topic: Magnetic susceptibility. Which rule or fact from it settles this question?,B = μ_{0}(1 + χ)H.,"1. Increase = χ = 2%.
+Answer: (1)",Magnetic susceptibility,Revise Magnetism and Matter.,
+39,1,arithmetic,Voltage sensitivity = current sensitivity/R.,R unchanged.,"1. +25%.
+Answer: (1)",Galvanometer sensitivity,Revise Moving Charges and Magnetism.,
+40,2,arithmetic,Heat at the same voltage: H ∝ 1/R.,"Parallel R/2, series 2R.","1. Ratio = 2R/(R/2) = 4 : 1.
+Answer: (2)",Joule heating,Revise Current Electricity.,
+41,1,arithmetic,Topic: Charge sharing. Which rule or fact from it settles this question?,Charge is shared equally; the voltage halves.,"1. E_{1} = (1/2)(2)V^{2} = V^{2}; E_{2} = (1/2)(4)(V/2)^{2} = V^{2}/2.
+2. E_{2}/E_{1} = 1 : 2.
+Answer: (1)",Charge sharing,Revise Electrostatic Potential and Capacitance.,
+42,4,conceptual,Topic: Energy in SHM. Which rule or fact from it settles this question?,KE = (1/2)k(A^{2} − x^{2}).,"1. Maximum at x = 0, falling to 0 at x = A along a parabola (concave down): graph 4.
+Answer: (4)",Energy in SHM,Revise Oscillations.,
+43,1,arithmetic,v_{rms} = √(3RT/M).,Same T: depends only on M.,"1. M: Ne 20 < Cl_{2} 71 < UF_{6} 352.
+2. v_{rms}: mono > dia > poly.
+Answer: (1)",RMS speed,Revise Kinetic Theory.,
+44,2,arithmetic,Topic: First law. Which rule or fact from it settles this question?,ΔU = Q − W with W = PΔV.,"1. W = 10^{5} × 1.670 = 167 kJ.
+2. ΔU = 2257 − 167 = 2090 kJ.
+Answer: (2)",First law,Revise Thermodynamics.,
+45,4,arithmetic,Topic: Temperature scales. Which rule or fact from it settles this question?,Linear scales: (X − X_{ice})/(X_{steam} − X_{ice}) = (F − 32)/180.,"1. (−95 + 15)/80 = −1.
+2. F = 32 − 180 = −148 °F.
+Answer: (4)",Temperature scales,Revise Thermal Properties of Matter.,
+46,3,arithmetic,g = GM/R^{2} = (4/3)πGρR.,g ∝ ρR.,"1. g_{A} : g_{B} = ρR : (ρ/3)(4R) = 3 : 4.
+Answer: (3)",Gravity on planets,Revise Gravitation.,
+47,3,arithmetic,Distance = total area; displacement = signed area.,"Areas: 25, 50, 75, 50 above; 50 below.","1. Distance = 250 m; displacement = 150 m.
+2. Ratio 5/3.
+Answer: (3)",v–t graphs,Revise Motion in a Straight Line.,
+48,3,arithmetic,Just slipping: μmg = mω^{2}r.,r ∝ 1/ω^{2}.,"1. ω halves, r becomes 4 × 1 = 4 cm.
+Answer: (3)",Circular motion and friction,Revise Laws of Motion.,
+49,3,arithmetic,Topic: Impulse. Which rule or fact from it settles this question?,Force = rate of change of momentum = nmv.,"1. n = 125/(0.01 × 250) = 50 per second.
+Answer: (3)",Impulse,Revise Laws of Motion.,
+50,3,conceptual,"Compare 1 AU, 1 ly and 1 pc.",1 pc ≈ 3.26 ly.,"1. I correct.
+2. II incorrect: AU < ly < parsec.
+Answer: (3)",Astronomical units,Revise Units and Measurements.,
+51,3,arithmetic,Six lines means n(n − 1)/2 = 6.,n = 4.,"1. E = 13.6(1 − 1/16) = 12.75 eV.
+2. ν = 12.75/(4.25 × 10^{−15}) = 3 × 10^{15} Hz.
+Answer: 3",Hydrogen spectrum,Revise Atoms.,
+52,4,arithmetic,Topic: Lens in a liquid. Which rule or fact from it settles this question?,Lens maker: P ∝ (μ_{lens}/μ_{medium} − 1).,"1. Air: 0.8. Liquid: 1.8/1.5 − 1 = 0.2.
+2. Ratio 4.
+Answer: 4",Lens in a liquid,Revise Ray Optics.,
+53,8,arithmetic,emf = A dB/dt; read the slope from the graph.,B rises 2 mT per second.,"1. emf = 4 × 2 × 10^{−3} = 8 × 10^{−3} V = 8 mV.
+Answer: 8",Faraday's law,Revise Electromagnetic Induction.,Figure reading: B = 2t mT.
+54,1,arithmetic,Look at the cell polarities: do they help or oppose?,The cells oppose: net emf 4 V. 3 ∥ 6 = 2 Ω.,"1. Total R = 0.5 + 1 + 4.5 + 2 = 8 Ω; I = 0.5 A.
+2. Through 3 Ω: 0.5 × 6/9 = 1/3 A.
+3. x = 1.
+Answer: 1",Kirchhoff's laws,Revise Current Electricity.,Figure reading: the two cells are connected in opposition.
+55,300,arithmetic,"For the charge on the incline, balance repulsion along the incline against mg sin 30°.",Separation along the incline = h/sin 30° = 2h.,"1. kq^{2}/(4h^{2}) = mg/2.
+2. h^{2} = 9 × 10^{9} × 4 × 10^{−12}/(2 × 0.02 × 10) = 0.09, h = 0.3 m.
+Answer: 300",Electrostatic equilibrium,Revise Electric Charges and Fields.,"Figure reading: one charge fixed at the top of the vertical, the other free on the frictionless incline."
+56,1152,arithmetic,Topic: Wave speed. Which rule or fact from it settles this question?,v = (coefficient of t)/(coefficient of x).,"1. v = 160/0.5 = 320 m/s = 1152 km/h.
+Answer: 1152",Wave speed,Revise Waves.,
+57,2,arithmetic,Write l = L + F/k for both tensions.,"l_{1} = L + 100a, l_{2} = L + 120a.","1. 10l_{2} = 11l_{1} gives L = 100a, l_{1} = 200a.
+2. L = l_{1}/2: x = 2.
+Answer: 2",Hooke's law,Revise Mechanical Properties of Solids.,
+58,35,arithmetic,Topic: Moment of inertia. Which rule or fact from it settles this question?,I_{tangent} = (7/5)MR^{2}; L = (2/5)MR^{2}ω.,"1. Ratio = (7/5)/((2/5) × 10) = 0.35 = 35 × 10^{−2}.
+Answer: 35",Moment of inertia,Revise System of Particles and Rotational Motion.,
+59,32,sympy,Topic: Work by a variable force. Which rule or fact from it settles this question?,W = ∫F dx.,"1. ∫_{0}^{4}(2 + 3x) dx = 8 + 24 = 32 J.
+Answer: 32",Work by a variable force,"Revise Work, Energy and Power.",
+60,80,arithmetic,Same height at 3 s and 5 s: the time of flight is their sum.,T = 8 s = 2u sin θ/g.,"1. u = 8 × 10/(2 × 0.5) = 80 m/s.
+Answer: 80",Projectile motion,Revise Motion in a Plane.,
+61,3,conceptual,Topic: Photoelectric effect. Which rule or fact from it settles this question?,Does every photon give its energy to an electron?,"1. A true: emission is instantaneous above threshold.
+2. R false as worded (NTA's key).
+Answer: (3)",Photoelectric effect,Revise Structure of Atom.,Teacher look: R is judged false by NTA; a photon below threshold still gets absorbed but cannot eject the electron.
+62,1,conceptual,Topic: Shapes. Which rule or fact from it settles this question?,Use VSEPR.,"1. H_{3}O^{+} pyramidal, acetylide linear, NH_{4}^{+} tetrahedral, ClO_{2}^{−} bent.
+Answer: (1)",Shapes,Revise Chemical Bonding.,
+63,2,arithmetic,Find the limiting reagent.,"Ag^{+}: 25 mmol, I^{−}: 26.25 mmol.","1. AgI precipitates; I^{−} left is only 1.25 mmol and Ag^{+} is tiny (K_{sp}).
+2. K^{+} and NO_{3}^{−} remain at about 0.5 M.
+Answer: (2)",Precipitation,Revise Equilibrium.,
+64,2,conceptual,Topic: Ionisation enthalpy. Which rule or fact from it settles this question?,IE rises across a period but with breaks at B and O.,"1. Li < B < Be < C < O < N < F.
+Answer: (2)",Ionisation enthalpy,Revise Classification of Elements.,
+65,3,conceptual,Topic: Extraction of copper. Which rule or fact from it settles this question?,What is the copper from the Bessemer converter called?,"1. Blister copper.
+Answer: (3)",Extraction of copper,Revise General Principles of Isolation of Elements.,Metallurgy is no longer in the JEE Main syllabus.
+66,1,conceptual,Topic: Hydrogen and nitrogen. Which rule or fact from it settles this question?,Recall steam reforming and the lab method for N_{2}.,"1. CH_{4} + H_{2}O → CO + 3H_{2} (Ni): true.
+2. NaNO_{2} + NH_{4}Cl → NaCl + N_{2} + 2H_{2}O: true.
+Answer: (1)",Hydrogen and nitrogen,Revise Hydrogen and The p-Block Elements.,
+67,4,conceptual,Topic: Uses of alkali metals. Which rule or fact from it settles this question?,Recall NCERT uses.,"1. K: Na–K pump (III). KCl: fertilizer (II). KOH: absorbs CO_{2} (IV). Li: thermonuclear (I).
+Answer: (4)",Uses of alkali metals,Revise The s-Block Elements.,s-block is no longer in the JEE Main syllabus.
+68,3,conceptual,Topic: Group 13 compounds. Which rule or fact from it settles this question?,GaAlCl_{4} is Ga^{+}[AlCl_{4}]^{−}.,"1. Ga is +1 and not bonded to Cl; Ga (1.8) is more electronegative than Al (1.5) and is the cation.
+Answer: (3)",Group 13 compounds,Revise The p-Block Elements.,
+69,1,conceptual,Topic: Geometrical isomerism. Which rule or fact from it settles this question?,Which complex is of the MA_{3}B_{3} type?,"1. [Co(NH_{3})_{3}(NO_{2})_{3}] has fac and mer isomers.
+Answer: (1)",Geometrical isomerism,Revise Coordination Compounds.,
+70,3,conceptual,Which ligands can bind through two different atoms?,NO_{2}^{−} and NCS^{−} are ambidentate.,"1. C_{2}O_{4}^{2−}, en, H_{2}O: none ambidentate.
+Answer: (3)",Ambidentate ligands,Revise Coordination Compounds.,
+71,1,conceptual,Topic: Water quality. Which rule or fact from it settles this question?,"Recall the limits: clean water BOD < 5 ppm; Zn 5 ppm, NO_{3}^{−} 50 ppm.","1. Both statements correct.
+Answer: (1)",Water quality,Revise Environmental Chemistry.,Environmental chemistry is no longer in the JEE Main syllabus.
+72,2,conceptual,Topic: Chromatography. Which rule or fact from it settles this question?,Higher R_{f} means weaker adsorption: elutes first.,"1. R_{f}: A > C > B, so elution A, C, B.
+Answer: (2)",Chromatography,Revise Organic Chemistry: Some Basic Principles.,"Figure reading: A highest, C slightly lower, B lowest."
+73,1,conceptual,Which groups are directly on the aromatic ring?,c: C=O (deactivating). a: alkyl only. b: OH + alkyl. d: OH + OR.,"1. c < a < b < d.
+Answer: (1)",Electrophilic substitution,Revise Hydrocarbons.,
+74,1,conceptual,Which benzyl cation is stabilised by its substituent?,p-OMe stabilises the cation (S_{N}1); p-NO_{2} destabilises it (S_{N}2).,"1. (I) first order, (II) second order.
+Answer: (1)",S_{N}1 vs S_{N}2,Revise Haloalkanes.,
+75,3,conceptual,Topic: Oxidative cleavage and Wolff–Kishner. Which rule or fact from it settles this question?,KMnO_{4} cleaves the ring next to C=O; Wolff–Kishner removes the ketone.,"1. A = R–CO–(CH_{2})_{4}–COOH.
+2. B = R–CH_{2}–(CH_{2})_{4}–COOH.
+Answer: (3)",Oxidative cleavage and Wolff–Kishner,Revise Aldehydes and Ketones.,Teacher look: oxidative ring opening of a cyclic ketone by KMnO_{4} is beyond NCERT.
+76,1,conceptual,Topic: Salt analysis. Which rule or fact from it settles this question?,Which of these is a precipitate in salt analysis?,"1. Basic iron(III) acetate stays dissolved (red solution); the others are precipitates.
+Answer: (1)",Salt analysis,Revise practical chemistry.,
+77,2,conceptual,Topic: Reactions of diamines. Which rule or fact from it settles this question?,Diazotise one NH_{2}; the other NH_{2} attacks the diazonium group.,"1. Benzotriazole.
+Answer: (2)",Reactions of diamines,Revise Amines.,
+78,3,conceptual,Topic: Polythene. Which rule or fact from it settles this question?,Ziegler–Natta catalyst at low pressure.,"1. HDPE.
+Answer: (3)",Polythene,Revise Polymers.,Polymers are no longer in the JEE Main syllabus.
+79,3,conceptual,NaBH_{4} on erythrose gives meso erythritol; on threose a chiral threitol.,So X is L-threose.,"1. L-threose: OH on C-2 right, on C-3 left (Fischer).
+Answer: (3)",Aldotetroses,Revise Biomolecules.,
+80,2,conceptual,Topic: Anion tests. Which rule or fact from it settles this question?,Brown ring test and neutral FeCl_{3} test.,"1. Brown ring: NO_{3}^{−}. Red colour, then red-brown ppt on boiling: CH_{3}COO^{−}.
+Answer: (2)",Anion tests,Revise practical chemistry.,
+81,36,arithmetic,Topic: Mass percent. Which rule or fact from it settles this question?,Add the sugar masses.,"1. Sugar = 50 + 200 = 250 g in 700 g.
+2. 35.7% ≈ 36.
+Answer: 36",Mass percent,Revise Some Basic Concepts of Chemistry.,
+82,4,arithmetic,Topic: Density of unit cells. Which rule or fact from it settles this question?,ρ = ZM/(N_{A}a^{3}).,"1. Z = 3 × 6.02 × 10^{23} × 27 × 10^{−24}/12 = 4.06 ≈ 4.
+Answer: 4",Density of unit cells,Revise The Solid State.,Solid state is no longer in the JEE Main syllabus.
+83,4,arithmetic,Fe_{2}O_{3} + 2Al → Al_{2}O_{3} + 2Fe.,ΔH = −1700 − (−840).,"1. ΔH = −860 kJ per 160 + 54 = 214 g.
+2. 4.02 ≈ 4 kJ/g.
+Answer: 4",Thermite reaction,Revise Thermodynamics.,
+84,75,arithmetic,Isotonic: iC equal.,i = 1 + 2α for K_{2}SO_{4}.,"1. i = 0.01/0.004 = 2.5.
+2. α = 0.75 = 75%.
+Answer: 75",Van't Hoff factor,Revise Solutions.,
+85,44,arithmetic,40% of water reacts: 0.4 mol.,Volume cancels (Δn = 0).,"1. K_{c} = 0.4^{2}/0.6^{2} = 0.444.
+2. × 100 = 44.
+Answer: 44",Equilibrium constant,Revise Equilibrium.,
+86,2,arithmetic,Combine ΔG° = −nFE°.,Pb^{4+} + 2e^{−} → Pb^{2+}: E = (4n − 2m)/2 = 2n − m.,"1. E°(Pb^{2+}/Pb^{4+}) is the reverse: m − 2n.
+2. x = 2.
+Answer: 2",Combining electrode potentials,Revise Electrochemistry.,NTA reads E°(Pb^{2+}/Pb^{4+}) as the oxidation potential of Pb^{2+} → Pb^{4+}.
+87,333,arithmetic,"Rate of FeSO_{4} use, then the stoichiometric ratio.",6 FeSO_{4} : 3 Fe_{2}(SO_{4})_{3}.,"1. −d[FeSO_{4}]/dt = 1.2/1800 = 6.67 × 10^{−4} M/s.
+2. Fe_{2}(SO_{4})_{3}: half that = 3.33 × 10^{−4} = 333 × 10^{−6}.
+Answer: 333",Rates and stoichiometry,Revise Chemical Kinetics.,
+88,1,conceptual,Both have Cr^{3+}.,d^{3}: 3 unpaired in both.,"1. Ratio 1.
+Answer: 1",Magnetic moment,Revise Coordination Compounds.,
+89,4,disputed,HBr first makes a carbocation where the OH was. Is a more stable one available by a shift?,"A secondary cation next to a quaternary carbon undergoes a 1,2-methyl shift.","1. Loss of water gives a secondary cation at C-1.
+2. 1,2-methyl shift gives a tertiary cation at the ring-fusion carbon.
+3. α-hydrogens: C-1 (1), the ring CH_{2} (2), the other fusion CH (1): 4 hyperconjugation structures.
+Answer: 4",Carbocation rearrangement and hyperconjugation,Revise Organic Chemistry: Some Basic Principles (hyperconjugation).,DISPUTED: Claude gets 4 α-H after the methyl shift (2 for the unrearranged secondary cation); NTA's final key is 7. No structure Claude tried gives 7. Owner/teacher to decide.
+90,2,conceptual,Topic: Grignard reagents. Which rule or fact from it settles this question?,MeMgBr reacts with the OH as well as with the CHO.,"1. One mole is used by the acidic OH, one adds to CHO.
+2. x/y = 2.
+Answer: 2",Grignard reagents,Revise Alcohols and Aldehydes.,
