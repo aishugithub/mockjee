@@ -1,0 +1,249 @@
+q,claude_answer,check,hint1,hint2,solution,concept,revise,note
+1,2,sympy,Write z = x + iy. The first condition is a circle; turn the second into a line.,"z + z̄ = 2x and z − z̄ = 2iy, so the second condition is (√2 − 1)x + y = √2. Intersect it with (x − 1)² + y² = 1.","1. The two points are 1 + i (|z|² = 2) and (1 + 1/√2) + i/√2 (|z|² = 2 + √2).
+2. z_{1} = (1 + 1/√2) + i/√2, z_{2} = 1 + i.
+3. √2 z_{1} − z_{2} = (√2 + 1 − 1) + i(1 − 1) = √2, so |√2 z_{1} − z_{2}|² = 2.
+Answer: (2)",Complex numbers as points: a circle meeting a line.,Revise 'Complex Numbers' (loci).,
+2,3,sympy,Notice (√3 + √2)(√3 − √2) = 1. Put t = (√3 + √2)^{x}.,"t + 1/t = 10, so t² − 10t + 1 = 0 and t = 5 ± 2√6 = (√3 ± √2)².","1. t = (√3 + √2)² gives x = 2; t = (√3 − √2)² = (√3 + √2)^{−2} gives x = −2.
+2. Two elements.
+Answer: (3)",Exponential equations with reciprocal bases.,Revise 'Complex Numbers and Quadratic Equations' / exponent rules.,
+3,2,sympy,You only need determinants. Use det(PQ) = det P · det Q and det(Aᵀ) = det A.,"det A = 2 + 1 = 3, det B = 1, det C = 3 × 1 × 3 = 9.","1. det X = det A × (det C)² × det A = 3 × 81 × 3 = 729.
+Answer: (2)",Properties of determinants.,Revise 'Determinants'.,
+4,1,sympy,"The offices are indistinguishable, so you are just splitting 5 people into at most 4 unlabelled groups.","Count partitions of 5 people into exactly 1, 2, 3 or 4 non-empty groups (Stirling numbers S(5, k)).","1. S(5, 1) = 1, S(5, 2) = 15, S(5, 3) = 25, S(5, 4) = 10.
+2. n = 51.
+Answer: (1)",Distributing distinct objects into identical boxes.,Revise 'Permutations and Combinations'.,
+5,2,sympy,"Infinitely many solutions: the third equation must be a combination p(eq 1) + q(eq 2), constants included.",x: 2p + q = 3. Constants: 5p − 4q = 7.,"1. p = 19/13, q = 1/13.
+2. y: 3p + αq = −1 gives α = −70. z: −p + 3q = β gives β = −16/13.
+3. 13αβ = 13 × (−70) × (−16/13) = 1120.
+Answer: (2)",Systems with infinitely many solutions.,Revise 'Determinants'.,
+6,1,sympy,"Write a, b, c as 3 + d, 3 + 2d, 3 + 3d. Then use the GP condition on the first three GP terms.","GP: 3, 2 + d, 4 + 2d, 12 + 3d. (2 + d)² = 3(4 + 2d).","1. d² − 2d − 8 = 0, so d = 4 or −2. d = −2 makes GP terms zero, so d = 4.
+2. a, b, c = 7, 11, 15 (GP 3, 6, 12, 24 checks).
+3. Mean = 11.
+Answer: (1)",AP and GP together.,Revise 'Sequences and Series'.,
+7,3,sympy,"Replace x by 1/x to get a second equation, then solve the pair for f(x).",5f(1/x) + 4f(x) = 1/x² − 2. Eliminate f(1/x): f(x) = (5x² − 2 − 4/x²)/9.,"1. y = 9x²f(x) = 5x⁴ − 2x² − 4.
+2. y' = 4x(5x² − 1) > 0 when −1/√5 < x < 0 or x > 1/√5.
+Answer: (3)","Functional equation f(x), f(1/x); increasing functions.",Revise 'Application of Derivatives'.,
+8,2,sympy,For x < 0 the fraction must have a finite limit at 0. What does that force a and b to satisfy?,"a − b cos 2x must vanish at 0: a = b. Then b(1 − cos 2x)/x² → 2b, which must equal f(0) = 2.","1. a = b = 1. Continuity at 1: 1 + c + 2 = 3, so c = 0.
+2. At 0 both one-sided slopes are 0; at 1 both are 2. So f is differentiable everywhere: m = 0.
+3. m + a + b + c = 2.
+Answer: (2)",Continuity and differentiability of piecewise functions.,Revise 'Continuity and Differentiability'.,
+9,2,sympy,Write the first curve as y = 16/(x + 4) and find where it meets the line.,16/(x + 4) = 6 − x gives x² − 2x − 8 = 0: x = −2 and 4.,"1. Area = ∫_{−2}^{4} (6 − x) dx − ∫_{−2}^{4} 16/(x + 4) dx.
+2. = 30 − 16 ln(8/2) = 30 − 32 log_{e}2.
+Answer: (2)",Area between a hyperbola and a line.,Revise 'Application of Integrals'.,
+10,2,sympy,Use x → π/4 − x. What happens to sin⁴(2x) + cos⁴(2x)?,"The denominator is unchanged, so I = (π/8)∫_{0}^{π/4} dx/(sin⁴2x + cos⁴2x). Then divide top and bottom by cos⁴2x and put t = tan 2x.","1. ∫_{0}^{π/4} dx/(sin⁴2x + cos⁴2x) = (1/2)∫_{0}^{∞} (1 + t²)/(1 + t⁴) dt = (1/2)(π/√2) = π/(2√2).
+2. I = (π/8)(π/(2√2)) = π²/(16√2) = √2π²/32.
+Answer: (2)",Definite integrals with the king property.,Revise 'Integrals' (properties of definite integrals; ∫(1 + t²)/(1 + t⁴)).,
+11,1,sympy,Put u = x + y. Then du/dx = 1 + dy/dx.,du/dx = 2xu³ − xu: a Bernoulli equation. Put w = 1/u².,"1. dw/dx = −2u^{−3}du/dx = −4x + 2xw, so dw/dx − 2xw = −4x, giving w = 2 + Ce^{x²}.
+2. u(0) = 1 gives C = −1: (x + y)² = 1/(2 − e^{x²}).
+3. At x = 1/√2: 1/(2 − √e).
+Answer: (1)",Differential equations by substitution (Bernoulli).,Revise 'Differential Equations'.,
+12,2,sympy,Put both conics in standard form and write each eccentricity in terms of sin θ.,Hyperbola x²/5 − y²/(5 sin²θ) = 1: e² = 1 + sin²θ. Ellipse x²/(5 sin²θ) + y²/5 = 1: e² = 1 − sin²θ.,"1. 1 + sin²θ = 7(1 − sin²θ), so sin²θ = 3/4.
+2. θ = π/3.
+Answer: (2)",Eccentricity of ellipse and hyperbola.,Revise 'Conic Sections'.,
+13,1,sympy,e² = 1/2 links b² to a². The latus rectum then gives a.,b² = a²(1 − e²) = a²/2. Latus rectum 2b²/a = a.,"1. The hyperbola x²/a² − y²/b² = 1 has e² = 1 + b²/a² = 3/2 (a is not even needed).
+Answer: (1)","Ellipse and hyperbola with the same a, b.",Revise 'Conic Sections'.,
+14,4,sympy,"Work out g(f(x)) on the three ranges x ≤ 0, 0 < x < 1 and x ≥ 1.","x ≤ 0: f = e^{−x} ≥ 1, so gof = e^{−x}. 0 < x < 1: f = ln x < 0, so gof = e^{ln x} = x. x ≥ 1: gof = ln x.","1. Values: [1, ∞) for x ≤ 0, (0, 1) for 0 < x < 1, [0, ∞) for x ≥ 1. Negative numbers are never reached: not onto.
+2. gof(−ln 2) = 2 = gof(e²): not one-one.
+Answer: (4)",Composite functions: one-one and onto.,Revise 'Relations and Functions'.,
+15,2,sympy,Two circles cut at two points when |r_{1} − r_{2}| < d < r_{1} + r_{2}.,"C: centre (0, 0), r = 2. C': centre (2λ, 0), r' = √(4λ² − 9). d = 2|λ|.","1. d < 2 + r' gives (2|λ| − 2)² < 4λ² − 9, i.e. |λ| > 13/8. (The other inequality always holds then.)
+2. So the set is R − [−13/8, 13/8]: a = −13/8, b = 13/8.
+3. Point (−1, 6): 6(1) + 36 = 42, so it lies on 6x² + y² = 42.
+Answer: (2)",Intersection of two circles.,Revise 'Conic Sections' (circle).,
+16,4,sympy,SD = |(B − A)·(d_{1} × d_{2})|/|d_{1} × d_{2}|. Set it equal to 1.,"d_{1} × d_{2} = (−2, 1, 1) × (1, −2, 1) = (3, 3, 3). B − A = (√3 − λ, −1, 1).","1. SD = |3(√3 − λ)|/(3√3) = |√3 − λ|/√3 = 1.
+2. λ = 0 or 2√3; sum = 2√3.
+Answer: (4)",Shortest distance between skew lines.,Revise 'Three Dimensional Geometry'.,
+17,4,sympy,"Use Bayes' theorem over the possible numbers of white balls, taking all compositions as equally likely.","P(2W, 2B | k white) = C(k, 2)C(8 − k, 2)/C(8, 4). Only k = 2 to 6 give a non-zero value.","1. Numerators: k = 2: 15, 3: 30, 4: 36, 5: 30, 6: 15; total 126.
+2. P(k = 4 | 2W2B) = 36/126 = 2/7.
+Answer: (4)",Bayes' theorem.,Revise 'Probability'.,"Assumes every number of white balls (0 to 8) is equally likely beforehand, as is standard for this problem."
+18,2,sympy,"The median is 170, so it must be the middle value. Use the mean deviation about 170 to find a and b.","Known deviations from 170: 0, 45, 60, 20, 40 (sum 165). So |a − 170| + |b − 170| = 205 − 165 = 40, with one of a, b ≤ 170 and the other ≥ 170.","1. The values that fit the options are a = 130, b = 170 (deviations 40 and 0).
+2. Mean = (170 + 125 + 230 + 190 + 210 + 130 + 170)/7 = 175.
+3. Deviations from 175: 5, 50, 55, 15, 35, 45, 5: sum 210. Mean deviation = 210/7 = 30.
+Answer: (2)",Median and mean deviation.,Revise 'Statistics'.,"Other splits of the deviation 40 (e.g. a = 150, b = 190) change the median; a = 130, b = 170 keeps it at 170 and matches the key."
+19,2,sympy,"Work out a × b first. Then cross with î three times, one step at a time.","a × b = (2, −23, −11). Crossing with î kills the î part and rotates the rest: (0, y, z) × î = (0, z, −y).","1. (2, −23, −11) × î = (0, −11, 23); × î = (0, 23, 11); × î = (0, 11, −23).
+2. c·(−1, 1, 1) = 11 − 23 = −12.
+Answer: (2)",Repeated cross products.,Revise 'Vector Algebra'.,
+20,1,sympy,Find tan(A + B) with the addition formula and compare it with tan C.,tan A + tan B = (1 + x)/√(x(x² + x + 1)); 1 − tan A tan B = 1 − 1/(x² + x + 1) = (x² + x)/(x² + x + 1).,"1. tan(A + B) = √(x² + x + 1)/(x√x) = √((x² + x + 1)/x³).
+2. tan C = √(x^{−3} + x^{−2} + x^{−1}) = √((1 + x + x²)/x³): the same.
+3. Both angles are acute... A + B is in (0, π) and tan(A + B) > 0, so A + B = C.
+Answer: (1)",Tangent addition formula.,Revise 'Trigonometric Functions'.,
+21,46,sympy,R_{1}: a divides b. R_{2}: b divides a. Which pairs are in R_{1} but not in R_{2}?,Both hold only when a = b. So R_{1} − R_{2} = pairs with a | b and a ≠ b.,"1. For each a, the multiples of a up to 20 other than a itself: ⌊20/a⌋ − 1.
+2. Sum over a = 1 to 20: 19 + 9 + 5 + 4 + 3 + 2 + 1 + 1 + 1 + 1 + 0 + … = 46.
+Answer: 46",Relations defined by divisibility.,Revise 'Relations and Functions'.,
+22,36,sympy,P is a disc. Write Q with z = x + iy: it becomes a half-plane. Then look for the points of the region farthest from and nearest to 3 − 2i.,"Q: 2x − 2y ≤ −8, i.e. y ≥ x + 4. P: centre (−2, 3), radius 1. The point 3 − 2i lies along the direction (1, −1) from the centre.","1. Farthest: centre − (1/√2)(1, −1) = (−2 − 1/√2, 3 + 1/√2), inside Q. |z_{1}|² = 14 + 5√2.
+2. Nearest: the matching point on the circle is outside Q, so use the line y = x + 4: the foot of (3, −2) on it is (−3/2, 5/2), inside the disc. |z_{2}|² = 17/2.
+3. |z_{1}|² + 2|z_{2}|² = 31 + 5√2: α + β = 36.
+Answer: 36",Extreme distances over a region in the complex plane.,Revise 'Complex Numbers' (loci) and 'Straight Lines'.,
+23,678,sympy,Write (1 + 1/x)⁶ = (x + 1)⁶/x⁶. You then need the coefficient of x^{36} in a polynomial.,"α = coefficient of x^{36} in (1 + x)⁶(1 + x²)⁷(1 − x³)⁸. The highest power is 6 + 14 + 24 = 44, so work from the top.","1. Expand and collect the x^{36} terms (a long but direct count).
+2. The coefficient is −678, so |α| = 678.
+Answer: 678",Coefficient in a product of binomials.,Revise 'Binomial Theorem'.,
+24,169,sympy,"Fix z, then count the (x, y) pairs.","For a fixed z, x = 42 − 3z − 2y ≥ 0 allows y = 0, …, ⌊(42 − 3z)/2⌋.","1. z = 0 to 14: counts ⌊(42 − 3z)/2⌋ + 1 = 22, 20, 19, 17, 16, 14, 13, 11, 10, 8, 7, 5, 4, 2, 1.
+2. Total = 169.
+Answer: 169",Counting non-negative integer solutions.,Revise 'Permutations and Combinations'.,
+25,6699,sympy,Find the first common term and the common difference of the common terms.,"First AP: 3 + 4k (up to 403). Second: 2 + 3k (up to 404). Common terms: 11, 23, 35, … with difference 12.","1. Last common term ≤ 403: 11 + 12 × 32 = 395, so 33 terms.
+2. Sum = 33 × (11 + 395)/2 = 6699.
+Answer: 6699",Common terms of two APs.,Revise 'Sequences and Series'.,
+26,18,sympy,"Near 0 from the left, {x} → 1; from the right, {x} → 0. Treat the two sides separately.","Left: put h = 1 − {x} → 0: cos^{−1}(1 − {x}²) → π/2, sin^{−1}(h) ≈ h, denominator {x}(1 − {x})(1 + {x}) ≈ 2h. Right: cos^{−1}(1 − x²) ≈ √2 x and sin^{−1}(1) = π/2.","1. L = (π/2)h/(2h) = π/4.
+2. R = √2 x (π/2)/x = π/√2.
+3. (32/π²)(π²/16 + π²/2) = 2 + 16 = 18.
+Answer: 18",One-sided limits with the fractional part function.,Revise 'Limits and Derivatives'. cos^{−1}(1 − t²) ≈ √2 t for small t.,
+27,8,sympy,Add the integral to itself with x → −x. What does 1/(1 + e^{sin x}) + 1/(1 + e^{−sin x}) equal?,"The sum is 1, so I = ∫_{0}^{π/2} 8√2 cos x/(1 + sin⁴x) dx. Put t = sin x.","1. I = 8√2∫_{0}^{1} dt/(1 + t⁴).
+2. ∫_{0}^{1} dt/(1 + t⁴) = (π + 2 ln(1 + √2))/(4√2), and 2 ln(1 + √2) = ln(3 + 2√2).
+3. I = 2π + 2 log_{e}(3 + 2√2): α = β = 2, α² + β² = 8.
+Answer: 8",Definite integrals with the king property; ∫ dt/(1 + t⁴).,Revise 'Integrals'.,
+28,14,sympy,Write it as dx/dt − 2x/(t + 1) = (t + 1)³: a linear equation.,Integrating factor 1/(t + 1)². Then (x/(t + 1)²)' = t + 1.,"1. x/(t + 1)² = (t + 1)²/2 + C. x(0) = 2 gives C = 3/2.
+2. x(1) = 4(2 + 3/2) = 14.
+Answer: 14",Linear differential equation.,Revise 'Differential Equations'.,
+29,72,sympy,"Find P first (first-quadrant intersection), which gives α. Then a circle centred (0, k) touches L when its distance from L equals the radius.","x² + 2y = 3 and x² = 2y give y = 1, x = √2, so α = 3. Distance from (0, k) to √2x + y − 3 = 0 is |k − 3|/√3.","1. |k − 3|/√3 = 2√3 gives k = 9 or −3: Q_{1}Q_{2} = 12 along the y-axis.
+2. The height of P from the y-axis is √2. Area = (1/2)(12)(√2) = 6√2.
+3. Area² = 72.
+Answer: 72",Circle and parabola intersection; tangent circles.,Revise 'Conic Sections' (circle) and 'Straight Lines'.,
+30,21,sympy,PQ is perpendicular to both lines. Write P and Q with their parameters and impose two dot-product conditions.,"P = (1 + λ, 2 − λ, 3 + λ), Q = (4 + μ, 5 + μ, 6 − μ). (P − Q)·(1, −1, 1) = 0 and (P − Q)·(1, 1, −1) = 0.","1. λ = 3/2, μ = −3/2: P = (5/2, 1/2, 9/2), Q = (5/2, 7/2, 15/2).
+2. Midpoint (5/2, 2, 6), so 2(α + β + γ) = 2 × 21/2 = 21.
+Answer: 21",Line of shortest distance between skew lines.,Revise 'Three Dimensional Geometry'.,
+31,4,sympy,Angular impulse = torque × time = change in angular momentum.,"[τ] = ML²T^{−2}, multiplied by T.","1. [Angular impulse] = ML²T^{−1}.
+Answer: (4)",Dimensional formulae.,Revise 'Units and Measurements'.,
+32,2,sympy,Find the speed from the circular motion: v = 2πR/T. Then use H = v² sin²θ/(2g).,v² sin²θ/(2g) = 4R.,"1. sin²θ = 8gR/v² = 8gRT²/(4π²R²) = 2gT²/(π²R).
+2. θ = sin^{−1}√(2gT²/(π²R)).
+Answer: (2)",Uniform circular motion; projectile height.,Revise 'Motion in a Plane'.,
+33,4,sympy,Treat the trolley and the hanging block as one system. Which forces drive it and which oppose it?,Driving force = weight of the 6 kg block (60 N). Friction on the trolley = 0.04 × 200 = 8 N.,"1. a = (60 − 8)/(20 + 6) = 2 m/s².
+Answer: (4)",Connected bodies with friction.,Revise 'Laws of Motion'.,
+34,2,sympy,In a horizontal circle the tension supplies the centripetal force: T = mω²L.,400 = 0.5 × ω² × 0.5.,"1. ω² = 1600, ω = 40 rad/s.
+Answer: (2)",Circular motion and tension.,Revise 'Laws of Motion' (circular motion).,
+35,1,sympy,"The bullet sticks: use momentum conservation, then energy conservation for the swing.",v = (0.01 × 200)/(1.01). h = v²/(2g).,"1. v ≈ 1.98 m/s.
+2. h = 1.98²/20 ≈ 0.196 m ≈ 0.20 m.
+Answer: (1)",Ballistic pendulum.,"Revise 'Work, Energy and Power' (collisions).",
+36,4,sympy,A seconds pendulum has T = 2 s. How much is g at height 2R?,g' = g/(1 + 2)² = g/9 = π²/9. L = g'T²/(4π²).,"1. L = (π²/9)(4)/(4π²) = 1/9 m.
+Answer: (4)",Variation of g with height; simple pendulum.,Revise 'Gravitation' and 'Oscillations'.,
+37,1,conceptual,"When a solid is heated, do the bonds between atoms get stiffer or weaker?","Thermal expansion increases interatomic spacing, so the restoring forces weaken.","1. Young's modulus decreases as temperature rises.
+Answer: (1)",Effect of temperature on elasticity.,Revise 'Mechanical Properties of Solids'.,"NTA's final key for this question could not be matched to an option ID when the paper was extracted (key 9561772125 is not among the option IDs), so it is left out of the bank. Owner to check the key."
+38,3,sympy,This is a polytropic process PVⁿ = K with n = 3/2. Integrate P dV.,W = ∫P dV = (P_{1}V_{1} − P_{2}V_{2})/(n − 1).,"1. n − 1 = 1/2, so W = 2(P_{1}V_{1} − P_{2}V_{2}).
+Answer: (3)",Work in a polytropic process.,Revise 'Thermodynamics'.,
+39,2,sympy,"Add the heat capacities: C_{V,mix} = Σ nC_{V}/Σ n.","Monoatomic C_{V} = (3/2)R, diatomic C_{V} = (5/2)R.","1. C_{V} = (2 × 3/2 + 6 × 5/2)R/8 = 18R/8 = (9/4)R.
+Answer: (2)",Specific heat of a gas mixture.,Revise 'Kinetic Theory'.,
+40,2,sympy,Joining like ends shares the charge. Energy lost = C_{1}C_{2}(V_{1} − V_{2})²/(2(C_{1} + C_{2})).,"C_{1} = C_{2} = C, V_{1} − V_{2} = V.","1. Loss = (C²/(2C))(V²)/2 = CV²/4.
+Answer: (2)",Energy loss when capacitors are connected.,Revise 'Electrostatic Potential and Capacitance'.,
+41,3,sympy,"All eight cells are in one series loop. Find the current, then the voltage across the one cell the voltmeter is connected to.","Total emf = 8 × 5 = 40 V, total resistance = 8 × 0.2 = 1.6 Ω. Terminal voltage of one cell = E − Ir.","1. I = 40/1.6 = 25 A.
+2. V = 5 − 25 × 0.2 = 0 V.
+Answer: (3)",Cells in series; terminal voltage.,Revise 'Current Electricity'.,Figure reading: all cells are connected in the same sense around the loop; the voltmeter is across the single cell on the right.
+42,1,sympy,A voltmeter is a galvanometer with a large resistance in series. Full-scale current flows at 100 V.,R + G = V/I_{g}.,"1. R = 100/0.005 − 50 = 20000 − 50 = 19950 Ω.
+Answer: (1)",Galvanometer as a voltmeter.,Revise 'Moving Charges and Magnetism'.,
+43,4,sympy,Resonance frequency f = 1/(2π√(LC)). What must stay constant?,LC must stay the same. C → 4C means L → L/4.,"1. New inductance = L/4, i.e. reduced by 3L/4.
+Answer: (4)",Resonance in LCR circuits.,Revise 'Alternating Current'.,
+44,1,sympy,"In a capacitor circuit, the conduction current in the wires equals the displacement current between the plates.",I_{rms} = V_{rms}ωC.,"1. I = 230 × 300 × 200 × 10^{−12} = 13.8 μA.
+2. Both currents are 13.8 μA.
+Answer: (1)",Displacement current.,Revise 'Electromagnetic Waves'.,
+45,2,sympy,The central maximum spans from the first minimum on one side to the first minimum on the other.,Width = 2λf/a.,"1. Width = 2 × 6 × 10^{−7} × 0.2/10^{−5} = 0.024 m = 24 mm.
+Answer: (2)",Single-slit diffraction.,Revise 'Wave Optics'.,
+46,3,sympy,"de Broglie: λ = h/(mv), so v = h/(mλ). The α-particle has 4 times the proton's mass.",v_{p}/v_{α} = (m_{α}λ_{α})/(m_{p}λ_{p}).,"1. v_{p}/v_{α} = (4m × 2λ)/(m × λ) = 8.
+2. Ratio 8 : 1.
+Answer: (3)",de Broglie wavelength.,Revise 'Dual Nature of Radiation and Matter'.,
+47,3,sympy,"Balmer lines end on n = 2. To emit one, the electron must first be at n = 3 or higher.",Minimum excitation from n = 1 to n = 3: 13.6(1 − 1/9) eV.,"1. E = 13.6 × 8/9 ≈ 12.1 eV.
+Answer: (3)",Hydrogen energy levels; Balmer series.,Revise 'Atoms'.,
+48,0,disputed,The Zener holds 5 V across R_{L}. Find the load current and the largest current the Zener can take.,"I_{L} = 5 V/1 kΩ = 5 mA. I_{Z,max} = 10 mW/5 V = 2 mA. The series current is (8 − 5)/R_{s}.","1. To regulate, the series current must be at least I_{L} = 5 mA (else the Zener switches off) and at most I_{L} + I_{Z,max} = 7 mA.
+2. So 3/0.007 ≈ 429 Ω ≤ R_{s} ≤ 3/0.005 = 600 Ω.
+3. None of the options lies in this range; with 1 kΩ only 3 mA flows, less than the load needs, and the Zener does not conduct.
+Answer: (0)",Zener diode as a voltage regulator.,Revise 'Semiconductor Electronics' (Zener regulator).,"DISPUTED: by the usual analysis R_{s} must be between about 429 Ω and 600 Ω, so no option is correct ('0' here means none of the options). NTA's final key is 1 kΩ. Owner/teacher to decide."
+49,2,sympy,10 MSD = 11 VSD. Least count = 1 MSD − 1 VSD.,1 VSD = (10/11) MSD.,"1. LC = (1 − 10/11) MSD = (1/11) × 5 = 5/11 units.
+Answer: (2)",Vernier calliper least count.,Revise 'Units and Measurements'.,
+50,1,sympy,"ρ = Rπr²/l. Add the relative errors, counting r twice.",Δρ/ρ = ΔR/R + 2Δr/r + Δl/l.,"1. 10/100 + 2(0.05/0.35) + 0.2/15 = 0.1 + 0.2857 + 0.0133 = 0.399.
+2. 39.9%.
+Answer: (1)",Propagation of errors.,Revise 'Units and Measurements'.,
+51,52,sympy,Differentiate twice. When is the acceleration zero?,"v = −9t² + 36t + 16, a = −18t + 36.","1. a = 0 at t = 2 s.
+2. v = −36 + 72 + 16 = 52 m/s.
+Answer: 52",Kinematics by differentiation.,Revise 'Motion in a Straight Line'.,
+52,3,sympy,Put the right angle at the origin and the other two corners on the axes.,"Equal masses at (0, 0), (4, 0), (0, 4). The centre of mass is the average.","1. CM = (4/3, 4/3), |r| = 4√2/3.
+2. x = 3.
+Answer: 3",Centre of mass.,Revise 'System of Particles and Rotational Motion'.,
+53,9600,sympy,Bernoulli: the pressure difference between the two surfaces gives the lift. Convert km/h to m/s.,"v_{1} = 50 m/s, v_{2} = 70 m/s. ΔP = (1/2)ρ(v_{2}² − v_{1}²). Lift = ΔP × (total wing area 80 m²) = mg.","1. ΔP = 0.5 × (4900 − 2500) = 1200 Pa.
+2. Lift = 1200 × 80 = 96000 N, so m = 9600 kg.
+Answer: 9600",Bernoulli's principle (dynamic lift).,Revise 'Mechanical Properties of Fluids'.,
+54,6,sympy,Frequency of a stretched wire ∝ √T. What happens when T goes from 6 N to 54 N?,"f ∝ √T, so the wire's frequency triples.","1. First it equals the fork: f. Then it becomes 3f.
+2. Beats 3f − f = 12, so f = 6 Hz.
+Answer: 6",Sonometer; beats.,Revise 'Waves'.,
+55,3,sympy,"The angle is unchanged, so (electric force)/(effective weight) is unchanged.","In water: force ÷ K, weight replaced by mg(1 − σ/ρ).","1. K(1 − 1/1.5) = 1, so K × 1/3 = 1.
+2. K = 3.
+Answer: 3",Charged spheres in a dielectric with buoyancy.,Revise 'Electric Charges and Fields'.,
+56,22,sympy,Charge = ∫ I dt.,∫_{1}^{2} (3t² + 4t³) dt = [t³ + t⁴] from 1 to 2.,"1. (8 + 16) − (1 + 1) = 22 C.
+Answer: 22",Current as rate of flow of charge.,Revise 'Current Electricity'.,
+57,72,sympy,Each side of the hexagon is a finite straight wire. Find the distance from the centre to a side.,Side a = 4π/6 = 2π/3; distance d = a√3/2 = π/√3. One side: B = (μ_{0}I/4πd)(sin 30° + sin 30°).,"1. One side: 10^{−7} × 4π√3/(π/√3) × 1 = 12 × 10^{−7} T.
+2. Six sides: 72 × 10^{−7} T.
+Answer: 72",Biot–Savart law for a polygon.,Revise 'Moving Charges and Magnetism'.,
+58,216,sympy,"The flux changes for two reasons: the loop moves into weaker field, and the field itself decreases. Do both effects add?",dB/dx = −0.1 T/m (B grows towards −x). Motional part: |dB/dx| × v × A. Time part: |dB/dt| × A. A = 0.12 × 0.05 = 0.006 m².,"1. Motion: 0.1 × 0.05 × 0.006 = 3 × 10^{−5} V. Time: 10^{−3} × 0.006 = 6 × 10^{−6} V. Both reduce the flux, so emf = 3.6 × 10^{−5} V.
+2. P = emf²/R = 1.296 × 10^{−9}/0.006 = 2.16 × 10^{−7} W = 216 × 10^{−9} W.
+Answer: 216","Induced emf in a non-uniform, time-varying field.",Revise 'Electromagnetic Induction'.,
+59,15,sympy,"A virtual image by a convex lens is on the same side as the object, three times as far.",|v| = 3|u| and |v| − |u| = 20 cm. Use 1/f = 1/v − 1/u with signs.,"1. |u| = 10 cm, |v| = 30 cm: u = −10, v = −30.
+2. 1/f = −1/30 + 1/10 = 1/15, so f = 15 cm.
+Answer: 15",Lens formula (virtual image).,Revise 'Ray Optics and Optical Instruments'.,
+60,27,sympy,"R ∝ A^{1/3}, so A ∝ R³.",A = 64 × (4/4.8)³.,"1. (4/4.8)³ = (5/6)³ = 125/216.
+2. A = 64 × 125/216 = 1000/27, so x = 27.
+Answer: 27",Nuclear radius.,Revise 'Nuclei'.,
+61,1,conceptual,λ = h/p. What shape is a graph of λ against p? And against 1/p?,"λ ∝ 1/p: a rectangular hyperbola against p, a straight line through the origin against 1/p.","1. The first graph (λ falling as a hyperbola against p) is right.
+2. The third would need a straight line against 1/p; the second and fourth show λ ∝ p.
+Answer: (1)",de Broglie relation.,Revise 'Structure of Atom' (dual behaviour).,
+62,1,conceptual,Ionic character grows with the electronegativity difference between bonded atoms.,N_{2}: 0. LiF and K_{2}O: large (metal + non-metal). SO_{2} and ClF_{3} are in between.,"1. N_{2} has no polarity; LiF is the most ionic (F most electronegative, Li a metal), then K_{2}O.
+2. NTA's order: N_{2} < SO_{2} < ClF_{3} < K_{2}O < LiF.
+Answer: (1)",Ionic character and electronegativity difference.,Revise 'Chemical Bonding and Molecular Structure'.,"SO_{2} vs ClF_{3} depends on the electronegativity scale: Pauling values give 0.86 (S–O) vs 0.82 (Cl–F), rounded values give 1.0 for both. NTA's key puts ClF_{3} above SO_{2}. Worth a teacher look."
+63,3,conceptual,In free expansion the gas expands into vacuum. Is there any work? Any heat? What happens to an ideal gas's U?,"p_{ext} = 0 so w = 0; adiabatic so q = 0; ΔU = 0, and for an ideal gas U depends only on T.","1. q = 0, w = 0, ΔU = 0, so ΔT = 0.
+Answer: (3)",Free expansion of an ideal gas.,Revise 'Thermodynamics' (Chemistry).,
+64,1,conceptual,How does the degree of dissociation (and so i) change on dilution?,"More dilute solutions have less interionic attraction, so the effective i approaches 2.","1. i increases as concentration falls: i_{A} < i_{B} < i_{C}.
+Answer: (1)",van 't Hoff factor and dilution.,Revise 'Solutions'.,
+65,2,conceptual,"F⁻, Ne and Na⁺ all have 10 electrons. What differs between them?","Their nuclear charges are 9, 10 and 11.","1. Higher nuclear charge pulls the same electron cloud closer: F⁻ > Ne > Na⁺ in size.
+2. The size is affected by nuclear charge.
+Answer: (2)",Size of isoelectronic species.,Revise 'Classification of Elements and Periodicity in Properties'.,
+66,3,conceptual,Which hydride can form hydrogen bonds: NH_{3} or PH_{3}? Does R have that the right way round?,"N is small and very electronegative, so NH_{3} forms hydrogen bonds; PH_{3} has only van der Waals forces.","1. A is correct: PH_{3} boils lower than NH_{3}.
+2. R swaps the two: it is not correct.
+Answer: (3)",Hydrogen bonding and boiling points.,Revise 'p-Block Elements' (group 15) and 'Chemical Bonding'.,
+67,3,conceptual,"Cr goes from +6 to +3. Balance electrons, then O with H_{2}O and H with H⁺.",Cr_{2}O_{7}²⁻ + 14H⁺ + 6e⁻ → 2Cr³⁺ + 7H_{2}O.,"1. X = 14, Y = 6, Z = 7, A = Cr³⁺.
+Answer: (3)",Balancing a half-reaction.,Revise 'Redox Reactions'.,
+68,1,conceptual,"In disproportionation, one element in one oxidation state goes both up and down. Check each reaction.",A: Cu(+1) → Cu(+2) and Cu(0). B: Mn(+6) → Mn(+7) and Mn(+4). C: Mn and O change separately (decomposition). D: Mn(+7) and Mn(+2) meet at Mn(+4) (the reverse: comproportionation).,"1. A and B are disproportionation reactions.
+Answer: (1)",Disproportionation versus comproportionation.,Revise 'Redox Reactions'.,
+69,1,conceptual,Colour needs d–d transitions. Count unpaired/possible transitions in each nickel complex.,"[Ni(H_{2}O)_{6}]²⁺: Ni²⁺ d⁸ octahedral, green. [Ni(CN)_{4}]²⁻: square planar, low spin d⁸.","1. Statement I: correct (green).
+2. Statement II: NTA takes [Ni(CN)_{4}]²⁻ solutions as colourless: correct.
+Answer: (1)",Colour of complexes.,Revise 'Coordination Compounds'.,[Ni(CN)_{4}]²⁻ is usually described as pale yellow; NTA's key treats it as colourless. Worth a teacher look.
+70,4,conceptual,Homoleptic means only one kind of ligand.,The first three have two kinds of ligand (NH_{3} and Cl⁻).,"1. [Ni(CN)_{4}]²⁻ has only CN⁻: homoleptic.
+Answer: (4)",Homoleptic and heteroleptic complexes.,Revise 'Coordination Compounds'.,
+71,3,conceptual,In Kjeldahl's method the compound is digested with conc. H_{2}SO_{4}. What is CuSO_{4} added for?,CuSO_{4} (with K_{2}SO_{4}) speeds up the digestion.,"1. It is a catalyst.
+Answer: (3)",Kjeldahl's method.,Revise 'Organic Chemistry: Some Basic Principles and Techniques' (estimation of nitrogen).,
+72,3,conceptual,What is the IUPAC name of aniline?,"Aniline is C_{6}H_{5}NH_{2}, called aminobenzene (IUPAC: benzenamine).","1. They are the same compound: Statement I is correct, Statement II incorrect.
+Answer: (3)",Nomenclature of amines.,Revise 'Amines'.,
+73,2,conceptual,Ionic reactions involve ions. How does a bond break to give ions?,Heterolytic cleavage gives a cation and an anion; homolytic cleavage gives free radicals.,"1. Ionic reactions proceed through heterolytic bond cleavage: B only.
+Answer: (2)",Bond cleavage and reaction types.,Revise 'Organic Chemistry: Some Basic Principles and Techniques'.,
+74,3,conceptual,Which atom of CN⁻ attacks in each case? Is AgCN really ionic?,KCN is ionic: free CN⁻ attacks through C (alkyl cyanide). AgCN is mainly covalent: the N end attacks (isocyanide).,"1. A is correct.
+2. R is wrong: AgCN is mainly covalent.
+Answer: (3)",Cyanides and isocyanides from haloalkanes.,Revise 'Haloalkanes and Haloarenes'.,
+75,3,conceptual,Cl_{2} with light substitutes the side-chain H atoms. Which product hydrolyses to an aldehyde?,Side-chain chlorination of toluene can give C_{6}H_{5}CHCl_{2} (benzal chloride). Hydrolysis of a gem-dichloride gives a carbonyl compound.,"1. A = C_{6}H_{5}CHCl_{2}.
+2. B = C_{6}H_{5}CHO (benzaldehyde).
+Answer: (3)",Side-chain chlorination; hydrolysis of benzal chloride.,"Revise 'Aldehydes, Ketones and Carboxylic Acids' (preparation of aldehydes).",
+76,2,conceptual,"Match each change to its reagent: ester → aldehyde, C=O → CH_{2}, aldehyde → secondary alcohol with one more C, selective ketone reduction.","DIBAL-H reduces esters to aldehydes. Clemmensen (Zn(Hg)/HCl) gives CH_{2}. CH_{3}MgBr adds a methyl. NaBH_{4} reduces the ketone, not the ester.","1. A–IV, B–II, C–I, D–III.
+Answer: (2)",Reducing agents and Grignard reagents.,"Revise 'Aldehydes, Ketones and Carboxylic Acids'.",
+77,1,conceptual,Statement I: does the –NH_{2} lone pair push electrons into the ring? Statement II: what happens to aniline with AlCl_{3}?,"–NH_{2} is strongly activating (+R) and o/p directing. With AlCl_{3}, aniline forms a salt and the ring is deactivated.","1. Both statements are correct.
+Answer: (1)",Reactivity of aniline.,Revise 'Amines'.,
+78,3,conceptual,Which substituent makes the ring most electron-rich?,–OH is strongly activating (+R). –CH_{3} activates less; –Cl deactivates.,"1. Phenol is attacked most easily.
+Answer: (3)",Activating groups in electrophilic substitution.,"Revise 'Alcohols, Phenols and Ethers' and 'Hydrocarbons'.",
+79,1,conceptual,"In DNA, A pairs with T and G pairs with C.",Write the complement base by base.,"1. ATGCTTCA → TACGAAGT.
+Answer: (1)",Complementary base pairing.,Revise 'Biomolecules' (nucleic acids).,
+80,1,conceptual,Is KHP a primary standard? What is the pH at the end point of a weak acid–strong base titration?,"Potassium hydrogen phthalate is pure, stable and non-hygroscopic. The end point is slightly basic, where phenolphthalein changes colour.","1. Both statements are correct.
+Answer: (1)",Primary standards and indicators.,Revise acid–base titration (practical chemistry).,
+81,24,arithmetic,Find the limiting reagent: compare the amounts with the 3 : 2 ratio.,"72 mmol PbCl_{2} needs 48 mmol (NH_{4})_{3}PO_{4}; 50 mmol are present, so PbCl_{2} is limiting.","1. Pb_{3}(PO_{4})_{2} = 72/3 = 24 mmol.
+Answer: 24",Limiting reagent.,Revise 'Some Basic Concepts of Chemistry'.,
+82,3,conceptual,Five electron pairs around the central atom with no lone pair gives a trigonal bipyramid.,"PF_{5}, PCl_{5}: sp³d, no lone pair. Fe(CO)_{5}: dsp³. BrF_{5}: square pyramidal. [PtCl_{4}]²⁻: square planar. BF_{3}: trigonal planar.","1. PF_{5}, PCl_{5} and Fe(CO)_{5}: 3.
+Answer: 3",Shapes of molecules and complexes.,Revise 'Chemical Bonding and Molecular Structure' and 'Coordination Compounds'.,
+83,7,arithmetic,"For a salt of a weak acid and a weak base, pH = 7 + (1/2)(pK_{a} − pK_{b}).","K_{a} = K_{b}, so pK_{a} = pK_{b}.","1. pH = 7.
+Answer: 7",Hydrolysis of a weak acid–weak base salt.,Revise 'Equilibrium' (salt hydrolysis).,
+84,6,conceptual,"If an element's lowest oxidation state is −2, how many electrons does it need to complete the octet?",Lowest oxidation state = (valence electrons) − 8.,"1. Valence electrons − 8 = −2, so 6 valence electrons (a group 16 element, like O in Na_{2}O).
+Answer: 6",Oxidation states and valence electrons.,Revise 'Classification of Elements and Periodicity in Properties'.,
+85,1,arithmetic,Use the Nernst equation with E° = 0 for the hydrogen electrode.,E = −(0.06/2) log(p_{H2}/[H⁺]²).,"1. E = −0.03 × log 2 = −0.03 × 0.3 = −0.009 V = −0.9 × 10^{−2} V.
+2. To the nearest integer: 1.
+Answer: 1",Nernst equation for the hydrogen electrode.,Revise 'Electrochemistry'.,The exact value is 0.9 × 10^{−2} V; NTA's key rounds it to 1.
+86,17190,arithmetic,1/8 = (1/2)³. How many half-lives is that?,Each half-life halves the ¹⁴C ratio.,"1. Three half-lives: 3 × 5730 = 17190 years.
+Answer: 17190",Radioactive decay (carbon dating).,Revise 'Chemical Kinetics' (first-order reactions).,
+87,3,conceptual,"Sort the oxides into acidic, basic, amphoteric and neutral.","Acidic: Cl_{2}O_{7}, SiO_{2}, N_{2}O_{5}. Neutral: CO, N_{2}O, NO. Amphoteric: PbO_{2}, Al_{2}O_{3}, SnO_{2}.","1. Amphoteric: PbO_{2}, Al_{2}O_{3}, SnO_{2}: 3.
+Answer: 3",Nature of p-block oxides.,Revise 'p-Block Elements'.,
+88,2,conceptual,A group deactivates the ring if it pulls electron density out of it. Which atom is attached to the ring in each group?,Attached through C=O or C≡N: electron-withdrawing. Attached through N or O with a lone pair: electron-donating (+R).,"1. Deactivating: the ester group (ring–COOCH_{3}) and –C≡N.
+2. –NHCOCH_{3}, –NHCH_{3} and –OCH_{3} activate the ring.
+3. Count = 2.
+Answer: 2",Activating and deactivating groups.,Revise 'Hydrocarbons' (directive influence).,Figure reading: the first group is taken as –COOCH_{3} attached through its carbonyl carbon.
+89,2,conceptual,How many chiral centres does 2-chlorobutane have?,"C2 carries H, Cl, CH_{3} and C_{2}H_{5}: one chiral centre.","1. One chiral centre gives 2 optical isomers (a pair of enantiomers).
+Answer: 2",Optical isomerism.,Revise 'Haloalkanes and Haloarenes' (stereochemistry).,
+90,5,conceptual,Recall the colours of the common precipitates from salt analysis.,Chromates are yellow; PbI_{2} yellow; AgBr pale yellow; basic iron(III) acetate brown-red.,"1. White: SrSO_{4}, Mg(NH_{4})PO_{4}, Mn(OH)_{2}, PbSO_{4}, CaC_{2}O_{4}.
+2. Count = 5.
+Answer: 5",Colours of precipitates.,Revise salt analysis.,Mn(OH)_{2} is white when freshly formed (it darkens in air).
