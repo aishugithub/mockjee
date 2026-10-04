@@ -1,0 +1,243 @@
+q,claude_answer,check,hint1,hint2,solution,concept,revise,note
+1,3,arithmetic,The two conditions are independent: a_{1} ≤ b_{2} and b_{1} ≤ a_{2}.,"Count pairs (a, b) with a ≤ b, and pairs (b, a) with b ≤ a.","1. a ≤ b: 5 + 4 + 4 + 2 + 1 = 16.
+2. b ≤ a: 4 + 3 + 2 + 1 + 0 = 10.
+3. 16 × 10 = 160.
+Answer: (3)",Counting elements of a relation,Revise Relations and Functions.,
+2,1,arithmetic,The expression under the root must be positive. Treat [x] as a variable t.,t^{2} − 3t − 10 = (t − 5)(t + 2) > 0.,"1. [x] > 5 or [x] < −2.
+2. x ≥ 6 or x < −2.
+Answer: (1)",Domain with greatest integer,Revise Relations and Functions.,
+3,2,arithmetic,"Write a = p + iq, z = x + iy and simplify Re(a + z̄) and Im(ā + z).","Re(a + z̄) = p + x, Im(ā + z) = y − q.","1. For real z (y = 0), A needs x > −(p + q): not all reals. S1 false.
+2. B needs x < −(p + q): not all reals. S2 false.
+Answer: (2)",Regions in the complex plane,Revise Complex Numbers.,
+4,2,sympy,Infinitely many solutions: the third equation is a combination of the first two.,175 = 7m + 5n and 194 = 11m + 4n.,"1. m = 10, n = 21.
+2. z: 10α + 147 = 57, α = −9. Constants: 130 + 21β = 361, β = 11.
+3. α + β + 2 = 4.
+Answer: (2)",Consistency of linear systems,Revise Determinants.,
+5,4,sympy,The identity holds for all x. Put x = 0.,At x = 0 the determinant is λ^{3}.,"1. λ^{3} = (9/8) × 81 = 729/8, λ = 9/2; λ/3 = 3/2.
+2. Sum 6, product 27/4: 4x^{2} − 24x + 27 = 0.
+Answer: (4)",Determinant identities,Revise Determinants.,
+6,3,arithmetic,"Letters in order: A, H, M, S, T.","Words starting with A, H, M, S: 4 × 4!.","1. 96 words before T.
+2. TA _ _ _: 3! = 6.
+3. TH: A, M, S in order gives THAMS first: 96 + 6 + 1 = 103.
+Answer: (3)",Rank in the dictionary,Revise Permutations and Combinations.,
+8,3,sympy,"Use C(N, r)/C(N, r − 1) = (N − r + 1)/r with N = n + 2.",Ratios 1 : 3 and 3 : 5.,"1. n + 3 = 4r and 8r = 3n + 1 give r = 2, n = 5.
+2. N = 7: 7 + 21 + 35 = 63.
+Answer: (3)",Binomial coefficients,Revise Binomial Theorem.,
+9,2,sympy,"Split a into 5 equal parts, b into 3, c into 2. Then use AM ≥ GM.",a/5 = b/3 = c/2 = d at the maximum.,"1. 11 parts summing to 11: each is 1, so a = 5, b = 3, c = 2, d = 1.
+2. Max = 5^{5} × 3^{3} × 2^{2} = 337500 = 3750 × 90.
+Answer: (2)",AM–GM inequality,Revise Sequences and Series (AM–GM).,
+10,4,arithmetic,Find g(f(x)) on each piece. When is f(x) negative?,f(x) < 0 only for x < −1.,"1. g(f(x)) = x + 2 for x < −1 and 1 for x ≥ −1.
+2. Continuous at −1, but slopes 1 and 0: not differentiable only at x = −1.
+Answer: (4)",Composite functions,Revise Continuity and Differentiability.,
+11,3,sympy,"On [0, 1), compare x^{2} with x. On [1, 2], what is [x − ln x]?","x^{2} ≤ x on [0, 1); 1 ≤ x − ln x < 2 on [1, 2].","1. ∫_{0}^{1} x e^{x^{2}} dx = (e − 1)/2.
+2. ∫_{1}^{2} e x dx = 3e/2.
+3. Total 2e − 1/2.
+Answer: (3)",Definite integrals of piecewise functions,Revise Definite Integrals.,
+12,1,sympy,Use x → π/4 − x in the second integral.,cos 2x → sin 2x and cos x → (cos x + sin x)/√2.,"1. First integral I = ∫_{0}^{π/4} f(sin 2x)(sin x + cos x) dx (by symmetry about π/4).
+2. Second = I/√2.
+3. I + αI/√2 = 0: α = −√2.
+Answer: (1)",Properties of definite integrals,Revise Definite Integrals.,
+13,3,sympy,Find the integrating factor first.,IF = e^{∫5/(x(x^{5} + 1))dx} = x^{5}/(x^{5} + 1).,"1. y x^{5}/(x^{5} + 1) = ∫(x^{5} + 1)/x^{2} dx = x^{4}/4 − 1/x + C.
+2. y(1) = 2 gives C = 7/4.
+3. y(2) × 32/33 = 21/4, so y(2) = 693/128.
+Answer: (3)",Linear differential equations,Revise Differential Equations.,
+14,3,sympy,"The largest circle touches the ellipse at its nearest point to (2, 0).","Distance^{2} to (6cos t, 3sin t) = 27cos^{2}t − 24cos t + 13.","1. Minimum at cos t = 4/9: 23/3.
+2. r^{2} = 23/3; 12r^{2} = 92.
+Answer: (3)",Circle inside an ellipse,Revise Conic Sections.,
+15,2,sympy,Find the plane's normal from two edge vectors.,"Normal ∝ (3, −4, 12), plane 3x − 4y + 12z = 3.","1. A: |12α − 10| = 26 gives α = 3 (natural).
+2. B(2, 3, a): |12a − 9| = 39 gives a = 4 (positive).
+Answer: (2)",Distance from a plane,Revise Three Dimensional Geometry.,
+16,1,sympy,"Find R first, then move from R parallel to the given line until you hit the second plane.","R = (−1, −5, 0). Points R + s(2, 2, 1).","1. In x + 2y + 3z + 2 = 0: 9s − 9 = 0, s = 1.
+2. Distance = |(2, 2, 1)| = 3.
+Answer: (1)",Distance along a line,Revise Three Dimensional Geometry.,
+17,2,sympy,"Coplanar points: [b − a, c − a, d − a] = 0. Expand it.",Terms with two a's vanish.,"1. [b c d] − [b c a] − [b a d] − [a c d] = 0.
+2. [a b c] = [b c d] + [a b d] + [c a d] = [c d b] + [b d a] + [d c a].
+Answer: (2)",Scalar triple product,Revise Vector Algebra.,
+18,2,sympy,Use the mean and variance to find x and y.,x + y = 18 and x^{2} + y^{2} = 164.,"1. x, y = 8, 10.
+2. Deviations from 5: 4, 3, 1, 0, 3, 5; sum 16.
+3. MD = 16/6 = 8/3.
+Answer: (2)",Mean deviation,Revise Statistics.,
+19,4,arithmetic,Find each person's distance from the foot of the tower.,South: 5 cot 45° = 5. West: 5 cot 30° = 5√3.,"1. The two directions are perpendicular.
+2. Distance = √(25 + 75) = 10 m.
+Answer: (4)",Heights and distances,Revise Trigonometric Functions.,
+20,1,arithmetic,Converse of p ⇒ q is q ⇒ p.,Converse: r ⇒ (∼p ∧ q); its contrapositive is equivalent.,"1. r ⇒ (∼p ∧ q) ≡ ∼(∼p ∧ q) ⇒ ∼r ≡ (p ∨ ∼q) ⇒ ∼r.
+Answer: (1)",Converse and contrapositive,Revise Mathematical Reasoning.,Mathematical reasoning is no longer in the JEE Main syllabus.
+21,1680,sympy,Factorise: z^{2} + 8iz − 15 = (z + 3i)(z + 5i) and z^{2} − 3iz − 2 = (z − i)(z − 2i).,Put z = α − 13i/11 and set the imaginary part of the quotient to 0.,"1. The imaginary part vanishes for α^{2} = 840/121 (α ≠ 0).
+2. 242α^{2} = 1680.
+Answer: 1680",Real quotients of complex numbers,Revise Complex Numbers.,
+22,360,arithmetic,f(4) = f(1) + f(2) + 1 must be at most 6.,"Count pairs (f(1), f(2)) with sum ≤ 5.","1. Pairs: 4 + 3 + 2 + 1 = 10.
+2. f(3) and f(5) are free: 36.
+3. 360.
+Answer: 360",Counting functions,Revise Relations and Functions.,
+23,2,sympy,"Differences 3, 4, 5, 6: the nth term (from 0) is (n^{2} + 5n + 2)/2.",Sum Σ a_{n}x^{n} with x = 1/k.,"1. Sum = k(k^{2} + k − 1)/(k − 1)^{3}.
+2. = 10 gives k = 2.
+Answer: 2",Series with quadratic terms,Revise Sequences and Series.,
+24,2,sympy,Put t = e^{2x} > 0 and divide by t^{2}.,u = t + 1/t: u^{2} − u − 5 = 0.,"1. u = (1 + √21)/2 ≈ 2.79 (≥ 2), the other root is negative.
+2. Two positive t, so two points.
+Answer: 2",Reciprocal equations,Revise Quadratic Equations.,
+25,16,sympy,"Find the tangent at (1, 3) and where the three curves meet.","Tangent y = 4x − 1; x + y = 1 meets the curve at (0, 1) and the tangent at (2/5, 3/5).","1. A = ∫_{0}^{1}(2x^{2} + 1) dx − ∫_{0}^{2/5}(1 − x) dx − ∫_{2/5}^{1}(4x − 1) dx.
+2. = 5/3 − 0.32 − 1.08 = 4/15.
+3. 60A = 16.
+Answer: 16",Area with a tangent,Revise Application of Integrals.,
+26,348,sympy,l_{3} is the mirror image of l_{2} in l_{1}.,"l_{1}, l_{2} meet at (0, 1). Reflect another point of l_{2}, e.g. (−1, 0).","1. Image of (−1, 0) in 2x − 3y + 3 = 0: (−17/13, 6/13).
+2. l_{3}: 7x − 17y + 17 = 0, so α = 7, β = −17.
+3. 49 + 289 − 7 + 17 = 348.
+Answer: 348",Angle bisectors and reflection,Revise Straight Lines.,
+27,116,sympy,"Slope of the tangent to y^{2} = 12x at (3, α) is 6/α.","Perpendicular to slope −1 means slope 1, so α = 6.","1. Hyperbola 36x^{2} − 9y^{2} = 324 at (5, 8).
+2. Normal: 9x/5 + 36y/8 = 45, i.e. 2x + 5y = 50.
+3. Distance^{2} from (6, −4) = 58^{2}/29 = 116.
+Answer: 116",Normals to a hyperbola,Revise Conic Sections.,
+28,11,sympy,"Line direction (1, 2, λ) through (0, 1, 3). The line–plane angle uses sine.","cos φ = √(5/14), so sin φ = 3/√14.","1. |5 + 3λ| = 3√(5 + λ^{2}) gives λ = 2/3.
+2. Meeting point (−1, −1, 7/3).
+3. α + 2β + 6γ = −1 − 2 + 14 = 11.
+Answer: 11",Line and plane,Revise Three Dimensional Geometry.,
+29,285,sympy,b·(a × c) = c·(b × a). Write three linear equations for c.,"a·c = 11, (b × a)·c = 27, b·c = −3.","1. Solving: c = (3, −2, 4).
+2. a × c = (14, 5, −8); |a × c|^{2} = 196 + 25 + 64 = 285.
+Answer: 285",Vector equations,Revise Vector Algebra.,
+30,27,arithmetic,No real root: discriminant < 0.,"25N^{2} < 256, so N ≤ 3.","1. P = (1/4)(1 + 3/4 + 9/16) = 37/64.
+2. q − p = 27.
+Answer: 27",Geometric distribution,Revise Probability.,
+31,2,arithmetic,The listener (Q) moves towards the source; the source (P) moves away from Q.,f' = f(v + v_{o})/(v + v_{s}).,"1. f' = 400 × 400/380 ≈ 421 Hz.
+Answer: (2)",Doppler effect,Revise Waves.,
+32,3,arithmetic,Topic: RMS speed. Which rule or fact from it settles this question?,v_{rms} = √(3kT/m).,"1. √(3 × 1.4 × 10^{−23} × 300/4.6 × 10^{−26}) ≈ 523 m/s.
+Answer: (3)",RMS speed,Revise Kinetic Theory.,
+33,3,arithmetic,Topic: Escape velocity. Which rule or fact from it settles this question?,Compare orbital speed √(gR) with escape speed √(2gR).,"1. √(gR) = 8 km/s; extra = 8(√2 − 1) km/s.
+Answer: (3)",Escape velocity,Revise Gravitation.,
+34,4,conceptual,Topic: Thermodynamic processes. Which rule or fact from it settles this question?,For an ideal gas U depends only on T.,"1. Isothermal.
+Answer: (4)",Thermodynamic processes,Revise Thermodynamics.,
+35,2,arithmetic,Topic: Acceleration from v(x). Which rule or fact from it settles this question?,a = v dv/dx.,"1. a = 10√x × 5/√x = 50 m/s^{2}.
+2. F = 0.5 × 50 = 25 N.
+Answer: (2)",Acceleration from v(x),Revise Motion in a Straight Line.,
+36,4,arithmetic,Terminal speed ∝ r^{2}.,8 drops make one drop of radius 2r.,"1. v = 4 × 10 = 40 cm/s.
+Answer: (4)",Terminal velocity,Revise Mechanical Properties of Fluids.,
+37,3,conceptual,Potential inside a uniform sphere.,V(r) = −GM(3R^{2} − r^{2})/(2R^{3}).,"1. At the centre V = (3/2) × surface value.
+Answer: (3)",Gravitational potential,Revise Gravitation.,
+39,2,arithmetic,Split into components.,"v_{x} = 20√3, v_{y} = 20 − 10t.","1. At t = 2 s, v_{y} = 0, so v = 20√3 m/s.
+Answer: (2)",Projectile velocity,Revise Motion in a Plane.,
+40,3,arithmetic,"Write M and L in terms of F, V, T.","L = VT, M = FT/V.","1. Density = M/L^{3} = FT V^{−1}/(V^{3}T^{3}) = FV^{−4}T^{−2}.
+Answer: (3)",Dimensional analysis,Revise Units and Measurements.,
+41,4,conceptual,Topic: Satellite communication. Which rule or fact from it settles this question?,Recall the satellite communication bands.,"1. Uplink: 5.925–6.425 GHz.
+Answer: (4)",Satellite communication,Revise Communication Systems.,Communication systems is no longer in the JEE Main syllabus.
+42,1,conceptual,Topic: Logic gates. Which rule or fact from it settles this question?,"Two AND gates feed a NAND, followed by a NOT.","1. NOT(NAND(AB, AB)) = AB: AND.
+Answer: (1)",Logic gates,Revise Semiconductor Electronics.,Figure reading: both AND gates take A and B.
+43,2,arithmetic,Topic: Reflection. Which rule or fact from it settles this question?,Deviation on reflection = 180° − 2i.,"1. 180 − 60 = 120°.
+Answer: (2)",Reflection,Revise Ray Optics.,
+44,2,arithmetic,Topic: Hydrogen-like ions. Which rule or fact from it settles this question?,E_{n} = −13.6 Z^{2}/n^{2} eV.,"1. He^{+}, n = 2: −13.6 × 4/4 = −13.6 eV.
+Answer: (2)",Hydrogen-like ions,Revise Atoms.,
+45,4,arithmetic,Topic: de Broglie wavelength. Which rule or fact from it settles this question?,λ = h/√(2mK).,"1. λ_{p}/λ_{e} = √(m_{e}/m_{p}) = 1/43.
+Answer: (4)",de Broglie wavelength,Revise Dual Nature of Radiation and Matter.,
+46,1,conceptual,Topic: EM wave fields. Which rule or fact from it settles this question?,"B = E/c, with E × B along the direction of travel.","1. B = 6.6/3 × 10^{8} = 2.2 × 10^{−8} T.
+2. ĵ × k̂ = î, so B is along +k̂.
+Answer: (1)",EM wave fields,Revise Electromagnetic Waves.,
+47,1,conceptual,Topic: Eddy currents. Which rule or fact from it settles this question?,What opposes the magnet's motion in the pipe?,"1. Eddy currents slow the magnet: both true, R explains A.
+Answer: (1)",Eddy currents,Revise Electromagnetic Induction.,
+48,2,conceptual,What is the angle between v and B on the axis?,F = qv × B.,"1. v ∥ B: no force, so it keeps moving along the axis.
+Answer: (2)",Magnetic force,Revise Moving Charges and Magnetism.,
+49,3,arithmetic,The 8 V cell is directly across R_{6}; the rest hangs from E through R_{5}.,C–A: R_{3} ∥ (R_{2} + R_{1}) = 3 Ω. D–A: R_{7} ∥ (R_{4} + 3) = 2 Ω.,"1. From E: 2 + 2 = 4 Ω, current 2 A; V_{DA} = 4 V.
+2. Through R_{4}: 4/6 = 2/3 A, which splits equally at C.
+3. Through R_{2}: 1/3 A.
+Answer: (3)",Networks,Revise Current Electricity.,Figure reading: the cell is connected between E and A.
+50,1,conceptual,Topic: Gauss's law. Which rule or fact from it settles this question?,Gauss's law: flux = enclosed charge/ε_{0}.,"1. q = CV: flux = CV/ε_{0}.
+Answer: (1)",Gauss's law,Revise Electric Charges and Fields.,
+51,80,arithmetic,Topic: Vibrating wires. Which rule or fact from it settles this question?,Tension = Y × strain × area; wave speed v = √(T/μ) = √(stress/ρ).,"1. Stress = 8 × 10^{10} × 3.2 × 10^{−4}/0.5 = 5.12 × 10^{7} Pa.
+2. v = √(5.12 × 10^{7}/8000) = 80 m/s.
+3. f = v/2L = 80 Hz.
+Answer: 80",Vibrating wires,Revise Waves.,
+52,264,arithmetic,A soap bubble has two surfaces.,W = T × 2 × 4π(R_{2}^{2} − R_{1}^{2}).,"1. W = 3.5 × 10^{−2} × 8 × (22/7) × 0.03 = 0.0264 J = 264 × 10^{−4} J.
+Answer: 264",Surface energy,Revise Mechanical Properties of Fluids.,
+53,3,conceptual,Angular momentum is conserved.,KE = L^{2}/2I.,"1. I triples, so KE becomes E/3.
+Answer: 3",Conservation of angular momentum,Revise System of Particles and Rotational Motion.,
+54,300,arithmetic,F − mg sin 30° = ma.,P = Fv.,"1. F = 5 + 25 = 30 N.
+2. v = 10 m/s at 10 s; P = 300 W.
+Answer: 300",Power,"Revise Work, Energy and Power.",
+55,2,conceptual,Radius ratio 1 : 2^{1/3} means mass ratio 1 : 2.,Momentum is conserved.,"1. m_{1}v_{1} = m_{2}v_{2}: v_{1}/v_{2} = 2.
+Answer: 2",Nuclear size and momentum,Revise Nuclei.,
+56,98,arithmetic,First find where the bulb appears from above the water.,Apparent depth = 8/(4/3) = 6 cm.,"1. The bulb appears 2 cm above the bottom, 48 cm below the mirror.
+2. Image 48 cm above the mirror: 98 cm from the bottom.
+Answer: 98",Apparent depth and mirrors,Revise Ray Optics.,
+57,625,arithmetic,Steady current I = V/R.,U = LI^{2}/2.,"1. I = 2.5 A; U = 0.5 × 2 × 6.25 = 6.25 J = 625 × 10^{−2} J.
+Answer: 625",Energy in an inductor,Revise Electromagnetic Induction.,
+58,150,arithmetic,Topic: Motional emf. Which rule or fact from it settles this question?,Motional emf across the cube: Bvl.,"1. 0.5 × 2 × 0.15 = 0.15 V = 150 mV.
+Answer: 150",Motional emf,Revise Electromagnetic Induction.,
+59,5,arithmetic,"Current from the voltmeter reading, then the full loop.",I = 1.5/10.,"1. I = 0.15 A; 3 = 0.15(10 + 2r).
+2. r = 5 Ω.
+Answer: 5",Internal resistance,Revise Current Electricity.,
+60,4,arithmetic,"Reduce from the right: C_{3}, C_{4}, C_{5} are in series, then in parallel with C_{2}.","Series 2, 4, 2 μF = 0.8 μF; with C_{2}: 1 μF.","1. With C_{1} and C_{6} in series: 0.5 μF, Q = 5 μC.
+2. 5 V across the 1 μF block; right branch charge 0.8 × 5 = 4 μC.
+3. C_{4} carries 4 μC.
+Answer: 4",Capacitor networks,Revise Electrostatic Potential and Capacitance.,"Figure reading: C_{1} and C_{6} in the outer loop, C_{2} in the middle, C_{3}–C_{4}–C_{5} round the right loop."
+61,1,conceptual,Topic: Molecular solids. Which rule or fact from it settles this question?,Polar molecules held by dipole forces.,"1. SO_{2} and NH_{3}.
+Answer: (1)",Molecular solids,Revise The Solid State.,Solid state is no longer in the JEE Main syllabus.
+62,1,arithmetic,Topic: Raoult's law. Which rule or fact from it settles this question?,Relative lowering = n_{2}/n_{1} (dilute).,"1. n_{2} = (0.2/54.2) × 100/18 = 0.0205 mol.
+2. Mass = 3.69 g.
+Answer: (1)",Raoult's law,Revise Solutions.,
+63,1,arithmetic,rate = k[A][B]. Find k from row 1.,k = 0.10/(20 × 0.5) = 0.01.,"1. x = 0.40/(0.01 × 0.5) = 80.
+2. y = 0.80/(0.01 × 40) = 2.
+Answer: (1)",Rate law,Revise Chemical Kinetics.,
+64,3,arithmetic,Topic: Mass percent. Which rule or fact from it settles this question?,1 mole of water is 18 g.,"1. 2/(2 + 18) = 10%.
+Answer: (3)",Mass percent,Revise Some Basic Concepts of Chemistry.,
+65,1,conceptual,Topic: Roasting. Which rule or fact from it settles this question?,Why roast a sulphide ore?,"1. Sulphides are roasted to oxides, which are easier to reduce: both correct.
+Answer: (1)",Roasting,Revise General Principles of Isolation of Elements.,Metallurgy is no longer in the JEE Main syllabus.
+66,2,conceptual,Topic: Hydrides. Which rule or fact from it settles this question?,Which hydride is electron deficient and covalent-polymeric?,"1. BeH_{2} is the least stable of these.
+Answer: (2)",Hydrides,Revise Hydrogen.,Teacher look: 'less stable' is not defined; NTA's key is BeH_{2}.
+67,1,conceptual,SOCl_{2} chlorinates P_{4}.,P_{4} + 8SOCl_{2} → 4PCl_{3} + 4SO_{2} + 2S_{2}Cl_{2}.,"1. A = PCl_{3}, B = S_{2}Cl_{2}, x = 4.
+Answer: (1)",Phosphorus chlorides,Revise The p-Block Elements.,
+68,4,conceptual,Topic: Alkali metals. Which rule or fact from it settles this question?,Melting points of alkali metals fall down the group.,"1. Cs.
+Answer: (4)",Alkali metals,Revise The s-Block Elements.,
+69,3,arithmetic,"Fe^{3+} is d^{5}. H_{2}O weak field, CN^{−} strong field.",μ = √(n(n + 2)).,"1. High spin 5 unpaired: 5.92 BM. Low spin 1 unpaired: 1.73 BM.
+Answer: (3)",Magnetic moments,Revise Coordination Compounds.,
+70,4,conceptual,Cl^{−} is a weaker field ligand than H_{2}O.,Smaller Δ means longer wavelength absorbed.,"1. A false: the chloro complex absorbs at longer wavelength.
+2. R true as a general statement.
+Answer: (4)",Spectrochemical series,Revise Coordination Compounds.,
+71,1,conceptual,Topic: Freons. Which rule or fact from it settles this question?,Freons are chlorofluorocarbons.,"1. C_{2}Cl_{2}F_{2} is the only CFC here.
+Answer: (1)",Freons,Revise Haloalkanes.,
+72,4,conceptual,Topic: Geometry of d^{8} complexes. Which rule or fact from it settles this question?,Ni^{2+} with halides is tetrahedral; Pt^{2+} (5d^{8}) is square planar.,"1. Geometry changes, geometrical isomerism appears (cis/trans), and it becomes diamagnetic.
+2. No optical isomerism in either.
+Answer: (4)",Geometry of d^{8} complexes,Revise Coordination Compounds.,
+73,1,conceptual,Topic: Salt analysis colours. Which rule or fact from it settles this question?,Recall precipitate colours.,"1. Mg(NH_{4})PO_{4} white, K_{3}[Co(NO_{2})_{6}] yellow, MnO(OH)_{2} brown, Prussian blue.
+Answer: (1)",Salt analysis colours,Revise practical chemistry.,
+74,4,conceptual,AgNO_{3} gives AgBr only when C–Br ionises easily.,"Benzylic, allylic and cyclopropenyl cations are stable; vinylic halides do not ionise.","1. 1-Bromocyclohexene (vinylic) gives no precipitate.
+Answer: (4)",Reactivity of halides,Revise Haloalkanes and Haloarenes.,
+75,3,conceptual,Topic: Grignard with D_{2}O. Which rule or fact from it settles this question?,Alcohol → iodide → Grignard → D_{2}O.,"1. Butan-2-ol → 2-iodobutane → Grignard → 2-deuteriobutane.
+Answer: (3)",Grignard with D_{2}O,Revise Haloalkanes and Alcohols.,
+76,1,conceptual,What does Clemmensen reduction change? And what can hot acid do to a benzylic alcohol?,Zn(Hg)/HCl turns CHO into CH_{3}; hot HCl dehydrates the benzylic OH to a conjugated C=C.,"1. CHO → CH_{3}.
+2. In hot HCl the benzylic secondary alcohol loses water; the C=C forms in conjugation with the ring.
+3. Product: C_{6}H_{5}–CH=C(CH_{3})–C_{2}H_{5} (B only).
+Answer: (1)",Clemmensen reduction and acid dehydration,Revise Aldehydes and Ketones and Alcohols (dehydration).,"Teacher look: NTA's key has the benzylic OH dehydrated under the hot acidic Clemmensen conditions (alkene in conjugation with the ring), not kept."
+77,4,conceptual,Topic: Wolff–Kishner reduction. Which rule or fact from it settles this question?,Wolff–Kishner uses strong base and heat. What happens to the C–Cl?,"1. A false: the α-chloro group would not survive the strongly basic conditions.
+2. R true.
+Answer: (4)",Wolff–Kishner reduction,Revise Aldehydes and Ketones.,
+78,1,conceptual,NaNO_{2}/HCl on a phenol nitrosates it para to OH.,NH_{4}SH reduces –NO to –NH_{2}.,"1. A = 4-nitrosothymol; B = 4-aminothymol.
+Answer: (1)",Nitrosation of phenols,"Revise Alcohols, Phenols and Ethers.",
+79,3,conceptual,Topic: Chirality. Which rule or fact from it settles this question?,HVZ on glycine gives H_{2}N–CHCl–COOH.,"1. A true: the α-carbon becomes chiral.
+2. R false: meso compounds have 2 chiral centres and are inactive.
+Answer: (3)",Chirality,Revise Haloalkanes (stereochemistry).,
+80,4,conceptual,Topic: Polymers. Which rule or fact from it settles this question?,Ziegler–Natta conditions give which polythene?,"1. I false: they give HDP, not LDP.
+2. II true (NCERT).
+Answer: (4)",Polymers,Revise Polymers.,Polymers are no longer in the JEE Main syllabus.
+81,224,arithmetic,Topic: Stoichiometry. Which rule or fact from it settles this question?,Mg + 2HCl → MgCl_{2} + H_{2}.,"1. 0.1 mol Mg gives 0.1 mol H_{2} = 2.24 L = 224 × 10^{−2} L.
+Answer: 224",Stoichiometry,Revise Some Basic Concepts of Chemistry.,
+82,3,conceptual,Topic: Lone pairs. Which rule or fact from it settles this question?,Use VSEPR.,"1. ClO_{3}^{−}: 1; XeF_{4}: 2; SF_{4}: 1; I_{3}^{−}: 3.
+Answer: 3",Lone pairs,Revise Chemical Bonding.,
+83,3,conceptual,Topic: Orbitals. Which rule or fact from it settles this question?,Check each statement.,"1. A, D, E correct.
+2. B wrong (2s has a radial node), C wrong (about 90%).
+Answer: 3",Orbitals,Revise Structure of Atom.,
+84,4,conceptual,Topic: Intensive properties. Which rule or fact from it settles this question?,Intensive properties do not depend on amount.,"1. Molar heat capacity, molarity, E°_{cell}, molar mass.
+Answer: 4",Intensive properties,Revise Thermodynamics.,
+85,1,arithmetic,Topic: Equilibrium constant. Which rule or fact from it settles this question?,3 mol HI forms from 1.5 mol each of H_{2} and I_{2}.,"1. Left: 3 mol each.
+2. K = 3^{2}/(3 × 3) = 1.
+Answer: 1",Equilibrium constant,Revise Equilibrium.,
+86,4,conceptual,Topic: Electrochemistry. Which rule or fact from it settles this question?,Check each statement against NCERT.,"1. All four are correct.
+Answer: 4",Electrochemistry,Revise Electrochemistry.,
+87,3,conceptual,Topic: Heterogeneous catalysis. Which rule or fact from it settles this question?,Recall NCERT's account of adsorption theory.,"1. B, C, D correct.
+2. A wrong (reactants diffuse to the catalyst); E not claimed.
+Answer: 3",Heterogeneous catalysis,Revise Surface Chemistry.,Surface chemistry is no longer in the JEE Main syllabus.
+88,6,conceptual,Topic: Hydrated salts. Which rule or fact from it settles this question?,Which nitrate crystallises with water?,"1. Mg(NO_{3})_{2}·6H_{2}O; Ba(NO_{3})_{2} is anhydrous.
+2. 6 + 0 = 6.
+Answer: 6",Hydrated salts,Revise The s-Block Elements.,
+89,2,conceptual,Topic: Reducing sugars. Which rule or fact from it settles this question?,Which sugars are non-reducing?,"1. Sucrose and amylose.
+Answer: 2",Reducing sugars,Revise Biomolecules.,
+90,4,conceptual,"H^{+} adds to CH_{2}=. Which cation forms, and can it rearrange?",A hydride shift gives a cation stabilised by Cl.,"1. Without shift: 2,3-dichlorobutane (2 enantiomers + meso = 3).
+2. With shift: 2,2-dichlorobutane (1).
+3. Total 4.
+Answer: 4",Carbocation products,Revise Hydrocarbons.,
