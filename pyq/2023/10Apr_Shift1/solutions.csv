@@ -1,0 +1,244 @@
+q,claude_answer,check,hint1,hint2,solution,concept,revise,note
+1,3,sympy,f has the form (ax + b)/(cx − a). What is f(f(x)) for such a function?,A Möbius map whose 'trace' is 0 is its own inverse: f(f(x)) = x.,"1. With a = tan 1°, f(x) = (ax + b)/(cx − a), so f(f(x)) = x.
+2. The expression is x + 4/x.
+3. By AM–GM, x + 4/x ≥ 4 (at x = 2).
+Answer: (3)",Self-inverse functions and AM–GM,Notice the structure before computing. Revise Relations and Functions.,
+2,3,sympy,Purely imaginary means the real part of the quotient is 0.,"Re = 0 gives 4x^{2} + (2y − 3)(2y + 1) = 0, i.e. x^{2} + y^{2} − y = 3/4.","1. x^{2} + y^{2} − y = 3/4.
+2. With x = −y^{2}: y^{4} + y^{2} − y = 3/4.
+Answer: (3)",Complex numbers,Revise Complex Numbers.,
+3,4,sympy,"Find α that makes the determinant 0, then test consistency.","Det = 7α + 35. For α = −5, R_{3} = −R_{1} + 2R_{2} on the left side.","1. α = −5 makes the system singular.
+2. Consistent only if β = −5 + 14 = 9.
+3. So α = −5, β = 9: infinitely many; α = −5, β = 8: inconsistent; α ≠ −5: unique.
+4. 'Infinitely many for α = −6, β = 9' is NOT correct (α = −6 gives a unique solution).
+Answer: (4)",Consistency of linear systems,Revise Determinants.,
+4,4,sympy,"Work from inside: |3A|, then |B| for B = |3A|A^{2}, then |adj B|.","For 3 × 3: |kA| = k^{3}|A|, |adj B| = |B|^{2}.","1. |3A| = 27 × 2 = 54. B = 54A^{2}: |B| = 54^{3} × 4.
+2. |adj B| = 54^{6} × 16; |3 adj B| = 27 × 54^{6} × 16 = 2^{10} × 3^{21}.
+3. = 3^{11} × 6^{10}.
+Answer: (4)",Determinants of adjoints,Revise Determinants.,
+5,2,sympy,Find r for x^{7} in the first and x^{−5} in the second expansion.,"Power 13 − 3r: r = 2 for x^{7}, r = 6 for x^{−5}.","1. C(13,2)a^{11}/b^{2} = C(13,6)a^{7}/b^{6}.
+2. a^{4}b^{4} = 1716/78 = 22.
+Answer: (2)",General term,Revise Binomial Theorem.,
+6,1,arithmetic,a^{2}(1 + r^{2} + r^{4}) = 33033. Factorise 33033.,33033 = 3 × 7 × 11^{2} × 13; try a = 11.,"1. 1 + r^{2} + r^{4} = 273 gives r^{2} = 16, r = 4.
+2. Sum = 11(1 + 4 + 16) = 231.
+Answer: (1)",Geometric progression,Revise Sequences and Series.,
+7,4,sympy,Let the cut square have side x. Write the volume.,V = x(30 − 2x)^{2}; V' = 0 at x = 5.,"1. x = 5 cm.
+2. Surface area (open box) = 30^{2} − 4x^{2} = 900 − 100 = 800 cm^{2}.
+Answer: (4)",Maxima and minima,Revise Application of Derivatives.,
+8,4,sympy,Try differentiating e^{sin^{2}x} cos x.,d/dx(e^{sin^{2}x} cos x) = e^{sin^{2}x}(sin 2x cos x − sin x).,"1. I = e^{sin^{2}x} cos x + C; I(0) = 1 gives C = 0.
+2. I(π/3) = e^{3/4} × 1/2.
+Answer: (4)",Integration by recognising a derivative,Revise Integrals.,
+9,2,sympy,Differentiate both sides to get a differential equation.,"x^{2}f' − 2xf = 1, i.e. (f/x^{2})' = 1/x^{4}.","1. f/x^{2} = −1/(3x^{3}) + C; f(1) = 2/3 gives C = 1.
+2. f(3) = 9(1 − 1/81) = 80/9.
+3. 18f(3) = 160.
+Answer: (2)",Integral equations,Revise Differential Equations.,
+10,1,sympy,Homogeneous equation: put y = vx.,Leads to x^{2} − y^{2} = Kx.,"1. y(2) = 0: K = 2.
+2. x = 8: 64 − y^{2} = 16, y = ±4√3.
+Answer: (1)",Homogeneous differential equations,Revise Differential Equations.,
+11,3,sympy,"A = (3, 0), B = (0, 1), circle C: x^{2} + y^{2} = 9.",Line AB: x = 3 − 3y. Find its second meeting point with C.,"1. 10y^{2} − 18y = 0: P = (−12/5, 9/5).
+2. Area of OAP = (1/2) × 3 × 9/5 = 27/10.
+3. m − n = 17.
+Answer: (3)","Ellipse, circle and area",Revise Conic Sections.,
+12,2,sympy,A chord of length λ in a circle of radius λ: how far is it from the centre?,Distance = λ√3/2. The point is λ/10 from the chord's midpoint.,"1. AP = 2λ/5, so it is λ/2 − 2λ/5 = λ/10 from the midpoint.
+2. r^{2} = 3λ^{2}/4 + λ^{2}/100 = 76λ^{2}/100.
+3. r = √19λ/5.
+Answer: (2)",Locus,Revise Circles.,
+13,3,sympy,Third vertex from the centroid: C = 3G − A − B.,"C = (4, 1, −4). Then reflect in x + 2y + 4z = 11.","1. 4 + 2 − 16 − 11 = −21, |n|^{2} = 21: image = C + 2(1, 2, 4) = (6, 5, 4).
+2. αβ + βγ + γα = 30 + 20 + 24 = 74.
+Answer: (3)",Image in a plane,Revise Three Dimensional Geometry.,
+14,4,sympy,Write a general point on the line and put it in the plane.,"(3t − 3, t − 2, 1 − 2t): sum 2t − 4 = 2.","1. t = 3: P = (6, 1, −5).
+2. Distance = |18 − 4 − 60 − 32|/13 = 6 = q.
+3. Roots 6 and 12: x^{2} − 18x + 72 = 0.
+Answer: (4)",Line–plane intersection and distance,Note (1 − z)/2 means direction −2 for z. Revise Three Dimensional Geometry.,
+15,4,sympy,Shortest distance between skew lines.,"d_{1} × d_{2} = (1, −2, 2) × (1, 2, 0) = (−4, 2, 4).","1. |d_{1} × d_{2}| = 6; a_{2} − a_{1} = (6, 1, −8).
+2. |(6, 1, −8)·(−4, 2, 4)| = 54.
+3. SD = 9.
+Answer: (4)",Skew lines,Revise Three Dimensional Geometry.,
+16,3,sympy,A vector perpendicular to AB and AC is AB × AC.,"AB = (4, 3, 1), AC = (−2, 1, 2); AB × AC = (5, −10, 10).","1. Unit normal (1, −2, 2)/3.
+2. Projection of OP = (−1 + 4 + 6)/3 = 3.
+Answer: (3)",Projection of a vector,Revise Vector Algebra.,
+17,3,sympy,"Use coordinates: P = (1, 0), Q = (0, 1), R at 45°.","v = (1/√2, 1/√2); solve (0, 1) = αu + βv.","1. β/√2 = 1, so β = √2; α + 1 = 0, so α = −1.
+2. α = −1 and β^{2} = 2 are roots of x^{2} − x − 2 = 0.
+Answer: (3)",Vectors in a circle,Revise Vector Algebra.,
+18,3,arithmetic,For which N from 2 to 12 is 2^{N} < N!?,"Check N = 2, 3, 4.","1. Fails for N = 2, 3; holds for N ≥ 4.
+2. P = 1 − 3/36 = 11/12.
+3. 4m − 3n = 44 − 36 = 8.
+Answer: (3)",Probability with two dice,Revise Probability.,
+19,3,sympy,"Multiply and divide by sin(π/33), then use 2 sin θ cos θ = sin 2θ repeatedly.","Product of cos(2^{k}θ), k = 0..4, = sin 32θ/(32 sin θ).","1. sin(32π/33) = sin(π/33), so the product of cosines is 1/32.
+2. 96/32 = 3.
+Answer: (3)",Product of cosines,Revise Trigonometric Functions.,
+20,2,arithmetic,Use De Morgan on each bracket.,∼[(p ∨ q) ∧ (q ∨ ∼r)] = (∼p ∧ ∼q) ∨ (∼q ∧ r).,"1. = ∼q ∧ (∼p ∨ r).
+2. = ((∼p) ∨ r) ∧ (∼q).
+Answer: (2)",Negation,Revise Mathematical Reasoning.,Mathematical reasoning is no longer in the JEE Main syllabus.
+22,6,arithmetic,Split |t| < 6 into two inequalities.,n^{2} − 10n + 13 < 0 and (n − 5)^{2} > 0.,"1. First: 5 − √12 < n < 5 + √12, so n = 2..8.
+2. Second: n ≠ 5.
+3. 6 values.
+Answer: 6",Inequalities with modulus,Revise Linear Inequalities.,
+23,4898,arithmetic,Inclusion–exclusion: total − (has 153) − (has 2467) + (has both).,Treat each string as one block.,"1. Total 7! = 5040. With 153: 5! = 120. With 2467: 4! = 24. Both (disjoint digits): 2! = 2.
+2. 5040 − 120 − 24 + 2 = 4898.
+Answer: 4898",Inclusion–exclusion,Revise Permutations and Combinations.,
+24,16,arithmetic,"A match: 2 men, 2 women (not wives of those men), paired in 2 ways.","Matches = C(n,2) × C(n − 2,2) × 2.","1. n = 8: 28 × 15 × 2 = 840.
+2. 8 couples = 16 persons.
+Answer: 16",Counting selections,Revise Permutations and Combinations.,
+25,960,sympy,Use the multinomial theorem: terms 1^{a}(−x)^{b}(2x^{3})^{c}.,"a + b + c = 10 and b + 3c = 7: (c, b) = (0, 7), (1, 4), (2, 1).","1. c = 0: −120. c = 1: 1260 × 2 = 2520. c = 2: 360 × (−1) × 4 = −1440.
+2. Total 960.
+Answer: 960",Multinomial expansion,Revise Binomial Theorem.,
+26,9525,arithmetic,"Sum all terms, then subtract the multiples of 3.","Terms 3 + 5k, k = 0..74; divisible by 3 when k is a multiple of 3.","1. Total = 75 × 376/2 = 14100.
+2. Multiples of 3: 3, 18, …, 363: 25 terms, sum 4575.
+3. 14100 − 4575 = 9525.
+Answer: 9525",Arithmetic progressions,Revise Sequences and Series.,
+27,4,sympy,"Write f piece by piece on (−2, −1), [−1, 0), [0, 1), [1, 2).","f = −2x, −x, 0, x − 1 on those pieces.","1. At x = −1: left value 2, f(−1) = 1: discontinuous (m = 1).
+2. Not differentiable at −1, 0 and 1 (corners at 0 and 1): n = 3.
+3. m + n = 4.
+Answer: 4",Continuity and differentiability,Revise Continuity and Differentiability.,"n counts every point where |f| is not differentiable, including the discontinuity at −1."
+28,16,sympy,"Find the parabola first: through (±1, 0) and (0, 1).","p(x) = 1 − x^{2}. The circle (centre (−1, 1), radius 1) and the parabola meet at (−1, 0) and (0, 1).","1. For −1 ≤ x ≤ 0 the region lies between the lower arc y = 1 − √(1 − (x + 1)^{2}) and the parabola.
+2. A = ∫_{−1}^{0}(√(1 − (x + 1)^{2}) − x^{2}) dx = π/4 − 1/3.
+3. 12(π − 4A) = 12 × 4/3 = 16.
+Answer: 16",Area between a circle and a parabola,Revise Application of Integrals.,
+29,32,sympy,Tangent to y^{2} = 4x: y = mx + 1/m. Make it touch the circle.,|4m + 1/m|/√(1 + m^{2}) = 4 gives m^{2} = 1/8.,"1. P = (1/m^{2}, 2/m) = (8, ±4√2).
+2. PQ is the tangent length from P to the circle: PQ^{2} = (8 − 4)^{2} + 32 − 16 = 32.
+Answer: 32",Common tangents,Revise Conic Sections.,x = 0 also touches both curves at the origin (P = Q); NTA's answer uses the other common tangents.
+30,151,arithmetic,"Use class mid-points 5, 15, …, 45. Find x from the mean.",410 + 25x = 28(14 + x).,"1. x = 6, N = 20.
+2. Σf(m − 28)^{2} = 2(529) + 3(169) + 6(9) + 5(49) + 4(289) = 3020.
+3. Variance = 3020/20 = 151.
+Answer: 151",Variance of grouped data,Revise Statistics.,
+31,4,arithmetic,Put t = 0: x = A/2 and the velocity is positive.,sin δ = 1/2 with cos δ > 0.,"1. δ = π/6.
+Answer: (4)",Phase in SHM,Revise Oscillations.,
+32,2,conceptual,Topic: Degrees of freedom. Which rule or fact from it settles this question?,"Which molecules have only translation? Which add rotation, vibration?","1. A monoatomic (I), B rigid diatomic (III), C non-rigid diatomic (IV), D polyatomic (II).
+Answer: (2)",Degrees of freedom,Revise Kinetic Theory.,
+33,2,arithmetic,Topic: Isothermal and adiabatic compression. Which rule or fact from it settles this question?,Isothermal: PV = const. Adiabatic: PV^{γ} = const with γ = 5/3.,"1. P_{A} = 8P; P_{B} = 8^{5/3}P = 32P.
+2. Ratio 4.
+Answer: (2)",Isothermal and adiabatic compression,Revise Thermodynamics.,
+34,2,arithmetic,Orbital speed v = √(GM/r).,Mass of the satellite does not matter.,"1. v_{1}/v_{2} = √(3r/r) = √3.
+Answer: (2)",Orbital speed,Revise Gravitation.,
+35,4,arithmetic,"Relative errors add, multiplied by the powers.",2(1%) + 3(2%) + 3% + (1/2)(4%).,"1. 2 + 6 + 3 + 2 = 13%.
+Answer: (4)",Error propagation,Revise Units and Measurements.,
+36,1,conceptual,Topic: Fluid pressure. Which rule or fact from it settles this question?,Recall hydrostatics and Pascal's law.,"1. Both statements are true.
+Answer: (1)",Fluid pressure,Revise Mechanical Properties of Fluids.,
+37,4,arithmetic,Topic: Gravity at depth. Which rule or fact from it settles this question?,g at depth d: g(1 − d/R).,"1. d = R/2: weight = 200/2 = 100 N.
+Answer: (4)",Gravity at depth,Revise Gravitation.,
+38,2,conceptual,"On an x–t graph, which line ends higher? Which is steeper?",Final x = distance from school; slope = speed.,"1. A's line ends lower: A lives closer (A).
+2. B's line is steeper: B is faster (E).
+Answer: (2)",Position–time graphs,Revise Motion in a Straight Line.,Figure reading: A starts at O; B starts later with a steeper line and ends higher.
+39,3,arithmetic,Topic: Projectile range. Which rule or fact from it settles this question?,R ∝ sin 2θ for the same speed.,"1. sin 30° = 1/2 gives 50 m; sin 90° = 1 gives 100 m.
+Answer: (3)",Projectile range,Revise Motion in a Plane.,
+40,3,arithmetic,Momentum is conserved.,mv = 3mV.,"1. V = v/3.
+Answer: (3)",Perfectly inelastic collision,"Revise Work, Energy and Power.",
+41,3,conceptual,Mark the two nodes. Are both plates of any capacitor on the same node?,The two vertical capacitors join wires that are both connected to the right terminal.,"1. The two vertical capacitors are shorted.
+2. The two horizontal C are in parallel: 2C.
+Answer: (3)",Capacitor networks,Revise Electrostatic Potential and Capacitance.,Figure reading: the right ends of the top and bottom wires are joined to the right terminal.
+42,4,arithmetic,Topic: Amplitude modulation. Which rule or fact from it settles this question?,"A_{max} = A_{c} + A_{m}, A_{min} = A_{c} − A_{m}.","1. 18/12 = 3/2.
+Answer: (4)",Amplitude modulation,Revise Communication Systems.,Communication systems is no longer in the JEE Main syllabus.
+43,1,arithmetic,Find the largest safe Zener current.,I_{max} = P/V_{Z} = 0.2 A; worst case is the highest input.,"1. R_{s} = (10 − 8)/0.2 = 10 Ω.
+Answer: (1)",Zener regulator,Revise Semiconductor Electronics.,No load current is considered.
+44,2,arithmetic,L = nh/2π.,L ∝ n.,"1. From n = 1 to n = 2, L doubles: change = L.
+Answer: (2)",Bohr's quantisation,Revise Atoms.,
+45,1,conceptual,"At resonance, what is the phase difference and the impedance?",Power = V_{rms}I_{rms} cos φ.,"1. At resonance Z = R and φ = 0: maximum power. Both statements are true.
+Answer: (1)",Power in AC circuits,Revise Alternating Current.,
+46,3,arithmetic,λ = h/√(3mkT).,λ ∝ 1/√T.,"1. T doubles: λ becomes λ_{1}/√2.
+Answer: (3)",Thermal de Broglie wavelength,Revise Dual Nature of Radiation and Matter.,
+47,3,arithmetic,Image distance = object distance from the mirror.,Before: image 24 cm from the object. After: 16 cm.,"1. The image moves 8 cm towards the mirror (and object).
+Answer: (3)",Plane mirrors,Revise Ray Optics.,
+48,3,conceptual,Energy density ∝ E^{2} ∝ sin^{2}(ωt).,sin^{2}ωt = (1 − cos 2ωt)/2.,"1. Energy oscillates at twice the wave frequency.
+Answer: (3)",Energy in EM waves,Revise Electromagnetic Waves.,
+49,3,conceptual,Current sensitivity = NBA/k. What happens to the coil resistance when N doubles?,Voltage sensitivity = NBA/(kR).,"1. I: doubling N doubles current sensitivity: true.
+2. II: R also doubles, so voltage sensitivity is unchanged: false.
+Answer: (3)",Galvanometer sensitivity,Revise Moving Charges and Magnetism.,
+50,4,arithmetic,Use the symmetry about the vertical line through the top and the centre.,"Top vertex and centre are at the same potential, so the central vertical 4 Ω carries no current.","1. Paths: a–top–b (8 Ω), a–centre–b (8 Ω), a–b (16 Ω), in parallel.
+2. 1/R = 1/8 + 1/8 + 1/16 = 5/16, R = 3.2 Ω.
+Answer: (4)",Symmetric networks,Revise Current Electricity.,
+51,20,arithmetic,The steel wire holds both masses.,ΔL = FL/(AY) with F = (2 + 1.14) × 10 N.,"1. F = 31.4 N, A = π(0.002)^{2} = 1.257 × 10^{−5} m^{2}.
+2. ΔL = 31.4 × 1.6/(1.257 × 10^{−5} × 2 × 10^{11}) = 2.0 × 10^{−5} m = 20 × 10^{−6} m.
+Answer: 20",Young's modulus,Revise Mechanical Properties of Solids.,
+52,20,arithmetic,v = ω/k.,Units: x in cm.,"1. v = 6/0.003 = 2000 cm/s = 20 m/s.
+Answer: 20",Wave speed,Revise Waves.,
+53,16,arithmetic,Angular momentum Iω is conserved.,"Volume 1/64 means radius 1/4, I falls to 1/16.","1. ω becomes 16 times, so T = 24/16 h.
+2. x = 16.
+Answer: 16",Conservation of angular momentum,Revise System of Particles and Rotational Motion.,
+54,245,arithmetic,Work–energy theorem from the top to rest at the bottom.,Loss of KE + loss of PE = work against the tube.,"1. KE = (1/2)(1)(22)^{2} = 242 J; PE drop = 1 × 10 × 0.3 = 3 J.
+2. Work done by the tube = −245 J; magnitude 245 J.
+Answer: 245",Work–energy theorem,"Revise Work, Energy and Power.",The work done by the tube is −245 J; NTA's answer gives the magnitude.
+55,5,sympy,"Potential of a shell: kq/r outside it, kq/R inside it. With q = 4πR^{2}σ.","V_{X} ∝ a − b + c, V_{Z} ∝ (a^{2} − b^{2} + c^{2})/c.","1. a − b + c = (a^{2} − b^{2})/c + c gives c = a + b.
+2. c = 2 + 3 = 5 cm.
+Answer: 5",Potentials of concentric shells,Revise Electrostatic Potential.,
+56,15,arithmetic,Activity = λN.,N = (10^{−6}/60) × 6 × 10^{23} = 10^{16}.,"1. A = 1.5 × 10^{−5} × 10^{16} = 1.5 × 10^{11} = 15 × 10^{10} Bq.
+Answer: 15",Activity,Revise Nuclei.,
+57,30,sympy,Use Malus's law twice; the third axis is at 90° − θ to the second.,I = (I_{0}/2)cos^{2}θ sin^{2}θ = (I_{0}/8) sin^{2}2θ.,"1. 4 sin^{2}2θ = 3, so sin 2θ = √3/2.
+2. θ = 30° (60° also works).
+Answer: 30",Malus's law,Revise Wave Optics.,NTA's final key accepts 30 or 60.
+58,18,arithmetic,"Find the emf, current, then the magnetic force to balance.","e = Bvl, I = e/R, F = BIl.","1. e = 0.15 × 4 × 1 = 0.6 V, I = 0.12 A.
+2. F = 0.15 × 0.12 × 1 = 0.018 N = 18 × 10^{−3} N.
+Answer: 18",Motional emf,Revise Electromagnetic Induction.,
+59,6,arithmetic,H inside a solenoid = nI.,n = 60/0.15 = 400 per m.,"1. I = 2400/400 = 6 A.
+Answer: 6",Solenoid,Revise Magnetism and Matter.,
+60,100,arithmetic,Topic: Series and parallel. Which rule or fact from it settles this question?,Max: all in series. Min: all in parallel.,"1. 100 Ω and 1 Ω: ratio 100.
+Answer: 100",Series and parallel,Revise Current Electricity.,
+61,3,arithmetic,Use the molar volume at STP.,22.7 L/mol (STP at 1 bar).,"1. n = 2.8375/22.7 = 0.125 mol.
+2. Molecules = 0.125 × 6.022 × 10^{23} = 7.527 × 10^{22}.
+Answer: (3)",Mole concept,Revise Some Basic Concepts of Chemistry.,"Uses 22.7 L/mol (IUPAC STP, 1 bar)."
+62,4,arithmetic,Combine the equations to get C + ½O_{2} → CO.,Target = (B) − (1/2)(A).,"1. ΔH = −y + x/2 = (x − 2y)/2.
+Answer: (4)",Hess's law,Revise Thermodynamics.,
+63,4,conceptual,Topic: Adsorption and micelles. Which rule or fact from it settles this question?,Is adsorption exothermic? Is micelle formation endothermic?,"1. ΔH_{ads} < 0; micelle formation has ΔH > 0 (entropy driven).
+Answer: (4)",Adsorption and micelles,Revise Surface Chemistry.,Surface chemistry is no longer in the JEE Main syllabus.
+64,3,conceptual,"In froth flotation, what are collectors and what are stabilisers?","Collectors: pine oil, fatty acids, xanthates. Stabilisers: cresols, aniline.","1. Cresols.
+Answer: (3)",Froth flotation,Revise General Principles of Isolation of Elements.,Metallurgy is no longer in the JEE Main syllabus.
+65,1,conceptual,At what temperatures are water gas and the shift reaction run?,C + H_{2}O at about 1270 K; CO + H_{2}O (shift) at about 673 K with a catalyst.,"1. T_{1} > T_{2}.
+Answer: (1)",Production of hydrogen,Revise Hydrogen (NCERT).,
+66,3,conceptual,CaO + H_{2}O → ?,Ca(OH)_{2} is slaked lime; its solution is lime water.,"1. A = slaked lime, Ca(OH)_{2}.
+2. B = CaCO_{3}, which with more CO_{2} gives soluble Ca(HCO_{3})_{2}.
+Answer: (3)",Calcium compounds,Revise The s-Block Elements.,s-block is no longer in the JEE Main syllabus.
+67,3,conceptual,Which alkali metals form superoxides?,"Only K, Rb and Cs form MO_{2}.","1. NaO_{2} is not formed on burning (Na gives Na_{2}O_{2}).
+Answer: (3)",Oxides of alkali metals,Revise The s-Block Elements.,s-block is no longer in the JEE Main syllabus.
+68,2,conceptual,Compare E°(M^{3+}/M^{2+}) for Fe and Mn; recall Cr^{2+} and V^{2+}.,"E°: Mn 1.57 V, Fe 0.77 V. V^{2+} is d^{3}.","1. A false (Mn is higher). B true. C true (Cr^{2+} is strongly reducing).
+2. D false: d^{3} gives about 3.87 BM.
+Answer: (2)",First-row transition elements,Revise The d- and f-Block Elements.,
+69,3,conceptual,Topic: Crystal field theory. Which rule or fact from it settles this question?,Which d^{6} complex has a strong-field ligand?,"1. [Co(NH_{3})_{6}]^{3+}: d^{6} low spin, octahedral, diamagnetic.
+2. [CoF_{6}]^{3−} high spin; [NiCl_{4}]^{2−} tetrahedral; [CoCl_{6}]^{3−} high spin.
+Answer: (3)",Crystal field theory,Revise Coordination Compounds.,
+70,1,conceptual,Topic: Industrial wastes. Which rule or fact from it settles this question?,Recall industrial wastes.,"1. Steel: slag. Thermal power: fly ash. Fertilizer: gypsum. Paper: biodegradable.
+Answer: (1)",Industrial wastes,Revise Environmental Chemistry.,Environmental chemistry is no longer in the JEE Main syllabus.
+71,4,conceptual,Topic: Column chromatography. Which rule or fact from it settles this question?,Which compound is held more strongly by the adsorbent?,"1. B elutes later: stronger adsorption, low R_{f}.
+Answer: (4)",Column chromatography,Revise Organic Chemistry: Some Basic Principles and Techniques.,
+72,2,conceptual,Topic: Dipole moment. Which rule or fact from it settles this question?,Which molecules have symmetry that cancels bond dipoles?,"1. CH_{2}Cl_{2} and CHCl_{3} are both polar.
+2. trans-butene, 1,4-dichlorobenzene and benzene are non-polar.
+Answer: (2)",Dipole moment,Revise Chemical Bonding.,
+73,4,conceptual,Check each pair against its mechanism.,S_{N}2: less hindered faster. S_{N}1: more stable cation faster. EAS: deactivated slower. NAS: activated by NO_{2}.,"1. A true. B true (benzylic cation). C true. D true.
+Answer: (4)",Reactivity of halides,Revise Haloalkanes and Haloarenes.,
+74,4,conceptual,Topic: Side-chain oxidation. Which rule or fact from it settles this question?,Hot alkaline KMnO_{4} oxidises side chains with a benzylic H to COOH; acid work-up hydrolyses the ester.,"1. CH_{2}CH_{3} → COOH, CH=CH_{2} → COOH, COOCH_{3} → COOH.
+2. A naphthalene with three COOH in the original positions.
+Answer: (4)",Side-chain oxidation,Revise Hydrocarbons and Carboxylic Acids.,Figure reading: option 4 keeps the three groups in their original ring positions.
+75,1,conceptual,Williamson synthesis: which partner must be the alkyl halide?,Aryl halides do not undergo S_{N}2.,"1. Sodium phenoxide + CH_{3}Br.
+Answer: (1)",Williamson ether synthesis,"Revise Alcohols, Phenols and Ethers.",
+77,2,conceptual,Topic: Classification of polymers. Which rule or fact from it settles this question?,Recall NCERT's polymer table.,"1. Nylon-2-nylon-6: biodegradable. Buna-N: synthetic rubber. Urea-formaldehyde: thermosetting. Dacron: polyester.
+Answer: (2)",Classification of polymers,Revise Polymers.,Polymers are no longer in the JEE Main syllabus.
+78,2,conceptual,Which forces hold protein secondary and tertiary structure?,"H-bonds, disulphide bridges, van der Waals, ionic.","1. –O–O– linkages are not involved.
+Answer: (2)",Protein structure,Revise Biomolecules.,
+79,3,conceptual,Why is Na_{2}Cr_{2}O_{7} a poor primary standard?,"It is hygroscopic (very soluble, absorbs water).","1. Statement I true.
+2. Statement II false: K_{2}Cr_{2}O_{7} is less soluble.
+Answer: (3)",Dichromates,Revise The d- and f-Block Elements.,
+80,4,conceptual,Topic: Preparation of Mohr's salt. Which rule or fact from it settles this question?,Which change happens to Fe^{2+} on heating in air?,"1. Prolonged heating oxidises Fe^{2+} to Fe^{3+}.
+Answer: (4)",Preparation of Mohr's salt,Revise practical chemistry.,
+81,1567,arithmetic,Boyle's law.,V decreases by 40%: V' = 0.6V.,"1. P' = 940.3/0.6 = 1567.2 ≈ 1567 mm Hg.
+Answer: 1567",Boyle's law,Revise States of Matter.,
+82,0,conceptual,Topic: Black body radiation. Which rule or fact from it settles this question?,Recall black body radiation from NCERT.,"1. All four statements are correct.
+Answer: 0",Black body radiation,Revise Structure of Atom.,
+83,3,conceptual,Topic: Shapes of molecules. Which rule or fact from it settles this question?,Use VSEPR: lone pairs on the central atom.,"1. NO_{2}^{−}, O_{3}, SO_{2}: bent.
+2. N_{3}^{−} and I_{3}^{−}: linear.
+Answer: 3",Shapes of molecules,Revise Chemical Bonding.,
+84,30,arithmetic,Topic: Van't Hoff factor. Which rule or fact from it settles this question?,Van't Hoff factor for a monobasic acid: i = 1 + α.,"1. i = 1.3: the depression is 30% more than expected.
+Answer: 30",Van't Hoff factor,Revise Solutions.,Teacher look: strictly the freezing point is lower; NTA's 30% refers to the depression being larger.
+85,3,conceptual,Topic: Physical equilibria. Which rule or fact from it settles this question?,What is equal at equilibrium: rates or amounts?,"1. A true, B true, D true.
+2. C false: parameters become constant, not equal.
+Answer: 3",Physical equilibria,Revise Equilibrium.,
+86,1825,arithmetic,Combine potentials using ΔG = −nFE.,"FeO_{4}^{2−} → Fe^{3+} (3 e^{−}, 2.2 V), Fe^{3+} → Fe^{2+} (1 e^{−}, 0.70 V).","1. E = (3 × 2.2 + 1 × 0.70)/4 = 7.3/4 = 1.825 V.
+2. x = 1825.
+Answer: 1825",Latimer diagrams,"Add n × E, not E. Revise Electrochemistry.",
+87,2,arithmetic,Parallel first-order reactions: rate constants add.,k = ln 2/12 + ln 2/3.,"1. k = (5/12) ln 2 per min.
+2. t_{1/2} = 12/5 = 2.4 min ≈ 2.
+Answer: 2",Parallel reactions,Revise Chemical Kinetics.,
+88,5,conceptual,Identify X and Y.,Na_{2}O + H_{2}O → 2NaOH; Cl_{2}O_{7} + H_{2}O → 2HClO_{4}.,"1. NaOH has 1 O, HClO_{4} has 4 O.
+2. Total 5.
+Answer: 5",Oxides and water,Revise The p-Block Elements.,
+89,1,conceptual,Count bond pairs and lone pairs on I.,IF_{5}: 5 bp + 1 lp. IF_{7}: 7 bp.,"1. 1 + 0 = 1.
+Answer: 1",Interhalogens,Revise The p-Block Elements.,
+90,3,conceptual,Topic: Crystal field splitting. Which rule or fact from it settles this question?,"Fe in K_{4}[Fe(CN)_{6}] is Fe^{2+}, d^{6}, with strong-field CN^{−}.","1. t_{2g}^{6}: 3 pairs.
+Answer: 3",Crystal field splitting,Revise Coordination Compounds.,
