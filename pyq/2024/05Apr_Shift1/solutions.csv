@@ -1,0 +1,324 @@
+q,claude_answer,check,hint1,hint2,solution,concept,revise,note
+1,3,arithmetic,"f is one-one, so f(1) and f(3) must be two different elements of B adding to 14.","Pairs from B with sum 14 and distinct entries: (2, 12), (4, 10) in either order. Then map the other 3 elements of A into the remaining 5.","1. Ordered pairs (f(1), f(3)): (2,12), (12,2), (4,10), (10,4). (7,7) is not allowed: f is one-one.
+2. The other 3 elements of A go one-one into the 5 unused elements: 5 × 4 × 3 = 60.
+3. Total = 4 × 60 = 240.
+Answer: (3)",Counting one-one functions with a condition,Remember one-one forbids f(1) = f(3) = 7. Revise counting functions in Permutations and Combinations.,
+2,3,conceptual,"For statement II, use |w|^{2} = w w̄ to replace each squared term.",Let the common ratio be k. Then a^{2}/(y − z) = k^{2}|y − z|^{2}/(y − z) = k^{2}(ȳ − z̄).,"1. Statement I: |z_{1}/|z_{1}| + z_{2}/|z_{2}|| ≤ 1 + 1 = 2, so the inequality holds. True.
+2. Statement II: each term equals k^{2} times a conjugate difference: k^{2}[(ȳ − z̄) + (z̄ − x̄) + (x̄ − ȳ)] = 0, not 1. False.
+Answer: (3)",Modulus and conjugate of complex numbers,The trick |w|^{2}/w = w̄ is worth remembering. Revise properties of modulus and conjugate in Complex Numbers.,
+3,2,arithmetic,"Take determinants of everything. For a 3 × 3 matrix, |adj M| = |M|^{2} and |kM| = k^{3}|M|.","|2A| = 24, |4B| = 128, |AB| = 6. So |adj 2A| = 576, |adj 4B| = 128^{2}, |adj AB| = 36.","1. Determinant = |A|^{4} × |adj 4B| / (|adj 2A| × |adj AB|).
+2. = 81 × 16384 / (576 × 36) = 64.
+Answer: (2)",Determinant of adjoint and scalar multiples,Revise |adj A| = |A|^{n−1} and |kA| = k^{n}|A| in Determinants.,
+4,2,sympy,Infinitely many solutions needs the coefficient determinant to be zero first.,det = −124 − 62λ = 0 gives λ = −2. Then the third equation must be a combination of the first two.,"1. Determinant of coefficients = −124 − 62λ = 0, so λ = −2.
+2. Find p, q with p(11, 1, −2) + q(2, 3, 5) = (8, −19, −39): p = 2, q = −7.
+3. Then μ = 2(−5) + (−7)(3) = −31.
+4. λ^{4} − μ = 16 + 31 = 47.
+Answer: (2)",Consistency of linear systems,Revise the conditions for infinitely many solutions in Determinants.,
+5,4,sympy,Look at f' and f''. Where is f'' negative? What is f' at the right end?,"f'(x) = cos x + 3 − (2/π)(2x + 1), f''(x) = −sin x − 4/π.","1. f''(x) = −sin x − 4/π < 0, so f' is decreasing. II true.
+2. So f' > f'(π/2) = 3 − 2 − 2/π = 1 − 2/π > 0 on the interval. f is increasing. I true.
+Answer: (4)",Monotonicity using first and second derivatives,Using f' decreasing plus its end value is a neat way to show f' > 0. Revise Application of Derivatives.,
+6,1,sympy,Rationalise each term of m; split each term of n into partial fractions.,1/(√k + √(k+1)) = √(k+1) − √k and 1/(k(k+1)) = 1/k − 1/(k+1). Both telescope.,"1. m = √100 − √1 = 9.
+2. n = 1 − 1/100 = 99/100.
+3. Check 11x − 100y = 99 − 99 = 0.
+Answer: (1)",Telescoping sums,Revise telescoping series in Sequences and Series.,
+7,4,sympy,"For the limit to exist, the numerator must vanish fast enough at 0. Use series.","sin 3x = 3x − 9x^{3}/2 + …, sin x = x − x^{3}/6 + …, cos 3x = 1 − …","1. At x = 0 the numerator is −β, so β = 0.
+2. x-term: 3 + α = 0, so α = −3.
+3. x^{3}-term: −9/2 + 3/6 = −4.
+4. f(0) = −4.
+Answer: (4)",Limits by series expansion; continuity,Revise expansions of sin x and cos x in Limits.,
+8,3,sympy,g is the inverse of f. Which x gives f(x) = 7?,"f(1) = 7, so g(7) = 1 and g'(7) = 1/f'(1).","1. f(1) = 1 + 2 + 3 + 1 = 7, so g(7) = 1.
+2. f'(x) = 5x^{4} + 6x^{2} + 3, f'(1) = 14, so g'(7) = 1/14.
+3. g(7)/g'(7) = 14.
+Answer: (3)",Derivative of an inverse function,Revise (f^{−1})'(f(a)) = 1/f'(a) in Continuity and Differentiability.,
+9,1,sympy,Tilt the inner rectangle by an angle θ and write the outer sides in terms of θ.,"a = 2 cos θ + 4 sin θ, b = 2 sin θ + 4 cos θ. Area = 8 + 10 sin 2θ.","1. Outer sides: a = 2cos θ + 4 sin θ, b = 2 sin θ + 4 cos θ.
+2. ab = 8 + 10 sin 2θ, maximum at θ = 45°.
+3. Then a = b = 6/√2 = 3√2, so (a + b)^{2} = 72.
+Answer: (1)",Maxima and minima with trigonometry,Revise optimisation in Application of Derivatives.,
+10,1,sympy,Split the integrand into an odd part and an even part.,2y/(1 + cos^{2}y) is odd and integrates to 0. For the even part use ∫_{0}^{π} y f(sin y) dy = (π/2)∫_{0}^{π} f(sin y) dy.,"1. The odd part gives 0.
+2. I = 2∫_{0}^{π} 2y sin y/(1 + cos^{2}y) dy = 4 × (π/2) ∫_{0}^{π} sin y/(1 + cos^{2}y) dy.
+3. ∫_{0}^{π} sin y/(1 + cos^{2}y) dy = [−tan^{−1}(cos y)]_{0}^{π} = π/2.
+4. I = 2π × π/2 = π^{2}.
+Answer: (1)",Definite integrals: odd/even and King's property,Revise properties of definite integrals.,
+11,4,sympy,Write the numerator as A(denominator) + B(derivative of denominator).,sin x = (3/34)(3 sin x + 5 cos x) − (5/34)(3 cos x − 5 sin x).,"1. Integral = 136[(3/34)x − (5/34) ln(3 sin x + 5 cos x)] from 0 to π/4.
+2. = 4[3π/4 − 5 ln(8/(5√2))] = 3π − 20 ln(4√2/5).
+3. ln(4√2) = (5/2) ln 2, so this is 3π − 50 ln 2 + 20 ln 5.
+Answer: (4)",Integrals of (a sin x + b cos x)/(c sin x + d cos x),Revise this standard form in Integrals.,
+12,1,sympy,Linear equation with constant coefficient 2. Try a particular solution of the form A sin 2x + B cos 2x.,y = Ce^{−2x} + (1/4)(sin 2x − cos 2x).,"1. IF = e^{2x}; the solution is y = Ce^{−2x} + (sin 2x − cos 2x)/4.
+2. y(0) = C − 1/4 = 3/4, so C = 1.
+3. At π/8: sin π/4 = cos π/4, so y = e^{−π/4}.
+Answer: (1)",Linear differential equations,Revise the integrating factor method in Differential Equations.,
+13,3,arithmetic,A circle of radius 1 touching x = 3 and y = 2: where can its centre be?,"Centre (3 ± 1, 2 ± 1); the one closest to the origin is (2, 1).","1. The centre is at (2, 1).
+2. Distance from (5, 5) to the centre = √(9 + 16) = 5.
+3. Shortest distance to the circle = 5 − 1 = 4.
+Answer: (3)",Circles touching lines; distance from a point to a circle,Revise tangency in Circles.,
+14,4,sympy,OP = OQ and the right angle is at O. How is the height from O related to PQ?,"In an isosceles right triangle, the altitude to the hypotenuse is half the hypotenuse; here it is 12/5.","1. Distance from O to 3x + 4y = 12 is 12/5.
+2. PQ = 2 × 12/5 = 24/5 and OP^{2} + OQ^{2} = PQ^{2}.
+3. l = 2PQ^{2} = 2 × 576/25 = 46.08, so [l] = 46.
+Answer: (4)",Straight lines: perpendicular distance and right triangles,Revise distance of a point from a line.,
+15,2,sympy,"A circle on AB as diameter, with A and B on the axes, passes through the origin. Compare with the given circle.","Circle: x^{2} + y^{2} − (k/2)x − (k/3)y = 0, so k = 6.","1. A = (k/2, 0), B = (0, k/3); the circle is x^{2} + y^{2} − (k/2)x − (k/3)y = 0. So k = 6.
+2. Ellipse x^{2}/36 + y^{2}/4 = 1: latus rectum = 2b^{2}/a = 8/6 = 4/3.
+3. m = 4, n = 3: 2m + n = 11.
+Answer: (2)",Circle on a diameter; ellipse latus rectum,Revise the diameter form of a circle and the ellipse latus rectum.,
+16,3,sympy,First put both lines in standard form (x − x_{1})/l = … Watch the signs and the coefficients of y.,"Directions: (−3, (4λ + 1)/3, −1) and (3μ, −3, −7). Perpendicular: dot product 0.","1. Line 1: (x − 2)/(−3) = (y − 2/3)/((4λ + 1)/3) = (z − 4)/(−1).
+2. Line 2: (x + 3)/(3μ) = (y − 1/2)/(−3) = (z − 5)/(−7).
+3. Dot product: −9μ − (4λ + 1) + 7 = 0, so 4λ + 9μ = 6.
+Answer: (3)",Angle between lines in 3D,"A common slip is reading direction ratios before making x, y, z coefficients 1. Revise Three Dimensional Geometry.",
+17,3,sympy,Equate general points of the two lines.,"(−6 + 3t, 2t, −1 + t) = (7 + 4s, 9 + 3s, 4 + 2s).","1. Solving: s = −1, t = 3, so the point is (3, 6, 2).
+2. d^{2} = 4^{2} + 2^{2} + 7^{2} = 69.
+3. d^{2} + 6 = 75.
+Answer: (3)",Intersection of lines in 3D,Revise Three Dimensional Geometry.,
+18,1,sympy,"For a (plane) quadrilateral, the area is half the magnitude of the cross product of its diagonals.","Area = (1/2)|AC × BD| with AC = (2, 5, −12), BD = (−6, −11, 4).","1. AC × BD = (−112, 64, 8).
+2. |AC × BD| = √16704 = 24√29.
+3. Area = 12√29.
+Answer: (1)",Vector area of a quadrilateral,Revise cross product and area in Vector Algebra.,"The four points are coplanar (checked), so the diagonal formula applies."
+19,4,arithmetic,Repeated roots need b^{2} = 4ac. So b must be even.,"Check b = 2, 4, 6, 8 and count pairs (a, c) with ac = b^{2}/4.","1. b = 2: ac = 1 → 1 way. b = 4: ac = 4 → 3 ways. b = 6: ac = 9 → 1 way. b = 8: ac = 16 → 3 ways.
+2. Favourable = 8, total = 8^{3} = 512.
+3. Probability = 1/64.
+Answer: (4)",Probability with discriminant condition,Revise counting cases in Probability.,"Coefficients may repeat (chosen with replacement), as the key assumes."
+20,2,sympy,"Square after isolating sin θ, then pick the root that fits [0, π/4].",3 sin θ = 4 cos θ − 1 gives 25c^{2} − 8c − 8 = 0 with c = cos θ.,"1. 25c^{2} − 8c − 8 = 0, so c = (4 ± 6√6)/25. For θ in [0, π/4] take c = (4 + 6√6)/25 ≈ 0.75.
+2. 4/(3√6 − 2) = 4(3√6 + 2)/50 = (6√6 + 4)/25. Same.
+Answer: (2)",Trigonometric equations,Squaring can add roots; always check the interval. Revise Trigonometric Equations.,
+21,18,sympy,Write a = n + f with n = [a]. Then the right side is 2a + n. Split on the sign of 2a − 1.,"a ≥ 1/2 gives n = −1, impossible. a < 1/2 gives a = (1 − n)/4.","1. RHS = 3n + 2f = 2a + n.
+2. If a ≥ 1/2: 2a − 1 = 2a + n, so n = −1, but then a < 0. No solution.
+3. If a < 1/2: 1 − 2a = 2a + n, a = (1 − n)/4. Need [a] = n: only n = 0 works, a = 1/4.
+4. 72 × 1/4 = 18.
+Answer: 18",Greatest integer and fractional part equations,Revise [x] and {x} in Relations and Functions.,
+22,3,sympy,Substitute t = x + 1. What is |x||x + 2| in terms of t?,|x||x + 2| = |t^{2} − 1|. With u = |t|: |u^{2} − 1| − 5u − 1 = 0.,"1. For u ≥ 1: u^{2} − 5u − 2 = 0, u = (5 + √33)/2 (the other root is negative).
+2. For 0 ≤ u < 1: −u^{2} − 5u = 0, u = 0.
+3. t = 0 or t = ±(5 + √33)/2: 3 roots.
+Answer: 3",Equations with modulus,Revise solving modulus equations by cases.,
+23,125,arithmetic,Each die shows 1 to 6. Shift to 0 to 5 and count solutions of a sum.,Count y_{1} + y_{2} + y_{3} + y_{4} = 12 with 0 ≤ y_{i} ≤ 5 by inclusion–exclusion.,"1. Without the upper limit: C(15, 3) = 455.
+2. Subtract cases with some y_{i} ≥ 6: 4 × C(9, 3) = 336.
+3. Add back two y_{i} ≥ 6: 6 × C(3, 3) = 6.
+4. 455 − 336 + 6 = 125.
+Answer: 125",Counting with inclusion–exclusion,Revise stars and bars with upper bounds in Permutations and Combinations.,
+24,54,sympy,"Find the powers of x in the general term of the binomial, then match with 1, 2x and −3x^{3}.","T_{r+1} = C(9,r)(3/2)^{9−r}(−1/3)^{r} x^{18−3r}. Need x^{0} (with 1) and x^{−3} (with −3x^{3}); x^{−1} is impossible.","1. x^{0}: r = 6: C(9,6)(3/2)^{3}(1/3)^{6} = 7/18.
+2. x^{−3}: r = 7: −3 × C(9,7)(3/2)^{2}(−1/3)^{7} = 1/9.
+3. p = 7/18 + 2/18 = 1/2, so 108p = 54.
+Answer: 54",Constant term in a binomial product,Revise the general term in Binomial Theorem.,
+25,910,sympy,a_{1}^{2} − a_{2}^{2} = (a_{1} − a_{2})(a_{1} + a_{2}). What is a_{1} − a_{2} in an AP?,A_{k} = −d × (sum of the first 2k terms).,"1. A_{3} = −d(6a + 15d) = −153, A_{5} = −d(10a + 45d) = −435.
+2. Solving: d = 3, a = 1 (positive terms). Check: 1 + 16 + 49 = 66.
+3. a_{17} = 49, A_{7} = −3 × S_{14} = −3 × 287 = −861.
+4. a_{17} − A_{7} = 910.
+Answer: 910",Arithmetic progression sums,Revise AP sums in Sequences and Series.,
+26,24,sympy,The limit is a derivative with respect to t at t = x.,"2xf(x) − x^{2}f'(x) = 1, i.e. (f/x^{2})' = −1/x^{4}.","1. 2xf − x^{2}f' = 1.
+2. (f/x^{2})' = −1/x^{4}, so f/x^{2} = 1/(3x^{3}) + C; f(1) = 1 gives C = 2/3.
+3. f(x) = 1/(3x) + 2x^{2}/3: f(2) = 17/6, f(3) = 55/9.
+4. 2f(2) + 3f(3) = 17/3 + 55/3 = 24.
+Answer: 24",Limits as derivatives; differential equations,Revise the definition of the derivative and linear DEs.,
+27,72,sympy,"Find where the parabolas meet, then integrate top minus bottom.",They meet at x = 0 and x = 6; top curve y = 7x − x^{2}.,"1. x^{2} − 5x = 7x − x^{2} gives x = 0, 6.
+2. Area = ∫_{0}^{6} (12x − 2x^{2}) dx = 216 − 144 = 72.
+Answer: 72",Area between two curves,Revise Application of Integrals.,
+28,108,sympy,Write the focal chord length and the distance from the origin in terms of the chord's angle.,"For y^{2} = 4ax: focal chord length 4a/sin^{2}θ, distance from O to the chord a sin θ.","1. a = 3: l = 12/sin^{2}θ.
+2. The chord passes through (3, 0) with inclination θ: d = 3 sin θ.
+3. l d^{2} = 12 × 9 = 108 (independent of θ).
+Answer: 108",Focal chord of a parabola,Revise focal chords in Conic Sections.,
+29,30,sympy,Move everything to one side: what does (vector) × c = 0 tell you?,"(a + 2b) × c + 3(a × c) = 0 gives (4a + 2b) × c = 0, so c is parallel to 2a + b.","1. c = μ(2a + b) = μ(4, −7, 15).
+2. a·c = μ(4 + 21 + 105) = 130μ = 130, so μ = 1.
+3. b·c = 8 + 7 + 15 = 30.
+Answer: 30",Cross product equations,Revise properties of the cross product (c × a = −a × c).,
+30,56,sympy,Sampling without replacement: X has a hypergeometric distribution.,Var = n(K/N)(1 − K/N)(N − n)/(N − 1).,"1. N = 10, K = 3, n = 5.
+2. Var = 5 × 0.3 × 0.7 × 5/9 = 7/12.
+3. 96σ^{2} = 56.
+Answer: 56",Variance of a random variable,You can also list P(X = 0..3) and use E[X^{2}] − (E[X])^{2}. Revise Probability.,
+31,1,conceptual,"Write the dimensions of energy density and of G, then multiply.","[u] = ML^{−1}T^{−2}, [G] = M^{−1}L^{3}T^{−2}.","1. [uG] = L^{2}T^{−4}, so [√(uG)] = LT^{−2}: an acceleration.
+2. Force per unit mass has dimensions LT^{−2}.
+3. Potential and energy per unit mass are L^{2}T^{−2}; pressure gradient per unit mass is L^{−2}T^{−2}.
+Answer: (1)",Dimensional analysis,Revise dimensions of G and energy density in Units and Measurements.,
+32,4,conceptual,Add the two vectors first.,(2Q + 2P) + (2Q − 2P) = 4Q.,"1. The resultant is 4Q, parallel to Q.
+2. Angle = 0°.
+Answer: (4)",Vector addition,Simplify before applying any formula. Revise vectors in Motion in a Plane.,
+33,3,arithmetic,The system accelerates downward. Is the normal force more or less than the weight?,N = m(g − a) with m = 30 kg.,"1. Total mass 30 kg, accelerating down at 0.1 m s^{−2}.
+2. mg − N = ma, so N = 30(9.8 − 0.1) = 291 N.
+3. By Newton's third law, the force on the floor is 291 N.
+Answer: (3)",Newton's laws: apparent weight,Revise apparent weight in Laws of Motion.,"Uses g = 9.8 m s^{−2} (not stated in the question; g = 10 gives 297 N, also an option). Teacher may want to note this."
+34,4,conceptual,Does work against gravity depend on the path?,Gravity is conservative: W = mgh in both cases.,"1. Work against gravity = mgh, path-independent.
+2. Both cases lift 50 kg through 20 m: ratio 1 : 1.
+Answer: (4)",Conservative forces,"Revise Work, Energy and Power.","Assumes no friction on the ramp, as intended."
+35,2,sympy,"Find each moment of inertia about the given axis. For the cylinder, the axis is a diameter of one end face.",Hollow sphere: (2/3)MR^{2}. Cylinder about an end-face diameter: MR^{2}/4 + ML^{2}/3 with L = 4R.,"1. Hollow sphere: k^{2} = 2R^{2}/3.
+2. Solid cylinder (radius R, length 4R): I = MR^{2}/4 + M(16R^{2})/3 = 67MR^{2}/12, so k^{2} = 67R^{2}/12.
+3. Ratio of k = √((2/3)/(67/12)) = √(8/67). x = 67.
+Answer: (2)",Moment of inertia and radius of gyration,Revise the cylinder about a perpendicular axis plus the parallel-axis theorem in Rotational Motion.,Figure: the axis AB passes along a diameter of one end face; the cylinder's diameter is 2R.
+36,2,conceptual,Recall the energies of a satellite in a circular orbit of radius a.,"KE = GMm/2a, PE = −GMm/a, E = −GMm/2a. Escape energy per unit mass from the planet = Gm/r.","1. A: KE = GMm/2a → II.
+2. B: PE = −GMm/a → I.
+3. C: total = −GMm/2a → IV.
+4. D: escape energy per kg = Gm/r → III.
+Answer: (2)",Orbital energies,Revise Gravitation: energy of orbiting bodies.,
+37,4,conceptual,"In h = 2T cos θ/(rρg), which θ makes h zero?","h = 0 when cos θ = 0, i.e. θ = 90°.","1. No rise or fall means θ = 90°, not 0°. Statement I false.
+2. The contact angle depends on both solid and liquid. Statement II true.
+Answer: (4)",Capillarity and contact angle,Revise Mechanical Properties of Fluids.,
+38,3,arithmetic,"In a cyclic process, Q = W = area enclosed. Read the circle's size along each axis.",The circle runs from 60 to 340 on both axes: 'radius' 140 kPa along P and 140 cc along V.,"1. Area = π × (140 × 10^{3} Pa) × (140 × 10^{−6} m^{3}) = π × 19.6 J ≈ 61.6 J.
+2. The cycle is clockwise on the P–V graph, so net work by the gas is positive and heat is absorbed.
+Answer: (3)",Work in a cyclic process,A common slip is mixing cc and m^{3}. Revise Thermodynamics.,"The figure labels the axes 'P (in cc)' and 'V (in kPa)', apparently swapped; the numbers work either way."
+39,1,arithmetic,Closed chamber: the number density is fixed. What does the collision frequency depend on then?,"Z ∝ n × mean speed, and mean speed ∝ √T.","1. Z ∝ √T at fixed density.
+2. Z' = Z√(400/300) = 2Z/√3.
+Answer: (1)",Kinetic theory: collision frequency,Use kelvin temperatures. Revise Kinetic Theory.,
+40,3,arithmetic,T ∝ 1/√g. How does g change with height?,"g' = gR^{2}/(R + h)^{2}, so T ∝ (R + h).","1. T_{1} ∝ 2R, T_{2} ∝ 3R.
+2. T_{1}/T_{2} = 2/3, so 3T_{1} = 2T_{2}.
+Answer: (3)",Pendulum and variation of g,Revise Gravitation and Oscillations.,
+41,2,arithmetic,Compute ke^{2}/(Gm_{e}m_{p}). The distance cancels.,"k = 9 × 10^{9}, e = 1.6 × 10^{−19} C, G = 6.67 × 10^{−11}, m_{e} = 9.1 × 10^{−31} kg, m_{p} = 1.67 × 10^{−27} kg.","1. ke^{2} = 2.3 × 10^{−28}.
+2. Gm_{e}m_{p} = 1.0 × 10^{−67}.
+3. Ratio ≈ 2.3 × 10^{39}.
+Answer: (2)",Coulomb vs gravitational force,Revise Electric Charges and Fields (orders of magnitude).,
+42,3,arithmetic,Follow the wires: which nodes are actually the same point?,"The top wire joins the tops of R_{2}, R_{4}, R_{3}; the bottom wire joins their bottoms. So all three are in parallel.","1. R_{2}, R_{3}, R_{4} in parallel: 1/R = 1/8 + 1/4 + 1/8 = 1/2, R = 2 Ω.
+2. With R_{1}: 12 Ω.
+3. I = 12/12 = 1 A.
+Answer: (3)",Series and parallel resistors,Redraw the circuit by marking nodes. Revise Current Electricity.,Node reading from the figure: R_{4}'s diagonal joins the bottom wire to the top-right node.
+43,1,conceptual,Use Ampère's law with a loop outside the whole cable.,Net current enclosed = I − I = 0.,"1. Outside the cable the loop encloses equal and opposite currents.
+2. So B = 0 outside.
+3. Inside the inner conductor and between the conductors B is not zero.
+Answer: (1)",Ampère's circuital law,Revise Moving Charges and Magnetism.,
+44,4,arithmetic,"Pass current through the big loop B. Since b >> a, the field over A is nearly uniform.",Field at the centre of B: μ_{0}I/(2b). Flux through A = field × πa^{2}.,"1. B = μ_{0}I/(2b) at the centre.
+2. Φ_{A} = μ_{0}Iπa^{2}/(2b).
+3. M = Φ/I = μ_{0}πa^{2}/(2b).
+Answer: (4)",Mutual inductance of coplanar loops,Revise Electromagnetic Induction.,
+45,2,arithmetic,The maximum displacement current equals the maximum conduction current in the circuit.,I_{0} = V_{0}ωC.,"1. ω = 2π × 4000 = 25133 rad/s.
+2. I_{0} = 40 × 25133 × 12 × 10^{−6} ≈ 12 A.
+Answer: (2)",Displacement current; capacitive reactance,Revise Electromagnetic Waves and Alternating Current.,
+46,4,conceptual,Where do rays from the focus go after a convex lens?,They emerge parallel.,"1. Parallel rays correspond to a plane wavefront.
+Answer: (4)",Wavefronts,Revise Wave Optics: wavefronts.,
+47,3,conceptual,Write Einstein's equation for stopping potential: eV_{0} = hν − φ.,V_{0} = (h/e)ν − φ/e: slope h/e; intercept gives the threshold.,"1. The slope of V_{0} vs ν is h/e for any metal. Statement I true.
+2. M_{2} has the larger threshold frequency (larger work function), so at the same ν its electrons have less KE. Statement II false.
+Answer: (3)",Photoelectric effect graphs,Revise Dual Nature of Radiation and Matter.,
+48,3,conceptual,"For an inverse-square attraction, relate KE, PE and total energy.","U = −2K, E = K + U = −K.","1. E = U/2, i.e. 2E = U.
+Answer: (3)",Energy in the Bohr model,Revise Atoms.,
+49,3,conceptual,"Identify each gate, then note the bulb is between two gate outputs. When does current flow?","A: NOR used as NOT. B, C: NAND. Middle: NOR. D: NOR used as NOT. Bulb glows when the two ends are at different levels.","1. Middle output = NOR(Ā, (BC)̄) = A·B·C. D output = D̄.
+2. Option 1: 1 vs 1. Option 2: 0 vs 0. Option 4: 0 vs 0. No glow.
+3. Option 3 (A = 1, B = C = D = 0): 0 vs 1, so a voltage appears across the bulb.
+Answer: (3)",Logic gates in a circuit,Revise NAND/NOR as universal gates in Semiconductor Electronics.,Gate shapes read from an enlarged figure. Reading 'glow' as 'outputs differ'.
+50,3,arithmetic,The mean cannot be more precise than the least precise reading.,Mean = 4.623 s; the least precise reading (4.6 s) has one decimal place.,"1. Mean = 18.492/4 = 4.623 s.
+2. Round to one decimal place: 4.6 s.
+Answer: (3)",Significant figures,Revise rules for addition/averaging in Units and Measurements.,
+51,19,arithmetic,"From rest with uniform acceleration, distance in the nth second ∝ (2n − 1).",S_{n} ∝ 2n − 1.,"1. S_{9}/S_{10} = 17/19 = 1 − 2/19.
+2. x = 19.
+Answer: 19",Distance in the nth second,Revise Motion in a Straight Line.,Assumes uniform acceleration (implied).
+52,240,arithmetic,Treat the three blocks as one body.,T_{1} − (m_{1} + m_{2} + m_{3})g = (m_{1} + m_{2} + m_{3})a.,"1. Total mass 20 kg.
+2. T_{1} = 20(10 + 2) = 240 N.
+Answer: 240",Newton's second law for connected bodies,Revise Laws of Motion.,
+53,600,arithmetic,The top of a hanging wire carries the weight of the whole wire.,Stress at the top = ρg'L.,"1. g' = 10/3 m s^{−2}.
+2. L = 1.2 × 10^{8}/(6 × 10^{4} × 10/3) = 600 m.
+Answer: 600",Breaking stress of a hanging wire,Revise Mechanical Properties of Solids.,
+54,86,arithmetic,"Same supply voltage, so energy ∝ capacitance.",C_{p} = 100 μF; 1/C_{s} = 1/25 + 1/30 + 1/45.,"1. C_{s} = 450/43 μF.
+2. E_{s}/E = C_{s}/C_{p} = 4.5/43 = 9/86.
+3. x = 86.
+Answer: 86",Capacitors in series and parallel,Revise Electrostatic Potential and Capacitance.,
+55,4,arithmetic,E ∝ charge. How does charge fall when a capacitor discharges through R?,q = q_{0}e^{−t/RC}; one third at t = RC ln 3.,"1. RC ln 3 = 6.6 μs.
+2. R = 6.6 × 10^{−6}/(1.5 × 10^{−6} × 1.1) = 4 Ω.
+Answer: 4",RC discharge,Revise RC circuits.,'log 3' is ln 3 = 1.1.
+56,5,arithmetic,Find the wire's length from its resistance first.,L = RA/ρ. Then BIL = mg.,"1. L = 1 × 10 × 10^{−6}/(2 × 10^{−6}) = 5 m.
+2. B = mg/(IL) = 5/(2 × 5) = 0.5 T = 5 × 10^{−1} T.
+Answer: 5",Force on a current-carrying wire,Revise Moving Charges and Magnetism.,
+57,50,arithmetic,"Find X_{L}, X_{C} and Z with ω = 100 rad/s.","X_{L} = 100 Ω, X_{C} = 500 Ω, Z = √(300^{2} + 400^{2}).","1. Z = 500 Ω; V_{rms} = 50 V; I_{rms} = 0.1 A.
+2. V_{C} = I X_{C} = 0.1 × 500 = 50 V.
+Answer: 50",Series LCR circuit,Revise Alternating Current.,
+58,10,arithmetic,Find the fringe width first.,β = λD/d; the nth maximum is at nβ.,"1. β = 5 × 10^{−7} × 2/(3 × 10^{−4}) = 3.33 mm.
+2. Third maximum at 3β = 10 mm.
+Answer: 10",Young's double slit fringe width,Revise Wave Optics.,
+59,727,arithmetic,Mass defect = 3 × (mass of He) − (mass of C-12).,Mass of C-12 = 12.000000 u exactly.,"1. Δm = 3 × 4.002603 − 12 = 0.007809 u.
+2. E = 0.007809 × 931 = 7.27 MeV = 727 × 10^{−2} MeV.
+Answer: 727",Q value of a fusion reaction,Revise Nuclei.,Uses 12.000 u for carbon-12 (by definition; not given in the question).
+60,5,arithmetic,Write I = kθ and I = E/(R + G). Then 1/θ is linear in R.,1/θ = (k/E)(R + G): the slope of the graph is k/E.,"1. From (2, 1) and (6, 2): slope = 1/4 per Ω.
+2. k = E × slope = 2/4 = 0.5 A/div = 5 × 10^{−1} A/div.
+3. (Intercept 1/2 = kG/E gives G = 2 Ω.)
+Answer: 5",Galvanometer: figure of merit,Revise the half-deflection method (experimental skills).,"Points read from the graph: (2, 1), (4, 3/2), (6, 2)."
+61,3,conceptual,Read each statement and ask: is this what Dalton actually said?,"Dalton: atoms are indivisible, atoms of one element are identical (including mass).","1. A, C, E are Dalton's postulates.
+2. B (divisible atoms) and D (different properties within an element) contradict them.
+3. Incorrect: B and D only.
+Answer: (3)",Dalton's atomic theory,Revise Some Basic Concepts of Chemistry.,
+62,2,arithmetic,Draw H_{2}C=CH_{2} and count every bond.,Every single bond is σ; a double bond is 1σ + 1π.,"1. Four C–H σ bonds + one C–C σ bond = 5σ.
+2. One π bond.
+Answer: (2)",σ and π bonds,Revise Chemical Bonding.,
+63,4,conceptual,Which species appear in the equilibrium constant expression?,Pure solids and liquids do not appear in K.,"1. K_{p} = (p_{CO2}/p_{CO})^{3}: removing CO or adding/removing CO_{2} shifts it.
+2. Adding solid Fe_{2}O_{3} does not change K's expression, so no shift.
+Answer: (4)",Le Chatelier's principle; heterogeneous equilibrium,Revise Equilibrium.,
+64,2,conceptual,Clocks use the dry (Leclanché) cell. What is reduced at its cathode?,Cathode: MnO_{2} + NH_{4}^{+} + e^{−} → MnO(OH) + NH_{3}.,"1. Mn goes from +4 (MnO_{2}) to +3 (MnO(OH)).
+2. Reduction at the cathode.
+Answer: (2)",Dry cell,Revise primary batteries in Electrochemistry.,
+65,1,arithmetic,Both ions are divalent. What is the formula of the electrolyte?,MX: Λ_{m} = λ_{+} + λ_{−}.,"1. One cation and one anion per formula unit.
+2. Λ_{m} = 57 + 73 = 130 S cm^{2} mol^{−1}.
+Answer: (1)",Kohlrausch's law,Revise Electrochemistry.,
+66,2,conceptual,Count electrons and protons in each ion.,"All have 10 electrons; nuclear charges are 8, 9, 11, 12.","1. A: true, all have 10 electrons.
+2. B: false, Z differs.
+3. C, D: for isoelectronic ions, more protons → smaller. O^{2−} largest, Mg^{2+} smallest. True.
+Answer: (2)",Isoelectronic species and ionic radii,Revise Classification of Elements and Periodicity.,
+67,3,conceptual,Think about the inert pair effect and about the d-electrons in Ga.,Ga (135 pm) is slightly smaller than Al (143 pm) because of poor shielding by 3d electrons.,"1. Statement I: +1 becomes more stable down group 13 (inert pair effect). True.
+2. Statement II: Ga is smaller than Al. False.
+Answer: (3)",Group 13 trends,Revise The p-Block Elements.,
+68,3,arithmetic,Which boron isotope is more common? What forms when boron burns in air?,^{11}B is about 80%; boron forms B_{2}O_{3} (and BN) on heating in air.,"1. ^{11}B has 11 − 5 = 6 neutrons: x = 6.
+2. In B_{2}O_{3} boron is +3: y = 3.
+3. x + y = 9.
+Answer: (3)",Boron chemistry,Revise The p-Block Elements (group 13).,BN (also +3) gives the same y.
+69,3,conceptual,Which 3d metal has the widest range of oxidation states?,Mn shows +2 to +7.,"1. Mn has the most oxidation states (+2 to +7) and the highest (+7) among these.
+Answer: (3)",Oxidation states of 3d metals,Revise The d- and f-Block Elements.,
+70,1,conceptual,Recall the spectrochemical series.,I^{−} < Br^{−} < Cl^{−} < F^{−} < OH^{−} < H_{2}O < NH_{3} < en < CN^{−} < CO.,"1. Br^{−} < F^{−} < H_{2}O < NH_{3} matches the series.
+2. The others misplace F/Br/I, NH_{3}/CN^{−} or Br^{−}/OH^{−}.
+Answer: (1)",Spectrochemical series,Revise Coordination Compounds.,
+71,4,arithmetic,Water is a weak-field ligand here. Count unpaired electrons for each M^{2+}.,"Cr^{2+} d^{4}, Mn^{2+} d^{5}, Fe^{2+} d^{6}, Co^{2+} d^{7}, all high spin.","1. Unpaired: Cr^{2+} 4, Mn^{2+} 5, Fe^{2+} 4, Co^{2+} 3.
+2. Least paramagnetic: [Co(H_{2}O)_{6}]^{2+}.
+Answer: (4)",High-spin complexes and magnetism,Revise CFT in Coordination Compounds.,
+72,1,conceptual,Strong acid + strong base: what is the only reaction that happens?,"H^{+} + OH^{−} → H_{2}O, about −57 kJ per mole of water.","1. Both are fully ionised, so the reaction is always H^{+} + OH^{−} → H_{2}O: about −57 kJ mol^{−1}.
+2. R gives exactly this definition, and it explains A.
+Answer: (1)",Enthalpy of neutralisation,Revise Thermodynamics (enthalpies of reaction).,Teacher look: 'always −57 kJ' is the textbook value (more precisely −57.1 to −55.8 kJ depending on the source); NTA accepts it as true.
+73,1,arithmetic,"Find the empirical formula from percentages, then scale to M = 342.","C: 42.1/12, H: 6.4/1, O: 51.5/16.","1. Mole ratio C : H : O = 3.51 : 6.4 : 3.22 ≈ 12 : 22 : 11.
+2. C_{12}H_{22}O_{11} has M = 342 (sucrose).
+Answer: (1)",Empirical and molecular formula,Revise Some Basic Concepts of Chemistry.,
+74,3,conceptual,What makes the electrophile in nitration? And what kind of catalyst helps electrophilic substitution: acid or base?,Protonated nitric acid loses water to give NO_{2}^{+}. Lewis acids (not bases) generate electrophiles.,"1. Statement I: H_{2}O^{+}–NO_{2} ⇌ H_{2}O + NO_{2}^{+} is a real step. True.
+2. Statement II: a Lewis base would not help; a Lewis acid does. False.
+Answer: (3)",Electrophilic aromatic substitution,Revise nitration in Hydrocarbons.,
+75,2,conceptual,"Compare intermolecular forces: none, dipole–dipole, H-bonding.",Alkane < ether < ketone < alcohol for similar molar masses.,"1. Pentane (B): only dispersion forces, lowest.
+2. Ether (A): weak dipole.
+3. Ketone (C): stronger dipole.
+4. Alcohol (D): hydrogen bonding, highest.
+B < A < C < D.
+Answer: (2)",Boiling points and intermolecular forces,"Revise Alcohols, Phenols and Ethers and Aldehydes and Ketones.",
+76,1,conceptual,"In trans-2-butene, what happens to the two C–CH_{3} bond dipoles?",In the trans isomer they cancel (μ = 0); in the cis isomer they add.,"1. A: cis alkenes are more polar. True.
+2. R: trans-2-butene has zero dipole moment. True, and it explains why the cis form is more polar.
+Answer: (1)",Geometrical isomers and dipole moment,Revise Hydrocarbons (alkenes).,
+77,4,conceptual,Is the phenol ring already activated enough to react with Br_{2} without a catalyst?,The –OH group strongly activates the ring.,"1. Phenol brominates in CHCl_{3}/CS_{2} without a Lewis acid (giving mainly the mono-bromo product). Statement I false.
+2. A Lewis acid such as FeBr_{3} does polarise Br_{2} to generate Br^{+}. Statement II true.
+Answer: (4)",Bromination of phenol,"Revise Alcohols, Phenols and Ethers.",
+78,4,conceptual,What does chlorobenzene give with NaOH at 623 K and 300 atm (Dow process)?,"X = sodium phenoxide, Y = phenol. Phenol with concentrated HNO_{3}: trinitration.","1. X = C_{6}H_{5}ONa; Y (after HCl) = phenol.
+2. Conc. HNO_{3} gives 2,4,6-trinitrophenol (picric acid).
+Answer: (4)",Dow process; nitration of phenol,"Revise Alcohols, Phenols and Ethers.",
+79,2,conceptual,N_{2}H_{4} then KOH in ethylene glycol: which named reaction?,Wolff–Kishner reduction: C=O → CH_{2}.,"1. Butan-2-one forms the hydrazone, which loses N_{2} on heating with KOH.
+2. Product: butane.
+Answer: (2)",Wolff–Kishner reduction,"Revise Aldehydes, Ketones and Carboxylic Acids.",
+80,4,conceptual,Ninhydrin detects which functional group?,"Free α-amino groups (amino acids, proteins).","1. Egg albumin is a protein: positive (purple).
+2. PVC, starch, cellulose have no amino groups.
+Answer: (4)",Tests for proteins,Revise Biomolecules.,
+81,22,arithmetic,The energy in the first orbit equals R_{H}; KE = |E|.,(1/2)mv^{2} = 2.18 × 10^{−18} J.,"1. v = √(2 × 2.18 × 10^{−18}/9.1 × 10^{−31}) = 2.19 × 10^{6} m/s.
+2. = 21.9 × 10^{5} ≈ 22 × 10^{5}.
+Answer: 22",Bohr model energies,Revise Structure of Atom.,
+82,8,conceptual,Draw the Lewis structure of NO_{2}^{−}: 18 valence electrons.,O=N–O^{−} with one lone pair on N.,"1. Around N: one double bond (4 e), one single bond (2 e), one lone pair (2 e).
+2. Total 8 (an octet).
+Answer: 8",Lewis structures,Revise Chemical Bonding.,
+83,150,arithmetic,ΔH = ΔU + Δn_{g}RT. Write the combustion equation to find Δn_{g}.,C_{6}H_{5}COOH(s) + 15/2 O_{2} → 7CO_{2} + 3H_{2}O(l).,"1. Δn_{g} = 7 − 7.5 = −0.5.
+2. ΔH = −321.30 + (−0.5)(R)(300) = −321.30 − 150R.
+3. x = 150.
+Answer: 150",ΔH and ΔU,Revise Thermodynamics.,
+84,25,arithmetic,Osmotic pressure comes from the difference in particle concentration across the membrane.,π = (ΔiC)RT; NaCl gives 2 × 0.05 = 0.1 M particles.,"1. Inside 0.2 M, outside 0.1 M particles: difference 0.1 M.
+2. π = 0.1 × 0.083 × 300 = 2.49 bar ≈ 25 × 10^{−1} bar.
+Answer: 25",Osmotic pressure and van't Hoff factor,Revise Solutions.,
+85,3,arithmetic,Compare experiments where only one concentration changes.,"I → IV: [A] × 4, rate × 4. II → III: [B] × 2, rate × 4.","1. Order in A = 1.
+2. Order in B = 2.
+3. Overall order = 3 (check I → II: 3 × 4 = 12, 6 × 10^{−3} × 12 = 7.2 × 10^{−2}).
+Answer: 3",Method of initial rates,Revise Chemical Kinetics.,
+86,5,conceptual,Which of these ions is a strong oxidiser in water? (Hint: E°(M^{3+}/M^{2+}) is large.),"Co^{3+} (d^{6}) is strongly oxidising; Ti^{2+}, V^{2+}, Cr^{2+} are reducing. Spin-only μ = √(n(n + 2)).","1. Co^{3+} is the oxidising agent (E° Co^{3+}/Co^{2+} = +1.97 V).
+2. As a free d^{6} ion it has 4 unpaired electrons: μ = √24 = 4.90 ≈ 5 BM.
+Answer: 5",Redox behaviour of 3d ions; spin-only moment,Revise The d- and f-Block Elements.,"Teacher look: the key uses the free-ion (high-spin) count for Co^{3+}. In 2024 04Apr_Shift2 Q70 NTA's key treats [Co(H_{2}O)_{6}]^{3+} as low spin (0 unpaired), so the two keys use different pictures of aqueous Co^{3+}."
+87,6,conceptual,"Which zone of the flame is B, oxidising or reducing? Which of these metals gives a green bead there?",Point B lies in the inner (reducing) zone. In the reducing flame iron gives a green bead; take the salt as an Fe(III) salt (d^{5}).,"1. B is in the reducing zone; the green bead there comes from iron.
+2. Fe^{3+} is d^{5}: 5 unpaired electrons.
+3. μ = √35 = 5.92 ≈ 6 BM.
+Answer: 6",Borax bead test; magnetic moment,Revise salt analysis (borax bead colours) and spin-only moments.,"Teacher look: depends on reading B as the reducing zone and the salt as Fe(III); copper also gives a green bead (hot, oxidising flame) which would give 2 BM, and an Fe(II) salt would give 5. NTA's key 6 fits an Fe(III) salt."
+88,2,conceptual,Sandmeyer uses Cu(I) salts. Which halides does it give?,CuCl/HCl and CuBr/HBr give ArCl and ArBr. ArI needs only KI; ArF uses Balz–Schiemann.,"1. Chlorobenzene and bromobenzene: Sandmeyer.
+2. Iodobenzene: KI (no Cu); fluorobenzene: Balz–Schiemann; astatobenzene: not by Sandmeyer.
+3. Count = 2.
+Answer: 2",Sandmeyer reaction,Revise diazonium salts in Amines.,
+89,14,conceptual,Conc. H_{2}SO_{4} sulphonates phenol; then conc. HNO_{3} replaces the SO_{3}H groups. Where do they go?,"A = phenol-2,4-disulphonic acid; B = 2,4,6-trinitrophenol (picric acid).","1. A: C_{6}H_{3}(OH)(SO_{3}H)_{2}: 1 + 6 = 7 O.
+2. B: C_{6}H_{2}(OH)(NO_{2})_{3}: 1 + 6 = 7 O.
+3. Total 14.
+Answer: 14",Preparation of picric acid,"Revise reactions of phenol in Alcohols, Phenols and Ethers.",
+90,80,arithmetic,"Bromine water gives a white precipitate with aniline. What is it, and in what mole ratio?","1 mol aniline (93 g) → 1 mol 2,4,6-tribromoaniline (330 g).","1. Moles of aniline = 9.3/93 = 0.1.
+2. Theoretical P = 0.1 × 330 = 33 g.
+3. Yield = 26.4/33 × 100 = 80%.
+Answer: 80",Bromination of aniline; percentage yield,Revise Amines and stoichiometry.,Uses Br = 80.
