@@ -1,0 +1,301 @@
+q,claude_answer,check,hint1,hint2,solution,concept,revise,note
+1,3,arithmetic,How many elements does S have? The three sets have equal sizes.,"S = {2^{1}, …, 2^{9}} has 9 elements: choose 3 for A, 3 of the rest for B, the last 3 for C.","1. S has 9 elements, so |A| = |B| = |C| = 3.
+2. Ways = C(9,3) × C(6,3) × C(3,3) = 84 × 20 × 1 = 1680.
+Answer: (3)",Distributing objects into named groups,"Here A, B, C are named, so we do not divide by 3!. Revise Permutations and Combinations.","Treats A, B, C as labelled sets (unlabelled would give 280, not an option)."
+2,4,conceptual,Write f(g(x)) piece by piece for x ≥ 0 and x ≤ 0.,f(g(x)) = e^{x} − 1 for x ≥ 0 and −x for x ≤ 0.,"1. For x ≥ 0: f(g(x)) = |e^{x} − 1| = e^{x} − 1. For x ≤ 0: |x + 1 − 1| = −x.
+2. Not one-one: e.g. x = 1 and x = −(e − 1) both give e − 1.
+3. Not onto: the values are never negative.
+Answer: (4)",One-one and onto functions; composition,Revise Relations and Functions: checking injectivity and range.,
+3,4,sympy,Simplify the condition in S_{2} by writing z = x + iy and multiplying by the conjugate of the denominator.,Im((z + 1 − √3 i)(1 + √3 i)) ≥ 0 gives √3 x + y ≥ 0.,"1. S_{2}: y ≥ −√3 x, a half-plane bounded by a line through the origin at −60°.
+2. S_{3}: x ≥ 0.
+3. Together with |z| ≤ 5 this is a sector from −60° to 90°: angle 150° = 5π/6.
+4. Area = (1/2)(25)(5π/6) = 125π/12.
+Answer: (4)",Regions in the complex plane,"Revise Complex Numbers: loci, and the sector area formula.",
+4,2,sympy,For infinitely many solutions the coefficient determinant must be 0.,"det = 3m − 6 = 0, so m = 2; then the third equation must be a combination of the first two.","1. m = 2.
+2. (1, 2, 2) = (1/3)(1, 1, 1) + (1/3)(2, 5, 5), so n = (4 + 17)/3 = 7.
+3. m^{2} + n^{2} − mn = 4 + 49 − 14 = 39.
+Answer: (2)",Consistency of a system of linear equations,Revise Determinants (Cramer's rule cases).,
+5,3,sympy,"B is the cofactor matrix, so |B| = |adj A| = |A|^{2}. You only need |A|. Use two cofactor entries to find α and β.",C_{11} = 2α^{2} − αβ = 3α and C_{12} = −(2α^{2} + β^{2}) = −9.,"1. From C_{11}: 2α − β = 3. From C_{12}: 2α^{2} + β^{2} = 9. So α = 2, β = 1.
+2. |A| = β(3α) + α(−9) + 3(3α) = 6 − 18 + 18 = 6.
+3. det(AB) = |A| × |A|^{2} = 216.
+Answer: (3)",Cofactors and adjoint,Revise |adj A| = |A|^{2} for 3 × 3 matrices.,
+6,2,arithmetic,"Arrange the letters alphabetically: B, B, H, J, O. Count words by first letter.","Starting with B: 4! = 24. With H, J or O: 4!/2! = 12 each.","1. B…: 24 words (1–24). H…: 12 (25–36). J…: 12 (37–48).
+2. O… in order: OBBHJ (49), OBBJH (50).
+Answer: (2)",Dictionary rank of words,Revise Permutations with repeated letters.,
+7,2,arithmetic,'One real root bigger than the other' means two distinct real roots: b^{2} > 4ac.,"Count triples with b^{2} > 4ac for b = 3, 4, 5, 6 (b = 1, 2 give none).","1. b = 3: ac ≤ 2 → 3. b = 4: ac ≤ 3 → 5. b = 5: ac ≤ 6 → 14. b = 6: ac ≤ 8 → 16.
+2. Total 38 out of 216.
+3. 216p = 38.
+Answer: (2)",Probability with discriminant,Revise counting cases in Probability.,
+8,1,sympy,"The middle term of an AP is the average of its neighbours, so K equals their sum.","Let t = 4^{x}, s = t + 1/t ≥ 2: K = 4s + s^{2} − 2.","1. K = 4(4^{x} + 4^{−x}) + (16^{x} + 16^{−x}) = 4s + (s^{2} − 2).
+2. This increases with s, and s ≥ 2 (at x = 0).
+3. Least K = 8 + 2 = 10.
+Answer: (1)",AP condition and AM–GM,Revise Sequences and Series and t + 1/t ≥ 2.,
+9,4,sympy,Find r for which the power of x is 0.,"T_{r+1} = C(12,r)(3^{1/5}/x)^{12−r}(2x/5^{1/3})^{r}; power of x = 2r − 12.","1. r = 6.
+2. Term = C(12,6) × 3^{6/5} × 2^{6}/5^{2} = 924 × 3 × 3^{1/5} × 64/25.
+3. = α × 2^{8} × 3^{1/5} gives α = 924 × 3/100 = 27.72.
+4. 25α = 693.
+Answer: (4)",Binomial theorem: constant term,Revise the general term.,
+10,3,sympy,"List where [x^{2}] and [x] jump on [−1, 2], and check whether the jumps cancel.","[x^{2}] jumps at x = −1, 1, √2, √3, 2; [x] jumps at 0, 1, 2. At x = 1 and x = 2 the two jumps cancel.","1. At x = −1 (right side only): [x^{2}] drops from 1 to 0, [x] stays −1: discontinuous.
+2. At 0: [x] jumps, [x^{2}] does not: discontinuous.
+3. At 1: both jump by 1 and cancel: continuous. At 2 (left side only): 3 − 1 = 2 = 4 − 2: continuous.
+4. At √2 and √3: discontinuous.
+5. Total 4.
+Answer: (3)",Continuity of greatest-integer functions,Always check whether two jumps cancel. Revise Continuity.,
+11,1,sympy,Substitute t = x^{10} to turn it into a Beta integral.,"dx = (1/10)t^{−9/10} dt, so the integral is (1/10)∫ t^{1/10 − 1}(1 − t)^{20} dt.","1. Integral = (1/10) β(1/10, 21).
+2. a = 1/10, b = 1/10, c = 21.
+3. 100(a + b + c) = 100 × 21.2 = 2120.
+Answer: (1)",Definite integrals by substitution (Beta function form),Match the integrand to the given definition carefully.,
+12,3,sympy,Write both curves separately for x ≥ 0 and x < 0.,x ≥ 0: y = x^{2} and y = 0 meet only at 0. x < 0: y = −x^{2} and y = 2x meet at x = −2.,"1. The region is between x = −2 and 0, with y = −x^{2} on top.
+2. Area = ∫_{−2}^{0}(−x^{2} − 2x) dx = 4/3.
+Answer: (3)",Area with modulus functions,Revise Application of Integrals.,
+13,1,sympy,"Write the family: centre (−g, −g) on y = x and passing through the origin.",x^{2} + y^{2} + 2g(x + y) = 0. Differentiate to eliminate g: g = −(x + yy')/(1 + y').,"1. Family: x^{2} + y^{2} + 2g(x + y) = 0.
+2. Differentiating: x + yy' + g(1 + y') = 0.
+3. Eliminating g: (x^{2} + y^{2})(1 + y') = 2(x + yy')(x + y).
+4. Rearranging: (x^{2} − y^{2} + 2xy) dx = (x^{2} − y^{2} − 2xy) dy.
+Answer: (1)",Forming differential equations of families of curves,Revise Differential Equations: eliminating arbitrary constants.,
+14,2,sympy,Put A at the origin. Where is the centre of a circle touching BC and CD?,"Centre (4 − r, 4 − r) on the diagonal; F = (2, 2). Distance from centre to F = r.","1. A(0,0), C(4,4), F(2,2).
+2. √2(2 − r) = r gives r = 4 − 2√2.
+3. Check: r^{2} − 8r + 8 = (24 − 16√2) − (32 − 16√2) + 8 = 0.
+Answer: (2)",Circle touching two lines,Revise Circles and coordinate set-up of squares.,
+15,2,sympy,The common chord is S_{1} − S_{2} = 0.,C_{2}: x^{2} + y^{2} + 2x − 3 = 0. Subtract.,"1. Common chord: −4x − 2y + 4 = 0, i.e. 2x + y = 2.
+2. P = (0, 2).
+3. Centre of C_{1} = (1, 1): distance^{2} = 1 + 1 = 2.
+Answer: (2)",Common chord of two circles,Revise Circles.,
+16,4,sympy,Area of PAB using coordinates gives a linear expression in x and y.,Area = (1/2)|3y − 2x − 5| = 10; 'above AB' picks the + sign.,"1. (1/2)|(3)(y − 1) − (2)(x + 1)| = 10, so 3y − 2x − 5 = 20.
+2. −2x + 3y = 25; scale to right side 15: a = −6/5, b = 9/5.
+3. 5a + 2b = −6 + 18/5 = −12/5.
+Answer: (4)",Area of a triangle and locus,Revise Straight Lines.,
+17,4,sympy,"Find the foot of the perpendicular from (8, 5, 7) to the line.","Foot = (1 + 2t, −1 + 3t, 2 + 5t) with t = 3/2.","1. (P − A)·d = (7, 6, 5)·(2, 3, 5) = 57, d·d = 38: t = 3/2.
+2. Foot F = (4, 7/2, 19/2). Image = 2F − P = (0, 2, 12).
+3. Sum = 14.
+Answer: (4)",Image of a point in a line,Revise Three Dimensional Geometry.,
+18,4,sympy,Bring everything to one side using a × (c + i) = −(c + i) × a.,"(c + i) × (2a + b + i) = 0, so c + i = λ(7, 8, 0).","1. c = (7λ − 1, 8λ, 0).
+2. a·c = 2(7λ − 1) + 40λ = 54λ − 2 = −29, so λ = −1/2.
+3. c = (−9/2, −4, 0); c·(−2, 1, 1) = 9 − 4 = 5.
+Answer: (4)",Vector product equations,Revise Vector Algebra.,
+19,2,sympy,a = b × c is perpendicular to c. What does that do to |c − a|^{2}?,"|c − a|^{2} = |c|^{2} + |a|^{2}, and |a| = |b||c| sin α.","1. |c| = 2/(3 sin α), smallest at α = π/3: |c|^{2} = 16/27.
+2. 27|c − a|^{2} = 27(16/27 + 4) = 16 + 108 = 124.
+Answer: (2)",Cross product magnitude,Revise Vector Algebra.,
+20,4,sympy,Write everything in c = cos θ and factorise the denominator.,Denominator = 2(c + 1)(2c^{2} + 2c − 1); numerator = 2c^{2} + 2c − 1. So y = 1/(2(1 + cos θ)) = sec^{2}(θ/2)/4.,"1. y = (1/4) sec^{2}(θ/2).
+2. y' = (1/4) sec^{2}(θ/2) tan(θ/2); y'' = (1/4)[sec^{2}(θ/2) tan^{2}(θ/2) + (1/2) sec^{4}(θ/2)].
+3. At θ = π/2: y = 1/2, y' = 1/2, y'' = 1.
+4. Sum = 2.
+Answer: (4)",Simplifying before differentiating,Revise multiple-angle formulas and differentiation.,
+21,2,sympy,Treat it as a quadratic in sin x. Note 2 + 2x − x^{2} = 3 − (x − 1)^{2}.,It factorises as (sin x + 3)(sin x − (x − 1)^{2}) = 0.,"1. sin x = −3 is impossible, so sin x = (x − 1)^{2}.
+2. Need sin x ≥ 0: x in [0, π].
+3. The parabola starts above sin x at 0, dips below it at x = 1, and is above again by x = 2: two crossings.
+Answer: 2",Graphical solution of equations,Revise sketching sin x with a parabola.,
+22,76,sympy,Look for a pattern: each term is r^{n}/(n(n + 1)) with r = (√3 − √2)/√3.,Use 1/(n(n + 1)) = 1/n − 1/(n + 1) and Σ r^{n}/n = −ln(1 − r).,"1. Sum after 1 = Σ r^{n}/(n(n + 1)) = 1 + ((1 − r)/r) ln(1 − r).
+2. 1 − r = √(2/3), (1 − r)/r = √2/(√3 − √2) = √6 + 2.
+3. Total = 2 + (√6 + 2)(1/2) ln(2/3) = 2 + (√(3/2) + 1) ln(2/3).
+4. a = 2, b = 3: 11a + 18b = 76.
+Answer: 76",Series using log expansion,Revise the series for ln(1 − x).,
+23,170,sympy,1/a is a root of 2 + x − 2x^{2} = 0. Factorise and use 1 − cos u ≈ u^{2}/2.,"2 + x − 2x^{2} = −2(x − 1/a)(x − β'), with roots (1 ± √17)/4.","1. Limit = 16 × (1/2) × 4(1/a − β')^{2}/a^{2} with 1/a − β' = √17/2.
+2. = 136/a^{2}, and a^{2} = (9 − √17)/8.
+3. = 17(9 + √17) = 153 + 17√17, so α + β = 170.
+Answer: 170",Limits with quadratic roots,Revise standard limits.,
+24,1600,sympy,√(8x − x^{2} − 12) is the upper half of a circle. What does the whole expression measure?,"The expression is the squared distance from a point on the upper semicircle (centre (4, 0), radius 2) to (7, 4).","1. Distance from (7, 4) to (4, 0) is 5; the nearest point is on the upper half, so m = (5 − 2)^{2} = 9.
+2. The far point of the full circle is on the lower half, so check the ends (2, 0) and (6, 0): 41 and 17. M = 41.
+3. M^{2} − m^{2} = 1681 − 81 = 1600.
+Answer: 1600",Geometric interpretation of an expression,Revise Circles and distance.,
+25,1,sympy,Remove the x in the numerator with the King's rule.,"f(t) = π∫_{0}^{π} dx/(1 − k sin^{2}x) = 2π × π/(2√(1 − k)), k = cos^{2}t.","1. f(t) = π^{2}/sin t (since √(1 − cos^{2}t) = sin t on (0, π)).
+2. ∫_{0}^{π/2} π^{2}/f(t) dt = ∫_{0}^{π/2} sin t dt = 1.
+Answer: 1",Definite integrals: King's rule and standard forms,Revise properties of definite integrals.,
+26,18,sympy,Find the integrating factor. Notice what y e^{−1/(1 + x^{2})} turns out to be.,IF = e^{−1/(1 + x^{2})}; then f(x) = y × IF = ∫ x dx.,"1. f(x) = x^{2}/2 (constant 0 from y(0) = 0).
+2. x^{2}/2 = x + 4 gives x = −2, 4.
+3. Area = ∫_{−2}^{4} (x + 4 − x^{2}/2) dx = 18.
+Answer: 18",Linear DE and area,Revise the integrating factor and areas.,
+27,10,sympy,The tangent has slope −1/2. Use the point of contact for a parabola with given slope.,"For (y)^{2} = 4a(X), a = 1, X = x − 9: point of contact (a/m^{2}, 2a/m).","1. m = −1/2: X = 4, y = −4, so P = (13, −4).
+2. Circle centre (7, 4).
+3. Distance = √(36 + 64) = 10.
+Answer: 10",Tangent to a parabola,Revise Conic Sections.,
+28,25,sympy,Find the feet of the common perpendicular on both lines.,"PQ must be perpendicular to both directions (−3, 4, 2) and (−1, 2, 0).","1. Solving gives s = −1, t = 1: feet (1, −2, 3) and (−3, −4, 1).
+2. The SD line: (1, −2, 3) + k(2, 1, 1); x = −1 at k = −1: (−1, −3, 2).
+3. (α − β)^{2} = (−5)^{2} = 25.
+Answer: 25",Shortest distance line between skew lines,Revise Three Dimensional Geometry.,
+29,5,sympy,First find K. Then write μ and σ in terms of α.,"K = 1/4, μ = α/3 − 1/2, σ^{2} = E[X^{2}] − μ^{2}, and σ = μ + 2.","1. K = 1/4; μ = α/3 − 1/2; E[X^{2}] = α^{2}/3 + 5/2.
+2. σ = μ + 2 squared and equated: α^{2}/9 = 2α/3, so α = 6 (α = 0 would repeat the value 0).
+3. μ = 3/2, σ = 7/2: σ + μ = 5.
+Answer: 5",Mean and variance,Revise Probability distributions.,α = 0 is rejected because X = 0 is already listed (it would give 1).
+30,3,sympy,Split at x = −5 and x = −7.,x ≥ −5: x^{2} + 7x + 12 = 0. −7 ≤ x < −5: x^{2} + 3x − 12 = 0. x < −7: x^{2} + 7x + 16 = 0.,"1. x ≥ −5: x = −3, −4 (both valid).
+2. −7 ≤ x < −5: x = (−3 − √57)/2 ≈ −5.27 valid.
+3. x < −7: no real roots.
+4. Total 3.
+Answer: 3",Equations with modulus,Check each root lies in its own interval.,
+31,1,conceptual,"a/V^{2} has the dimensions of pressure, and b has the dimensions of volume.","[a] = [P][V^{2}] = ML^{5}T^{−2}, [b] = L^{3}.","1. [a] = ML^{−1}T^{−2} × L^{6} = ML^{5}T^{−2}.
+2. [b] = L^{3}.
+3. [ab^{−1}] = ML^{2}T^{−2}.
+Answer: (1)",Dimensions in the van der Waals equation,Revise Units and Measurements.,
+32,3,arithmetic,Find ω from 120 revolutions in 3 minutes.,ω = 2π × 120/180 rad/s; a = ω^{2}r.,"1. ω = 4π/3 rad/s.
+2. a = (16π^{2}/9) × 9 = 16π^{2} m s^{−2}.
+Answer: (3)",Centripetal acceleration,Revise Motion in a Plane.,"The monkey moves with the man, so it has the same acceleration."
+33,3,arithmetic,"On a horizontal surface, N = mg.",f_{k} = μ_{k}mg.,"1. f = 0.3 × 50 × 9.8 = 147 N.
+Answer: (3)",Kinetic friction,Revise Laws of Motion.,Uses g = 9.8 m s^{−2}.
+34,1,conceptual,"Does |p| change with time? If not, how is dp/dt oriented relative to p?","|p| = 1 always, so F = dp/dt ⊥ p.","1. p = (cos kt, −sin kt), |p| = 1.
+2. F = dp/dt = k(−sin kt, −cos kt); F·p = 0.
+3. Angle = π/2.
+Answer: (1)",Force as rate of change of momentum,Revise Laws of Motion.,
+35,2,arithmetic,Constant power: P = Fv = mv dv/dt. How does v grow with t?,"v^{2} ∝ t, so v ∝ t^{1/2}.","1. mv dv = P dt gives v ∝ t^{1/2}.
+2. x = ∫ v dt ∝ t^{3/2}.
+Answer: (2)",Constant power motion,"Revise Work, Energy and Power.",
+36,2,arithmetic,LC = 1 MSD − 1 VSD.,"20 VSD = 19 MSD, so 1 VSD = 19/20 MSD.","1. LC = MSD/20 = 0.1 mm.
+2. MSD = 2 mm.
+Answer: (2)",Vernier callipers,Revise least count in Units and Measurements.,
+37,3,arithmetic,Kepler's law: T^{2} = 4π^{2}r^{3}/(GM).,"r^{3} ∝ MT^{2}: compare with earth (24 h, 4.2 × 10^{4} km).","1. r^{3}/r_{E}^{3} = (1/4)(6/24)^{2} = 1/64.
+2. r = 4.2 × 10^{4}/4 = 1.05 × 10^{4} km.
+Answer: (3)",Kepler's third law,Revise Gravitation.,
+38,4,conceptual,"Which modulus uses tangential stress, which uses uniform normal pressure?",Restoring force per unit area = stress. Tangential: shear. Uniform pressure all round: bulk. Normal on opposite faces: Young's.,"1. A → III (stress). B → IV (shear modulus). C → I (bulk modulus). D → II (Young's modulus).
+Answer: (4)",Elastic moduli,Revise Mechanical Properties of Solids.,
+39,1,conceptual,Recall the mean free path formula from kinetic theory.,λ = 1/(√2 nπd^{2}).,"1. Mean free path = 1/(√2 π d^{2} n).
+Answer: (1)",Mean free path,Revise Kinetic Theory.,
+40,3,conceptual,What builds up on a moving tanker because of friction with air?,Static charge; the chain earths it.,"1. The chain conducts charge from air friction to the ground and prevents sparks.
+Answer: (3)",Electrostatics in daily life,Revise Electric Charges and Fields.,
+41,1,arithmetic,In series the same current flows through L. Find X_{L}.,X_{L} = 2πfL.,"1. X_{L} = 2π × 50 × 0.01 = 3.14 Ω.
+2. I = 31.4/3.14 = 10 A.
+Answer: (1)",Inductive reactance,Revise Alternating Current.,
+42,2,arithmetic,The 5 Ω and 10 Ω are in parallel. What is common to them?,Same voltage: P = V^{2}/R.,"1. P_{5}/P_{10} = 10/5 = 2.
+Answer: (2)",Power in parallel resistors,Revise Current Electricity.,
+43,2,conceptual,Recall the Lorentz force and the order in the cross product.,F = qE + q(v × B).,"1. F_{1} = qE, F_{2} = q(v × B).
+2. q(B × v) has the wrong sign.
+Answer: (2)",Lorentz force,Revise Moving Charges and Magnetism.,
+44,2,conceptual,Order the EM spectrum by wavelength.,Gamma < 10^{−3} nm < X-rays < 1 nm < UV < 400 nm < visible < 700 nm < IR < 1 mm.,"1. IR: 1 mm to 700 nm (III). UV: 400 nm to 1 nm (II). X-rays: 1 nm to 10^{−3} nm (IV). Gamma: below 10^{−3} nm (I).
+Answer: (2)",Electromagnetic spectrum,Revise Electromagnetic Waves.,
+45,1,conceptual,Why does a prism split white light at all?,Refractive index depends on wavelength; red has the smallest n.,"1. Red deviates least. Statement I true.
+2. n varies with wavelength in a dispersive medium. Statement II true.
+Answer: (1)",Dispersion,Revise Ray Optics: prism.,
+46,1,arithmetic,Find the full-scale current of the galvanometer from the voltmeter data.,I_{g} = 10/(100 + 400). Shunt S = I_{g}G/(I − I_{g}).,"1. I_{g} = 0.02 A.
+2. S = 0.02 × 100/(10 − 0.02) ≈ 0.2 Ω = 20 × 10^{−2} Ω.
+Answer: (1)",Converting a galvanometer,Revise Moving Charges and Magnetism.,
+47,3,conceptual,eV_{0} = hν − φ. Which quantities appear?,"V_{0} depends on ν and φ, not on intensity.","1. Options 1, 2, 4 are true.
+2. V_{0} does not change with intensity, so option 3 is not true.
+Answer: (3)",Stopping potential,Revise Dual Nature of Radiation and Matter.,
+48,1,conceptual,Write L = mvr and find how v depends on r.,mv^{2}/r = ke^{2}/r^{2} gives v ∝ r^{−1/2}.,"1. v ∝ 1/√r.
+2. L = mvr ∝ √r.
+Answer: (1)",Bohr model,"Revise Atoms (r ∝ n^{2}, L ∝ n).",
+49,1,sympy,Combine PV^{γ} = constant with PV = nRT to relate P and T.,P ∝ T^{γ/(γ−1)}.,"1. γ/(γ − 1) = 3.
+2. γ = 3/2.
+Answer: (1)",Adiabatic relations,Revise Thermodynamics.,
+50,1,conceptual,Write the Boolean expression: OR of (A + B) and (B·1).,Y = A + B + B = A + B.,"1. Y = A + B.
+2. Y = 0 only when A = 0 and B = 0.
+Answer: (1)",Logic gates,Revise Semiconductor Electronics.,
+51,16,arithmetic,H ∝ u^{2}.,H = u^{2}sin^{2}θ/(2g).,"1. Halving u divides H by 4.
+2. 64/4 = 16 m.
+Answer: 16",Projectile height,Revise Motion in a Plane.,Same angle of projection assumed.
+52,2,arithmetic,For a hollow sphere I = (2/3)MR^{2}. Rolling: v = ωR.,KE_{rot} = (1/2)(2/3)Mv^{2}; KE_{total} = (1/2)Mv^{2}(1 + 2/3).,"1. KE_{rot}/KE_{total} = (1/3)/(5/6) = 2/5.
+2. x = 2.
+Answer: 2",Rolling motion energies,Revise Rotational Motion.,
+53,275,arithmetic,First minimum: a sin θ = λ.,y = λD/a.,"1. y = 550 × 10^{−9} × 1/(0.2 × 10^{−3}) = 2.75 × 10^{−3} m.
+2. = 275 × 10^{−5} m.
+Answer: 275",Single slit diffraction,Revise Wave Optics.,
+54,1000,arithmetic,Pascal's law: equal pressure. F ∝ area ∝ d^{2}.,F_{2} = F_{1}(d_{2}/d_{1})^{2}.,"1. F = 10 × (14/1.4)^{2} = 1000 N.
+Answer: 1000",Hydraulic press,Revise Mechanical Properties of Fluids.,
+55,60,arithmetic,Same tension: f ∝ 1/L.,f_{1}L_{1} = f_{2}L_{2}.,"1. L = 90 × 400/600 = 60 cm.
+Answer: 60",Sonometer,Revise Waves.,
+56,5,arithmetic,Each part has 2 Ω.,Pair in parallel: 1 Ω. Five pairs in series.,"1. Each part 2 Ω; each parallel pair 1 Ω.
+2. 5 pairs in series: 5 Ω.
+Answer: 5",Series and parallel resistance,Revise Current Electricity.,
+57,500,arithmetic,"Field inside a long solenoid: B = μ_{0}nI, n = turns per metre.",n = m/0.5.,"1. 6.28 × 10^{−3} = 4π × 10^{−7} × (m/0.5) × 5.
+2. m = 500.
+Answer: 500",Solenoid field,Revise Moving Charges and Magnetism.,
+58,16,arithmetic,Compare axial field at distance r with equatorial field at 2r for a short dipole.,"E_{axial} = 2kp/r^{3}, E_{eq} = kp/d^{3}.","1. At P: E = 2kp/r^{3}.
+2. At R (distance 2r): kp/(8r^{3}) = E/16.
+3. x = 16.
+Answer: 16",Field of an electric dipole,Revise Electric Charges and Fields.,"Uses the short-dipole formulas, as the key does."
+59,4,arithmetic,|emf| = L dI/dt.,dI/dt = 3 A/s.,"1. L = 12 mV/3 = 4 mH.
+Answer: 4",Self-induction,Revise Electromagnetic Induction.,
+60,6588,arithmetic,The shortest Lyman line gives 1/R. The longest Balmer line is 3 → 2.,1/λ = R(1/4 − 1/9) = 5R/36.,"1. 1/R = 915 Å.
+2. λ = 36 × 915/5 = 6588 Å.
+Answer: 6588",Hydrogen spectrum,Revise Atoms.,
+61,1,arithmetic,One CH_{4} gives one CO_{2}.,CH_{4} + 2O_{2} → CO_{2} + 2H_{2}O; moles of CO_{2} = 11/44.,"1. 11 g CO_{2} = 0.25 mol.
+2. CH_{4} needed = 0.25 mol.
+Answer: (1)",Stoichiometry,Revise Some Basic Concepts of Chemistry.,
+62,1,conceptual,"In NH_{3} and NF_{3}, does the lone pair dipole add to or oppose the bond dipoles?","In NH_{3} the N–H bond dipoles point towards N, the same way as the lone pair; in NF_{3} they point away.","1. Both are pyramidal with a lone pair on N. NH_{3} (1.47 D) > NF_{3} (0.23 D). A true.
+2. R gives the reason: lone pair and bond dipoles add in NH_{3} but oppose in NF_{3} (F most electronegative).
+Answer: (1)",Dipole moments of NH_{3} and NF_{3},Revise Chemical Bonding.,
+63,1,disputed,Passing HCl adds Cl^{−} ions to a saturated chloride solution. What does the common ion do to the salt's solubility?,"Common ion effect: extra Cl^{−} lowers the solubility of BaCl_{2} or NaCl, so some solid separates.","1. Statement I: HCl gas adds Cl^{−} to saturated BaCl_{2}; BaCl_{2} separates, giving white turbidity. True.
+2. Statement II: the same common ion effect throws pure NaCl out of saturated NaCl solution (this is how NaCl is purified). True.
+3. On this reasoning both statements are correct.
+Answer: (1)",Common ion effect,Revise the common ion effect in Equilibrium.,"DISPUTED: NTA's final key is (3) (Statement I correct, II incorrect). Claude finds both statements correct: precipitation of pure NaCl by passing HCl into its saturated solution is the standard example of the common ion effect. Claude could not find a reading that makes II false. Owner/teacher to check."
+64,2,arithmetic,Here M is the anode and X the cathode. Compute E_{cell} = E_{cathode} − E_{anode}.,E_{cell} = 0.34 − 0.46.,"1. E_{cell} = −0.12 V for M + X → M^{2+} + X^{2−}: not spontaneous.
+2. So the reverse, M^{2+} + X^{2−} → M + X, is spontaneous.
+3. ±0.80 V would wrongly add the potentials.
+Answer: (2)",Cell EMF and spontaneity,Revise Electrochemistry.,
+65,3,conceptual,Faraday's first law: m = ZQ.,Z is the mass deposited by 1 coulomb.,"1. With Q = 1 C, m = Z: one electrochemical equivalent.
+Answer: (3)",Faraday's laws,Revise Electrochemistry.,
+66,3,conceptual,Cations are smaller than their atoms. Is the same true for anions?,Anions are larger than their parent atoms.,"1. Statement I: Na^{+} (1.02 Å) is smaller than Na (1.86 Å). True.
+2. Statement II: anions such as Cl^{−} are larger than Cl. False.
+Answer: (3)",Ionic radii,Revise Classification of Elements and Periodicity.,
+67,4,conceptual,Count bond pairs and lone pairs around the central atom.,ICl: linear. ICl_{3}: 3 bp + 2 lp. ClF_{5}: 5 bp + 1 lp. IF_{7}: 7 bp.,"1. ICl linear (IV); ICl_{3} T-shaped (I); ClF_{5} square pyramidal (II); IF_{7} pentagonal bipyramidal (III).
+Answer: (4)",Shapes of interhalogens,Revise VSEPR and The p-Block Elements.,
+68,2,conceptual,"Check each statement, especially the radius of Ga vs Al.",Ga (135 pm) is smaller than Al (143 pm). Electronegativity falls from B to Al and then rises slightly.,"1. A false (Ga < Al).
+2. B false (not a steady decrease).
+3. C true.
+4. D false (+1 is stable only for heavier members like Tl).
+5. E true (NCERT: sp^{3}d^{2} in [Al(H_{2}O)_{6}]^{3+}).
+Answer: (2)",Group 13 properties,Revise The p-Block Elements (group 13).,E follows NCERT's description.
+69,4,conceptual,Which way do these ions like to change oxidation state: +2 to +3?,"E°(M^{3+}/M^{2+}) is negative for Ti, V and Cr.","1. Ti^{2+}, V^{2+}, Cr^{2+} are strong reducing agents.
+2. All three liberate H_{2} from dilute acid (NCERT).
+Answer: (4)",Reducing nature of 3d M^{2+} ions,Revise The d- and f-Block Elements.,
+70,1,conceptual,sp^{3} means tetrahedral. Are any two positions 'cis' or 'trans' in a tetrahedron?,All positions in a tetrahedron are adjacent to each other.,"1. Tetrahedral complexes show no geometrical isomerism.
+2. MABXL is optically active but has 0 geometrical isomers.
+Answer: (1)",Isomerism in tetrahedral complexes,Revise Coordination Compounds.,
+71,2,arithmetic,In a tetrahedral field the e set is lower. Electrons go into t_{2} only after e holds 2 (high spin).,"Find the d-electron count: Ti(IV) d^{0}, Mn(VII) d^{0}, Fe(VI) d^{2}, Fe(III) d^{5}, Co(II) d^{7}.","1. d^{0}, d^{0}, d^{2} (e^{2}): no t_{2} electrons.
+2. d^{5} (e^{2}t_{2}^{3}) and d^{7} (e^{4}t_{2}^{3}) have t_{2} electrons.
+3. Count = 3.
+Answer: (2)",Tetrahedral crystal field splitting,Revise CFT in Coordination Compounds.,
+72,3,conceptual,Which salt hydrolyses and spoils Mohr's salt crystals?,Fe^{2+} hydrolyses (and oxidises); acid suppresses it.,"1. Dilute H_{2}SO_{4} prevents hydrolysis of ferrous sulphate.
+Answer: (3)",Preparation of Mohr's salt,Revise practical chemistry.,
+73,3,conceptual,Pick the principal group first: COOH beats CHO and OH.,Main chain must include COOH and the C=C; CHO on C-2 becomes 'formyl'.,"1. C-1 = COOH; C-2 carries CHO (formyl); C-4 carries OH; C=C between C-6 and C-7.
+2. Name: 2-formyl-4-hydroxyhept-6-enoic acid.
+Answer: (3)",IUPAC nomenclature,Revise IUPAC priority rules.,
+74,4,conceptual,"Ask what differs: position of a group, chain shape, functional group, or alkyl groups around O.",Position: n-/iso-propanol. Metamers: ethers with different alkyls. Functional: ketone/aldehyde. Chain: branched pentanes.,"1. A → III, B → I, C → IV, D → II.
+Answer: (4)",Structural isomerism,Revise Organic Chemistry: Some Basic Principles.,
+75,1,conceptual,"This is the Haworth synthesis: acylation, Clemmensen reduction, then ring closure.",Friedel–Crafts with succinic anhydride gives a keto acid; Zn–Hg/HCl reduces the ketone to CH_{2}.,"1. A = C_{6}H_{5}COCH_{2}CH_{2}COOH.
+2. B = C_{6}H_{5}CH_{2}CH_{2}CH_{2}COOH.
+3. H^{+} closes the ring to α-tetralone.
+Answer: (1)",Friedel–Crafts acylation and Clemmensen reduction,"Revise Aldehydes, Ketones and Carboxylic Acids.",
+76,1,conceptual,Can the C–OH bond of phenol be broken by HCl?,The C–O bond in phenol has partial double-bond character.,"1. Phenol does not give chlorobenzene with HCl.
+2. The Dow process, chlorination of anisole and cleavage of anisole by HBr all occur.
+Answer: (1)",Reactions of phenol and anisole,"Revise Alcohols, Phenols and Ethers.",
+77,2,conceptual,"Strong base, tertiary halide: elimination. Which alkene is more substituted?",Saytzeff: the endocyclic trisubstituted alkene.,"1. E2 gives 1-methylcyclopentene (more substituted) as the major product.
+Answer: (2)",Saytzeff elimination,Revise Haloalkanes and Haloarenes.,
+78,2,conceptual,Jones reagent oxidises a primary alcohol all the way to the acid. NaOH/CaO then does what?,Ethanol → acetic acid; soda-lime decarboxylation removes CO_{2}.,"1. CH_{3}CH_{2}OH → CH_{3}COOH (KMnO_{4} leaves it).
+2. NaOH/CaO, heat: CH_{3}COONa → CH_{4}.
+Answer: (2)",Oxidation and decarboxylation,Revise Carboxylic Acids.,
+79,3,conceptual,Hot acidic KMnO_{4} cleaves the C=C completely.,Each ring CH= becomes COOH.,"1. Cyclohexene → HOOC(CH_{2})_{4}COOH, adipic acid.
+Answer: (3)",Oxidative cleavage of alkenes,Revise Hydrocarbons.,
+80,4,conceptual,Heating changes the protein's shape but not its sequence.,Denaturation destroys secondary and tertiary structure; the primary structure stays.,"1. Coagulation of egg white is denaturation.
+Answer: (4)",Denaturation of proteins,Revise Biomolecules.,
+81,6,arithmetic,"For n = 4, which l values allow m_{l} = ±1?","l = 1, 2, 3 each have m_{l} = +1 and −1.","1. 3 subshells × 2 orbitals = 6 orbitals.
+2. One electron with m_{s} = −1/2 in each: 6.
+Answer: 6",Quantum numbers,Revise Structure of Atom.,
+82,6,conceptual,Symmetric shapes cancel bond dipoles.,"Zero: H_{2}, CO_{2}, BF_{3}, CH_{4}, SiF_{4}, BeF_{2}.","1. Non-zero: HF, H_{2}S, NH_{3}, CHCl_{3}, H_{2}O.
+2. Zero: 6.
+Answer: 6",Dipole moment,Revise Chemical Bonding.,
+83,6535,arithmetic,Δ_{c}H = ΣΔ_{f}H(products) − ΣΔ_{f}H(reactants).,6(−393.5) + 3(−286) − 48.5.,"1. Per mole: −2361 − 858 − 48.5 = −3267.5 kJ.
+2. For 2 mol: −6535 kJ.
+Answer: 6535",Hess's law,Revise Thermodynamics.,
+84,19,arithmetic,"Find moles of acetic acid, then its degree of dissociation.",α = √(K_{a}/C); i = 1 + α; ΔT = iK_{f}m.,"1. 5 mL × 1.2 g/mL = 6 g = 0.1 mol in 1 kg water.
+2. α = √(6.25 × 10^{−5}/0.1) = 0.025, i = 1.025.
+3. ΔT = 1.025 × 1.86 × 0.1 = 0.19 °C = 19 × 10^{−2}.
+Answer: 19",Freezing point depression with dissociation,Revise Solutions.,The density is printed as '1.2 g mol^{−1}'; read as 1.2 g mL^{−1}.
+85,315,arithmetic,Single step: rate = k p_{A}^{2} p_{B}. Find the pressures when p_{C} = 0.5.,Each 0.5 atm of C uses 1 atm of A and 0.5 atm of B.,"1. r_{1} ∝ 1.5^{2} × 0.7 = 1.575.
+2. Later p_{A} = 0.5, p_{B} = 0.2: r_{2} ∝ 0.05.
+3. r_{1}/r_{2} = 31.5 = 315 × 10^{−1}.
+Answer: 315",Rate law of an elementary reaction,Revise Chemical Kinetics.,
+86,6,arithmetic,Write the roasting reaction of chromite with Na_{2}CO_{3} in air.,4FeCr_{2}O_{4} + 8Na_{2}CO_{3} + 7O_{2} → 8Na_{2}CrO_{4} + 2Fe_{2}O_{3} + 8CO_{2}.,"1. Na_{2}CrO_{4}: Cr^{6+} d^{0}: 0 BM.
+2. Fe_{2}O_{3}: Fe^{3+} d^{5}: √35 = 5.92 BM.
+3. Sum ≈ 6.
+Answer: 6",Preparation of dichromate; magnetic moments,Revise The d- and f-Block Elements.,
+87,318,arithmetic,One acetone condenses with two benzaldehydes.,"Dibenzalacetone C_{17}H_{14}O, M = 234.","1. 351/234 = 1.5 mol; acetone 87/58 = 1.5 mol (consistent).
+2. Benzaldehyde = 3 mol × 106 = 318 g.
+Answer: 318",Claisen–Schmidt condensation,Revise Aldehydes and Ketones.,
+88,50,arithmetic,R_{f} = distance moved by the spot / distance moved by the solvent.,"Solvent front 12.5 cm; A at 5.0 cm, C at 10.0 cm.","1. R_{f}(A) = 0.4, R_{f}(C) = 0.8.
+2. Ratio 0.5 = 50 × 10^{−2}.
+Answer: 50",Chromatography,Revise purification methods.,
+89,4,conceptual,Hot alkaline KMnO_{4} oxidises the whole side chain. Where does Br go on benzoic acid?,"A = potassium benzoate, B = benzoic acid, C = m-bromobenzoic acid.","1. C = 3-bromobenzoic acid (COOH is meta-directing).
+2. π bonds: 3 in the ring + 1 C=O = 4.
+Answer: 4",Side-chain oxidation and directing effects,Revise Hydrocarbons and Carboxylic Acids.,
+90,9,arithmetic,"One amine gives one diazonium chloride, which gives one HCl on hydrolysis.",C_{2}H_{5}N_{2}^{+}Cl^{−} + H_{2}O → C_{2}H_{5}OH + N_{2} + HCl.,"1. HCl = 0.2 mol, so amine = 0.2 mol.
+2. Mass = 0.2 × 45 = 9 g.
+Answer: 9",Primary amines with nitrous acid,Revise Amines.,
