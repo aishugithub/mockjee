@@ -1,0 +1,237 @@
+q,claude_answer,check,hint1,hint2,solution,concept,revise,note
+1,2,sympy,What is the range of sin 3x + cos 3x?,"It is [−√2, √2], so f runs from 1/(2 + √2) to 1/(2 − √2).","1. a = 1/(2 + √2), b = 1/(2 − √2): a + b = 2, ab = 1/2.
+2. α = 1, β = 1/√2.
+3. α/β = √2.
+Answer: (2)",Range; AM and GM,Revise Trigonometric Functions.,
+2,3,sympy,Re((z − 2i)/(z + 2i)) = 0 describes a circle. Which one?,It is |z| = 2 (excluding z = −2i).,"1. Farthest point of |z| = 2 from 6 + 8i: distance 10 + 2.
+2. That point (−6/5, −8/5) is allowed.
+3. Maximum = 12.
+Answer: (3)",Loci in the complex plane,Revise Complex Numbers.,
+3,3,sympy,Each root satisfies x^{2} = √2 x + √3. Multiply by x^{n}.,P_{n+2} = √2 P_{n+1} + √3 P_{n}.,"1. 11P_{12} = 11√2 P_{11} + 11√3 P_{10}.
+2. Expression = 10P_{11} − 10√2 P_{10} = 10√3 P_{9}.
+Answer: (3)",Recurrence for power sums,Revise Quadratic Equations.,
+4,3,sympy,AB^{−1} = A^{−1} gives A^{2} = B. What is C^{2}?,"C = B^{−1}AB, so C^{2} = B^{−1}A^{2}B = B.","1. C^{4} = B^{2}. Cayley–Hamilton: B^{2} − 6B + 2I = 0.
+2. α = −6, β = 2: 2β − α = 10.
+Answer: (3)",Matrix algebra and Cayley–Hamilton,Revise Matrices.,
+5,1,sympy,Expand ln(1 + 2x)/(2x) for small x.,(1 + 2x)^{1/(2x)} = e^{1 − x + …} ≈ e(1 − x).,"1. e − e(1 − x) = ex.
+2. Limit = e.
+Answer: (1)",Limits with e,Revise Limits.,
+6,1,sympy,General term power of x: 2(9 − r)/3 − 2r/5.,x^{2/3}: r = 5. x^{−2/5}: r = 6.,"1. C(9,5)/2^{5} = 63/16; C(9,6)/2^{6} = 21/16.
+2. Sum = 21/4.
+Answer: (1)",Binomial theorem,Revise the general term.,
+7,2,sympy,Cube the first sum and divide by the second.,(1 − r^{3})/(1 − r)^{3} = 57^{3}/9747 = 19.,"1. 6r^{2} − 13r + 6 = 0, r = 2/3 (|r| < 1).
+2. a = 57/3 = 19; a + 18r = 31.
+Answer: (2)",Infinite GP,Revise Sequences and Series.,
+8,1,sympy,y = e^{3 sin^{−1}x}. Find y' and then y''.,√(1 − x^{2}) y' = 3y; differentiate again.,"1. (1 − x^{2})y'' − xy' = 9y.
+2. At x = 1/2: 9e^{3π/6} = 9e^{π/2}.
+Answer: (1)",Second derivatives,Revise Continuity and Differentiability.,
+9,3,sympy,0/0 form: use L'Hôpital with the Leibniz rule. It is needed twice.,"Numerator derivative = −3x^{2}(sin 2x + cos x), which is 0 at π/2.","1. Differentiate again at π/2: −3x^{2}(2cos 2x − sin x) = −3(π^{2}/4)(−3) = 9π^{2}/4.
+2. Denominator's second derivative is 2.
+3. Limit = 9π^{2}/8.
+Answer: (3)",Limits with integrals,Revise L'Hôpital-style limits and Leibniz rule.,
+10,1,sympy,"Use parametric form x = √18 cos t, y = √6 sin t.",Area swept from the centre = (ab/2)t.,"1. y = x at tan t = √3, t = π/3.
+2. Area = (√18√6/2)(π/3) = √3π.
+Answer: (1)",Area of an elliptic sector,Revise Application of Integrals.,
+11,2,sympy,Put x = cos 2θ.,"√((1 − x)/(1 + x)) = tan θ, and cot^{−1}(tan θ) = π/2 − θ.","1. cos(π − 2θ) = −x.
+2. ∫_{1/4}^{3/4} −x dx = −1/4.
+Answer: (2)",Inverse trig simplification,Revise Inverse Trigonometric Functions.,
+12,1,sympy,Integrate by parts.,∫ ln(x + √(x^{2} + 1)) dx = x ln(x + √(x^{2} + 1)) − √(x^{2} + 1).,"1. Value = 2ln(2 + √5) − √5 + ln(√2 − 1) + √2.
+2. = √2 − √5 + ln((9 + 4√5)/(1 + √2)).
+Answer: (1)",Integration by parts,Revise Integrals.,
+13,1,conceptual,Differentiate both sides with respect to x.,"√(1 − y'^{2}) = y, so y' = ±√(1 − y^{2}).","1. With y(0) = 0: y = sin x (y ≥ 0 on [0, 3]).
+2. y'' + y = 0, so y'' + y + 1 = 1.
+Answer: (1)",Differential equations from integral equations,Revise Differential Equations.,"Teacher look: y = sin x on [0, π/2] then y = 1 also satisfies the equation (giving 2). The key takes y = sin x throughout."
+14,1,sympy,Orthocentre: AP ⊥ BC and BP ⊥ AC.,"(α + 2, β − 3)·(−2, 2) = 0 and (α − 3, β + 1)·(3, −2) = 0.","1. C = (21, 26): α + β = 47.
+2. Circumcentre of PAB: (−19/2, −23/2), h + k = −21.
+3. 47 − 42 = 5.
+Answer: (1)",Orthocentre and circumcentre,Revise Straight Lines.,
+15,4,sympy,Find the ellipse's eccentricity and focal distance.,"e_{E} = 1/2, focal distance 5 from (1, 1).","1. Hyperbola: e = 2, ae = 5, a = 5/2, b^{2} = 75/4.
+2. α = 5, β = 5√3.
+3. 3(25) + 2(75) = 225.
+Answer: (4)",Ellipse and hyperbola,Revise Conic Sections.,
+16,4,sympy,Move from the point along the given direction until you hit L.,"Direction (2, 1, 2); L: (1 + t, 2 + t, 3 + 2t).","1. Meeting at s = −1, t = 2/3.
+2. Distance = |s| × |(2,1,2)| = 3.
+Answer: (4)",Distance along a line,Revise Three Dimensional Geometry.,
+17,4,sympy,a × (r − b) = 0 means r = b + λa.,a·r = 0 gives λ = −(a·b)/|a|^{2}.,"1. λ = −1/2; r = (3/2, 0, 1/2), |r| = √10/2: I incorrect.
+2. cos 2A + cos 2B + cos 2C ≥ −3/2: II correct.
+Answer: (4)",Vector equations; triangle inequality,Revise Vector Algebra and Trigonometry.,
+18,2,sympy,"Parallelogram with diagonals p, q has area |p × q|/2.","(1, α, 2) × (−1, β, 0) = (−2β, −2, α + β).","1. 4β^{2} + 4 + (α + β)^{2} = 21 with αβ = −6.
+2. (3, −2) and (−3, 2).
+3. 9 + 4 + 6 = 19.
+Answer: (2)",Area from diagonals,Revise Vector Algebra.,
+19,2,sympy,"Seven observations: c, c, 2c, …, 6c.",Mean = 22c/7; Σx^{2} = 92c^{2}.,"1. Var = 92c^{2}/7 − (22c/7)^{2} = 160c^{2}/49 = 160.
+2. c = 7.
+Answer: (2)",Variance,Revise Statistics.,
+20,1,arithmetic,You need three strictly increasing numbers.,Choose 3 different faces; only one order works.,"1. C(6,3)/216 = 20/216 = 5/54.
+Answer: (1)",Probability,Revise Probability.,
+21,24,arithmetic,List natural solutions of 2x + 3y = 23.,"(10,1), (7,3), (4,5), (1,7).","1. |A| = |B| = 4.
+2. One-one functions: 4! = 24.
+Answer: 24",Counting functions,Revise Relations and Functions.,
+22,450,sympy,Solve by Cramer's rule.,"x = 25m/(2m + 15), y = (2m − 60)/(2m + 15).","1. x < 0, y < 0 only for −15/2 < m < 0.
+2. 8∫(2m + 15) dm over that interval = 8 × 225/4 = 450.
+Answer: 450",Linear systems with a parameter,Revise Determinants.,
+23,70,arithmetic,"Fix the hundreds digit a, count (b, c) with b + c = 14 − a.","Pairs with sum s (0..9 each): s + 1 if s ≤ 9, 19 − s otherwise.","1. 6 + 7 + 8 + 9 + 10 + 9 + 8 + 7 + 6 = 70.
+Answer: 70",Counting digits,Revise Permutations and Combinations.,
+24,1011,sympy,1/(2k(2k − 1)) = 1/(2k − 1) − 1/(2k).,The second bracket = 1/1013 + … + 1/2024.,"1. With α = 1011 the first bracket is 1/1012 + … + 1/2023.
+2. Difference = 1/1012 − 1/2024 = 1/2024.
+Answer: 1011",Telescoping harmonic sums,Revise Sequences and Series.,
+25,252,sympy,f'(x) = 4(p^{2} − 6p + 8) sin 4x + 2(2 − p). When is it never zero?,"Need 2|p − 2| > 4|(p − 2)(p − 4)|, with p ≠ 2.","1. 1 > 2|p − 4|: 7/2 < p < 9/2.
+2. 16ab = 16 × 63/4 = 252.
+Answer: 252",Critical points,Revise Application of Derivatives.,"p = 2 makes f constant (every point critical), so it is excluded."
+26,61,sympy,Solve f' = 3f + α.,f = Ce^{3x} − α/3.,"1. Limit at −∞: −α/3 = 7. f(0) = 1: C = −6.
+2. f(−ln 3) = −6/27 + 7 = 61/9.
+3. 9f = 61.
+Answer: 61",Linear differential equations,Revise Differential Equations.,
+27,80,sympy,"Chord of the circle with midpoint (h, k): hx + ky = h^{2} + k^{2}.","Through (α, 0) with k^{2} = 8h: α = h + 8 (h ≠ 0); the x-axis (midpoint O) gives a third chord.","1. Midpoint inside the circle: h^{2} + 8h < 4, so 0 < h < 2√5 − 4.
+2. α ∈ (8, 4 + 2√5).
+3. (2q − p)^{2} = (4√5)^{2} = 80.
+Answer: 80",Chords with a given midpoint,Revise Circles and Conic Sections.,
+28,36,sympy,"Use parameters A(at_{1}^{2}, 2at_{1}) etc. with a = 3/2.","CD = a|(t_{3} − t_{1})(t_{3} − t_{2})|, AM·BN = 4a^{2}|(t_{1} − t_{3})(t_{2} − t_{3})|.","1. Ratio = 4a = 6.
+2. Square = 36.
+Answer: 36",Parametric form of a parabola,Revise Conic Sections.,
+29,62,sympy,Find the foot of the perpendicular first.,"(1 + 3t, 2t, 2 + 4t): t = 1.","1. Foot (4, 2, 6); image (2, 3, 7).
+2. 4 + 9 + 49 = 62.
+Answer: 62",Image in a line,Revise Three Dimensional Geometry.,
+30,0,sympy,sin^{−1}x + cos^{−1}x = π/2.,The equation becomes π + cos^{−1}x = 2π/5.,"1. cos^{−1}x = −3π/5, impossible.
+2. 0 solutions.
+Answer: 0",Inverse trigonometric identities,Revise Inverse Trigonometric Functions.,
+31,2,conceptual,h = λ√(2mE).,"Multiply the dimensions of length, √mass and √energy.","1. [h] = L × M^{1/2} × (ML^{2}T^{−2})^{1/2} = ML^{2}T^{−1}.
+Answer: (2)",Dimensions,Revise Units and Measurements.,
+32,2,arithmetic,Each car stops in u^{2}/(2a).,20^{2}/4 = 100 m each.,"1. 300 − 200 = 100 m.
+Answer: (2)",Stopping distance,Revise Motion in a Straight Line.,
+33,2,conceptual,Momentum is conserved from zero.,m_{1}v_{1} = m_{2}v_{2}.,"1. Masses 2 : 1, speeds 1 : 2, opposite directions.
+Answer: (2)",Conservation of momentum,Revise Laws of Motion.,
+34,1,arithmetic,Balance forces at the midpoint.,T_{1}cos 45° = T_{2} = 10 N; T_{1}sin 45° = F.,"1. F = 10 N.
+Answer: (1)",Equilibrium,Revise Laws of Motion.,
+35,1,conceptual,10.2 eV takes the electron from n = 1 to which level?,E_{2} − E_{1} = 10.2 eV.,"1. Only n = 2 → 1 is possible: 1 line.
+Answer: (1)",Spectral lines,Revise Atoms.,
+36,3,sympy,Net work = W_{AB} + W_{BC} + W_{CA}.,"On AB, P = RT/V^{3} with RT = 8 × 300 = 2400; BC is at constant 10 N/m^{2}; CA is isochoric.","1. W_{AB} = ∫_{2}^{4} 2400/V^{3} dV = 1200(1/4 − 1/16) = 225 J.
+2. W_{BC} = 10 × (2 − 4) = −20 J; W_{CA} = 0.
+3. Net = 205 J.
+Answer: (3)",Work in a cyclic process,Revise Thermodynamics.,Teacher look: the graph's pressures (20 at A) do not match PV^{3} = RT at 300 K; the key uses the equation for W_{AB}.
+37,1,arithmetic,Energy per kg: fusion releases 26.7 MeV per 4 H atoms; fission 200 MeV per 235 u.,Ratio = (26.7/4)/(200/235).,"1. Ratio ≈ 7.8, nearest option 7.62.
+Answer: (1)",Fusion vs fission energy,Revise Nuclei.,Exact ratio with these data is 7.84; the key 7.62 is the nearest option.
+38,4,sympy,E = −GMm/(2r) with GM = gR^{2}.,ΔE = (gR^{2}m/2)(1/(2R) − 1/r).,"1. (10^{4}R/2)(1/2 − R/r) = 10^{4}R/6.
+2. R/r = 1/6, r = 6R.
+Answer: (4)",Orbital energy,Revise Gravitation.,
+39,3,arithmetic,ΔP = 4T/r.,Thrice the pressure means one-third the radius.,"1. V ∝ r^{3}: 1 : 27.
+Answer: (3)",Soap bubbles,Revise Mechanical Properties of Fluids.,
+40,4,arithmetic,√(2gh) must equal the terminal velocity in water.,v_{t} = 2r^{2}ρg/(9η) (key ignores water's buoyancy).,"1. v_{t} = 2 × 10^{−8} × 10^{5} × 9.8/(9 × 9.8 × 10^{−6}) = 222 m/s.
+2. h = v^{2}/(2g) ≈ 2518 m.
+Answer: (4)",Terminal velocity,Revise Mechanical Properties of Fluids.,"Teacher look: including buoyancy (ρ − σ) gives 220 m/s and h ≈ 2469 m, not an option; the key neglects buoyancy."
+41,1,arithmetic,Average KE ∝ absolute temperature.,−78 °C = 195 K.,"1. 2 × 195 = 390 K = 117 °C.
+Answer: (1)",Kinetic theory,Revise Kinetic Theory.,
+42,1,arithmetic,Gauss's law: count only charges inside S.,"Inside: +5q, q, −2q.","1. Flux = 4q/ε_{0}.
+Answer: (1)",Gauss's law,Revise Electric Charges and Fields.,
+43,4,arithmetic,Use symmetry: which nodes of the diamond are at the same potential?,"Top, centre and bottom nodes are equipotential.","1. Left node to the middle nodes: three R in parallel = R/3; same on the right.
+2. Total = R + R/3 + R/3 + R = 8R/3.
+Answer: (4)",Symmetry in networks,Revise Current Electricity.,
+44,1,arithmetic,r = mv/(qB) = √(2mK)/(qB).,Same q and K: r ∝ √m.,"1. r_{d} : r_{p} = √2 : 1.
+Answer: (1)",Charged particles in a magnetic field,Revise Moving Charges and Magnetism.,
+45,1,conceptual,Where is the loop after 10 s?,It moves 20 cm; the loop is 15 cm wide.,"1. The loop is fully inside the field (5 to 20 cm): flux constant.
+2. emf = 0.
+Answer: (1)",Motional emf,Revise Electromagnetic Induction.,
+46,3,arithmetic,"Parallel in, parallel out: the foci must coincide.",d = f_{1} + f_{2}.,"1. d = 10 + 15 = 25 cm.
+Answer: (3)",Lens combinations,Revise Ray Optics.,
+47,1,arithmetic,K_{max} = hν − φ.,Einstein's equation for the fastest electrons.,"1. 4.13 − 3.13 = 1 eV.
+Answer: (1)",Photoelectric effect,Revise Dual Nature.,
+48,4,conceptual,The NOR gate gets AB and ĀB̄.,E = (AB + ĀB̄)̄ = A ⊕ B.,"1. X = 1, Y = 1 (XOR).
+Answer: (4)",Logic gates,Revise Semiconductor Electronics.,
+49,2,conceptual,Sharp current rise in reverse bias at a fixed voltage: which device?,Reverse breakdown at constant voltage.,"1. Zener diode, used as a voltage regulator.
+Answer: (2)",Zener diode,Revise Semiconductor Electronics.,
+50,3,conceptual,"E_{0} = cB_{0}; E, B and the direction of travel are mutually perpendicular.",Phase kx + ωt means travel along −x.,"1. E_{0} = 3 × 10^{8} × 3.5 × 10^{−7} = 105 V/m.
+2. B along y, travel along −x: E along z.
+Answer: (3)",EM waves,Revise Electromagnetic Waves.,
+51,58,sympy,W = ∫ F dx.,Antiderivative x^{3} + x^{2} − 5x.,"1. (64 + 16 − 20) − (8 + 4 − 10) = 58 J.
+Answer: 58",Work by a variable force,"Revise Work, Energy and Power.",
+52,4,arithmetic,A plate adds an extra optical path (μ − 1)t.,(μ − 1)t = 4λ.,"1. t = 4 × 500 nm/0.5 = 4 μm.
+Answer: 4",Fringe shift,Revise Wave Optics.,
+53,4,arithmetic,Z = √(R^{2} + X_{C}^{2}).,Z = 8 Ω; V_{rms} = 8 V.,"1. I_{rms} = 1 A.
+2. P = I^{2}R = 4 W.
+Answer: 4",AC power,Revise Alternating Current.,
+54,28,arithmetic,Pole strength stays; the distance between poles changes.,Length L = πr becomes a semicircle with ends 2r apart.,"1. M' = M × 2/π = 44 × 7/11 = 28 A m^{2}.
+Answer: 28",Magnetic moment of a bent magnet,Revise Magnetism and Matter.,
+55,1027,arithmetic,"R = R_{0}(1 + αΔT), with R_{0} taken at 27 °C.",ΔT = 12/(50 × 2.4 × 10^{−4}).,"1. ΔT = 1000 °C.
+2. T = 1027 °C.
+Answer: 1027",Temperature coefficient,Revise Current Electricity.,"Uses 27 °C as the reference, as the key does."
+56,16,arithmetic,Only the faces perpendicular to x have flux.,"Faces at x = 2 and x = 4, area 4 m^{2}.","1. Flux = (2 × 4 − 2 × 2) × 4 = 16 N m^{2}/C.
+Answer: 16",Electric flux,Revise Electric Charges and Fields.,Figure: cube from x = 2 to 4.
+57,22,arithmetic,ω = √(k/m).,ω = 10 rad/s.,"1. T = 2π/10 = 22/35 s.
+Answer: 22",SHM period,Revise Oscillations.,
+58,3,arithmetic,Rolling disc: a = g sin θ/(1 + 1/2).,t ∝ 1/√a.,"1. t_{roll} = √(3/2) t.
+2. α = 3.
+Answer: 3",Rolling on an incline,Revise Rotational Motion.,
+59,150,sympy,Write (A + B)·A = 0 and |A + B| = B/2.,A^{2} + AB cos θ = 0 and A^{2} + B^{2} + 2AB cos θ = B^{2}/4.,"1. A^{2} = 3B^{2}/4.
+2. cos θ = −A/B = −√3/2: θ = 150°.
+Answer: 150",Vector addition,Revise Motion in a Plane.,
+60,2500,arithmetic,The voltmeter reads across R in parallel with 10 kΩ.,Slope V/I = 2 kΩ.,"1. 1/R = 1/2000 − 1/10000.
+2. R = 2500 Ω.
+Answer: 2500",Parallel resistors,Revise Current Electricity.,
+61,3,conceptual,Recall the SI definition of the candela.,"Frequency 540 × 10^{12} Hz, radiant intensity 1/683 W/sr.","1. A = 540, B = 683.
+Answer: (3)",SI units,Revise Units and Measurements.,
+62,3,conceptual,"Compare geometries: T-shaped, pyramidal, trigonal planar.",Lone pairs squeeze bond angles.,"1. ClF_{3} (~87.5°) < PF_{3} (~97°) < BF_{3} (120°).
+Answer: (3)",Bond angles,Revise Chemical Bonding.,
+63,1,arithmetic,K_{sp} = [A^{2+}][B^{−}]^{2}.,Square the B^{−} concentration because there are two per formula.,"1. 1.2 × 10^{−4} × (0.24 × 10^{−3})^{2} = 6.91 × 10^{−12}.
+Answer: (1)",Solubility product,Revise Equilibrium.,
+64,2,conceptual,Recall NCERT's batteries and their features.,Leclanché = dry cell; mercury cell powers hearing aids.,"1. Leclanché: Zn → Zn^{2+} at anode (IV). Ni–Cd: rechargeable (III). Fuel cell: combustion energy (I). Mercury cell: no ions in solution, hearing aids (II).
+Answer: (2)",Batteries,Revise Electrochemistry.,
+65,3,conceptual,Use Ostwald's law with α = Λ_{m}/Λ°_{m}.,K_{a} = Cα^{2}/(1 − α).,"1. K_{a}Λ°(Λ° − Λ_{m}) = CΛ_{m}^{2}.
+2. Λ_{m}^{2}C − K_{a}Λ°^{2} + K_{a}Λ_{m}Λ° = 0.
+Answer: (3)",Ostwald's dilution law,Revise Electrochemistry.,
+66,2,conceptual,Es (Z = 99) is 13 electrons after Rn's 86 + 7s^{2}.,"After Rn (86), 13 more electrons: 7s^{2} and 5f.","1. [Rn]5f^{11}7s^{2}.
+Answer: (2)",Actinoid configurations,Revise The d- and f-Block Elements.,
+67,3,conceptual,Match by number of electrons.,"Count total electrons: N 7, S 16, Br 35, Kr 36.","1. N (III), S (II), Br (I), Kr (IV).
+Answer: (3)",Electronic configurations,Revise Structure of Atom.,
+68,1,conceptual,Recall the irregular group 13 trends (NCERT table).,Ga is unusually small and low-melting; Tl has a high IE.,"1. Melting point B > Al > Tl > In > Ga (IV); ionic radius Tl > In > Ga > Al > B (I); IE B > Tl > Al ≈ Ga > In (II); atomic radius Tl > In > Al > Ga > B (III).
+Answer: (1)",Group 13 trends,Revise The p-Block Elements.,
+69,1,conceptual,Compare d-block and p-block trends in oxidation states.,Cu is below H in the electrochemical series.,"1. Both statements true.
+Answer: (1)",Oxidation-state trends,Revise The d- and f-Block Elements.,
+70,3,conceptual,EDTA is hexadentate.,EDTA^{4−} binds through 2 N and 4 O.,"1. Six donor atoms: octahedral.
+Answer: (3)",Chelating ligands,Revise Coordination Compounds.,
+71,3,conceptual,Find each metal's d-count and ligand strength.,"CN^{−}, CO and NH_{3} (with Co^{3+}) are strong field; F^{−} is weak field.","1. [Ni(CN)_{4}]^{2−}: dsp^{2} (III); Ni(CO)_{4}: sp^{3} (I); [Co(NH_{3})_{6}]^{3+}: d^{2}sp^{3} (IV); [CoF_{6}]^{3−}: sp^{3}d^{2} (II).
+Answer: (3)",VBT of complexes,Revise Coordination Compounds.,
+72,1,conceptual,"What does each reagent detect, and what is seen?","Br_{2} water decolourises; CAN gives red with alcohols; FeCl_{3} colours phenols; 2,4-DNP precipitates carbonyls.","1. Br_{2} water: colour disappears (II); CAN: red (III); FeCl_{3}: blue/green/violet/red (IV); 2,4-DNP: orange precipitate (I).
+Answer: (1)",Functional group tests,Revise practical organic chemistry.,
+73,1,conceptual,Neutral structures are most stable; negative charge on O is better than on C.,Count formal charges: zero charges best; then negative charge on the more electronegative atom.,"1. III > II > I.
+Answer: (1)",Resonance stability,Revise Organic Chemistry: Some Basic Principles.,
+74,2,conceptual,Triple bonds are shorter and stronger than double bonds.,Compare bond order 3 with bond order 2.,"1. 'C–C bond in ethyne is weaker than in ethene' is false.
+Answer: (2)",Structure of alkynes,Revise Hydrocarbons.,
+75,2,conceptual,"KCN gives CN^{−}, a good nucleophile.",Substitution at the carbon bearing Br.,"1. P: Br replaced by CN at the same carbon.
+Answer: (2)",Nucleophilic substitution,Revise Haloalkanes.,Teacher look: neighbouring OCH_{3}/phenyl participation could in principle give rearranged products; the key takes direct substitution.
+76,1,conceptual,Count chiral centres and C=C bonds that show cis–trans isomerism.,Left C=C: yes. Right C=C (carbons each with two different groups): yes. CH(Br): chiral.,"1. 3 stereo elements, no symmetry.
+2. 2^{3} = 8.
+Answer: (1)",Stereoisomer count,Revise Organic Chemistry: Some Basic Principles.,
+77,4,conceptual,Tollens' reagent is reduced by aldehydes (and formic acid).,Aldehydes and HCOOH reduce Ag^{+}; ketones do not.,"1. Formic acid, formaldehyde, benzaldehyde: yes. Acetone: no.
+Answer: (4)",Tollens' test,Revise Aldehydes and Ketones.,
+78,3,conceptual,Which compound becomes a methyl ketone in aqueous KOH?,A gem-dichloride hydrolyses to a ketone.,"1. CH_{3}CH_{2}CCl_{2}CH_{3} → butan-2-one, which gives iodoform.
+Answer: (3)",Iodoform test,Revise Aldehydes and Ketones.,
+79,4,conceptual,Excess Grignard: what happens to an ester and to a nitrile?,Ester → tertiary alcohol; nitrile → ketone after hydrolysis.,"1. Product: 4-acetyl with C(OH)(CH_{3})_{2} para.
+Answer: (4)",Grignard reactions,"Revise Aldehydes, Ketones and Carboxylic Acids.",
+80,2,conceptual,Why is glucose so soluble in water?,Five OH groups form H-bonds.,"1. Statement 2 (solubility due to the aldehyde group) is incorrect.
+Answer: (2)",Glucose,Revise Biomolecules.,
+81,58,arithmetic,ΔxΔp ≥ h/(4π).,Δv = h/(4πmΔx).,"1. Δv = 6.626 × 10^{−34}/(4 × 3.14 × 9.1 × 10^{−31} × 10^{−15}) = 5.8 × 10^{10} m/s.
+2. = 58 × 10^{9}.
+Answer: 58",Uncertainty principle,Revise Structure of Atom.,
+82,6,conceptual,Fill the MOs: O_{2} has 2 electrons in π*.,"O_{2}^{+} has one less, O_{2}^{−} one more.","1. 2 + 1 + 3 = 6.
+Answer: 6",MO theory,Revise Chemical Bonding.,
+83,400,arithmetic,At the boiling point ΔG = 0.,T = ΔH/ΔS.,"1. T = 30000/75 = 400 K.
+Answer: 400",Phase equilibrium,Revise Thermodynamics.,
+84,23,arithmetic,Partial pressures: p_{i} = x_{i}P_{i}°.,"Equimolar liquid: p_{B} = 40, p_{T} = 12 Torr.","1. y_{T} = 12/52 = 0.23.
+2. = 23 × 10^{−2}.
+Answer: 23",Raoult's law,Revise Solutions.,
+85,3,arithmetic,Total pressure: P_{0} + 2x. At the end it is 3P_{0}.,"P_{0} = 100 torr; at 23 s, x = 50.","1. Half of A gone in 23 s: t_{1/2} = 23 s.
+2. k = 0.693/23 = 3 × 10^{−2} s^{−1}.
+Answer: 3",First-order gas reactions,Revise Chemical Kinetics.,
+86,6,conceptual,Highest second IE: removing an electron from a stable configuration.,Cr^{+} is 3d^{5}.,"1. M = Cr; Cr^{+} has 5 unpaired: √35 = 5.92 ≈ 6.
+Answer: 6",Ionisation enthalpies; magnetic moment,Revise The d- and f-Block Elements.,
+87,0,conceptual,Group IV black sulphide that gives a yellow complex with KNO_{2}/CH_{3}COOH.,Co: K_{3}[Co(NO_{2})_{6}].,"1. Co^{3+} d^{6} with NO_{2}^{−} (strong field): low spin.
+2. 0 BM.
+Answer: 0",Cobalt test,Revise salt analysis.,
+88,15,arithmetic,Measure from the base line (1 cm) to the solvent front (9 cm).,Solvent travels 8 cm.,"1. R_{f}(A) = 4/8, R_{f}(B) = 6/8.
+2. Ratio 1.5 = 15 × 10^{−1}.
+Answer: 15",TLC R_{f} values,Revise purification methods.,"Figure reading: base line 1 cm above the bottom, front 1 cm below the 10 cm top."
+89,7,conceptual,Fuming sulphuric acid = oleum.,H_{2}S_{2}O_{7}.,"1. 7 oxygen atoms.
+Answer: 7",Oleum,Revise The p-Block Elements.,
+90,4,conceptual,Friedel–Crafts fails with strongly deactivated rings and with NH_{2} (it binds AlCl_{3}).,Check each ring for NO_{2} groups or a free NH_{2}.,"1. Nitrobenzene, aniline, m-nitroaniline, m-dinitrobenzene.
+2. Count 4.
+Answer: 4",Friedel–Crafts limits,Revise Hydrocarbons and Amines.,
