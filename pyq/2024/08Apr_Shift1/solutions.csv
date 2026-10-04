@@ -1,0 +1,269 @@
+q,claude_answer,check,hint1,hint2,solution,concept,revise,note
+1,3,arithmetic,"First find A (prime factors of 2310), then compute f at each element to get the range.","2310 = 2 × 3 × 5 × 7 × 11. f(2) = [log_{2} 5], f(3) = [log_{2} 14], …","1. f(2) = [log_{2}5] = 2, f(3) = [log_{2}14] = 3, f(5) = [log_{2}50] = 5, f(7) = [log_{2}117] = 6, f(11) = [log_{2}387] = 8.
+2. The range has 5 elements, as does A.
+3. One-one functions A → range: 5! = 120.
+Answer: (3)",Counting one-one functions,Revise Relations and Functions and greatest integer values.,
+2,1,sympy,"Put w = z + 2, so |w| = 1. Rewrite (z + 1)/(z + 2) in terms of w.",(w − 1)/w = 1 − 1/w = 1 − w̄ since |w| = 1.,"1. Im(1 − w̄) = Im(w) = 1/5.
+2. Re(w)^{2} = 1 − 1/25 = 24/25.
+3. |Re(z̄ + 2)| = |Re w| = 2√6/5.
+Answer: (1)",Complex numbers on the unit circle,Revise 1/w = w̄ when |w| = 1.,
+3,4,sympy,Put t = 8^{x}.,"t^{2} − 16t + 48 = 0, so t = 4 or 12; the product of the t-values is 48.","1. 8^{x_{1}} × 8^{x_{2}} = 48, so x_{1} + x_{2} = log_{8}48.
+2. log_{8}48 = 1 + log_{8}6.
+Answer: (4)",Exponential equations,Revise logarithms.,
+4,2,sympy,Compare with the Cayley–Hamilton equation A^{3} − (tr A)A^{2} + (…)A − (det A)I = 0.,"tr A = 4, det A = −21, sum of principal 2 × 2 minors = 1.","1. tr A = 5 + b = 4, so b = −1.
+2. det A = 2(3b − 5) − ab = −16 + a = −21, so a = −5.
+3. Check: minors (6 − a) + 2b + (3b − 5) = 11 − 2 − 8 = 1.
+4. 2a + 3b = −13.
+Answer: (2)",Cayley–Hamilton theorem,Revise Matrices.,
+5,1,sympy,Take B on AB and C on AC as general points and use the section formula.,"B = (b, 14 − 4b), C = (c, (3c − 5)/2), and (B + 2C)/3 = (2, −4/3).","1. b + 2c = 6 and −4b + 3c = −13: c = 1, b = 4.
+2. B = (4, −2), C = (1, −1).
+3. BC: x + 3y + 2 = 0.
+Answer: (1)",Section formula and straight lines,Revise Straight Lines.,
+6,1,arithmetic,"Count the natural-number solutions of a + 5b = 42, then look at i^{n!}.","n! is a multiple of 4 for n ≥ 4, so those terms are 0.","1. b = 1..8: m = 8.
+2. n = 1: 1 − i; n = 2: 1 − i^{2} = 2; n = 3: 1 − i^{6} = 2; n ≥ 4: 0.
+3. Sum = 5 − i: x = 5, y = −1.
+4. m + x + y = 12.
+Answer: (1)",Powers of i,Revise Complex Numbers.,
+7,2,sympy,Find f'(x). Can it ever be positive?,f'(x) = −sin x − 1 ≤ 0.,"1. f is decreasing everywhere, so S2 is false.
+2. f(0) = 2 > 0, f(π) = −π < 0: exactly one root in [0, π]. S1 true.
+Answer: (2)",Monotonicity and roots,Revise Application of Derivatives.,
+8,3,sympy,Critical points: f' = 0 or f' does not exist.,f'(x) = 10(x − 1)/(3(x − 2)^{1/3}).,"1. f' = 0 at x = 1.
+2. f' does not exist at x = 2.
+3. Two critical points.
+Answer: (3)",Critical points,Revise Application of Derivatives.,
+9,2,sympy,Differentiate and factorise in terms of c = cos x.,f' = −6 sin x cos x (2 cos x + √3).,"1. Stationary points in (0, 2π): π/2, 5π/6, π, 7π/6, 3π/2.
+2. Sign checks: maxima at 5π/6 and 7π/6; minima at π/2, π, 3π/2.
+3. Two local maxima.
+Answer: (2)",Local maxima and minima,Revise the first derivative test.,
+10,2,sympy,Put t = cot x.,dt = −cosec^{2}x dx; ∫ −6 dt/(1 − t)^{2} = −6/(1 − t).,"1. I = 6/(cot x − 1) + C; as x → 0 the first term → 0, so C = 3.
+2. cot(π/12) = 2 + √3: I = 6/(1 + √3) + 3 = 3√3.
+Answer: (2)",Integration by substitution,Revise Integrals.,"Reads I(0) as the limit x → 0^{+}, as intended."
+11,4,sympy,Integrate by parts to relate I_{n} and I_{n−1}.,"I_{n} = nk(I_{n−1} − I_{n}), so I_{n}/I_{n−1} = nk/(1 + nk).","1. I_{21}/I_{20} = 21k/(1 + 21k) = 147/148.
+2. 21k = 147, k = 7.
+Answer: (4)",Reduction formulae,Revise integration by parts.,
+12,3,sympy,Differentiate the area with respect to a to get f.,f(x) = −e^{−x} + 8x + 1; y = c_{1}f + c_{2} gives y''/y' = f''/f'.,"1. f' = e^{−x} + 8, f'' = −e^{−x}.
+2. y''/y' = −e^{−x}/(e^{−x} + 8) = −1/(1 + 8e^{x}).
+3. (8e^{x} + 1)y'' + y' = 0.
+Answer: (3)",Forming differential equations,Revise Differential Equations.,
+13,2,sympy,Separate the variables; put u = e^{tan x}.,e^{tan x} sec^{2}x dx/(1 + e^{2tan x}) + dy/(1 + y^{2}) = 0.,"1. tan^{−1}(e^{tan x}) + tan^{−1}y = C; at x = 0: π/4 + π/4 = π/2.
+2. At π/4: tan^{−1}e + tan^{−1}y = π/2, so y = 1/e.
+Answer: (2)",Variable separable DE,Revise Differential Equations.,
+14,4,sympy,SD = |(a_{2} − a_{1})·(d_{1} × d_{2})|/|d_{1} × d_{2}|.,"a_{1} = (2, 1, 3), d_{1} = (1, −3, 4); a_{2} = (2, 3, 5), d_{2} = (2, 3, 1).","1. d_{1} × d_{2} = (−15, 7, 9), |n|^{2} = 355.
+2. (0, 2, 2)·n = 32.
+3. SD = 32/√355: m + n = 387.
+Answer: (4)",Shortest distance,Revise Three Dimensional Geometry.,
+15,3,sympy,Use the section formula to find the centre of C_{1}.,"(6, 6) = (C_{1} + 2C_{2})/3 with C_{2} = (8, 15/2).","1. C_{1} = (2, 3).
+2. r_{1} = distance from (2, 3) to (6, 6) = 5; r_{2} = distance from (6, 6) to (8, 7.5) = 5/2.
+3. 5 + 4(25 + 25/4) = 130.
+Answer: (3)",Touching circles,Revise Circles.,
+16,3,sympy,This hyperbola opens up and down: the 'transverse' axis is the y-axis.,"e^{2} = 1 + a^{2}/b^{2}; latus rectum 2a^{2}/b; foci (0, ±be).","1. a^{2} = 2b^{2} and 4b = 4√3: b^{2} = 3, a^{2} = 6.
+2. (α, 6): −α^{2}/6 + 12 = 1, α^{2} = 66.
+3. Foci (0, ±3): distances √75 and √147, product 105.
+4. α^{2} + β = 171.
+Answer: (3)",Conjugate-type hyperbola,Revise Conic Sections.,
+17,1,sympy,"Write x, y, z in terms of γ, θ, φ (spherical coordinates).","z = γ cos φ, x = γ sin φ cos θ, y = γ sin φ sin θ.","1. Distance from x-axis = √(y^{2} + z^{2}) = γ√(1 − sin^{2}φ cos^{2}θ).
+Answer: (1)",3D coordinates,Revise Three Dimensional Geometry.,
+18,3,sympy,a·b must be negative for every t: a quadratic in t that is always negative.,a·b = αt^{2} + 6αt − 12.,"1. α = 0 gives −12 < 0: works.
+2. α < 0 with discriminant 36α^{2} + 48α < 0: −4/3 < α < 0.
+3. Set: (−4/3, 0].
+Answer: (3)",Sign of a quadratic,Revise Quadratic Equations and dot products.,
+19,4,arithmetic,"List the ordered pairs (a, 24 − a).",Greatest product 144; need a(24 − a) ≥ 108.,"1. 23 ordered pairs.
+2. a(24 − a) ≥ 108 for 6 ≤ a ≤ 18: 13 pairs.
+3. p = 13/23, n − m = 10.
+Answer: (4)",Classical probability,Revise Probability.,"Uses ordered pairs (unordered would give 7/12, not an option)."
+20,1,arithmetic,Which quadrant? Then find cos x and tan x.,"Third quadrant: cos x = −4/5, tan x = 3/4.","1. 80(9/16 + 4/5) = 45 + 64 = 109.
+Answer: (1)",Trigonometric ratios,Revise signs in quadrants.,
+21,96,sympy,"Put s = sin^{2}θ in [0, 1].",f = 1 + 2(1 − s)/(s^{2} − s + 1).,"1. (1 − s)/(s^{2} − s + 1) decreases from 1 to 0 on [0, 1].
+2. Range [1, 3]: α/β = 1/3.
+3. Sum = 64/(2/3) = 96.
+Answer: 96",Range of trigonometric expressions; GP,Revise Trigonometry and Sequences.,
+22,7,sympy,Eigenvalues: trace 3 and determinant 3.,"λ = √3 e^{±iπ/6}, so tr A^{n} = 2 × 3^{n/2} cos(nπ/6).","1. tr A^{13} = 2 × 3^{13/2} cos(13π/6) = 2 × 3^{13/2} × √3/2 = 3^{7}.
+2. n = 7.
+Answer: 7",Powers of matrices,Revise Matrices (Cayley–Hamilton recurrence also works).,
+23,36,arithmetic,"Count all, then remove those with digit sum divisible by 3.","Triples with sum divisible by 3: {2,3,4}, {2,3,7}, {3,4,5}, {3,5,7}.","1. Total 5 × 4 × 3 = 60.
+2. Divisible by 3: 4 × 6 = 24.
+3. 60 − 24 = 36.
+Answer: 36",Counting with divisibility,Revise Permutations.,
+24,5,sympy,"Use ΣC = 2^{n}, ΣrC = n2^{n−1}, Σr^{2}C = n(n + 1)2^{n−2}.",α = 2^{n}(n + 1)^{2}; β = 2^{n+1}/(n + 1).,"1. 2α/β = (n + 1)^{3}.
+2. 140 < (n + 1)^{3} < 281 gives (n + 1)^{3} = 216, n = 5.
+Answer: 5",Binomial sums,Revise Binomial Theorem.,
+25,103,arithmetic,Row k ends at the number k(k + 1)/2.,102 × 103/2 = 5253; 103 × 104/2 = 5356.,"1. 5253 < 5310 ≤ 5356.
+2. Row 103.
+Answer: 103",Triangular numbers,Revise Sequences.,
+26,55,sympy,"For small x, (cos kx)^{1/k} ≈ 1 − kx^{2}/2.",1 − Π(1 − kx^{2}/2) ≈ (x^{2}/2)Σk.,"1. Σ k for k = 1..10 = 55.
+2. Limit = 2 × 55/2 = 55.
+Answer: 55",Limits by expansion,Revise Limits.,
+27,16,sympy,"Find where sin x and cos x cross in [−π, π], then integrate |min|.",They cross at −3π/4 and π/4.,"1. Pieces: cos on [−π, −3π/4], sin on [−3π/4, π/4], cos on [π/4, π].
+2. Areas: √2/2, 2, 2 − √2/2. Total A = 4.
+3. A^{2} = 16.
+Answer: 16",Area with min of functions,Revise Application of Integrals.,
+28,569,sympy,(r − b − c) × a = 0 means r = b + c + λa.,Use r·(b − c) = 0 to find λ.,"1. (b + c)·(b − c) = |b|^{2} − |c|^{2} = −67, a·(b − c) = −593: λ = −67/593.
+2. 593r + 67a = 593(b + c).
+3. Answer = |b + c|^{2} = 400 + 25 + 144 = 569.
+Answer: 569",Vector equations,Revise Vector Algebra.,
+29,16,sympy,"Centroid G divides OH in 1 : 2. Find G, then use the orthocentre conditions.","G = (2O + H)/3 = (0, 0).","1. The first triangle's orthocentre is (0, 0). Vertex A = (−1, 1) (lines 1 and 2): OA ⊥ line 3, so b = −a.
+2. Vertex on lines 1 and 3: B = t(1, 2) (altitude ⊥ line 2): 8t = 1, B = (1/8, 1/4).
+3. a(1/8 − 1/4) = 1: a = −8, b = 8.
+4. |a − b| = 16.
+Answer: 16","Orthocentre, centroid, circumcentre",Revise Euler line: G divides OH in 1 : 2.,
+30,17,arithmetic,Hypergeometric mean: n × (fraction of that colour).,"E[X] = 3 × 5/9, E[Y] = 3 × 4/9.","1. 7(5/3) + 4(4/3) = 51/3 = 17.
+Answer: 17",Mean of a random variable,Revise Probability.,
+31,3,conceptual,NCERT's rule for order of magnitude: round a × 10^{b} to a power of 10.,If a ≤ 5 the order is b; if a > 5 it is b + 1.,"1. b is the order of magnitude when a ≤ 5.
+Answer: (3)",Order of magnitude,Revise Units and Measurements.,Follows NCERT's 5 cut-off.
+32,2,arithmetic,"In 30 min, how many turns does each hand make?",Second hand: 30 turns; minute hand: half a turn.,"1. Second hand: 30 × 2π × 0.75 = 141.3 m.
+2. Minute hand: π × 0.6 = 1.884 m.
+3. x ≈ 139.4 m.
+Answer: (2)",Circular motion distances,Revise Motion in a Plane.,
+33,1,arithmetic,Momentum is conserved: equal and opposite momenta.,K = p^{2}/(2m).,"1. K_{B}/K_{A} = m_{A}/m_{B} = v_{B}/v_{A}.
+Answer: (1)",Explosion and kinetic energy,Revise Laws of Motion.,
+34,3,arithmetic,F = Δp/Δt.,Δp = 0.15 × 20.,"1. F = 3/0.1 = 30 N.
+Answer: (3)",Impulse,Revise Laws of Motion.,
+35,1,arithmetic,Equal KE: p = √(2mK) ∝ √m.,"Masses 0.4, 1.2, 1.6 kg.","1. √0.4 : √1.2 : √1.6 = 1 : √3 : 2.
+Answer: (1)",Momentum and KE,"Revise Work, Energy and Power.",
+36,3,conceptual,Every term must be a pressure (energy per volume).,P + ρgh + (1/2)ρv^{2} = constant.,"1. Option 3.
+Answer: (3)",Bernoulli's equation,Revise Mechanical Properties of Fluids.,
+37,1,conceptual,"a, b are on one isotherm and d, c on the other. Use TV^{γ−1} = constant along each adiabat.",T_{1}V_{a}^{γ−1} = T_{2}V_{d}^{γ−1} and T_{1}V_{b}^{γ−1} = T_{2}V_{c}^{γ−1}.,"1. (V_{a}/V_{d})^{γ−1} = T_{2}/T_{1} = (V_{b}/V_{c})^{γ−1}.
+2. V_{a}/V_{d} = V_{b}/V_{c}.
+Answer: (1)",Adiabatic and isothermal curves,Revise Thermodynamics.,
+38,1,conceptual,Write L in terms of r for a circular orbit around the sun.,L = m√(GMr) and T ∝ r^{3/2}.,"1. L_{A}/L_{B} = (m_{1}/m_{2})√(r_{1}/r_{2}) = 1/3, so √(r_{1}/r_{2}) = m_{2}/(3m_{1}).
+2. T_{A}/T_{B} = (r_{1}/r_{2})^{3/2} = (1/27)(m_{2}/m_{1})^{3}.
+Answer: (1)",Kepler's law and angular momentum,Revise Gravitation.,
+39,2,arithmetic,C_{V} = (f/2)R.,"Monatomic f = 3, rigid diatomic f = 5.","1. Ratio 3 : 5.
+Answer: (2)",Specific heats,Revise Kinetic Theory.,
+40,1,arithmetic,The two 4 Ω are in parallel across the cell.,R = 2 Ω; I = E/(R + r).,"1. I = 3/3 = 1 A.
+2. V = E − Ir = 2 V.
+Answer: (1)",Terminal voltage,Revise Current Electricity.,
+41,2,conceptual,Paramagnets are weakly attracted. Which way do they move in a non-uniform field?,They move from weak to strong field; χ is small and positive.,"1. A true; B false (weakly); C true; D false.
+Answer: (2)",Paramagnetism,Revise Magnetism and Matter.,
+42,3,arithmetic,Radiation pressure on an absorbing surface: F = IA/c.,I = 360 W/cm^{2} = 3.6 × 10^{6} W/m^{2}.,"1. A = Fc/I = 2.4 × 10^{−4} × 3 × 10^{8}/3.6 × 10^{6} = 0.02 m^{2}.
+Answer: (3)",Radiation pressure,Revise Electromagnetic Waves.,The 1 h 30 min is not needed.
+43,3,arithmetic,sin C = n_{2}/n_{1} for light going from medium 1 to 2.,sin 45° = 1/√2.,"1. n_{1} : n_{2} = √2 : 1.
+Answer: (3)",Critical angle,Revise Ray Optics.,
+44,1,arithmetic,Same de Broglie wavelength means same momentum.,K = p^{2}/(2m).,"1. Equal p, so K ∝ 1/m.
+2. K_{proton} : K_{electron} = m_{e} : m_{p} = 1 : 1836.
+Answer: (1)",de Broglie wavelength and KE,Revise Dual Nature of Radiation and Matter.,
+45,1,arithmetic,Connected spheres reach the same potential.,kq_{1}/a = kq_{2}/b.,"1. q_{1} : q_{2} = a : b.
+Answer: (1)",Charge sharing,Revise Electrostatic Potential.,
+46,2,arithmetic,Δm = E/c^{2}.,E = mc^{2}: divide the energy by (3 × 10^{8})^{2}.,"1. Δm = 18 × 10^{8}/9 × 10^{16} = 2 × 10^{−8} kg = 20 μg.
+Answer: (2)",Mass defect,Revise Nuclei.,
+47,1,conceptual,"Write the OR output and the lower AND output, then AND them.",Upper: A + B̄. Lower: Ā·B.,"1. Y = (A + B̄)(ĀB) = AĀB + ĀBB̄ = 0.
+Answer: (1)",Boolean algebra,Revise Semiconductor Electronics.,Gate inputs read from the figure.
+48,3,arithmetic,Fractional errors add for a quotient.,ΔY/Y = ΔM/M + Δl/l.,"1. 5/500 + 0.02/2 = 1% + 1% = 2%.
+Answer: (3)",Error analysis,Revise Units and Measurements.,
+49,1,arithmetic,Least count = 1 MSD − 1 VSD.,LC = 1 − 0.9 = 0.1 mm.,"1. d = 20 + 0.2 = 20.2 mm; r = 1.01 cm.
+2. V = (4/3)π(1.01)^{3} = 4.32 cm^{3}.
+3. ρ = 8.635/4.32 = 2.0 g/cm^{3}.
+Answer: (1)",Vernier calliper and density,Revise Units and Measurements.,
+50,2,arithmetic,At resonance Z = R.,I = V/R.,"1. Halving R doubles I.
+Answer: (2)",LCR resonance,Revise Alternating Current.,
+51,3,arithmetic,Resolve into x and y components.,"OP along x, OQ along y, OR at −45°.","1. R_{x} = A(1 + 1/√2), R_{y} = A(1 − 1/√2).
+2. R^{2} = A^{2}(3/2 + √2 + 3/2 − √2) = 3A^{2}.
+Answer: 3",Vector addition,Revise Motion in a Plane.,
+52,15,arithmetic,Treat the plate as a full rectangle minus the notch.,"Rectangle 3 × 2 (centre (1.5, 1)) minus 1 × 1 square centred at (1.5, 1.5).","1. x_{cm} = (6 × 1.5 − 1.5)/5 = 1.5.
+2. y_{cm} = (6 × 1 − 1.5)/5 = 0.9.
+3. Ratio 15/9: n = 15.
+Answer: 15",Centre of mass by subtraction,Revise System of Particles.,
+53,7,arithmetic,Soap bubble: ΔP = 4T/R.,hρg = 4T/R.,"1. R = 4 × 0.28/(0.0004 × 8000 × 10) = 0.035 m.
+2. Diameter = 7 cm.
+Answer: 7",Excess pressure,Revise Mechanical Properties of Fluids.,
+54,16,arithmetic,Seventh overtone = which harmonic for each pipe?,Closed: (2n + 1)th with n = 7 → 15th. Open: 8th.,"1. f_{closed} = 15v/(4L); f_{open} = 8v/(2L) = 16v/(4L).
+2. Ratio 15/16: a = 16.
+Answer: 16",Organ pipes,Revise Waves.,
+55,12,arithmetic,Flux = (E·n̂) × area.,E·n̂ = (4 + 6 + 8)/6.,"1. E·n̂ = 3.
+2. Φ = 3 × 4 = 12 V m.
+Answer: 12",Electric flux,Revise Electric Charges and Fields.,
+56,748,arithmetic,R_{t} = R_{0}(1 + αt). Find α from the 100 °C reading.,α = 0.2/(10 × 100) = 2 × 10^{−4} /°C.,"1. 10.95 = 10(1 + αt): t = 0.095/(2 × 10^{−4}) = 475 °C.
+2. T = 748 K.
+Answer: 748",Temperature dependence of resistance,Revise Current Electricity.,
+57,4,arithmetic,Undeflected: eE = evB.,v from KE: v = √(2K/m).,"1. v = √(2 × 5 × 1.6 × 10^{−19}/9 × 10^{−31}) = 1.33 × 10^{6} m/s.
+2. E = vB = 1.33 × 10^{6} × 3 × 10^{−6} = 4 N/C.
+Answer: 4",Velocity selector,Revise Moving Charges and Magnetism.,
+58,156,arithmetic,"At closest approach, KE = PE.",(1/2)mv^{2} = k(Ze)(2e)/r_{0}.,"1. PE = 9 × 10^{9} × 160 × (1.6 × 10^{−19})^{2}/4.5 × 10^{−14} = 8.19 × 10^{−13} J.
+2. v = √(2 × 8.19 × 10^{−13}/6.72 × 10^{−27}) = 1.56 × 10^{7} m/s = 156 × 10^{5}.
+Answer: 156",Distance of closest approach,Revise Atoms.,
+59,6,arithmetic,Second minimum: a sin θ = 2λ.,Angular divergence = 2θ (both sides).,"1. θ = 2 × 600 × 10^{−9}/0.4 × 10^{−3} = 3 × 10^{−3} rad.
+2. Divergence 2θ = 6 × 10^{−3} rad.
+Answer: 6",Single slit diffraction,Revise Wave Optics.,Teacher look: 'angular divergence' is read as the full angle 2θ (key 6); the half-angle would be 3.
+60,3,arithmetic,"Pulled uniformly through its own side length in 1 s. Find v, emf, current.",Side = √(3.6 × 10^{−3}) = 0.06 m; v = 0.06 m/s.,"1. emf = NBLv = 10 × 0.5 × 0.06 × 0.06 = 0.018 V.
+2. W = emf^{2}t/R = 3.24 × 10^{−6} J ≈ 3 × 10^{−6} J.
+Answer: 3",Work in electromagnetic induction,Revise Electromagnetic Induction.,Exact value 3.24; key 3 (nearest integer).
+61,3,arithmetic,C_{6}H_{12}O_{6} + 6O_{2} → 6CO_{2} + 6H_{2}O.,Moles of glucose = 900/180.,"1. 5 mol glucose needs 30 mol O_{2}.
+2. 30 × 32 = 960 g.
+Answer: (3)",Stoichiometry,Revise Some Basic Concepts of Chemistry.,
+62,3,conceptual,Count bond pairs and lone pairs.,NH_{3}: 3 + 1; BrF_{5}: 5 + 1; PCl_{5}: 5 + 0; CH_{4}: 4 + 0.,"1. A-III, B-I, C-IV, D-II.
+Answer: (3)",VSEPR shapes,Revise Chemical Bonding.,
+63,2,arithmetic,Adding reactions multiplies their K values.,K = K_{1}K_{2}K_{3}.,"1. K = 1 × 2 × 4 = 8.
+Answer: (2)",Combining equilibrium constants,Revise Equilibrium.,
+64,1,conceptual,S in S_{2}O_{3}^{2−} goes to +2.5 with I_{2} and to +6 with Br_{2}. What does that say about the halogens?,With I_{2} sulphur ends at +2.5 (tetrathionate); with Br_{2} it goes to +6 (sulphate).,"1. Br_{2} oxidises thiosulphate further, so Br_{2} is the stronger oxidant.
+Answer: (1)",Thiosulphate with halogens,Revise Redox Reactions.,
+65,3,conceptual,Disproportionation needs at least one higher and one lower oxidation state.,F has no positive oxidation state.,"1. Cl_{2}, Br_{2}, I_{2} disproportionate in alkali; F_{2} cannot.
+Answer: (3)",Halogen chemistry,Revise The p-Block Elements.,
+66,1,conceptual,Inert pair effect: ns^{2} stays unused more down the group.,"Down group 13 the ns^{2} pair is held more tightly, so +1 gets more stable.","1. +1 becomes more stable Ga < In < Tl; the inert pair effect explains it.
+Answer: (1)",Inert pair effect,Revise The p-Block Elements.,
+67,3,conceptual,Does N have vacant d orbitals for back-bonding? Does P?,P(CH_{3})_{3} is σ-donor and π-acceptor; N(CH_{3})_{3} is σ-donor only.,"1. Both can act as ligands: I correct.
+2. Their bonding is different: II incorrect.
+Answer: (3)",Ligand bonding,Revise Coordination Compounds.,
+68,4,conceptual,Which property is extreme for each pair within its own group?,"Metalloids sit on the staircase line; Cl has the most negative electron gain enthalpy, F the highest electronegativity.","1. Cl, S: most negative electron gain enthalpy (IV).
+2. Ge, As: metalloids (III).
+3. Fr, Ra: largest (II).
+4. F, O: highest electronegativity (I).
+Answer: (4)",Periodic properties,Revise Classification of Elements.,
+69,3,conceptual,Fe^{3+} first takes electrons from iodide; Fe^{2+} then gives them to persulphate.,E°(Fe^{3+}/Fe^{2+}) lies between E°(I_{2}/I^{−}) and E°(S_{2}O_{8}^{2−}/SO_{4}^{2−}).,"1. 2Fe^{3+} + 2I^{−} → 2Fe^{2+} + I_{2} (A).
+2. 2Fe^{2+} + S_{2}O_{8}^{2−} → 2Fe^{3+} + 2SO_{4}^{2−} (D).
+Answer: (3)",Homogeneous catalysis,Revise Chemical Kinetics / d-block.,
+70,4,conceptual,2 Cl^{−} are outside the sphere. Octahedral needs 6 ligands.,[Co(NH_{3})_{5}Cl]Cl_{2}.,"1. n = 5, x = 3.
+2. x + n = 8.
+Answer: (4)",Werner's theory,Revise Coordination Compounds.,
+71,3,conceptual,Water is weak field (but Co^{3+} is low spin). Fill t_{2g} for each ion.,Fe^{2+} t_{2g}^{4}; Co^{2+} t_{2g}^{5}; Co^{3+} t_{2g}^{6}; Cu^{2+} t_{2g}^{6}; Cr^{2+} t_{2g}^{3}.,"1. Even: Fe^{2+}, Co^{3+}, Cu^{2+}.
+2. Count 3.
+Answer: (3)",Crystal field configurations,Revise CFT.,Co^{3+} gives an even count either way (t_{2g}^{4} or t_{2g}^{6}).
+72,4,conceptual,Match each test with its chemistry.,Borax bead: metaborates; charcoal cavity: carbonate reduced to metal; cobalt nitrate: CoO·MO; flame: volatile chloride.,"1. A-III, B-IV, C-I, D-II.
+Answer: (4)",Dry tests in salt analysis,Revise practical chemistry.,
+73,2,conceptual,Recall the colour of each test product.,Fe^{3+} + [Fe(CN)_{6}]^{4−} → Prussian blue; nitroprusside + S^{2−} → violet; Fe^{3+} + SCN^{−} → blood red; phosphate + molybdate → yellow.,"1. Prussian blue (III), sodium nitroprusside complex violet (I), thiocyanate blood red (II), ammonium phosphomolybdate yellow (IV).
+Answer: (2)",Colours in qualitative analysis,Revise practical chemistry.,
+74,4,conceptual,Use the lowest locant set first; alphabetical order only breaks ties.,"Compound A: locants {1, 2, 4} beat {1, 3, 4}.","1. A is 1-chloro-2,4-dinitrobenzene: I incorrect.
+2. B: 4-ethyl-2-methylaniline is correct.
+Answer: (4)",IUPAC naming of benzene derivatives,Revise nomenclature.,
+75,4,conceptual,A 2° carbon is bonded to exactly two other carbons.,"The compound is 2,4-dimethylpentane.","1. Only C-3 (CH_{2}) is secondary.
+Answer: (4)",Classification of carbons,Revise Organic Chemistry: Some Basic Principles.,
+76,4,conceptual,"Aromatic: cyclic, planar, fully conjugated, (4n + 2) π electrons. Look carefully at A: is every ring carbon sp^{2}?","A has a CH_{2}–CH_{2} in one ring (1,2-dihydronaphthalene). C is [10]annulene; D is [14]annulene.","1. A: one ring is not fully conjugated, and NTA applies Hückel's rule to the whole molecule, so it is not counted.
+2. B (styrene): benzene ring, aromatic.
+3. C ([10]annulene): 10 π but non-planar (H–H clash), not aromatic.
+4. D ([14]annulene): 14 π, planar enough, aromatic.
+Answer: (4)",Aromaticity and annulenes,Revise Hückel's rule; check every ring atom is sp^{2}.,"Teacher look: NTA applies Hückel's rule to the whole molecule, so the dihydronaphthalene (which contains a benzene ring) is not counted; same convention as 2026 08Apr_Shift2 Q64 and 2024 27Jan_Shift1 Q89."
+77,3,conceptual,S_{N}2 is fastest at an unhindered primary carbon.,Count the alkyl groups crowding the carbon that carries Br.,"1. Bromomethylcyclobutane (primary) reacts fastest.
+Answer: (3)",S_{N}2 reactivity,Revise Haloalkanes.,
+78,2,conceptual,Conc. H_{2}SO_{4} with heat dehydrates; CH_{3}COCl/pyridine acylates OH.,Saytzeff: the more substituted alkene.,"1. A = 1-methylcyclohexene.
+2. B = 1-methylcyclohexyl acetate.
+Answer: (2)",Dehydration and esterification,Revise Alcohols.,
+79,1,conceptual,Hell–Volhard–Zelinsky reaction.,Br replaces an α-H.,"1. P = 1-bromocyclopentane-1-carboxylic acid.
+Answer: (1)",HVZ reaction,Revise Carboxylic Acids.,
+80,2,conceptual,"Identify the sugar, then check what Br_{2} water does.",This is D-glucose. Br_{2} water oxidises only the CHO.,"1. Br_{2} water gives gluconic acid (monocarboxylic), not a dicarboxylic acid.
+Answer: (2)",Reactions of glucose,Revise Biomolecules.,
+81,5,arithmetic,The marked distance is from a crest to the next zero: a quarter wavelength.,λ = 4 × 1.5 pm.,"1. λ = 6 pm.
+2. f = 3 × 10^{8}/6 × 10^{−12} = 5 × 10^{19} Hz.
+Answer: 5",Wave relation c = fλ,Revise Structure of Atom.,Figure reading: 1.5 pm = λ/4.
+82,6,conceptual,"Look for odd electrons, incomplete octets and expanded octets.","Check each central atom: fewer than 8 electrons, more than 8, or an odd number.","1. NO_{2}, ClO_{2} (odd); BF_{3}, BeF_{2} (incomplete); H_{2}SO_{4}, PCl_{5} (expanded).
+2. Count 6.
+Answer: 6",Octet rule exceptions,Revise Chemical Bonding.,
+83,55,arithmetic,Reversible isothermal work: nRT ln(V_{2}/V_{1}).,"V_{1} = 10 L, V_{2} = 100 L.","1. W = 0.08206 × 291.15 × ln 10 = 55 L atm.
+Answer: 55",Reversible isothermal work,Revise Thermodynamics.,Volume at B = 10 + 90 = 100 L (figure).
+84,5,arithmetic,Find i from ΔT_{b}.,i = 1 + 2α for AB_{2}.,"1. m = 0.05/0.1 = 0.5; 0.52 = i × 0.52 × 0.5, so i = 2.
+2. α = 0.5 = 5 × 10^{−1}.
+Answer: 5",van't Hoff factor,Revise Solutions.,
+85,1,conceptual,Which order has a constant half-life? Which gives a straight [B] vs t line?,First order in A; zero order in B.,"1. Overall order = 1 + 0 = 1.
+Answer: 1",Order from data,Revise Chemical Kinetics.,
+86,0,conceptual,Recall NCERT metallic radii for the 3d series.,Cr has the smallest (129 pm) among those listed.,"1. M = Cr; CrO_{4}^{2−} has Cr(VI), d^{0}.
+2. μ = 0.
+Answer: 0",d-block radii and magnetism,Revise The d- and f-Block Elements.,
+87,591,arithmetic,Aniline yellow = p-aminoazobenzene.,"C_{12}H_{11}N_{3}, M = 197.","1. 279/93 = 3 mol aniline.
+2. 3 × 197 = 591 g.
+Answer: 591",Diazo coupling,Revise Amines.,
+88,32,conceptual,Count the stereocentres: ring fusion carbons and the substituted carbon.,Optical isomers = 2^{n} if there is no symmetry.,"1. Stereocentres: 4 ring-fusion carbons and the CH_{3}-bearing carbon = 5.
+2. 2^{5} = 32.
+Answer: 32",Optical isomerism,Revise stereochemistry.,Teacher look: count from a small skeletal drawing; Br sits on a ring-fusion carbon.
+89,5,conceptual,"Side-chain oxidation, then nitration directed by COOH.",B = m-nitrobenzoic acid.,"1. π bonds: 3 (ring) + 1 (C=O) + 1 (N=O) = 5.
+Answer: 5",Side-chain oxidation and nitration,Revise Hydrocarbons.,
+90,5,conceptual,"Primary amines give sulphonamides with an acidic N–H, soluble in NaOH.",Count only amines with a free –NH_{2} on an alkyl or aryl carbon.,"1. Aniline, 4-aminodiphenylamine, o-anisidine, propylamine, cyclohexylamine.
+2. Count 5 (amides, urea and semicarbazide are not amines).
+Answer: 5",Hinsberg test,Revise Amines.,
