@@ -1,0 +1,246 @@
+q,claude_answer,check,hint1,hint2,solution,concept,revise,note
+1,3,sympy,"Write each condition: the square root, the denominator and the logarithm. Then intersect.","x² ≥ 25, x² ≠ 4, and x² + 2x − 15 = (x + 5)(x − 3) > 0.","1. x² ≥ 25 gives x ≤ −5 or x ≥ 5. The log needs x < −5 or x > 3.
+2. Together: (−∞, −5) ∪ [5, ∞), so α = −5, β = 5.
+3. α² + β³ = 25 + 125 = 150.
+Answer: (3)",Domain of a function.,Revise 'Relations and Functions'.,
+2,2,sympy,"Test R_{1} with a = b = 1. For R_{2}, rewrite a + d = b + c as a − b = c − d.","R_{1}: is (1, 1) related? R_{2}: 'same difference a − b' is like equality of a number.","1. 1² + 1² ≠ 1, so R_{1} is not reflexive: not an equivalence relation.
+2. (a, b)R_{2}(c, d) means a − b = c − d: reflexive, symmetric and transitive.
+Answer: (2)",Equivalence relations.,Revise 'Relations and Functions'.,
+4,2,sympy,Write q = pk and r = pk². Express 1/α + 1/β with the coefficients.,"For px² + qx − r = 0: α + β = −q/p, αβ = −r/p. So 1/α + 1/β = q/r = 1/k.","1. 1/k = 3/4, so k = 4/3.
+2. (α − β)² = (α + β)² − 4αβ = (q² + 4pr)/p² = k² + 4k² = 5k² = 80/9.
+Answer: (2)",Roots and coefficients; geometric progression.,Revise 'Quadratic Equations'.,
+5,1,sympy,Infinitely many solutions: the third equation is a combination a(eq 1) + b(eq 2).,x: a + 2b = 4. y: 2a + 3b = 3.,"1. a = −6, b = 5.
+2. z: 3a + b = λ = −13. Constants: 5a + 9b = μ = 15.
+3. λ + 2μ = −13 + 30 = 17.
+Answer: (1)",Systems with infinitely many solutions.,Revise 'Determinants'.,
+6,4,sympy,"Write the general term T_{r+1} = C(18, r)(x^{1/3}/3)^{18−r}(1/(2x^{2/3}))^{r}.","Coefficient of T_{r+1} = C(18, r)(1/3)^{18−r}(1/2)^{r}. Seventh term: r = 6. Thirteenth: r = 12.","1. n/m = [C(18, 12)/C(18, 6)] × 3^{6}/2^{6} = 3⁶/2⁶ (since C(18, 12) = C(18, 6)).
+2. (n/m)^{1/3} = 9/4.
+Answer: (4)",General term of a binomial expansion.,Revise 'Binomial Theorem'.,
+7,4,sympy,Write S_{10} and the term ratio with a and d.,5(2a + 9d) = 390 and 7(a + 9d) = 15(a + 4d).,"1. From the ratio: 8a = 3d. With 2a + 9d = 78: a = 3, d = 8.
+2. S_{15} = 7.5(6 + 112) = 885, S_{5} = 2.5(6 + 32) = 95.
+3. S_{15} − S_{5} = 790.
+Answer: (4)",Arithmetic progressions.,Revise 'Sequences and Series'.,
+8,3,sympy,Factor 2t² + 5t − 3 with t = |x|. Where does the inside change sign? Is there a kink from |x| too?,"2t² + 5t − 3 = (2t − 1)(t + 3), zero at |x| = 1/2. Near x = 0 the inside is negative, so f = 3 − 5|x| − 2x².","1. f is continuous everywhere: m = 0.
+2. Corners at x = ±1/2 (the modulus flips sign) and at x = 0 (the |x| term): n = 3.
+3. m + n = 3.
+Answer: (3)",Differentiability with modulus functions.,Revise 'Continuity and Differentiability'.,
+9,2,sympy,Work backwards from f(y) = 21. Which branch can give an odd output?,"2y is even, so 21 must come from y − 1 with y even: y = 22. Repeat for f(z) = 22 and f(a) = z.","1. f(z) = 22: z odd with 2z = 22, so z = 11. f(a) = 11: a even with a − 1 = 11, so a = 12.
+2. As x → 12⁻: |x|³/12 → 144 and [x/12] = 0.
+3. Limit = 144.
+Answer: (2)",Piecewise functions on N; one-sided limits with [x].,Revise 'Relations and Functions' and 'Limits and Derivatives'.,
+10,2,sympy,Write cos⁴x with double angles: cos⁴x = (3 + 4 cos 2x + cos 4x)/8.,Integrate term by term from 0 to π/3.,"1. ∫ = (1/8)[3x + 2 sin 2x + (1/4) sin 4x] from 0 to π/3 = (1/8)[π + √3 − √3/8] = π/8 + 7√3/64.
+2. a = 1/8, b = 7/64: 9a + 8b = 9/8 + 7/8 = 2.
+Answer: (2)",Integrating powers of cosine.,Revise 'Integrals'.,
+11,2,sympy,Put x → 1 − x. What happens to the cubic 2x³ − 3x² − x + 1?,"With x → 1 − x the cubic becomes its own negative, and the cube root is odd.","1. The integrand f satisfies f(1 − x) = −f(x).
+2. So I = −I, and I = 0.
+Answer: (2)",Definite integrals with the king property.,Revise 'Integrals' (properties of definite integrals).,
+13,1,sympy,"Take P = (3 cos t, 2 sin t). Then Q, directly above or below it on the circle, is (3 cos t, 3 sin t).","R divides PQ with PR : RQ = 4 : 3, so R = (3P + 4Q)/7.","1. R = (3 cos t, (6 + 12) sin t/7) = (3 cos t, (18/7) sin t): an ellipse with a = 3, b = 18/7.
+2. e² = 1 − (18/21)² = 1 − 36/49 = 13/49.
+3. e = √13/7.
+Answer: (1)",Locus by the section formula; eccentricity.,Revise 'Conic Sections'.,
+14,3,sympy,The line from the centre to the midpoint of a chord is perpendicular to the chord. The chord passes through the origin.,"Midpoint M(h, k): CM ⊥ OM with C = (0, 1). So h² + k(k − 1) = 0: the circle x² + y² − y = 0.","1. With y = 1 − x: x² + (1 − x)² − (1 − x) = 2x² − x = 0, so x = 0 or 1/2.
+2. P = (0, 1), Q = (1/2, 1/2): PQ = 1/√2.
+Answer: (3)",Locus of midpoints of chords through a point.,Revise 'Conic Sections' (circle).,
+15,2,sympy,Find the foot of the perpendicular F from P to the line. The image is 2F − P.,"Line point (1, −1, 2) + t(3, 2, 1). t = ((2, 5, 7)·(3, 2, 1))/14 = 23/14.","1. F = (1 + 69/14, −1 + 46/14, 2 + 23/14).
+2. α + β + γ = 2(sum of F) − (sum of P) = 2(2 + 138/14) − (3 + 4 + 9) = 4 + 138/7 − 16 = 54/7.
+3. 14 × 54/7 = 108.
+Answer: (2)",Image of a point in a line.,Revise 'Three Dimensional Geometry'.,
+16,1,sympy,P and Q are symmetric about the foot of the perpendicular from R. So P + Q = 2F.,"Line: (−3, 4, −1) + s(8, 2, 2). The foot F has s = ((4, −2, 4)·(8, 2, 2))/72 = 36/72 = 1/2.","1. F = (1, 5, 0), so P + Q = (2, 10, 0).
+2. Centroid = (P + Q + R)/3 = (3, 12, 3)/3 = (1, 4, 1).
+3. α² + β² + γ² = 18.
+Answer: (1)",Points on a line at a given distance; centroid.,Revise 'Three Dimensional Geometry'.,
+17,2,sympy,The angle bisector divides BC in the ratio AB : AC.,"AB = √(9 + 25 + 4) = √38, AC = √(4 + 9 + 25) = √38. Equal, so D is the midpoint of BC.","1. D = (1/2, 7, 7/2), AD = (−1/2, 4, 3/2).
+2. Projection on AC = (2, 3, 5): (−1 + 12 + 7.5)/√38 = 18.5/√38 = 37/(2√38).
+Answer: (2)",Angle bisector theorem; projection.,Revise 'Vector Algebra'.,
+18,3,sympy,"P(A appears) = 1 − 2/7. Split it into 'A and V appear' and 'A appears, V does not'.",P(A ∩ V') = P(A) − P(A ∩ V).,"1. 5/7 − 1/5 = 25/35 − 7/35 = 18/35.
+Answer: (3)",Probability of combined events.,Revise 'Probability'.,
+19,2,sympy,"Use the mean to get Σx_{i}, then the variance to get Σx_{i}².",Σx = 12 and Σx² = 10(84/25 + 36/25) = 48. Then Σ(x − α) = 12 − 10α and Σ(x − β)² = 48 − 24β + 10β².,"1. 12 − 10α = 2 gives α = 1.
+2. 10β² − 24β + 48 = 40 gives 5β² − 12β + 4 = 0, so β = 2 (positive integer).
+3. β/α = 2.
+Answer: (2)",Mean and variance from shifted sums.,Revise 'Statistics'.,
+20,1,sympy,Write everything in c = cos x.,4(1 − c²) − 4c³ + 9 − 4c = 0 becomes 4c³ + 4c² + 4c − 13 = 0.,"1. At c = 1 the left side is −1 < 0, and it increases for c in [−1, 1] (derivative 12c² + 8c + 4 > 0), so it stays negative.
+2. No root with |c| ≤ 1: 0 solutions.
+Answer: (1)",Trigonometric equations reduced to polynomials.,"Revise 'Trigonometric Functions'. Always check the root lies in [−1, 1].",
+21,2,sympy,"MᵀM = 1 means M is a unit vector. What does A = I − 2MMᵀ do to M, and to a vector perpendicular to M?",AM = M − 2M(MᵀM) = −M. If MᵀX = 0 then AX = X.,"1. The eigenvalues are −1 and 1 (A is a reflection).
+2. Sum of squares = 1 + 1 = 2.
+Answer: 2",Eigenvalues of a reflection matrix.,Revise 'Matrices'.,
+22,101,sympy,"Start with C(20, 2) pairs. Which pairs give no intersection, and which pairs all share one point?","10 parallel lines: C(10, 2) = 45 pairs never meet. 10 concurrent lines: their 45 pairs give only 1 point.","1. 190 − 45 − (45 − 1) = 101.
+Answer: 101",Counting intersection points of lines.,Revise 'Permutations and Combinations'.,
+23,1,sympy,"Sides a, ar, ar² with r > 1. Which triangle inequality is the hard one?","a + ar > ar² gives r² − r − 1 < 0, so r < (1 + √5)/2 ≈ 1.618.","1. 1 < r < 1.618, so [r] = 1 and [−r] = −2.
+2. 3[r] + [−r] = 3 − 2 = 1.
+Answer: 1",Triangle inequality with a GP; greatest integer function.,Revise 'Sequences and Series'.,
+24,219,sympy,Differentiate F(x²) = x⁴ + x⁵ with the chain rule.,"F'(u) = u f(u), so d/dx F(x²) = 2x · x² f(x²) = 4x³ + 5x⁴.","1. f(x²) = 2 + (5/2)x, so f(r²) = 2 + 5r/2.
+2. Σ_{r=1}^{12} = 24 + (5/2)(78) = 24 + 195 = 219.
+Answer: 219",Fundamental theorem of calculus with chain rule.,Revise 'Integrals'.,
+25,105,sympy,Simplify the first fraction before differentiating: factor x² − √x and the denominator.,"x² − √x = √x(x^{3/2} − 1) and x√x + x + √x = √x(x + √x + 1). With t = √x, t³ − 1 = (t − 1)(t² + t + 1).","1. The first part becomes (√x + 1)(√x − 1) = x − 1, with derivative 1.
+2. Second part: (1/15)(3cos⁵x − 5cos³x)' = sin x cos²x(1 − cos²x) = sin³x cos²x.
+3. At π/6: 1 + (1/8)(3/4) = 1 + 3/32 = 35/32. 96 × 35/32 = 105.
+Answer: 105",Differentiation after simplifying.,Revise 'Continuity and Differentiability' (derivatives).,
+26,8,sympy,Write both curves as x in terms of y and find where they meet (besides the origin).,x = 2y²/k and x = y − ky²/2. They meet at y_{0} = 1/c with c = k/2 + 2/k.,"1. Area = ∫_{0}^{y0} (y − cy²) dy = 1/(2c²) − 1/(3c²) = 1/(6c²).
+2. Maximum when |c| is smallest: |k/2 + 2/k| ≥ 2, with equality at k = ±2.
+3. Sum of squares = 4 + 4 = 8.
+Answer: 8",Area between parabolas; AM–GM.,Revise 'Application of Integrals'.,
+27,5,sympy,Treat x as a function of y: dx/dy − x/y = (1 − y²)/y is linear.,Integrating factor 1/y: (x/y)' = 1/y² − 1.,"1. x/y = −1/y − y + C. x(1) = 1 gives C = 3: x = 3y − y² − 1.
+2. x(2) = 6 − 4 − 1 = 1, so 5x(2) = 5.
+Answer: 5",Linear differential equation in x.,Revise 'Differential Equations'.,
+28,7,sympy,Use the standard results: area between the chord and y = x² is (a + b)³/6.,Triangle OPQ: (1/2)|x_{P}y_{Q} − x_{Q}y_{P}| = (1/2)(ab² + a²b) = ab(a + b)/2.,"1. S_{1}/S_{2} = (a + b)²/(3ab) ≥ 4ab/(3ab) = 4/3 (AM–GM, equality at a = b).
+2. m/n = 4/3, so m + n = 7.
+Answer: 7",Area of a parabolic segment; AM–GM.,Revise 'Application of Integrals'.,
+29,36,sympy,"BC = 2 × AB × sin 60° in an isosceles triangle with apex 120°. That gives AB, and so B.","AB = 4, so B = (3, 0). C = A + 4(cos 120°, sin 120°) = (−3, 2√3).","1. Line BC: y = −(x − 3)/√3. Meeting y = x + 3: α = 3√3 − 6, β = 3√3 − 3.
+2. α² = 9(7 − 4√3), β⁴ = 81(28 − 16√3) = 324(7 − 4√3).
+3. β⁴/α² = 36.
+Answer: 36",Coordinates in an isosceles triangle; intersection of lines.,Revise 'Straight Lines'.,Takes C above the x-axis; this choice gives NTA's key.
+30,38,sympy,Rewrite b × a = c × a as (b − c) × a = 0.,"c = b + ta, and c's x-component is 4, so t = 5: c = (4, −3, 7).","1. c·(3, 4, 1) = 12 − 12 + 7 = 7. |c|² = 74, |(3, 4, 1)|² = 26.
+2. cos²θ = 49/1924, so tan²θ = 1924/49 − 1 = 1875/49 ≈ 38.3.
+3. [tan²θ] = 38.
+Answer: 38",Vector equations with cross products; angle between vectors.,Revise 'Vector Algebra'.,
+31,2,conceptual,Rules: leading zeros never count; zeros between non-zero digits count; trailing zeros after a decimal point count.,1001: zeros between 1s count. 010.1: the leading zero does not. 100.100: the trailing zeros after the point count. 0.0010010: leading zeros do not.,"1. 1001 → 4 (II). 010.1 → 3 (I). 100.100 → 6 (IV). 0.0010010 → 5 (III).
+Answer: (2)",Significant figures.,Revise 'Units and Measurements'.,
+32,1,sympy,Take north as positive and convert km/h to m/s.,"v_{A} = +20 m/s, v_{B} = −30 m/s. v_{BA} = v_{B} − v_{A}; ground relative to B = −v_{B}.","1. v_{BA} = −30 − 20 = −50 m/s.
+2. Ground relative to B = 0 − (−30) = +30 m/s.
+Answer: (1)",Relative velocity.,Revise 'Motion in a Straight Line'.,
+33,3,sympy,Average force = change in momentum / time.,Δp = 0.12 × 25 = 3 kg m/s.,"1. F = 3/0.1 = 30 N.
+Answer: (3)",Impulse and average force.,Revise 'Laws of Motion'.,
+34,1,sympy,"Add the forces, then divide by the mass.","F = (8, 4, 4) N.","1. a = (8, 4, 4)/4 = 2î + ĵ + k̂.
+Answer: (1)",Newton's second law with vectors.,Revise 'Laws of Motion'.,
+35,2,disputed,The incline is smooth. Can friction change the disc's spin on it?,"With no friction there is no torque about the centre, so the rotational KE stays. Only the translational KE (1/2)Mv² turns into height.","1. Mgh = (1/2)Mv², so h = v²/(2g).
+2. (If all the KE, (3/4)Mv², could turn into height, h would be 3v²/(4g); that needs friction to stop the spin.)
+Answer: (2)",Rolling body on a smooth incline.,Revise 'System of Particles and Rotational Motion'.,"DISPUTED: on a smooth incline the spin cannot be removed, so h = v²/(2g). NTA's final key is 3v²/(4g), which treats all the kinetic energy as converted (as on a rough incline). Owner/teacher to decide."
+36,3,sympy,The gravitational force provides the centripetal force: mω²R ∝ R^{−3/2}.,"ω² ∝ R^{−5/2}, and T = 2π/ω.","1. T² ∝ 1/ω² ∝ R^{5/2}.
+Answer: (3)",Kepler-type law for a modified force.,Revise 'Gravitation'.,
+37,2,sympy,Volume is conserved: 1000 r³ = R³. Surface energy ∝ total surface area.,R = 10r.,"1. Big drop: 4πR²T = 400πr²T. Small drops: 1000 × 4πr²T = 4000πr²T.
+2. Ratio = 1/10.
+Answer: (2)",Surface energy of drops.,Revise 'Mechanical Properties of Fluids'.,
+38,2,sympy,"At constant pressure, W = nRΔT and Q = nC_{p}ΔT.",Q/W = C_{p}/R = γ/(γ − 1).,"1. Q = 200 × 1.4/0.4 = 700 J.
+Answer: (2)",First law in an isobaric process.,Revise 'Thermodynamics'.,
+39,1,sympy,v_{rms} = √(3RT/M). How does it depend on M at the same T?,v ∝ 1/√M. M(O_{2})/M(H_{2}) = 16.,"1. v(O_{2}) = 2/4 = 0.5 km/s.
+Answer: (1)",RMS speed.,Revise 'Kinetic Theory'.,
+40,2,sympy,Gauss's law: the flux through a closed surface depends only on the charge inside it.,The inner cube C_{1} encloses 2Q. The outer cube C_{2} encloses 2Q + 3Q.,"1. Φ_{1} : Φ_{2} = 2Q : 5Q = 2 : 5.
+Answer: (2)",Gauss's law.,Revise 'Electric Charges and Fields'.,
+41,2,sympy,In steady state no current flows through the capacitors. Trace the only path for the current.,"Path: left corner → 4 Ω → top → G (2 Ω) → bottom → 6 Ω → right corner. Total 12 Ω, I = 0.5 A.","1. C_{1} (left to bottom) sees the drop across 4 Ω + 2 Ω = 3 V: Q_{1} = 4 × 3 = 12 μC.
+2. C_{2} (top to right) sees the drop across 2 Ω + 6 Ω = 4 V: Q_{2} = 6 × 4 = 24 μC.
+3. Q_{1}/Q_{2} = 1/2.
+Answer: (2)",Capacitors in a DC network at steady state.,Revise 'Current Electricity' and 'Electrostatic Potential and Capacitance'.,Figure reading: battery across the left and right corners; G between the top and bottom corners.
+42,0,disputed,"The shunt S and the galvanometer G are in parallel: equal voltages, I_{g}G = I_{s}S.","I_{g} = 0.05I, I_{s} = 0.95I, so S = G/19. Ammeter resistance = G ∥ S.","1. R = GS/(G + S) = (G/19)/(20/19) = G/20.
+2. G/20 is not among the options (G/200 would need 0.5%, not 5%).
+Answer: (0)",Galvanometer as an ammeter.,Revise 'Moving Charges and Magnetism'.,"DISPUTED: with 5% through the galvanometer the ammeter resistance is G/20, which is not an option ('0' means none of the options). NTA's final key is G/200, which corresponds to 0.5%. Owner/teacher to decide."
+43,1,sympy,Output power = efficiency × input power.,P_{out} = 0.8 × 4000 W = 3200 W.,"1. I_{s} = 3200/240 = 13.33 A.
+Answer: (1)",Transformer efficiency.,Revise 'Alternating Current'.,
+44,2,sympy,λ = c/f.,"c = 3 × 10⁸ m/s, f = 6 × 10⁷ Hz.","1. λ = 5 m.
+Answer: (2)",Wavelength of an EM wave.,Revise 'Electromagnetic Waves'.,
+45,2,sympy,The first minima are at sin θ = λ/a on either side. The angular spread is 2θ.,sin θ = 2/4 = 1/2.,"1. θ = 30°, so the spread is 60°.
+Answer: (2)",Single-slit diffraction.,Revise 'Wave Optics'.,
+46,1,sympy,Number of photons per second = power / energy per photon.,E = hν = 6.63 × 10^{−34} × 6 × 10^{14} = 3.98 × 10^{−19} J.,"1. n = 2 × 10^{−3}/3.98 × 10^{−19} ≈ 5 × 10^{15} per second.
+Answer: (1)",Photon flux.,Revise 'Dual Nature of Radiation and Matter'.,
+47,4,conceptual,Check each statement about Bohr's postulate and nuclear forces. Are nuclear forces central?,"Bohr: L = nh/2π. Nuclear forces are short range (not inverse square), spin dependent, charge independent, but NOT central (they have a tensor part).","1. A, B, C true. D false (not central).
+2. E: a smaller packing fraction means a more stable nucleus, which NTA accepts as true.
+3. A, B, C, E.
+Answer: (4)",Bohr's model; properties of nuclear forces.,Revise 'Atoms' and 'Nuclei'.,Statement E is a rough rule accepted in NTA's key. Worth a teacher look.
+48,3,sympy,The longest wavelength that works corresponds to photon energy equal to the band gap.,E_{g} = hc/λ = 6.6 × 10^{−34} × 3 × 10⁸/(660 × 10^{−9}) J.,"1. E_{g} = 3 × 10^{−19} J = 3/1.6 eV = 1.875 eV = 15/8 eV.
+2. X = 15.
+Answer: (3)",Band gap from threshold wavelength.,Revise 'Semiconductor Electronics'.,
+49,1,sympy,"Find the resistance of BC at balance, then use R = R_{0}(1 + αΔT).","Balance: R_{AB}/R_{AD} = R_{BC}/R_{DC}, i.e. 0.8/1 = R_{BC}/3. After 10 s, ΔT = −20 °C.","1. R_{BC} = 2.4 mΩ.
+2. 2.4 = 3(1 − 20α), so α = −0.01 = −1 × 10^{−2} °C^{−1}.
+Answer: (1)",Wheatstone bridge; temperature coefficient.,Revise 'Current Electricity'.,
+50,2,sympy,"Find the unknown X from the first balance, then the new balance with X ∥ 2 Ω.","2/X = 40/60, so X = 3 Ω. X ∥ 2 Ω = 1.2 Ω.","1. 2/1.2 = l/(100 − l) gives l = 62.5 cm.
+2. Change = 62.5 − 40 = 22.5 cm.
+Answer: (2)",Metre bridge.,Revise 'Current Electricity'.,
+51,8,sympy,Acceleration = v dv/dx.,dv/dx = 2/√x.,"1. a = 4√x × 2/√x = 8 m/s² (constant).
+Answer: 8",Acceleration from v(x).,Revise 'Motion in a Straight Line'.,
+52,4,sympy,The impulse gives the rod both linear and angular momentum. Use the angular impulse about the centre.,J(L/2) = Iω with I = mL²/12 = 2 × 0.09/12 = 0.015 kg m².,"1. ω = 0.2 × 0.15/0.015 = 2 rad/s.
+2. Turning π/2 takes (π/2)/2 = π/4 s, so x = 4.
+Answer: 4",Angular impulse.,Revise 'System of Particles and Rotational Motion'.,
+53,3,sympy,"Tension in each wire = weight hanging below it. Same wire, so strain ∝ tension.",Upper wire holds 2 kg + 1 kg; lower wire holds 1 kg.,"1. Strain ratio = 30 N/10 N = 3.
+Answer: 3",Stress and strain in hanging wires.,Revise 'Mechanical Properties of Solids'.,
+54,3,sympy,f = (1/2π)√(k/m).,f ∝ 1/√m.,"1. f_{1}/f_{2} = √(9m/m) = 3.
+Answer: 3",Spring-mass oscillator.,Revise 'Oscillations'.,
+55,3,sympy,The thread is fixed to the wall. Find the angle it makes with the wall from the 10 cm and 20 cm.,"sin θ = 10/20, so θ = 30°. Balance: qE = mg tan θ.","1. q = mg tan 30°/E = 0.002 × 10 × (1/√3)/(2 × 10⁴) = 10^{−6}/√3 C.
+2. q = (1/√3) μC, so x = 3.
+Answer: 3",Equilibrium of a charged particle in a field.,Revise 'Electric Charges and Fields'.,
+56,60,sympy,In steady state no current flows through the capacitor branch. Which loop carries the current?,"Current flows round the battery, R_{1} and R_{3}: I = 10/(4 + 6) = 1 A. The capacitor branch is in parallel with R_{3}.","1. Voltage across the capacitor branch = I × R_{3} = 6 V (no drop across R_{2}).
+2. Q = 10 μF × 6 V = 60 μC.
+Answer: 60",Capacitor in a DC circuit at steady state.,Revise 'Current Electricity'.,
+57,4,sympy,"At equilibrium, magnetic torque = restoring torque: NIAB = kθ.","N = 100, I = 0.01 A, A = 2 × 10^{−4} m², B = 0.01 T, θ = 0.05 rad.","1. k = 100 × 0.01 × 2 × 10^{−4} × 0.01/0.05 = 4 × 10^{−5} N m/rad.
+Answer: 4",Moving coil galvanometer.,Revise 'Moving Charges and Magnetism'.,
+58,5,sympy,Maximum emf of a rotating coil: NABω.,ω = 2π × 0.5 = π rad/s.,"1. ε = 200 × 0.20 × 0.01 × π = 0.4π = 2π/5.
+2. β = 5.
+Answer: 5",AC generator.,Revise 'Electromagnetic Induction'.,
+59,125,sympy,I = I_{max} cos²(φ/2). Half intensity means which phase difference?,"cos²(φ/2) = 1/2 gives φ = π/2, path difference λ/4. y = (path difference)D/d.","1. y = λD/(4d) = 5 × 10^{−7} × 1/(4 × 10^{−3}) = 1.25 × 10^{−4} m = 125 × 10^{−6} m.
+Answer: 125",Intensity in Young's double slit.,Revise 'Wave Optics'.,
+60,32,sympy,Frequency ∝ (1/n_{1}² − 1/n_{2}²) for the same ion.,2 → 1: 3/4. 3 → 1: 8/9.,"1. ν = 3 × 10^{15} × (8/9)/(3/4) = (32/9) × 10^{15} Hz.
+2. x = 32.
+Answer: 32",Spectral lines of hydrogen-like ions.,Revise 'Atoms'.,
+61,4,conceptual,Radial nodes = n − l − 1.,"For 3p: n = 3, l = 1.","1. 3 − 1 − 1 = 1 radial node.
+Answer: (4)",Nodes of atomic orbitals.,Revise 'Structure of Atom'.,
+62,4,conceptual,Where is the electron density of a π bonding MO: on the axis or above and below it?,π bonding MOs build up density above and below the axis. Antibonding MOs have a node between the nuclei.,"1. Statement I says 'lower' density above and below: false.
+2. Statement II is true.
+Answer: (4)",Shapes of π and π* orbitals.,Revise 'Chemical Bonding and Molecular Structure'.,
+63,3,conceptual,"Intramolecular H-bonding needs a donor (O–H) and an acceptor in the same molecule, close together.",In o-nitrophenol the –OH and –NO_{2} are on adjacent carbons.,"1. o-Nitrophenol forms an intramolecular hydrogen bond (a six-membered ring).
+2. NH_{3}, ethanol and water form intermolecular H-bonds.
+Answer: (3)",Inter- and intramolecular hydrogen bonding.,Revise 'Chemical Bonding and Molecular Structure'.,
+64,2,sympy,Convert the solubility to mol/L first. Then write K_{sp} for Ca_{3}(PO_{4})_{2} ⇌ 3Ca²⁺ + 2PO₄³⁻.,s = W/M per 100 mL = 10W/M mol/L. K_{sp} = (3s)³(2s)² = 108s⁵.,"1. K_{sp} = 108 × 10⁵ (W/M)⁵ ≈ 10⁷(W/M)⁵.
+Answer: (2)",Solubility product.,Revise 'Equilibrium'.,
+65,4,conceptual,Are there any non-metals in the d-block?,"The d-block contains only metals; the p-block has metals, metalloids and non-metals.","1. Statement I is false.
+2. Statement II is true.
+Answer: (4)",Metals and non-metals in the periodic table.,Revise 'Classification of Elements and Periodicity in Properties'.,
+66,2,conceptual,Down group 15 the E–H bond gets weaker. How does that affect reducing power?,"The weaker the E–H bond, the more easily the hydride gives up hydrogen and electrons.","1. BiH_{3} is the strongest reducing agent.
+Answer: (2)",Group 15 hydrides.,Revise 'p-Block Elements' (group 15).,
+67,3,conceptual,Check NCERT's statements on group 14 oxides. Which kind of π bonding does carbon form in its allotropes?,"NCERT: SiO_{2}, GeO_{2} acidic; SnO and PbO amphoteric. Carbon's allotropes come from catenation and pπ–pπ bonding (carbon has no d orbitals).","1. Statement I matches NCERT: true.
+2. Statement II says pπ–dπ: false.
+Answer: (3)",Group 14 oxides; allotropy of carbon.,Revise 'p-Block Elements' (group 14).,
+68,3,conceptual,Removing the third electron from which ion breaks a half-filled d⁵ set?,"Mn²⁺ is 3d⁵ (half-filled, extra stable).","1. Mn has the highest third ionisation enthalpy.
+Answer: (3)",Ionisation enthalpies of 3d elements.,Revise 'd- and f-Block Elements'.,
+69,1,conceptual,Cr²⁺ and Mn³⁺ are both d⁴. Which configuration does each reach by losing or gaining one electron?,Cr²⁺ → Cr³⁺ gives d³ (half-filled t_{2g}). Mn³⁺ → Mn²⁺ gives d⁵ (half-filled).,"1. A is true: Cr²⁺ reduces, Mn³⁺ oxidises.
+2. R (extra stability of half-filled sets) is the correct explanation.
+Answer: (1)",Stability of oxidation states.,Revise 'd- and f-Block Elements'.,
+70,1,conceptual,Co³⁺ is d⁶. NH_{3} is strong field for Co³⁺; F⁻ is weak field.,"Strong field pairs electrons (low spin, inner orbital d²sp³); weak field does not (high spin, outer orbital sp³d²).","1. [Co(NH_{3})_{6}]³⁺: spin paired. [CoF_{6}]³⁻: spin free.
+Answer: (1)",High and low spin complexes.,Revise 'Coordination Compounds'.,
+71,4,conceptual,d–d transitions need partly filled d orbitals. Count the d electrons of the metal in each.,"Mn(VII), Cr(VI): d⁰ (colour from charge transfer). Cu(II): d⁹.","1. CuSO_{4}·5H_{2}O is coloured by d–d transitions.
+Answer: (4)",Origin of colour in transition metal compounds.,Revise 'd- and f-Block Elements'.,
+72,4,conceptual,"What does fusing with sodium convert N, S, halogens and P into?","Na converts them to NaCN, Na_{2}S, NaX and Na_{3}PO_{4}.","1. Lassaigne's test detects nitrogen, sulphur, phosphorus and halogens.
+Answer: (4)",Detection of elements in organic compounds.,Revise 'Organic Chemistry: Some Basic Principles and Techniques'.,
+73,3,conceptual,A −R group withdraws electrons through a π bond. Which group has a C=O attached to the ring?,"–OR, –OH, –NH_{2} donate lone pairs (+R).","1. –COOH shows −R.
+Answer: (3)",Resonance effects of groups.,Revise 'Organic Chemistry: Some Basic Principles and Techniques'.,
+74,2,conceptual,Meta directors withdraw electrons and have no lone pair next to the ring.,"–NH_{2}, –NHR, –OCH_{3}, –NHCOCH_{3} are o/p directors.","1. –NO_{2}, –CHO, –SO_{3}H, –COR are all meta directing.
+Answer: (2)",Directive influence of groups.,Revise 'Hydrocarbons'.,
+75,2,conceptual,Which alkyne gives cis-pent-2-ene on adding one H_{2} on a catalyst surface? What does Na/liquid NH_{3} do to an alkyne?,"Catalytic (surface) hydrogenation adds H_{2} syn, giving the cis-alkene. Birch-type reduction (Na/NH_{3}) gives the trans-alkene.","1. A = pent-2-yne (cis addition gives the cis-alkene shown).
+2. B = trans-but-2-ene.
+Answer: (2)",Reduction of alkynes (cis vs trans).,Revise 'Hydrocarbons'.,Pd/C would normally reduce all the way to the alkane; the question intends a partial (Lindlar-type) reduction.
+76,4,conceptual,Recall the NCERT uses of polyhalogen compounds.,CCl_{4}: fire extinguisher. CH_{2}Cl_{2}: paint remover. DDT: non-biodegradable insecticide. Freons: refrigerants.,"1. A–III, B–I, C–IV, D–II.
+Answer: (4)",Uses of polyhalogen compounds.,Revise 'Haloalkanes and Haloarenes'.,
+77,1,conceptual,"Name the reaction in each case: Zn dust, Reimer–Tiemann, Kolbe, nitration.","Zn dust removes –OH; CHCl_{3}/NaOH gives –CHO; CO_{2}/NaOH gives –COOH; conc. HNO_{3} gives 2,4,6-trinitrophenol.","1. A–III, B–I, C–II, D–IV.
+Answer: (1)",Reactions of phenol.,"Revise 'Alcohols, Phenols and Ethers'.",
+78,4,conceptual,"Follow each step: elimination, Br_{2} addition, substitution by CN⁻, hydrolysis.",C_{2}H_{5}Br → CH_{2}=CH_{2} → BrCH_{2}CH_{2}Br → NCCH_{2}CH_{2}CN → HOOCCH_{2}CH_{2}COOH.,"1. D = succinic acid.
+Answer: (4)",Building a dicarboxylic acid.,"Revise 'Haloalkanes and Haloarenes' and 'Aldehydes, Ketones and Carboxylic Acids'.",
+79,4,conceptual,Which of these can form hydrogen bonds between its own molecules?,"Butan-1-ol has an O–H. The others (alkane, ether, aldehyde) have no O–H.","1. Butan-1-ol has the highest boiling point.
+Answer: (4)",Boiling points and hydrogen bonding.,"Revise 'Alcohols, Phenols and Ethers'.",
+80,4,conceptual,Draw the Ni–DMG chelate: how many atoms are in each ring? What is Prussian blue's formula?,"Ni bonds to two N atoms of each DMG, forming five-membered chelate rings. Prussian blue is Fe₄[Fe(CN)_{6}]_{3}.","1. Statement I is false (five-membered rings).
+2. Statement II is true: Fe(III) outside, Fe(II) in the complex ion.
+Answer: (4)",Ni–DMG test; Prussian blue.,Revise salt analysis and 'Coordination Compounds'.,
+81,14,arithmetic,Volumes of gases are in the same ratio as moles. Write CₓH_{y} + O_{2} → xCO_{2} + (y/2)H_{2}O.,10 mL gives 40 mL CO_{2} and 50 mL H_{2}O.,"1. x = 4, y/2 = 5, so the hydrocarbon is C_{4}H_{10}.
+2. 4 + 10 = 14 atoms.
+Answer: 14",Eudiometry (combustion of hydrocarbons).,Revise 'Some Basic Concepts of Chemistry'.,
+82,57,arithmetic,ΔG° = −2.303RT log K.,log 10 = 1.,"1. ΔG° = −2.303 × 8.314 × 300 = −5744 J = −5.744 kJ.
+2. = −57.4 × 10^{−1} kJ, so 57.
+Answer: 57",Gibbs energy and equilibrium constant.,Revise 'Equilibrium' and 'Thermodynamics'.,
+83,15,arithmetic,"ΔT_{f} = K_{f} × m. Find the molality needed, then the moles for 18.6 kg of water.",24 = 1.86 × m.,"1. m = 12.9 mol/kg; moles = 12.9 × 18.6 = 240 mol.
+2. Mass = 240 × 62 g = 14.88 kg ≈ 15 kg.
+Answer: 15",Depression of freezing point.,Revise 'Solutions'.,
+84,2,arithmetic,Write the oxidation half-reaction of water and count electrons per mole of H_{2}O.,2H_{2}O → O_{2} + 4H⁺ + 4e⁻: 2 electrons per H_{2}O.,"1. Charge = 2F = 2 × 96500 = 1.93 × 10⁵ C ≈ 2 × 10⁵ C.
+Answer: 2",Faraday's laws.,Revise 'Electrochemistry'.,
+85,338,arithmetic,"Balance the electrons first to find n, then use log K = nE°/0.059.",2MnO₄⁻ + 5H_{2}C_{2}O_{4} + 6H⁺ → 2Mn²⁺ + 10CO_{2} + 8H_{2}O: n = 10. E°_{cell} = 1.51 − (−0.49) = 2.00 V.,"1. log K = 10 × 2.00/0.0591 ≈ 338.
+Answer: 338",Equilibrium constant from E°.,Revise 'Electrochemistry'.,Uses 2.303RT/F = 0.0591 V; with 0.059 the result would be 339.
+86,2,arithmetic,Write the total pressure after A has decreased by x.,A → 2B + C: total = P_{0} + 2x. So 0.28 = 0.1 + 2x and x = 0.09.,"1. p_{A} = 0.1 − 0.09 = 0.01 atm.
+2. k = (2.303/115) log(0.1/0.01) = 2.303/115 ≈ 0.02 s^{−1} = 2 × 10^{−2}.
+Answer: 2",First-order kinetics from pressure data.,Revise 'Chemical Kinetics'.,
+87,56,arithmetic,Each H_{2}SO_{4} neutralises 2 NH_{3}. Then convert NH_{3} to grams of N.,"H_{2}SO_{4} = 0.010 × 2 = 0.02 mol, so NH_{3} = 0.04 mol.","1. Mass of N = 0.04 × 14 = 0.56 g.
+2. %N = 56%.
+Answer: 56",Kjeldahl's method.,Revise 'Organic Chemistry: Some Basic Principles and Techniques'.,
+88,6,conceptual,"List the different kinds of H in 2-methylbutane, then check each product for a chiral centre.","Products: 1-chloro-2-methylbutane, 2-chloro-2-methylbutane, 2-chloro-3-methylbutane, 1-chloro-3-methylbutane.","1. 1-chloro-2-methylbutane and 2-chloro-3-methylbutane are chiral: 2 each. The other two: 1 each.
+2. Total = 6.
+Answer: 6",Monochlorination and stereoisomers.,Revise 'Hydrocarbons' and 'Haloalkanes and Haloarenes'.,
+89,5,conceptual,Hinsberg's reagent (benzenesulphonyl chloride) reacts with N–H of primary and secondary amines. Which compounds are those?,"Look for an N–H on an amine nitrogen. Tertiary amines, pyridine, diazonium salts, amides and urea do not give the test.","1. React: aniline, N-methylbenzylamine, the two primary alkylamines, piperidine: 5.
+2. Do not: benzenediazonium chloride, dibenzamide, N-phenylpiperidine, trimethylamine, pyridine, urea.
+Answer: 5",Hinsberg's test.,Revise 'Amines'.,
+90,6,conceptual,Each tripeptide is an ordered sequence of the three amino acids.,Orderings of 3 different things: 3!.,"1. 3! = 6 tripeptides.
+Answer: 6",Peptides as sequences.,Revise 'Biomolecules' (proteins).,
