@@ -1,0 +1,265 @@
+q,claude_answer,check,hint1,hint2,solution,concept,revise,note
+1,4,arithmetic,What values can 7 − sin 5x take?,"7 − sin 5x lies in [6, 8]; take reciprocals.","1. 6 ≤ 7 − sin 5x ≤ 8.
+2. f lies in [1/8, 1/6].
+Answer: (4)",Range of a function,Revise Relations and Functions.,
+2,3,arithmetic,"List the pairs with 4x ≤ 5y, then check which reverse pairs are missing.","(y, x) is in R only if 4y ≤ 5x.","1. Counting by x = 1..5: 5 + 4 + 3 + 2 + 2 = 16 pairs, m = 16.
+2. Pairs whose reverse is missing: 4 + 3 + 2 + 0 + 0 = 9, n = 9.
+3. m + n = 25.
+Answer: (3)",Relations: symmetric closure,Revise Relations and Functions.,
+3,4,sympy,Square both sides and use |w|^{2} = w w̄.,"The cross terms cancel, leaving |z_{1}|^{2} + 4|z_{2}|^{2} = 1 + 4|z_{1}|^{2}|z_{2}|^{2}.","1. Rearranged: (|z_{1}|^{2} − 1)(1 − 4|z_{2}|^{2}) = 0.
+2. So |z_{1}| = 1 or |z_{2}| = 1/2.
+Answer: (4)",Modulus of complex numbers,Revise Complex Numbers.,
+4,2,sympy,"For a 3 × 3 matrix, |adj M| = |M|^{2} and |kM| = k^{3}|M|. Work from the inside out.",|(2A)^{−1}| = 1/24.,"1. |adj((2A)^{−1})| = 1/576; |3 adj(…)| = 27/576 = 3/64.
+2. |adj| = 9/4096; |−3 adj| = −243/4096.
+3. |adj| = 3^{10}/2^{24}; |−4 adj| = −3^{10}/2^{18}.
+4. |adj| = 3^{20}/2^{36}: m = −36, n = 20, m + 2n = 4.
+Answer: (2)",Determinant of adjoint,Revise Determinants.,
+5,2,arithmetic,"Letters in order: A, G, N, P, R, U. Count blocks of words by their first letters.","A… and G…: 120 each. Then N followed by A, G, P: 24 each.","1. Words before N: 240.
+2. NA, NG, NP: 72 more (up to 312).
+3. NR: NRAGPU (313), NRAGUP (314), NRAPGU (315).
+Answer: (2)",Dictionary rank,Revise Permutations.,
+6,1,sympy,"Use C(n+1, r+1)/C(n, r) = (n+1)/(r+1) and C(n, r)/C(n−1, r−1) = n/r.",(n + 1)/(r + 1) = 11/7 and n/r = 5/3.,"1. n = 5r/3; 7(5r/3 + 1) = 11(r + 1) gives r = 6, n = 10.
+2. 2n + 5r = 50.
+Answer: (1)",Binomial coefficient ratios,Revise Binomial Theorem.,
+7,1,arithmetic,Total work = 17m system-days. Count the system-days actually used over 25 days.,Day k uses m − 4(k − 1) systems.,"1. Sum over 25 days: 25m − 4(0 + 1 + … + 24) = 25m − 1200.
+2. 25m − 1200 = 17m, so m = 150.
+Answer: (1)",Arithmetic progressions in word problems,Revise AP sums.,
+8,1,conceptual,Compare e^{π} and π^{e} by taking logs.,e^{π} > π^{e} ⇔ (ln e)/e > (ln π)/π; (ln x)/x is largest at x = e.,"1. (ln x)/x decreases for x > e, so (ln e)/e > (ln π)/π, i.e. e^{π} > π^{e}.
+2. Checking the others numerically: e^{2π} > (2π)^{e} and (2e)^{π} < π^{2e}, so options 3 and 4 are false.
+Answer: (1)",Comparing powers using monotonicity,Revise Application of Derivatives.,The given f(x) = (1/x)^{2x} does not lead directly to this comparison; the key's option is the standard true fact.
+9,2,sympy,Estimate both sums for large n by their leading powers.,Numerator = Σ (k^{2} − k)(n − k) ≈ n^{4}/12; denominator ≈ n^{4}/4.,"1. Σ k^{2}(n − k) ≈ n^{4}(1/3 − 1/4) = n^{4}/12.
+2. Σ k^{3} − Σ k^{2} ≈ n^{4}/4.
+3. Limit = 1/3.
+Answer: (2)",Limits of sums,Revise sums of powers.,
+10,2,arithmetic,Product rule and chain rule.,g' = h'(e^{x})e^{x}e^{h(x)} + h(e^{x})e^{h(x)}h'(x).,"1. At x = 0: h'(1)·1·1 + h(1)·1·h'(0) = 2 + 2 = 4.
+Answer: (2)",Chain rule,Revise Continuity and Differentiability.,
+11,1,sympy,Area = ∫ (upper − lower) dx from 1 to 2.,∫_{1}^{2} (1/x − a/x^{2}) dx = ln 2 − a/2.,"1. ln 2 − a/2 = ln 2 − 1/7, so a = 2/7.
+2. 7a − 3 = −1.
+Answer: (1)",Area between curves,Revise Application of Integrals.,
+12,3,sympy,Divide by cos^{2}x and put t = tan x.,∫ dt/(a^{2}t^{2} + b^{2}) = (1/(ab)) tan^{−1}(at/b).,"1. a/b = 3 and ab = 12, so a = 6, b = 2.
+2. Max of a sin x + b cos x = √(a^{2} + b^{2}) = √40.
+Answer: (3)",Standard integrals; maximum of a sin x + b cos x,Revise Integrals.,
+13,1,sympy,"For a circle, dy/dx = −(x + g)/(y + f): no y in the numerator, no x in the denominator.","So β = 0, and matching coefficients gives α = 2.","1. β = 0; dy/dx = ((2 + α)x + 2)/(−2αy + 4α).
+2. For a circle: 2 + α = 2α, α = 2: dy/dx = (4x + 2)/(−4y + 8) = −(x + 1/2)/(y − 2).
+3. Circle x^{2} + y^{2} + x − 4y = 0 (through origin): r^{2} = 1/4 + 4 = 17/4.
+4. r = √17/2.
+Answer: (1)",Differential equation of a circle,Revise Differential Equations and Circles.,
+14,4,sympy,"Write 16 × (distance to (2,1))^{2} = 25 × (distance to (1,3))^{2}.","Expand and move all terms to one side, keeping the constant 170.","1. 9x^{2} + 9y^{2} + 14x − 118y + 170 = 0.
+2. a = 9, b = 9, c = 0, d = 14, e = −118.
+3. 81 + 18 + 0 + 56 − 118 = 37.
+Answer: (4)",Locus,Revise Straight Lines.,
+15,3,sympy,The orthocentre lies on each altitude: AP ⊥ BC and BP ⊥ AC.,"(1, 3)·(h − 8, k − 3) = 0 and (−2, −2)·(h − 5, k + 2) = 0.","1. h + 3k = 17 and h + k = 3.
+2. k = 7, h = −4.
+3. h^{2} + k^{2} = 65.
+Answer: (3)",Orthocentre,Revise Straight Lines.,
+16,3,sympy,Each new triangle has half the side. Sum two GPs.,P = 3a(1 + 1/2 + …) = 6a; Q = (√3/4)a^{2}(1 + 1/4 + …) = a^{2}/√3.,"1. P^{2} = 36a^{2}.
+2. 36√3 Q = 36a^{2}.
+3. P^{2} = 36√3 Q.
+Answer: (3)",Infinite GP,Revise Sequences and Series.,
+17,4,sympy,Find the image P first.,"Line (t, 3 + t, 1 − t); foot of perpendicular from Q at t = −1.","1. Foot (−1, 2, 2), so P = (−5, 7, 3).
+2. PQ × PR = (36, 18, 54) = 18(2, 1, 3).
+3. Area λ = 9√14, λ^{2} = 81 × 14, so K = 81.
+Answer: (4)",Image in a line; area by cross product,Revise Three Dimensional Geometry.,
+18,2,sympy,Compute the cross products one at a time.,"a × (i + j) = (1, −1, 1).","1. (1, −1, 1) × i = (0, 1, 1); (0, 1, 1) × i = (0, 1, −1) = b.
+2. Projection = a·b/|b| = 2/√2 = √2.
+3. Square = 2.
+Answer: (2)",Vector triple products,Revise Vector Algebra.,
+19,4,sympy,Expand |c − a|^{2} to find |c|.,|c|^{2} − 12|c| + 38 = 8.,"1. |c| = 6 + √6 (since |c| ≥ 6).
+2. |a × b| = |(1, −1, 5)| = 3√3.
+3. |(a × b) × c| = 3√3(6 + √6) sin 60° = (9/2)(6 + √6).
+Answer: (4)",Vector products,Revise Vector Algebra.,
+20,3,arithmetic,"Pick the two addresses, then count onto distributions of 3 letters to them.","C(5,2) × (2^{3} − 2).","1. Favourable = 10 × 6 = 60; total = 5^{3} = 125.
+2. p = 12/25.
+Answer: (3)",Probability with onto functions,Revise Probability.,
+21,4,sympy,Each root satisfies x^{2} = −√2 x + 8. Multiply by x^{n}.,U_{n+2} + √2 U_{n+1} = 8U_{n}.,"1. U_{10} + √2 U_{9} = 8U_{8}.
+2. Ratio = 8/2 = 4.
+Answer: 4",Power sums of roots,Revise Quadratic Equations.,
+22,38,sympy,Infinitely many solutions: the coefficient determinant and the replaced determinants vanish.,Replace the z-column by the right sides to get one equation in μ.,"1. det[[2, 7, 3],[3, 2, 4],[1, μ, −1]] = 39 + μ = 0, so μ = −39.
+2. Coefficient determinant = −119 − 119λ = 0, so λ = −1.
+3. λ − μ = 38.
+Answer: 38",Consistency of linear systems,Revise Determinants.,
+23,3660,sympy,S is an arithmetico-geometric series with ratio r = 1 + x.,S = r(1 − 61r^{60} + 60r^{61})/(1 − r)^{2}.,"1. At x = 60, r = 61: 3600 S = 61(1 + 59 × 61^{61}) = 3599 × 61^{61} + 61.
+2. a = 3599, b = 61; a + b = 3660.
+Answer: 3660",AGP sums,Revise Sequences and Series.,
+24,17,sympy,f = [x/2] + 3 − [√x]. Find all jumps and check whether any cancel.,"[x/2] jumps at 2, 4, 6, 8; [√x] jumps at 1, 4.","1. At 4 both jump by 1 and cancel: continuous.
+2. Discontinuous at 1, 2, 6 and at 8 (left-hand limit differs).
+3. Sum = 17.
+Answer: 17",Continuity of greatest-integer functions,Revise Continuity.,
+25,23,sympy,∫_{0}^{3}[g(x)] dx = Σ (3 − x_{k}) over the points x_{k} where g crosses each integer.,[x^{2}] steps at √k (k = 1..8); [x^{2}/2] steps at √(2k) (k = 1..4).,"1. ∫[x^{2}] = 24 − (1 + √2 + √3 + 2 + √5 + √6 + √7 + 2√2) = 21 − 3√2 − √3 − √5 − √6 − √7.
+2. ∫[x^{2}/2] = 12 − (√2 + 2 + √6 + 2√2) = 10 − 3√2 − √6.
+3. Total = 31 − 6√2 − √3 − √5 − 2√6 − √7: a + b + c = 31 − 6 − 2 = 23.
+Answer: 23",Integrals of greatest-integer functions,Revise Definite Integrals.,
+26,3,sympy,Is the left side an exact differential of something simple?,d((e^{y} + 1) sin x) = (e^{y} + 1) cos x dx + e^{y} sin x dy.,"1. (e^{y} + 1) sin x = C; at (π/2, 0): C = 2.
+2. At π/6: (e^{y} + 1)/2 = 2, e^{y} = 3.
+Answer: 3",Exact differential equations,Revise Differential Equations.,
+28,43,sympy,SD = |(a_{2} − a_{1})·n|/|n| with n = d_{1} × d_{2}.,"n = (−6, −15, 3), |n| = 3√30.","1. (a_{2} − a_{1})·(2, 5, −1) = −42 − 2λ; |n|/3 = √30.
+2. |42 + 2λ| = 44: λ = 1 or −43.
+3. Largest |λ| = 43.
+Answer: 43",Shortest distance,Revise Three Dimensional Geometry.,
+29,71,sympy,Without replacement: hypergeometric variance.,Var = n(K/N)(1 − K/N)(N − n)/(N − 1).,"1. Var = 5 × (1/4)(3/4)(7/11) = 105/176.
+2. n − m = 71.
+Answer: 71",Variance of a hypergeometric variable,Revise Probability.,
+30,39,sympy,Cosine rule at A gives α; then find cos C.,(64 + α^{2} − 49)/(16α) = 2/3.,"1. 3α^{2} − 32α + 45 = 0: α = 9 (natural).
+2. cos C = (49 + 64 − 81)/112 = 2/7.
+3. cos 3C = 4(8/343) − 6/7 = −262/343; 49 cos 3C + 42 = 32/7.
+4. m + n = 39.
+Answer: 39",Cosine rule and triple angles,Revise Trigonometry.,
+31,1,arithmetic,"On a banked road with friction, friction acts down the slope at maximum speed.",v_{max}^{2} = rg(tan θ + μ)/(1 − μ tan θ).,"1. tan 30° = 0.577: v^{2} = 3000 × 0.777/0.885 = 2637.
+2. v ≈ 51.4 m/s.
+Answer: (1)",Banking of roads,Revise Laws of Motion.,
+32,3,conceptual,Write the SI units: J kg^{−1} K^{−1} and J mol^{−1} K^{−1}.,J = ML^{2}T^{−2}.,"1. Specific heat: L^{2}T^{−2}K^{−1}. I correct.
+2. Gas constant: ML^{2}T^{−2}K^{−1}mol^{−1}, not T^{−1}. II incorrect.
+Answer: (3)",Dimensions,Revise Units and Measurements.,
+33,1,sympy,"Write h = −ut_{1} + gt_{1}^{2}/2 and h = ut_{2} + gt_{2}^{2}/2, and eliminate u.","Multiply the first by t_{2}, the second by t_{1}, and add.","1. h(t_{1} + t_{2}) = (g/2)t_{1}t_{2}(t_{1} + t_{2}), so h = gt_{1}t_{2}/2.
+2. Dropped: h = gt^{2}/2, so t = √(t_{1}t_{2}).
+Answer: (1)",Motion under gravity,Revise Motion in a Straight Line.,
+34,3,arithmetic,The branch holds up the chain and the body together.,Weight of chain = 100 N.,"1. Force = 200 + 100 = 300 N.
+Answer: (3)",Equilibrium,Revise Laws of Motion.,
+35,2,conceptual,How does each quantity change with X?,"χ constant with H; B ∝ x inside a wire, ∝ 1/x outside; solenoid field uniform then falls near the end.","1. A → III, B → I, C → IV, D → II.
+Answer: (2)",Magnetic field graphs,Revise Moving Charges and Magnetism.,Susceptibility treated as constant (para/diamagnetic).
+36,2,arithmetic,p = √(2mK).,KE × 36 ⇒ p × 6.,"1. p becomes 6p: increase = 500%.
+Answer: (2)",Momentum and kinetic energy,"Revise Work, Energy and Power.",
+37,2,arithmetic,g at depth d: g(1 − d/R).,d = R/4.,"1. Weight = 300 × 3/4 = 225 N.
+Answer: (2)",g below the surface,Revise Gravitation.,
+38,2,conceptual,A soap bubble has two surfaces.,Excess pressure = 2 × 2S/R.,"1. ΔP = 4S/R.
+Answer: (2)",Excess pressure,Revise Mechanical Properties of Fluids.,
+39,4,arithmetic,First law: Q = ΔU + W. Helium is monatomic.,ΔU = n(3/2)RΔT.,"1. ΔU = 1.5 × 8.3 × 2 = 24.9 J.
+2. W = 48 − 24.9 = 23.1 J.
+Answer: (4)",First law of thermodynamics,Revise Thermodynamics.,
+40,2,arithmetic,Zero error = (coinciding vernier division) × least count.,LC = MSD/50.,"1. 4 × LC = 0.04 mm gives LC = 0.01 mm.
+2. MSD = 0.5 mm, so 20 divisions in 1 cm.
+Answer: (2)",Vernier zero error,Revise Units and Measurements.,
+41,4,arithmetic,Count degrees of freedom of a non-rigid (vibrating) diatomic molecule.,3 translational + 2 rotational + 2 vibrational (KE and PE) = 7.,"1. Energy per molecule = (7/2)k_{B}T.
+2. 10 molecules: 35 k_{B}T.
+Answer: (4)",Equipartition,Revise Kinetic Theory.,"Uses the molecular k_{B} (not R) as there are 10 molecules, not moles."
+42,1,arithmetic,Identical spheres share charge equally on contact.,After touching P: Q/2 each. Then with S: (Q/2 + Q)/2 = 3Q/4.,"1. New force ∝ (Q/2)(3Q/4) = (3/8)Q^{2}.
+2. 16 × 3/8 = 6 N.
+Answer: (1)",Coulomb's law and charge sharing,Revise Electric Charges and Fields.,
+43,3,arithmetic,Find the current first.,I = P/V; n = I/e.,"1. I = 0.5 A.
+2. n = 0.5/1.6 × 10^{−19} = 3.125 × 10^{18} = 31.25 × 10^{17}.
+Answer: (3)",Current and electrons,Revise Current Electricity.,
+44,4,arithmetic,|emf| = L ΔI/Δt.,ΔI = 4 A.,"1. L = 0.1 × 0.2/4 = 5 × 10^{−3} H = 5 mH.
+Answer: (4)",Self-inductance,Revise Electromagnetic Induction.,
+45,4,arithmetic,Intensity = average energy density × c.,I = (1/2)ε_{0}E_{0}^{2}c.,"1. I = 0.5 × 9 × 10^{−12} × 600^{2} × 3 × 10^{8} = 486 W/m^{2}.
+Answer: (4)",Intensity of EM waves,Revise Electromagnetic Waves.,
+46,2,arithmetic,Lens-maker's formula; for a biconvex lens R_{2} is negative.,1/f = (μ − 1)(1/15 + 1/30).,"1. 1/20 = (μ − 1)/10.
+2. μ = 1.5.
+Answer: (2)",Lens-maker's formula,Revise Ray Optics.,
+47,3,arithmetic,"E = hc/λ in eV, then eV_{0} = E − φ.",E = 1240/300 eV.,"1. E = 4.13 eV.
+2. V_{0} = 4.13 − 2.13 = 2 V.
+Answer: (3)",Photoelectric equation,Revise Dual Nature.,
+48,2,arithmetic,Longest Paschen wavelength: n = 4 → 3.,1/λ = R(1/9 − 1/16) = 7R/144.,"1. λ = 144/(7 × 1.097 × 10^{7}) = 1.876 × 10^{−6} m.
+Answer: (2)",Hydrogen spectrum,Revise Atoms.,
+49,1,arithmetic,Energy needed = 6 eV.,λ_{max} = hc/E.,"1. λ = 1242/6 = 207 nm.
+Answer: (1)",Energy and wavelength,Revise Semiconductor Electronics.,The '6 eV' acceptor level is taken as given (unrealistically large).
+50,2,arithmetic,"Find the least count, then the three readings.",LC = (1/50) MSD = 0.001 cm. μ = real depth/apparent depth.,"1. Readings: 8.476, 7.161, 4.051 cm.
+2. Real depth = 8.476 − 4.051 = 4.425; apparent = 7.161 − 4.051 = 3.110.
+3. μ = 1.42.
+Answer: (2)",Travelling microscope,Revise experimental skills (refractive index of a slab).,
+51,740,arithmetic,Open pipe: f_{n} = nv/(2L).,f_{1} = 6 × 333/1.2; f_{2} = 5 × 333/1.8.,"1. f_{1} = 1665 Hz, f_{2} = 925 Hz.
+2. Difference 740 Hz.
+Answer: 740",Organ pipes,Revise Waves.,
+52,80,arithmetic,Side-by-side dielectrics act like two capacitors in parallel.,C = C_{0}(K_{1} + K_{2})/2 = 2.5 × 10 μF. Force between plates F = CV^{2}/(2d).,"1. C = 25 μF.
+2. 8 = 25 × 10^{−6} V^{2}/(2 × 0.01).
+3. V^{2} = 6400, V = 80 V.
+Answer: 80",Capacitor with dielectrics; force between plates,Revise Electrostatic Potential and Capacitance.,"Teacher look: the data are inconsistent (ε_{0}A/d with A = 4 cm^{2}, d = 10 mm is far below 10 μF); the key uses C_{0} = 10 μF as given."
+53,160,arithmetic,The ammeter's own resistance is the coil and shunt in parallel.,240 ∥ 10 = 9.6 Ω.,"1. Total = 140.4 + 9.6 = 150 Ω.
+2. I = 24/150 = 0.16 A = 160 mA.
+Answer: 160",Ammeter resistance,Revise Current Electricity.,
+54,8,arithmetic,"I_{max} = (√I_{1} + √I_{2})^{2}, I_{min} = (√I_{1} − √I_{2})^{2}.",Amplitudes add or subtract; amplitude ∝ √intensity.,"1. I_{max} = 9I, I_{min} = I.
+2. Difference 8I.
+Answer: 8",Interference,Revise Wave Optics.,
+55,122,arithmetic,The first dip at 10.2 V means excitation energy 10.2 eV.,λ = hc/E.,"1. λ = 1245/10.2 = 122 nm.
+Answer: 122",Franck–Hertz experiment,Revise Atoms.,
+56,4,arithmetic,How far is the midpoint of a side from the centroid?,Distance = inradius = a/(2√3) = 1/√3 m.,"1. I = (2 + 4 + 6) × (1/3) = 4 kg m^{2}.
+Answer: 4",Moment of inertia of point masses,Revise Rotational Motion.,
+57,3,sympy,Differentiate x^{2} = 1 + t^{2} twice.,"xv = t, then v^{2} + xa = 1.","1. a = (1 − v^{2})/x = (1 − t^{2}/x^{2})/x = 1/x^{3}.
+2. n = 3.
+Answer: 3",Kinematics by differentiation,Revise Motion in a Straight Line.,
+58,100,arithmetic,Plane perpendicular to B means M is along B.,W = MB(1 − cos 90°) with M = NIA.,"1. M = 100 × 10^{−3} × 5 × 10^{−3} = 5 × 10^{−4} A m^{2}.
+2. W = 5 × 10^{−4} × 0.2 = 10^{−4} J = 100 μJ.
+Answer: 100",Work on a magnetic dipole,Revise Magnetism.,
+59,10,arithmetic,Maximum current means resonance.,f = 1/(2π√(LC)).,"1. 2π√(LC) = 2√(π^{2}LC) = 2√(10 × 0.1 × 2.5 × 10^{−9}) = 10^{−4}.
+2. f = 10^{4} Hz = 10 × 10^{3} Hz.
+Answer: 10",LCR resonance,Revise Alternating Current.,
+60,1,arithmetic,Balance forces at the middle; then find the strain from the new length.,2T sin θ = mg; strain = 1/cos θ − 1 ≈ θ^{2}/2.,"1. T = 20/(2 × 0.01) = 1000 N.
+2. Strain = 5 × 10^{−5}; stress = 2 × 10^{11} × 5 × 10^{−5} = 10^{7} Pa.
+3. A = 1000/10^{7} = 1 × 10^{−4} m^{2}.
+Answer: 1",Young's modulus,Revise Mechanical Properties of Solids.,
+61,1,arithmetic,Take 1 L of solution: find the mass of water in it.,Mass of solution 1250 g; NaCl = 3 × 58.5 g.,"1. Water = 1250 − 175.5 = 1074.5 g.
+2. m = 3/1.0745 = 2.79 m.
+Answer: (1)",Molarity to molality,Revise Solutions.,
+62,2,conceptual,"Count electron domains; for the complex, is NH_{3} strong field for Co^{3+}?",BrF_{5}: 6 domains. [Co(NH_{3})_{6}]^{3+}: inner orbital d^{2}sp^{3}.,"1. PF_{5} sp^{3}d but BrF_{5} sp^{3}d^{2}: I false.
+2. SF_{6} sp^{3}d^{2} but [Co(NH_{3})_{6}]^{3+} d^{2}sp^{3}: II false.
+Answer: (2)",Hybridisation,Revise Chemical Bonding and Coordination Compounds.,
+63,1,arithmetic,K_{p} = K_{c}(RT)^{Δn_{g}}.,Δn_{g} = 1 − 3/2.,"1. K_{p}/K_{c} = (RT)^{−1/2} = 1/√(RT).
+Answer: (1)",K_{p} and K_{c},Revise Equilibrium.,
+64,1,conceptual,Classify each redox type.,Two elements joining; one compound breaking up; a metal displacing H; one species both oxidised and reduced.,"1. A combination (IV); B decomposition (I); C displacement (II); D disproportionation (III).
+Answer: (1)",Types of redox reactions,Revise Redox Reactions.,
+65,4,conceptual,Which way does current flow if the external voltage beats the cell?,An opposing external potential larger than E_{cell} drives the reaction backwards.,"1. Apply an external opposite potential greater than E°_{cell}.
+Answer: (4)",Electrolytic vs galvanic cells,Revise Electrochemistry.,
+66,2,conceptual,"Recall the flame colours: Li crimson, Na yellow, Rb red-violet, Cs blue.",Shortest wavelength = highest energy: Cs (blue) < Na (yellow) < Li (red) < Rb.,"1. Li 670.8 (III); Na 589.2 (I); Rb 780.0 (IV); Cs 455.5 (II).
+Answer: (2)",Flame emission of alkali metals,Revise The s-Block Elements (NCERT table).,
+67,2,conceptual,Inert pair effect: lower oxidation states are more stable for heavier elements.,Pb^{4+} and Tl^{3+} prefer to gain electrons.,"1. Pb^{4+} → Pb^{2+} and Tl^{3+} → Tl^{+}: oxidising agents.
+2. Sn^{4+} is stable, Sn^{2+} is reducing, Pb^{2+} and Tl^{+} are stable.
+3. Count = 2.
+Answer: (2)",Inert pair effect,Revise The p-Block Elements.,
+68,4,conceptual,Check each group 14 statement against NCERT.,Radius and electronegativity do not change regularly down the group.,"1. A, B: not regular. False.
+2. C, D, E: true (NCERT).
+Answer: (4)",Group 14 trends,Revise The p-Block Elements.,D follows NCERT's statement.
+69,3,conceptual,Write the ground-state configurations; watch Cr.,"Sc 1, Ti 2, V 3, Cr 6 (3d^{5}4s^{1}), Mn 5.","1. A < D < C < E < B.
+Answer: (3)",Electronic configurations,Revise Structure of Atom / d-block.,
+70,1,conceptual,Ligands are named in alphabetical order (ignoring di/bis).,'bromido' before 'trimethylphosphine'.,"1. Dibromido(bis)…: dibromobis(trimethylphosphine)platinum(II).
+Answer: (1)",IUPAC naming of complexes,Revise Coordination Compounds.,Key uses the older 'bromo'.
+71,1,conceptual,In a tetrahedral field e is lower; fill e then t_{2} (high spin).,"Ti(IV) d^{0}, Fe(VI) d^{2}, Fe(III) d^{5}, Co(II) d^{7}.","1. TiCl_{4}: e^{0}t_{2}^{0} (III). [FeO_{4}]^{2−}: e^{2}t_{2}^{0} (I). [FeCl_{4}]^{−}: e^{2}t_{2}^{3} (IV). [CoCl_{4}]^{2−}: e^{4}t_{2}^{3} (II).
+Answer: (1)",Tetrahedral splitting,Revise CFT.,
+72,2,conceptual,"AgCl is white, AgBr pale yellow, AgI yellow. Which dissolves in NH_{4}OH?","AgCl dissolves easily, AgBr with difficulty, AgI not.","1. Pale yellow, sparingly soluble in NH_{4}OH: AgBr, so Br^{−}.
+Answer: (2)",Tests for halides,Revise salt analysis.,
+73,4,conceptual,Polar compounds stick more strongly to the polar stationary phase.,R_{f} is always less than 1.,"1. A polar compound moves less, so its R_{f} is smaller.
+Answer: (4)",Chromatography,Revise purification methods.,
+74,1,conceptual,Which groups donate electrons to the ring and which withdraw?,"OCH_{3} (+R) > CH_{3} (+I, hyperconjugation) > H > CF_{3} (−I).","1. III > I > II > IV.
+Answer: (1)",Activating and deactivating groups,Revise Hydrocarbons.,
+75,4,conceptual,Which isomer has its C–CH_{3} dipoles cancelling?,trans-2-butene has μ ≈ 0.,"1. cis-2-butene has a larger dipole moment, so statement 4 is incorrect.
+Answer: (4)",Geometrical isomers,Revise Hydrocarbons.,
+76,3,conceptual,Will a secondary carbocation next to a ring CH rearrange?,A hydride shift from the ring carbon gives a tertiary carbocation.,"1. Ionisation gives a secondary cation on the side chain.
+2. A 1,2-hydride shift gives the tertiary ring cation.
+3. OH^{−}/H_{2}O attacks: 1-propylcyclohexan-1-ol.
+Answer: (3)",Carbocation rearrangement,Revise Haloalkanes (S_{N}1).,Teacher look: the key assumes S_{N}1 with rearrangement in aqueous NaOH; direct S_{N}2 would give option 1.
+77,3,conceptual,"Follow each step: diazotisation, Sandmeyer, Dow process.",Aniline → PhN_{2}Cl → PhCl → PhONa → PhOH.,"1. A = phenol.
+Answer: (3)",Diazonium salts and the Dow process,Revise Amines and Phenols.,
+78,1,conceptual,"Reduce, oxidise back to an aldehyde, add HCN, hydrolyse the nitrile.",CH_{3}COOH → CH_{3}CH_{2}OH → CH_{3}CHO → CH_{3}CH(OH)CN → CH_{3}CH(OH)COOH.,"1. P = 2-hydroxypropanoic acid (lactic acid).
+Answer: (1)",Cyanohydrins,Revise Aldehydes and Carboxylic Acids.,
+79,4,conceptual,OCH_{3} directs ortho/para; para is major. Then where can Br go?,"In p-nitroanisole, positions ortho to OCH_{3} are also meta to NO_{2}.","1. A = 4-nitroanisole.
+2. Excess Br_{2}/Fe: 2,6-dibromo-4-nitroanisole.
+Answer: (4)",Directing effects,Revise Hydrocarbons.,
+80,1,conceptual,Enzymes are specific. Which enzyme hydrolyses maltose?,Maltase hydrolyses maltose.,"1. B false (enzymes are specific); D false (maltase, not oxidase).
+Answer: (1)",Enzymes,Revise Biomolecules.,
+81,34,arithmetic,"In the Bohr model, KE = −E.",Virial theorem for the Bohr atom: E = −KE.,"1. KE = 3.4 eV = 34 × 10^{−1} eV.
+Answer: 34",Energies in the Bohr model,Revise Atoms.,
+82,6,conceptual,Count σ bonds + lone pairs on the central atom: 3 means sp^{2}.,"sp^{2} = 3 electron domains: e.g. BF_{3}, C=C carbons, C=O carbon, SO_{2} (2 bonds + 1 lone pair).","1. sp^{2}: SO_{2}, C_{2}H_{4}, BCl_{3}, HCHO, C_{6}H_{6}, BF_{3}.
+2. Count 6.
+Answer: 6",Hybridisation,Revise Chemical Bonding.,
+83,2000,arithmetic,ΔG = ΔH − TΔS < 0.,T > ΔH/ΔS.,"1. T > 400/0.2 = 2000 K.
+Answer: 2000",Spontaneity,Revise Thermodynamics.,
+84,543,arithmetic,Read ΔT_{f} from the graph.,ΔT_{f} = 273.15 − 270.65 = 2.5 K.,"1. m = 2.5/1.86 = 1.344 mol/kg; in 0.1 kg water: 0.1344 mol methanol.
+2. Mass = 4.30 g; volume = 4.30/0.792 = 5.43 mL = 543 × 10^{−2} mL.
+Answer: 543",Freezing point depression,Revise Solutions.,
+85,17,arithmetic,"For first order, t = (t_{1/2}/ln 2) ln(a/(a − x)).","t_{1} uses ln 3, t_{2} uses ln 5.","1. t_{1}/t_{2} = (5/2) × log 3/log 5 = 2.5 × 0.477/0.699 = 1.71.
+2. = 17 × 10^{−1}.
+Answer: 17",First-order kinetics,Revise Chemical Kinetics.,
+86,0,conceptual,"Compare the oxidising power of V(V), Cr(VI), Mn(VII) oxo-species.",Oxidising power increases V < Cr < Mn.,"1. VO_{2}^{+} is the weakest oxidant.
+2. V^{5+} is d^{0}: 0 BM.
+Answer: 0",Oxidising power of oxo-ions,Revise The d- and f-Block Elements.,
+87,12,conceptual,A is Ni^{2+}; B is the red nickel dimethylglyoximate.,[Ni(dmgH)_{2}] has two O–H···O hydrogen bonds.,"1. Protons in B: 12 CH_{3} protons + 2 O–H protons.
+2. The 2 O–H protons are in H-bonds; 12 are not.
+Answer: 12",Nickel dimethylglyoxime complex,Revise Coordination Compounds.,
+88,5,conceptual,Hyperconjugation needs C–H bonds on a carbon next to the C^{+}.,Check each cation: does a carbon next to C^{+} carry an sp^{3} C–H bond?,"1. Has α-H: tert-pentyl cation, tert-butyl cation.
+2. No α-H (or only in-plane sp^{2} C–H): (t-Bu)_{2}CH^{+}, CH_{3}^{+}, cyclopentadienyl cation, CH_{2}^{+}OCH_{3}, Me_{2}N–CH_{2}^{+}.
+3. Count 5.
+Answer: 5",Hyperconjugation,Revise Organic Chemistry: Some Basic Principles.,
+89,15,conceptual,Nitration of phenetole goes para; then the two free ortho positions are brominated.,"Q = 2,6-dibromo-4-nitrophenetole.","1. Q has 3 O (1 ether + 2 nitro) and 2 Br.
+2. Ratio 1.5 = 15 × 10^{−1}.
+Answer: 15",Directing effects,Revise Hydrocarbons.,
+90,287,conceptual,'Remains clear' with Hinsberg's reagent is read as no reaction. Which amine does not react?,Excess benzyl chloride gives tribenzylamine (tertiary).,"1. X = (C_{6}H_{5}CH_{2})_{3}N.
+2. M = 21 × 12 + 21 + 14 = 287.
+Answer: 287",Hinsberg test,Revise Amines.,"Teacher look: a primary amine's sulphonamide also dissolves in the alkali (clear solution); the key reads 'remains clear' as no reaction, i.e. a tertiary amine."
