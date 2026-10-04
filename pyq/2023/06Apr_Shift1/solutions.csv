@@ -1,0 +1,252 @@
+q,claude_answer,check,hint1,hint2,solution,concept,revise,note
+1,1,sympy,"Simplify each set. For A, [x + 4] = [x] + 1. For B, sum the GP first.","A: 2[x] + 7 ≤ 3. B: Σ 3/10^{r} = 1/3, so the left side becomes 3^{x} × 3^{−(x−3)} = 27.","1. A: [x] ≤ −2, so x < −1.
+2. B: 27 < 3^{−3x} means −3x > 3, so x < −1.
+3. A = B.
+Answer: (1)",Greatest integer function and exponential inequalities,Revise [x + n] = [x] + n and GP sums.,
+2,2,sympy,x^{2} − 8x + 15 changes sign at 3 and 5. Solve in each case and check the interval.,"Outside [3, 5]: x^{2} − 10x + 22 = 0. Inside: x^{2} − 6x + 8 = 0.","1. Outside: x = 5 ± √3; only 5 + √3 lies outside [3, 5].
+2. Inside: x = 2 or 4; only 4 lies in [3, 5].
+3. Sum = 9 + √3.
+Answer: (2)",Equations with modulus,Always check each root against its case. Revise Quadratic Equations.,
+3,2,sympy,"If A^{2} = I but A ≠ ±I (entries non-zero), what does Cayley–Hamilton say about trace and determinant?",A^{2} − (tr A)A + (det A)I = 0 compared with A^{2} = I.,"1. (tr A)A = (1 + det A)I. A is not a multiple of I, so tr A = 0 and det A = −1.
+2. a = 0, b = |−1| = 1.
+3. 3a^{2} + 4b^{2} = 4.
+Answer: (2)",Involutory matrices,Revise Cayley–Hamilton for 2 × 2 matrices.,
+4,2,sympy,Set the coefficient determinant to 0 to find a.,Then row 1 must be a combination p(row 2) + q(row 3).,"1. det = 7 − a = 0, so a = 7.
+2. (1, 1, 7) = −1(2, 5, 2) + 3(1, 2, 3).
+3. b = −6 + 9 = 3.
+4. 2a + 3b = 23.
+Answer: (2)",Linear systems,Revise Determinants.,
+5,3,sympy,Write both binomial coefficients out and cancel.,"C(2n,3)/C(n,3) = 4(2n − 1)/(n − 2).","1. 4(2n − 1) = 10(n − 2), so n = 8.
+2. (64 + 24) : (64 − 24 + 4) = 88 : 44 = 2 : 1.
+Answer: (3)",Binomial coefficients,Revise Permutations and Combinations.,
+6,2,sympy,The fifth term from the end is the fifth term of the reversed expansion.,Ratio = (2^{1/4} × 3^{1/4})^{n−8} = 6^{(n−8)/4}.,"1. 6^{(n−8)/4} = 6^{1/2}, so n = 10.
+2. T_{3} = C(10,2)(2^{1/4})^{8}(3^{−1/4})^{2} = 45 × 4/√3 = 60√3.
+Answer: (2)",Binomial theorem,Revise the general term.,
+7,4,sympy,"Look at the differences 6, 8, 10, 12: the nth term is quadratic.",T_{n} = n^{2} + 3n + 1.,"1. Σ n^{2} = 2870, Σ 3n = 630, Σ 1 = 20 for n = 1..20.
+2. Sum = 3520.
+Answer: (4)",Series with quadratic terms,Revise Sequences and Series.,
+8,1,sympy,Rationalise each term.,1/(√a_{k} + √a_{k+1}) = (√a_{k+1} − √a_{k})/d.,"1. Sum = (√a_{n} − √a_{1})/d.
+2. √(d/n) × √(a_{1} + (n − 1)d)/d → √(d/n) × √(nd)/d = 1.
+Answer: (1)",Telescoping sums and limits,Revise Limits and AP.,
+9,4,sympy,Differentiate both terms implicitly; both x and y appear in exponents.,d(x^{y}) = x^{y}(y' ln x + y/x); d(y^{x}) = y^{x}(ln y + xy'/y).,"1. At (2, 2): 8(y' ln 2 + 1) + 12(ln 2 + y') = 0.
+2. y' = −(8 + 12 ln 2)/(12 + 8 ln 2) = −(2 + ln 8)/(3 + ln 4).
+Answer: (4)",Implicit and logarithmic differentiation,Revise Continuity and Differentiability.,
+10,3,sympy,"Replace x by 1/x to get a second equation, then solve for f(x).",5f(1/x) + 4f(x) = x + 3.,"1. 9f(x) = 5/x − 4x + 3.
+2. ∫_{1}^{2} f = (5 ln 2 − 6 + 3)/9.
+3. 18 × that = 10 ln 2 − 6.
+Answer: (3)",Functional equations and integrals,Revise Integrals.,
+11,1,sympy,Notice (x tan x + 1)' = tan x + x sec^{2}x. Integrate by parts taking x^{2} with it.,I = −x^{2}/(x tan x + 1) + ∫ 2x cos x/(x sin x + cos x) dx.,"1. ∫ 2x cos x/(x sin x + cos x) dx = 2 ln(x sin x + cos x).
+2. I(0) = 0 gives C = 0.
+3. I(π/4) = −π^{2}/(4(π + 4)) + 2 ln((π + 4)/(4√2)) = ln((π + 4)^{2}/32) − π^{2}/(4(π + 4)).
+Answer: (1)",Integration by parts,Revise Integrals.,
+12,3,sympy,"Find the trisection points of the segment between (5, 0) and (0, 9).","Points (10/3, 3) and (5/3, 6).","1. m_{1} + m_{2} = 9/10 + 18/5 = 9/2.
+2. y = 9x/2 meets 9x + 5y = 45 at (10/7, 45/7).
+3. y − x = 5.
+Answer: (3)",Section formula,Revise Straight Lines.,
+13,3,sympy,Plane through the line of intersection: P_{1} + λP_{2} = 0.,"Its normal must be perpendicular to (−2, 4, 5).","1. Normal (2 + 4λ, −1 − 3λ, 1 + 5λ)·(−2, 4, 5) = −3 + 5λ = 0, λ = 3/5.
+2. Plane: 11x − 7y + 10z + 6 = 0.
+3. a + b + c = 14.
+Answer: (3)",Family of planes,Revise Three Dimensional Geometry.,
+14,1,sympy,"Take the edge through (3, 0, 0) parallel to z.","SD = |(a_{2} − a_{1})·(d_{1} × d_{2})|/|d_{1} × d_{2}| with d_{1} = (3, 4, 5), d_{2} = (0, 0, 1).","1. d_{1} × d_{2} = (4, −3, 0), magnitude 5.
+2. (3, 0, 0)·(4, −3, 0) = 12.
+3. SD = 12/5.
+Answer: (1)",Shortest distance between skew lines,Revise Three Dimensional Geometry.,
+15,3,sympy,"Coplanar: the scalar triple product of AB, AC, AD is 0.","AB = (−4, −3, 3 − 2λ), AC = (−7, λ − 5, 4 − 2λ), AD = (−6, 0, 6 − 2λ).","1. det = −4λ^{2} + 20λ − 24 = 0, so λ = 2 or 3.
+2. Σ(λ + 2)^{2} = 16 + 25 = 41.
+Answer: (3)",Coplanarity,Revise Vector Algebra.,
+16,3,sympy,d is parallel to b × c.,"b × c = (2, −1, 2).","1. d = t(2, −1, 2); a·d = 9t = 18, so d = (4, −2, 4).
+2. |a × d|^{2} = |a|^{2}|d|^{2} − (a·d)^{2} = 29 × 36 − 324 = 720.
+Answer: (3)",Vector products,Revise Lagrange's identity.,
+17,3,sympy,Recover Σx^{2} for each set from mean and variance.,Σx^{2} = n(σ^{2} + mean^{2}).,"1. Set 1: 15(14 + 144) = 2370. Set 2: 15(σ^{2} + 196).
+2. Combined mean 13: (2370 + 2940 + 15σ^{2})/30 − 169 = 13.
+3. σ^{2} = 10.
+Answer: (3)",Combined variance,Revise Statistics.,
+18,3,arithmetic,P(total 5 with two dice) = 4/36.,"Binomial with n = 5, p = 1/9: P(4) + P(5).","1. 5(1/9)^{4}(8/9) + (1/9)^{5} = 41/9^{5} = 41/3^{10}.
+2. = 123/3^{11}, k = 123.
+Answer: (3)",Binomial distribution,Revise Probability.,
+19,2,sympy,"Find BQ from the 60° angle, then the height of the tower from the 15° angle.",BQ = 30/tan 60° = 10√3; A is BQ tan 15° above P.,"1. A is 10√3(2 − √3) = 20√3 − 30 above P, so PQ = 60 − 20√3.
+2. BCPQ is a rectangle: area = 10√3(60 − 20√3) = 600(√3 − 1).
+Answer: (2)",Heights and distances,Revise tan 15° = 2 − √3.,
+20,4,arithmetic,Write p ⇒ q as ¬p ∨ q.,(¬P ∨ Q) ∧ (¬R ∨ Q) = (¬P ∧ ¬R) ∨ Q.,"1. = ¬(P ∨ R) ∨ Q = (P ∨ R) ⇒ Q.
+Answer: (4)",Logical equivalence,Revise Mathematical Reasoning.,Mathematical reasoning is no longer in the JEE syllabus.
+21,18,arithmetic,Let t = a − b and test small integers.,"2t^{2} + 3t is in {0,...,4} only for t = 0 or t = −2.","1. t = 0: 10 pairs.
+2. t = −2 (b = a + 2): 8 pairs.
+3. Total 18.
+Answer: 18",Relations,Revise Relations and Functions.,
+22,3,sympy,"Put x = p, y = p + 1 into both inequalities.",p + 1 ≥ 3 − p and (p + 1)^{2} ≤ 9 − p^{2}.,"1. p ≥ 1 and p^{2} + p − 4 ≤ 0.
+2. a = 1, b = (√17 − 1)/2, so b^{2} + b = 4.
+3. b^{2} + b − a^{2} = 3.
+Answer: 3",Regions and inequalities,Revise Straight Lines and Circles.,
+23,3483638676,arithmetic,"Count all ways, then subtract those leaving a child empty.",Inclusion–exclusion: 3^{20} − 3×2^{20} + 3.,"1. 3486784401 − 3145728 + 3 = 3483638676.
+Answer: 3483638676",Onto functions,Revise Permutations and Combinations.,
+24,5005,sympy,General term power of x: 4(15 − r) − 3r.,60 − 7r = 18 gives r = 6.,"1. Coefficient = C(15,6)(−1)^{6} = 5005.
+Answer: 5005",Binomial theorem,Revise the general term.,
+25,25,arithmetic,[a + 13 sin x] jumps whenever 13 sin x crosses an integer.,"On (0, π), 13 sin x takes each value 1..12 twice and reaches 13 once at π/2.","1. 12 × 2 = 24 points, plus x = π/2 (value 13 only there, so f jumps).
+2. Total 25.
+Answer: 25",Differentiability of greatest-integer functions,Revise Continuity and Differentiability.,
+26,5,sympy,"Sketch: outside the circle x^{2} + (y − 1)^{2} = 1, inside the parabola x^{2} = 2y, below y = x.","The line y = x meets the parabola at (2, 2) and the circle at (1, 1).","1. Area = ∫_{0}^{2}(x − x^{2}/2) dx − (area of the circle below y = x and above the parabola).
+2. This works out to 7/6 − π/4 = (n + 2)/(n + 1) − π/(n − 1) with n = 5.
+Answer: 5",Area between curves,Revise Application of Integrals.,Checked numerically in the check script.
+27,121,sympy,"The circle touches both axes: centre (r, r), A = (r, 0), B = (0, r).",PQ = (α + β − r)/√2 and (α − r)^{2} + (β − r)^{2} = r^{2}.,"1. With s = α + β: (s − r)^{2} = 2αβ.
+2. s − r = 11√2, so 2αβ = 242.
+3. αβ = 121.
+Answer: 121",Circles touching the axes,Revise Circles.,
+28,292,sympy,Differentiate the curve at P for the tangent slope.,"Slope at (1, 3): (2x + 2)/4 = 1.","1. Tangent y = x + 2: A = (0, 2).
+2. Line through P with slope 1/3 meets 2x − 3y = 8 at (16, 8), which is on y^{2} = 4x: B = (16, 8).
+3. AB^{2} = 256 + 36 = 292.
+Answer: 292",Tangents and lines,Revise Straight Lines and Conic Sections.,
+29,2,sympy,Write it as a linear DE. IF = x sec x.,d(xy sec x)/dx = sec^{2}x.,"1. xy = sin x + C cos x; y(π/3) = √3/(π/3) gives C = √3.
+2. g = xy = sin x + √3 cos x satisfies g'' = −g, and g'' = xy'' + 2y'.
+3. At π/6: xy'' + 2y' = −(1/2 + 3/2) = −2; modulus 2.
+Answer: 2",Linear differential equations,Revise Differential Equations.,
+30,594,sympy,Image formula in a plane.,"2 − 2 + 3 − 9 = −6, so Q = P + 2(2, −1, 1).","1. Q = (5, 0, 5).
+2. PQ × PR = (4, −2, 2) × (5, 8, 4) = (−24, −6, 42), |.|^{2} = 2376.
+3. Area^{2} = 2376/4 = 594.
+Answer: 594",Image in a plane; area,Revise Three Dimensional Geometry.,
+31,2,arithmetic,Range d = √(2Rh).,d ∝ √h.,"1. √1.21 = 1.1: range increases by 10%.
+Answer: (2)",TV tower range,Revise Communication Systems.,Communication systems is no longer in the JEE syllabus.
+32,2,conceptual,When a switch is closed it shorts the LED. When does the LED have a voltage across it?,LED glows only when both switches are open.,"1. A or B closed → LED shorted, Y = 0.
+2. Both open → Y = 1.
+3. Y = (A + B)̄: NOR.
+Answer: (2)",Logic gates from switches,Revise Semiconductor Electronics.,Figure reading: switches A and B connect the top rail to the lower node in parallel with the LED.
+33,1,conceptual,"At constant velocity, net force is zero.",Weight = buoyancy + viscous force; buoyancy = Mgρ_{0}/ρ.,"1. F = Mg(1 − ρ_{0}/ρ).
+Answer: (1)",Terminal velocity,Revise Mechanical Properties of Fluids.,
+34,4,conceptual,Shortest wavelength = largest energy gap.,"Compare the drops: 4→3, 4→2, 3→2, and D down to n = 1.","1. D ends at n = 1: the largest drop.
+Answer: (4)",Hydrogen spectrum,Revise Atoms.,Figure reading: D ends on n = 1.
+35,2,arithmetic,λ = h/√(2mK).,"Compare mK: electron m_{e}(4K), α 4m_{p}(2K), proton m_{p}K.","1. mK largest for α, then proton, smallest for electron.
+2. λ_{α} < λ_{p} < λ_{e}.
+Answer: (2)",de Broglie wavelength,Revise Dual Nature.,
+36,2,arithmetic,Snell's law gives n; frequency never changes on refraction.,n = sin 45°/sin 30° = √2.,"1. λ_{2} = λ_{1}/√2, ν_{2} = ν_{1}.
+Answer: (2)",Refraction,Revise Ray Optics.,
+37,1,conceptual,Topic: Energy in EM waves. Which rule or fact from it settles this question?,Compare (1/2)ε_{0}E^{2} and B^{2}/(2μ_{0}) with E = cB.,"1. They are equal: ratio 1.
+Answer: (1)",Energy in EM waves,Revise Electromagnetic Waves.,
+38,3,conceptual,Emf needs a changing flux.,Translation in a uniform field keeps the flux constant.,"1. Rotating the coil (C) or changing its area (D) changes the flux.
+Answer: (3)",Faraday's law,Revise Electromagnetic Induction.,
+39,3,arithmetic,Average velocity = displacement/time.,"Quarter circle: displacement R√2, time πR/(2v).","1. v_{avg} = 2√2v/π.
+2. v : v_{avg} = π : 2√2, so x = 2.
+Answer: (3)",Average velocity,Revise Motion in a Plane.,
+40,3,conceptual,Apply Ampère's law inside and outside the wire.,Inside: enclosed current ∝ r^{2}.,"1. Inside B ∝ r; outside B ∝ 1/r.
+Answer: (3)",Field of a thick wire,Revise Moving Charges and Magnetism.,
+41,4,conceptual,Do semiconductors conduct better or worse when hot?,More carriers at higher T.,"1. ρ falls non-linearly (exponentially) with T: graph 4.
+Answer: (4)",Semiconductors,Revise Semiconductor Electronics.,
+42,2,conceptual,Field inside a shell is zero. What does that mean for V?,Inside V is constant; outside V = kQ/r.,"1. Flat inside, then 1/r fall: graph 2.
+Answer: (2)",Potential of a shell,Revise Electrostatic Potential.,
+43,1,conceptual,Both springs push/pull the same way on displacement.,k_{eff} = K_{1} + K_{2}.,"1. T = 2π√(m/(K_{1} + K_{2})).
+Answer: (1)",Spring combinations,Revise Oscillations.,
+44,4,arithmetic,First law in rates.,dU/dt = dQ/dt − dW/dt.,"1. 1000 − 200 = 800 W.
+Answer: (4)",First law,Revise Thermodynamics.,
+45,1,arithmetic,Topic: Collision frequency. Which rule or fact from it settles this question?,Collision frequency ∝ number density (at the same temperature).,"1. 3/12 = 0.25.
+Answer: (1)",Collision frequency,Revise Kinetic Theory.,
+46,1,sympy,Differentiate 1/R = 1/R_{1} + 1/R_{2}.,ΔR/R^{2} = ΔR_{1}/R_{1}^{2} + ΔR_{2}/R_{2}^{2}.,"1. R = 6 Ω.
+2. ΔR = 36(0.5/100 + 0.5/225) = 0.26 Ω.
+3. % error = 0.26/6 × 100 = 4.33%.
+Answer: (1)",Error propagation,Revise Units and Measurements.,
+47,1,conceptual,Topic: Projectile range. Which rule or fact from it settles this question?,R = u^{2} sin 2θ/g.,"1. Maximum at sin 2θ = 1, θ = 45°. Both true; R explains A.
+Answer: (1)",Projectile range,Revise Motion in a Plane.,
+48,3,arithmetic,The spring stretches; the radius is natural length + extension.,kx = mω^{2}(L + x).,"1. 7.5x = 0.1 × 25(0.2 + x), so x = 0.1 m.
+2. T = 7.5 × 0.1 = 0.75 N.
+Answer: (3)",Circular motion with a spring,Revise Laws of Motion.,
+49,1,conceptual,Topic: Escape velocity. Which rule or fact from it settles this question?,Gas molecules escape if their speeds exceed the escape velocity.,"1. The moon's low escape velocity lets gases leak away: both true, R explains A.
+Answer: (1)",Escape velocity,Revise Gravitation.,
+50,4,arithmetic,Same density: M ∝ R^{3}.,g ∝ M/R^{2} ∝ M^{1/3}.,"1. g' = 2^{1/3}g: weight 2^{1/3}W.
+Answer: (4)",Gravity on planets,Revise Gravitation.,
+51,420,arithmetic,"The wall receives at a moving-observer shift, then acts as a source for the moving driver.",f' = f(v + u)/(v − u).,"1. f' − f = f × 30/315 = 40.
+2. f = 420 Hz.
+Answer: 420",Doppler effect with reflection,Revise Waves.,
+52,50,arithmetic,Sun at 30° to the surface means incidence 60°.,"Shadow = h tan 60° + 1.5 tan r, with sin r = sin 60°/(4/3).","1. sin r = 3√3/8, tan r = 0.854.
+2. 1.732h + 1.281 = 2.15, so h = 0.50 m = 50 cm.
+Answer: 50",Refraction and shadows,Revise Ray Optics.,
+53,425,arithmetic,r_{n} = r_{1}n^{2}/Z.,Li^{2+}: Z = 3.,"1. r = 0.51 × 25/3 = 4.25 Å = 425 × 10^{−12} m.
+Answer: 425",Bohr radius,Revise Atoms.,
+54,240,arithmetic,Topic: Transformers. Which rule or fact from it settles this question?,P = V^{2}/R on the secondary.,"1. R = 120^{2}/60000 = 0.24 Ω = 240 mΩ.
+Answer: 240",Transformers,Revise Alternating Current.,
+55,25,arithmetic,Topic: Resistance. Which rule or fact from it settles this question?,R = ρL/A.,"1. R'/R = 1.2/0.96 = 1.25: 25% increase.
+Answer: 25",Resistance,Revise Current Electricity.,
+56,3,sympy,Dielectric slab of thickness x: C = ε_{0}A/(d − x + x/K).,With K = 4: C = ε_{0}A/(d − 3x/4).,"1. x = d/3: C_{1} = ε_{0}A/(3d/4) = 2 μF, so ε_{0}A/d = 1.5 μF.
+2. x = 2d/3: C_{2} = ε_{0}A/(d/2) = 3 μF.
+Answer: 3",Partially filled capacitor,Revise Electrostatic Potential and Capacitance.,
+57,628,arithmetic,The two fields at the centre are perpendicular.,Each B = μ_{0}I/(2R).,"1. Each B = 4π × 10^{−7} × √2/0.4 = √2π × 10^{−6} T.
+2. Net = √2 × that = 2π × 10^{−6} = 628 × 10^{−8} T.
+Answer: 628",Superposition of fields,Revise Moving Charges and Magnetism.,
+58,25,arithmetic,Strain = stress/Y.,Stress = F/(πr^{2}).,"1. Strain = 62800/(3.14 × 4 × 10^{−4} × 2 × 10^{11}) = 2.5 × 10^{−4} = 25 × 10^{−5}.
+Answer: 25",Young's modulus,Revise Mechanical Properties of Solids.,
+59,2,sympy,Loss of KE = work against the retarding force.,∫ m(2x) dx.,"1. Loss = mx^{2} = x^{2}/100 = (10/x)^{−2}.
+2. n = 2.
+Answer: 2",Work by a variable force,"Revise Work, Energy and Power.",
+60,176,arithmetic,Use the parallel-axis theorem for each sphere.,Each sphere: (2/5)MR^{2} + Md^{2} with d = 0.2 m.,"1. Each: 0.008 + 0.08 = 0.088 kg m^{2}.
+2. Total 0.176 = 176 × 10^{−3}.
+Answer: 176",Moment of inertia,Revise Rotational Motion.,
+61,3,arithmetic,In ccp there are N atoms and 2N tetrahedral voids.,X occupies (1/3)(2N).,"1. X : Y = 2N/3 : N = 2 : 3.
+2. X_{2}Y_{3}.
+Answer: (3)",Voids in close packing,Revise The Solid State.,Solid state is no longer in the JEE syllabus.
+62,2,conceptual,A_{2}B_{3} ⇌ 2A + 3B. Write K with α small.,K = (2cα)^{2}(3cα)^{3}/(c(1 − α)).,"1. K ≈ 108c^{4}α^{5}.
+2. α = (K/(108c^{4}))^{1/5}.
+Answer: (2)",Degree of dissociation,Revise Equilibrium.,
+63,2,conceptual,Which enzyme acts on each substrate?,Invertase: sucrose. Zymase: glucose → ethanol. Diastase: starch. Pepsin: proteins.,"1. A-III, B-I, C-IV, D-II.
+Answer: (2)",Enzymes,Revise Biomolecules.,
+64,2,conceptual,Noble gases have positive electron gain enthalpy; Cl has the most negative.,"Ne +116, Ar +96, F −328, Cl −349 kJ/mol.","1. Largest difference: Ne and Cl.
+Answer: (2)",Electron gain enthalpy,Revise Classification of Elements.,
+65,1,conceptual,Do oxidation states change? Does one metal replace another?,"Au +1 → 0, Zn 0 → +2.","1. Redox and displacement.
+Answer: (1)",Types of reactions,Revise Redox Reactions.,
+66,2,conceptual,Topic: Hydrogen ion. Which rule or fact from it settles this question?,Both are NCERT statements. Does R explain the size of the nucleus?,"1. A true: H^{+} is a bare proton (~1.5 × 10^{−3} pm).
+2. R true: H^{+} does not exist freely.
+3. R does not explain A.
+Answer: (2)",Hydrogen ion,Revise Hydrogen (NCERT).,Teacher look: some readers would say R follows from A's tiny size; the key treats R as not the explanation.
+67,3,conceptual,Write the Born–Haber-type cycle for M(s) → M^{+}(aq).,"Sublimation, ionisation of the gaseous atom, hydration.","1. 'Ionisation of a solid metal atom' is not a step.
+Answer: (3)",Electrode potential,Revise Electrochemistry / d-block.,
+68,3,conceptual,Topic: Cement. Which rule or fact from it settles this question?,What is added to clinker to slow setting?,"1. Gypsum.
+Answer: (3)",Cement,Revise everyday chemistry.,Not in the current syllabus.
+69,2,conceptual,Topic: Oxides of nitrogen. Which rule or fact from it settles this question?,Draw each oxide's structure.,"1. N_{2}O_{4}: N–N bond (III). NO_{2}: one N=O (I). N_{2}O_{5}: N–O–N (II). N_{2}O: N=N/N≡N (IV).
+Answer: (2)",Oxides of nitrogen,Revise The p-Block Elements.,
+70,2,conceptual,Which lanthanoid ions prefer to reach +3?,Eu^{2+} → Eu^{3+} (reducing); Ce^{4+} → Ce^{3+} (oxidising).,"1. Eu^{2+} and Ce^{4+}.
+Answer: (2)",Lanthanoid oxidation states,Revise The d- and f-Block Elements.,
+71,2,conceptual,Topic: Smog. Which rule or fact from it settles this question?,"Photochemical smog needs NO_{x}, hydrocarbons and sunlight.","1. Industrial areas.
+Answer: (2)",Smog,Revise Environmental Chemistry.,Environmental chemistry is no longer in the JEE syllabus.
+72,2,conceptual,Why is one low spin and the other high spin?,CN^{−} strong field; H_{2}O weak field.,"1. Both statements true, but the spin difference is due to ligand strength, not the oxidation state.
+Answer: (2)",High and low spin,Revise Coordination Compounds.,
+73,4,conceptual,Acid hydrolysis of an amide gives an acid (Q) and an amine salt (filtrate). R gives a NaOH-soluble Hinsberg product: primary amine.,Formula C_{14}H_{13}NO.,"1. P = 4-methylbenzanilide.
+2. Q = p-toluic acid (insoluble, fizzes with NaHCO_{3}); R = aniline (primary).
+Answer: (4)",Amide hydrolysis and Hinsberg test,Revise Amines.,
+74,2,conceptual,Topic: Lassaigne's test. Which rule or fact from it settles this question?,Recall Lassaigne's tests.,"1. N: Prussian blue (III). S: nitroprusside (I). P: ammonium molybdate (IV). Halogen: AgNO_{3} (II).
+Answer: (2)",Lassaigne's test,Revise Organic Chemistry: Some Basic Principles.,
+75,4,conceptual,Finkelstein reaction is S_{N}2. How polar is the transition state?,Charge is spread over two halogens in the TS.,"1. The TS is less polar than the localised anion.
+Answer: (4)",S_{N}2 and solvents,Revise Haloalkanes.,
+76,1,conceptual,Br_{2}/NaOH on CONH_{2}: Hofmann bromamide. Then the new NH_{2} attacks the ester.,Intramolecular amide formation gives a lactam.,"1. CONH_{2} → NH_{2}.
+2. NH_{2} + COOCH_{3} → cyclic amide (lactam) with one C=O.
+Answer: (1)",Hofmann bromamide degradation,Revise Amines.,Figure reading of the side chains is from a small drawing.
+77,3,conceptual,Topic: Named reactions. Which rule or fact from it settles this question?,Match each named reaction with its reagent.,"1. HVZ: Br_{2}/red P (III). Iodoform: NaOH + I_{2} (I). Etard: CrO_{2}Cl_{2} (II). Gattermann–Koch: CO, HCl (IV).
+Answer: (3)",Named reactions,Revise Aldehydes and Ketones.,
+78,1,conceptual,Topic: Acetanilide reactions. Which rule or fact from it settles this question?,NHCOCH_{3} directs para; LiAlH_{4} reduces amides to amines.,"1. A = p-bromoacetanilide.
+2. B = N-ethylaniline.
+Answer: (1)",Acetanilide reactions,Revise Amines.,
+79,1,conceptual,Topic: Polymers. Which rule or fact from it settles this question?,Orlon is acrilan.,"1. Polyacrylonitrile.
+Answer: (1)",Polymers,Revise Polymers.,Polymers are no longer in the JEE syllabus.
+80,2,conceptual,Topic: Vitamins. Which rule or fact from it settles this question?,Recall the vitamin deficiency diseases.,"1. A: xerophthalmia (III). B1: beri-beri (I). C: scurvy (IV). B2: cheilosis (II).
+Answer: (2)",Vitamins,Revise Biomolecules.,
+81,1,arithmetic,3Ba^{2+} + 2PO_{4}^{3−} → Ba_{3}(PO_{4})_{2}.,Find the limiting reagent.,"1. 2 mol PO_{4}^{3−} needs 3 mol Ba^{2+} (5 available): phosphate limits.
+2. 1 mol Ba_{3}(PO_{4})_{2}.
+Answer: 1",Limiting reagent,Revise Some Basic Concepts of Chemistry.,
+82,7,arithmetic,λ = h/√(2mK).,√(2 × 9 × 10^{−31} × 4.5 × 10^{−29}) = 9 × 10^{−30}.,"1. λ = 6.6 × 10^{−34}/9 × 10^{−30} = 7.3 × 10^{−5} m ≈ 7.
+Answer: 7",de Broglie wavelength,Revise Structure of Atom.,
+83,3,conceptual,Topic: VSEPR shapes. Which rule or fact from it settles this question?,Square pyramidal = 5 bond pairs + 1 lone pair (or XeOF_{4}).,"1. BrF_{5}, IF_{5}, XeOF_{4}.
+2. PF_{5} is TBP; BrF_{4}^{−} and ICl_{4}^{−} are square planar.
+Answer: 3",VSEPR shapes,Revise Chemical Bonding.,
+84,10,arithmetic,Topic: Gibbs energy and K. Which rule or fact from it settles this question?,ΔG° = ΔH° − TΔS° = −2.303RT log K.,"1. ΔG° = −54070 − 2980 = −57050 J.
+2. log K = 57050/5705 = 10.
+Answer: 10",Gibbs energy and K,Revise Thermodynamics.,
+85,1111,arithmetic,Relative lowering = mole fraction of solute.,n/(n + 55.56) = 0.25.,"1. n = 18.52 mol.
+2. Mass = 18.52 × 60 = 1111 g.
+Answer: 1111",Raoult's law,Revise Solutions.,
+86,2,conceptual,G falls towards equilibrium (minimum).,a: forward spontaneous. b: equilibrium. c: forward non-spontaneous.,"1. A false (b is equilibrium). B true. C true. D false.
+2. Count 2.
+Answer: 2",Gibbs energy and equilibrium,Revise Thermodynamics.,
+87,2,arithmetic,Topic: Activation energy. Which rule or fact from it settles this question?,Arrhenius with the same A: ln(r_{1}/r_{2}) = (E_{2} − E_{1})/RT.,"1. ln ratio = 11400/(8.3 × 300) = 4.58.
+2. log ratio = 4.58/2.3 = 1.99 ≈ 2.
+Answer: 2",Activation energy,Revise Chemical Kinetics.,
+88,4,conceptual,Which ligand can bind through two different atoms?,SCN^{−} (S or N).,"1. Four SCN^{−}: 4.
+Answer: 4",Ambidentate ligands,Revise Coordination Compounds.,
+89,9,conceptual,Topic: Halogenation of alkanes. Which rule or fact from it settles this question?,"Count all mono- to hexa-bromoethanes, including positional isomers.","1. Mono 1, di 2, tri 2, tetra 2, penta 1, hexa 1.
+2. Total 9.
+Answer: 9",Halogenation of alkanes,Revise Hydrocarbons.,
+90,6,conceptual,(NH_{4})_{3}PO_{4}·12MoO_{3}.,"In MoO_{3}, O is −2.","1. Mo is +6.
+Answer: 6",Oxidation states,Revise Redox Reactions.,
