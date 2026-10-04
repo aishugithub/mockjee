@@ -1,0 +1,247 @@
+q,claude_answer,check,hint1,hint2,solution,concept,revise,note
+1,4,sympy,Replace x by 1/x to get a second equation.,3f(1/x) + 2f(x) = x − 10. Solve the pair for f(x).,"1. f(x) = (3/x − 2x − 10)/5.
+2. f(3) = (1 − 6 − 10)/5 = −3; f'(x) = (−3/x^{2} − 2)/5, so f'(1/4) = −10.
+3. |−3 − 10| = 13.
+Answer: (4)",Functional equations,Revise Relations and Functions and derivatives.,
+2,3,sympy,Look at h(x) = x|x − 1| + |x + 2|. Is it monotonic?,"On x < −2, [−2, 1) and x ≥ 1 it is −x^{2} − 2, −x^{2} + 2x + 2, x^{2} + 2; each piece is increasing there.","1. h is continuous and strictly increasing, from −∞ to ∞.
+2. h(x) = −a has exactly one root for every a.
+Answer: (3)",Monotonic functions and roots,Revise Application of Derivatives.,
+3,2,sympy,"If B = adj A for 3 × 3, what is |B|?",|adj A| = |A|^{2} = 4. Use it to find α.,"1. det B = 4 gives α = 4 (α > 2).
+2. With v = (4, −8, 4): v^{T}Bv = −16.
+Answer: (2)",Adjoint of a matrix,Revise Determinants.,
+4,4,sympy,When is the coefficient determinant 0?,"Det = 54 − 18a, so a = 3. Then compare equation 1 with 2 × equation 2.","1. a ≠ 3: unique solution (options 1, 2 are correct).
+2. a = 3: equation 1 is 2 × equation 2 only if b = 8, giving infinitely many.
+3. a = 3, b = 6 gives no solution, so option 4 is NOT correct.
+Answer: (4)",Consistency of linear systems,Revise Determinants.,
+5,3,arithmetic,"In a symmetric 3 × 3 matrix, how many entries can you choose freely?",3 diagonal + 3 above the diagonal.,"1. 6 free entries, 10 choices each: 10^{6}.
+Answer: (3)",Symmetric matrices,Revise Matrices.,
+6,1,arithmetic,S_{12} = 6(2a + 11d) for each AP.,a_{i} = i and d_{i} = 2i − 1.,"1. s_{i} = 12i + 66(2i − 1) = 144i − 66.
+2. Σ = 144 × 55 − 660 = 7260.
+Answer: (1)",Sums of APs,Revise Sequences and Series.,
+7,3,sympy,"Think of each sum as a Riemann sum, or use Σk^{p} ~ n^{p+1}/(p + 1).",2 + 4 + … + 2n = n(n + 1).,"1. S1: n(n + 1)/n^{2} → 1: true.
+2. S2: Σk^{15}/n^{16} → ∫_{0}^{1}x^{15}dx = 1/16: true.
+Answer: (3)",Limits of sums,Revise Limits and Definite Integrals (limit of a sum).,
+8,1,sympy,Plane through the line: P_{1} + λP_{2} = 0. Match it with the given form.,(1 + λ)/(2 − λ) = 5/(−11) gives λ = −7/2.,"1. Plane 5x − 11y + z − 17 = 0, so a = 3, b = 1.
+2. Distance of (3, −1·c, c): |12c − 2|/(7√3) = 2/√3 gives c = −1 (integer).
+3. (a + b)/c = −4.
+Answer: (1)",Planes through a line,Revise Three Dimensional Geometry.,
+9,4,sympy,d × b = c × b means (d − c) × b = 0.,d = c + tb; use d·a = 24.,"1. c·a = 2 − 4 + 8 = 6, b·a = 3 − 8 + 14 = 9: 6 + 9t = 24, t = 2.
+2. d = (8, −5, 18); |d|^{2} = 64 + 25 + 324 = 413.
+Answer: (4)",Vector equations,Revise Vector Algebra.,
+10,2,sympy,Simplify: 2 sin x cos x = sin 2x. Differentiate.,g' = 1 − 2cos 2x + cos 3x; check the critical points and the end points.,"1. Critical points in [0, π] include π/6 and 5π/6.
+2. g(5π/6) = 5π/6 + √3/2 + 1/3 = (5π + 2 + 3√3)/6 ≈ 3.82, more than g(π) = π.
+Answer: (2)",Absolute maximum,Revise Application of Derivatives.,
+11,4,sympy,The denominator factorises in e^{x}. Substitute t = e^{x}.,e^{3x} + 6e^{2x} + 11e^{x} + 6 = (t + 1)(t + 2)(t + 3); dx = dt/t.,"1. 6/(t(t + 1)(t + 2)(t + 3)) = 1/t − 3/(t + 1) + 3/(t + 2) − 1/(t + 3).
+2. Integral from 1 to ∞ = −[ln 1 − 3 ln 2 + 3 ln 3 − ln 4] = ln(32/27).
+Answer: (4)",Partial fractions,Revise Integrals.,
+12,2,sympy,"Where is sin x ≥ cos x on [−π, π]?","cos x is the larger on [−3π/4, π/4]; sin x elsewhere.","1. Area = ∫|f| = (1 − √2/2) + (1 − √2/2) + (1 + √2/2) + (1 + √2/2).
+2. = 4.
+Answer: (2)",Area under max of functions,Revise Application of Integrals.,
+13,1,arithmetic,16 = 15 + 1. Write 4^{2022} = 16^{1011}.,16^{1011} ≡ 1 (mod 15).,"1. 4^{2022}/15 = integer + 1/15.
+Answer: (1)",Remainders,Revise Binomial Theorem.,
+14,1,sympy,Solve dy/dx = y + 7.,y = Ce^{x} − 7.,"1. y_{1} = 7e^{x} − 7, y_{2} = 8e^{x} − 7.
+2. Their difference e^{x} is never 0: no intersection.
+Answer: (1)",Differential equations,Revise Differential Equations.,
+15,3,sympy,Find A and B on the y-axis from the tangent and normal.,"A = (0, 4), B = (0, −8): circle x^{2} + (y + 2)^{2} = 36. The tangents at P, Q meet at the pole of x = 2√5.","1. Polar of (α, β): αx + (β + 2)(y + 2) = 36. For it to be x = 2√5: β = −2, α = 18/√5.
+2. α^{2} − β^{2} = 324/5 − 4 = 304/5.
+Answer: (3)",Pole and polar,Revise Conic Sections and Circles.,
+16,3,sympy,Focal chord length for y^{2} = 4ax: a(t + 1/t)^{2}.,"a = 9: (t + 1/t)^{2} = 100/9, so t = 3 (acute angle, P above).","1. P = (81, 54), Q = (1, −6); M = (P + 3Q)/4 = (21, 9).
+2. PQ slope 3/4; perpendicular: 4x + 3y = 111.
+3. (−3, 43) gives 117: not on it.
+Answer: (3)",Focal chords,Revise Conic Sections (parabola).,
+17,2,sympy,The line of shortest distance is along d_{1} × d_{2}.,"(2, 0, 1) × (1, −1, 1) = (1, −1, −2).","1. From (−1, 2, 3) move t(1, −1, −2) to the plane: 4 − 3t = 10, t = −2.
+2. Distance = 2√6.
+Answer: (2)",Distance along a direction,Revise Three Dimensional Geometry.,
+18,1,arithmetic,"X can be 1, 2 or 3. List the cases.",P(H) = 3/4. X = 1: H; X = 2: TH; X = 3: TTH or TTT.,"1. E(X) = 3/4 + 2(3/16) + 3(1/16) = 21/16.
+Answer: (1)",Expectation,Revise Probability.,
+20,3,arithmetic,Is the inner implication always true?,"If A ∧ (B ∨ C) is true, A is true, so A ∨ B is true.","1. The statement is T ⇒ A, i.e. A.
+2. Negation: ∼A.
+Answer: (3)",Logical equivalence,Revise Mathematical Reasoning.,Mathematical reasoning is no longer in the JEE Main syllabus.
+21,24,sympy,Write w with z = x + iy and find the circle Re(w) = 0.,"Circle of radius 1 touching y = 1 and the y-axis in the first quadrant: centre (1, 2), so k_{1} = −2, k_{2} = 4, λ = 4.","1. Im(w) = 0: 4x − 2y + 4 = 0, i.e. y = 2x + 2.
+2. Meets (x − 1)^{2} + (y − 2)^{2} = 1 at x = 0 and x = 2/5.
+3. AB^{2} = 4/5; 30AB^{2} = 24.
+Answer: 24",Circles in the complex plane,Revise Complex Numbers.,"Takes centre (1, 2) (the circle lying above y = 1)."
+22,413,arithmetic,Seven digits from 1–4 summing to 12: the excess over 7 ones is 5.,Count compositions of 5 into 7 parts each 0–3.,"1. Coefficient of t^{5} in (1 + t + t^{2} + t^{3})^{7} = 413.
+Answer: 413",Counting with generating functions,Revise Permutations and Combinations.,
+23,36,sympy,Sum of all coefficients: put x = 1.,(1 − 6)^{n} − α = 649; the constant term has r = n/4.,"1. n = 4: 625 − α = 649 gives α = −24 = C(4,1)(−6). 
+2. x^{−4}: r = 3, coefficient C(4,3)(−6)^{3} = −864.
+3. λ = −864/−24 = 36.
+Answer: 36",Binomial coefficients,Revise Binomial Theorem.,
+24,1310,sympy,Pair the terms: 2(2k)^{2} − (2k + 1)^{2}.,"Each pair = 4k^{2} − 4k − 1, k = 1..10.","1. Σ(4k^{2} − 4k − 1) = 4(385) − 4(55) − 10 = 1310.
+Answer: 1310",Series,Revise Sequences and Series.,
+25,18,sympy,"Build S_{1}, then S_{2}, step by step.","C_{1} = 1/2, S_{1} = x/2 + x^{2}/2; C_{2} = 7/12, S_{2} = 7x/12 + x^{2}/2 + x^{3}/3.","1. S_{2}(3) = 7/4 + 9/2 + 9 = 61/4.
+2. C_{3} = 1 − ∫_{0}^{1}S_{2} = 11/24, 6C_{3} = 11/4.
+3. Sum = 18.
+Answer: 18",Recursive integrals,Revise Integrals.,
+26,8,sympy,Tangent y = mx + c to y^{2}/25 − x^{2}/16 = 1: c^{2} = 25 − 16m^{2}.,"Through (4, 1): 4m^{2} − m − 3 = 0, so m = 1, −3/4.","1. Slopes 1 and 3/4 with positive x-intercepts: y = x − 3 (α = 3) and y = 3x/4 − 4 (β = 16/3).
+2. Q = (−4, −7); PQ^{2} = 128.
+3. 128/16 = 8.
+Answer: 8",Tangents to a hyperbola,Revise Conic Sections.,
+27,15,sympy,Use the image formula.,"Plane value at the point is −1, |n|^{2} = 6.","1. P = (2, 1, 3).
+2. 16 + 9 + (α − 3)^{2} = 169: α = 15.
+Answer: 15",Image in a plane,Revise Three Dimensional Geometry.,
+28,66,sympy,a ⊥ c here. Solve b × c = a as b = (c × a)/|c|^{2} + tc.,"c × a = (0, 11, 11), |c|^{2} = 22.","1. b = (0, 1/2, 1/2) + tc; |b|^{2} = 1/2 + 22t^{2} = 50 gives t = ±3/2.
+2. |b + c|^{2} = 50 + 22 + 44t = 72 ± 66.
+3. |72 − |b + c|^{2}| = 66.
+Answer: 66",Vector equations,Revise Vector Algebra.,
+29,8,sympy,Use the mean to find α.,288 + 7α = 5(64 + α).,"1. α = 16, N = 80.
+2. MD = 128/80 = 1.6; variance = 352/80 = 4.4.
+3. 48/6 = 8.
+Answer: 8",Mean deviation and variance,Revise Statistics.,
+30,4,sympy,Convert both sin^{−1} terms into tan^{−1}.,sin^{−1}((x + 1)/√((x + 1)^{2} + 1)) = tan^{−1}(x + 1).,"1. tan^{−1}(x + 1) − tan^{−1}x = π/4 gives x^{2} + x = 0: x = 0, −1.
+2. Both give x^{2} + x + 5 = 5: sin(5π/2) − cos 5π = 2.
+3. Sum 4.
+Answer: 4",Inverse trigonometric functions,Revise Inverse Trigonometric Functions.,
+31,2,arithmetic,K = mv^{2}/2: add relative errors.,ΔK/K = Δm/m + 2Δv/v.,"1. K = 1000 J; ΔK/K = 0.1 + 0.04 = 0.14.
+2. ΔK = 140 J.
+Answer: (2)",Errors,Revise Units and Measurements.,
+32,1,arithmetic,"To cross the tunnel, a train covers L + its own length.","t_{A} = (L + l)/30, t_{B} = (L + 4l)/20.","1. (64l)/20 − (61l)/30 = 35 gives l = 30 m.
+2. L = 1800 m.
+Answer: (1)",Kinematics,Revise Motion in a Straight Line.,
+33,4,arithmetic,"After half a turn, where is A, and how far has the centre moved?",A goes from the top to the bottom; the centre moves πR.,"1. Horizontal πR, vertical 2R.
+2. Displacement R√(π^{2} + 4).
+Answer: (4)",Rolling motion,Revise System of Particles and Rotational Motion.,
+34,2,arithmetic,KE = p^{2}/2m.,Same p: m ∝ 1/KE.,"1. 9 : 16.
+Answer: (2)",Momentum and energy,"Revise Work, Energy and Power.",
+35,3,arithmetic,Topic: Impulse. Which rule or fact from it settles this question?,Impulse on the gun = momentum given to the bullet.,"1. 0.01 × 600 = 6 N s.
+Answer: (3)",Impulse,Revise Laws of Motion.,
+36,3,arithmetic,Topic: Escape velocity. Which rule or fact from it settles this question?,v_{e} ∝ √(M/R).,"1. √(9/4) = 1.5: 16.8 km/s.
+Answer: (3)",Escape velocity,Revise Gravitation.,
+37,2,arithmetic,"Continuity, then Bernoulli.",v_{A} = A_{B}v_{B}/A_{A}.,"1. v_{A} = 25 × 10^{−6} × 0.6/1.5 × 10^{−4} = 0.1 m/s.
+2. P_{A} − P_{B} = 500(0.36 − 0.01) = 175 Pa.
+Answer: (2)",Bernoulli's equation,Revise Mechanical Properties of Fluids.,
+38,1,sympy,B = −V dP/dV.,dP/dV = −3aV^{−4}.,"1. B = 3aV^{−3} = 3P.
+Answer: (1)",Bulk modulus,Revise Mechanical Properties of Solids.,
+39,4,arithmetic,"v_{rms} = √(3RT/M), v_{avg} = √(8RT/πM).",Ratio^{2} = 3π/8.,"1. With π = 22/7: 3π/8 = 33/28 = 1 + 5/28.
+2. x = 28.
+Answer: (4)",Molecular speeds,Revise Kinetic Theory.,
+40,1,conceptual,TE − PE = KE. How does KE vary with x?,KE = (1/2)k(A^{2} − x^{2}).,"1. Maximum at x = 0, zero at ±A, curving downwards: graph 1.
+Answer: (1)",Energy in SHM,Revise Oscillations.,
+41,3,sympy,Power = mgh/t for each motor.,"P_{1} = 1000 W, P_{2} = 1250/3 W.","1. Ratio 2.4 = 3√x/(√x + 1).
+2. √x = 4, x = 16.
+Answer: (3)",Power,"Revise Work, Energy and Power.",
+42,2,conceptual,Which equation has a time derivative?,Faraday's law.,"1. ∮E·dl = −dΦ_{B}/dt; in static conditions it reduces to 0.
+Answer: (2)",Maxwell's equations,Revise Electromagnetic Waves.,
+43,2,conceptual,A changing B needs a changing current. Which sources give that?,A linearly changing E gives a constant displacement current (steady B).,"1. Permanent magnet, DC, linearly changing E: steady fields.
+2. A decelerating charge gives a changing B.
+Answer: (2)",Sources of magnetic fields,Revise Electromagnetic Waves.,Teacher look: an antenna with a digital signal would also give a time-varying field; NTA's key is D only.
+44,4,arithmetic,Topic: Apparent depth. Which rule or fact from it settles this question?,Apparent depth adds layer by layer: real thickness/μ.,"1. (d/2)/n_{1} + (d/2)/n_{2} = d(n_{1} + n_{2})/(2n_{1}n_{2}).
+Answer: (4)",Apparent depth,Revise Ray Optics.,
+45,4,arithmetic,Topic: Threshold wavelength. Which rule or fact from it settles this question?,λ_{0} = hc/φ.,"1. 1242/4.5 − 1242/9 = 276 − 138 = 138 nm.
+Answer: (4)",Threshold wavelength,Revise Dual Nature of Radiation and Matter.,
+46,2,arithmetic,Topic: Q value. Which rule or fact from it settles this question?,Q = (mass lost) × 931.5 MeV.,"1. Δm = 0.00456 u; Q ≈ 4.25 MeV.
+Answer: (2)",Q value,Revise Nuclei.,
+47,3,conceptual,Each input passes through a NOT; then a NAND. Simplify.,"NAND(Ā, B̄) = A + B.","1. Y = A OR B.
+2. Y is 1 whenever either input is 1: diagram 3.
+Answer: (3)",Logic gates,Revise Semiconductor Electronics.,Figure reading of the timing diagrams.
+48,3,conceptual,Topic: Ionosphere. Which rule or fact from it settles this question?,Recall the heights of atmospheric layers.,"1. F_{1}: 170–190 km. D: 65–75 km. Troposphere: 10 km. E: 100 km.
+Answer: (3)",Ionosphere,Revise Communication Systems.,Communication systems is no longer in the JEE Main syllabus.
+49,2,arithmetic,Convert dyne/C to N/C.,10 dyne/C = 10^{−4} N/C; τ = pE sin θ.,"1. p = 0.01 × 0.4 × 10^{−3} = 4 × 10^{−6} C m.
+2. τ = 4 × 10^{−6} × 10^{−4} × 0.5 = 2 × 10^{−10} N m.
+Answer: (2)",Torque on a dipole,Revise Electric Charges and Fields.,
+50,2,arithmetic,Same current I: P = I^{2}R_{eq}.,"A: 1.5R, B: 2R/3, C: R/3, D: 3R.","1. P_{C} < P_{B} < P_{A} < P_{D}.
+Answer: (2)",Power in resistors,Revise Current Electricity.,
+51,2,arithmetic,Topic: Bohr radius. Which rule or fact from it settles this question?,r ∝ n^{2}/Z.,"1. r_{1} = 4/2 = 2, r_{2} = 16/4 = 4 (units of a_{0}).
+2. Ratio 2.
+Answer: 2",Bohr radius,Revise Atoms.,
+52,3,arithmetic,"To the fish, the bird's height looks μ times larger.",Apparent rate of approach = 8 + μv.,"1. 8 + (4/3)v = 12, v = 3 m/s.
+Answer: 3",Apparent motion,Revise Ray Optics.,
+53,25,sympy,Rate of energy storage = LI dI/dt = I(E − IR).,This is largest at I = E/2R.,"1. Max rate = E^{2}/(4R) = E^{2}/100.
+2. a = 2, b = 50: b/a = 25.
+Answer: 25",Energy in an inductor,Revise Electromagnetic Induction.,
+54,6,arithmetic,"Between the line and the sheet, the two fields point in opposite directions.","E_{line} = λ/(2πε_{0}r), E_{sheet} = σ/(2ε_{0}).","1. With λ = 2σ: E_{P} = |σ/3 − σ/2|/ε_{0} = σ/(6ε_{0}); E_{Q} = |σ/4 − σ/2|/ε_{0} = σ/(4ε_{0}).
+2. E_{P}/E_{Q} = 2/3 = 4/a, so a = 6.
+Answer: 6",Superposition of fields,Revise Electric Charges and Fields.,
+55,40,arithmetic,Topic: Elastic energy. Which rule or fact from it settles this question?,U = (1/2)(YA/L)x^{2}.,"1. A = 2UL/(Yx^{2}) = 2 × 80 × 20/(2 × 10^{11} × 4 × 10^{−4}) = 4 × 10^{−5} m^{2} = 40 mm^{2}.
+Answer: 40",Elastic energy,Revise Mechanical Properties of Solids.,
+56,4,arithmetic,"L = (2/5)mR^{2}ω, E = (7/10)mR^{2}ω^{2}.",L/E = 4/(7ω).,"1. 4/(7ω) = π/22 with π = 22/7: ω = 4 rad/s.
+Answer: 4",Rolling sphere,Revise System of Particles and Rotational Motion.,
+57,4,arithmetic,KE = (1/2)k(A^{2} − y^{2}).,y = A cos 30°: A^{2} − y^{2} = A^{2}/4.,"1. kA^{2}/8 = 200 with A = 0.4 m: k = 10^{4} N/m.
+Answer: 4",Energy in SHM,Revise Oscillations.,
+58,50,sympy,Write the shunt and series conditions.,I_{g}G = (0.25 − I_{g}) × 5 and I_{g}(G + 1050) = 25.,"1. I_{g} = 1.25/(G + 5).
+2. 1.25(G + 1050) = 25(G + 5): G = 50 Ω.
+Answer: 50",Galvanometer conversion,Revise Moving Charges and Magnetism.,
+59,3,arithmetic,β = slope of I_{C} against I_{B}.,Power gain = β^{2}R_{C}/R_{B}.,"1. β = 40 mA/400 μA = 100.
+2. Gain = 10^{4} × 1/10 = 10^{3}.
+Answer: 3",Transistor gain,Revise Semiconductor Electronics.,Figure reading: I_{C} from 10 to 50 mA as I_{B} goes 100 to 500 μA.
+60,16,arithmetic,Topic: Power. Which rule or fact from it settles this question?,P = V^{2}/R. Each half has R/2.,"1. P_{2} = 2V^{2}/(R/2) = 4P_{1}.
+2. 4 = √16.
+Answer: 16",Power,Revise Current Electricity.,
+61,2,arithmetic,Topic: Bohr energies. Which rule or fact from it settles this question?,E_{n} ∝ 1/n^{2}.,"1. n = 3: 1/9 of the n = 1 value.
+Answer: (2)",Bohr energies,Revise Structure of Atom.,
+62,1,conceptual,Use MO bond orders and unpaired electrons.,"NO has 15 electrons (one unpaired, BO 2.5); NO^{+} has 14 (BO 3).","1. NO → NO^{+}: bond order up, paramagnetic to diamagnetic.
+Answer: (1)",MO theory,Revise Chemical Bonding.,
+63,3,conceptual,Topic: Protective colloids. Which rule or fact from it settles this question?,Why do lyophilic sols protect lyophobic sols?,"1. The lyophilic sol forms a protective film over the lyophobic particles.
+Answer: (3)",Protective colloids,Revise Surface Chemistry.,Surface chemistry is no longer in the JEE Main syllabus.
+64,0,disputed,Check each statement against NCERT.,Cl has the more negative electron gain enthalpy; NO is a neutral oxide.,"1. A is not correct (Cl is more negative than F).
+2. B is correct (IE generally decreases down a group).
+3. C is correct: NCERT says electronegativity varies with the atom it is bonded to.
+4. D is not correct (NO is neutral).
+5. 'A and D only' is not an option.
+Answer: (0)",Periodic properties,Revise Classification of Elements.,"DISPUTED: by NCERT, statement C (electronegativity depends on the bonded atom) is correct, so the 'not correct' set is A and D only, which is not an option ('0' means none). NTA's final key is A, C and D. Owner/teacher to decide."
+65,3,conceptual,How is zinc refined?,Liquation is used for low-melting metals like tin.,"1. Zinc is refined by distillation, not liquation.
+Answer: (3)",Refining methods,Revise General Principles of Isolation of Elements.,Metallurgy is no longer in the JEE Main syllabus.
+66,2,conceptual,Compare zeolite (permutit) and ion-exchange resins.,Resins (H^{+} and OH^{−} forms) remove all ions.,"1. I false: the resin method is more efficient.
+2. II false: it gives demineralised water, not sodium salts.
+Answer: (2)",Water softening,Revise Hydrogen.,
+67,3,conceptual,Be(OH)_{2} is amphoteric. What forms with a strong base?,Sr[Be(OH)_{4}].,"1. Be is in the anion [Be(OH)_{4}]^{2−}, tetrahedral.
+2. 'Be is in the cationic part' is incorrect.
+Answer: (3)",Amphoteric beryllium,Revise The s-Block Elements.,
+68,2,conceptual,Use VSEPR for ClF_{5}.,5 bond pairs + 1 lone pair.,"1. Square pyramidal; ClF_{5} is a colourless liquid at room temperature.
+Answer: (2)",Interhalogens,Revise The p-Block Elements.,
+69,2,conceptual,Recall borazine's structure.,It is 'inorganic benzene' with B–N π-delocalisation.,"1. Banana bonds are in diborane, not borazine.
+Answer: (2)",Borazine,Revise The p-Block Elements.,
+70,2,conceptual,Third IE is high when the M^{2+} ion is extra stable.,Eu^{2+} is f^{7}; Yb^{2+} is f^{14}.,"1. Eu and Yb.
+Answer: (2)",Lanthanoid ionisation enthalpies,Revise The d- and f-Block Elements.,
+71,2,conceptual,Recall each metal complex's use.,Chlorophyll has Mg; photography uses [Ag(S_{2}O_{3})_{2}]^{3−}.,"1. A and C are mismatched.
+Answer: (2)",Uses of complexes,Revise Coordination Compounds.,
+72,3,conceptual,Topic: Ozone depletion. Which rule or fact from it settles this question?,What does UV split off from CFCs?,"1. Cl·.
+Answer: (3)",Ozone depletion,Revise Environmental Chemistry.,Environmental chemistry is no longer in the JEE Main syllabus.
+73,4,conceptual,Which molecule can separate charge into two aromatic rings?,Cyclopropenyl cation (2π) and cyclopentadienyl anion (6π).,"1. Calicene (triafulvene–pentafulvene) has a large dipole.
+Answer: (4)",Dipole moments and aromaticity,Revise Hydrocarbons.,Beyond NCERT.
+74,4,conceptual,What does AlCl_{3}/HCl do to an alkane on heating?,Isomerisation.,"1. n-Hexane → 2-methylpentane.
+Answer: (4)",Isomerisation of alkanes,Revise Hydrocarbons.,
+75,1,conceptual,Strong nucleophile/base vs weak nucleophile in a protic solvent.,With ethanol the primary cation rearranges to tert-butyl.,"1. C_{2}H_{5}O^{−}: S_{N}2, isobutyl ethyl ether.
+2. C_{2}H_{5}OH: S_{N}1 after a hydride shift, tert-butyl ethyl ether.
+Answer: (1)",S_{N}1 vs S_{N}2,Revise Haloalkanes.,Teacher look: a primary halide in ethanol is slow; NTA's key assumes S_{N}1 with rearrangement.
+76,1,conceptual,A cation next to a small ring can expand the ring. How many times can this happen here?,Each expansion moves the cation to a carbon next to the other ring.,"1. Cyclobutyl → cyclopentyl expansion, hydride shift, then the cyclopentane expands to six.
+2. A further shift expands ring A again, giving a decalin-type cation.
+3. Both rings end six-membered.
+Answer: (1)",Ring expansion,Revise carbocation rearrangements.,Teacher look: the multi-step rearrangement is beyond NCERT; NTA's key is 'both rings become six-membered'.
+77,1,conceptual,What does hot NaOH do to a lactam (cyclic amide)?,Hydrolysis opens the ring.,"1. MeNH–(CH_{2})_{3}–COOH after acidification.
+Answer: (1)",Amide hydrolysis,Revise Amines.,
+78,4,conceptual,HCl makes a tertiary cation next to a spiro cyclopentane. What can it do?,"Ring expansion to a six-membered ring, then loss of H^{+}.","1. The cyclopentane expands to cyclohexane; KOH frees the amine.
+2. Product: option 4.
+Answer: (4)",Ring expansion,Revise carbocation rearrangements.,Teacher look: structure read from small drawings; beyond NCERT.
+79,2,conceptual,Topic: Polymers. Which rule or fact from it settles this question?,Match each polymer.,"1. Nylon 6: caprolactam. Vulcanised rubber: cross-linked. cis-polyisoprene: natural rubber. Polychloroprene: neoprene.
+Answer: (2)",Polymers,Revise Polymers.,Polymers are no longer in the JEE Main syllabus.
+80,2,conceptual,"HCN adds to the CHO, making a new stereocentre: two epimers.",Hydrolysis and HNO_{3} oxidation give tartaric acids.,"1. One epimer gives meso-tartaric acid, the other an optically active tartaric acid.
+Answer: (2)",Kiliani synthesis,Revise Biomolecules.,
+81,68,arithmetic,MnO_{4}^{−} + 5Fe^{2+} + 8H^{+} → Mn^{2+} + 5Fe^{3+} + 4H_{2}O.,FAS hexahydrate brings 6 H_{2}O per formula.,"1. 2 KMnO_{4} react with 10 FAS: 8 H_{2}O formed + 60 H_{2}O of crystallisation.
+2. 68.
+Answer: 68",Redox titration,Revise Redox Reactions.,Teacher look: NTA's 68 counts the 60 water molecules released from the hexahydrate; only 8 are produced by the reaction.
+82,392,arithmetic,PV = ZnRT; n is constant.,V_{2} = V_{1}(Z_{2}/Z_{1})(T_{2}/T_{1})(P_{1}/P_{2}).,"1. V_{2} = 0.15 × (1.4/1.07) × (3/5) × (1/3) = 0.0393 dm^{3} ≈ 392 × 10^{−4}.
+Answer: 392",Real gases,Revise States of Matter.,Exact value 392.5 × 10^{−4}; NTA gives 392.
+83,800,arithmetic,ΔH_{f} is per mole of AB.,−200 = (1/2)x + (1/2)(0.5x) − x.,"1. −0.25x = −200, x = 800 kJ/mol.
+Answer: 800",Bond enthalpies,Revise Thermodynamics.,
+84,240,arithmetic,Topic: Osmotic pressure. Which rule or fact from it settles this question?,Equal osmotic pressure: equal concentration (non-electrolytes).,"1. 12/M per litre = 0.05: M = 240 g/mol.
+Answer: 240",Osmotic pressure,Revise Solutions.,
+85,5,arithmetic,Concentrations halve on mixing.,"[Ba^{2+}] = 0.025 M, [F^{−}] = 0.010 M.","1. Q = 0.025 × 10^{−4} = 2.5 × 10^{−6}.
+2. Q/K_{sp} = 5.
+Answer: 5",Ionic product,Revise Equilibrium.,
+86,161,arithmetic,Mass = density × area × thickness.,Ni^{2+} needs 2 F per mole.,"1. Volume 0.01 cm^{3}, mass 0.1 g, 0.1/60 mol.
+2. Charge = 2 × 96500 × 0.1/60 = 321.7 C; t = 160.8 ≈ 161 s.
+Answer: 161",Faraday's laws,Revise Electrochemistry.,
+87,3,arithmetic,Topic: First-order kinetics. Which rule or fact from it settles this question?,87.5% done means 1/8 left.,"1. Three half-lives: x = 3.
+Answer: 3",First-order kinetics,Revise Chemical Kinetics.,
+88,56,arithmetic,Find the sample mass from %C.,Mass C = 0.220 × 12/44 = 0.06 g.,"1. Sample = 0.06/0.24 = 0.25 g.
+2. H = 0.126 × 2/18 = 0.014 g: 5.6% = 56 × 10^{−1}.
+Answer: 56",Combustion analysis,Revise Organic Chemistry: Some Basic Principles.,
+89,5,conceptual,The first cation is secondary. Which shifts turn it into tertiary cations?,Methyl shift: (CH_{3})_{2}C^{+}–CH(CH_{3})–CH(CH_{3})_{2}; a further hydride shift gives (CH_{3})_{2}CH–C^{+}(CH_{3})–CH(CH_{3})_{2}. Hydride shift from the start: (CH_{3})_{3}C–CH_{2}–C^{+}(CH_{3})_{2}.,"1. From (CH_{3})_{3}C–CH_{2}–C^{+}(CH_{3})_{2}: (CH_{3})_{3}C–CH=C(CH_{3})_{2} and (CH_{3})_{3}C–CH_{2}–C(CH_{3})=CH_{2}.
+2. From the methyl-shifted cation: CH_{2}=C(CH_{3})–CH(CH_{3})–CH(CH_{3})_{2} and (CH_{3})_{2}C=C(CH_{3})–CH(CH_{3})_{2}.
+3. From the cation after the second shift: (CH_{3})_{2}CH–C(=CH_{2})–CH(CH_{3})_{2} (new).
+4. Total 5 alkenes.
+Answer: 5",Carbocation rearrangements,Revise Alcohols (dehydration) and carbocation stability.,"Counts alkenes from all three tertiary cations reachable by 1,2-shifts."
+90,1,arithmetic,First find the Ca(OH)_{2} molarity from the HCl titration.,10 mL Ca(OH)_{2} neutralises 10 mmol HCl.,"1. [Ca(OH)_{2}] = 0.5 M; 20 mL gives 20 mmol OH^{−}.
+2. 10 mL H_{2}SO_{4}: 2M × 10 = 20, M = 1.
+Answer: 1",Titrations,Revise Some Basic Concepts of Chemistry.,
