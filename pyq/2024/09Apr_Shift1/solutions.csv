@@ -1,0 +1,251 @@
+q,claude_answer,check,hint1,hint2,solution,concept,revise,note
+1,2,sympy,sin^{−1} needs its input between −1 and 1.,|x − 1| ≤ |2x + 3|: square both sides.,"1. (x − 1)^{2} ≤ (2x + 3)^{2} gives 3x^{2} + 14x + 8 ≥ 0, roots −4 and −2/3.
+2. Domain R − (−4, −2/3).
+3. 12αβ = 12 × 8/3 = 32.
+Answer: (2)",Domain of inverse trigonometric functions,Revise Inverse Trigonometric Functions.,
+2,3,sympy,Build α^{2} + β^{2} first from the sum and product.,"α^{2} + β^{2} = 10, α^{2}β^{2} = 1.","1. α^{4} + β^{4} = 100 − 2 = 98.
+2. α^{6} + β^{6} = 1000 − 3 × 10 = 970; divided by 10: 97.
+3. Sum 195, product 9506.
+Answer: (3)",Symmetric functions of roots,Revise Quadratic Equations.,
+3,3,sympy,"Infinitely many solutions: coefficient determinant = 0, and row 3 must be a combination of rows 1 and 2.",det = 198 + 18λ.,"1. λ = −11.
+2. Row 3 = 9 × row 1 + 10 × row 2 (check: 9(−11) + 10(−9) = −189).
+3. μ = 9 × 3 + 10 × 2 = 47; μ + 2λ = 25.
+Answer: (3)",Linear systems,Revise Determinants.,
+4,2,sympy,"The coefficient of x^{70} in x^{k}(1 + x)^{100−k} is C(100 − k, 30).","Use the hockey-stick identity Σ C(m, 30) = C(n + 1, 31).","1. Sum = Σ_{m=46}^{98} C(m, 30) = C(99, 31) − C(46, 31).
+2. p = 31 or 68, q = 31 or 15.
+3. p + q = 83 (68 + 15) is an option.
+Answer: (2)",Binomial coefficient sums,Revise Binomial Theorem.,
+5,1,sympy,Split each term into partial fractions.,1/((1 + kd)(1 + (k+1)d)) = (1/d)(1/(1 + kd) − 1/(1 + (k+1)d)).,"1. Sum = (1/d)(1 − 1/(1 + 10d)) = 10/(1 + 10d) = 5.
+2. d = 1/10, 50d = 5.
+Answer: (1)",Telescoping series,Revise Sequences and Series.,
+6,1,sympy,"Write the three conditions as equations in a, b, c.","6a + 2b = 4, 3a + 2b + c = 2, a + b + c = −1.","1. a = −1, b = 5, c = −5.
+2. a^{2} + b^{2} + c^{2} = 51.
+Answer: (1)",Derivatives of polynomials,Revise Continuity and Differentiability.,
+7,4,sympy,"Line x/a + y/b = 1 through (3, 5). Minimise ab/2.",3/a + 5/b = 1 and AM–GM: 1 ≥ 2√(15/(ab)).,"1. ab ≥ 60.
+2. Minimum area = 30.
+Answer: (4)",Straight lines and AM–GM,Revise Straight Lines.,
+8,3,sympy,Write (2 − tan x)/(3 + tan x) = (2cos x − sin x)/(3cos x + sin x).,Numerator = A(denominator) + B(derivative of denominator).,"1. A = B = 1/2.
+2. Integral = x/2 + (1/2)ln|sin x + 3cos x|: α = 1, β = 1, γ = 3.
+3. α + γ/β = 4.
+Answer: (3)",Integrals of (a sin x + b cos x)/(c sin x + d cos x),Revise Integrals.,
+9,4,sympy,"Find where the curves meet, then the part of the circle on the parabola's inner side.","Intersections (1, ±2).","1. Area = 2[∫_{0}^{1} 2√x dx + ∫_{1}^{√5} √(5 − x^{2}) dx].
+2. = 2/3 + 5π/2 − 5sin^{−1}(1/√5) = 2/3 + 5sin^{−1}(2/√5) ≈ 6.2 (less than half of 5π).
+Answer: (4)",Area between curves,Revise Application of Integrals.,
+10,4,sympy,Homogeneous: put y = vx.,x dv/dx = (1 − 4v^{2})/(5v).,"1. −(5/8) ln|1 − 4v^{2}| = ln x + C; y(1) = 0 gives C = 0.
+2. |1 − 4v^{2}|^{5} = x^{−8}, i.e. |x^{2} − 4y^{2}|^{5} = x^{2}.
+Answer: (4)",Homogeneous differential equations,Revise Differential Equations.,
+11,1,sympy,Separate variables: (2y − 5) dy = −3 dx.,y^{2} − 5y = −3x + C.,"1. (0, 1): C = −4.
+2. (y − 5/2)^{2} = −3(x − 3/4): vertex (3/4, 5/2).
+3. 2(3/4) + 3(5/2) = 9.
+Answer: (1)",Variable separable DE; parabola,Revise Differential Equations.,
+12,3,sympy,"a = f(g(10)), b = g(f(3)).","g(10) = 10, f(10) = 109; f(3) = 18, g(18) = 2.","1. Ellipse x^{2}/109 + y^{2}/2 = 1.
+2. e^{2} = 107/109, l = 4/√109.
+3. 8e^{2} + l^{2} = (856 + 16)/109 = 8.
+Answer: (3)",Composite functions; ellipse,Revise Conic Sections.,
+13,1,sympy,Solve the two lines for y in terms of c and cancel (c − 1).,y_{c} = −1/(5(3c + 2)).,"1. h = 2/5, k = −1/25.
+2. r^{2} = (8/5)^{2} + (1/25)^{2}.
+3. 25x^{2} + 25y^{2} − 20x + 2y − 60 = 0.
+Answer: (1)",Limits and circles,Revise Circles.,
+14,2,sympy,Reflect P in the x-axis; the reflected ray lies on the line from P' to R.,"P' = (1, −2).","1. Line P'R meets the x-axis at Q = (11/5, 0).
+2. S = P + R − Q = (14/5, 5).
+3. hk^{2} = 70.
+Answer: (2)",Reflection and parallelograms,Revise Straight Lines.,
+15,1,sympy,"Take general points on both lines; their difference must be parallel to (3, 1, 2).","L_{1}: (2 + t, −t, 1 + t); L_{2}: (−1 + s, 1 + s, −1 + 2s).","1. t = −4/3, s = −1/3: L passes through (2/3, 4/3, −1/3).
+2. L: (2/3 + 3m, 4/3 + m, −1/3 + 2m); m = −1/3 gives (−1/3, 1, −1).
+Answer: (1)",Lines in 3D,Revise Three Dimensional Geometry.,
+16,4,sympy,SD = |(a_{2} − a_{1})·(d_{1} × d_{2})|/|d_{1} × d_{2}|.,"d_{1} × d_{2} = (19, 11, 9).","1. |n|^{2} = 563; (2, 16, −3)·n = 187.
+2. SD = 187/√563.
+Answer: (4)",Shortest distance,Revise Three Dimensional Geometry.,
+17,2,sympy,Area of a quadrilateral = (1/2)|diagonal × diagonal|.,|OA × OC| = 6|a × b| = 15.,"1. OB × AC = (6a + 5b) × (3b − 2a) = 28(a × b).
+2. Area = 14 × 5/2 = 35.
+Answer: (2)",Vector areas,Revise Vector Algebra.,
+18,3,sympy,Area of the triangle = (1/2)|a × b|.,"a × b = (10, 10 − 4α, 3α − 20).","1. |a × b|^{2} = 600 gives 25α^{2} − 200α = 0, α = 8.
+2. c = (3, 1, −2), |c|^{2} = 14.
+Answer: (3)",Cross product,Revise Vector Algebra.,
+19,2,arithmetic,x + y = 10. Find the median from cumulative frequencies.,Median = 18.,"1. MD sum = 15 + 16 + 5 + 0 + x + 2y = 50, so x + 2y = 14.
+2. y = 4, x = 6: 4x + 5y = 44.
+Answer: (2)",Mean deviation about the median,Revise Statistics.,
+20,1,sympy,cos θ cos(60° − θ) cos(60° + θ) = cos 3θ/4.,"|cos 3θ| ≤ 1/2, so the largest value is cos 3θ = 1/2.","1. 3θ ∈ {π/3, 5π/3, 7π/3, 11π/3, 13π/3, 17π/3}.
+2. Sum of 3θ = 18π, so sum of θ = 6π.
+Answer: (1)",Trigonometric identities and equations,Revise Trigonometry.,
+21,25,arithmetic,"Count ordered pairs from A with each sum, and from B with each sum.",Elements of R = Σ N_{A}(s) N_{B}(s).,"1. Common sums: 8 (2 × 1), 9 (4 × 2), 10 (2 × 3), 12 (1 × 3), 13 (2 × 2), 14 (1 × 2).
+2. Total 2 + 8 + 6 + 3 + 4 + 2 = 25.
+Answer: 25",Counting relations,Revise Relations and Functions.,
+22,9,arithmetic,"List integer points with |z − 1| ≤ 1, then apply the second condition.",|z − 5| ≤ |z − 5i| means y ≤ x.,"1. Points: 0, 1, 2, 1 + i, 1 − i; all satisfy y ≤ x.
+2. Σ|z|^{2} = 0 + 1 + 4 + 2 + 2 = 9.
+Answer: 9",Loci in the complex plane,Revise Complex Numbers.,
+23,14,sympy,Use |kM| = k^{3}|M| and |adj M| = |M|^{2} step by step.,First equation gives 3^{3}2^{6}d^{16} = 3^{−13}2^{−10}.,"1. d^{16} = 6^{−16}, so |d| = 1/6.
+2. det(3 adj(2A)) = 27 × 64 d^{2} = 48 = 2^{4} × 3.
+3. |3 × 4 + 2 × 1| = 14.
+Answer: 14",Adjoint determinants,Revise Determinants.,
+24,81,sympy,"Find the left limit (tan 8x → 0, tan 7x → ∞) and the right limit (1^{∞} form).",LHL = (8/7)^{0} = 1; RHL = e^{b/a}.,"1. a − 8 = 1, a = 9.
+2. e^{b/9} = 1, b = 0.
+3. a^{2} + b^{2} = 81.
+Answer: 81",Continuity,Revise Limits.,
+25,1,arithmetic,Reduce 428 modulo 21.,428 ≡ 8 and 8^{2} = 64 ≡ 1 (mod 21).,"1. 8^{2024} = (8^{2})^{1012} ≡ 1.
+Answer: 1",Remainders,Revise Binomial Theorem (remainder problems).,
+26,1010,arithmetic,f(m + n) = f(m) + f(n) with f(1) = 1 gives f(n) = n.,Σ(λ + k) = 2022λ + 2022 × 2023/2.,"1. λ + 2023/2 ≤ 2022, so λ ≤ 1010.5.
+2. λ = 1010.
+Answer: 1010",Functional equations,Revise Sequences and Series.,
+27,39,sympy,Find the local minimum of 1 + λ^{2}x − x^{3}.,f' = λ^{2} − 3x^{2}: local min at x = −λ/√3.,"1. x^{2} + x + 2 > 0 always, so need (x + 2)(x + 3) < 0: −3 < x < −2.
+2. 2√3 < λ < 3√3.
+3. α^{2} + β^{2} = 12 + 27 = 39.
+Answer: 39",Maxima/minima with inequalities,Revise Application of Derivatives.,
+28,32,sympy,Combine each pair into one term with r = 1..n and convert to a Riemann sum.,Term = (1/n)(1 − t^{2})/((1 + t^{2})√(1 + t^{4})) with t = r/n; then put u = t + 1/t.,"1. Integral = −∫ du/(u√(u^{2} − 2)) from ∞ to 2.
+2. = (1/√2)(π/2 − π/4) = π/(4√2).
+3. k = 4√2, k^{2} = 32.
+Answer: 32",Limit of a sum as an integral,Revise Definite Integrals.,
+29,9,sympy,"The centre lies on x = 1/2 and the circle passes through O, which is inside x^{2} + y^{2} = 9.",Internal tangency: r = 3 − |OC| and r = |OC|.,"1. |OC| = 3/2: 1/4 + k^{2} = 9/4.
+2. 4(h^{2} + k^{2}) = 9.
+Answer: 9",Touching circles,Revise Circles.,
+30,19,arithmetic,Real roots need b^{2} ≥ 4ac.,"Count for b = 2, 3, 4.","1. b = 2: 1; b = 3: 3; b = 4: 8. Total 12 of 64.
+2. 3/16: m + n = 19.
+Answer: 19",Probability with discriminant,Revise Probability.,
+31,2,conceptual,Latent heat is energy per unit mass.,J/kg = ML^{2}T^{−2}/M.,"1. [L] = M^{0}L^{2}T^{−2}.
+Answer: (2)",Dimensions,Revise Units and Measurements.,
+32,2,arithmetic,"In the second half, equal times at 9 and 15 m/s.",Average over the second half = 12 m/s.,"1. Time = d/6 + d/12 = d/4 for distance 2d.
+2. Average = 8 m/s.
+Answer: (2)",Average speed,Revise Motion in a Straight Line.,
+33,4,conceptual,Take torques about the end on the ground.,N L cos θ = W (L/2) cos θ.,"1. N = W/2 for a uniform bar.
+Answer: (4)",Equilibrium of rigid bodies,Revise Rotational Motion.,Assumes a uniform bar and a vertical shoulder force.
+34,2,arithmetic,a = (m_{2} − m_{1})g/(m_{1} + m_{2}).,Set it equal to g/8.,"1. 8(m_{2} − m_{1}) = m_{1} + m_{2}: 7m_{2} = 9m_{1}.
+2. m_{2} : m_{1} = 9 : 7.
+Answer: (2)",Atwood machine,Revise Laws of Motion.,
+35,2,arithmetic,Work–energy theorem: W = ΔKE.,v^{2} = α^{2}x.,"1. W = (1/2)mα^{2}d.
+Answer: (2)",Work–energy theorem,"Revise Work, Energy and Power.",
+36,3,arithmetic,r = R + h = 21R/20.,E_{surface} = −GMm/R; E_{orbit} = −GMm/(2r).,"1. E_{orbit} = −10GMm/(21R).
+2. Change = GMm/R − 10GMm/(21R) = 11GMm/(21R).
+Answer: (3)",Orbital energy,Revise Gravitation.,
+37,2,sympy,Just floating: weight = buoyancy of the whole sphere.,σ(D^{3} − d^{3}) = D^{3}.,"1. D^{3}(σ − 1) = σd^{3}.
+2. D/d = (σ/(σ − 1))^{1/3}.
+Answer: (2)",Flotation,Revise Mechanical Properties of Fluids.,
+38,1,sympy,Adiabatic work = nR(T_{1} − T_{2})/(γ − 1).,T_{2} = T/√2.,"1. W = 2RT(1 − 1/√2) = RT(2 − √2).
+Answer: (1)",Adiabatic work,Revise Thermodynamics.,
+39,2,sympy,PV^{γ} = constant.,P_{1}/P_{2} = (V_{2}/V_{1})^{γ}.,"1. (4/5)^{3/2} = 8/(5√5).
+Answer: (2)",Adiabatic process,Revise Thermodynamics.,
+40,1,sympy,"Three capacitors of area A/3 in parallel, with gaps d, 2d, 3d.",C = (ε_{0}A/3)(1/d + 1/(2d) + 1/(3d)).,"1. C = (ε_{0}A/(3d))(11/6) = 11ε_{0}A/(18d).
+Answer: (1)",Capacitors in parallel,Revise Electrostatic Potential and Capacitance.,
+41,3,arithmetic,The middle vertical wire and the middle horizontal wire cross without joining. Which nodes do they short?,Top-middle = bottom-middle; left-middle = right-middle.,"1. From the top-middle node to the right-middle node: (10 + 5) ∥ (8 + 7) = 7.5 Ω.
+2. To the left-middle node (same as right-middle): via 11 + 4 = 15 Ω in parallel: 15 ∥ 7.5 = 5 Ω.
+3. Total = 6 + 5 + 8 = 19 Ω.
+Answer: (3)",Equivalent resistance,Revise Current Electricity: mark nodes joined by plain wires.,Figure reading: the hop at the centre means the wires do not join.
+42,3,conceptual,"NCERT notes on Newton's third law with fields, and on how Ampère's law relates to Biot–Savart.",Ampère's law can be derived from Biot–Savart's law.,"1. I true (NCERT).
+2. II false.
+Answer: (3)",Magnetism: conceptual points,Revise Moving Charges and Magnetism.,
+43,2,conceptual,A dielectric increases C. What happens to X_{C}?,X_{C} = 1/(ωC).,"1. X_{C} falls, current rises, bulb glows more.
+Answer: (2)",AC circuits with capacitors,Revise Alternating Current.,
+44,4,arithmetic,B_{0} = E_{0}/c and k = 2π/λ.,"E along y, travel along x: B along z.","1. B_{0} = 2 × 10^{−7} T; k = 2π/(4 × 10^{−3}) = (π/2) × 10^{3}.
+Answer: (4)",EM wave equations,Revise Electromagnetic Waves.,
+45,4,conceptual,Does a concave lens ever form a real image of a real object?,"Concave lens: always virtual, erect, diminished, on the object's side.","1. I false. II true.
+Answer: (4)",Image formation by lenses,Revise Ray Optics.,
+46,3,arithmetic,λ = h/√(2mE).,Same E: λ ∝ 1/√m.,"1. m_{α} > m_{p} > m_{e}: λ_{α} < λ_{p} < λ_{e}.
+Answer: (3)",de Broglie wavelength,Revise Dual Nature.,
+47,4,arithmetic,E = mc^{2}.,1 MeV = 1.6 × 10^{−13} J.,"1. E = 9 × 10^{13} J = 5.6 × 10^{26} MeV.
+Answer: (4)",Mass–energy equivalence,Revise Nuclei.,
+48,4,arithmetic,λ (nm) = 1242/E (eV).,E = hc/λ with hc = 1242 eV nm.,"1. λ = 1242/1.42 ≈ 875 nm.
+Answer: (4)",LED wavelength,Revise Semiconductor Electronics.,
+49,2,sympy,n MSD = (n + 1) VSD.,LC = 1 MSD − 1 VSD.,"1. VSD = nm/(n + 1).
+2. LC = m/(n + 1).
+Answer: (2)",Vernier calliper,Revise Units and Measurements.,
+50,3,arithmetic,Shunt S = I_{g}G/(I − I_{g}).,The shunt carries I − I_{g} at the same voltage as the coil.,"1. S = 20 × 10^{−6} × 200/(0.02 − 0.00002) ≈ 0.20 Ω.
+Answer: (3)",Galvanometer to ammeter,Revise Moving Charges and Magnetism.,
+51,3,sympy,Square both sides.,a^{2} + b^{2} = 6ab cos θ = (10/3)ab.,"1. With a = nb: 3n^{2} − 10n + 3 = 0, n = 3 or 1/3.
+2. Integer: 3.
+Answer: 3",Vector magnitudes,Revise Vector Algebra.,
+52,100,arithmetic,Torque = FR; α = τ/I.,"τ = 4 N m, α = 10 rad/s^{2}.","1. ω = 10 × 10 = 100 rad/s.
+Answer: 100",Rotational dynamics,Revise Rotational Motion.,
+53,20,arithmetic,The tension in the wire is 200 N (not 400).,ΔL = FL/(AY).,"1. ΔL = 200 × 2/(2 × 10^{−4} × 10^{11}) = 2 × 10^{−5} m = 20 μm.
+Answer: 20",Young's modulus,Revise Mechanical Properties of Solids.,
+54,17,arithmetic,a = ω^{2}x gives ω.,v^{2} = ω^{2}(A^{2} − x^{2}).,"1. ω = 2.
+2. 4 = 4(A^{2} − 16): A^{2} = 17.
+Answer: 17",SHM relations,Revise Oscillations.,
+55,36,arithmetic,All charge is at distance R from the centre.,V = kQ/R with Q = λπR.,"1. V = kλπ = 9 × 10^{9} × 4 × 10^{−9} π = 36π V.
+Answer: 36",Potential of a ring,Revise Electrostatic Potential.,
+56,25,arithmetic,Write node equations at A and C with D as reference.,Paths A–B–C and A–D–C are each 6 Ω; the B–D branch does not change the current in the 10 V branch.,"1. KCL at C: C = B/2 + I_{1}. KCL at A: A = B/2 − 2I_{1}.
+2. Branch A–C: 10 = 4I_{1} (A − C = −3I_{1} with the emf), so I_{1} = 2.5 A.
+3. Check: the two 6 Ω paths in parallel give 3 Ω, plus 1 Ω: I = 10/4 = 2.5 A.
+4. n = 25.
+Answer: 25",Kirchhoff's laws,Revise Current Electricity.,"Figure reading: 4 Ω A–B, 4 Ω A–D, 2 Ω B–C, 2 Ω C–D, 10 V + 1 Ω A–C; the B–D source does not affect the 1 Ω current."
+57,160,arithmetic,"Forces on the two sides parallel to x cancel; on the sides parallel to y they do not, because B differs.",F = IL[B(x_{2}) − B(x_{1})].,"1. B difference across 2 m: 5 × 4 × 2 = 40 T.
+2. F = 2 × 2 × 40 = 160 N.
+Answer: 160",Force on a loop in a non-uniform field,Revise Moving Charges and Magnetism.,
+58,10,arithmetic,DC gives R; AC gives Z.,"R = 4 Ω, Z = 5 Ω, X_{L} = 3 Ω.","1. L = 3/(2 × 3 × 50) = 0.01 H = 10 mH.
+Answer: 10",Reactance of a coil,Revise Alternating Current.,
+59,200,arithmetic,I = I_{max}cos^{2}(φ/2).,"φ = 2π/3, path difference λ/3.","1. y = λD/(3d) = 600 × 10^{−9}/(3 × 10^{−3}) = 2 × 10^{−4} m = 200 μm.
+Answer: 200",Intensity in YDSE,Revise Wave Optics.,
+60,5,arithmetic,Find Q per reaction from the mass defect.,Q = (3 × 4.0026 − 12) × 931.5 MeV.,"1. Q = 7.27 MeV = 1.16 × 10^{−12} J.
+2. Rate = 5.808 × 10^{30}/1.16 × 10^{−12} ≈ 5 × 10^{42} s^{−1}.
+Answer: 5",Nuclear energy,Revise Nuclei.,Uses 931.5 MeV/u.
+61,2,conceptual,"Use the (n + l) rule; for equal n + l, lower n first.","4s: 4, 3p: 4, 4p: 5, 3d: 5, 4d: 6.","1. C (3p) < E (4s) < D (3d) < A (4p) < B (4d).
+Answer: (2)",Aufbau (n + l) rule,Revise Structure of Atom.,
+62,2,conceptual,Count σ bonds plus lone pairs on the central atom.,Three domains = sp^{2}.,"1. BF_{3} (3 + 0) and NO_{2}^{−} (2 + 1) are sp^{2}.
+Answer: (2)",Hybridisation,Revise Chemical Bonding.,
+63,4,arithmetic,"In osmosis, water moves towards the side with more solute particles.",K_{2}Cr_{2}O_{7}: 3 × 0.01 = 0.03 M particles; CuSO_{4}: 2 × 0.05 = 0.1 M.,"1. Water moves from X into Y.
+2. CuSO_{4} is diluted: its molarity falls. Ions do not cross the SPM, so no green colour.
+Answer: (4)",Osmosis,Revise Solutions.,
+64,1,conceptual,Strong electrolytes: Λ_{m} falls slowly and linearly with √c. Weak: steeply.,Strong electrolytes follow Λ_{m} = Λ^{0} − A√c (nearly linear).,"1. A (steep rise at low c) is weak; B (gentle line) is strong.
+Answer: (1)",Molar conductivity,Revise Electrochemistry.,
+65,4,conceptual,"Oxidation state is assigned using electronegativity, not electron gain enthalpy.",NCERT defines oxidation state using electronegativity.,"1. I incorrect. II correct (small atoms form pπ–pπ bonds).
+Answer: (4)",Oxidation state; multiple bonding,Revise Redox Reactions and p-Block.,
+66,3,conceptual,Is A true? Then read R word by word: is everything it claims about sulphur true?,"O=O uses pπ–pπ bonding; S does form some pπ–pπ bonds (e.g. in CS_{2}, S=O bonds), though weaker.","1. A is true: S_{8} rings for both allotropes, O_{2} molecules.
+2. R says pπ–pπ bonding is 'not possible for sulphur'. That is too strong: sulphur forms pπ–pπ bonds with small atoms like C and O (CS_{2}, SO_{2}).
+3. So A is correct but R is not correct.
+Answer: (3)",Allotropy of oxygen and sulphur,Revise The p-Block Elements (group 16).,"Teacher look: NTA's key treats R as false because of the word 'not possible for sulphur'. Many students would pick (1), since R is the usual NCERT explanation for O_{2} vs S_{8}."
+67,3,conceptual,F^{−} replaces OH^{−}.,Hydroxyapatite 3Ca_{3}(PO_{4})_{2}·Ca(OH)_{2}.,"1. Fluoroapatite = 3Ca_{3}(PO_{4})_{2}·CaF_{2}.
+Answer: (3)",Fluoride and teeth,Revise The p-Block Elements (NCERT box).,
+68,1,conceptual,"In water, which ion has the larger hydration enthalpy?",Cu^{2+} is smaller and more highly charged.,"1. Cu(II) is more stable in aqueous solution (hydration enthalpy outweighs the second IE).
+Answer: (1)",Stability of Cu(I) and Cu(II),Revise The d- and f-Block Elements.,"Teacher look: true for aqueous solution, which the key assumes."
+69,4,conceptual,Draw [Co(en)_{2}Cl_{2}]^{+}: where can the two Cl go?,cis or trans.,"1. Two geometrical isomers: A false.
+2. Octahedral: R true.
+Answer: (4)",Isomerism in complexes,Revise Coordination Compounds.,
+70,3,conceptual,"Why choose distillation, crystallisation or chromatography?",Choose the method by the properties of both the compound and the impurity.,"1. The method depends on the compound and on the impurity.
+Answer: (3)",Purification methods,Revise Organic Chemistry: Some Basic Principles.,
+71,4,conceptual,Neutral structures with complete octets are most stable; positive charge on O is worst.,Charge separation lowers stability; a positive charge on electronegative O is worst.,"1. I > II > III.
+Answer: (4)",Resonance structures,Revise Organic Chemistry: Some Basic Principles.,
+72,1,conceptual,This is the Haworth synthesis.,"Friedel–Crafts acylation, Clemmensen reduction, ring closure.","1. C = α-tetralone.
+Answer: (1)",Haworth synthesis,Revise Aldehydes and Ketones.,
+73,1,conceptual,What stabilises the S_{N}2 transition state at a benzylic carbon?,The adjacent π system shares the developing p-orbital in the transition state.,"1. A and R true; R explains A.
+Answer: (1)",Benzylic S_{N}2,Revise Haloalkanes.,
+74,1,conceptual,Which halogen reacts in Wurtz coupling? What do Grignard + D_{2}O and CoF_{2} do?,C–Br reacts first; Swarts replaces Cl by F.,"1. A = Cl–(bicyclobutane-type dimer)–Cl.
+2. B: Cl → D at both ends. C: Cl → F at both ends.
+Answer: (1)","Wurtz, Grignard, Swarts",Revise Haloalkanes.,
+75,3,conceptual,CO + HCl with AlCl_{3}/CuCl: Gattermann–Koch.,The electrophile is HCO^{+} made from CO + HCl.,"1. X = benzaldehyde.
+Answer: (3)",Gattermann–Koch reaction,Revise Aldehydes and Ketones.,
+76,2,conceptual,Acid hydration is Markovnikov; hydroboration is anti-Markovnikov.,Markovnikov puts OH on the more substituted carbon; hydroboration on the less substituted.,"1. A = propan-2-ol, B = propan-1-ol.
+Answer: (2)",Hydration of alkenes,Revise Alcohols.,
+77,3,conceptual,Lower pK_{a} = stronger acid. NO_{2} increases acidity (strongest at para); OCH_{3} decreases it at para.,Electron-withdrawing groups stabilise phenoxide (lower pK_{a}); donating groups do the opposite.,"1. B (p-NO_{2}) < D (m-NO_{2}) < … < E (p-OCH_{3}).
+2. Only option 3 starts with B and ends with E: B < D < A < C < E.
+Answer: (3)",Acidity of substituted phenols,"Revise Alcohols, Phenols and Ethers.","Teacher look: experimentally m-methoxyphenol (pK_{a} 9.65) is slightly more acidic than phenol (9.99), which would put C before A; the key treats OCH_{3} as donating at meta too. Key reached as the only option with B first and E last."
+78,1,conceptual,"Is the N lone pair free (sp^{3}), in sp^{2}, or part of the aromatic sextet?","Compare where the nitrogen lone pair is: sp^{3}, sp^{2}, or in the aromatic ring.","1. Piperidine (sp^{3}) > pyridine (sp^{2}) > pyrrole (lone pair aromatic).
+Answer: (1)",Basicity of N heterocycles,Revise Amines.,
+79,3,conceptual,Dilute HNO_{3} with PbS: which products?,3PbS + 8HNO_{3} → 3Pb(NO_{3})_{2} + 2NO + 3S + 4H_{2}O.,"1. N_{2}O is not formed.
+Answer: (3)",Reactions of nitric acid,Revise The p-Block Elements.,
+80,4,conceptual,"A primary standard must be pure, stable and non-hygroscopic.",KMnO_{4} and NaOH are secondary standards.,"1. Incorrect: C and E.
+Answer: (4)",Primary standards,Revise titrimetric analysis.,
+81,164,arithmetic,Take 500 mL: mass of solution 625 g.,0.1 mol CuSO_{4} = 15.95 g.,"1. Water = 609 g.
+2. m = 0.1/0.609 = 0.164 = 164 × 10^{−3}.
+Answer: 164",Molarity to molality,Revise Solutions.,
+82,4,conceptual,Use MO electron counts.,"Count electrons, fill MOs, look at the last orbital.","1. One unpaired: C_{2}^{−}, O_{2}^{−}, H_{2}^{+}, He_{2}^{+}.
+2. Count 4.
+Answer: 4",Magnetism from MO theory,Revise Chemical Bonding.,
+83,82,arithmetic,Hess's law: anhydrous → hydrate → solution.,ΔH_{hyd} + 12 = −70.,"1. ΔH_{hyd} = −82 kJ.
+Answer: 82",Hess's law,Revise Thermodynamics.,
+84,2,arithmetic,Heat ∝ moles of H^{+} neutralised.,H_{2}SO_{4} gives 2 H^{+}.,"1. y/x = 2.
+Answer: 2",Enthalpy of neutralisation,Revise Thermodynamics.,
+85,3,conceptual,A metal is oxidised if E° of its couple is below 1.33 V.,Compare each E°(M^{n+}/M) with 1.33 V.,"1. Fe, Ni, Ag are oxidised; Au is not.
+Answer: 3",Electrochemical series,Revise Electrochemistry.,
+86,8,arithmetic,Doubling A and B: rate × 2^{2} × 2.,A straight line with slope −k on [R] vs t is zero order.,"1. x = 8, y = 0.
+2. x + y = 8.
+Answer: 8",Rate laws,Revise Chemical Kinetics.,
+87,2,conceptual,Colourless ions have 4f^{0} or 4f^{14}.,"La^{3+} 4f^{0}, Lu^{3+} 4f^{14}.","1. Count 2.
+Answer: 2",Colour of lanthanoid ions,Revise The d- and f-Block Elements.,
+88,3,conceptual,Ambidentate: can bind through two different atoms.,Look for ligands with two different donor atoms.,"1. NO_{2}^{−} (N/O), SCN^{−} (S/N), CN^{−} (C/N).
+2. Count 3.
+Answer: 3",Ambidentate ligands,Revise Coordination Compounds.,
+89,4,conceptual,"Need a polar group (I), conjugation with a π system (M) and alkyl C–H next to a π system (hyperconjugation).","Inductive from polar groups, mesomeric from conjugation, hyperconjugation from alkyl C–H next to a π system.","1. Yes: the enone with isopropyl, o-nitrocumene, the o-nitro allyl compound, the methyl cyclohexenyl ketone.
+2. No: anisole (no alkyl on the π system), benzene, chlorocyclohexane, m-xylene (no mesomeric group).
+3. Count 4.
+Answer: 4",Electronic effects,Revise Organic Chemistry: Some Basic Principles.,
+90,4,conceptual,NCERT's list of essential amino acids.,"NCERT lists 10 essential amino acids, including arginine and histidine.","1. Essential: arginine, phenylalanine, histidine, valine.
+2. Count 4.
+Answer: 4",Amino acids,Revise Biomolecules.,"Follows NCERT, which lists arginine and histidine as essential."
