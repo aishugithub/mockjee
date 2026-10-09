@@ -9,7 +9,8 @@ Worked solutions come from pyq/<year>/<shift>/solutions.csv (Claude's, labelled 
 tools/verify_pyq_solutions.py). Chapter tags come from pyq/<year>/<shift>/tags.csv (written by Claude after reading each
 question image; see tools/chapters.py). They are kept apart from questions.json so that
 re-running the extractor never wipes them. Every code is checked against the official list
-and against the question's subject from NTA's paper.
+and against the question's subject from NTA's paper. Trap analysis (Claude's, step 3) comes from
+pyq/<year>/<shift>/traps.csv as option_traps + trap_by "claude"; see tools/verify_traps.py.
 
 Usage:  python tools/build_pyq_bank.py
 """
@@ -17,11 +18,12 @@ import csv, glob, json, os, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from chapters import CODES
+from traps_common import CHECKS as TRAP_CHECKS, MISTAKE_TYPES
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 KEEP = ['id', 'subject', 'chapter', 'subtopic', 'secondary_chapter', 'tag_confidence', 'year', 'type',
         'source', 'question', 'image', 'options', 'option_images', 'answer', 'accept', 'solution',
-        'solution_by', 'solution_check', 'solution_note', 'hints', 'concept', 'revise']
+        'solution_by', 'solution_check', 'solution_note', 'hints', 'concept', 'revise', 'option_traps', 'trap_by']
 CHECKS = ('sympy', 'arithmetic', 'conceptual')
 HELD = []   # solutions Claude disputes with NTA's key: not bundled until the owner decides
 
@@ -90,6 +92,37 @@ def load_solutions(folder, questions):
         raise SystemExit(f'{path}:' + ''.join('\n  ' + e for e in errors))
     return sols
 
+def load_traps(folder, questions):
+    """{question id: option_traps} from traps.csv (Claude's trap analysis, step 3; full checks in tools/verify_traps.py).
+
+    option_traps = {option: {trap, mistake_type, check}}; option is the MCQ option number 1-4 as printed (NOT the
+    0-based answer index) or, for a numerical, the trap value. A trap on the key or an unknown code stops the build.
+    """
+    path = os.path.join(folder, 'traps.csv')
+    if not os.path.exists(path):
+        return {}
+    traps, errors = {}, []
+    for row in csv.DictReader(open(path, encoding='utf-8')):
+        n, opt = int(row['q']), row['option'].strip()
+        q = questions[n - 1]
+        if q.get('exclude') or q.get('answer') is None:
+            continue
+        if q['type'] == 'MCQ':
+            right = [q['answer'] + 1] + [a + 1 for a in q.get('accept', [])]
+        else:
+            right = [q['answer']] + q.get('accept', [])
+        if any(float(opt) == float(k) for k in right):
+            errors.append(f'Q{n}: option {opt} is the key (or accepted), it cannot have a trap'); continue
+        if row['mistake_type'] not in MISTAKE_TYPES:
+            errors.append(f"Q{n} option {opt}: unknown mistake_type {row['mistake_type']}"); continue
+        if row['check'] not in TRAP_CHECKS or not row['trap'].strip():
+            errors.append(f'Q{n} option {opt}: bad check or empty trap'); continue
+        traps.setdefault(q['id'], {})[opt] = {'trap': row['trap'].strip(), 'mistake_type': row['mistake_type'],
+                                              'check': row['check']}
+    if errors:
+        raise SystemExit(f'{path}:' + ''.join('\n  ' + e for e in errors))
+    return {qid: {'option_traps': t, 'trap_by': 'claude'} for qid, t in traps.items()}
+
 sys.stdout.reconfigure(encoding='utf-8')
 bank, skipped, papers = [], [], []
 for path in sorted(glob.glob(os.path.join(ROOT, 'pyq', '*', '*', 'questions.json'))):
@@ -97,6 +130,7 @@ for path in sorted(glob.glob(os.path.join(ROOT, 'pyq', '*', '*', 'questions.json
     paper = json.load(open(path, encoding='utf-8'))
     tags = load_tags(os.path.dirname(path), paper['questions'])
     sols = load_solutions(os.path.dirname(path), paper['questions'])
+    traps = load_traps(os.path.dirname(path), paper['questions'])
     untagged = 0
     n = 0
     for q in paper['questions']:
@@ -104,14 +138,15 @@ for path in sorted(glob.glob(os.path.join(ROOT, 'pyq', '*', '*', 'questions.json
             skipped.append(f"{q['source']}: {q['exclude']}"); continue
         if q.get('answer') is None:
             skipped.append(f"{q['source']}: no answer"); continue
-        q = dict(q, **tags.get(q['id'], {}), **sols.get(q['id'], {}))
+        q = dict(q, **tags.get(q['id'], {}), **sols.get(q['id'], {}), **traps.get(q['id'], {}))
         if q['id'] not in tags: untagged += 1
         r = {k: q[k] for k in KEEP if k in q}
         if 'image' in r: r['image'] = f"{folder}/{r['image']}"
         if 'option_images' in r: r['option_images'] = [f'{folder}/{p}' if p else '' for p in r['option_images']]
         bank.append(r); n += 1
     papers.append(f"{paper['source']}: {n}" + (f' ({untagged} not tagged yet)' if untagged else '')
-                  + (f', {len(sols)} with worked solutions' if sols else ''))
+                  + (f', {len(sols)} with worked solutions' if sols else '')
+                  + (f', {len(traps)} with trap analysis' if traps else ''))
 
 with open(os.path.join(ROOT, 'pyq_bank.js'), 'w', encoding='utf-8') as f:
     f.write('/* Generated by tools/build_pyq_bank.py. Do not edit by hand.\n'
