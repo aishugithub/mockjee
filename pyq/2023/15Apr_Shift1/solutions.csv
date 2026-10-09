@@ -1,0 +1,400 @@
+q,claude_answer,check,hint1,hint2,solution,concept,revise,note
+1,1,sympy,Each of the three parts has its own condition. Which conditions must hold together?,"Need (4x + 3)(x + 2) > 0, -1 ≤ 4x + 3 ≤ 1 and -1 ≤ (10x + 6)/3 ≤ 1. Solve each, then intersect.","1. log: 4x^{2} + 11x + 6 = (4x + 3)(x + 2) > 0, so x < -2 or x > -3/4.
+2. sin^{-1}: -1 ≤ 4x + 3 ≤ 1 gives -1 ≤ x ≤ -1/2.
+3. cos^{-1}: -3 ≤ 10x + 6 ≤ 3 gives -9/10 ≤ x ≤ -3/10.
+4. Common part: -3/4 < x ≤ -1/2, so α = -3/4, β = -1/2.
+5. 36|α + β| = 36 × 5/4 = 45.
+Answer: (1)",Domain of a sum of functions: intersection of log and inverse-trig domains.,"Intersecting three intervals is easy to rush. Revise domains of log, sin^{-1} and cos^{-1} (Relations and Functions, Inverse Trigonometric Functions) and draw a number line each time.",
+2,2,sympy,The signs of x and of x + 2 change at x = 0 and x = -2. How many cases does that give?,Cases: x ≥ 0 gives x^{2} - 5x - 4 = 0; -2 ≤ x < 0 gives x^{2} + 5x + 4 = 0; x < -2 gives x^{2} - 5x - 16 = 0. Keep only roots inside each case's range.,"1. x ≥ 0: x^{2} - 5(x + 2) + 6 = 0 → x^{2} - 5x - 4 = 0 → x = (5 ± √41)/2. Only (5 + √41)/2 ≈ 5.7 is ≥ 0. One root.
+2. -2 ≤ x < 0: -x^{2} - 5(x + 2) + 6 = 0 → x^{2} + 5x + 4 = 0 → x = -1 or -4. Only -1 fits. One root.
+3. x < -2: -x^{2} + 5(x + 2) + 6 = 0 → x^{2} - 5x - 16 = 0 → x = (5 ± √89)/2. (5 - √89)/2 ≈ -2.2 fits. One root.
+4. Total 3 real roots.
+Answer: (2)",Equations with modulus: split at the points where each expression inside |…| changes sign.,"The trap is forgetting to check each root against its own case range. Practise modulus equations from Complex Numbers and Quadratic Equations, always writing the range next to each case.",
+3,2,sympy,Put z = 3 + iy. Then z - z̄ and z z̄ are simple in terms of y.,"With z = 3 + iy: numerator = 9 + y^{2} + 2iy, denominator = 8 - 8iy. Multiply top and bottom by (1 + iy) and take the real part.","1. z - z̄ = 2iy, z z̄ = 9 + y^{2}, so the numerator is 9 + y^{2} + 2iy.
+2. Denominator: 2 - 3(3 + iy) + 5(3 - iy) = 8 - 8iy.
+3. Real part = (9 + y^{2} - 2y^{2}) / (8(1 + y^{2})) = (9 - y^{2}) / (8(1 + y^{2})).
+4. Write it as 10/(8(1 + y^{2})) - 1/8. As y^{2} goes from 0 to ∞ it falls from 9/8 towards -1/8 (never reaching it).
+5. So the set is (-1/8, 9/8]: α = -1/8, β = 9/8, and 24(β - α) = 24 × 5/4 = 30.
+Answer: (2)","Real part of a complex expression on a line Re(z) = 3, then the range of a rational function.","Finding the range after the algebra is the tricky part. Revise Complex Numbers (conjugate, real part) and range of functions by rewriting as constant + k/(1 + t).",
+4,2,sympy,"First find m and n. Then use the rules for det(kA), det(adj B) and adj(adj B).","m = 5, n = 2, |A| = 3. For order 5: |kB| = k^{5}|B| and |adj(adj B)| = |B|^{(5-1)^{2}} = |B|^{16}.","1. 4m + n = 22 and 17m + 4n = 93 give m = 5, n = 2, so |A| = m - n = 3 and A has order 5.
+2. |5A| = 5^{5} × 3.
+3. |adj(adj(5A))| = |5A|^{16} = 5^{80} × 3^{16}.
+4. |2 adj(adj(5A))| = 2^{5} × 5^{80} × 3^{16}.
+5. Match 3^{a} 5^{b} 6^{c} = 2^{c} 3^{a+c} 5^{b}: c = 5, a = 11, b = 80.
+6. a + b + c = 96.
+Answer: (2)",Determinant of a scalar multiple and of repeated adjoints.,The exponents (n-1)^{2} and the k^{n} factor are easy to mix up. Revise properties of adjoint in Determinants and Matrices.,
+5,1,sympy,"Three of the equations already fix x, y, z. Which one then gives λ?",Solve the first three equations; then λ = -3x + y + 13z. Use distance = |ax + by + cz - d| / √(a^{2} + b^{2} + c^{2}).,"1. Subtract equation 1 from equation 2: y + 16z = 2.
+2. Equation 3 minus 2 × equation 1: -3y + 23z = -6.
+3. Solve: z = 0, y = 2, then x = 2y - 9z - 7 = -3.
+4. Fourth equation: λ = -3(-3) + 2 + 0 = 11.
+5. Distance of (-3, 2, 0) from 2x - 2y + z = 11: |-6 - 4 + 0 - 11| / 3 = 21/3 = 7.
+Answer: (1)","Consistent system of 4 equations in 3 unknowns, then point-to-plane distance.","Notice that λ is decided by the solution, not the other way round. Revise solving linear systems and the distance formula in Three Dimensional Geometry.",
+6,4,sympy,A number is divisible by 3 when its digit sum is. Sort the digits by remainder on division by 3.,"Remainders: 3 → 0, 1 → 1, 5 and 8 → 2. Count ordered triples of digits whose remainders add to a multiple of 3.","1. Remainder 0: {3}; remainder 1: {1}; remainder 2: {5, 8}.
+2. Remainder patterns that add to 0 (mod 3): (0,0,0), (1,1,1), (2,2,2) and (0,1,2) in any order.
+3. (0,0,0): 1 number (333). (1,1,1): 1 number (111). (2,2,2): 2^{3} = 8.
+4. (0,1,2) in any order: 3! × 1 × 1 × 2 = 12.
+5. Total = 1 + 1 + 8 + 12 = 22.
+Answer: (4)",Counting with repetition using remainders (divisibility by 3).,"Missing a case like (2,2,2) is the usual slip. Revise Permutations and Combinations: split into cases by remainder and list them all before counting.",
+7,3,sympy,p_{1} and p_{2} are the coefficients of x and x^{2}. Which terms of the expansion can give them?,"p_{1} = 10a^{9}b and p_{2} = 45a^{8}b^{2} + 10a^{9}c. Use that a, b, c are natural numbers.","1. Coefficient of x: 10a^{9}b = 20, so a^{9}b = 2. With natural numbers, a = 1 and b = 2.
+2. Coefficient of x^{2}: choose bx twice (C(10,2) a^{8}b^{2}) or cx^{2} once (10a^{9}c): 45 × 4 + 10c = 210.
+3. So 10c = 30, c = 3.
+4. 2(a + b + c) = 2 × 6 = 12.
+Answer: (3)",Coefficients in a multinomial expansion.,The x^{2} term comes from two different choices; missing the cx^{2} route is common. Revise the Binomial Theorem and general multinomial terms.,
+8,3,sympy,"Call the numbers a and b and write the three GMs with a common ratio r, where b = ar^{4}.","G_{1} = ar, G_{2} = ar^{2}, G_{3} = ar^{3}, A_{1} + A_{2} = a + b = a(1 + r^{4}). Factor the left side.","1. G_{1}G_{3} = G_{2}^{2} = a^{2}r^{4}.
+2. G_{1}^{4} + G_{2}^{4} + G_{3}^{4} + G_{1}^{2}G_{3}^{2} = a^{4}r^{4}(1 + r^{4} + r^{8} + r^{4}) = a^{4}r^{4}(1 + r^{4})^{2}.
+3. (A_{1} + A_{2})^{2} G_{1}G_{3} = a^{2}(1 + r^{4})^{2} × a^{2}r^{4}, the same.
+Answer: (3)",Arithmetic and geometric means inserted between two numbers.,Writing the means in terms of a and r first keeps this short. Revise inserting AMs and GMs in Sequences and Series.,
+9,2,sympy,"Work out f on [0, 1), on [1, 2) and at x = 2 separately.","On [0, 1): max{1 + x, 2 + x, x}. On [1, 2): max{2 + x, 2 + x, x + 2}. At x = 2: max{5, 4, 6}.","1. On [0, 1), [x] = 0: f = max{1 + x, 2 + x, x} = 2 + x.
+2. On [1, 2), [x] = 1: f = max{2 + x, 2 + x, x + 2} = 2 + x.
+3. At x = 2, [x] = 2: f(2) = max{5, 4, 6} = 6, but the left limit is 4.
+4. So f is discontinuous only at x = 2: m = 1. Inside (0, 2) f = 2 + x is differentiable: n = 0.
+5. (m + n)^{2} + 2 = 3.
+Answer: (2)",Continuity and differentiability of max of functions with the greatest integer function.,"It is tempting to expect breaks at x = 1, but here the pieces agree. Revise Continuity and Differentiability with [x]: check each interval and each integer point separately.",
+10,4,sympy,The limits are 0 and 1. What happens to the integrand when x is replaced by 1 - x?,"5 + 2x - 2x^{2} is unchanged by x → 1 - x, and 1/(1 + e^{t}) + 1/(1 + e^{-t}) = 1, so 2I = ∫_{0}^{1} dx/(5 + 2x - 2x^{2}).","1. Replacing x by 1 - x keeps 5 + 2x - 2x^{2} and turns e^{2-4x} into e^{4x-2}. Adding the two forms: 2I = ∫_{0}^{1} dx/(5 + 2x - 2x^{2}).
+2. 5 + 2x - 2x^{2} = 2[(√11/2)^{2} - (x - 1/2)^{2}].
+3. Using ∫ du/(c^{2} - u^{2}) = (1/2c) log((c + u)/(c - u)): 2I = (1/√11) log((√11 + 1)/(√11 - 1)).
+4. (√11 + 1)/(√11 - 1) = (√11 + 1)^{2}/10, so I = (1/√11) log((√11 + 1)/√10).
+5. α = √11, β = √10: α^{4} - β^{4} = 121 - 100 = 21.
+Answer: (4)",Definite integrals using the property ∫_{0}^{a} f(x) dx = ∫_{0}^{a} f(a - x) dx.,Seeing the King's property and then matching the given log form are both steps where people stop. Revise properties of definite integrals and standard integrals of 1/(a^{2} - x^{2}).,
+11,4,sympy,Treat x as the dependent variable. Is the equation linear in x?,"dx/dy + x/(2(y + 2)log(y + 2)) = (2log(y + 2) - 4)/(2(y + 2)log(y + 2)). With t = log(y + 2), the integrating factor is √t.","1. Write it as dx/dy + P x = Q with P = 1/(2(y + 2)log(y + 2)).
+2. Put t = log(y + 2), dt = dy/(y + 2): integrating factor e^{∫dt/2t} = √t.
+3. x√t = ∫ √t (1 - 2/t) dt = (2/3)t^{3/2} - 4√t + C.
+4. y = e^{4} - 2 means t = 4, x = 1: 2 = 16/3 - 8 + C, so C = 14/3.
+5. y = e^{9} - 2 means t = 9: 3x = 18 - 12 + 14/3 = 32/3, so x = 32/9.
+Answer: (4)",Linear differential equation in x (as a function of y).,"Spotting that the equation is linear in x, not in y, is the key step. Revise linear differential equations of the form dx/dy + Px = Q.",
+12,1,sympy,The orthocentre lies on every altitude. Two altitudes are enough.,Altitude from A is perpendicular to BC: 5x + 3y + 6 = 0. Altitude from B is perpendicular to AC: x + 12y - 23 = 0.,"1. BC has direction (5, 3). Altitude through A(3, -7): 5(x - 3) + 3(y + 7) = 0, i.e. 5x + 3y + 6 = 0.
+2. AC has direction (1, 12). Altitude through B(-1, 2): (x + 1) + 12(y - 2) = 0, i.e. x + 12y - 23 = 0.
+3. Solving: β = 121/57, α = -141/57.
+4. 9α - 6β + 60 = (-1269 - 726)/57 + 60 = -35 + 60 = 25.
+Answer: (1)",Orthocentre as the meeting point of two altitudes.,"The fractions are untidy, so arithmetic slips are likely; keep α and β as fractions over 57. Revise Straight Lines: perpendicular lines through a point.",
+13,3,sympy,"Find both centres and radii, then compare the distance between centres with r_{1} + r_{2}.","C_{1} = (9, 15/2), r_{1} = 5/2; C_{2} = (3, 3), r_{2} = 5. If the distance equals r_{1} + r_{2} the circles touch externally.","1. First circle: centre (9, 7.5), r_{1}^{2} = 81 + 56.25 - 131 = 6.25, r_{1} = 2.5.
+2. Second circle: centre (3, 3), r_{2}^{2} = 9 + 9 + 7 = 25, r_{2} = 5.
+3. Distance between centres = √(36 + 20.25) = 7.5 = r_{1} + r_{2}.
+4. Circles touching externally have 3 common tangents.
+Answer: (3)",Number of common tangents from the position of two circles.,"Remember: apart 4, touching outside 3, cutting 2, touching inside 1, one inside the other 0. Revise Conic Sections: circles.",
+14,4,sympy,First find the plane through the three points: you need its normal.,"Normal = (10, 5, 7) × (10, 0, 4) ∝ (2, 3, -5); the plane is 2x + 3y - 5z = 7. Foot Q = P - k(2, 3, -5) with k = (2·3 + 3·(-2) - 5·(-9) - 7)/38.","1. Vectors in the plane: (10, 5, 7) and (10, 0, 4). Their cross product is (20, 30, -50), so the normal is (2, 3, -5).
+2. Plane: 2x + 3y - 5z - 7 = 0.
+3. For P(3, -2, -9): 6 - 6 + 45 - 7 = 38, and |n|^{2} = 38, so k = 1.
+4. Q = (3, -2, -9) - (2, 3, -5) = (1, -5, -4).
+5. |OQ| = √(1 + 25 + 16) = √42.
+Answer: (4)",Plane through three points and foot of the perpendicular from a point.,A sign slip in the cross product changes everything here; check the plane with all three points. Revise Three Dimensional Geometry: equation of a plane and foot of perpendicular.,
+15,3,sympy,Shortest distance between skew lines uses the cross product of the two directions.,"SD = |(a_{2} - a_{1}) · (b_{1} × b_{2})| / |b_{1} × b_{2}| with b_{1} × b_{2} = (4, 3, -12).","1. a_{1} = (λ, 3, -6), b_{1} = (0, 4, 1); a_{2} = (-λ, 0, 6), b_{2} = (3, -4, 0).
+2. b_{1} × b_{2} = (4, 3, -12), length 13.
+3. (a_{2} - a_{1}) = (-2λ, -3, 12); dot product = -8λ - 9 - 144 = -8λ - 153.
+4. |8λ + 153| / 13 = 13 gives 8λ + 153 = ±169: λ = 2 or λ = -161/4.
+5. Sum = 2 - 161/4 = -153/4, and 8 × 153/4 = 306.
+Answer: (3)",Shortest distance between two skew lines.,Both signs of the modulus give a value of λ; missing one is the usual trap. Revise Three Dimensional Geometry: shortest distance formula.,
+16,3,sympy,Three vectors are coplanar when their scalar triple product is zero.,"det[[λ, -1, 1], [1, 2, μ], [3, -4, 5]] = 10λ + 4λμ - 3μ - 5 = 0, together with λ = μ + 5.","1. Scalar triple product: λ(10 + 4μ) + (5 - 3μ) - 10 = 10λ + 4λμ - 3μ - 5 = 0.
+2. Put λ = μ + 5: 4μ^{2} + 27μ + 45 = 0, so μ = -3 or μ = -15/4.
+3. Pairs: (2, -3) and (5/4, -15/4).
+4. λ^{2} + μ^{2}: 13 and 250/16 = 125/8.
+5. 80 × 13 + 80 × 125/8 = 1040 + 1250 = 2290.
+Answer: (3)",Coplanarity of three vectors via the scalar triple product.,Expanding the 3 × 3 determinant carefully is the main work. Revise Vector Algebra: scalar triple product and coplanarity.,
+17,1,sympy,"Use position vectors a, b, c, d for A, B, C, D, and write E and F as midpoints.","AB - BC + AD - DC = 2(b + d) - 2(a + c), and E = (a + c)/2, F = (b + d)/2.","1. AB = b - a, BC = c - b, AD = d - a, DC = c - d.
+2. (b - a) - (c - b) + (d - a) - (c - d) = 2(b + d) - 2(a + c) = 4F - 4E.
+3. 4F - 4E = 4 EF = -4 FE.
+4. So k = -4.
+Answer: (1)",Vector addition with position vectors and midpoints.,The direction FE (from F to E) gives the minus sign; 4 is the tempting wrong answer. Revise Vector Algebra: position vectors and the section formula.,
+18,1,sympy,The die decides how many balls are drawn. Use total probability over the six faces.,"P = (1/6) Σ_{k=1}^{6} C(6, k)/C(10, k).","1. For each face k, P(all white) = C(6, k)/C(10, k).
+2. Values: 3/5, 1/3, 1/6, 1/14, 1/42, 1/210.
+3. Over 210: 126 + 70 + 35 + 15 + 5 + 1 = 252, so the sum is 252/210 = 6/5.
+4. P = (1/6)(6/5) = 1/5.
+Answer: (1)",Theorem of total probability.,Adding six fractions invites slips; a common denominator of 210 keeps it tidy. Revise Probability: total probability.,
+19,3,sympy,"Rebuild Σx and Σx^{2} from the given mean and standard deviation, then correct them.","Σx = 200, Σx^{2} = 10(8^{2} + 20^{2}) = 4640. Replace 50 by 40 in both sums.","1. Σx = 10 × 20 = 200; Σx^{2} = 10(64 + 400) = 4640.
+2. Corrected Σx = 200 - 50 + 40 = 190; corrected Σx^{2} = 4640 - 2500 + 1600 = 3740.
+3. New mean = 19; variance = 3740/10 - 19^{2} = 374 - 361 = 13.
+Answer: (3)",Correcting mean and variance after a wrong observation.,Forgetting to correct Σx^{2} (not just Σx) is the usual trap. Revise Statistics: variance = Σx^{2}/n - (mean)^{2}.,"The question says the standard deviation is 8, so the original variance is 64."
+20,4,sympy,First decide when p ∧ (q ∧ ~(p ∧ q)) can be true at all.,"For it to be true you need p, q and ~(p ∧ q) all true at once. Is that possible? If never, its negation is a tautology.","1. p ∧ q ∧ ~(p ∧ q) would need p ∧ q both true and false: impossible. So the statement is always false.
+2. Its negation is therefore always true (a tautology).
+3. Check the options: (~(p ∧ q)) ∨ p is true when p is true, and when p is false ~(p ∧ q) is true. Always true.
+4. The other options are false in some row.
+Answer: (4)",Negation of a compound statement; tautology and contradiction.,A truth table settles this quickly. Revise Mathematical Reasoning: negation and tautologies.,Mathematical reasoning is no longer in the current JEE Main syllabus.
+21,6,sympy,List the possible values of 4c + 5d and of 2a + 3b for numbers 1 to 4. Which values match?,"2a + 3b goes from 5 to 20, 4c + 5d from 9 to 36. Only common values ≤ 20 matter: 9, 13, 14, 17, 18, 19.","1. 4c + 5d values up to 20: 9 (1,1), 13 (2,1), 14 (1,2), 17 (3,1), 18 (2,2), 19 (1,3).
+2. 2a + 3b = 9: (3,1). = 13: (2,3). = 14: (4,2) and (1,4). = 17: (4,3). = 18: (3,4). = 19: none.
+3. Count of pairs ((a, b), (c, d)): 1 + 1 + 2 + 1 + 1 + 0 = 6.
+Answer: 6",Counting elements of a relation by listing values.,A table of values avoids missing a pair. Revise Relations: counting ordered pairs.,
+22,72,sympy,"The digits are 0 to 7, all different, and 7 must appear. Which pair contains the 7?","If 7 is paired with x, the other pair {y, z} (from 0 to 6, different from x) has y + z = 7 + x. Count the unordered choices, then the arrangements.","1. The pair holding 7 is {7, x}; the other pair has sum 7 + x with both digits ≤ 6.
+2. x = 0: sum 7 → {1,6}, {2,5}, {3,4}: 3. x = 1: sum 8 → {2,6}, {3,5}: 2. x = 2: sum 9 → {3,6}, {4,5}: 2. x = 3: sum 10 → {4,6}: 1. x = 4: sum 11 → {5,6}: 1. x = 5 or 6: none.
+3. That is 9 choices of pairs.
+4. Each gives 2 (which pair goes first) × 2 × 2 (order inside each pair) = 8 codes.
+5. 9 × 8 = 72.
+Answer: 72",Counting with conditions on digits (permutations with restrictions).,"Forgetting that 0 is allowed, or that the pairs can swap places, gives the wrong count. Revise Permutations and Combinations: case-wise counting.",'Greatest digit is 7' is read as: 7 appears and no digit exceeds 7. 0 is allowed in a PIN.
+23,15,sympy,Look at powers of 3 modulo 7. When is 3^{n} ≡ 3?,3^{n} - 3 ≡ 0 (mod 7) means 3^{n-1} ≡ 1 (mod 7). The powers of 3 repeat every 6 modulo 7.,"1. 3^{1}, …, 3^{6} mod 7 are 3, 2, 6, 4, 5, 1: the cycle length is 6.
+2. So 3^{n-1} ≡ 1 when n - 1 is a multiple of 6, i.e. n ≡ 1 (mod 6).
+3. In 10 ≤ n ≤ 100: n = 13, 19, …, 97.
+4. Count = (97 - 13)/6 + 1 = 15.
+Answer: 15",Remainders of powers (modular arithmetic / binomial theorem).,Finding the cycle of remainders is the key idea. Revise divisibility problems in the Binomial Theorem chapter.,
+24,7,sympy,"Each bracket looks like a^{k} + a^{k-1}b + … + b^{k} with a = 1/2, b = -1/3. Is there a closed form?",The k-th bracket is (a^{k+1} - b^{k+1})/(a - b). Sum two geometric series.,"1. With a = 1/2, b = -1/3, bracket k = (a^{k+1} - b^{k+1})/(a - b).
+2. Σ_{k≥1} a^{k+1} = a^{2}/(1 - a) = 1/2; Σ b^{k+1} = b^{2}/(1 - b) = 1/12.
+3. Sum = (1/2 - 1/12)/(1/2 + 1/3) = (5/12)/(5/6) = 1/2.
+4. α = 1, β = 2, so α + 3β = 7.
+Answer: 7",Sum of an infinite series using a^{n} - b^{n} = (a - b)(…) and geometric series.,Recognising the pattern inside each bracket is the hard step. Revise Sequences and Series: infinite GP.,
+25,48,sympy,AB is fixed. So you only need the extreme values of BC + CA as C moves along y = 4.,"Minimum of BC + CA: reflect B in the line y = 4 and join to A. The function is convex, so the maximum is at an end, t = 0 or t = 4.","1. Perimeter = √5 + √(t^{2} + 16) + √((t - 2)^{2} + 9).
+2. Minimum: reflect B(0, 0) in y = 4 to (0, 8). The line from (0, 8) to A(2, 1) meets y = 4 at t = 8/7. So β = 8/7.
+3. Maximum on [0, 4]: t = 0 gives 4 + √13 ≈ 7.6; t = 4 gives √32 + √13 ≈ 9.3. So α = 4.
+4. 6α + 21β = 24 + 24 = 48.
+Answer: 48","Minimising a sum of distances (reflection), maximum at an endpoint.",The reflection trick turns calculus into geometry here. Revise Straight Lines (image of a point) and maxima and minima on a closed interval.,
+26,28,sympy,"Try x = 1/t, or think about which substitution turns √(4 - 3x^{2}) into something simple.","With x = 1/t and then u^{2} = 4t^{2} - 3, the integral becomes -∫ du/(3u^{2} + 25). This gives f(x) = (1/(5√3)) tan^{-1}(5x/(√3 √(4 - 3x^{2}))).","1. Put x = 1/t (x > 0): the integral becomes -∫ t dt/((3t^{2} + 4)√(4t^{2} - 3)).
+2. Put u^{2} = 4t^{2} - 3: it becomes -∫ du/(3u^{2} + 25) = -(1/(5√3)) tan^{-1}(√3u/5).
+3. Rewriting, f(x) = (1/(5√3)) tan^{-1}(5x/(√3 √(4 - 3x^{2}))), which already gives f(0) = 0.
+4. f(1) = (1/(5√3)) tan^{-1}(5/√3), so α = 5, β = √3.
+5. α^{2} + β^{2} = 25 + 3 = 28.
+Answer: 28",Indefinite integral of the form 1/((a + bx^{2})√(c - dx^{2})).,This form needs the reciprocal substitution; it is a known standard but easy to forget. Revise Integrals: special substitutions.,
+27,42,sympy,"Sketch it: the parabola, the line x + y = 3 and the x-axis close a region. Where is the circle's centre?","The region area is ∫_{0}^{3/2} (3 - y - 2y^{2}/3) dy. The circle's centre (3, 0) is on the line, so the part of the circle inside the region is a sector of angle π/4.","1. 2y^{2} = 3x meets x + y = 3 at y = 3/2 (x = 3/2).
+2. Area between them above y = 0: ∫_{0}^{3/2} (3 - y - 2y^{2}/3) dy = 9/2 - 9/8 - 3/4 = 21/8.
+3. The circle (x - 3)^{2} + y^{2} = 2 has centre (3, 0) on the line. Inside the region lies the sector between the negative x-direction and the line direction (-1, 1): angle π/4.
+4. Sector area = (1/2)(2)(π/4) = π/4, so A = 21/8 - π/4.
+5. 4(π + 4A) = 4(π + 21/2 - π) = 42.
+Answer: 42","Area between curves, removing a circular sector.",Seeing that only a sector (not a half or quarter circle) lies inside is the tricky part. Revise Application of Integrals and draw the figure first.,
+28,9,sympy,The minor axis ends (on the y-direction) and a focus form an angle. Use that to link b and ae.,"60° at the focus means tan 30° = b/(ae), so ae = √3 b. Then a^{2} = b^{2} + a^{2}e^{2} and latus rectum 2b^{2}/a = 1/2.","1. Half of the 60° angle: tan 30° = b/(ae), so ae = √3 b.
+2. a^{2} = b^{2} + a^{2}e^{2} = 4b^{2}, so a = 2b.
+3. Latus rectum 2b^{2}/a = b = 1/2, so a = 1.
+4. Axes: 2a + 2b = 2 + 1 = 3, and its square is 9.
+Answer: 9","Ellipse: relation between a, b, e and the latus rectum.","The centre (1, 0) does not affect lengths. Revise Conic Sections: ellipse, angle subtended at a focus.",
+29,26,sympy,A plane containing the line of intersection of two planes is P_{1} + kP_{2} = 0. Which condition fixes k?,"Normal (2 + 5k, 1 - 3k, -1 + 4k) must be perpendicular to (2, 4, 5): k = -1/6. Then move from A along (-3, 4, 12) until you hit the plane.","1. Plane: (2x + y - z - 3) + k(5x - 3y + 4z + 9) = 0. Parallel to direction (2, 4, 5): 3 + 18k = 0, k = -1/6.
+2. The plane becomes 7x + 9y - 10z - 27 = 0.
+3. Points A + t(-3, 4, 12) = (8 - 3t, -1 + 4t, -19 + 12t). Substituting: 210 - 105t = 0, t = 2.
+4. Distance = 2 × √(9 + 16 + 144) = 2 × 13 = 26.
+Answer: 26",Plane through the intersection of two planes; distance measured along a given line.,The direction (2 - z)/(-12) means z increases with +12; sign slips here are common. Revise Three Dimensional Geometry: family of planes.,
+30,5,sympy,"x = y = z means a point (t, t, t). Put it into both planes.",t(sin A + sin B + sin C) = 18 and t(sin 2A + sin 2B + sin 2C) = 9. In a triangle Σ sin A = 4Π cos(A/2) and Σ sin 2A = 4Π sin A.,"1. Dividing the two conditions: (Σ sin A)/(Σ sin 2A) = 2.
+2. Σ sin A = 4 cos(A/2)cos(B/2)cos(C/2) and Σ sin 2A = 4 sin A sin B sin C = 32 Π sin(A/2)cos(A/2).
+3. Ratio = 1/(8 Π sin(A/2)) = 2, so Π sin(A/2) = 1/16.
+4. 80 × 1/16 = 5.
+Answer: 5",Conditional trigonometric identities in a triangle.,Knowing the two triangle identities is the whole question. Revise Trigonometric Functions: identities for A + B + C = π.,
+31,1,conceptual,"In SHM, F = -kx and a = -ω^{2}x. Read each statement against these.",Acceleration has magnitude ω^{2}|x|: largest where |x| is largest. Speed is ω√(A^{2} - x^{2}): largest at x = 0.,"1. (A) F = -kx: the restoring force is proportional to displacement. True.
+2. (B) a = -ω^{2}x: acceleration is opposite to displacement. True.
+3. (C) v = ω√(A^{2} - x^{2}) is largest at x = 0, the mean position. True.
+4. (D) |a| = ω^{2}|x| is largest at the extreme points, not smallest. False.
+Answer: (1)","Force, acceleration and velocity in simple harmonic motion.",Mixing up where speed and acceleration are largest is common. Revise Oscillations: SHM equations.,
+32,2,arithmetic,Average kinetic energy per molecule depends on one quantity only. Which one?,"Average translational KE per molecule = (3/2)kT, the same for every ideal gas at the same temperature.","1. KE per molecule = (3/2)kT, independent of the molar mass and of the mass ratio.
+2. Both gases are at 30 °C, so the ratio is 1.
+3. The atomic weight and the 2 : 1 mass ratio are distractions.
+Answer: (2)",Kinetic theory: average kinetic energy depends only on temperature.,The extra data tempt you to calculate. Revise Kinetic Theory of Gases: KE per molecule versus rms speed.,"Argon is monatomic and H_{2} diatomic; the question asks for average (translational) KE per molecule, the usual JEE reading."
+33,4,arithmetic,Work done in a cycle is the area enclosed on the P-V graph. What shape is it?,"The cycle C(2, 100) → D(2, 400) → E(4, 100) → C is a triangle; area = (1/2) × base × height. Clockwise means positive.","1. Base (along V) = 4 - 2 = 2 m^{3}; height (along P) = 400 - 100 = 300 Pa.
+2. Area = (1/2)(2)(300) = 300 J.
+3. The arrows go C → D → E → C, clockwise on the P-V diagram, so the net work is positive.
+Answer: (4)",Work in a cyclic process from a P-V diagram.,Using the full rectangle (600 J) or half of the wrong side gives a wrong value. Revise Thermodynamics: work as area under/inside P-V curves.,"Coordinates read from the figure: C(2, 100), D(2, 400), E(4, 100)."
+34,1,arithmetic,"Extension of a wire depends on F, L and the area. How does each change?",ΔL = FL/(AY) with A = πr^{2}. Compare 2f × 2L / (4A).,"1. ΔL = FL/(πr^{2}Y).
+2. New wire: force 2f, length 2L, area π(2r)^{2} = 4πr^{2}.
+3. ΔL' = (2f)(2L)/(4πr^{2}Y) = fL/(πr^{2}Y) = l.
+Answer: (1)",Young's modulus and extension of a wire.,Forgetting that area goes as r^{2} gives 2l. Revise Mechanical Properties of Solids.,
+35,4,sympy,"g changes with height here, so mgh is not enough. Use energy conservation with the gravitational potential.","-GMm/(2R) = -GMm/R + (1/2)mv^{2}, and GM = gR^{2}.","1. Start at distance 2R from the centre at rest; end at R.
+2. (1/2)mv^{2} = GMm/R - GMm/(2R) = GMm/(2R).
+3. v^{2} = GM/R = gR, so v = √(gR).
+Answer: (4)",Energy conservation with gravitational potential energy.,"Using v = √(2gh) with h = R gives √(2gR), a common slip because g is not constant over that height. Revise Gravitation: potential energy.",
+36,2,sympy,The two particles stay opposite each other on the circle. How far apart are they?,Separation is 2a. Gravity supplies the centripetal force: Gm^{2}/(2a)^{2} = mω^{2}a.,"1. The particles are at the ends of a diameter: distance 2a.
+2. Gm^{2}/(4a^{2}) = mω^{2}a.
+3. ω^{2} = Gm/(4a^{3}), so ω = √(Gm/(4a^{3})).
+Answer: (2)",Circular motion under mutual gravitational attraction.,Using a instead of 2a for the separation gives √(Gm/a^{3}). Revise Gravitation and circular motion.,
+37,1,sympy,The angle is measured from the y-axis. Which component uses cos 30°?,"y-component = A cos 30°, x-component = A sin 30°.","1. A cos 30° = 2√3, so A = 4.
+2. x-component = A sin 30° = 2.
+Answer: (1)",Resolving a vector into components.,Measuring the angle from the x-axis by habit gives 6. Revise Motion in a Plane: components.,
+38,2,sympy,Velocity is the rate of change of position.,v = dx/dt = 10t - 4.,"1. v = d(5t^{2} - 4t + 5)/dt = 10t - 4.
+2. At t = 2 s: v = 16 m/s.
+Answer: (2)",Velocity from a position-time relation.,A quick one; just differentiate carefully. Revise Motion in a Straight Line.,
+39,3,sympy,"Match powers of M, L and T on both sides.",[LT^{-1}] = [L]^{a}[LT^{-2}]^{b}[ML^{-3}]^{c}. M: c = 0; T: -2b = -1; L: a + b - 3c = 1.,"1. M: c = 0.
+2. T: -2b = -1, so b = 1/2.
+3. L: a + b - 3c = 1, so a = 1/2.
+4. (a, b, c) = (1/2, 1/2, 0): v = √(gλ).
+Answer: (3)",Dimensional analysis.,Revise Units and Measurement: deriving a relation by dimensions.,
+40,2,sympy,Force is along acceleration. Differentiate the position twice.,a = d^{2}r/dt^{2}; only the 15t^{2} term survives.,"1. v = 10 i + 30t j.
+2. a = 30 j (constant).
+3. F = ma is along the positive y-axis.
+Answer: (2)",Newton's second law with vector kinematics.,Looking at velocity instead of acceleration gives 'x-y plane'. Revise Motion in a Plane and Laws of Motion.,
+41,3,conceptual,"For a short dipole far away, how do the axial and equatorial fields depend on r?",E_{equatorial} = kp/r^{3}.,"1. For r much larger than the dipole length, E_{eq} = (1/4πε_{0}) p/r^{3}.
+2. So E ∝ 1/r^{3}.
+Answer: (3)",Electric field of a dipole.,Confusing with a point charge (1/r^{2}) is the usual slip. Revise Electric Charges and Fields: dipole field.,
+42,4,arithmetic,Each antenna can 'see' up to its own horizon. Add the two horizon distances.,d = √(2Rh_{T}) + √(2Rh_{R}).,"1. √(2 × 6.4 × 10^{6} × 180) = √(2.304 × 10^{9}) = 48 km.
+2. √(2 × 6.4 × 10^{6} × 245) = √(3.136 × 10^{9}) = 56 km.
+3. d = 48 + 56 = 104 km.
+Answer: (4)",Line-of-sight communication range.,Picking one of the two parts (48 or 56) is the trap. Revise Communication Systems: space wave range.,Communication systems is no longer in the current JEE Main syllabus.
+43,1,arithmetic,"First decide which diodes are forward biased, from the battery's direction.","With the battery's + terminal on the right, D_{3} and D_{1} conduct and D_{2} is reverse biased. Two paths: 10 Ω, and 10 Ω + 10 Ω.","1. Current leaves the + terminal (right-bottom node), so it can go through D_{3} (10 Ω) to the left node, or up the right 10 Ω and back through D_{1} (10 Ω).
+2. D_{2} points from left to the top-right node, against this current: reverse biased, no current.
+3. Paths: 10 Ω in parallel with 20 Ω: R = 20/3 Ω.
+4. I = 10/(20/3) = 1.5 A.
+Answer: (1)",Ideal diodes in a resistor network.,Deciding the bias of each diode is the step to practise. Revise Semiconductor Electronics: ideal diode in circuits.,"Figure reading: the battery's + terminal is taken on the right, consistent with the current I shown flowing down the left wire and with the key; the other polarity gives 0.5 A, not an option."
+44,4,arithmetic,How many half-lives fit into 15 years?,"After n half-lives, the fraction left is (1/2)^{n}. The question asks what has decayed.","1. 15/5 = 3 half-lives.
+2. Left: (1/2)^{3} = 1/8.
+3. Decayed: 1 - 1/8 = 7/8.
+Answer: (4)",Radioactive decay and half-life.,Answering 1/8 (the part left) is the classic misread. Revise Nuclei: half-life.,
+45,2,arithmetic,How does the de Broglie wavelength depend on kinetic energy?,"λ = h/√(2mE), so λ ∝ 1/√E.","1. λ ∝ 1/√E.
+2. E → E/4 means √E halves, so λ doubles: 2λ.
+Answer: (2)",de Broglie wavelength and kinetic energy.,Revise Dual Nature of Radiation and Matter.,
+46,2,arithmetic,Where is the first minimum of a single slit?,a sin θ = λ for the first minimum.,"1. a sin 30° = 600 nm.
+2. a = 600/0.5 nm = 1200 nm = 1.2 μm.
+Answer: (2)",Single-slit diffraction minima.,Using the bright-fringe condition (3λ/2) is a common mix-up. Revise Wave Optics: diffraction.,
+47,3,conceptual,"Put the four waves in order of wavelength: X-ray, UV, IR, microwave.",Microwave ~0.1 m to 1 mm; IR 1 mm to 700 nm; UV 400 nm to 1 nm; X-ray 1 nm to 10^{-3} nm.,"1. Microwave: 0.1 m to 1 mm (IV).
+2. Ultraviolet: 400 nm to 1 nm (I).
+3. X-ray: 1 nm to 10^{-3} nm (II).
+4. Infra-red: 1 mm to 700 nm (III).
+Answer: (3)",Electromagnetic spectrum: wavelength ranges.,Revise Electromagnetic Waves: the table of ranges in NCERT.,
+48,3,arithmetic,"Find the steady current first, then use the induced emf formula.",I = 12/6 = 2 A falls to zero in 1 ms; e = L ΔI/Δt.,"1. Steady current I = 12/6 = 2 A.
+2. 20 = L × 2/(1 × 10^{-3}).
+3. L = 0.01 H = 10 mH.
+Answer: (3)",Self-inductance and induced emf.,Revise Electromagnetic Induction: e = L dI/dt.,
+49,1,arithmetic,A voltmeter needs a large resistance in series; an ammeter a small one in parallel (a shunt).,Voltmeter: R = V/I_{g} - G. Ammeter: r = I_{g}G/(I - I_{g}).,"1. Voltmeter: R = 50/(1 × 10^{-3}) - 54 = 49 946 Ω ≈ 50 kΩ, so (A) is right.
+2. Ammeter: r = (1 mA × 54)/(10 mA - 1 mA) = 6 Ω, so (C) is right.
+Answer: (1)",Converting a galvanometer into a voltmeter and an ammeter.,Using I instead of (I - I_{g}) in the shunt gives 5.4 Ω. Revise Moving Charges and Magnetism: galvanometer conversion.,
+50,2,conceptual,Check each statement against what you know about series resistors and resistivity.,Series: R = R_{1} + R_{2} + … Resistivity of metals: ρ = ρ_{0}(1 + α ΔT).,"1. Statement I: a series combination is larger than the largest resistor (that is parallel's rule reversed). False.
+2. Statement II: resistivity changes with temperature. False.
+Answer: (2)",Series combination and temperature dependence of resistivity.,Revise Current Electricity.,
+51,90,arithmetic,The mass and the linear density tell you the length of the string.,L = 18 g / (20 g/m) = 0.9 m. Fundamental: f = v/(2L).,"1. L = 18/20 = 0.9 m.
+2. v = 2Lf = 2 × 0.9 × 50 = 90 m/s.
+Answer: 90",Fundamental mode of a string fixed at both ends.,Revise Waves: standing waves on strings.,
+52,1150,arithmetic,Two things raise the pressure inside the bubble above atmospheric. What are they?,P_{in} - P_{atm} = ρgh + 2T/r (an air bubble in a liquid has one surface).,"1. ρgh = 1000 × 10 × 0.1 = 1000 Pa.
+2. 2T/r = 2 × 0.075/(1 × 10^{-3}) = 150 Pa.
+3. Total excess = 1150 Pa.
+Answer: 1150",Excess pressure in a bubble inside a liquid.,"Using 4T/r (soap bubble, two surfaces) gives 1300. Revise Mechanical Properties of Fluids.",
+53,5,arithmetic,Radius of gyration k is defined by I = mk^{2}.,Solid sphere: k = R√(2/5). Solid cylinder about its axis: k = R/√2.,"1. k_{sph}/k_{cyl} = √(2/5)/(1/√2) = √(4/5) = 2/√5.
+2. So x = 5.
+Answer: 5",Radius of gyration of standard bodies.,Revise System of Particles and Rotational Motion: moments of inertia.,
+54,30,arithmetic,"The force changes with x, so W is an integral.",W = ∫ F dx from 2 to 4.,"1. W = ∫_{2}^{4} 5x dx = (5/2)(16 - 4) = 30 J.
+2. The mass is not needed.
+Answer: 30",Work done by a variable force.,"Revise Work, Energy and Power.",
+55,5,arithmetic,How are the three capacitors connected to the 10 V source?,All three are in parallel across 10 V: Q = (C_{1} + C_{2} + C_{3})V.,"1. Parallel: C = 2 + x + 3 μF.
+2. Q = (5 + x) × 10 = 100 μC.
+3. x = 5.
+Answer: 5",Capacitors in parallel.,Revise Electrostatic Potential and Capacitance.,"Figure reading: all three capacitors join the same two vertical wires, so they are in parallel."
+56,5,arithmetic,"First, second and third excited states: which values of n are these?","A, B, C are n = 2, 3, 4. 1/λ ∝ (1/n_{1}^{2} - 1/n_{2}^{2}).","1. λ_{1}: 3 → 2, 1/λ_{1} ∝ 1/4 - 1/9 = 5/36.
+2. λ_{2}: 4 → 3, 1/λ_{2} ∝ 1/9 - 1/16 = 7/144.
+3. λ_{1}/λ_{2} = (7/144)/(5/36) = 7/20.
+4. 7/(4n) = 7/20 gives n = 5.
+Answer: 5",Hydrogen spectrum: Rydberg formula.,Taking 'first excited' as n = 1 is the usual slip (n = 1 is the ground state). Revise Atoms.,
+57,30,arithmetic,Use the prism formula at minimum deviation.,μ = sin((A + δ_{m})/2)/sin(A/2) with A = 60°.,"1. √2 = sin((60° + δ)/2)/sin 30°.
+2. sin((60° + δ)/2) = √2/2, so (60° + δ)/2 = 45°.
+3. δ_{m} = 30°.
+Answer: 30",Minimum deviation in a prism.,Revise Ray Optics: prism formula.,
+58,88,arithmetic,A rotating rod cuts magnetic field lines. What is the emf between its ends?,"e = (1/2)Bωl^{2}, ω = 2π × 210/60 rad/s.","1. ω = 2 × (22/7) × 210/60 = 22 rad/s.
+2. e = (1/2)(0.2)(22)(0.2)^{2} = 0.088 V = 88 mV.
+Answer: 88",Motional emf in a rotating rod.,Forgetting the 1/2 doubles the answer. Revise Electromagnetic Induction.,
+59,40,arithmetic,The orbiting electron is a tiny current loop. What field does a moving charge make at the centre?,B = μ_{0}ev/(4πr^{2}) (same as I = ev/(2πr) in B = μ_{0}I/(2r)).,"1. B = 10^{-7} × 1.6 × 10^{-19} × 6.76 × 10^{6}/(0.52 × 10^{-10})^{2}.
+2. Numerator 1.0816 × 10^{-19}; denominator 2.704 × 10^{-21}.
+3. B = 40 T.
+Answer: 40",Magnetic field of an orbiting electron.,Revise Moving Charges and Magnetism: field at the centre of a loop.,
+60,3,arithmetic,The battery is across the left and right corners. Find the potential at A and at B along each branch.,"Each branch has 6 Ω, so 1.5 A flows in each. V_{A} = 9 - 1.5 × 2, V_{B} = 9 - 1.5 × 4.","1. Branch through A: 2 Ω + 4 Ω; branch through B: 4 Ω + 2 Ω. Each carries 9/6 = 1.5 A.
+2. Take the left corner at 9 V: V_{A} = 9 - 3 = 6 V, V_{B} = 9 - 6 = 3 V.
+3. |V_{A} - V_{B}| = 3 V.
+Answer: 3",Potential difference across points in a resistor network.,Revise Current Electricity: potential drops along branches.,
+61,3,conceptual,In CsCl the Cs^{+} sits at the body centre and Cl^{-} at the corners. Along which line do they touch?,Cation and anion touch along the body diagonal: √3 a = 2(r_{+} + r_{-}).,"1. CsCl has a body-centred arrangement: Cs^{+} at the centre, Cl^{-} at the corners.
+2. The ions touch along the body diagonal, of length √3 a.
+3. √3a = 2r_{+} + 2r_{-}, so r_{+} + r_{-} = √3a/2.
+Answer: (3)",Radius relation in a CsCl (body-centred) unit cell.,a/2 is the NaCl relation (ions touching along an edge). Revise Solid State: relations between a and r.,Solid state is no longer in the current JEE Main syllabus.
+62,1,conceptual,"What did Bohr assume about angular momentum, and what does the uncertainty principle say about exact orbits?",Bohr: mvr = nh/2π. Heisenberg: position and momentum cannot both be known exactly.,"1. Statement I: Bohr's model quantises angular momentum, mvr = nh/2π. Correct.
+2. Statement II: a fixed orbit means a definite position and momentum at every moment, which the uncertainty principle does not allow. Correct.
+Answer: (1)",Bohr's postulates and their limitation (uncertainty principle).,Revise Structure of Atom: limitations of Bohr's model.,
+63,2,conceptual,"Think about lone pairs (shape of NF_{3}), bond orders (N_{2}, O_{2}) and electronegativity (H_{2}S vs H_{2}O).","NF_{3} has a lone pair on N. Bond order: N_{2} = 3, O_{2} = 2. Isoelectronic species (N_{2}, CO, NO^{+}, CN^{-}) share the same MO filling.","1. (A) NF_{3} has 3 bond pairs and 1 lone pair: trigonal pyramidal, not planar. Wrong.
+2. (B) N_{2} (bond order 3) has a shorter bond than O_{2} (bond order 2). Correct.
+3. (C) Isoelectronic molecules/ions fill the same molecular orbitals, so they have the same bond order. Correct.
+4. (D) S is less electronegative than O, so H_{2}S has a smaller dipole moment than H_{2}O. Wrong.
+Answer: (2)","VSEPR shape, bond order and bond length, dipole moment.",Statement (A) is the trap: NF_{3} is pyramidal like NH_{3}. Revise Chemical Bonding: VSEPR and MO bond order.,"Statement (C) is the usual JEE/NCERT generalisation (it holds for diatomic species such as N_{2}, CO, NO^{+}, CN^{-})."
+64,3,conceptual,"Can an acid solution, however dilute, have pH above 7? And what is pH at half-neutralisation?","Very dilute HCl: add the H^{+} from water. Half-neutralised weak acid: [salt] = [acid], so pH = pK_{a}.","1. (A) 10^{-8} M HCl cannot be basic; with water's H^{+} the pH is about 6.98. Wrong.
+2. (B) H_{2}PO_{4}^{-} loses H^{+} to give HPO_{4}^{2-}. Correct.
+3. (C) Water's ionisation is endothermic, so K_{w} rises with temperature. Correct.
+4. (D) At half-neutralisation, Henderson's equation gives pH = pK_{a}, not pK_{a}/2. Wrong.
+Answer: (3)","pH of very dilute acid, conjugate pairs, K_{w} and buffers.",pH = -log(10^{-8}) = 8 is the classic trap. Revise Equilibrium: ionic equilibrium.,
+65,4,conceptual,Calcination and roasting both heat an ore. Which one needs air and changes sulphides?,"Calcination: heating to drive out water or CO_{2}, in little or no air. Roasting: heating a sulphide ore in air.","1. Removing water from hydrated Fe_{2}O_{3}, or CO_{2} from CaCO_{3} and dolomite: calcination.
+2. 2PbS + 3O_{2} → 2PbO + 2SO_{2} heats a sulphide in oxygen: roasting.
+Answer: (4)",Calcination versus roasting.,Revise General Principles and Processes of Isolation of Elements (NCERT).,Metallurgy is no longer in the current JEE Main syllabus.
+66,2,conceptual,Write the water-gas shift reaction.,CO + H_{2}O → CO_{2} + H_{2} (with a catalyst).,"1. Water-gas shift: CO(g) + H_{2}O(g) → CO_{2}(g) + H_{2}(g).
+2. Carbon goes from +2 in CO to +4 in CO_{2}: CO is oxidised to CO_{2}.
+Answer: (2)",Preparation of hydrogen: water-gas shift reaction.,Revise Hydrogen (NCERT): preparation of dihydrogen.,The Hydrogen chapter is no longer in the current JEE Main syllabus.
+67,4,conceptual,Do Be and Mg salts colour a flame?,"Be and Mg hold their electrons tightly (small size), so visible light is not enough to excite them.","1. Assertion: BeCl_{2} and MgCl_{2} do not give a flame colour. False.
+2. Reason: their electrons need a high excitation energy, more than a flame provides. True.
+Answer: (4)",Flame colours of alkaline earth metals.,Revise The s-Block Elements (NCERT): flame colouration.,The s-block chapter is no longer in the current JEE Main syllabus.
+68,2,conceptual,This is a fact from NCERT's section on cement.,"NCERT: for good quality cement, the ratio of silica to alumina should be between 2.5 and 4.","1. NCERT gives the silica : alumina ratio for good cement as 2.5 to 4.
+2. Of the options only 3 lies in that range.
+Answer: (2)",Composition of Portland cement.,"Pure recall; revise The s-Block Elements (NCERT, cement).","From the older NCERT s-block chapter, no longer in the current JEE Main syllabus."
+69,4,conceptual,Draw each structure. How many O atoms bridge two P atoms?,H_{4}P_{2}O_{7}: two PO_{4} units joined by one O. (HPO_{3})_{3}: a ring of three P and three O. P_{4}O_{10}: each edge of the P_{4} tetrahedron has a bridging O.,"1. Pyrophosphoric acid H_{4}P_{2}O_{7}: 1 P-O-P bond.
+2. Cyclotrimetaphosphoric acid (HPO_{3})_{3}: 3 P-O-P bonds in the ring.
+3. P_{4}O_{10}: 6 bridging O, so 6 P-O-P bonds.
+Answer: (4)",Structures of oxoacids and oxides of phosphorus.,Revise The p-Block Elements: oxoacids of phosphorus.,
+70,3,disputed,"All four are +3 aqua ions with the same ligand. What decides Δ_{o} then, and is it the same as CFSE?",Δ_{o} is the measured t_{2g}-e_{g} gap. CFSE is the energy gained from filling: d^{3} (t_{2g}^{3}) gets -1.2Δ_{o}.,"Held back: Claude's answer differs from NTA's final key.
+1. Measured Δ_{o} values for these aqua ions (Shriver and Atkins): Ti^{3+} 20 300, Cr^{3+} 17 400, Mn^{3+} 21 000, Fe^{3+} 14 300 cm^{-1}.
+2. By these, the largest Δ_{o} is for [Mn(H_{2}O)_{6}]^{3+}.
+Answer: (3)",Crystal field splitting (Δ_{o}) versus crystal field stabilisation energy.,Ask your teacher how this question should be read.,"Disputed. NTA's final key is (2) [Cr(H_{2}O)_{6}]^{3+}. That matches comparing CFSE (crystal field STABILISATION energy): Cr^{3+} t_{2g}^{3} gives -1.2Δ_{o}, the largest of the four (Ti^{3+} -0.4, high-spin Mn^{3+} -0.6, high-spin Fe^{3+} 0). Read literally as the splitting Δ_{o}, measured values do not make Cr^{3+} the largest: Ti^{3+} 20 300, Cr^{3+} 17 400, Mn^{3+} 21 000, Fe^{3+} 14 300 cm^{-1} (Shriver, Atkins and Langford, Inorganic Chemistry, 2nd ed., Table via LibreTexts 'The Effect of the Metal Ion on d-Orbital Splitting', checked 2026-10-09). Mn^{3+} is Jahn-Teller distorted, so a teacher may prefer Ti^{3+} (1); either way not (2). NCERT gives no Δ_{o} values for these ions. Owner/teacher to decide."
+71,2,conceptual,What does photochemical smog need to form?,"It needs sunlight, warmth, and NO_{x} plus hydrocarbons from traffic.","1. Photochemical smog forms in warm, sunny, dry weather with heavy traffic.
+2. Srinagar in January is cold with weak sunlight, so smog formation is least likely there.
+Answer: (2)",Conditions for photochemical smog.,Revise Environmental Chemistry: classical vs photochemical smog.,Environmental chemistry is no longer in the current JEE Main syllabus.
+72,4,conceptual,Which carbonyl in the triketone is most electron-poor and so most ready to add water?,The central C=O sits between two other C=O groups; water adds there to give a stable gem-diol (ninhydrin).,"1. The middle carbonyl is flanked by two electron-withdrawing C=O groups, so it is very electrophilic.
+2. Water adds to it to give a gem-diol, stabilised by the neighbouring C=O groups (as in chloral hydrate).
+3. The product is 2,2-dihydroxyindane-1,3-dione (ninhydrin): two C=O kept, C(OH)_{2} in the middle.
+Answer: (4)",Hydration of a carbonyl group; stable gem-diols.,"Gem-diols are usually unstable, which is why this feels odd. Revise Aldehydes, Ketones: nucleophilic addition and stable hydrates.",Figure reading of the option structures; option 4 is ninhydrin.
+73,2,conceptual,Rank the substituents by how strongly they push electrons into the ring.,"-NMe_{2} > -OCH_{3} (strong +R) > -CH_{3} (+I, hyperconjugation) > -H > -CF_{3} (strong -I).","1. -NMe_{2}: strongest electron donor (N gives its lone pair more readily than O).
+2. -OCH_{3}: strong +R donor.
+3. -CH_{3}: weak donor.
+4. Benzene: reference.
+5. -CF_{3}: strong electron-withdrawing, deactivates.
+6. Order: e > d > a > b > c.
+Answer: (2)",Activating and deactivating groups in electrophilic aromatic substitution.,Revise Hydrocarbons/Amines: effect of substituents on EAS.,
+74,2,conceptual,Cl is deactivating but which positions does it direct to? Which of those is less crowded?,Cl is ortho/para directing; the bulky acyl group prefers para.,"1. Cl directs incoming electrophiles to ortho and para positions (lone-pair donation).
+2. The acylium ion CH_{3}CO^{+} is bulky, so the para product dominates.
+3. Acylation stops at one group because the C=O deactivates the ring, ruling out the diacyl product.
+4. Major product: 4-chloroacetophenone.
+Answer: (2)",Directing effect of halogens in Friedel-Crafts acylation.,Revise Haloalkanes and Haloarenes: electrophilic substitution in haloarenes.,
+75,3,conceptual,"In the starting material, where do CH_{3} and NO_{2} both direct a bromine? Do the bromination while CH_{3} is still there.","Br_{2}/Fe first (ortho to CH_{3}, meta to NO_{2}); then reduce NO_{2}, diazotise, Sandmeyer with CuCl, and finally oxidise CH_{3} to COOH.","1. Br_{2}/Fe: CH_{3} (o/p) and NO_{2} (m) both send Br to the position next to CH_{3}.
+2. Fe/H^{+}: NO_{2} → NH_{2}.
+3. HONO: NH_{2} → N_{2}^{+}.
+4. CuCl: N_{2}^{+} → Cl (Sandmeyer).
+5. KMnO_{4}: CH_{3} → COOH.
+6. Product: 2-bromo-4-chlorobenzoic acid.
+Answer: (3)",Planning a synthesis on a benzene ring (order of reagents).,Oxidising CH_{3} first (option 2) makes the ring doubly deactivated and changes where Br goes. Revise Amines (diazonium salts) and directing effects.,
+76,2,conceptual,Hydroboration-oxidation adds water in which direction? Then what do PCC and a Grignard do?,Propene → propan-1-ol (anti-Markovnikov) → propanal (PCC) → + CH_{3}MgBr → secondary alcohol.,"1. B_{2}H_{6} then H_{2}O_{2}/NaOH: CH_{3}CH_{2}CH_{2}OH (anti-Markovnikov).
+2. PCC stops at the aldehyde: CH_{3}CH_{2}CHO.
+3. CH_{3}MgBr then work-up: CH_{3}CH_{2}CH(OH)CH_{3}, butan-2-ol.
+Answer: (2)","Hydroboration, PCC oxidation and Grignard addition.","Taking Markovnikov addition (propan-2-ol → acetone) leads to the tertiary alcohol in option 1. Revise Alcohols, Phenols and Ethers.",
+77,3,conceptual,A at 0-5 °C is a diazonium salt. What does it do with an activated aromatic ring?,"Benzenediazonium chloride couples at the para position of N,N-dimethylaniline to give an azo dye.","1. Aniline + NaNO_{2}/HCl at 0-5 °C → benzenediazonium chloride (A).
+2. A couples with N,N-dimethylaniline at its para position.
+3. B = p-(dimethylamino)azobenzene, Ph-N=N-C_{6}H_{4}-NMe_{2} (butter yellow).
+Answer: (3)",Diazotisation and azo coupling.,Revise Amines: reactions of diazonium salts.,
+78,1,conceptual,Match each monomer to its polymer's common name.,Teflon from CF_{2}=CF_{2}; Orlon (PAN) from acrylonitrile; Nylon-6 from caprolactam; natural rubber is polyisoprene.,"1. Tetrafluoroethene → Teflon (III).
+2. Acrylonitrile → Orlon (I).
+3. Caprolactam → Nylon-6 (IV).
+4. Isoprene → Natural rubber (II).
+Answer: (1)",Common polymers and their monomers.,Revise Polymers (NCERT).,Polymers is no longer in the current JEE Main syllabus.
+79,2,conceptual,Amino acids exist as zwitterions. What does that mean for their solubility?,"Zwitterions are ionic: high melting point, crystalline, soluble in water, not in non-polar solvents like benzene.","1. Arginine, like other amino acids, is a crystalline solid with a high melting point (ionic zwitterion).
+2. It has several ionisable groups, so more than one pK_{a}.
+3. Being ionic, it is not soluble in benzene. So 'high solubility in benzene' is not true.
+Answer: (2)",Properties of amino acids (zwitterions).,Revise Biomolecules: amino acids.,
+80,2,conceptual,"In paper chromatography, what stays still on the paper?",NCERT: the water trapped in the paper acts as the stationary phase.,"1. Chromatography paper holds water in its fibres.
+2. This water is the stationary phase; the solvent moving up is the mobile phase.
+Answer: (2)",Stationary and mobile phases in paper chromatography.,Saying 'the paper itself' is the tempting slip. Revise Organic Chemistry: Some Basic Principles (chromatography).,
+81,4,arithmetic,Only the chlorides outside the coordination sphere precipitate with AgNO_{3}.,[Cr(H_{2}O)_{5}Cl]Cl_{2} gives 2 Cl^{-} per formula unit.,"1. Moles of complex = 20 mL × 0.01 M = 0.2 mmol.
+2. Free Cl^{-} = 2 × 0.2 = 0.4 mmol.
+3. Volume of 0.1 M AgNO_{3} = 0.4/0.1 = 4 mL.
+Answer: 4",Ionisable chloride in a Werner complex.,Counting all 3 Cl gives 6 mL. Revise Coordination Compounds: Werner's theory.,
+82,1070,arithmetic,"At the melting point, solid and liquid are in equilibrium. What is ΔG then?","ΔG = 0, so T = ΔH/ΔS.","1. T_{m} = ΔH/ΔS = 30 400 J/28.4 J K^{-1} = 1070.4 K.
+2. Nearest integer: 1070 K.
+Answer: 1070",ΔG = 0 at a phase transition.,Forgetting to change kJ to J gives about 1 K. Revise Thermodynamics: ΔG = ΔH - TΔS.,
+83,23,arithmetic,30% (w/v) means 30 g in 100 mL of solution. Use the density to find the water.,"Mass of 100 mL = 120 g, so water = 90 g = 5 mol and glucose = 1/6 mol. P = P° × x_{water}.","1. 100 mL solution weighs 120 g: 30 g glucose (1/6 mol) and 90 g water (5 mol).
+2. x_{water} = 5/(5 + 1/6) = 30/31.
+3. P = 24 × 30/31 = 23.2 mm Hg, about 23.
+Answer: 23",Raoult's law with a w/v concentration.,Taking 100 g water (ignoring the density) gives a slightly different value. Revise Solutions: Raoult's law.,Exact value 23.23; NTA's key is 23.
+84,3,conceptual,Separate conductivity (κ) from molar conductivity (Λ_{m}). How does each change on dilution?,"On dilution, κ falls (fewer ions per cm^{3}) but Λ_{m} rises. For weak electrolytes Λ_{m} rises because the degree of dissociation increases.","1. (A) Conductivity decreases on dilution for both strong and weak electrolytes. Correct.
+2. (B) Ions per unit volume decrease on dilution. Wrong.
+3. (C) Molar conductivity increases on dilution. Correct.
+4. (D) Strong electrolytes change slowly (Debye-Hückel-Onsager), weak ones sharply. Correct.
+5. (E) For weak electrolytes the rise is due to an increase in the degree of dissociation, not a decrease. Wrong.
+6. Correct statements: 3.
+Answer: 3",Variation of conductivity and molar conductivity with concentration.,Mixing up κ and Λ_{m} is the usual trap. Revise Electrochemistry: conductance.,
+85,130,arithmetic,Same rate with the same A means the exponent Ea/RT is the same in both cases.,"Ea(cat)/300 = 300/600, then E_{a}(backward) = E_{a}(forward) - ΔH.","1. Equal rates: Ea_{cat}/(R × 300) = 300/(R × 600), so Ea_{cat} = 150 kJ/mol.
+2. ΔH = Ea_{f} - Ea_{b}, so Ea_{b} = 150 - 20 = 130 kJ/mol.
+Answer: 130",Arrhenius equation and activation energies of forward and backward reactions.,Adding ΔH instead of subtracting gives 170. Revise Chemical Kinetics.,"Assumes the catalyst does not change A, the usual JEE convention."
+86,50,arithmetic,Coagulating value is millimoles of electrolyte per litre of sol.,mmol of NaCl = 20 × 0.5 = 10 in 200 mL of sol. Scale to 1 L.,"1. NaCl added = 20 mL × 0.5 M = 10 mmol.
+2. Per litre of sol: 10 × 1000/200 = 50 mmol/L.
+3. The 2 hours is not needed.
+Answer: 50",Coagulating (flocculation) value.,Revise Surface Chemistry: coagulation.,"Surface chemistry is no longer in the current JEE Main syllabus. Computed per litre of sol, as NCERT defines it; NTA's key agrees."
+87,5,arithmetic,Count the electrons in each species.,"Atomic numbers: O 8, F 9, Na 11, Mg 12, Al 13. Add electrons for negative charge, remove for positive.","1. O^{2-} 10, F^{-} 10, Al 13, Mg^{2+} 10, Na^{+} 10, O^{+} 7, Mg 12, Al^{3+} 10, F 9.
+2. Ten-electron species: O^{2-}, F^{-}, Mg^{2+}, Na^{+}, Al^{3+}.
+3. Total 5.
+Answer: 5",Isoelectronic species.,Revise Classification of Elements: isoelectronic species.,
+88,5,arithmetic,What does permanganate become in acid?,MnO_{4}^{-} → Mn^{2+} in acidic medium.,"1. Mn in KMnO_{4}: +7.
+2. In acid it is reduced to Mn^{2+}: +2.
+3. Change = 5.
+Answer: 5",Permanganate as an oxidising agent in acid.,In neutral or weakly alkaline solution it would go to MnO_{2} (change 3). Revise The d- and f-Block Elements: KMnO_{4}.,
+89,1,conceptual,Co^{2+} is d^{7} and water is a weak-field ligand. Fill t_{2g} and e_{g} accordingly.,High spin d^{7}: t_{2g}^{5} e_{g}^{2}.,"1. Co^{2+}: [Ar]3d^{7}.
+2. H_{2}O is weak field, so high spin: t_{2g}^{5} e_{g}^{2}.
+3. t_{2g}^{5} has one unpaired electron.
+Answer: 1",Electron filling in an octahedral high-spin complex.,Counting all 3 unpaired electrons answers a different question. Revise Coordination Compounds: crystal field theory.,
+90,6,arithmetic,Use the usual oxidation states of O and Cl.,CrO_{2}Cl_{2}: x + 2(-2) + 2(-1) = 0.,"1. x - 4 - 2 = 0.
+2. x = +6.
+Answer: 6",Oxidation state calculation.,Revise Redox Reactions.,
