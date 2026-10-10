@@ -15,7 +15,10 @@ Everything runs in the browser. There is no server and no login, so the app can 
 | CBT-style exam screen | Section tabs, countdown timer, candidate panel, colour-coded question palette with live counts, on-screen keypad for numericals |
 | Official button set | Save & Next, Clear, Save & Mark for Review, Mark for Review & Next, Back, Next, Submit, plus the exam summary table before submitting |
 | Instant score | Result screen right after submitting, with positive marks, negative marks and net score |
-| PDF report | Cover summary, subject-wise table, chapter-wise split, then every question with the options, the student's answer, the correct answer, marks and solution |
+| Chapter diagnosis | Result screen: per-chapter attempted / correct / wrong / skipped / accuracy / marks lost to negatives / average time; strong and weak chapters (only chapters with 4+ attempted questions are judged); slow-but-correct questions and quick wrong answers (likely guesses); a **Practise next** button that ticks only the weak chapters in the setup |
+| Likely traps | In the answer review, a wrong option that Claude's trap analysis links to a specific mistake shows "Likely trap (Claude's analysis)" and the mistake type. Nothing is shown where there is no trap data |
+| Progress across tests | Needs `server.py`. Every saved test: chapter totals with a test-by-test trend, strong/weak chapters, his own reasons for wrong answers, matched traps, hint-ladder outcomes, timing |
+| PDF report | Cover summary, subject-wise table, chapter-wise split, strong and weak chapters, then every question with the options, the student's answer, the correct answer, marks, likely trap and solution |
 
 Palette states follow the official instructions: Not Visited, Not Answered, Answered, Marked for Review, and Answered & Marked for Review (counted for evaluation). Navigating away without **Save** does not save the answer, same as the real exam. A test in progress is saved in the browser, so a refresh or accidental tab close can be resumed; the clock keeps running meanwhile.
 

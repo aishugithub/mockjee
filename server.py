@@ -9,6 +9,7 @@ it then keeps results in the browser and sends them here the next time the serve
 Endpoints
   POST /api/attempts          save (or update) one finished exam, JSON body = the app's exam object
   GET  /api/attempts          list saved attempts (summary rows)
+  GET  /api/progress          every saved attempt's responses and review outcomes (read-only, for the progress view)
   GET  /api/flags             concept flags written by Claude's analysis (read-only for the app)
   GET  /api/export            download a copy of the database; needs header X-Export-Key
 """
@@ -273,6 +274,19 @@ def list_attempts():
         rows = con.execute('SELECT id, student, test_name, submitted_at, score, max_score, n_questions, n_correct, n_wrong, n_skipped '
                            'FROM attempts ORDER BY submitted_at DESC').fetchall()
     return jsonify([dict(r) for r in rows])
+
+
+@app.get('/api/progress')
+def progress():
+    """Read-only: every saved attempt with its responses and review outcomes, for the app's progress view.
+    The app does the counting with the same rules as tools/analysis_data.py."""
+    with db() as con:
+        atts = con.execute('SELECT id, student, test_name, submitted_at, score, max_score, n_questions, n_correct, n_wrong, n_skipped '
+                           'FROM attempts ORDER BY submitted_at').fetchall()
+        resp = con.execute('SELECT attempt_id, q_index, question_id, subject, chapter, qtype, given, attempted, correct, marks, time_ms, reason '
+                           'FROM responses ORDER BY attempt_id, q_index').fetchall()
+        prac = con.execute('SELECT attempt_id, q_index, question_id, in_test, outcome, hints_used FROM practice').fetchall()
+    return jsonify(attempts=[dict(r) for r in atts], responses=[dict(r) for r in resp], practice=[dict(r) for r in prac])
 
 
 @app.get('/api/flags')

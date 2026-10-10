@@ -286,7 +286,7 @@ code { font-family: var(--font-num); font-size: .92em; background: #f1f4f8; padd
 .acc i b.mid { background: var(--orange); }
 .acc i b.low { background: var(--red); }
 .pos { color: var(--green); } .negc { color: var(--red); }
-.res-grid { display: grid; gap: 16px; }
+.res-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
 .rev-item { border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; background: #fff; }
 .rev-item + .rev-item { margin-top: 10px; }
 .rev-top { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; font-size: 12.5px; color: var(--muted); margin-bottom: 6px; }
@@ -299,6 +299,8 @@ code { font-family: var(--font-num); font-size: .92em; background: #f1f4f8; padd
 .rev-opt { padding: 5px 10px; border-radius: 5px; border: 1px solid var(--line-soft); display: flex; gap: 8px; }
 .rev-opt.correct { background: var(--green-wash); border-color: #a9d8b5; }
 .rev-opt.wrong { background: var(--red-wash); border-color: #f0b3aa; }
+.rev-q img, .rev-opt img { max-width: 100%; height: auto; }
+.rev-opt span { min-width: 0; }
 .rev-opt em { margin-left: auto; font-style: normal; font-size: 12px; font-weight: 700; }
 .rev-sol { font-size: 13.5px; color: #34404f; margin-top: 8px; background: #f7f9fc; border-radius: 5px; padding: 6px 10px; }
 .filter-bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
@@ -345,7 +347,7 @@ code { font-family: var(--font-num); font-size: .92em; background: #f1f4f8; padd
 .rp-st.no { background: #fbe7e4; color: #b3321f; }
 .rp-st.na { background: #eef1f5; color: #5a6677; }
 .rp-qt { font-size: 12px; margin-bottom: 5px; }
-.rp-qt img { max-height: 160px; display: block; margin-top: 4px; }
+.rp-qt img { max-height: 160px; max-width: 100%; display: block; margin-top: 4px; }
 .rp-opts { display: grid; grid-template-columns: 1fr 1fr; gap: 3px 8px; font-size: 11px; }
 .rp-opt { border: 1px solid #e6eaf0; border-radius: 4px; padding: 3px 6px; display: flex; gap: 6px; }
 .rp-opt.correct { background: #e3f3e7; border-color: #9fd2ad; }
@@ -375,6 +377,32 @@ code { font-family: var(--font-num); font-size: .92em; background: #f1f4f8; padd
 .why{margin-top:10px;padding-top:8px;border-top:1px dashed var(--line,#e3e7ee)}
 .why>span{display:block;font-size:13.5px;color:var(--muted);margin-bottom:6px}
 .why-btns{display:flex;flex-wrap:wrap;gap:6px}
+
+/* ---------- chapter diagnosis (result screen + progress view) ---------- */
+.sw-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 12px; }
+.sw-box { border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; }
+.sw-box h3 { font-size: 14px; margin-bottom: 6px; }
+.sw-box.good { border-left: 4px solid var(--green); } .sw-box.bad { border-left: 4px solid var(--red); } .sw-box.neutral { border-left: 4px solid #9aa8b8; }
+.sw-box ul { list-style: none; margin: 0; padding: 0; font-size: 14px; }
+.sw-box li { display: flex; justify-content: space-between; gap: 10px; padding: 3px 0; border-bottom: 1px solid var(--line-soft); }
+.sw-box li:last-child { border-bottom: 0; }
+.sw-box li small { color: var(--muted); font-family: var(--font-num); white-space: nowrap; }
+.sw-box li span small { font-family: var(--font-ui); }
+.sw-empty { color: var(--muted); font-size: 13.5px; }
+.diag-list { list-style: none; margin: 6px 0 0; padding: 0; font-size: 14px; }
+.diag-list li { padding: 4px 0; border-bottom: 1px solid var(--line-soft); }
+.diag-list li:last-child { border-bottom: 0; }
+.diag-list small { color: var(--muted); }
+.bars { display: grid; gap: 6px; font-size: 14px; margin-top: 6px; }
+.bars div { display: grid; grid-template-columns: minmax(0, 1fr) 110px; gap: 10px; align-items: center; }
+.bars i { display: block; height: 8px; background: var(--line-soft); border-radius: 4px; overflow: hidden; }
+.bars i b { display: block; height: 100%; background: var(--blue); }
+.bars span small { color: var(--muted); font-family: var(--font-num); }
+.trap { font-size: 13.5px; margin-top: 8px; background: #fff3f0; border-left: 3px solid var(--red); border-radius: 4px; padding: 6px 10px; }
+.trap small { color: var(--muted); }
+.rp-trap { font-size: 10.5px; margin-top: 4px; color: #7d2116; }
+.trend { font-family: var(--font-num); font-size: 12.5px; color: var(--muted); }
+.diag-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 16px; }
 </style>
 </head>
 <body>
@@ -395,6 +423,7 @@ code { font-family: var(--font-num); font-size: .92em; background: #f1f4f8; padd
   </header>
 
   <div class="wrap">
+    <div id="pnNote" class="resume" hidden></div>
     <div id="resumeBar" class="resume" hidden>
       <div><b>A test is in progress.</b> <span id="resumeInfo"></span></div>
       <div class="row" style="gap:8px">
@@ -463,6 +492,11 @@ code { font-family: var(--font-num); font-size: .92em; background: #f1f4f8; padd
           <div class="warn" id="sumWarn"></div>
           <button type="button" class="btn btn-primary btn-block" id="btnStart">Go to instructions</button>
           <p class="note" id="bankNote"></p>
+        </div>
+        <div class="card">
+          <h2 style="margin-bottom:4px">Progress across tests</h2>
+          <p class="hint" style="margin-bottom:10px">Chapters over all saved tests, why marks were lost, and what to practise next.</p>
+          <button type="button" class="btn btn-line" data-progress>Open progress</button>
         </div>
         <div class="card" id="histCard" hidden>
           <h2 style="margin-bottom:8px">Recent attempts</h2>
@@ -558,7 +592,7 @@ code { font-family: var(--font-num); font-size: .92em; background: #f1f4f8; padd
         <div class="brand-mark">JEE</div>
         <div><div class="brand-name" id="resTitle">Result</div><div class="brand-sub" id="resSub"></div></div>
       </div>
-      <button type="button" class="btn btn-line" id="btnNew">Set up a new test</button>
+      <div class="row" style="gap:8px"><button type="button" class="btn btn-line" data-progress>Progress across tests</button><button type="button" class="btn btn-line" id="btnNew">Set up a new test</button></div>
     </div>
   </header>
   <div class="wrap">
@@ -578,7 +612,9 @@ code { font-family: var(--font-num); font-size: .92em; background: #f1f4f8; padd
     </div>
     <div class="res-grid">
       <div class="card"><h2 style="margin-bottom:10px">Subject-wise performance</h2><div class="tbl-wrap"><table class="tbl" id="tblSubj"></table></div></div>
-      <div class="card"><h2 style="margin-bottom:10px">Chapter-wise performance</h2><div class="tbl-wrap"><table class="tbl" id="tblChap"></table></div></div>
+      <div class="card"><h2 style="margin-bottom:4px">Chapter-wise performance</h2><p class="hint">Accuracy is correct ÷ attempted. “Lost” is the marks taken away by negative marking. Time is the average per attempted question.</p><div class="tbl-wrap"><table class="tbl" id="tblChap"></table></div></div>
+      <div class="card"><h2 style="margin-bottom:4px">Strong and weak chapters</h2><div id="swBox"></div></div>
+      <div class="card"><h2 style="margin-bottom:4px">Shaky areas and guessing</h2><div id="timeBox"></div></div>
       <div class="card" id="reviewCard" hidden>
         <h2 style="margin-bottom:10px">Answer review</h2>
         <div class="filter-bar" id="revFilter"></div>
@@ -586,6 +622,20 @@ code { font-family: var(--font-num); font-size: .92em; background: #f1f4f8; padd
       </div>
     </div>
   </div>
+</section>
+
+<!-- ============ PROGRESS (all saved attempts, needs server.py) ============ -->
+<section id="scr-progress" hidden>
+  <header class="app-top">
+    <div class="app-top-in">
+      <div class="brand">
+        <div class="brand-mark">JEE</div>
+        <div><div class="brand-name" id="progTitle">Progress</div><div class="brand-sub" id="progSub">Every test saved in the progress database</div></div>
+      </div>
+      <button type="button" class="btn btn-line" id="progBack">Back</button>
+    </div>
+  </header>
+  <div class="wrap"><div class="res-grid" id="progBody"></div></div>
 </section>
 
 <!-- ============ MODALS ============ -->
@@ -677,7 +727,7 @@ const subjOrder = (a, b) => { const ia = KNOWN.indexOf(a), ib = KNOWN.indexOf(b)
 const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
 function show(id) {
-  ['scr-setup', 'scr-ins', 'scr-exam', 'scr-result'].forEach(s => { $('#' + s).hidden = s !== id; });
+  ['scr-setup', 'scr-ins', 'scr-exam', 'scr-result', 'scr-progress'].forEach(s => { $('#' + s).hidden = s !== id; });
   window.scrollTo(0, 0);
 }
 
@@ -807,7 +857,7 @@ function renderBankLabel() {
   $('#bankLabel').textContent = `${bank.name}: ${bank.questions.length} questions`;
   $('#bankNote').innerHTML = bank.sample
     ? 'The built-in bank holds 84 original practice questions written in JEE Main style and tagged by year to demonstrate the filters. They are not official NTA papers. Use <b>Manage bank</b> to import real previous-year questions.'
-    : bank.pyq ? `Official questions from public NTA question papers, answers from NTA's final answer keys (${bank.questions.length} questions). Questions NTA dropped are left out. Chapters are not tagged yet.`
+    : bank.pyq ? `Official questions from public NTA question papers, answers from NTA's final answer keys (${bank.questions.length} questions). Questions NTA dropped are left out. Chapter tags were made by Claude from the question images.`
     : `Using an imported bank (${bank.questions.length} questions).`;
 }
 
@@ -872,6 +922,7 @@ function renderSummary() {
   $('#btnStart').disabled = !p.total || !(cfg.duration >= 1);
 }
 function renderSetup() {
+  $('#pnNote').hidden = true;
   renderBankLabel(); $('#inName').value = cfg.testName; $('#inCand').value = cfg.candidate;
   renderDuration(); renderYears(); renderSubjects(); renderPattern(); renderSummary(); renderHistory(); renderResume();
 }
@@ -1137,7 +1188,101 @@ function evaluate(ex) {
   rows.forEach(x => { const k = x.q.subject + '|' + x.q.chapter; if (!chapMap.has(k)) chapMap.set(k, []); chapMap.get(k).push(x); });
   const byChap = [...chapMap.entries()].map(([k, l]) => ({ subject: k.split('|')[0], chapter: k.slice(k.indexOf('|') + 1), ...agg(l) }))
     .sort((a, b) => subjOrder(a.subject, b.subject) || a.chapter.localeCompare(b.chapter));
-  return { rows, total, bySubj, byChap, score: total.score, max: total.max };
+  const items = rows.map(x => ({ subject: x.q.subject, chapter: x.q.chapter, att: x.att, ok: x.ok, marks: x.marks, secs: Math.round(x.time / 1000), label: `Q${x.i + 1}` }));
+  return { rows, total, bySubj, byChap, items, chaps: chapterStats(items), score: total.score, max: total.max };
+}
+
+/* ---------- chapter diagnosis ----------
+   Same rules as tools/analysis_data.py and the jee-analysis skill, so the app and Claude's reports agree:
+   a chapter is called strong or weak only with MIN_ATT or more attempted questions; slow-but-correct = more than
+   twice his median time per attempted question and over 2 minutes; a wrong answer in under 30 s looks like a guess.
+   Skips are counted apart: a chapter he mostly skips is "mostly skipped", never "weak". */
+const MIN_ATT = 4, STRONG_ACC = 0.75, WEAK_ACC = 0.5, FAST_S = 30, SLOW_MIN_S = 120;
+const OUTSIDE = 'Not in current syllabus';
+/* tools/traps_common.py MISTAKE_TYPES; "none" (no clear mistake path) is never shown as a trap */
+const MISTAKE_TYPES = { concept_gap: 'Concept gap', formula_misapplied: 'Formula misapplied', calc_slip: 'Calculation slip', units: 'Units', misread: 'Misread the question', ncert_fact: 'NCERT fact not known' };
+const median = a => { if (!a.length) return 0; const s = a.slice().sort((x, y) => x - y), m = s.length >> 1; return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2; };
+const pct = a => a == null ? '—' : Math.round(a * 100) + '%';
+/* items: one per question answered or skipped: {subject, chapter, att, ok, marks, secs, label} */
+function chapterStats(items) {
+  const m = new Map();
+  items.forEach(x => {
+    const k = x.subject + '|' + x.chapter;
+    if (!m.has(k)) m.set(k, { subject: x.subject, chapter: x.chapter, n: 0, att: 0, c: 0, w: 0, u: 0, lost: 0, secs: 0, list: [] });
+    const c = m.get(k); c.n++; c.list.push(x);
+    if (!x.att) c.u++; else { c.att++; c.secs += x.secs; if (x.ok) c.c++; else { c.w++; c.lost += -x.marks; } }
+  });
+  return [...m.values()].map(c => Object.assign(c, { acc: c.att ? c.c / c.att : null, avg: c.att ? Math.round(c.secs / c.att) : null }))
+    .sort((a, b) => subjOrder(a.subject, b.subject) || a.chapter.localeCompare(b.chapter));
+}
+function judge(chs) {
+  const enough = chs.filter(c => c.att >= MIN_ATT);
+  return {
+    strong: enough.filter(c => c.acc >= STRONG_ACC).sort((a, b) => b.acc - a.acc || b.att - a.att),
+    weak: enough.filter(c => c.acc < WEAK_ACC).sort((a, b) => a.acc - b.acc || b.lost - a.lost),
+    middle: enough.filter(c => c.acc >= WEAK_ACC && c.acc < STRONG_ACC),
+    skipped: chs.filter(c => c.n >= MIN_ATT && c.u > c.n / 2),
+    few: chs.filter(c => c.att < MIN_ATT)
+  };
+}
+function timing(items) {
+  const med = median(items.filter(x => x.att && x.secs).map(x => x.secs));
+  return {
+    med,
+    slow: items.filter(x => x.att && x.ok && med && x.secs > 2 * med && x.secs > SLOW_MIN_S),
+    fast: items.filter(x => x.att && !x.ok && x.secs < FAST_S),
+    wrong: items.filter(x => x.att && !x.ok)
+  };
+}
+/* the bank's current copy of a question (newer tags and trap data than the snapshot saved with an old test) */
+let idxFor = null, idx = null;
+function liveQ(id) {
+  if (idxFor !== bank) { idx = new Map(); (PYQ ? PYQ.questions : []).concat(bank.questions).forEach(b => idx.set(String(b.id), b)); idxFor = bank; }
+  return idx.get(String(id)) || null;
+}
+/* Claude's trap analysis (step 3) for the answer he gave, or null. Only real trap data, never a made-up one. */
+function trapFor(q, given) {
+  if (!q || given === null || given === '' || given === undefined) return null;
+  const live = liveQ(q.id), t = (live && live.type === q.type && live.option_traps) || q.option_traps;
+  if (!t) return null;
+  let r;
+  if (q.type === 'MCQ') r = t[String(+given + 1)];
+  else { const v = parseFloat(given), k = Object.keys(t).find(k => Math.abs(parseFloat(k) - v) < 1e-9); r = k === undefined ? null : t[k]; }
+  return r && MISTAKE_TYPES[r.mistake_type] && r.trap ? r : null;
+}
+const trapHtml = (r, cls) => !r ? '' : `<div class="${cls}"><b>Likely trap (Claude's analysis):</b> ${rich(r.trap)} <small>· ${esc(MISTAKE_TYPES[r.mistake_type])}${r.check === 'conceptual' ? ' · a teacher should confirm this one' : ' · wrong path recomputed by script'}</small></div>`;
+
+function chapTableHtml(chs, trend) {
+  const cols = trend ? 10 : 9;
+  let h = `<thead><tr><th class="l">Chapter</th><th>Qs</th><th>Attempted</th><th>Correct</th><th>Wrong</th><th>Skipped</th><th>Accuracy</th><th>Lost</th><th>Avg time</th>${trend ? '<th class="l">Test by test (correct/attempted)</th>' : ''}</tr></thead><tbody>`;
+  let last = '';
+  chs.forEach(c => {
+    if (c.subject !== last) { h += `<tr class="grp"><td class="l" colspan="${cols}">${esc(c.subject)}</td></tr>`; last = c.subject; }
+    h += `<tr><td class="l">${esc(c.chapter)}</td><td class="num">${c.n}</td><td class="num">${c.att}</td><td class="num">${c.c}</td><td class="num">${c.w}</td><td class="num">${c.u}</td><td>${c.att ? accBar(c.acc) : '<span class="num" style="color:var(--muted)">—</span>'}</td><td class="num negc">${negT(c.lost)}</td><td class="num">${c.avg == null ? '—' : c.avg + ' s'}</td>${trend ? `<td class="l trend">${trend(c)}</td>` : ''}</tr>`;
+  });
+  return h + '</tbody>';
+}
+const chapList = (l, max = 10) => l.slice(0, max).map(c => `${esc(c.chapter)} (n = ${c.att})`).join('; ') + (l.length > max ? `; and ${l.length - max} more` : '');
+function swHtml(chs, scope) {
+  const j = judge(chs);
+  const li = c => `<li><span>${esc(c.chapter)} <small>${esc(c.subject)}</small></span><small>${c.c}/${c.att} · ${pct(c.acc)}</small></li>`;
+  const box = (cls, title, list, empty) => `<div class="sw-box ${cls}"><h3>${title}</h3>${list.length ? `<ul>${list.map(li).join('')}</ul>` : `<p class="sw-empty">${empty}</p>`}</div>`;
+  const keys = j.weak.filter(c => c.chapter !== OUTSIDE).map(c => c.subject + '|' + c.chapter);
+  return `<p class="hint">Based on chapters with ${MIN_ATT} or more attempted questions ${scope}. Strong = ${STRONG_ACC * 100}% accuracy or more; weak = below ${WEAK_ACC * 100}%. A chapter is never called strong or weak from fewer questions.</p>
+    <div class="sw-grid">${box('good', 'Strong', j.strong, `No chapter yet with ${MIN_ATT}+ attempts and ${STRONG_ACC * 100}% accuracy.`)}${box('bad', 'Weak', j.weak, `No chapter with ${MIN_ATT}+ attempts is below ${WEAK_ACC * 100}%.`)}${j.skipped.length ? box('neutral', 'Mostly skipped (not called weak)', j.skipped, '') : ''}</div>
+    <p class="note">${j.middle.length ? `In between (${WEAK_ACC * 100}–${STRONG_ACC * 100 - 1}%): ${j.middle.map(c => `${esc(c.chapter)} (${c.c}/${c.att})`).join('; ')}.<br>` : ''}${j.few.length ? `Too few attempts to judge (fewer than ${MIN_ATT}): ${chapList(j.few)}.` : ''}</p>
+    <div class="res-actions" style="margin:10px 0 0"><button type="button" class="btn btn-primary" data-practise="${esc(JSON.stringify(keys))}"${keys.length ? '' : ' disabled'}>Practise next: a test from the weak chapters</button>${keys.length ? '' : '<span class="res-status">No weak chapter has enough attempts yet.</span>'}</div>`;
+}
+function timeHtml(items, scope) {
+  const t = timing(items), lost = l => l.reduce((a, x) => a - x.marks, 0);
+  const row = x => `<li>${esc(x.label)} · ${esc(x.chapter)} <small>(${esc(x.subject)}) · ${x.secs} s</small></li>`;
+  const cap = l => l.slice(0, 12).map(row).join('') + (l.length > 12 ? `<li><small>… and ${l.length - 12} more</small></li>` : '');
+  return `<div class="diag-cols"><div><h3 style="font-size:15px">Slow but correct (shaky areas)</h3>
+    <p class="hint" style="margin:2px 0 4px">Correct, but took more than twice the median time per attempted question (${Math.round(t.med)} s ${scope}) and over 2 minutes.</p>
+    ${t.slow.length ? `<ul class="diag-list">${cap(t.slow)}</ul>` : '<p class="sw-empty">None.</p>'}</div>
+    <div><h3 style="font-size:15px">Guessing pattern</h3>
+    <p class="hint" style="margin:2px 0 4px">${t.wrong.length} wrong answer${t.wrong.length === 1 ? '' : 's'} cost ${negT(lost(t.wrong))} marks. ${t.fast.length} came in under ${FAST_S} s, which looks like a guess${t.fast.length ? `: they cost ${negT(lost(t.fast))}, so skipping them would have scored ${fmtMarks(lost(t.fast))} more` : ''}.</p>
+    ${t.fast.length ? `<ul class="diag-list">${cap(t.fast)}</ul>` : ''}</div></div>`;
 }
 
 /* ---------- results ---------- */
@@ -1161,9 +1306,9 @@ function showResult(ex) {
   const head = `<thead><tr><th class="l">%%</th><th>Qs</th><th>Correct</th><th>Incorrect</th><th>Not att.</th><th>+ Marks</th><th>− Marks</th><th>Score</th><th>Accuracy</th></tr></thead>`;
   const line = (label, a, cls) => `<tr${cls ? ` class="${cls}"` : ''}><td class="l">${label}</td><td class="num">${a.n}</td><td class="num">${a.c}</td><td class="num">${a.w}</td><td class="num">${a.u}</td><td class="num pos">${posT(a.pos)}</td><td class="num negc">${negT(a.neg)}</td><td class="num"><b>${fmtMarks(a.score)}</b> / ${fmtMarks(a.max)}</td><td>${accBar(a.acc)}</td></tr>`;
   $('#tblSubj').innerHTML = head.replace('%%', 'Subject') + '<tbody>' + res.bySubj.map(s => line(esc(s.name), s)).join('') + line('<b>Total</b>', t, 'grp') + '</tbody>';
-  let ch = ''; let last = '';
-  res.byChap.forEach(c => { if (c.subject !== last) { ch += `<tr class="grp"><td class="l" colspan="9">${esc(c.subject)}</td></tr>`; last = c.subject; } ch += line(esc(c.chapter), c); });
-  $('#tblChap').innerHTML = head.replace('%%', 'Chapter') + '<tbody>' + ch + '</tbody>';
+  $('#tblChap').innerHTML = chapTableHtml(res.chaps);
+  $('#swBox').innerHTML = swHtml(res.chaps, 'in this test');
+  $('#timeBox').innerHTML = timeHtml(res.items, 'in this test');
   $('#reviewCard').hidden = true; $('#pdfStatus').textContent = '';
   $('#syncStatus').textContent = ex.synced ? 'Saved to the progress database.' : onServer ? 'Not saved to the database yet.' : '';
   $('#btnReview').textContent = reviewLabel(ex, res);
@@ -1183,7 +1328,7 @@ function renderReview() {
     else body = `<div class="rev-opts"><div class="rev-opt${x.att ? (x.ok ? ' correct' : ' wrong') : ''}">Your answer: <b class="num">${esc(answerText(q, x.given))}</b></div><div class="rev-opt correct">Correct answer: <b class="num">${esc(correctText(q))}</b></div></div>`;
     if (inPractice(x)) return practiceHtml(x, pill);
     const done = pracDoneHtml(x);
-    return `<div class="rev-item" data-rq="${x.i}"><div class="rev-top"><span><b style="color:var(--ink)">Q${x.i + 1}</b> · ${esc(q.subject)} · ${esc(q.chapter)} · ${esc(srcLabel(q))} · ${q.type === 'MCQ' ? 'MCQ' : 'Numerical'} · ${Math.round(x.time / 1000)} s spent</span>${pill}</div><div class="rev-q">${rich(q.question)}${qImg(q)}</div>${done}${body}${x.ok && q.solution ? `<details class="sol-fold"><summary>Show the solution</summary>${solHtml(q, 'rev-sol')}</details>` : solHtml(q, 'rev-sol')}${x.att && !x.ok ? whyHtml(shown, x) : ''}</div>`;
+    return `<div class="rev-item" data-rq="${x.i}"><div class="rev-top"><span><b style="color:var(--ink)">Q${x.i + 1}</b> · ${esc(q.subject)} · ${esc(q.chapter)} · ${esc(srcLabel(q))} · ${q.type === 'MCQ' ? 'MCQ' : 'Numerical'} · ${Math.round(x.time / 1000)} s spent</span>${pill}</div><div class="rev-q">${rich(q.question)}${qImg(q)}</div>${done}${body}${x.att && !x.ok ? trapHtml(trapFor(q, x.given), 'trap') : ''}${x.ok && q.solution ? `<details class="sol-fold"><summary>Show the solution</summary>${solHtml(q, 'rev-sol')}</details>` : solHtml(q, 'rev-sol')}${x.att && !x.ok ? whyHtml(shown, x) : ''}</div>`;
   }).join('') || '<p style="color:var(--muted)">No questions in this group.</p>';
 }
 $('#btnReview').addEventListener('click', () => { const c = $('#reviewCard'); c.hidden = !c.hidden; if (!c.hidden) { renderReview(); c.scrollIntoView({ behavior: 'smooth', block: 'start' }); } });
@@ -1328,6 +1473,94 @@ $('#reviewList').addEventListener('click', e => {
   clearTimeout(whyTimer); whyTimer = setTimeout(() => syncAttempt(ex), 1200);
 });
 
+/* ---------- progress across all saved tests (reads server.py's /api/progress) ---------- */
+const REVIEW_OUTCOMES = [['solved_no_hint', 'Solved it alone'], ['solved_hint1', 'Solved after hint 1'], ['solved_hint2', 'Solved after hint 2'],
+  ['saw_solution', 'Looked at the solution'], ['skipped', 'Skipped in the review'], ['open', 'Started, not finished']];
+let progFrom = 'scr-setup';
+const barsHtml = (rows, of) => `<div class="bars">${rows.map(([l, n]) => `<div><span>${esc(l)} <small>${n} of ${of}</small></span><i><b style="width:${of ? Math.round(n / of * 100) : 0}%"></b></i></div>`).join('')}</div>`;
+async function openProgress() {
+  progFrom = $('#scr-result').hidden ? 'scr-setup' : 'scr-result';
+  show('scr-progress');
+  const body = $('#progBody');
+  $('#progTitle').textContent = 'Progress'; $('#progSub').textContent = 'Every test saved in the progress database';
+  if (!onServer) {
+    body.innerHTML = `<div class="card"><h2>The progress view needs the server</h2><p class="hint">It reads every saved test from the progress database. Start the app with <code>run_app.bat</code> or <code>python server.py</code> and open http://localhost:8000. Tests taken here stay in this browser and are sent to the database the next time the app runs on the server.</p></div>`;
+    return;
+  }
+  body.innerHTML = '<div class="card"><p class="hint" style="margin:0">Loading saved tests…</p></div>';
+  try {
+    await flushQueue();
+    const r = await fetch('api/progress');
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    renderProgress(await r.json());
+  } catch (e) {
+    body.innerHTML = `<div class="card"><h2>Could not load the saved tests</h2><p class="hint">${esc(e.message || e)}. Check that server.py is running.</p></div>`;
+  }
+}
+function renderProgress(d) {
+  const body = $('#progBody'), atts = d.attempts || [];
+  if (!atts.length) { body.innerHTML = '<div class="card"><h2>No tests saved yet</h2><p class="hint">Take a test; its result is saved here when you submit it.</p></div>'; return; }
+  const day = s => s ? new Date(s).toLocaleDateString() : '?';
+  $('#progTitle').textContent = `${atts[atts.length - 1].student}'s progress`;
+  $('#progSub').textContent = `${atts.length} saved test${atts.length === 1 ? '' : 's'}, ${day(atts[0].submitted_at)} to ${day(atts[atts.length - 1].submitted_at)}`;
+  const order = new Map(atts.map((a, k) => [a.id, k]));
+  /* the bank's current chapter tag wins over the one saved with the test, as in tools/analysis_data.py */
+  const items = (d.responses || []).filter(r => order.has(r.attempt_id)).map(r => {
+    const b = liveQ(r.question_id), k = order.get(r.attempt_id);
+    return { subject: b ? b.subject : r.subject, chapter: b ? b.chapter : r.chapter, att: !!r.attempted, ok: !!r.correct, marks: r.marks || 0,
+      secs: Math.round((r.time_ms || 0) / 1000), reason: r.reason, given: r.given, q: b && b.type === r.qtype ? b : null, a: k, label: `Test ${k + 1} · Q${r.q_index + 1}` };
+  });
+  const chs = chapterStats(items);
+  const trend = c => atts.map((a, k) => { const l = c.list.filter(x => x.a === k); return l.length ? `T${k + 1} ${l.filter(x => x.ok).length}/${l.filter(x => x.att).length}` : ''; }).filter(Boolean).join(' · ');
+  const tests = `<div class="card"><h2 style="margin-bottom:10px">Tests</h2><div class="tbl-wrap"><table class="tbl"><thead><tr><th class="l">#</th><th class="l">Date</th><th class="l">Test</th><th>Score</th><th>Correct</th><th>Wrong</th><th>Skipped</th><th>Accuracy</th></tr></thead><tbody>${
+    atts.map((a, k) => `<tr><td class="l num">T${k + 1}</td><td class="l">${esc(day(a.submitted_at))}</td><td class="l">${esc(a.test_name || '')}</td><td class="num"><b>${fmtMarks(a.score)}</b> / ${fmtMarks(a.max_score)}</td><td class="num">${a.n_correct}</td><td class="num">${a.n_wrong}</td><td class="num">${a.n_skipped}</td><td>${a.n_correct + a.n_wrong ? accBar(a.n_correct / (a.n_correct + a.n_wrong)) : '—'}</td></tr>`).join('')}</tbody></table></div></div>`;
+
+  const wrong = items.filter(x => x.att && !x.ok);
+  const rc = {}; wrong.forEach(x => { if (x.reason) rc[x.reason] = (rc[x.reason] || 0) + 1; });
+  const untagged = wrong.filter(x => !x.reason).length;
+  const reasons = REASONS.filter(([k]) => rc[k]).sort((a, b) => rc[b[0]] - rc[a[0]]).map(([k, l]) => [l, rc[k]]);
+  const tc = {}; let withData = 0;
+  wrong.forEach(x => { if (x.q && x.q.option_traps) withData++; const t = trapFor(x.q, x.given); if (t) tc[t.mistake_type] = (tc[t.mistake_type] || 0) + 1; });
+  const traps = Object.keys(MISTAKE_TYPES).filter(k => tc[k]).sort((a, b) => tc[b] - tc[a]).map(k => [MISTAKE_TYPES[k], tc[k]]);
+  const nTraps = traps.reduce((a, x) => a + x[1], 0);
+  const why = `<div class="card"><h2 style="margin-bottom:4px">Why marks were lost</h2><div class="diag-cols">
+    <div><h3 style="font-size:15px">His own reasons</h3><p class="hint" style="margin:2px 0 4px">What he tapped under each wrong answer in the review.</p>
+      ${reasons.length ? barsHtml(reasons, wrong.length) : '<p class="sw-empty">No reasons tapped yet.</p>'}
+      <p class="note">${untagged} of ${wrong.length} wrong answers have no reason yet.</p></div>
+    <div><h3 style="font-size:15px">Likely traps (Claude's analysis)</h3><p class="hint" style="margin:2px 0 4px">The mistake that leads to the option he chose, where Claude's trap analysis names one. Trap data exists only for the shifts analysed so far.</p>
+      ${traps.length ? barsHtml(traps, wrong.length) : '<p class="sw-empty">None of his wrong answers so far match a named trap.</p>'}
+      <p class="note">${withData} of ${wrong.length} wrong answers come from questions with trap data; ${nTraps} of them match a named trap. The rest have no clear mistake path or no data yet.</p></div></div></div>`;
+
+  const prac = (d.practice || []).filter(p => order.has(p.attempt_id));
+  const oc = {}; prac.forEach(p => { oc[p.outcome] = (oc[p.outcome] || 0) + 1; });
+  const brave = prac.filter(p => p.in_test === 'skipped' && /^solved/.test(p.outcome)).length;
+  const review = `<div class="card"><h2 style="margin-bottom:4px">What the review showed (hint ladder)</h2><p class="hint">Wrong or skipped questions he worked through again in the answer review.</p>
+    ${prac.length ? barsHtml(REVIEW_OUTCOMES.filter(([k]) => oc[k]).map(([k, l]) => [l, oc[k]]), prac.length) : '<p class="sw-empty">No review work saved yet.</p>'}
+    ${brave ? `<p class="note">${brave} question${brave === 1 ? ' he' : 's he'} skipped in the test ${brave === 1 ? 'was' : 'were'} solved in the review: he knows more than he risked.</p>` : ''}</div>`;
+
+  body.innerHTML = tests +
+    `<div class="card"><h2 style="margin-bottom:4px">Strong and weak chapters</h2>${swHtml(chs, 'across all saved tests')}</div>` +
+    why + review +
+    `<div class="card"><h2 style="margin-bottom:4px">Shaky areas and guessing</h2>${timeHtml(items, 'over all saved tests')}</div>` +
+    `<div class="card"><h2 style="margin-bottom:4px">Chapters over all tests</h2><p class="hint">Totals over every saved test. The last column shows each test that had questions from the chapter (T1 = first test).</p><div class="tbl-wrap"><table class="tbl">${chapTableHtml(chs, trend)}</table></div></div>`;
+}
+$$('[data-progress]').forEach(b => b.addEventListener('click', openProgress));
+$('#progBack').addEventListener('click', () => { if (progFrom === 'scr-result' && shown) show('scr-result'); else { show('scr-setup'); renderSetup(); } });
+
+/* "Practise next": tick only the weak chapters (all years) in the normal setup filters */
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-practise]'); if (!b || b.disabled) return;
+  const keys = JSON.parse(b.dataset.practise).filter(k => bank.questions.some(q => ckey(q) === k));
+  if (!keys.length) { b.disabled = true; return; }
+  exam = null;
+  sel.years = new Set(bankYears()); sel.chapters = new Set(keys);
+  keys.forEach(k => openSubj.add(k.split('|')[0]));
+  cfg.testName = 'Practice: weak chapters'; saveCfg();
+  show('scr-setup'); renderSetup();
+  $('#pnNote').innerHTML = `<div><b>Practise next.</b> Only the weak chapters are ticked (${keys.map(k => esc(k.slice(k.indexOf('|') + 1))).join(', ')}), from all years. Check the question counts and the duration, then go to the instructions.</div>`;
+  $('#pnNote').hidden = false;
+});
+
 /* ---------- PDF report ---------- */
 function reportBlocks(ex, res) {
   const t = res.total, c = ex.cfg; const B = [];
@@ -1347,11 +1580,21 @@ function reportBlocks(ex, res) {
   const hdr = first => `<tr><th>${first}</th><th>Qs</th><th>Correct</th><th>Wrong</th><th>Skipped</th><th>+Marks</th><th>−Marks</th><th>Score</th><th>Accuracy</th></tr>`;
   const ln = (l, a, cls) => `<tr${cls ? ` class="${cls}"` : ''}><td>${l}</td><td class="m">${a.n}</td><td class="m">${a.c}</td><td class="m">${a.w}</td><td class="m">${a.u}</td><td class="m" style="color:#1f7a37">${posT(a.pos)}</td><td class="m" style="color:#b3321f">${negT(a.neg)}</td><td class="m"><b>${fmtMarks(a.score)}</b>/${fmtMarks(a.max)}</td><td class="m">${Math.round(a.acc * 100)}%${bar(a.acc)}</td></tr>`;
   B.push(`<div><div class="rp-h">Subject-wise summary</div><table class="rp-tbl" style="margin-top:4px">${hdr('Subject')}${res.bySubj.map(s => ln(esc(s.name), s)).join('')}${ln('Total', t, 'tot')}</table></div>`);
-  B.push(`<div class="rp-h">Chapter-wise split</div>`);
+  B.push(`<div><div class="rp-h">Chapter-wise split</div><div class="rp-legend">Accuracy = correct ÷ attempted. Lost = marks taken away by negative marking. Time = average per attempted question.</div></div>`);
   ex.sections.forEach(s => {
-    const list = res.byChap.filter(x => x.subject === s.name); if (!list.length) return;
-    B.push(`<table class="rp-tbl">${hdr(esc(s.name))}${list.map(x => ln(esc(x.chapter), x)).join('')}</table>`);
+    const list = res.chaps.filter(x => x.subject === s.name); if (!list.length) return;
+    B.push(`<table class="rp-tbl"><tr><th>${esc(s.name)}</th><th>Qs</th><th>Attempted</th><th>Correct</th><th>Wrong</th><th>Skipped</th><th>Accuracy</th><th>Lost</th><th>Avg time</th></tr>${list.map(x =>
+      `<tr><td>${esc(x.chapter)}</td><td class="m">${x.n}</td><td class="m">${x.att}</td><td class="m">${x.c}</td><td class="m">${x.w}</td><td class="m">${x.u}</td><td class="m">${x.att ? pct(x.acc) + bar(x.acc) : '—'}</td><td class="m" style="color:#b3321f">${negT(x.lost)}</td><td class="m">${x.avg == null ? '—' : x.avg + ' s'}</td></tr>`).join('')}</table>`);
   });
+  const j = judge(res.chaps), tm = timing(res.items);
+  const nm = l => l.length ? l.map(x => `${esc(x.chapter)} (${x.c}/${x.att}, ${pct(x.acc)})`).join('; ') : 'none';
+  const lostOf = l => l.reduce((a, x) => a - x.marks, 0);
+  B.push(`<div><div class="rp-h">Strong and weak chapters</div><div class="rp-legend">Only chapters with ${MIN_ATT} or more attempted questions in this test are judged. Strong = ${STRONG_ACC * 100}% accuracy or more; weak = below ${WEAK_ACC * 100}%.</div>
+    <div style="font-size:11px;margin-top:4px;display:grid;gap:3px"><div><b style="color:#1f7a37">Strong:</b> ${nm(j.strong)}</div><div><b style="color:#b3321f">Weak:</b> ${nm(j.weak)}</div>
+    ${j.skipped.length ? `<div><b>Mostly skipped (not called weak):</b> ${j.skipped.map(x => `${esc(x.chapter)} (${x.u} of ${x.n} skipped)`).join('; ')}</div>` : ''}
+    ${j.few.length ? `<div style="color:#5a6677">Too few attempts to judge: ${chapList(j.few, 8)}.</div>` : ''}
+    <div><b>Slow but correct</b> (over 2× the median ${Math.round(tm.med)} s and over 2 min): ${tm.slow.length ? tm.slow.map(x => `${x.label} ${esc(x.chapter)} ${x.secs} s`).join('; ') : 'none'}.</div>
+    <div><b>Quick wrong answers</b> (under ${FAST_S} s, likely guesses): ${tm.fast.length} of ${tm.wrong.length} wrong, costing ${negT(lostOf(tm.fast))} marks.</div></div></div>`);
   B.push(`<div class="rp-h" style="margin-top:6px">Question-by-question review</div><div class="rp-legend">Green marks the correct answer. Red marks your answer when it was wrong. Marks shown are what the question contributed to your score.</div>`);
   res.rows.forEach(x => {
     const q = x.q;
@@ -1364,7 +1607,7 @@ function reportBlocks(ex, res) {
       body = `<div class="rp-ans"><span style="${x.att ? (x.ok ? 'background:#e3f3e7;border-color:#9fd2ad' : 'background:#fbe7e4;border-color:#eba89d') : ''}">Your answer: <b>${esc(x.att ? x.given : 'Not attempted')}</b></span><span style="background:#e3f3e7;border-color:#9fd2ad">Correct answer: <b>${esc(correctText(q))}</b></span></div>`;
     }
     B.push(`<div class="rp-q"><div class="rp-qh"><span><b>Q${x.i + 1}</b> · ${esc(q.subject)} · ${esc(q.chapter)} · ${esc(srcLabel(q))} · ${q.type === 'MCQ' ? 'MCQ' : 'Numerical'}${x.st === 'amr' || x.st === 'mr' ? ' · marked for review' : ''} · ${Math.round(x.time / 1000)} s</span>${st}</div>
-      <div class="rp-qt">${rich(q.question)}${qImg(q)}</div>${body}${solHtml(q, 'rp-sol')}</div>`);
+      <div class="rp-qt">${rich(q.question)}${qImg(q)}</div>${body}${x.att && !x.ok ? trapHtml(trapFor(q, x.given), 'rp-trap') : ''}${solHtml(q, 'rp-sol')}</div>`);
   });
   return B;
 }
