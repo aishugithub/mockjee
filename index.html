@@ -274,6 +274,18 @@ code { font-family: var(--font-num); font-size: .92em; background: #f1f4f8; padd
 .res-actions { display: flex; gap: 10px; flex-wrap: wrap; margin: 18px 0; align-items: center; }
 .res-status { font-size: 13.5px; color: var(--muted); }
 .tbl-wrap { overflow-x: auto; }
+/* signed-in user (server only) and the admin Students screen */
+.who { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; font-size: 13px; }
+.who b { font-weight: 600; margin-right: 4px; }
+.who button { background: rgba(255,255,255,.12); color: #fff; border: 1px solid rgba(255,255,255,.3); border-radius: 4px; padding: 4px 10px; font-size: 13px; }
+.who button:hover { background: rgba(255,255,255,.22); }
+.adm-form { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto; gap: 10px; align-items: end; }
+@media (max-width: 640px) { .adm-form { grid-template-columns: 1fr; } }
+.otp { margin-top: 14px; padding: 12px 14px; border-radius: 6px; background: var(--green-wash); border: 1px solid #b9dcc2; font-size: 14px; }
+.otp code { font: 600 17px/1.4 var(--font-num); background: #fff; padding: 2px 8px; border-radius: 4px; user-select: all; }
+.otp.err { background: var(--red-wash); border-color: #efc2bb; color: var(--red); }
+.tbl td .btn-sm { padding: 3px 9px; font-size: 12.5px; margin-left: 4px; }
+.tag-off { color: var(--red); font-weight: 600; }
 .tbl { width: 100%; border-collapse: collapse; font-size: 14px; }
 .tbl th, .tbl td { padding: 8px 10px; border-bottom: 1px solid var(--line-soft); text-align: right; white-space: nowrap; }
 .tbl th:first-child, .tbl td:first-child, .tbl th.l, .tbl td.l { text-align: left; }
@@ -418,7 +430,10 @@ code { font-family: var(--font-num); font-size: .92em; background: #f1f4f8; padd
           <div class="brand-sub">Build a previous-year-question mock test and sit it in the computer-based test format</div>
         </div>
       </div>
-      <div class="bank-pill"><span id="bankLabel">Question bank</span><button type="button" id="btnBank">Manage bank</button></div>
+      <div class="row" style="gap:10px;flex-wrap:wrap">
+        <div class="who" data-who hidden></div>
+        <div class="bank-pill"><span id="bankLabel">Question bank</span><button type="button" id="btnBank">Manage bank</button></div>
+      </div>
     </div>
   </header>
 
@@ -592,7 +607,7 @@ code { font-family: var(--font-num); font-size: .92em; background: #f1f4f8; padd
         <div class="brand-mark">JEE</div>
         <div><div class="brand-name" id="resTitle">Result</div><div class="brand-sub" id="resSub"></div></div>
       </div>
-      <div class="row" style="gap:8px"><button type="button" class="btn btn-line" data-progress>Progress across tests</button><button type="button" class="btn btn-line" id="btnNew">Set up a new test</button></div>
+      <div class="row" style="gap:8px;flex-wrap:wrap"><div class="who" data-who hidden></div><button type="button" class="btn btn-line" data-progress>Progress across tests</button><button type="button" class="btn btn-line" id="btnNew">Set up a new test</button></div>
     </div>
   </header>
   <div class="wrap">
@@ -632,10 +647,40 @@ code { font-family: var(--font-num); font-size: .92em; background: #f1f4f8; padd
         <div class="brand-mark">JEE</div>
         <div><div class="brand-name" id="progTitle">Progress</div><div class="brand-sub" id="progSub">Every test saved in the progress database</div></div>
       </div>
-      <button type="button" class="btn btn-line" id="progBack">Back</button>
+      <div class="row" style="gap:8px;flex-wrap:wrap"><div class="who" data-who hidden></div><button type="button" class="btn btn-line" id="progBack">Back</button></div>
     </div>
   </header>
   <div class="wrap"><div class="res-grid" id="progBody"></div></div>
+</section>
+
+<!-- ============ STUDENTS (admins only, needs server.py) ============ -->
+<section id="scr-admin" hidden>
+  <header class="app-top">
+    <div class="app-top-in">
+      <div class="brand">
+        <div class="brand-mark">JEE</div>
+        <div><div class="brand-name">Students</div><div class="brand-sub">Accounts, who is using the app, and each student's progress</div></div>
+      </div>
+      <div class="row" style="gap:8px;flex-wrap:wrap"><div class="who" data-who hidden></div><button type="button" class="btn btn-line" id="admBack">Back</button></div>
+    </div>
+  </header>
+  <div class="wrap"><div class="res-grid">
+    <form class="card" id="admAdd">
+      <h2>Add a student</h2>
+      <p class="hint">You get a one-time password to give them privately. At their first sign-in they choose their own password, which nobody else sees.</p>
+      <div class="adm-form">
+        <div class="field"><label class="label" for="admName">Name (shown on their tests)</label><input class="input" id="admName" maxlength="60" required></div>
+        <div class="field"><label class="label" for="admUser">Username</label><input class="input" id="admUser" maxlength="30" autocapitalize="none" spellcheck="false" placeholder="e.g. rahul.k" required></div>
+        <button type="submit" class="btn btn-primary">Add student</button>
+      </div>
+      <div id="admOut" class="otp" role="status" hidden></div>
+    </form>
+    <div class="card">
+      <h2 style="margin-bottom:10px">Everyone</h2>
+      <div class="tbl-wrap"><table class="tbl" id="admTbl"></table></div>
+      <p class="hint" id="admNote" style="margin:12px 0 0"></p>
+    </div>
+  </div></div>
 </section>
 
 <!-- ============ MODALS ============ -->
@@ -693,6 +738,23 @@ const store = {
   set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch (e) { return false; } },
   del(k) { try { localStorage.removeItem(k); } catch (e) { /* ignore */ } }
 };
+/* The signed-in user, written into the page by server.py (null when the app is opened as a file or Artifact).
+   Each user keeps their own history, settings and unsent results in this browser, so a shared laptop never
+   mixes two students' tests. Results saved before accounts existed go to the first student who signs in here. */
+const ME = window.JEE_ME || null;
+if (ME) {
+  const own = {};
+  ['active', 'hist', 'cfg', 'unsynced'].forEach(k => { own[k] = KEYS[k].replace('jeecbt.', `jeecbt.u${ME.id}.`); });
+  if (ME.role === 'student' && !store.get('jeecbt.legacy.claimed', null) && Object.keys(own).some(k => store.get(KEYS[k], null) != null)) {
+    for (const k of Object.keys(own)) {
+      const old = store.get(KEYS[k], null);
+      if (old != null && store.get(own[k], null) == null) store.set(own[k], old);
+      store.del(KEYS[k]);
+    }
+    store.set('jeecbt.legacy.claimed', ME.username);
+  }
+  Object.assign(KEYS, own);
+}
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 function rich(s) {
   return esc(s)
@@ -727,7 +789,7 @@ const subjOrder = (a, b) => { const ia = KNOWN.indexOf(a), ib = KNOWN.indexOf(b)
 const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
 function show(id) {
-  ['scr-setup', 'scr-ins', 'scr-exam', 'scr-result', 'scr-progress'].forEach(s => { $('#' + s).hidden = s !== id; });
+  ['scr-setup', 'scr-ins', 'scr-exam', 'scr-result', 'scr-progress', 'scr-admin'].forEach(s => { $('#' + s).hidden = s !== id; });
   window.scrollTo(0, 0);
 }
 
@@ -923,7 +985,8 @@ function renderSummary() {
 }
 function renderSetup() {
   $('#pnNote').hidden = true;
-  renderBankLabel(); $('#inName').value = cfg.testName; $('#inCand').value = cfg.candidate;
+  if (ME) cfg.candidate = ME.name;
+  renderBankLabel(); $('#inName').value = cfg.testName; $('#inCand').value = cfg.candidate; $('#inCand').readOnly = !!ME;
   renderDuration(); renderYears(); renderSubjects(); renderPattern(); renderSummary(); renderHistory(); renderResume();
 }
 function refresh() { renderYears(); renderSubjects(); renderSummary(); saveCfg(); }
@@ -1416,7 +1479,15 @@ $('#reviewList').addEventListener('keydown', e => {
 /* ---------- saving attempts to the server (server.py) ----------
    Each finished exam is posted to /api/attempts. If the server is not reachable
    (app opened as a file, or offline) it waits in a queue and is sent on the next load. */
-const onServer = /^https?:$/.test(location.protocol) && !/claude\.ai|claudeusercontent/.test(location.hostname);
+const onServer = !!ME;
+async function api(url, body) {
+  const r = await fetch(url, body === undefined ? {} : { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+  if (r.status === 401) { location.href = 'login'; throw new Error('signed out'); }
+  if (r.status === 403 && (await r.clone().json().catch(() => ({}))).must_change) { location.href = 'login?change=1'; throw new Error('new password needed'); }
+  const d = await r.json().catch(() => ({}));
+  if (!r.ok) throw new Error(d.error || `HTTP ${r.status}`);
+  return d;
+}
 function setSync(ex, msg) { if (shown && ex && shown.id === ex.id) $('#syncStatus').textContent = msg; }
 function queueAttempt(ex) {
   const q = store.get(KEYS.unsynced, []).filter(x => x.id !== ex.id);
@@ -1428,8 +1499,7 @@ async function flushQueue() {
   store.get(KEYS.hist, []).forEach(x => { if (x.submittedAt && !x.synced && !store.get(KEYS.unsynced, []).some(y => y.id === x.id)) queueAttempt(x); });
   for (const ex of store.get(KEYS.unsynced, [])) {
     try {
-      const r = await fetch('api/attempts', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(ex) });
-      if (!r.ok) throw new Error((await r.json().catch(() => ({}))).error || `HTTP ${r.status}`);
+      await api('api/attempts', ex);
       store.set(KEYS.unsynced, store.get(KEYS.unsynced, []).filter(x => x.id !== ex.id));
       const h = store.get(KEYS.hist, []); h.forEach(x => { if (x.id === ex.id) x.synced = true; }); store.set(KEYS.hist, h);
       if (shown && shown.id === ex.id) shown.synced = true;
@@ -1476,10 +1546,11 @@ $('#reviewList').addEventListener('click', e => {
 /* ---------- progress across all saved tests (reads server.py's /api/progress) ---------- */
 const REVIEW_OUTCOMES = [['solved_no_hint', 'Solved it alone'], ['solved_hint1', 'Solved after hint 1'], ['solved_hint2', 'Solved after hint 2'],
   ['saw_solution', 'Looked at the solution'], ['skipped', 'Skipped in the review'], ['open', 'Started, not finished']];
-let progFrom = 'scr-setup';
+let progFrom = 'scr-setup', progUser = null;
 const barsHtml = (rows, of) => `<div class="bars">${rows.map(([l, n]) => `<div><span>${esc(l)} <small>${n} of ${of}</small></span><i><b style="width:${of ? Math.round(n / of * 100) : 0}%"></b></i></div>`).join('')}</div>`;
-async function openProgress() {
-  progFrom = $('#scr-result').hidden ? 'scr-setup' : 'scr-result';
+async function openProgress(who) {
+  progUser = who && who.id ? who : null;      /* an admin looking at a student; null = your own */
+  progFrom = !$('#scr-admin').hidden ? 'scr-admin' : $('#scr-result').hidden ? 'scr-setup' : 'scr-result';
   show('scr-progress');
   const body = $('#progBody');
   $('#progTitle').textContent = 'Progress'; $('#progSub').textContent = 'Every test saved in the progress database';
@@ -1489,19 +1560,18 @@ async function openProgress() {
   }
   body.innerHTML = '<div class="card"><p class="hint" style="margin:0">Loading saved tests…</p></div>';
   try {
-    await flushQueue();
-    const r = await fetch('api/progress');
-    if (!r.ok) throw new Error(`HTTP ${r.status}`);
-    renderProgress(await r.json());
+    if (!progUser) await flushQueue();
+    renderProgress(await api('api/progress' + (progUser ? `?user=${progUser.id}` : '')));
   } catch (e) {
     body.innerHTML = `<div class="card"><h2>Could not load the saved tests</h2><p class="hint">${esc(e.message || e)}. Check that server.py is running.</p></div>`;
   }
 }
 function renderProgress(d) {
   const body = $('#progBody'), atts = d.attempts || [];
-  if (!atts.length) { body.innerHTML = '<div class="card"><h2>No tests saved yet</h2><p class="hint">Take a test; its result is saved here when you submit it.</p></div>'; return; }
+  const who = (d.user && d.user.name) || (atts.length ? atts[atts.length - 1].student : '');
+  if (who) $('#progTitle').textContent = `${who}'s progress`;
+  if (!atts.length) { body.innerHTML = `<div class="card"><h2>No tests saved yet</h2><p class="hint">${progUser ? `${esc(who)} has not submitted a test yet.` : 'Take a test; its result is saved here when you submit it.'}</p></div>`; return; }
   const day = s => s ? new Date(s).toLocaleDateString() : '?';
-  $('#progTitle').textContent = `${atts[atts.length - 1].student}'s progress`;
   $('#progSub').textContent = `${atts.length} saved test${atts.length === 1 ? '' : 's'}, ${day(atts[0].submitted_at)} to ${day(atts[atts.length - 1].submitted_at)}`;
   const order = new Map(atts.map((a, k) => [a.id, k]));
   /* the bank's current chapter tag wins over the one saved with the test, as in tools/analysis_data.py */
@@ -1544,8 +1614,81 @@ function renderProgress(d) {
     `<div class="card"><h2 style="margin-bottom:4px">Shaky areas and guessing</h2>${timeHtml(items, 'over all saved tests')}</div>` +
     `<div class="card"><h2 style="margin-bottom:4px">Chapters over all tests</h2><p class="hint">Totals over every saved test. The last column shows each test that had questions from the chapter (T1 = first test).</p><div class="tbl-wrap"><table class="tbl">${chapTableHtml(chs, trend)}</table></div></div>`;
 }
-$$('[data-progress]').forEach(b => b.addEventListener('click', openProgress));
-$('#progBack').addEventListener('click', () => { if (progFrom === 'scr-result' && shown) show('scr-result'); else { show('scr-setup'); renderSetup(); } });
+$$('[data-progress]').forEach(b => b.addEventListener('click', () => openProgress()));
+$('#progBack').addEventListener('click', () => {
+  if (progFrom === 'scr-admin') openAdmin();
+  else if (progFrom === 'scr-result' && shown) show('scr-result');
+  else { show('scr-setup'); renderSetup(); }
+});
+
+/* ---------- account menu and the Students screen (admins) ---------- */
+let adminFrom = 'scr-setup';
+function renderWho() {
+  if (!ME) return;
+  $$('[data-who]').forEach(el => {
+    el.innerHTML = `<b>${esc(ME.name)}</b>${ME.role === 'admin' ? '<button type="button" data-acc="students">Students</button>' : ''}`
+      + '<button type="button" data-acc="password">Change password</button><button type="button" data-acc="out">Sign out</button>';
+    el.hidden = false;
+  });
+}
+document.addEventListener('click', async e => {
+  const b = e.target.closest('[data-acc]'); if (!b) return;
+  if (b.dataset.acc === 'students') openAdmin();
+  else if (b.dataset.acc === 'password') location.href = 'login?change=1';
+  else if (b.dataset.acc === 'out') {
+    persist();
+    await fetch('api/logout', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: '{}' }).catch(() => {});
+    location.href = 'login';
+  }
+});
+const when = s => s ? new Date(s).toLocaleString([], { dateStyle: 'medium', timeStyle: 'short' }) : '–';
+async function openAdmin() {
+  if (!$('#scr-admin').hidden || !$('#scr-progress').hidden) { /* keep where Back should return to */ } else adminFrom = $('#scr-result').hidden ? 'scr-setup' : 'scr-result';
+  show('scr-admin');
+  $('#admTbl').innerHTML = '<tr><td>Loading…</td></tr>';
+  try {
+    const d = await api('api/admin/users');
+    $('#admTbl').innerHTML = '<tr><th class="l">Name</th><th class="l">Username</th><th class="l">Status</th><th>Tests</th><th class="l">Last test</th><th>Last score</th><th class="l">Last sign-in</th><th></th></tr>'
+      + d.users.map(u => `<tr><td class="l">${esc(u.name)}${u.role === 'admin' ? ' <small>(admin)</small>' : ''}</td><td class="l">${esc(u.username)}</td>`
+        + `<td class="l">${!u.active ? '<span class="tag-off">Off</span>' : u.must_change ? 'Not signed in yet' : 'Active'}</td>`
+        + `<td class="num">${u.tests}</td><td class="l">${when(u.last_test)}</td><td class="num">${u.last_score ? esc(u.last_score.replace(/\.0\b/g, '')) : '–'}</td><td class="l">${when(u.last_login)}</td>`
+        + `<td><button type="button" class="btn btn-line btn-sm" data-adm="prog" data-id="${u.id}" data-name="${esc(u.name)}">Progress</button>`
+        + (u.id === ME.id ? '' : `<button type="button" class="btn btn-line btn-sm" data-adm="reset" data-id="${u.id}" data-name="${esc(u.name)}">New password</button>`
+          + `<button type="button" class="btn btn-line btn-sm" data-adm="${u.active ? 'off' : 'on'}" data-id="${u.id}" data-name="${esc(u.name)}">${u.active ? 'Turn off' : 'Turn on'}</button>`)
+        + '</td></tr>').join('');
+    $('#admNote').textContent = d.unowned_tests ? `${d.unowned_tests} test(s) were saved before accounts existed and belong to nobody yet. Give them to a student with: python tools/manage_users.py assign-tests <username>` : '';
+  } catch (err) { $('#admTbl').innerHTML = `<tr><td class="l">Could not load the students: ${esc(err.message)}</td></tr>`; }
+}
+function admSay(html, bad) { const o = $('#admOut'); o.innerHTML = html; o.className = bad ? 'otp err' : 'otp'; o.hidden = false; }
+const otpHtml = (name, user, otp) => `Give <b>${esc(name)}</b> these, privately (they will choose their own password at the first sign-in):<br>`
+  + `Address: <code>${esc(location.origin)}</code><br>Username: <code>${esc(user)}</code><br>One-time password: <code>${esc(otp)}</code>`;
+$('#admAdd').addEventListener('submit', async e => {
+  e.preventDefault();
+  const name = $('#admName').value.trim(), user = $('#admUser').value.trim().toLowerCase();
+  try {
+    const d = await api('api/admin/users', { name, username: user });
+    admSay(otpHtml(name, d.username, d.one_time_password)); $('#admName').value = ''; $('#admUser').value = '';
+    openAdmin();
+  } catch (err) { admSay(esc(err.message), true); }
+});
+$('#admTbl').addEventListener('click', async e => {
+  const b = e.target.closest('[data-adm]'); if (!b) return;
+  const id = +b.dataset.id, name = b.dataset.name;
+  if (b.dataset.adm === 'prog') { openProgress({ id, name }); return; }
+  try {
+    if (b.dataset.adm === 'reset') {
+      if (!confirm(`Make a new one-time password for ${name}? Their current password stops working.`)) return;
+      const d = await api(`api/admin/users/${id}/reset`, {});
+      const row = b.closest('tr').children[1].textContent;
+      admSay(otpHtml(name, row, d.one_time_password));
+    } else {
+      if (b.dataset.adm === 'off' && !confirm(`Turn off ${name}'s account? They cannot sign in until you turn it on again. Their tests are kept.`)) return;
+      await api(`api/admin/users/${id}/active`, { active: b.dataset.adm === 'on' });
+    }
+    openAdmin();
+  } catch (err) { admSay(esc(err.message), true); }
+});
+$('#admBack').addEventListener('click', () => { if (adminFrom === 'scr-result' && shown) show('scr-result'); else { show('scr-setup'); renderSetup(); } });
 
 /* "Practise next": tick only the weak chapters (all years) in the normal setup filters */
 document.addEventListener('click', e => {
@@ -1677,6 +1820,7 @@ window.addEventListener('pagehide', persist);
 document.addEventListener('keydown', e => { if (e.key === 'Escape') { $('#mBank').hidden = true; $('#mSubmit').hidden = true; $('#pal').classList.remove('open'); } });
 
 resetSelection();
+renderWho();
 renderSetup();
 show('scr-setup');
 flushQueue();

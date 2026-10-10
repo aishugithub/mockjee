@@ -9,3 +9,6 @@ data/
 
 # local test launcher (scratch paths)
 .claude/launch.json
+
+# deploy zips (tools/make_deploy_bundle.py)
+dist/

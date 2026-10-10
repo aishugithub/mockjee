@@ -2,7 +2,8 @@
 Facts for the jee-analysis skill: reads Akil's attempt database and the question bank and prints
 one JSON document with everything the analysis needs, already counted. Read-only.
 
-Usage:  python tools/analysis_data.py [--db data/akil.db] [--attempts ID,ID] [--since 2026-10-01] [--out facts.json]
+Usage:  python tools/analysis_data.py --user akil [--db data/akil.db] [--attempts ID,ID] [--since 2026-10-01] [--out facts.json]
+        (--user picks the student; databases from before accounts existed have one student and need no --user)
 
 What it contains
   attempts     one row per test (score, counts, time, date)
@@ -29,9 +30,25 @@ def load_bank():
     return {q['id']: q for q in bank}
 
 
+def user_id(con, username):
+    """users.id for a username; None for databases made before accounts existed (one student only)."""
+    if not con.execute("SELECT 1 FROM sqlite_master WHERE name = 'users'").fetchone():
+        if username:
+            sys.exit('This database has no accounts yet; leave out --user.')
+        return None
+    if not username:
+        names = [r[0] for r in con.execute("SELECT username FROM users WHERE role = 'student' ORDER BY username")]
+        sys.exit('Say whose tests to use with --user <username>. Students: ' + (', '.join(names) or 'none yet'))
+    row = con.execute('SELECT id FROM users WHERE username = ?', (username.lower(),)).fetchone()
+    if not row:
+        sys.exit(f'No user "{username}".')
+    return row[0]
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--db', default=os.environ.get('JEE_DB_PATH', os.path.join(ROOT, 'data', 'akil.db')))
+    ap.add_argument('--user', help='username of the student to analyse')
     ap.add_argument('--attempts', help='comma-separated attempt ids (default: all)')
     ap.add_argument('--since', help='only attempts submitted on or after this date (YYYY-MM-DD)')
     ap.add_argument('--out', help='write to this file instead of stdout')
@@ -41,7 +58,8 @@ def main():
     con = sqlite3.connect(a.db); con.row_factory = sqlite3.Row
     bank = load_bank()
 
-    where, args = [], []
+    uid = user_id(con, a.user)
+    where, args = ([], []) if uid is None else (['user_id = ?'], [uid])
     if a.attempts:
         ids = a.attempts.split(','); where.append(f"id IN ({','.join('?' * len(ids))})"); args += ids
     if a.since:
@@ -57,7 +75,8 @@ def main():
     resp = [dict(r) for r in con.execute(f'SELECT * FROM responses WHERE attempt_id IN ({ph}) ORDER BY attempt_id, q_index', ids)]
     has_practice = con.execute("SELECT 1 FROM sqlite_master WHERE name = 'practice'").fetchone()
     prac = {(r['attempt_id'], r['q_index']): dict(r) for r in con.execute(f'SELECT * FROM practice WHERE attempt_id IN ({ph})', ids)} if has_practice else {}
-    flags = [dict(r) for r in con.execute("SELECT * FROM flags WHERE status != 'resolved'")]
+    flags = [dict(r) for r in con.execute("SELECT * FROM flags WHERE status != 'resolved'" + ('' if uid is None else ' AND user_id = ?'),
+                                          () if uid is None else (uid,))]
     when = {x['id']: x['submitted_at'] for x in attempts}
 
     times = [r['time_ms'] / 1000 for r in resp if r['attempted'] and r['time_ms']]

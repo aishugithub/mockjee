@@ -12,7 +12,10 @@ and must be labelled that way. Never present a guess as a fact.
 ## 1. Get the data
 - The database is `data/akil.db`. If the owner uses the online copy (PythonAnywhere), first run
   `python tools/pull_db.py`. It uses `JEE_SERVER_URL` / `JEE_EXPORT_KEY` from `.secrets`. Never ask for the PythonAnywhere password.
-- Run `python tools/analysis_data.py --out <scratchpad>/facts.json`. Add `--since YYYY-MM-DD` or
+- The database has accounts: Akil and his friends. Analyse one student at a time with `--user <username>`
+  (Akil's is `akil`; `python tools/manage_users.py list` shows the others). Default: Akil, unless the owner names someone.
+  Their reasons, flags and report are theirs only; never mix students.
+- Run `python tools/analysis_data.py --user <username> --out <scratchpad>/facts.json`. Add `--since YYYY-MM-DD` or
   `--attempts id1,id2` when the owner asks about specific tests. Default is all attempts.
 - Read facts.json. It holds the counts. Do the reasoning yourself, and never recount by hand what the script already counted.
 - To see a question itself, open the image at `pyq/<year>/<shift>/img/<question_id>.png` (the source line names the shift).
@@ -60,6 +63,6 @@ End with: "Analysis written by Claude from Akil's recorded attempts."
 ## 5. Save
 - Write `<scratchpad>/result.json` in the format documented at the top of `tools/save_analysis.py`
   (`attempts`, `summary` = the report, `flags`).
-- Run `python tools/save_analysis.py <scratchpad>/result.json`. Flags then show in the app (`/api/flags`).
+- Run `python tools/save_analysis.py <scratchpad>/result.json --user <username>`. Flags then show in that student's app (`/api/flags`).
 - If the owner uses PythonAnywhere, the saved flags live only in the local copy until the database is uploaded back. Say so; don't upload it yourself.
 - Show the owner the report in the chat and offer to publish it as a page.

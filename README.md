@@ -87,17 +87,30 @@ An array of objects with the same fields as `questions.js` (`options` as an arra
 
 ## Running it
 
-Open `index.html` in a browser, or serve the folder:
+With accounts and saved progress (the normal way):
 
 ```
-cd jee-mock-test
-python3 -m http.server 8000
+python server.py
 ```
 
-To put it online, enable GitHub Pages for the repository and point it at the branch, or drag the folder into Netlify. PDF generation loads `html2canvas` and `jsPDF` from cdnjs, so it needs an internet connection.
+then open http://localhost:8000 and sign in. The first time, make your own admin account:
+`python tools/manage_users.py add-admin <username> "<your name>"` (you type the password; it is not shown).
+
+**Accounts.** There is no public sign-up. The admin adds each student (Students page, or
+`python tools/manage_users.py add <username> "<name>"`) and gives them a one-time password; at the first sign-in
+they choose their own. A student sees only their own tests and progress; the admin sees everyone and can open any
+student's progress, make a new one-time password, or switch an account off. Passwords are stored only as hashes.
+
+**Online for friends:** see [DEPLOY.md](DEPLOY.md) (PythonAnywhere free account).
+
+Without the server, `index.html` still works opened as a file (no accounts; results stay in that browser).
+PDF generation loads `html2canvas` and `jsPDF` from cdnjs, so it needs an internet connection.
 
 ## Files
 
-- `index.html`: the whole app (UI, exam engine, scoring, PDF report)
+- `index.html`: the whole app (UI, exam engine, scoring, PDF report, Students page for admins)
+- `server.py`: serves the app, accounts and sign-in, saves every test to SQLite (`data/akil.db`)
+- `login.html`: sign-in and choose-your-password page
+- `tools/manage_users.py`: accounts from the command line; `tools/make_deploy_bundle.py`: zips for PythonAnywhere
 - `questions.js`: built-in sample bank and schema notes
 - `verify_answers.py`: independent check of the sample answer keys
