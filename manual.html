@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Manual · JEE Mock CBT</title>
+<style>
+:root {
+  color-scheme: light;
+  --paper: #eef1f5; --card: #ffffff; --ink: #17212f; --muted: #5a6677; --line: #d4dbe5;
+  --blue: #1f5fa8; --blue-deep: #15406f; --blue-wash: #e6eef8;
+  --green: #2a7a3d; --green-wash: #e3f3e7; --amber: #8a5a00; --amber-wash: #fdf3dc; --red: #b3352a; --red-wash: #fbe7e4;
+  --code: #f3f5f8;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.6 "Segoe UI", Roboto, Arial, sans-serif; }
+a { color: var(--blue); }
+header { background: var(--blue-deep); color: #fff; padding: 20px 16px; }
+header .in, main { max-width: 900px; margin: 0 auto; }
+header h1 { margin: 0; font-size: 26px; line-height: 1.2; }
+header p { margin: 6px 0 0; opacity: .85; font-size: 15px; }
+main { padding: 16px; }
+nav.toc { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 14px 18px; margin-bottom: 18px; }
+nav.toc ol { margin: 6px 0 0; padding-left: 22px; columns: 2; column-gap: 32px; }
+nav.toc li { break-inside: avoid; }
+section { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 6px 20px 16px; margin-bottom: 18px; }
+h2 { font-size: 21px; margin: 16px 0 8px; color: var(--blue-deep); }
+h3 { font-size: 17px; margin: 18px 0 6px; }
+code, pre { font-family: Consolas, "Courier New", monospace; font-size: 14px; background: var(--code); border-radius: 4px; }
+code { padding: 1px 5px; overflow-wrap: anywhere; }
+pre { padding: 10px 12px; overflow-x: auto; border: 1px solid var(--line); white-space: pre; }
+table { border-collapse: collapse; width: 100%; font-size: 15px; margin: 8px 0; }
+th, td { border: 1px solid var(--line); padding: 6px 9px; text-align: left; vertical-align: top; }
+th { background: var(--blue-wash); }
+.wrap { overflow-x: auto; }
+.box { border-radius: 6px; padding: 10px 14px; margin: 10px 0; }
+.ok { background: var(--green-wash); } .warn { background: var(--amber-wash); } .bad { background: var(--red-wash); } .info { background: var(--blue-wash); }
+.tag { display: inline-block; font-size: 13px; font-weight: 600; padding: 1px 8px; border-radius: 10px; white-space: nowrap; }
+.tag.done { background: var(--green-wash); color: var(--green); }
+.tag.part { background: var(--amber-wash); color: var(--amber); }
+.tag.todo { background: var(--red-wash); color: var(--red); }
+ol.steps > li, ul > li { margin: 4px 0; }
+details { margin: 8px 0; }
+summary { cursor: pointer; font-weight: 600; }
+footer { text-align: center; color: var(--muted); font-size: 13px; padding: 8px 16px 28px; }
+@media (max-width: 640px) { nav.toc ol { columns: 1; } section { padding: 4px 14px 14px; } header h1 { font-size: 22px; } }
+@media print { body { background: #fff; } section, nav.toc { border: 0; } header { background: #fff; color: #000; } }
+</style>
+</head>
+<body>
+<header><div class="in">
+  <h1>JEE Mock CBT: the manual</h1>
+  <p>How to run it, how to use it, what is finished and what is not. Last updated 17 Oct 2026.</p>
+</div></header>
+
+<main>
+<nav class="toc"><b>Contents</b>
+<ol>
+  <li><a href="#what">What this site is for</a></li>
+  <li><a href="#start">Start it on your computer</a></li>
+  <li><a href="#student">For students: taking a test</a></li>
+  <li><a href="#admin">For the admin: accounts</a></li>
+  <li><a href="#online">Putting it online (PythonAnywhere)</a></li>
+  <li><a href="#bank">What is in the question bank</a></li>
+  <li><a href="#status">Done and not done</a></li>
+  <li><a href="#waiting">Waiting for the owner or a teacher</a></li>
+  <li><a href="#honest">Honesty rules</a></li>
+  <li><a href="#stuck">When you are stuck</a></li>
+  <li><a href="#builders">For whoever continues the work</a></li>
+  <li><a href="#words">Words used on the site</a></li>
+</ol></nav>
+
+<section id="what">
+<h2>1. What this site is for</h2>
+<p>Many sites already run mock tests from old JEE Main papers. This one is built to <b>diagnose</b> a student
+(Akil, and since 10 Oct 2026 his friends, each with their own account):</p>
+<ul>
+  <li>which <b>chapters</b> he is strong or weak in, and</li>
+  <li><b>why</b> he gets questions wrong.</li>
+</ul>
+<p>Many wrong options in JEE are <b>traps</b>: exactly the answer you get by making one particular mistake.
+When the student picks one, the site names that mistake, for example "used the full-plate formula for a half-filled capacitor".</p>
+<p>It uses real questions from NTA's public JEE Main papers (as NTA's own images) with answers from NTA's <b>final</b> answer key.</p>
+</section>
+
+<section id="start">
+<h2>2. Start it on your computer</h2>
+<h3>Once only: install</h3>
+<ol class="steps">
+  <li>Install Python 3 from python.org (tick "Add Python to PATH" during install).</li>
+  <li>Open a terminal in the project folder (<code>C:\Akil\MOCK JEE</code>) and run:
+<pre>pip install flask</pre></li>
+  <li>Make your own admin account. Replace the username and name; you then type a password (it is not shown on screen):
+<pre>python tools/manage_users.py add-admin admin "Your Name"</pre></li>
+  <li>Akil's account already exists on this computer. To add another student (it prints a one-time password to give them):
+<pre>python tools/manage_users.py add ravi "Ravi Kumar"</pre></li>
+</ol>
+<h3>Every time</h3>
+<ol class="steps">
+  <li>Double-click <b><code>run_app.bat</code></b> in the project folder. (Or run <code>python server.py</code>.)</li>
+  <li>The browser opens <b><a href="http://localhost:8000">http://localhost:8000</a></b>. Sign in.</li>
+  <li>Keep the black window open while using the site. Closing it stops the site.</li>
+</ol>
+<div class="box info">On this computer the tests are saved in <code>data/akil.db</code>. Don't delete the <code>data</code> folder: it holds every student's history.</div>
+</section>
+
+<section id="student">
+<h2>3. For students: taking a test</h2>
+<ol class="steps">
+  <li><b>Sign in</b> with the username and one-time password you were given. Choose your own password (8+ characters).</li>
+  <li><b>Set up the test</b>: duration in minutes, which years, which subjects or chapters, and the marking (default +4 / −1).
+     Chapters marked "Not in current syllabus" are unticked by default.</li>
+  <li><b>Take the test</b>. The screen works like the real NTA exam:
+    <ul>
+      <li><b>Save &amp; Next</b> saves your answer. Moving away without saving does <i>not</i> save it (same as the real exam).</li>
+      <li><b>Mark for Review</b> to come back later. "Answered &amp; Marked for Review" still counts.</li>
+      <li>Numerical answers are typed with the on-screen keypad.</li>
+      <li>If the page closes by accident, open it again: the test resumes, but the clock keeps running.</li>
+    </ul></li>
+  <li><b>Submit</b>. The result appears straight away:
+    <ul>
+      <li>score, marks gained and lost;</li>
+      <li>a <b>chapter table</b>: attempted, correct, wrong, skipped, accuracy, marks lost, average time;</li>
+      <li><b>strong and weak chapters</b> (only chapters with 4 or more attempted questions are judged);</li>
+      <li><b>slow but correct</b> questions (shaky areas) and <b>wrong in under 30 seconds</b> (likely guesses).</li>
+    </ul></li>
+  <li><b>Answer review</b> (most important part). Each wrong or skipped question opens with the answer hidden. You can:
+    <ul>
+      <li><b>Retry</b> it (practice only, the score does not change),</li>
+      <li>open <b>Hint 1</b>, then <b>Hint 2</b>,</li>
+      <li>see the <b>full solution</b>, or</li>
+      <li><b>Skip</b> it. Skipping is allowed: nobody scores 100%, and choosing what to leave is part of JEE.</li>
+    </ul>
+    For each wrong answer, tap <b>why</b> you got it wrong: didn't know the concept / silly concept mistake / silly calculation mistake /
+    forgot a formula or fact / misread the question / rushed. Please be honest: this is what makes the diagnosis useful.</li>
+  <li>If your wrong option is a known trap, the review shows <b>"Likely trap (Claude's analysis)"</b> and names the mistake.
+     It appears only after you solve it, see the solution or skip, so it never acts as a hint.</li>
+  <li><b>Progress across tests</b> (button on the setup and result screens): all your tests together, chapter trends,
+     your own reasons ("silly calculation mistake: 2 of 8"), traps you fell into, how far you needed hints, timing.</li>
+  <li><b>Practise next</b>: one click ticks only your weak chapters in the setup, ready for the next test.</li>
+  <li><b>PDF report</b>: download from the result screen. It has the chapter table, strong and weak chapters, and every question with your answer, the key, the likely trap and the solution.</li>
+</ol>
+</section>
+
+<section id="admin">
+<h2>4. For the admin: accounts</h2>
+<p>There is <b>no public sign-up</b>. The admin creates every account. Each student sees only their own tests; the admin sees everyone.</p>
+<h3>In the app (easiest)</h3>
+<p>Account menu (top right) → <b>Students</b>:</p>
+<ul>
+  <li><b>Add a student</b>: name + username. A one-time password is shown <b>once</b>: send it privately. The student must change it at first sign-in.</li>
+  <li><b>New password</b>: for a forgotten password. Gives a new one-time password.</li>
+  <li><b>Turn off / Turn on</b>: stop someone using it. Their tests are kept.</li>
+  <li>Open any student's <b>progress</b>.</li>
+</ul>
+<h3>From the terminal (same things)</h3>
+<div class="wrap"><table>
+<tr><th>Command</th><th>What it does</th></tr>
+<tr><td><code>python tools/manage_users.py add-admin &lt;username&gt; "&lt;name&gt;"</code></td><td>Admin account; you type the password</td></tr>
+<tr><td><code>python tools/manage_users.py add &lt;username&gt; "&lt;name&gt;"</code></td><td>Student; prints a one-time password</td></tr>
+<tr><td><code>python tools/manage_users.py reset &lt;username&gt;</code></td><td>New one-time password</td></tr>
+<tr><td><code>python tools/manage_users.py off &lt;username&gt;</code> / <code>on</code></td><td>Switch an account off or on</td></tr>
+<tr><td><code>python tools/manage_users.py list</code></td><td>List all accounts</td></tr>
+<tr><td><code>python tools/manage_users.py assign-tests &lt;username&gt;</code></td><td>Give tests saved before accounts existed to this user</td></tr>
+</table></div>
+<div class="box warn"><b>Privacy:</b> passwords are stored only as scrambled hashes, so nobody (not even the admin) can read them.
+Friends are minors: ask their parents before adding them. Deleting an account together with its tests is <b>not built yet</b>.</div>
+<h3>Deeper analysis by Claude</h3>
+<p>In Claude Code, in this project, say <b>"analyse Akil's tests"</b>. The <i>jee-analysis</i> skill reads the saved tests, finds weak chapters and the reasons he loses marks, and writes a report.
+Online tests must first be downloaded with <code>python tools/pull_db.py</code> (see section 5).</p>
+</section>
+
+<section id="online">
+<h2>5. Putting it online (PythonAnywhere)</h2>
+<div class="box bad"><b>Status: not online yet.</b> It needs the owner's PythonAnywhere account. Full steps are also in <code>DEPLOY.md</code>.</div>
+<p>Free account limits (checked 10 Oct 2026): 512 MB disk, 1 web app, uploads up to 100 MB each.
+<b>The free web app stops after 1 month</b> unless you extend it on the <b>Web</b> tab. Set a monthly reminder. Data is kept while it is stopped.</p>
+<ol class="steps">
+  <li>On this computer, make the zip parts (about 270 MB in total, at most 80 MB each). <code>--with-db</code> includes the saved tests:
+<pre>python tools/make_deploy_bundle.py --with-db</pre>
+     They appear in the <code>dist</code> folder.</li>
+  <li>Create a free <b>Beginner</b> account at pythonanywhere.com. Your username becomes the address: <code>https://&lt;username&gt;.pythonanywhere.com</code>.</li>
+  <li>Upload and unzip <b>one part at a time</b> (they don't all fit at once). <b>Files</b> tab: upload <code>jee_part1.zip</code> to your home folder. Then a <b>Bash console</b>:
+<pre>cd ~ &amp;&amp; unzip -o -q jee_part1.zip &amp;&amp; rm jee_part1.zip &amp;&amp; du -sh ~/mockjee</pre>
+     Repeat for part 2, part 3 and so on.</li>
+  <li><b>Web</b> tab → Add a new web app → <b>Manual configuration</b> (not "Flask") → newest Python 3.</li>
+  <li>Open the <b>WSGI configuration file</b>, delete everything, paste this (put your username in), and save:
+<pre>import os, sys
+os.environ['JEE_SECURE_COOKIE'] = '1'
+path = '/home/&lt;username&gt;/mockjee'
+if path not in sys.path:
+    sys.path.insert(0, path)
+os.chdir(path)
+from server import app as application</pre></li>
+  <li>Web tab: <b>Static files</b>: URL <code>/pyq/</code>, directory <code>/home/&lt;username&gt;/mockjee/pyq/</code>. Switch on <b>Force HTTPS</b>. Press the green <b>Reload</b>.</li>
+  <li>Bash console: make your admin account, then Akil's:
+<pre>cd ~/mockjee &amp;&amp; python3 tools/manage_users.py add-admin admin "Your Name"
+python3 tools/manage_users.py add akil "Akil"
+python3 tools/manage_users.py assign-tests akil</pre></li>
+  <li>Open the site, sign in as admin, add friends on the <b>Students</b> page.</li>
+</ol>
+<h3>Later</h3>
+<ul>
+  <li><b>Every month:</b> Web tab → extend the web app.</li>
+  <li><b>Updating the app:</b> make the bundle again <b>without</b> <code>--with-db</code> (otherwise the online tests are overwritten), upload and unzip only part 1, then Reload.</li>
+  <li><b>This manual online:</b> <code>https://&lt;username&gt;.pythonanywhere.com/manual</code>. It opens without signing in, so you can read it even when you can't log in. It contains no passwords or personal data.</li>
+  <li><b>Downloading the online database</b> for analysis: put the same <code>JEE_EXPORT_KEY=&lt;long random text&gt;</code> in <code>.secrets</code> on both sides
+     (on this computer also <code>JEE_SERVER_URL=https://&lt;username&gt;.pythonanywhere.com</code>), Reload, then run <code>python tools/pull_db.py</code>.
+     Keep <code>.secrets</code> private. Never share the PythonAnywhere password.</li>
+</ul>
+</section>
+
+<section id="bank">
+<h2>6. What is in the question bank</h2>
+<div class="wrap"><table>
+<tr><th></th><th>2026 (Session 2)</th><th>2024 (Sessions 1 &amp; 2)</th><th>2023 (Session 2)</th><th>Total</th></tr>
+<tr><td>Shifts</td><td>9</td><td>17</td><td>12</td><td><b>38</b></td></tr>
+<tr><td>Questions</td><td>673</td><td>1,521</td><td>1,070</td><td><b>3,264</b></td></tr>
+<tr><td>Chapter tags</td><td>all</td><td>all</td><td>all</td><td><b>100%</b></td></tr>
+<tr><td>Worked solutions with 2 hints</td><td>671</td><td>1,515</td><td>1,066</td><td><b>3,252</b> (12 held back)</td></tr>
+<tr><td>Trap analysis</td><td>66 (2 Apr Shift 1 only)</td><td>0</td><td>0</td><td><b>66</b></td></tr>
+</table></div>
+<ul>
+  <li><b>Not available from public documents:</b> 2025 papers (NTA shows them only inside a candidate's login, which we never use) and 2026 Session 1 papers.</li>
+  <li>2024 shifts have 90 questions (10 numericals per subject); the others have 75.</li>
+  <li>Questions NTA dropped are left out. Where NTA accepted two answers, either one scores.</li>
+  <li>There are also 84 <b>original practice questions</b> (<code>questions.js</code>). They are <b>not</b> NTA questions; their year is only a demo tag, and the site labels them that way.</li>
+</ul>
+</section>
+
+<section id="status">
+<h2>7. Done and not done</h2>
+<div class="wrap"><table>
+<tr><th>Part</th><th>Status</th><th>Notes</th></tr>
+<tr><td>Real NTA papers loaded (38 shifts)</td><td><span class="tag done">Done</span></td><td>NTA's own images, final answer key, source on every question</td></tr>
+<tr><td>1. Chapter tagging</td><td><span class="tag done">Done</span> 28 Sep</td><td>All 3,264 questions, NTA 2026 syllabus units. 90 tags are low confidence (teacher to check)</td></tr>
+<tr><td>2. Worked solutions + hints</td><td><span class="tag done">Done</span> 9 Oct</td><td>All 38 shifts. Every answer checked against NTA's key; 12 disagreements held back (section 8)</td></tr>
+<tr><td>3. Trap analysis</td><td><span class="tag part">1 of 38 shifts</span></td><td>2026, 2 Apr Shift 1 done (186 rows: 68 real traps, 118 "no clear mistake path"). <b>Waiting for the owner's review</b> before the other 37</td></tr>
+<tr><td>4. Analysis in the app</td><td><span class="tag done">Done</span> 10 Oct</td><td>Chapter table, strong/weak, slow/guess, likely traps, progress view, Practise next, PDF</td></tr>
+<tr><td>5. Test history (database)</td><td><span class="tag done">Done</span> 28 Sep</td><td>Every answer, time, change of answer, his reasons, hint steps</td></tr>
+<tr><td>6. Accounts for friends</td><td><span class="tag done">Built</span> 10 Oct</td><td>Tested locally. Admin account on this computer not made yet</td></tr>
+<tr><td>Online (PythonAnywhere)</td><td><span class="tag todo">Not done</span></td><td>Needs the owner's account (section 5)</td></tr>
+<tr><td>Deleting an account with its tests</td><td><span class="tag todo">Not built</span></td><td>Ask Claude if a parent asks for it</td></tr>
+<tr><td>Leaderboard</td><td>Not planned</td><td>Owner chose not to</td></tr>
+<tr><td>claude.ai Artifact copy</td><td><span class="tag part">Old</span></td><td>An older copy without accounts, progress or PYQ images. Use the real site</td></tr>
+</table></div>
+</section>
+
+<section id="waiting">
+<h2>8. Waiting for the owner or a teacher</h2>
+<ol class="steps">
+  <li><b>Review the trap analysis</b> of 2026, 2 Apr Shift 1: open <code>pyq/2026/02Apr_Shift1/traps_review.html</code> by double-clicking it.
+     The green option is NTA's key; each wrong option shows the mistake that leads to it and how it was checked. Note any trap that looks wrong or far-fetched (question number + option).</li>
+  <li><b>Approve the cut-offs</b>: strong = 75% accuracy or more, weak = under 50%, and only after 4 or more attempted questions in a chapter.</li>
+  <li><b>Low-confidence chapter tags</b>: <code>pyq/low_confidence_tags.csv</code> (90 questions).</li>
+  <li><b>12 disputed questions</b>, where Claude's answer differs from NTA's final key. They are kept out of the bank until someone decides. NTA's key was <b>not</b> changed.
+<div class="wrap"><table>
+<tr><th>Paper</th><th>Q</th><th>Topic</th><th>Claude</th><th>NTA key</th></tr>
+<tr><td>2026, 4 Apr Shift 2</td><td>61</td><td>Bond lengths</td><td colspan="2">order differs</td></tr>
+<tr><td>2026, 6 Apr Shift 1</td><td>50</td><td>Isothermal work</td><td>989</td><td>600</td></tr>
+<tr><td>2024, 31 Jan Shift 2</td><td>86</td><td>H⁺ per MnO₄⁻ with oxalate</td><td>8</td><td>4</td></tr>
+<tr><td>2024, 1 Feb Shift 1</td><td>48</td><td>Zener series resistor</td><td>429–600 Ω, no option fits</td><td>1 kΩ</td></tr>
+<tr><td>2024, 1 Feb Shift 2</td><td>35</td><td>Disc up a smooth incline</td><td>v²/2g</td><td>3v²/4g</td></tr>
+<tr><td>2024, 1 Feb Shift 2</td><td>42</td><td>Ammeter, 5% through G</td><td>G/20 (not an option)</td><td>G/200</td></tr>
+<tr><td>2024, 5 Apr Shift 2</td><td>63</td><td>HCl into saturated NaCl</td><td>both true (1)</td><td>3</td></tr>
+<tr><td>2024, 6 Apr Shift 1</td><td>89</td><td>π electrons in A + B</td><td>6</td><td>8</td></tr>
+<tr><td>2023, 6 Apr Shift 2</td><td>50</td><td>Dipole of masses m, 2m</td><td>√(3qE/2ml), not an option</td><td>√(4qE/3ml)</td></tr>
+<tr><td>2023, 11 Apr Shift 1</td><td>89</td><td>Hyperconjugation structures</td><td>4 (or 2)</td><td>7</td></tr>
+<tr><td>2023, 13 Apr Shift 1</td><td>64</td><td>"Not correct" periodic statements</td><td>A, D (not an option)</td><td>A, C, D</td></tr>
+<tr><td>2023, 15 Apr Shift 1</td><td>70</td><td>Largest Δo among aqua ions</td><td>Mn³⁺ (3)</td><td>Cr³⁺ (2)</td></tr>
+</table></div>
+     Also 2024, 1 Feb Shift 1 Q37: NTA's final key names an option ID that matches no option, so it is left out.</li>
+  <li><b>"Agreed, but worth a teacher's look"</b>: about 200 questions where Claude agrees with the key but the wording, figure or data is shaky.
+     The list is in <code>CLAUDE.md</code> (step 2), and each shift's <code>solutions_review.html</code> shows the notes.</li>
+</ol>
+</section>
+
+<section id="honest">
+<h2>9. Honesty rules (the owner's top priority)</h2>
+<ul>
+  <li>A question is called a real PYQ <b>only</b> if it came from an official NTA paper. The 84 practice questions are labelled as practice.</li>
+  <li>Every real question carries its source (paper, shift, question ID). Answers come from NTA's <b>final</b> key, never the provisional key or coaching sites.</li>
+  <li>Only public NTA documents are used. <b>Never</b> a candidate's login.</li>
+  <li>Solutions, hints, chapter tags and traps are <b>written by Claude</b> and labelled that way, never as NTA's. When Claude disagrees with NTA's key, the key is not changed: the question is flagged.</li>
+  <li>A trap is written only when the mistake really leads to that option. Otherwise it says "No clear mistake path", and nothing is made up.</li>
+  <li>A subject teacher should spot-check solutions and traps, especially those marked "conceptual" (not checked by a script).</li>
+</ul>
+</section>
+
+<section id="stuck">
+<h2>10. When you are stuck</h2>
+<div class="wrap"><table>
+<tr><th>Problem</th><th>What to do</th></tr>
+<tr><td><code>python</code> is not recognised</td><td>Install Python 3 from python.org and tick "Add Python to PATH". Open a new terminal.</td></tr>
+<tr><td><code>No module named flask</code></td><td><code>pip install flask</code></td></tr>
+<tr><td>"Address already in use" / port 8000 busy</td><td>The site is probably already running in another black window. Use that one, or close it and start again.</td></tr>
+<tr><td>Page says "This site can't be reached"</td><td>The black window (server) is closed. Double-click <code>run_app.bat</code> again.</td></tr>
+<tr><td>Can't sign in on this computer: no admin account</td><td><code>python tools/manage_users.py add-admin admin "Your Name"</code></td></tr>
+<tr><td>Student forgot the password</td><td>Students page → New password, or <code>python tools/manage_users.py reset &lt;username&gt;</code></td></tr>
+<tr><td>"Too many attempts" at sign-in</td><td>After 8 wrong passwords the account waits 15 minutes. Wait, or reset the password.</td></tr>
+<tr><td>Question pictures missing</td><td>Open the site through the server (<code>http://localhost:8000</code>), not by double-clicking <code>index.html</code>. Online: check the <code>/pyq/</code> static files entry on the Web tab.</td></tr>
+<tr><td>A test was submitted with no internet / server off</td><td>It waits in the browser and is sent automatically the next time the site opens with the server running.</td></tr>
+<tr><td>Online site shows an error</td><td>PythonAnywhere Web tab → <b>Error log</b>: the last lines say what went wrong. Then press Reload.</td></tr>
+<tr><td>Online site stopped working after a month</td><td>The free web app expired. Web tab → extend it, then Reload. Data is kept.</td></tr>
+<tr><td>Progress view says the server is needed</td><td>Progress uses the database, so open the site through the server, not the file.</td></tr>
+<tr><td>Anything else</td><td>Open Claude Code in this project folder and describe the problem. <code>CLAUDE.md</code> holds the full technical notes.</td></tr>
+</table></div>
+</section>
+
+<section id="builders">
+<h2>11. For whoever continues the work</h2>
+<details><summary>Main files</summary>
+<div class="wrap"><table>
+<tr><th>File</th><th>What it is</th></tr>
+<tr><td><code>index.html</code></td><td>The whole app: setup, exam, scoring, review, progress, PDF</td></tr>
+<tr><td><code>server.py</code>, <code>login.html</code></td><td>Server, accounts, sign-in, the database (<code>data/akil.db</code>)</td></tr>
+<tr><td><code>manual.html</code></td><td>This manual (open without signing in at <code>/manual</code>)</td></tr>
+<tr><td><code>pyq_bank.js</code></td><td>The real NTA question bank, built by <code>tools/build_pyq_bank.py</code>. Don't edit by hand</td></tr>
+<tr><td><code>questions.js</code></td><td>84 original practice questions</td></tr>
+<tr><td><code>pyq/&lt;year&gt;/&lt;shift&gt;/</code></td><td><code>img/</code> (NTA images), <code>questions.json</code>, <code>tags.csv</code>, <code>solutions.csv</code>, <code>traps.csv</code>, review pages</td></tr>
+<tr><td><code>sources/&lt;year&gt;/</code></td><td>NTA PDFs exactly as downloaded, with <code>SOURCES.md</code></td></tr>
+<tr><td><code>CLAUDE.md</code></td><td>Full technical notes and status for Claude</td></tr>
+<tr><td><code>DEPLOY.md</code></td><td>Online setup steps</td></tr>
+</table></div></details>
+<details><summary>Trap analysis for one more shift (step 3)</summary>
+<p>Only after the owner approves the first batch. Format: <code>traps.csv</code> with columns <code>q, option, trap, mistake_type, check, note</code>.
+Mistake types: <code>concept_gap</code>, <code>formula_misapplied</code>, <code>calc_slip</code>, <code>units</code>, <code>misread</code>, <code>ncert_fact</code>, <code>none</code> (no clear mistake path).
+Check: <code>sympy</code> / <code>arithmetic</code> (the wrong path is recomputed by script) or <code>conceptual</code> (teacher to judge).</p>
+<pre>python tools/make_sheets.py pyq/&lt;year&gt;/&lt;shift&gt; &lt;scratch folder&gt;
+python tools/write_traps_csv.py &lt;data.py&gt; pyq/&lt;year&gt;/&lt;shift&gt;
+python tools/verify_traps.py
+python tools/build_pyq_bank.py
+python tools/verify_pyq_solutions.py
+python tools/make_trap_review.py pyq/&lt;year&gt;/&lt;shift&gt;</pre>
+<p>The checks for each shift go in <code>tools/trap_checks/y&lt;year&gt;_&lt;shift&gt;.py</code>.</p></details>
+<details><summary>Checking answers after any change to a key</summary>
+<pre>pip install sympy mpmath
+python verify_answers.py
+python tools/verify_pyq_solutions.py</pre></details>
+<details><summary>Testing without touching real data</summary>
+<p>Set <code>JEE_DB_PATH</code> to a scratch file before <code>python server.py</code>, then check the whole flow: setup, instructions, answering (Save &amp; Next, Mark for Review, keypad), submit, result, review, PDF.</p></details>
+</section>
+
+<section id="words">
+<h2>12. Words used on the site</h2>
+<div class="wrap"><table>
+<tr><td><b>PYQ</b></td><td>Previous-year question: from a real, official NTA JEE Main paper</td></tr>
+<tr><td><b>Shift</b></td><td>One sitting of the exam on one day (for example 2 Apr Shift 1). Each has its own paper</td></tr>
+<tr><td><b>Final answer key</b></td><td>NTA's last, corrected key after challenges. The only key used here</td></tr>
+<tr><td><b>Trap</b></td><td>A wrong option that is exactly what one particular mistake gives</td></tr>
+<tr><td><b>Mistake types</b></td><td>Concept gap · formula misapplied · calculation slip · units · misread the question · NCERT fact not known · no clear mistake path</td></tr>
+<tr><td><b>Strong / weak chapter</b></td><td>75%+ / under 50% accuracy, judged only with 4+ attempted questions</td></tr>
+<tr><td><b>Mostly skipped</b></td><td>4+ questions in the chapter and over half skipped. Not called weak</td></tr>
+<tr><td><b>Slow but correct</b></td><td>Right, but took over twice the usual time and over 2 minutes</td></tr>
+<tr><td><b>Likely guess</b></td><td>Wrong answer given in under 30 seconds</td></tr>
+<tr><td><b>Disputed</b></td><td>Claude's answer differs from NTA's key; held back for a teacher</td></tr>
+</table></div>
+</section>
+</main>
+<footer>JEE Mock CBT manual · solutions, tags and traps are written by Claude and checked against NTA's final answer key · questions are NTA's own</footer>
+</body>
+</html>

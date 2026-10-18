@@ -1627,13 +1627,14 @@ function renderWho() {
   if (!ME) return;
   $$('[data-who]').forEach(el => {
     el.innerHTML = `<b>${esc(ME.name)}</b>${ME.role === 'admin' ? '<button type="button" data-acc="students">Students</button>' : ''}`
-      + '<button type="button" data-acc="password">Change password</button><button type="button" data-acc="out">Sign out</button>';
+      + '<button type="button" data-acc="manual">Manual</button><button type="button" data-acc="password">Change password</button><button type="button" data-acc="out">Sign out</button>';
     el.hidden = false;
   });
 }
 document.addEventListener('click', async e => {
   const b = e.target.closest('[data-acc]'); if (!b) return;
   if (b.dataset.acc === 'students') openAdmin();
+  else if (b.dataset.acc === 'manual') window.open('manual', '_blank', 'noopener');
   else if (b.dataset.acc === 'password') location.href = 'login?change=1';
   else if (b.dataset.acc === 'out') {
     persist();
@@ -1675,18 +1676,28 @@ $('#admTbl').addEventListener('click', async e => {
   const b = e.target.closest('[data-adm]'); if (!b) return;
   const id = +b.dataset.id, name = b.dataset.name;
   if (b.dataset.adm === 'prog') { openProgress({ id, name }); return; }
+  /* resets and switch-offs need a second click on the same button within 5 s: an in-page check, because
+     some browsers (and embedded viewers) silently block confirm() pop-ups */
+  if ((b.dataset.adm === 'reset' || b.dataset.adm === 'off') && b.dataset.armed !== '1') {
+    $$('[data-armed="1"]', $('#admTbl')).forEach(x => { x.dataset.armed = ''; x.textContent = x.dataset.label; });
+    b.dataset.label = b.textContent; b.dataset.armed = '1'; b.textContent = 'Sure? Click again';
+    admSay(b.dataset.adm === 'reset' ? `Click <b>Sure? Click again</b> to make a new one-time password for ${esc(name)}. Their current password stops working.`
+      : `Click <b>Sure? Click again</b> to turn off ${esc(name)}'s account. They cannot sign in until you turn it on again; their tests are kept.`);
+    setTimeout(() => { if (b.dataset.armed === '1') { b.dataset.armed = ''; b.textContent = b.dataset.label; $('#admOut').hidden = true; } }, 5000);
+    return;
+  }
+  b.dataset.armed = ''; b.disabled = true;
   try {
     if (b.dataset.adm === 'reset') {
-      if (!confirm(`Make a new one-time password for ${name}? Their current password stops working.`)) return;
       const d = await api(`api/admin/users/${id}/reset`, {});
       const row = b.closest('tr').children[1].textContent;
       admSay(otpHtml(name, row, d.one_time_password));
     } else {
-      if (b.dataset.adm === 'off' && !confirm(`Turn off ${name}'s account? They cannot sign in until you turn it on again. Their tests are kept.`)) return;
       await api(`api/admin/users/${id}/active`, { active: b.dataset.adm === 'on' });
+      $('#admOut').hidden = true;
     }
     openAdmin();
-  } catch (err) { admSay(esc(err.message), true); }
+  } catch (err) { admSay(esc(err.message), true); b.disabled = false; }
 });
 $('#admBack').addEventListener('click', () => { if (adminFrom === 'scr-result' && shown) show('scr-result'); else { show('scr-setup'); renderSetup(); } });
 

@@ -42,7 +42,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 ROOT = Path(__file__).resolve().parent
 DB_PATH = Path(os.environ.get('JEE_DB_PATH', ROOT / 'data' / 'akil.db'))
 STATIC_FILES = {'index.html', 'questions.js', 'pyq_bank.js'}
-PUBLIC_FILES = {'login.html'}          # served without a session
+PUBLIC_FILES = {'login.html', 'manual.html'}   # served without a session (the manual holds no personal data or secrets)
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS users (
@@ -392,7 +392,7 @@ def user_json(u):
     return {'id': u['id'], 'username': u['username'], 'name': u['name'], 'role': u['role'], 'must_change': bool(u['must_change'])}
 
 
-OPEN_PATHS = {'/login', '/login.html', '/api/login', '/api/export', '/favicon.ico'}
+OPEN_PATHS = {'/login', '/login.html', '/manual', '/manual.html', '/api/login', '/api/export', '/favicon.ico'}
 ALLOWED_WHILE_CHANGING = {'/api/me', '/api/password', '/api/logout'}
 
 
@@ -619,6 +619,11 @@ def index():
 @app.get('/login')
 def login_page():
     return send_from_directory(ROOT, 'login.html')
+
+
+@app.get('/manual')
+def manual_page():
+    return send_from_directory(ROOT, 'manual.html')
 
 
 @app.get('/<name>')
