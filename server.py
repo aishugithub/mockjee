@@ -8,7 +8,8 @@ Accounts:      python tools/manage_users.py --help   (first admin, students, pas
 The app works without this server too (opened as a file or as a claude.ai Artifact);
 it then keeps results in the browser only.
 
-Every page, question image and /api/* call needs a signed-in user, except the login page and /api/export.
+Every page, question image and /api/* call needs a signed-in user, except the login page and the two
+key-protected endpoints /api/export and /api/import-analysis.
 A student only ever sees their own attempts; an admin sees everyone (?user=<id> on the read endpoints).
 
 Endpoints
@@ -25,6 +26,7 @@ Endpoints
   POST /api/admin/users/<id>/reset    admin: new one-time password
   POST /api/admin/users/<id>/active   admin: {active: true|false}
   GET  /api/export            download a copy of the database; needs header X-Export-Key
+  POST /api/import-analysis   save one Claude analysis (report + flags) for a student; needs header X-Export-Key
 """
 import json
 import os
@@ -36,6 +38,7 @@ import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+import analysis_store
 from flask import Flask, abort, g, jsonify, redirect, request, send_file, send_from_directory, session
 from werkzeug.security import check_password_hash, generate_password_hash
 
@@ -392,7 +395,7 @@ def user_json(u):
     return {'id': u['id'], 'username': u['username'], 'name': u['name'], 'role': u['role'], 'must_change': bool(u['must_change'])}
 
 
-OPEN_PATHS = {'/login', '/login.html', '/manual', '/manual.html', '/api/login', '/api/export', '/favicon.ico'}
+OPEN_PATHS = {'/login', '/login.html', '/manual', '/manual.html', '/api/login', '/api/export', '/api/import-analysis', '/favicon.ico'}
 ALLOWED_WHILE_CHANGING = {'/api/me', '/api/password', '/api/logout'}
 
 
@@ -605,6 +608,23 @@ def export_db():
     with db() as src, sqlite3.connect(tmp) as dst:
         src.backup(dst)
     return send_file(tmp, as_attachment=True, download_name='akil.db', mimetype='application/vnd.sqlite3')
+
+
+@app.post('/api/import-analysis')
+def import_analysis():
+    """Claude's analysis (tools/save_analysis.py --online) -> analyses + flags, same code as the local tool."""
+    key = export_key()
+    if not key:
+        abort(404)
+    if not secrets.compare_digest(request.headers.get('X-Export-Key', ''), key):
+        abort(403)
+    body = request.get_json(silent=True) or {}
+    try:
+        with db() as con:
+            n_new, n_upd = analysis_store.save(con, body.get('result') or {}, body.get('username'))
+    except analysis_store.AnalysisError as e:
+        return jsonify(error=str(e)), 400
+    return jsonify(ok=True, new=n_new, updated=n_upd)
 
 
 # ---------- static files: only the app itself and NTA question images, never data/ or .secrets ----------

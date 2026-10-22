@@ -15,6 +15,8 @@ What it contains
                looked at the solution / skipped), current chapter tag, and Claude's concept line
   slow_correct correct answers that took much longer than his own median (shaky areas)
   fast_wrong   wrong answers given quickly (likely guesses)
+  time_habits  per test: time sunk into questions he finally left blank (2 min or more each), and questions
+               skipped in the test but solved in review without a hint (knew it, didn't risk it)
   open_flags   flags written by earlier analyses, to update instead of duplicating
 """
 import argparse, json, os, sqlite3, statistics, sys
@@ -119,6 +121,19 @@ def main():
                 concept=q.get('concept'), option_traps=q.get('option_traps'), mistake_type=q.get('mistake_type'),
             ).items() if v not in (None, '', [], {})})
 
+    # time habits per test: minutes spent on questions left blank, and skips he could do alone
+    habits = []
+    for at in attempts:
+        rs = [r for r in resp if r['attempt_id'] == at['id']]
+        sunk = [dict(q=r['q_index'] + 1, question_id=r['question_id'], secs=round((r['time_ms'] or 0) / 1000))
+                for r in rs if not r['attempted'] and (r['time_ms'] or 0) >= 120000]
+        alone = [r['q_index'] + 1 for r in rs if not r['attempted']
+                 and (prac.get((r['attempt_id'], r['q_index'])) or {}).get('outcome') == 'solved_no_hint']
+        habits.append(dict(attempt=at['id'], date=(at['submitted_at'] or '')[:10],
+                           secs_on_blank=sum(round((r['time_ms'] or 0) / 1000) for r in rs if not r['attempted']),
+                           blank_after_2min=sunk, secs_on_blank_after_2min=sum(x['secs'] for x in sunk),
+                           skipped_but_solved_alone=alone))
+
     chapters = []
     for (subj, ch), c in sorted(chap.items()):
         chapters.append(dict(subject=subj, chapter=ch, questions=c['n'], attempted=c['attempted'], correct=c['correct'],
@@ -129,7 +144,7 @@ def main():
     out = open(a.out, 'w', encoding='utf-8') if a.out else sys.stdout
     if not a.out: sys.stdout.reconfigure(encoding='utf-8')
     json.dump(dict(db=a.db, median_secs_per_attempted=round(med), attempts=attempts, chapters=chapters,
-                   questions=questions, slow_correct=slow, fast_wrong=fast, open_flags=flags),
+                   questions=questions, slow_correct=slow, fast_wrong=fast, time_habits=habits, open_flags=flags),
               out, ensure_ascii=False, indent=1)
 
 

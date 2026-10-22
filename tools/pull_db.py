@@ -53,14 +53,26 @@ def main():
     tmp = DB.with_suffix('.download')
     tmp.write_bytes(data)
     try:
-        n = sqlite3.connect(tmp).execute('SELECT COUNT(*) FROM attempts').fetchone()[0]
+        con = sqlite3.connect(tmp)
+        try:
+            n = con.execute('SELECT COUNT(*) FROM attempts').fetchone()[0]
+        finally:
+            con.close()   # Windows won't rename a file that is still open
     except sqlite3.DatabaseError:
         tmp.unlink()
         print('The download is not a valid database.', file=sys.stderr)
         return 1
     if DB.exists():
         shutil.copy2(DB, DB.with_name('akil.prev.db'))
-    tmp.replace(DB)
+    try:
+        tmp.replace(DB)
+    except PermissionError:
+        # data/akil.db is open in another program (e.g. a local server.py): keep the download beside it
+        alt = DB.with_name('akil.online.db')
+        tmp.replace(alt)
+        print(f'{DB} is in use by another program, so the download was saved as {alt} '
+              f'({len(data) // 1024} KB, {n} attempts). Use --db {alt.relative_to(ROOT)} with the analysis tools.')
+        return 0
     print(f'Downloaded {DB} ({len(data) // 1024} KB, {n} attempts).')
     return 0
 

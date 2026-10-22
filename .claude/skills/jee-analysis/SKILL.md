@@ -29,6 +29,7 @@ For every wrong or skipped question you may have up to four signals. Combine the
 | His own reason | `his_reason` | concept = didn't know it; approach = knew it, wrong method; calc = arithmetic slip; recall = forgot a formula/fact; misread; rushed |
 | Review outcome (hint ladder) | `review_outcome` | `solved_no_hint`: he can do it, so the loss was a slip, time or nerves. `solved_hint1`: knows the concept, couldn't see where to start (approach). `solved_hint2`: needed the formula or key step (recall / formula). `saw_solution`: real gap for now. `skipped`: chose not to try, which is allowed (see below). `open`: not reviewed yet. |
 | Time | `secs`, `slow_correct`, `fast_wrong` | under 30 s and wrong suggests a guess; correct but over 2× his median suggests a shaky area |
+| Time habits (per test) | `time_habits` | `blank_after_2min` = questions he spent 2+ min on and still left blank (time lost for nothing); `skipped_but_solved_alone` = knew it but didn't risk it. Compare across tests: a recurring pattern becomes a `speed` flag under subject "All subjects", chapter "Exam technique" |
 | Answer changes | `answer_changes` | changed away from the right answer means low confidence |
 | Trap | `option_traps`, `mistake_type` | only when present in the bank (step 3 of the plan). Name the mistake only if the trap data says so. |
 
@@ -63,6 +64,9 @@ End with: "Analysis written by Claude from Akil's recorded attempts."
 ## 5. Save
 - Write `<scratchpad>/result.json` in the format documented at the top of `tools/save_analysis.py`
   (`attempts`, `summary` = the report, `flags`).
-- Run `python tools/save_analysis.py <scratchpad>/result.json --user <username>`. Flags then show in that student's app (`/api/flags`).
-- If the owner uses PythonAnywhere, the saved flags live only in the local copy until the database is uploaded back. Say so; don't upload it yourself.
+- The online database is the running record (tests are taken on the website), so save there:
+  `python tools/save_analysis.py <scratchpad>/result.json --user <username> --online`
+  (POST /api/import-analysis with the export key from `.secrets`). Rerunning updates flags by concept instead of duplicating them.
+  Use `--db <path>` only for a local or scratch copy. Pull again before the next analysis so `open_flags` includes what you saved.
+- Hint-ladder effect: say how many questions he opened hints on and how many he then solved; "hints rescued it" separates a slip from a gap.
 - Show the owner the report in the chat and offer to publish it as a page.
