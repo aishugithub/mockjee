@@ -23,3 +23,13 @@ MISTAKE_TYPES = {
 CHECKS = ('sympy', 'arithmetic', 'conceptual')
 
 NO_PATH = 'No clear mistake path'
+
+
+def disputed(folder):
+    """Question numbers whose worked solution is held back (check = 'disputed' in solutions.csv):
+    Claude disagrees with NTA's key, so they get no trap rows until the owner decides."""
+    import csv, os
+    path = os.path.join(folder, 'solutions.csv')
+    if not os.path.exists(path):
+        return set()
+    return {int(r['q']) for r in csv.DictReader(open(path, encoding='utf-8')) if r['check'] == 'disputed'}

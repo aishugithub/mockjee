@@ -2,7 +2,7 @@
 Checks every pyq/<year>/<shift>/traps.csv (Claude's trap analysis, step 3 in CLAUDE.md) and runs the
 wrong-path recomputations in tools/trap_checks/y<year>_<shift>.py.
 
-Fails (exit 1) on: an unknown mistake_type or check, an empty trap text, a row for the key (or an accepted
+Fails (exit 1) on: a row for a disputed question (held back in solutions.csv), an unknown mistake_type or check, an empty trap text, a row for the key (or an accepted
 answer), a wrong MCQ option with no row, a duplicate row, a row labelled sympy/arithmetic with no check, a check
 with no matching row, or a check whose wrong path does not land exactly on the option's value.
 NTA's key is never touched: a trap only explains a wrong option.
@@ -15,7 +15,7 @@ from fractions import Fraction
 from sympy import simplify, sympify
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from traps_common import CHECKS, COLS, MISTAKE_TYPES, NO_PATH
+from traps_common import CHECKS, COLS, MISTAKE_TYPES, NO_PATH, disputed
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -44,6 +44,7 @@ def verify(year, shift):
     qs = json.load(open(os.path.join(folder, 'questions.json'), encoding='utf-8'))['questions']
     rows = list(csv.DictReader(open(os.path.join(folder, 'traps.csv'), encoding='utf-8')))
     bad, seen = [], {}
+    held = disputed(folder)
     if rows and list(rows[0].keys()) != COLS:
         bad.append(f'columns must be {COLS}')
     for r in rows:
@@ -52,6 +53,8 @@ def verify(year, shift):
         where = f'Q{n} option {opt}'
         if q.get('exclude') or q.get('answer') is None:
             bad.append(f'{where}: question is left out of the bank'); continue
+        if n in held:
+            bad.append(f'{where}: question is disputed (held back in solutions.csv); no traps until the owner decides'); continue
         if q['type'] == 'MCQ':
             right = {q['answer'] + 1} | {a + 1 for a in q.get('accept', [])}
             if opt not in ('1', '2', '3', '4'): bad.append(f'{where}: MCQ option must be 1-4')

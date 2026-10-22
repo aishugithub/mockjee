@@ -12,7 +12,7 @@ Usage:  python tools/write_traps_csv.py <data.py> pyq/<year>/<shift>
 import csv, importlib.util, json, os, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from traps_common import CHECKS, COLS, MISTAKE_TYPES, NO_PATH
+from traps_common import CHECKS, COLS, MISTAKE_TYPES, NO_PATH, disputed
 
 
 def main():
@@ -21,9 +21,13 @@ def main():
     m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
     qs = json.load(open(os.path.join(folder, 'questions.json'), encoding='utf-8'))['questions']
     errors, rows = [], []
+    held = disputed(folder)
     for n, q in enumerate(qs, 1):
         if q.get('exclude') or q.get('answer') is None:
             if n in m.T: errors.append(f'Q{n}: left out of the bank, so no traps')
+            continue
+        if n in held:
+            if n in m.T: errors.append(f'Q{n}: disputed (held back in solutions.csv), so no traps until the owner decides')
             continue
         traps = m.T.get(n, {})
         if q['type'] == 'MCQ':
