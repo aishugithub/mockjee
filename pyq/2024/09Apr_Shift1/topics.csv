@@ -4,7 +4,7 @@ q,topic,examside_id,match,answer_check
 3,Matrices and Determinants,luy6z5o7,0.78,differs (ExamGOAL B)
 4,Binomial Theorem,luy6z5lw,0.68,agree
 5,Sequences and Series,luy6z4j2,0.64,agree
-6,Differentiation,luy6z53a,0.73,differs (ExamGOAL B)
+6,,luy6z53a,0.73,differs (ExamGOAL B)
 7,Straight Lines and Pair of Straight Lines,luy6z4o4,0.95,differs (ExamGOAL C)
 8,Indefinite Integrals,luy6z4yq,0.69,differs (ExamGOAL D)
 9,Area Under The Curves,luy6z4gc,0.97,differs (ExamGOAL A)
@@ -18,7 +18,7 @@ q,topic,examside_id,match,answer_check
 17,Vector Algebra,luy6z5a5,0.9,differs (ExamGOAL C)
 18,Vector Algebra,luy6z4lq,0.8,differs (ExamGOAL A)
 19,Statistics,luy6z4to,0.96,differs (ExamGOAL C)
-20,Trigonometric Equations,luy6z4wc,0.38,agree
+20,,luy6z4wc,0.38,agree
 21,Sets and Relations,luy9cl8m,0.76,agree
 22,Complex Numbers,luy9clkm,0.77,agree
 23,,luy9cloc,0.29,agree
@@ -70,7 +70,7 @@ q,topic,examside_id,match,answer_check
 69,Coordination Compounds,luz2u40s,0.97,differs (ExamGOAL B)
 70,Basics of Organic Chemistry,luz2ustl,1.0,agree
 71,Basics of Organic Chemistry,luz2v4dp,0.81,agree
-72,"Aldehydes, Ketones and Carboxylic Acids",luz2v3zq,0.63,agree
+72,,luz2v3zq,0.63,agree
 73,Haloalkanes and Haloarenes,luz2ux53,0.97,differs (ExamGOAL B)
 74,Haloalkanes and Haloarenes,luz2v3lv,0.83,differs (ExamGOAL B)
 75,"Aldehydes, Ketones and Carboxylic Acids",luz2v3rx,0.72,differs (ExamGOAL A)

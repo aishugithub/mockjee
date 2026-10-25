@@ -46,7 +46,7 @@ q,topic,examside_id,match,answer_check
 45,Dual Nature of Radiation,1lgq1zt66,0.9,differs (ExamGOAL B)
 46,Atoms and Nuclei,1lgq2ec05,0.68,agree
 47,Semiconductor,1lgq2qd19,0.92,differs (ExamGOAL D)
-48,Communication Systems,1lgq18bgf,0.51,agree
+48,,1lgq18bgf,0.51,agree
 49,,1lgq26pdf,0.59,differs (ExamGOAL D)
 50,Current Electricity,1lgq2otjb,0.96,agree
 51,Atoms and Nuclei,1lgq392g5,0.89,agree
@@ -75,8 +75,8 @@ q,topic,examside_id,match,answer_check
 74,,1lgq3zgvn,0.58,differs (ExamGOAL B)
 75,"Alcohols, Phenols and Ethers",1lgq4gt4t,0.96,differs (ExamGOAL C)
 76,Hydrocarbons,1lgq4k0ke,0.95,agree
-77,Compounds Containing Nitrogen,1lgq4i2lp,0.65,differs (ExamGOAL C)
-78,"Aldehydes, Ketones and Carboxylic Acids",1lgq41qhy,0.65,agree
+77,,1lgq4i2lp,0.65,differs (ExamGOAL C)
+78,,1lgq41qhy,0.65,agree
 79,,1lgq47te0,0.27,differs (ExamGOAL D)
 80,Biomolecules,1lgq4mtum,0.65,agree
 81,,1lgq4slas,0.02,agree

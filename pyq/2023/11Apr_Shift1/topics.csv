@@ -3,7 +3,7 @@ q,topic,examside_id,match,answer_check
 2,,,0,no candidate
 3,Ellipse,1lguvb7is,0.92,differs (ExamGOAL D)
 4,Permutations and Combinations,1lguw0e0f,0.88,differs (ExamGOAL D)
-5,Logarithm,1lguw56u8,0.84,differs (ExamGOAL D)
+5,,1lguw56u8,0.84,differs (ExamGOAL D)
 6,Matrices and Determinants,1lguucigm,0.85,differs (ExamGOAL D)
 7,"Limits, Continuity and Differentiability",1lguuf2hr,0.91,differs (ExamGOAL C)
 8,,,0,no candidate
@@ -13,7 +13,7 @@ q,topic,examside_id,match,answer_check
 12,Vector Algebra,1lguu8s7l,0.63,differs (ExamGOAL D)
 13,Sequences and Series,1lgutxklh,0.9,agree
 14,Complex Numbers,1lgutz71b,0.88,agree
-15,Definite Integration,1lguu4z56,0.8,agree
+15,,1lguu4z56,0.8,agree
 16,,1lguvhkpl,0.36,differs (ExamGOAL D)
 17,Probability,1lgutw8tu,0.77,differs (ExamGOAL C)
 18,Statistics,1lguu6kre,0.99,differs (ExamGOAL C)

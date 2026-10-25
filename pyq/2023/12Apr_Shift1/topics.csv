@@ -25,7 +25,7 @@ q,topic,examside_id,match,answer_check
 24,Statistics,1lgrgr0fx,0.87,agree
 25,"Limits, Continuity and Differentiability",1lgrgpa4y,0.92,agree
 26,,1lgrghmb3,0.19,differs (ExamGOAL 6)
-27,Definite Integration,1lgrgllfd,0.87,differs (ExamGOAL 575)
+27,,1lgrgllfd,0.87,differs (ExamGOAL 575)
 28,Circle,1lgrgje37,0.96,agree
 29,,,0,no candidate
 30,Probability,1lgrgkm6x,0.96,agree
@@ -74,8 +74,8 @@ q,topic,examside_id,match,answer_check
 73,,,0,no candidate
 74,"Alcohols, Phenols and Ethers",1lgrkq2qw,0.92,differs (ExamGOAL B)
 75,"Aldehydes, Ketones and Carboxylic Acids",1lgrk77e2,0.75,differs (ExamGOAL B)
-76,"Aldehydes, Ketones and Carboxylic Acids",1lgrl39go,0.65,differs (ExamGOAL D)
-77,"Aldehydes, Ketones and Carboxylic Acids",1lgrkfg32,0.65,agree
+76,,1lgrl39go,0.65,differs (ExamGOAL D)
+77,,1lgrkfg32,0.65,agree
 78,"Aldehydes, Ketones and Carboxylic Acids",1lgrl3wls,0.77,differs (ExamGOAL D)
 79,Compounds Containing Nitrogen,1lgrkye37,0.9,differs (ExamGOAL A)
 80,,,0,no candidate

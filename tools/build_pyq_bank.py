@@ -11,10 +11,12 @@ question image; see tools/chapters.py). They are kept apart from questions.json 
 re-running the extractor never wipes them. Every code is checked against the official list
 and against the question's subject from NTA's paper. Trap analysis (Claude's, step 3) comes from
 pyq/<year>/<shift>/traps.csv as option_traps + trap_by "claude"; see tools/verify_traps.py.
+Where ExamGOAL's copy of an NTA paper keys a different answer (key_compare.csv, tools/compare_examgoal_keys.py),
+the question gets examgoal_key_differs; NTA's final key stays the answer.
 
 Usage:  python tools/build_pyq_bank.py
 """
-import csv, glob, json, os, sys
+import csv, glob, json, os, re, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from chapters import CHAPTERS, CODES, OUTSIDE
@@ -25,9 +27,11 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 KEEP = ['id', 'subject', 'chapter', 'subtopic', 'secondary_chapter', 'tag_confidence', 'year', 'type',
         'source', 'question', 'image', 'options', 'option_images', 'answer', 'accept', 'solution',
         'solution_by', 'solution_check', 'solution_note', 'hints', 'concept', 'revise', 'option_traps', 'trap_by',
-        'topic', 'source_kind', 'out_of_syllabus', 'origin_url']
+        'topic', 'source_kind', 'out_of_syllabus', 'origin_url', 'examgoal_key_differs']
 CHECKS = ('sympy', 'arithmetic', 'conceptual')
 HELD = []   # solutions Claude disputes with NTA's key: not bundled until the owner decides
+UNCHECKED_KEYS = []   # 'differs' rows nobody has checked by eye yet (not shown)
+HELD_KEYS = []   # questions where ExamGOAL's key differs from NTA's final key (shown in the review)
 
 
 def load_tags(folder, questions):
@@ -113,6 +117,29 @@ def load_topics(folder, questions):
         raise SystemExit(f'{path}:' + ''.join('\n  ' + b for b in bad))
     return out
 
+def load_key_compare(folder, questions):
+    """{question id: {'examgoal_key_differs': ...}} where ExamGOAL's key differs from NTA's final key
+    (key_compare.csv, tools/compare_examgoal_keys.py), only rows checked by eye as 'confirmed'.
+    The row's NTA key must still be the question's key."""
+    path = os.path.join(folder, 'key_compare.csv')
+    if not os.path.exists(path):
+        return {}
+    out = {}
+    for row in csv.DictReader(open(path, encoding='utf-8')):
+        if row['status'] != 'differs':
+            continue
+        if row.get('checked') != 'confirmed':
+            if not row.get('checked'):
+                UNCHECKED_KEYS.append(f"{folder} Q{row['q']}")
+            continue
+        q = questions[int(row['q']) - 1]
+        key = ([q['answer'] + 1] + [a + 1 for a in q.get('accept', [])]) if q['type'] == 'MCQ' else [q['answer']] + q.get('accept', [])
+        if sorted(float(k) for k in re.split(r',| or ', row['nta_key'])) != sorted(float(k) for k in key):
+            raise SystemExit(f"{path}: Q{row['q']}: NTA key {row['nta_key']} is not the key in questions.json; rerun compare_examgoal_keys.py")
+        out[q['id']] = {'examgoal_key_differs': {'nta': row['nta_key'], 'examgoal': row['examgoal_key'], 'how': row['how']}}
+        HELD_KEYS.append(f"{q['source']}: NTA {row['nta_key']}, ExamGOAL {row['examgoal_key']} ({row['how']})")
+    return out
+
 
 def load_traps(folder, questions):
     """{question id: option_traps} from traps.csv (Claude's trap analysis, step 3; full checks in tools/verify_traps.py).
@@ -154,6 +181,7 @@ for path in sorted(glob.glob(os.path.join(ROOT, 'pyq', '*', '*', 'questions.json
     sols = load_solutions(os.path.dirname(path), paper['questions'])
     traps = load_traps(os.path.dirname(path), paper['questions'])
     topics = load_topics(os.path.dirname(path), paper['questions'])
+    keydiff = load_key_compare(os.path.dirname(path), paper['questions'])
     untagged = 0
     n = 0
     for q in paper['questions']:
@@ -161,7 +189,7 @@ for path in sorted(glob.glob(os.path.join(ROOT, 'pyq', '*', '*', 'questions.json
             skipped.append(f"{q['source']}: {q['exclude']}"); continue
         if q.get('answer') is None:
             skipped.append(f"{q['source']}: no answer"); continue
-        q = dict(q, **tags.get(q['id'], {}), **sols.get(q['id'], {}), **traps.get(q['id'], {}), **topics.get(q['id'], {}))
+        q = dict(q, **tags.get(q['id'], {}), **sols.get(q['id'], {}), **traps.get(q['id'], {}), **topics.get(q['id'], {}), **keydiff.get(q['id'], {}))
         if q.get('chapter') in (None, '', 'Not tagged yet'): untagged += 1
         elif q['chapter'] != OUTSIDE and q['chapter'] not in CHAPTERS.get(q['subject'], []):
             sys.exit(f"{q['source']}: chapter {q['chapter']!r} is not an NTA syllabus unit for {q['subject']}")
@@ -186,5 +214,10 @@ print('\n'.join(papers))
 if HELD:
     print(f'{len(HELD)} worked solutions held back (Claude disagrees with the key; owner to review):')
     print('\n'.join('  ' + h for h in HELD))
+if HELD_KEYS:
+    print(f"{len(HELD_KEYS)} questions where ExamGOAL's key differs from NTA's final key (NTA's key is used; noted in the review):")
+    print('\n'.join('  ' + h for h in HELD_KEYS))
+if UNCHECKED_KEYS:
+    print(f"{len(UNCHECKED_KEYS)} key differences not checked by eye yet (not shown in the app): " + ', '.join(UNCHECKED_KEYS))
 print(f'{len(bank)} questions in pyq_bank.js; left out {len(skipped)}:')
 print('\n'.join('  ' + s for s in skipped))

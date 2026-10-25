@@ -3,7 +3,7 @@ q,topic,examside_id,match,answer_check
 2,Functions,1lgsw05gr,0.98,agree
 3,Complex Numbers,1lgsugbnn,0.84,differs (ExamGOAL A)
 4,Matrices and Determinants,1lgsuczop,0.81,agree
-5,Matrices and Determinants,1lgsverwb,0.78,differs (ExamGOAL B)
+5,,1lgsverwb,0.78,differs (ExamGOAL B)
 6,Permutations and Combinations,1lgsugvol,0.98,differs (ExamGOAL A)
 7,Binomial Theorem,1lgsvbm4o,0.89,no NTA answer
 8,Binomial Theorem,1lgsubacw,0.98,differs (ExamGOAL A)
@@ -47,7 +47,7 @@ q,topic,examside_id,match,answer_check
 46,Electromagnetic Waves,1lgswh6t1,0.92,differs (ExamGOAL C)
 47,Electromagnetic Induction,1lgswnzlv,0.84,differs (ExamGOAL D)
 48,Magnetic Effect of Current,1lgswj9wf,0.99,agree
-49,Current Electricity,1lgsweyym,0.83,differs (ExamGOAL B)
+49,,1lgsweyym,0.83,differs (ExamGOAL B)
 50,Capacitor,1lgswsttc,0.99,differs (ExamGOAL B)
 51,,1lgswc9j4,0.28,differs (ExamGOAL 348)
 52,Properties of Matter,1lgsxhh3a,0.85,agree
@@ -76,7 +76,7 @@ q,topic,examside_id,match,answer_check
 75,,1lgsz0375,0.59,differs (ExamGOAL B)
 76,"Aldehydes, Ketones and Carboxylic Acids",1lgsy1ntw,0.65,differs (ExamGOAL B)
 77,Hydrocarbons,1lgsyqzjc,0.74,differs (ExamGOAL B)
-78,"Alcohols, Phenols and Ethers",1lgsy2959,0.46,agree
+78,,1lgsy2959,0.46,agree
 79,"Aldehydes, Ketones and Carboxylic Acids",1lgsybj0x,1.0,agree
 80,,,0,no candidate
 81,,1lgszgc9k,0.21,agree

@@ -4,7 +4,7 @@ q,topic,examside_id,match,answer_check
 3,Matrices and Determinants,lv7v3k3w,0.86,differs (ExamGOAL C)
 4,Matrices and Determinants,lv7v3k8u,0.86,differs (ExamGOAL C)
 5,Application of Derivatives,lv7v3jxe,0.89,differs (ExamGOAL B)
-6,Sequences and Series,lv7v4g04,0.66,differs (ExamGOAL B)
+6,,lv7v4g04,0.66,differs (ExamGOAL B)
 7,"Limits, Continuity and Differentiability",lv7v3k5y,0.61,differs (ExamGOAL C)
 8,Application of Derivatives,lv7v4o2e,0.84,differs (ExamGOAL D)
 9,Application of Derivatives,lv7v3jz2,0.99,differs (ExamGOAL D)
@@ -64,7 +64,7 @@ q,topic,examside_id,match,answer_check
 63,Chemical Equilibrium,lv7v4nyl,1.0,differs (ExamGOAL C)
 64,Electrochemistry,lv7v3yzz,1.0,agree
 65,Electrochemistry,lv7v49ug,0.92,differs (ExamGOAL D)
-66,Periodic Table & Periodicity,lv7v3u1a,0.35,agree
+66,,lv7v3u1a,0.35,agree
 67,p-Block Elements,lv7v3yys,0.99,differs (ExamGOAL B)
 68,p-Block Elements,lv7v3qs2,0.98,differs (ExamGOAL A)
 69,d and f Block Elements,lv7v4hdn,1.0,differs (ExamGOAL B)
@@ -77,7 +77,7 @@ q,topic,examside_id,match,answer_check
 76,Basics of Organic Chemistry,lv7v3tyj,1.0,differs (ExamGOAL C)
 77,"Alcohols, Phenols and Ethers",lv7v49oe,0.94,differs (ExamGOAL C)
 78,Compounds Containing Nitrogen,lv7v4rbz,0.78,differs (ExamGOAL B)
-79,"Aldehydes, Ketones and Carboxylic Acids",lv7v4rmj,0.69,differs (ExamGOAL D)
+79,,lv7v4rmj,0.69,differs (ExamGOAL D)
 80,Biomolecules,lv7v3yxk,1.0,differs (ExamGOAL C)
 81,Structure of Atom,lv7v4kty,0.85,agree
 82,Chemical Bonding & Molecular Structure,lv7v47s8,0.98,agree

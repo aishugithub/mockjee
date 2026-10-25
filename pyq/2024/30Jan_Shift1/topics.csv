@@ -8,7 +8,7 @@ q,topic,examside_id,match,answer_check
 7,Application of Derivatives,1lsg91cac,0.91,differs (ExamGOAL A)
 8,Definite Integration,1lsga9myw,0.85,agree
 9,Differentiation,1lsg8vyuz,0.82,agree
-10,Definite Integration,1lsg8xaqg,0.72,differs (ExamGOAL C)
+10,,1lsg8xaqg,0.72,differs (ExamGOAL C)
 11,Area Under The Curves,1lsgb2phy,0.95,differs (ExamGOAL C)
 12,Differential Equations,1lsgaiiyb,0.86,agree
 13,Straight Lines and Pair of Straight Lines,1lsg96zxo,0.96,differs (ExamGOAL D)
@@ -65,16 +65,16 @@ q,topic,examside_id,match,answer_check
 64,Chemical Bonding & Molecular Structure,1lsgxnho5,1.0,agree
 65,Chemical Bonding & Molecular Structure,1lsgyis0f,0.99,differs (ExamGOAL C)
 66,,1lsgy4z4q,0.54,differs (ExamGOAL A)
-67,d and f Block Elements,1lsgyc3vg,1.0,differs (ExamGOAL A)
+67,,1lsgyc3vg,1.0,differs (ExamGOAL A)
 68,,1lsgydxdm,0.21,differs (ExamGOAL D)
 69,Practical Organic Chemistry,1lsgy6q5x,0.96,differs (ExamGOAL C)
-70,"Aldehydes, Ketones and Carboxylic Acids",1lsgyjecm,1.0,differs (ExamGOAL C)
+70,,1lsgyjecm,1.0,differs (ExamGOAL C)
 71,Basics of Organic Chemistry,1lsgxvdcg,1.0,differs (ExamGOAL B)
 72,Hydrocarbons,1lsgxurp8,0.85,agree
-73,Haloalkanes and Haloarenes,1lsgxo04a,1.0,differs (ExamGOAL D)
+73,,1lsgxo04a,1.0,differs (ExamGOAL D)
 74,Haloalkanes and Haloarenes,1lsgygvg4,0.99,differs (ExamGOAL A)
 75,Hydrocarbons,1lsgyasal,0.69,agree
-76,"Aldehydes, Ketones and Carboxylic Acids",1lsgxre6u,0.84,agree
+76,,1lsgxre6u,0.84,agree
 77,Haloalkanes and Haloarenes,1lsgxqdvu,0.76,differs (ExamGOAL C)
 78,Biomolecules,1lsgy8oql,1.0,differs (ExamGOAL B)
 79,Salt Analysis,1lsgxplqk,0.93,differs (ExamGOAL B)

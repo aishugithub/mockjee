@@ -4,7 +4,7 @@ q,topic,examside_id,match,answer_check
 3,Complex Numbers,jaoe38c1lsd4pjmu,0.79,agree
 4,Matrices and Determinants,jaoe38c1lsd3de46,0.77,agree
 5,Permutations and Combinations,jaoe38c1lsd39r8j,1.0,agree
-6,Permutations and Combinations,jaoe38c1lsd4qjvk,0.76,differs (ExamGOAL C)
+6,,jaoe38c1lsd4qjvk,0.76,differs (ExamGOAL C)
 7,Sequences and Series,jaoe38c1lsd4o6jt,0.86,differs (ExamGOAL D)
 8,"Limits, Continuity and Differentiability",jaoe38c1lsd4ro0j,0.9,agree
 9,"Limits, Continuity and Differentiability",jaoe38c1lsd4jja0,0.76,differs (ExamGOAL A)
@@ -76,7 +76,7 @@ q,topic,examside_id,match,answer_check
 75,Hydrocarbons,jaoe38c1lsd8qgsn,0.95,differs (ExamGOAL D)
 76,Haloalkanes and Haloarenes,jaoe38c1lsd9mdgj,0.78,agree
 77,"Aldehydes, Ketones and Carboxylic Acids",jaoe38c1lsd8t5ji,0.76,differs (ExamGOAL C)
-78,"Aldehydes, Ketones and Carboxylic Acids",jaoe38c1lsd9h3k8,0.55,agree
+78,,jaoe38c1lsd9h3k8,0.55,agree
 79,Compounds Containing Nitrogen,jaoe38c1lsd9uetm,0.95,agree
 80,Compounds Containing Nitrogen,jaoe38c1lsd8yo1h,0.87,differs (ExamGOAL C)
 81,Chemical Bonding & Molecular Structure,jaoe38c1lsda0qxg,0.87,agree

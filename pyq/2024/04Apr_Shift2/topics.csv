@@ -1,18 +1,18 @@
 q,topic,examside_id,match,answer_check
 1,Sets and Relations,lv2er45n,0.91,differs (ExamGOAL D)
-2,Complex Numbers,lv2er3qp,0.95,differs (ExamGOAL B)
+2,,lv2er3qp,0.95,differs (ExamGOAL B)
 3,Matrices and Determinants,lv2eryn4,0.72,agree
 4,Binomial Theorem,lv2eqvbz,0.96,differs (ExamGOAL D)
-5,Sequences and Series,lv2erzk5,0.81,differs (ExamGOAL A)
+5,,lv2erzk5,0.81,differs (ExamGOAL A)
 6,Sequences and Series,lv2erzp0,0.91,differs (ExamGOAL A)
 7,Application of Derivatives,lv2er3i1,0.89,differs (ExamGOAL A)
 8,"Limits, Continuity and Differentiability",lv2eqvf0,0.84,agree
-9,Definite Integration,lv2er436,0.75,differs (ExamGOAL B)
+9,,lv2er436,0.75,differs (ExamGOAL B)
 10,,lv2ers9h,0.0,differs (ExamGOAL A)
 11,Area Under The Curves,lv2er3kw,0.85,agree
 12,Differential Equations,lv2erury,0.81,differs (ExamGOAL D)
 13,Circle,lv2eruuk,0.6,differs (ExamGOAL A)
-14,Hyperbola,lv2er3wn,0.51,agree
+14,,lv2er3wn,0.51,agree
 15,Parabola,lv2er40w,0.9,differs (ExamGOAL B)
 16,3D Geometry,lv2er3nv,0.91,agree
 17,Vector Algebra,lv2er3tg,0.8,differs (ExamGOAL C)

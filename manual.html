@@ -213,17 +213,23 @@ python3 tools/manage_users.py assign-tests akil</pre></li>
 <section id="bank">
 <h2>6. What is in the question bank</h2>
 <div class="wrap"><table>
-<tr><th></th><th>2026 (Session 2)</th><th>2024 (Sessions 1 &amp; 2)</th><th>2023 (Session 2)</th><th>Total</th></tr>
+<tr><th></th><th>2026 (Session 2)</th><th>2024 (Sessions 1 &amp; 2)</th><th>2023 (Session 2)</th><th>Total NTA</th></tr>
 <tr><td>Shifts</td><td>9</td><td>17</td><td>12</td><td><b>38</b></td></tr>
 <tr><td>Questions</td><td>673</td><td>1,521</td><td>1,070</td><td><b>3,264</b></td></tr>
 <tr><td>Chapter tags</td><td>all</td><td>all</td><td>all</td><td><b>100%</b></td></tr>
+<tr><td>Finer topic (ExamGOAL chapter)</td><td>638</td><td>1,207</td><td>621</td><td><b>2,466</b></td></tr>
 <tr><td>Worked solutions with 2 hints</td><td>671</td><td>1,515</td><td>1,066</td><td><b>3,252</b> (12 held back)</td></tr>
-<tr><td>Trap analysis</td><td>66 (2 Apr Shift 1 only)</td><td>0</td><td>0</td><td><b>66</b></td></tr>
+<tr><td>Trap analysis</td><td>557 (all 9 shifts)</td><td>434 (7 of 17 shifts)</td><td>0</td><td><b>991</b></td></tr>
 </table></div>
+<p><b>ExamGOAL papers</b> (owner's decision, 25 Oct): for years NTA does not publish openly, the bank also has ExamGOAL's retyped papers with <b>ExamGOAL's</b> answer key:
+2025 (19 shifts, 1,417 questions), 2022 (24 shifts, 2,148), 2021 (26 shifts, 2,333). Every one is marked "(ExamGOAL)" on the site. They have a finer topic but no worked solutions or trap analysis.
+Total bank: <b>9,162 questions</b>.</p>
 <ul>
-  <li><b>Not available from public documents:</b> 2025 papers (NTA shows them only inside a candidate's login, which we never use) and 2026 Session 1 papers.</li>
-  <li>2024 shifts have 90 questions (10 numericals per subject); the others have 75.</li>
-  <li>Questions NTA dropped are left out. Where NTA accepted two answers, either one scores.</li>
+  <li><b>ExamGOAL's key is not always NTA's.</b> On the NTA papers we also have from ExamGOAL, 16 questions have a different key (list: <code>pyq/EXAMGOAL_KEY_DIFFERENCES.md</code>); the answer review shows a yellow "Answer keys differ" note on them. NTA's key is still used for marking. So a few ExamGOAL keys in 2021, 2022 and 2025 are probably wrong too; we cannot check those.</li>
+  <li><b>Not available from public NTA documents:</b> 2025 papers (NTA shows them only inside a candidate's login, which we never use) and 2026 Session 1 papers.</li>
+  <li>2024, 2022 and 2021 shifts have 90 questions (10 numericals per subject); the others have 75.</li>
+  <li>Questions NTA dropped (or ExamGOAL marks as bonus) are left out, as are 17 ExamGOAL questions whose options did not cut out cleanly (most run onto the next page). Where two answers are accepted, either one scores.</li>
+  <li><b>Group by finer topics</b> on the setup page uses ExamGOAL's chapter names (e.g. Waves, Circular Motion). Questions without a confident match show as "Topic not known yet".</li>
   <li>There are also 84 <b>original practice questions</b> (<code>questions.js</code>). They are <b>not</b> NTA questions; their year is only a demo tag, and the site labels them that way.</li>
 </ul>
 </section>
@@ -235,11 +241,12 @@ python3 tools/manage_users.py assign-tests akil</pre></li>
 <tr><td>Real NTA papers loaded (38 shifts)</td><td><span class="tag done">Done</span></td><td>NTA's own images, final answer key, source on every question</td></tr>
 <tr><td>1. Chapter tagging</td><td><span class="tag done">Done</span> 28 Sep</td><td>All 3,264 questions, NTA 2026 syllabus units. 90 tags are low confidence (teacher to check)</td></tr>
 <tr><td>2. Worked solutions + hints</td><td><span class="tag done">Done</span> 9 Oct</td><td>All 38 shifts. Every answer checked against NTA's key; 12 disagreements held back (section 8)</td></tr>
-<tr><td>3. Trap analysis</td><td><span class="tag part">1 of 38 shifts</span></td><td>2026, 2 Apr Shift 1 done (186 rows: 68 real traps, 118 "no clear mistake path"). <b>Waiting for the owner's review</b> before the other 37</td></tr>
+<tr><td>3. Trap analysis</td><td><span class="tag part">16 of 38 shifts</span></td><td>All of 2026 and 7 shifts of 2024 (Jan/Feb). Next: 2024 April, then 2023</td></tr>
+<tr><td>ExamGOAL papers 2025, 2022, 2021</td><td><span class="tag done">Done</span> 25 Oct</td><td>69 shifts, 5,898 questions, ExamGOAL's key; key differences on NTA papers noted in the review</td></tr>
 <tr><td>4. Analysis in the app</td><td><span class="tag done">Done</span> 10 Oct</td><td>Chapter table, strong/weak, slow/guess, likely traps, progress view, Practise next, PDF</td></tr>
 <tr><td>5. Test history (database)</td><td><span class="tag done">Done</span> 28 Sep</td><td>Every answer, time, change of answer, his reasons, hint steps</td></tr>
-<tr><td>6. Accounts for friends</td><td><span class="tag done">Built</span> 10 Oct</td><td>Tested locally. Admin account on this computer not made yet</td></tr>
-<tr><td>Online (PythonAnywhere)</td><td><span class="tag todo">Not done</span></td><td>Needs the owner's account (section 5)</td></tr>
+<tr><td>6. Accounts for friends</td><td><span class="tag done">Done</span> 10 Oct</td><td>Owner creates every account; each student sees only their own tests</td></tr>
+<tr><td>Online (PythonAnywhere)</td><td><span class="tag done">Online</span> 18 Oct</td><td>Free web app: extend every month on the Web tab</td></tr>
 <tr><td>Deleting an account with its tests</td><td><span class="tag todo">Not built</span></td><td>Ask Claude if a parent asks for it</td></tr>
 <tr><td>Leaderboard</td><td>Not planned</td><td>Owner chose not to</td></tr>
 <tr><td>claude.ai Artifact copy</td><td><span class="tag part">Old</span></td><td>An older copy without accounts, progress or PYQ images. Use the real site</td></tr>

@@ -15,7 +15,7 @@ q,topic,examside_id,match,answer_check
 14,,,0,no candidate
 15,,,0,no candidate
 16,,1lh2ylef4,0.41,differs (ExamGOAL B)
-17,Area Under The Curves,1lh2xt7m5,0.4,agree
+17,,1lh2xt7m5,0.4,agree
 18,,,0,no candidate
 19,Probability,1lh2ygb1d,0.97,differs (ExamGOAL B)
 20,,,0,no candidate
@@ -73,7 +73,7 @@ q,topic,examside_id,match,answer_check
 72,,,0,no candidate
 73,Salt Analysis,1lh31sl33,0.98,agree
 74,,,0,no candidate
-75,Hydrocarbons,1lh3283kr,0.81,differs (ExamGOAL B)
+75,,1lh3283kr,0.81,differs (ExamGOAL B)
 76,,1lh32g43h,0.59,differs (ExamGOAL D)
 77,Hydrocarbons,1lh31xzr0,0.84,differs (ExamGOAL A)
 78,,,0,no candidate

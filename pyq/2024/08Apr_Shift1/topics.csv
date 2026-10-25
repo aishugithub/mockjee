@@ -8,7 +8,7 @@ q,topic,examside_id,match,answer_check
 7,Application of Derivatives,lv5gt1vv,0.84,agree
 8,,lv5gst25,0.0,differs (ExamGOAL A)
 9,Application of Derivatives,lv5grwlv,0.82,differs (ExamGOAL D)
-10,Indefinite Integrals,lv5gs8hd,0.6,differs (ExamGOAL D)
+10,,lv5gs8hd,0.6,differs (ExamGOAL D)
 11,Definite Integration,lv5grw2g,0.76,differs (ExamGOAL C)
 12,Differential Equations,lv5grwbn,0.87,differs (ExamGOAL B)
 13,Differential Equations,lv5grwhw,0.73,differs (ExamGOAL D)
@@ -74,7 +74,7 @@ q,topic,examside_id,match,answer_check
 73,Coordination Compounds,lv5gsxvf,0.82,differs (ExamGOAL D)
 74,Basics of Organic Chemistry,lv5gt4zt,0.62,agree
 75,Hydrocarbons,lv5gt4ww,0.81,agree
-76,Basics of Organic Chemistry,lv5gt4os,0.63,differs (ExamGOAL A)
+76,,lv5gt4os,0.63,differs (ExamGOAL A)
 77,,lv5gt4vr,0.0,agree
 78,"Alcohols, Phenols and Ethers",lv5gt4qp,0.81,agree
 79,"Aldehydes, Ketones and Carboxylic Acids",lv5gt4uk,0.77,differs (ExamGOAL D)

@@ -96,6 +96,14 @@ def content_bottom(page, lines, y0, y1):
     return bottom
 
 
+def compact(im):
+    """Smaller PNG (the whole bank must fit PythonAnywhere's 512 MB disk): 16 grey levels for black-and-white
+    text, a 64-colour palette when the image really has colour (some figures)."""
+    r, g, b = im.convert('RGB').split()
+    tint = max(ImageChops.difference(r, g).getextrema()[1], ImageChops.difference(g, b).getextrema()[1])
+    return im.convert('RGB').quantize(64) if tint > 40 else im.convert('L').quantize(16)
+
+
 def render(page, rect, path):
     pix = page.get_pixmap(clip=rect, dpi=DPI)
     im = Image.open(io.BytesIO(pix.tobytes('png'))).convert('RGB')
@@ -108,7 +116,7 @@ def render(page, rect, path):
     if box:
         pad = 6
         im = im.crop((max(0, box[0] - pad), max(0, box[1] - pad), min(im.width, box[2] + pad), min(im.height, box[3] + pad)))
-    im.save(path, optimize=True)
+    compact(im).save(path, optimize=True)
     return bool(box)
 
 
@@ -191,7 +199,7 @@ def main():
                 sm = re.search(r'·\s*(Chemistry|Mathematics|Physics)', typ)
                 subj = sm.group(1) if sm else subject
             link = min(links, key=lambda k: abs(k[0].y0 - hb.y0), default=None)
-            qid = re.search(r'/question/([a-z0-9]+)', link[1]).group(1) if link and abs(link[0].y0 - hb.y0) < 60 else None
+            qid = re.search(r'/question/([A-Za-z0-9]+)', link[1]).group(1) if link and abs(link[0].y0 - hb.y0) < 60 else None
             blocks.append(dict(num=num, typ=typ, page=pno, hb=hb, y_end=y_end, subject=subj, oos=oos, qid=qid, lines=L))
 
     # 2. chapters from ExamSIDE page titles

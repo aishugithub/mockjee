@@ -9,7 +9,7 @@ q,topic,examside_id,match,answer_check
 8,"Limits, Continuity and Differentiability",lsamhqd8,0.88,differs (ExamGOAL B)
 9,"Limits, Continuity and Differentiability",lsamze84,0.73,differs (ExamGOAL D)
 10,Definite Integration,lsam93zl,0.79,differs (ExamGOAL A)
-11,Definite Integration,lsamq77b,0.72,differs (ExamGOAL C)
+11,,lsamq77b,0.72,differs (ExamGOAL C)
 12,Differential Equations,lsamlzre,0.81,no NTA answer
 13,,lsamf0th,0.39,differs (ExamGOAL C)
 14,Circle,lsamkf38,0.92,agree
@@ -68,15 +68,15 @@ q,topic,examside_id,match,answer_check
 67,,lsao7fl5,0.16,differs (ExamGOAL D)
 68,Periodic Table & Periodicity,lsaoc9af,0.94,differs (ExamGOAL A)
 69,d and f Block Elements,lsaorn4w,0.99,differs (ExamGOAL B)
-70,Coordination Compounds,lsaobjj7,1.0,differs (ExamGOAL B)
+70,,lsaobjj7,1.0,differs (ExamGOAL B)
 71,Coordination Compounds,lsaoznvo,1.0,differs (ExamGOAL B)
 72,Practical Organic Chemistry,lsaoomjj,1.0,differs (ExamGOAL C)
 73,Basics of Organic Chemistry,lsaosqy9,1.0,agree
 74,Basics of Organic Chemistry,lsaoaihn,1.0,differs (ExamGOAL D)
-75,Hydrocarbons,lsanxx7f,0.65,differs (ExamGOAL D)
+75,,lsanxx7f,0.65,differs (ExamGOAL D)
 76,,lsaofgdj,0.31,differs (ExamGOAL B)
 77,,lsaokiln,0.36,differs (ExamGOAL B)
-78,Hydrocarbons,lsaonshl,0.61,differs (ExamGOAL C)
+78,,lsaonshl,0.61,differs (ExamGOAL C)
 79,"Aldehydes, Ketones and Carboxylic Acids",lsaouz79,1.0,differs (ExamGOAL A)
 80,Coordination Compounds,lsaomryz,0.97,differs (ExamGOAL A)
 81,Some Basic Concepts of Chemistry,lsapf7l1,0.84,agree

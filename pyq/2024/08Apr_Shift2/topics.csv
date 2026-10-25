@@ -17,7 +17,7 @@ q,topic,examside_id,match,answer_check
 16,3D Geometry,lv3vef5l,0.81,differs (ExamGOAL B)
 17,,lv3vefae,0.59,differs (ExamGOAL B)
 18,,lv3veez6,0.52,differs (ExamGOAL B)
-19,Probability,lv3ve61j,0.07,agree
+19,,lv3ve61j,0.07,agree
 20,,lv3ve3z9,0.49,differs (ExamGOAL B)
 21,Quadratic Equation and Inequalities,lv3ve4b4,0.85,agree
 22,Straight Lines and Pair of Straight Lines,lv3ve74h,0.85,agree
@@ -38,7 +38,7 @@ q,topic,examside_id,match,answer_check
 37,Properties of Matter,lv3vega4,0.95,agree
 38,Heat and Thermodynamics,lv3vec1d,0.94,differs (ExamGOAL C)
 39,Heat and Thermodynamics,lv3veaso,1.0,differs (ExamGOAL B)
-40,Capacitor,lv3veewk,0.25,agree
+40,,lv3veewk,0.25,agree
 41,Current Electricity,lv3ve9dw,0.81,differs (ExamGOAL C)
 42,Magnetic Effect of Current,lv3ve5u6,0.99,agree
 43,Alternating Current,lv3ve9g6,0.93,differs (ExamGOAL B)
@@ -71,7 +71,7 @@ q,topic,examside_id,match,answer_check
 70,Coordination Compounds,lv3xm5x0,0.75,differs (ExamGOAL D)
 71,p-Block Elements,lv40v8yq,1.0,differs (ExamGOAL D)
 72,Compounds Containing Nitrogen,lv40va1g,1.0,agree
-73,Chemical Bonding & Molecular Structure,lv3xmasa,1.0,differs (ExamGOAL D)
+73,,lv3xmasa,1.0,differs (ExamGOAL D)
 74,Basics of Organic Chemistry,lv40vbj4,0.66,differs (ExamGOAL A)
 75,Haloalkanes and Haloarenes,lv3xmagm,0.99,differs (ExamGOAL D)
 76,Basics of Organic Chemistry,lv3xmadk,0.84,agree

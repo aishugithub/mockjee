@@ -1,14 +1,14 @@
 q,topic,examside_id,match,answer_check
 1,,lsaognvr,0.36,differs (ExamGOAL D)
-2,Quadratic Equation and Inequalities,lsaolop2,0.0,agree
+2,,lsaolop2,0.0,agree
 3,,lsaojnb9,0.59,differs (ExamGOAL A)
 4,Permutations and Combinations,lsaoelst,0.99,differs (ExamGOAL C)
 5,Matrices and Determinants,lsaorfpq,0.81,agree
 6,Sequences and Series,lsappvw8,0.82,differs (ExamGOAL D)
-7,Application of Derivatives,lsaps6wb,0.76,differs (ExamGOAL B)
+7,,lsaps6wb,0.76,differs (ExamGOAL B)
 8,"Limits, Continuity and Differentiability",lsaowab9,0.84,differs (ExamGOAL D)
 9,Area Under The Curves,lsaonhys,0.91,differs (ExamGOAL C)
-10,Definite Integration,lsao9n4x,0.74,differs (ExamGOAL C)
+10,,lsao9n4x,0.74,differs (ExamGOAL C)
 11,Differential Equations,lsaoufup,0.82,differs (ExamGOAL D)
 12,Hyperbola,lsaosyr4,0.88,differs (ExamGOAL C)
 13,Ellipse,lsapbol9,0.95,differs (ExamGOAL C)
@@ -17,8 +17,8 @@ q,topic,examside_id,match,answer_check
 16,3D Geometry,lsaptbc8,0.89,differs (ExamGOAL B)
 17,Probability,lsao86jd,1.0,differs (ExamGOAL B)
 18,Statistics,lsaohwm3,0.93,differs (ExamGOAL C)
-19,Matrices and Determinants,lsaob5vy,0.42,agree
-20,Trigonometric Ratio and Identites,lsaodfiz,0.44,agree
+19,,lsaob5vy,0.42,agree
+20,,lsaodfiz,0.44,agree
 21,,lsapy2m8,0.03,differs (ExamGOAL 6699)
 22,Complex Numbers,lsaq2wp0,0.7,agree
 23,Binomial Theorem,lsapwdnz,0.74,agree
@@ -66,12 +66,12 @@ q,topic,examside_id,match,answer_check
 65,Periodic Table & Periodicity,lsbm99de,0.94,differs (ExamGOAL A)
 66,,lsbmkq49,0.31,agree
 67,Redox Reactions,lsbmpghu,0.85,differs (ExamGOAL B)
-68,Redox Reactions,lsblv392,0.48,agree
+68,,lsblv392,0.48,agree
 69,Coordination Compounds,lsbmdoyp,1.0,differs (ExamGOAL B)
 70,,lsbm3yq7,0.0,agree
 71,,lsbm5rqa,0.0,differs (ExamGOAL A)
 72,Compounds Containing Nitrogen,lsbmt320,1.0,agree
-73,Basics of Organic Chemistry,lsbmamho,0.37,agree
+73,,lsbmamho,0.37,agree
 74,,lsbmmtp5,0.52,differs (ExamGOAL A)
 75,"Aldehydes, Ketones and Carboxylic Acids",lsbm0609,0.81,differs (ExamGOAL B)
 76,,lsbmv400,0.4,differs (ExamGOAL C)

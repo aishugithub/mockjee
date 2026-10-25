@@ -1,10 +1,10 @@
 q,topic,examside_id,match,answer_check
 1,Functions,lvb294cr,0.88,agree
-2,Sets and Relations,lvb294aa,0.11,agree
+2,,lvb294aa,0.11,agree
 3,Complex Numbers,lvb2948r,0.86,differs (ExamGOAL C)
 4,Matrices and Determinants,lvb294f8,0.75,agree
 5,Permutations and Combinations,lvb294sf,0.97,differs (ExamGOAL C)
-6,Permutations and Combinations,lvb294ut,0.7,differs (ExamGOAL D)
+6,,lvb294ut,0.7,differs (ExamGOAL D)
 7,Sequences and Series,lvb294px,1.0,differs (ExamGOAL C)
 8,Application of Derivatives,lvb29471,0.92,differs (ExamGOAL D)
 9,,lvb294dv,0.52,differs (ExamGOAL D)
@@ -33,7 +33,7 @@ q,topic,examside_id,match,answer_check
 32,Units & Measurements,lvb2957z,0.97,differs (ExamGOAL D)
 33,Motion in a Straight Line,lvb2956u,0.97,differs (ExamGOAL B)
 34,Laws of Motion,lvb29599,0.92,differs (ExamGOAL A)
-35,Magnetic Properties of Matter,lvb2acox,0.08,agree
+35,,lvb2acox,0.08,agree
 36,Work Power & Energy,lvb29egr,1.0,agree
 37,Gravitation,lvb29ej7,0.98,differs (ExamGOAL D)
 38,Properties of Matter,lvb29ehp,0.98,agree
@@ -61,14 +61,14 @@ q,topic,examside_id,match,answer_check
 60,,lvb2acm6,0.13,agree
 61,Some Basic Concepts of Chemistry,lvb2a2bp,0.77,differs (ExamGOAL D)
 62,,lvb2a2db,0.32,differs (ExamGOAL C)
-63,Chemical Equilibrium,lvb2a7x3,0.85,differs (ExamGOAL D)
+63,,lvb2a7x3,0.85,differs (ExamGOAL D)
 64,,lvb2a27q,0.01,agree
 65,Electrochemistry,lvb2a269,1.0,differs (ExamGOAL A)
 66,,lvb29nmy,0.19,differs (ExamGOAL A)
 67,Redox Reactions,lvb29icb,0.88,differs (ExamGOAL C)
 68,,,0,no candidate
 69,d and f Block Elements,lvb2a2ec,0.72,differs (ExamGOAL B)
-70,Coordination Compounds,lvb2a7ya,1.0,differs (ExamGOAL C)
+70,,lvb2a7ya,1.0,differs (ExamGOAL C)
 71,Coordination Compounds,lvb2a2am,0.78,differs (ExamGOAL B)
 72,Salt Analysis,lvb29j92,0.76,differs (ExamGOAL D)
 73,Basics of Organic Chemistry,lvb29ww2,1.0,differs (ExamGOAL A)

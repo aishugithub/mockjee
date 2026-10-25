@@ -1,15 +1,15 @@
 q,topic,examside_id,match,answer_check
 1,Sets and Relations,lvc57b2n,0.83,differs (ExamGOAL D)
-2,Functions,lvc57nwe,0.63,differs (ExamGOAL C)
+2,,lvc57nwe,0.63,differs (ExamGOAL C)
 3,Permutations and Combinations,lvc57pix,1.0,differs (ExamGOAL B)
 4,Quadratic Equation and Inequalities,lvc57aw6,0.76,differs (ExamGOAL B)
-5,Matrices and Determinants,lvc57b13,0.67,differs (ExamGOAL A)
+5,,lvc57b13,0.67,differs (ExamGOAL A)
 6,Differentiation,lvc57bcq,0.76,no NTA answer
 7,,lvc57uea,0.0,differs (ExamGOAL D)
 8,,lvc57b43,0.55,differs (ExamGOAL C)
 9,,lvc586ak,0.0,agree
 10,Straight Lines and Pair of Straight Lines,lvc57b6s,0.94,differs (ExamGOAL D)
-11,Definite Integration,lvc57ayt,0.41,agree
+11,,lvc57ayt,0.41,agree
 12,Area Under The Curves,lvc57b84,0.87,differs (ExamGOAL C)
 13,Differential Equations,lvc58e2y,0.88,differs (ExamGOAL B)
 14,Differential Equations,lvc57baa,0.79,differs (ExamGOAL A)
@@ -69,7 +69,7 @@ q,topic,examside_id,match,answer_check
 68,Chemical Bonding & Molecular Structure,lvc57i5y,0.84,differs (ExamGOAL B)
 69,d and f Block Elements,lvc583a5,0.91,agree
 70,,lvc583fj,0.5,differs (ExamGOAL B)
-71,Coordination Compounds,lvc58e8v,0.44,agree
+71,,lvc58e8v,0.44,agree
 72,Salt Analysis,lvc583co,0.75,differs (ExamGOAL A)
 73,Practical Organic Chemistry,lvc57nu2,0.97,differs (ExamGOAL A)
 74,Basics of Organic Chemistry,lvc58eo1,0.94,differs (ExamGOAL C)

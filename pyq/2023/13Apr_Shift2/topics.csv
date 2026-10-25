@@ -1,6 +1,6 @@
 q,topic,examside_id,match,answer_check
-1,Functions,1lgoxs5ux,0.76,differs (ExamGOAL B)
-2,Complex Numbers,1lgow71ev,0.86,differs (ExamGOAL B)
+1,,1lgoxs5ux,0.76,differs (ExamGOAL B)
+2,,1lgow71ev,0.86,differs (ExamGOAL B)
 3,,,0,no candidate
 4,Matrices and Determinants,1lgoxgbmt,0.88,differs (ExamGOAL A)
 5,,1lgow7xsy,0.47,differs (ExamGOAL B)

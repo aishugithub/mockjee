@@ -5,8 +5,9 @@ engine (tools/win_ocr.ps1) and matched by text to ExamGOAL's question stems, one
 subject and question type. Each match is then checked by its answer:
   - numerical: ExamGOAL's key must equal NTA's final key
   - MCQ: ExamGOAL's letter must equal NTA's option position (ExamGOAL usually keeps NTA's option order)
-A match is kept only if the text match is good, or the answer agrees and the match is fair, or the
-question was the only one left in its subject and type (a figure with little text) and the answer agrees.
+A match is kept only if the text match is good and both texts are 40+ characters, or the answer agrees and
+the match is fair, or the question was the only one left in its subject and type (a figure with little text)
+and the answer agrees. An MCQ answer agreement only counts where ExamGOAL keeps NTA's option order.
 
 Writes pyq/<year>/<shift>/topics.csv: q,topic,examside_id,match,answer_check
 build_pyq_bank.py adds `topic` from it. Rows with an empty topic were not matched confidently.
@@ -34,7 +35,7 @@ def examgoal_questions(pdf):
     """[(num, subject, type, stem text, examside id)] from an ExamGOAL paper."""
     out, subject = [], None
     for page in pdf:
-        links = [(k['from'].y0, re.search(r'/question/([a-z0-9]+)', k['uri']).group(1)) for k in page.get_links()
+        links = [(k['from'].y0, re.search(r'/question/([A-Za-z0-9]+)', k['uri']).group(1)) for k in page.get_links()
                  if 'examside.com' in k.get('uri', '') and 'utm_medium' not in k['uri']]
         blocks = page.get_text('dict', flags=pymupdf.TEXTFLAGS_TEXT)['blocks']
         lines = sorted(((l['bbox'][1], l['bbox'][0], ''.join(s['text'] for s in l['spans']).strip())
@@ -107,6 +108,15 @@ def main():
             continue
         took_q.add(i); took_e.add(j); match[i] = (j, r)
 
+    # does ExamGOAL keep NTA's option order in this paper? (key letter at NTA's key position for 90%+ of MCQs)
+    pos = []
+    for i, (j, r) in match.items():
+        q, k = qs[i], key.get(eg[j]['num'], '')
+        if q['type'] == 'MCQ' and q.get('answer') is not None and r >= GOOD:
+            pos.append(any('ABCD'.index(x.strip()) in ({q['answer']} | set(q.get('accept', [])))
+                           for x in k.split(',') if x.strip() and x.strip() in 'ABCD'))
+    same_order = len(pos) >= 20 and sum(pos) / len(pos) >= 0.9
+
     rows, stats = [], {'kept': 0, 'dropped': 0, 'agree': 0, 'disagree': 0, 'unit_mismatch': []}
     for i, q in enumerate(qs):
         n = i + 1
@@ -137,7 +147,13 @@ def main():
         forced = r < FAIR and weak_in_group == 1      # the only question left in its subject and type
         if len(parts) >= 3 and parts[2] != q['subject']:
             topic = ''                                # ExamSIDE files it under another subject: not the same question
-        keep = topic and (r >= GOOD or (r >= FAIR and check == 'agree') or (forced and check == 'agree'))
+        # Mostly-formula stems leave little text ("if then is equal to"), and two such scraps can look alike,
+        # so a short text never counts as a good match on its own. An answer check is evidence for a numerical,
+        # and for an MCQ only where ExamGOAL keeps NTA's option order (shuffled copies agree by chance).
+        t = texts.get(os.path.join(folder, q.get('image', '')), '')
+        short = min(len(t), len(e['text'])) < 40
+        evidence = check == 'agree' and (q['type'] == 'NUM' or same_order)
+        keep = topic and ((r >= GOOD and not short) or (r >= FAIR and evidence) or (forced and evidence))
         if keep:
             stats['kept'] += 1
             try:
@@ -152,7 +168,7 @@ def main():
 
     with open(os.path.join(folder, 'topics.csv'), 'w', newline='', encoding='utf-8') as f:
         w = csv.DictWriter(f, fieldnames=['q', 'topic', 'examside_id', 'match', 'answer_check']); w.writeheader(); w.writerows(rows)
-    print(f"{folder}: topics for {stats['kept']}/{len(qs)}; answers agree {stats['agree']}, differ {stats['disagree']}; "
+    print(f"{'(same option order) ' if same_order else ''}{folder}: topics for {stats['kept']}/{len(qs)}; answers agree {stats['agree']}, differ {stats['disagree']}; "
           f"our NTA-unit tag differs from ExamGOAL's chapter for {len(stats['unit_mismatch'])}")
     for m in stats['unit_mismatch']:
         print('   ', m)

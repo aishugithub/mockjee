@@ -12,7 +12,7 @@ q,topic,examside_id,match,answer_check
 11,Trigonometric Ratio and Identites,1lsg3vc3r,0.73,agree
 12,Definite Integration,1lsg3stoy,0.84,agree
 13,Definite Integration,1lsg3nvgv,0.81,differs (ExamGOAL C)
-14,Ellipse,1lsg4p9ak,0.1,agree
+14,,1lsg4p9ak,0.1,agree
 15,Hyperbola,1lsg4ewgx,0.95,differs (ExamGOAL B)
 16,Straight Lines and Pair of Straight Lines,1lsg40lwf,0.82,differs (ExamGOAL B)
 17,3D Geometry,1lsg4acyi,0.8,differs (ExamGOAL C)
@@ -72,7 +72,7 @@ q,topic,examside_id,match,answer_check
 71,,1lsg7vwub,0.0,agree
 72,Basics of Organic Chemistry,1lsg7bpxi,0.97,differs (ExamGOAL D)
 73,,1lsg7wptd,0.0,differs (ExamGOAL A)
-74,Basics of Organic Chemistry,1lsg7cpqp,0.83,differs (ExamGOAL D)
+74,,1lsg7cpqp,0.83,differs (ExamGOAL D)
 75,Haloalkanes and Haloarenes,1lsg7n4xi,0.9,agree
 76,,1lsg7zp1o,0.0,differs (ExamGOAL A)
 77,Hydrocarbons,1lsg7xgnj,0.79,differs (ExamGOAL D)

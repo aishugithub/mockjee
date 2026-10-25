@@ -6,9 +6,9 @@ q,topic,examside_id,match,answer_check
 5,Permutations and Combinations,1lgylnv0d,0.98,differs (ExamGOAL A)
 6,,,0,no candidate
 7,Binomial Theorem,1lgyliytd,0.95,differs (ExamGOAL C)
-8,Sets and Relations,1lgyld2f2,0.36,agree
+8,,1lgyld2f2,0.36,agree
 9,"Limits, Continuity and Differentiability",1lgylxsd8,0.71,differs (ExamGOAL D)
-10,Indefinite Integrals,1lgyl5enm,0.79,no NTA answer
+10,,1lgyl5enm,0.79,no NTA answer
 11,,,0,no candidate
 12,,1lgyl43d6,0.09,differs (ExamGOAL D)
 13,,,0,no candidate
