@@ -1,0 +1,91 @@
+q,topic,examside_id,match,answer_check
+1,Functions,luxwcbm5,0.74,differs (ExamGOAL C)
+2,Complex Numbers,luxwe3b8,0.92,differs (ExamGOAL B)
+3,Quadratic Equation and Inequalities,luxwdj41,0.78,differs (ExamGOAL A)
+4,Matrices and Determinants,luxwcxug,0.65,differs (ExamGOAL B)
+5,Differential Equations,luxweayj,0.64,differs (ExamGOAL D)
+6,Binomial Theorem,luxwdx5b,0.88,differs (ExamGOAL D)
+7,Sequences and Series,luxwd2ht,0.73,differs (ExamGOAL C)
+8,,luxweovm,0.0,differs (ExamGOAL B)
+9,,luxwdeld,0.49,differs (ExamGOAL D)
+10,Area Under The Curves,luxweb0r,0.95,differs (ExamGOAL B)
+11,Definite Integration,luxwehsa,0.76,agree
+12,Definite Integration,luxwdx2t,0.79,differs (ExamGOAL D)
+13,Differentiation,luxwdj6m,0.75,agree
+14,Properties of Triangle,luxwe7pg,0.9,differs (ExamGOAL D)
+15,Hyperbola,luxwe7n5,0.79,differs (ExamGOAL A)
+16,3D Geometry,luxwcs1z,0.81,differs (ExamGOAL B)
+17,Vector Algebra,luxwcrzd,0.78,agree
+18,Vector Algebra,luxwe3dl,0.75,differs (ExamGOAL C)
+19,Statistics,luxwcxru,0.91,differs (ExamGOAL D)
+20,Probability,luxwcbol,0.93,agree
+21,Functions,luxwdqq9,0.77,agree
+22,Matrices and Determinants,luxwcbqo,0.89,agree
+23,Permutations and Combinations,luxweoza,0.99,agree
+24,Sequences and Series,luxwdj8i,0.39,agree
+25,Application of Derivatives,luxwdep3,0.84,agree
+26,Differential Equations,luxweoxi,0.81,agree
+27,Parabola,luxwdx79,0.82,agree
+28,Parabola,luxwclgg,0.57,agree
+29,3D Geometry,luxwden8,0.34,agree
+30,Inverse Trigonometric Functions,luxwcnzi,0.93,agree
+31,Units & Measurements,luxwd2ms,0.96,differs (ExamGOAL C)
+32,Motion in a Straight Line,luxwdjas,0.59,agree
+33,Atoms and Nuclei,luxwdqsr,0.98,differs (ExamGOAL A)
+34,Laws of Motion,luxwerh5,0.95,differs (ExamGOAL B)
+35,,luxwco24,0.0,differs (ExamGOAL D)
+36,Heat and Thermodynamics,luxweree,0.89,differs (ExamGOAL B)
+37,,luxwem1b,0.3,agree
+38,Gravitation,luxweb2z,0.92,differs (ExamGOAL B)
+39,Properties of Matter,luxwe3fy,1.0,differs (ExamGOAL B)
+40,,luxwderb,0.29,differs (ExamGOAL A)
+41,Heat and Thermodynamics,luxwco4g,0.72,differs (ExamGOAL D)
+42,Electrostatics,luxwerbk,0.94,differs (ExamGOAL D)
+43,Current Electricity,luxwermh,0.9,differs (ExamGOAL A)
+44,Magnetic Effect of Current,luxwcs49,0.93,differs (ExamGOAL C)
+45,Electromagnetic Induction,luxwer3v,0.88,agree
+46,Geometrical Optics,luxwer8s,0.9,differs (ExamGOAL A)
+47,Dual Nature of Radiation,luxwd2ka,0.95,differs (ExamGOAL B)
+48,Semiconductor,luxwervs,0.87,differs (ExamGOAL A)
+49,Semiconductor,luxwer1f,0.88,differs (ExamGOAL D)
+50,Electromagnetic Waves,luxweb5k,0.82,differs (ExamGOAL A)
+51,Work Power & Energy,luxwcu3m,0.84,agree
+52,Wave Optics,luxwdn9i,0.91,agree
+53,,luxwco8e,0.12,agree
+54,Magnetic Effect of Current,luxwem58,0.59,agree
+55,Current Electricity,luxwco6g,0.92,agree
+56,,luxwerje,0.24,agree
+57,Simple Harmonic Motion,luxwem36,0.88,agree
+58,Rotational Motion,luxwdn7o,0.92,agree
+59,Vector Algebra,luxwe02b,0.94,agree
+60,Current Electricity,luxwer61,0.93,agree
+61,Some Basic Concepts of Chemistry,luxzq9as,0.54,agree
+62,,luxzq9h9,0.0,agree
+63,Ionic Equilibrium,luxzq6c0,0.87,differs (ExamGOAL C)
+64,,luxzq6ft,0.26,differs (ExamGOAL C)
+65,Electrochemistry,luxzqiw7,0.96,differs (ExamGOAL D)
+66,d and f Block Elements,luxwda65,0.98,differs (ExamGOAL C)
+67,Periodic Table & Periodicity,luxwem87,0.75,agree
+68,Periodic Table & Periodicity,luxzq97n,0.85,agree
+69,d and f Block Elements,luxwe3if,0.98,differs (ExamGOAL C)
+70,,luxzq9e3,0.0,differs (ExamGOAL A)
+71,Coordination Compounds,luxzq6jp,0.72,differs (ExamGOAL D)
+72,,luxzq693,0.15,differs (ExamGOAL B)
+73,Basics of Organic Chemistry,luxweqym,0.72,differs (ExamGOAL C)
+74,,luxzq6ml,0.0,agree
+75,Haloalkanes and Haloarenes,luxwerpm,0.7,differs (ExamGOAL A)
+76,Basics of Organic Chemistry,luxzqkgn,1.0,differs (ExamGOAL C)
+77,"Aldehydes, Ketones and Carboxylic Acids",luxwdeto,0.91,differs (ExamGOAL C)
+78,"Aldehydes, Ketones and Carboxylic Acids",luxwert3,0.93,agree
+79,Compounds Containing Nitrogen,luxzqkdm,0.71,differs (ExamGOAL B)
+80,,luxzq9jw,0.0,differs (ExamGOAL A)
+81,Structure of Atom,luxzqk68,0.61,agree
+82,Chemical Bonding & Molecular Structure,luy1mwmf,0.94,agree
+83,Thermodynamics,luy1mwsk,0.54,agree
+84,Solutions,luy1mwup,0.73,agree
+85,Chemical Kinetics and Nuclear Chemistry,luy1mwyx,0.7,agree
+86,d and f Block Elements,luy1mwqj,0.82,agree
+87,Coordination Compounds,luy1mwog,0.89,agree
+88,Basics of Organic Chemistry,luxzqkad,0.85,agree
+89,p-Block Elements,luy1mx0u,1.0,agree
+90,Compounds Containing Nitrogen,luy1mwwn,0.63,agree

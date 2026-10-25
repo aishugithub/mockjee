@@ -1,0 +1,91 @@
+q,topic,examside_id,match,answer_check
+1,Inverse Trigonometric Functions,lv0vxckz,0.64,differs (ExamGOAL C)
+2,Complex Numbers,lv0vxdau,0.92,differs (ExamGOAL A)
+3,Quadratic Equation and Inequalities,lv0vxd39,0.89,agree
+4,Matrices and Determinants,lv0vxd86,0.77,differs (ExamGOAL A)
+5,Matrices and Determinants,lv0vxbzn,0.7,differs (ExamGOAL A)
+6,"Limits, Continuity and Differentiability",lv0vxdd3,0.81,differs (ExamGOAL D)
+7,Permutations and Combinations,lv0vxc34,0.63,differs (ExamGOAL A)
+8,Binomial Theorem,lv0vxd0y,0.93,differs (ExamGOAL C)
+9,Sequences and Series,lv0vxcyd,0.97,differs (ExamGOAL C)
+10,,lv0vxbpa,0.51,differs (ExamGOAL A)
+11,Differentiation,lv0vxcdq,0.8,differs (ExamGOAL C)
+12,Application of Derivatives,lv0vxd5u,0.85,agree
+13,Area Under The Curves,lv0vxbvp,0.68,agree
+14,Differential Equations,lv0vxcw0,0.86,differs (ExamGOAL D)
+15,Circle,lv0vxc6v,0.98,differs (ExamGOAL A)
+16,Straight Lines and Pair of Straight Lines,lv0vxcqn,0.96,differs (ExamGOAL B)
+17,3D Geometry,lv0vxcns,0.89,differs (ExamGOAL B)
+18,Vector Algebra,lv0vxcgi,0.77,agree
+19,Probability,lv0vxct6,0.99,agree
+20,Statistics,lv0vxcac,0.94,agree
+21,Sets and Relations,lv0vxdqq,0.98,agree
+22,Matrices and Determinants,lv0vxdmu,0.86,agree
+23,,lv0vxdwu,0.23,agree
+24,,lv0vxdop,0.28,differs (ExamGOAL 8)
+25,,lv0vxdko,0.59,differs (ExamGOAL 100)
+26,Differential Equations,lv0vxdf0,0.72,agree
+27,Matrices and Determinants,lv0vxdis,0.88,no NTA answer
+28,Parabola,lv0vxdso,0.96,agree
+29,Definite Integration,lv0vxdgv,0.85,agree
+30,Vector Algebra,lv0vxdun,0.8,agree
+31,Units & Measurements,lv0vxm6r,0.86,agree
+32,Motion in a Plane,lv0vxm48,0.89,differs (ExamGOAL D)
+33,Laws of Motion,lv0vyukq,0.99,differs (ExamGOAL D)
+34,Motion in a Straight Line,lv0vxlz6,0.78,differs (ExamGOAL A)
+35,Work Power & Energy,lv0vxlra,0.97,differs (ExamGOAL A)
+36,Gravitation,lv0vxkbr,0.95,differs (ExamGOAL D)
+37,,lv0vyuyi,0.5,differs (ExamGOAL A)
+38,Heat and Thermodynamics,lv0vy00d,0.97,differs (ExamGOAL C)
+39,Heat and Thermodynamics,lv0vyue8,0.97,differs (ExamGOAL A)
+40,Electrostatics,lv0vyvcr,0.3,agree
+41,Heat and Thermodynamics,lv0vxt1h,0.97,differs (ExamGOAL B)
+42,Magnetic Effect of Current,lv0vxk95,1.0,agree
+43,Alternating Current,lv0vxltl,1.0,agree
+44,Electromagnetic Waves,lv0vxsz4,0.91,differs (ExamGOAL A)
+45,Geometrical Optics,lv0vxked,0.98,differs (ExamGOAL B)
+46,Dual Nature of Radiation,lv0vyu60,0.98,differs (ExamGOAL C)
+47,Atoms and Nuclei,lv0vxlw8,0.98,differs (ExamGOAL D)
+48,Semiconductor,lv0vyuvt,0.93,differs (ExamGOAL B)
+49,Units & Measurements,lv0vxm1t,0.98,differs (ExamGOAL C)
+50,,lv0vxzxs,0.5,differs (ExamGOAL B)
+51,Vector Algebra,lv0vy1q6,0.91,agree
+52,Rotational Motion,lv0vy02i,0.82,agree
+53,Properties of Matter,lv0vy08y,0.92,agree
+54,,lv0vy0ap,0.2,agree
+55,,lv0vy04k,0.21,agree
+56,,lv0vyubq,0.17,agree
+57,Magnetic Effect of Current,lv0vyunc,0.73,agree
+58,Alternating Current,lv0vy1s1,0.88,agree
+59,,lv0vy3j5,0.08,agree
+60,Atoms and Nuclei,lv0vy072,0.83,agree
+61,Some Basic Concepts of Chemistry,lv0vyqoa,0.81,differs (ExamGOAL D)
+62,Chemical Bonding & Molecular Structure,lv0vyr14,1.0,differs (ExamGOAL C)
+63,Basics of Organic Chemistry,lv0vy3oe,0.91,differs (ExamGOAL D)
+64,Electrochemistry,lv0vyqtr,1.0,agree
+65,Electrochemistry,lv0vyr3r,0.96,agree
+66,Periodic Table & Periodicity,lv0vyqw9,0.73,agree
+67,Periodic Table & Periodicity,lv0vyr68,0.93,agree
+68,Chemical Bonding & Molecular Structure,lv0vyqj5,0.92,differs (ExamGOAL A)
+69,d and f Block Elements,lv0vychy,1.0,differs (ExamGOAL D)
+70,Coordination Compounds,lv0vyqlr,1.0,differs (ExamGOAL B)
+71,Coordination Compounds,lv0vy3lp,0.85,differs (ExamGOAL C)
+72,Salt Analysis,lv0vycfc,1.0,agree
+73,Compounds Containing Nitrogen,lv0vyqyn,1.0,differs (ExamGOAL D)
+74,Basics of Organic Chemistry,lv0vyv5n,0.84,differs (ExamGOAL D)
+75,Basics of Organic Chemistry,lv0vyqqy,1.0,differs (ExamGOAL B)
+76,Haloalkanes and Haloarenes,lv0vyuha,0.69,differs (ExamGOAL A)
+77,Haloalkanes and Haloarenes,lv0vyv19,0.82,differs (ExamGOAL D)
+78,"Aldehydes, Ketones and Carboxylic Acids",lv0vy3rc,1.0,differs (ExamGOAL B)
+79,"Aldehydes, Ketones and Carboxylic Acids",lv0vyuqn,0.82,agree
+80,Biomolecules,lv0vyv9g,1.0,differs (ExamGOAL D)
+81,Structure of Atom,lv0vytj5,0.95,agree
+82,Chemical Bonding & Molecular Structure,lv0vytmr,0.9,agree
+83,Thermodynamics,lv0vys57,0.83,agree
+84,,lv0vyr87,0.21,agree
+85,Chemical Kinetics and Nuclear Chemistry,lv0vyu96,0.71,agree
+86,,lv0vytoz,0.33,agree
+87,Redox Reactions,lv0vyra5,0.91,agree
+88,Basics of Organic Chemistry,lv0vytky,0.96,agree
+89,Compounds Containing Nitrogen,lv0vyutc,0.61,agree
+90,,lv0vys72,0.22,agree

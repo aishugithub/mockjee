@@ -1,0 +1,91 @@
+q,topic,examside_id,match,answer_check
+1,Functions,1lgrgf67d,0.85,no NTA answer
+2,Quadratic Equation and Inequalities,1lgrg43qz,0.97,differs (ExamGOAL D)
+3,Matrices and Determinants,1lgre7f3c,0.73,agree
+4,Permutations and Combinations,1lgrefqkf,0.95,agree
+5,,,0,no candidate
+6,,,0,no candidate
+7,Complex Numbers,1lgrehu31,0.77,agree
+8,,,0,no candidate
+9,Application of Derivatives,1lgrg9l7x,0.83,differs (ExamGOAL C)
+10,Area Under The Curves,1lgrgc23k,0.96,agree
+11,Differential Equations,1lgreaalg,0.79,differs (ExamGOAL C)
+12,Ellipse,1lgrg5nwu,0.84,agree
+13,Straight Lines and Pair of Straight Lines,1lgrg2uy5,0.89,differs (ExamGOAL B)
+14,,,0,no candidate
+15,3D Geometry,1lgrebnuy,0.75,differs (ExamGOAL C)
+16,,,0,no candidate
+17,,,0,no candidate
+18,Probability,1lgre62ht,0.98,differs (ExamGOAL A)
+19,,,0,no candidate
+20,,,0,no candidate
+21,Sets and Relations,1lgrgm8hz,0.94,agree
+22,,1lgrgryfu,0.23,differs (ExamGOAL 64)
+23,,1lgrgicm5,0.58,differs (ExamGOAL 1260)
+24,Statistics,1lgrgr0fx,0.87,agree
+25,"Limits, Continuity and Differentiability",1lgrgpa4y,0.92,agree
+26,,1lgrghmb3,0.19,differs (ExamGOAL 6)
+27,Definite Integration,1lgrgllfd,0.87,differs (ExamGOAL 575)
+28,Circle,1lgrgje37,0.96,agree
+29,,,0,no candidate
+30,Probability,1lgrgkm6x,0.96,agree
+31,Gravitation,1lgrhl0d6,0.97,differs (ExamGOAL D)
+32,Units & Measurements,1lgrh5r8m,0.81,differs (ExamGOAL C)
+33,Work Power & Energy,1lgrh1w3m,0.94,differs (ExamGOAL B)
+34,Communication Systems,1lgrjjauf,0.82,differs (ExamGOAL D)
+35,Alternating Current,1lgrjkmq5,1.0,differs (ExamGOAL C)
+36,Gravitation,1lgrhjnmi,0.99,differs (ExamGOAL D)
+37,Properties of Matter,1lgrhpyqf,0.87,differs (ExamGOAL A)
+38,Heat and Thermodynamics,1lgrhmt1a,0.93,agree
+39,Heat and Thermodynamics,1lgrjg437,0.9,differs (ExamGOAL D)
+40,Simple Harmonic Motion,1lgrgy9ww,1.0,differs (ExamGOAL D)
+41,Electrostatics,1lgrigha1,0.95,differs (ExamGOAL D)
+42,Current Electricity,1lgriitoy,0.94,differs (ExamGOAL D)
+43,Magnetic Properties of Matter,1lgrihor0,1.0,differs (ExamGOAL A)
+44,Motion in a Straight Line,1lgrikj40,0.88,differs (ExamGOAL C)
+45,Laws of Motion,1lgrholky,0.89,differs (ExamGOAL C)
+46,Geometrical Optics,1lgrhs6f8,0.8,differs (ExamGOAL A)
+47,Dual Nature of Radiation,1lgridy8u,0.96,differs (ExamGOAL A)
+48,Atoms and Nuclei,1lgrjh1y3,0.97,agree
+49,Semiconductor,1lgrhigtk,0.9,differs (ExamGOAL D)
+50,Electromagnetic Waves,1lgrhh4x2,0.99,agree
+51,,1lgrjrll5,0.27,agree
+52,Work Power & Energy,1lgrjn09d,0.99,agree
+53,Rotational Motion,1lgrjp53g,0.99,agree
+54,Properties of Matter,1lgrjt3pi,0.66,agree
+55,Waves,1lgrjvfdb,0.94,agree
+56,,1lgrgo0q2,0.4,differs (ExamGOAL 288)
+57,Current Electricity,1lgrjqg3o,0.9,agree
+58,Electromagnetic Induction,1lgrjzipn,0.69,agree
+59,Geometrical Optics,1lgrju3bo,0.95,agree
+60,,1lgrjybw0,0.17,agree
+61,Some Basic Concepts of Chemistry,1lgrkmdoz,0.92,differs (ExamGOAL A)
+62,,,0,no candidate
+63,,1lgrl0m11,0.22,differs (ExamGOAL D)
+64,,,0,no candidate
+65,,,0,no candidate
+66,,1lgrkkssk,0.2,agree
+67,,,0,no candidate
+68,,1lgrkbmlp,0.3,differs (ExamGOAL D)
+69,p-Block Elements,1lgrk11j3,1.0,differs (ExamGOAL D)
+70,,1lgrl2jd4,0.18,agree
+71,,,0,no candidate
+72,Coordination Compounds,1lgrk665p,0.8,differs (ExamGOAL A)
+73,,,0,no candidate
+74,"Alcohols, Phenols and Ethers",1lgrkq2qw,0.92,differs (ExamGOAL B)
+75,"Aldehydes, Ketones and Carboxylic Acids",1lgrk77e2,0.75,differs (ExamGOAL B)
+76,"Aldehydes, Ketones and Carboxylic Acids",1lgrl39go,0.65,differs (ExamGOAL D)
+77,"Aldehydes, Ketones and Carboxylic Acids",1lgrkfg32,0.65,agree
+78,"Aldehydes, Ketones and Carboxylic Acids",1lgrl3wls,0.77,differs (ExamGOAL D)
+79,Compounds Containing Nitrogen,1lgrkye37,0.9,differs (ExamGOAL A)
+80,,,0,no candidate
+81,,,0,no candidate
+82,Structure of Atom,1lgrld1v3,0.7,agree
+83,,1lgrlronp,0.08,agree
+84,Solutions,1lgrl9cee,0.86,agree
+85,Ionic Equilibrium,1lgrlpojp,0.89,agree
+86,Chemical Kinetics and Nuclear Chemistry,1lgrlo6dq,0.84,agree
+87,Basics of Organic Chemistry,1lgrlkiw3,0.69,agree
+88,,1lgrll0qx,0.35,agree
+89,Biomolecules,1lgrl6w8g,0.55,agree
+90,"Aldehydes, Ketones and Carboxylic Acids",1lgrlmtro,0.99,agree

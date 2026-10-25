@@ -1,0 +1,76 @@
+q,topic,examside_id,match,answer_check
+1,Functions,mnsik7i8,0.71,agree
+2,,mnsik7j4,0.24,agree
+3,Complex Numbers,mnsik7k3,0.93,agree
+4,Matrices and Determinants,mnsik7ky,0.84,agree
+5,Matrices and Determinants,mnsik7m4,0.58,agree
+6,Sequences and Series,mnsik7n2,0.6,agree
+7,Permutations and Combinations,mnsik7og,0.72,agree
+8,Statistics,mnsik7pe,0.89,agree
+9,Probability,mnsik7q9,1.0,agree
+10,,mnsik7r5,0.34,agree
+11,Hyperbola,mnsik7s0,0.78,agree
+12,Ellipse,mnsik7t4,0.97,agree
+13,Inverse Trigonometric Functions,mnsik7tx,0.66,agree
+14,3D Geometry,mnsik7us,0.78,agree
+15,Vector Algebra,mnsik7vm,0.85,agree
+16,Quadratic Equation and Inequalities,mnsik7wf,0.84,agree
+17,Definite Integration,mnsik7xd,0.88,agree
+18,Differential Equations,mnsik7yl,0.82,agree
+19,Area Under The Curves,mnsik7zj,0.77,agree
+20,Definite Integration,mnsik81a,0.96,agree
+21,Sets and Relations,mnsik81y,0.88,agree
+22,Binomial Theorem,mnsik82i,0.6,agree
+23,Circle,mnsik82x,0.09,agree
+24,3D Geometry,mnsik83f,0.8,agree
+25,"Limits, Continuity and Differentiability",mnsik83x,0.81,agree
+26,Units & Measurements,mnsik84m,0.99,agree
+27,Units & Measurements,mnsik85s,0.8,agree
+28,Rotational Motion,mnsik86h,0.81,agree
+29,Work Power & Energy,mnsik87k,0.98,agree
+30,Heat and Thermodynamics,mnsik88c,0.5,agree
+31,Electromagnetic Waves,mnsik89i,0.99,agree
+32,Center of Mass and Collision,mnsik8a8,0.32,agree
+33,Properties of Matter,mnsik8ay,0.54,agree
+34,Properties of Matter,mnsik8bu,0.98,agree
+35,Heat and Thermodynamics,mnsik8d8,0.98,agree
+36,Simple Harmonic Motion,mnsik8e2,0.96,agree
+37,Electrostatics,mnsik8ew,0.93,agree
+38,Magnetic Effect of Current,mnsik8fn,0.97,agree
+39,Electromagnetic Induction,mnsik8ge,0.95,agree
+40,Capacitor,mnsik8hc,0.98,agree
+41,Atoms and Nuclei,mnsik8i4,0.97,agree
+42,Geometrical Optics,mnsik8je,1.0,agree
+43,Semiconductor,mnsik8kf,0.88,agree
+44,Work Power & Energy,mnsik8ln,0.94,agree
+45,Wave Optics,mnsik8ml,0.66,agree
+46,Laws of Motion,mnsik8n0,0.98,agree
+47,Dual Nature of Radiation,mnsik8nk,0.9,agree
+48,Magnetic Effect of Current,mnsik8o1,0.76,agree
+49,Current Electricity,mnsik8oh,0.16,agree
+50,Geometrical Optics,mnsik8p9,0.71,agree
+51,Some Basic Concepts of Chemistry,mnsik8q5,0.75,agree
+52,Structure of Atom,mnsik8r9,1.0,agree
+53,,mnsik8s3,0.23,agree
+54,,mnsik8sz,0.29,agree
+55,Solutions,mnsik8u6,0.43,agree
+56,Ionic Equilibrium,mnsik8v0,0.97,agree
+57,Electrochemistry,mnsik8wd,0.86,agree
+58,Periodic Table & Periodicity,mnsik8xf,1.0,agree
+59,,mnsik8ye,0.19,agree
+60,d and f Block Elements,mnsik8zf,0.91,agree
+61,Coordination Compounds,mnsik908,0.78,agree
+62,Practical Organic Chemistry,mnsik917,0.95,agree
+63,Basics of Organic Chemistry,mnsik922,0.95,agree
+64,"Aldehydes, Ketones and Carboxylic Acids",mnsik935,0.73,agree
+65,"Aldehydes, Ketones and Carboxylic Acids",mnsik94k,0.59,agree
+66,"Alcohols, Phenols and Ethers",mnsik95h,0.85,agree
+67,Compounds Containing Nitrogen,mnsik96c,0.8,agree
+68,Compounds Containing Nitrogen,mnsik977,0.87,agree
+69,"Alcohols, Phenols and Ethers",mnsik987,0.71,agree
+70,p-Block Elements,mnsik98y,0.98,agree
+71,Coordination Compounds,mnsik99d,0.96,agree
+72,Hydrocarbons,mnsik99v,0.34,agree
+73,Redox Reactions,mnsik9aa,0.97,agree
+74,Chemical Equilibrium,mnsik9ap,0.77,agree
+75,Chemical Kinetics and Nuclear Chemistry,mnsik9b9,0.67,agree

@@ -1,0 +1,91 @@
+q,topic,examside_id,match,answer_check
+1,Sets and Relations,lv2er45n,0.91,differs (ExamGOAL D)
+2,Complex Numbers,lv2er3qp,0.95,differs (ExamGOAL B)
+3,Matrices and Determinants,lv2eryn4,0.72,agree
+4,Binomial Theorem,lv2eqvbz,0.96,differs (ExamGOAL D)
+5,Sequences and Series,lv2erzk5,0.81,differs (ExamGOAL A)
+6,Sequences and Series,lv2erzp0,0.91,differs (ExamGOAL A)
+7,Application of Derivatives,lv2er3i1,0.89,differs (ExamGOAL A)
+8,"Limits, Continuity and Differentiability",lv2eqvf0,0.84,agree
+9,Definite Integration,lv2er436,0.75,differs (ExamGOAL B)
+10,,lv2ers9h,0.0,differs (ExamGOAL A)
+11,Area Under The Curves,lv2er3kw,0.85,agree
+12,Differential Equations,lv2erury,0.81,differs (ExamGOAL D)
+13,Circle,lv2eruuk,0.6,differs (ExamGOAL A)
+14,Hyperbola,lv2er3wn,0.51,agree
+15,Parabola,lv2er40w,0.9,differs (ExamGOAL B)
+16,3D Geometry,lv2er3nv,0.91,agree
+17,Vector Algebra,lv2er3tg,0.8,differs (ExamGOAL C)
+18,Vector Algebra,lv2erzmn,0.89,agree
+19,Probability,lv2ergyt,0.93,agree
+20,Inverse Trigonometric Functions,lv2erz4o,0.88,differs (ExamGOAL A)
+21,Functions,lv2erz8l,0.21,agree
+22,Trigonometric Equations,lv2erh14,0.79,agree
+23,Matrices and Determinants,lv2eqxv2,0.84,agree
+24,Permutations and Combinations,lv2er3yn,0.94,agree
+25,Differentiation,lv2er9ry,0.68,agree
+26,Indefinite Integrals,lv2eqxr8,0.8,agree
+27,Differential Equations,lv2erh30,0.84,agree
+28,Properties of Triangle,lv2erz6q,0.77,agree
+29,3D Geometry,lv2er9tw,0.87,agree
+30,Probability,lv2er9nl,0.62,agree
+31,Semiconductor,lv2es3ds,0.98,differs (ExamGOAL D)
+32,Units & Measurements,lv2es2kt,0.96,differs (ExamGOAL C)
+33,Circular Motion,lv2es3k6,0.9,differs (ExamGOAL A)
+34,Laws of Motion,lv2erypp,0.96,agree
+35,Gravitation,lv2erys9,0.92,differs (ExamGOAL C)
+36,Work Power & Energy,lv2es437,0.84,differs (ExamGOAL D)
+37,,lv2es39u,0.0,differs (ExamGOAL B)
+38,Properties of Matter,lv2es16x,1.0,differs (ExamGOAL D)
+39,Heat and Thermodynamics,lv2ersc0,0.96,differs (ExamGOAL B)
+40,Heat and Thermodynamics,lv2erjlj,0.87,differs (ExamGOAL B)
+41,,lv2erzcz,0.0,agree
+42,Current Electricity,lv2es2na,0.92,differs (ExamGOAL C)
+43,Magnetic Properties of Matter,lv2erjiy,0.94,agree
+44,,lv2er9jv,0.17,differs (ExamGOAL A)
+45,Electromagnetic Waves,lv2erjny,0.97,differs (ExamGOAL A)
+46,Wave Optics,lv2er9hk,0.99,differs (ExamGOAL D)
+47,Dual Nature of Radiation,lv2erh5l,0.96,differs (ExamGOAL A)
+48,Atoms and Nuclei,lv2es2v5,0.98,agree
+49,Semiconductor,lv2es3sr,1.0,agree
+50,Simple Harmonic Motion,lv2es3xk,0.97,agree
+51,Atoms and Nuclei,lv2erthx,0.64,agree
+52,Geometrical Optics,lv2erzev,0.95,agree
+53,Electromagnetic Induction,lv2erkz0,0.85,agree
+54,,lv2es35t,0.29,agree
+55,Current Electricity,lv2es18v,0.8,agree
+56,,lv2eqxt5,0.25,agree
+57,Properties of Matter,lv2erj3y,0.85,agree
+58,Center of Mass and Collision,lv2eryu7,0.7,agree
+59,Motion in a Straight Line,lv2er9lr,0.95,agree
+60,,lv2erj61,0.12,agree
+61,,lv2eryxe,0.0,differs (ExamGOAL B)
+62,,lv2erjdj,0.34,differs (ExamGOAL C)
+63,Chemical Equilibrium,lv2er9pz,0.78,agree
+64,Electrochemistry,lv2ertkj,0.94,differs (ExamGOAL A)
+65,Electrochemistry,lv2erz0j,0.98,agree
+66,Periodic Table & Periodicity,lv2erj91,0.83,differs (ExamGOAL D)
+67,,lv2erl1i,0.0,differs (ExamGOAL A)
+68,Chemical Bonding & Molecular Structure,lv2es2q1,0.91,differs (ExamGOAL D)
+69,,lv2erjgk,0.0,differs (ExamGOAL A)
+70,,lv2ertmu,0.0,differs (ExamGOAL B)
+71,Coordination Compounds,lv2es1b9,0.87,differs (ExamGOAL A)
+72,Redox Reactions,lv2ers4s,0.82,differs (ExamGOAL A)
+73,Surface Chemistry,lv2es2sk,0.88,differs (ExamGOAL D)
+74,Basics of Organic Chemistry,lv2es40d,0.92,agree
+75,Hydrocarbons,lv2es465,0.94,differs (ExamGOAL D)
+76,Haloalkanes and Haloarenes,lv2es3h7,0.84,differs (ExamGOAL A)
+77,,lv2es3pv,0.47,differs (ExamGOAL D)
+78,,lv2erzhd,0.0,differs (ExamGOAL A)
+79,Haloalkanes and Haloarenes,lv2es3mu,0.66,differs (ExamGOAL D)
+80,,lv2erzas,0.2,differs (ExamGOAL B)
+81,Structure of Atom,lv2erl3p,0.96,agree
+82,Chemical Bonding & Molecular Structure,lv2ertou,0.73,agree
+83,Thermodynamics,lv2erykm,0.9,agree
+84,Solutions,lv2eryip,0.46,agree
+85,Chemical Kinetics and Nuclear Chemistry,lv2es2g1,0.51,agree
+86,d and f Block Elements,lv2es2i6,0.74,agree
+87,Some Basic Concepts of Chemistry,lv2erz2h,0.96,agree
+88,,lv2erjb4,0.0,agree
+89,"Aldehydes, Ketones and Carboxylic Acids",lv2ers6s,1.0,agree
+90,,lv2es3ut,0.32,agree

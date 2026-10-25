@@ -1,0 +1,76 @@
+q,topic,examside_id,match,answer_check
+1,Quadratic Equation and Inequalities,mnricktg,0.76,agree
+2,Complex Numbers,mnrie0qr,0.76,agree
+3,Matrices and Determinants,mnrigmow,0.88,agree
+4,Matrices and Determinants,mnriilfi,0.46,agree
+5,Sequences and Series,mnrilo4n,0.99,agree
+6,Permutations and Combinations,mnrin3ma,1.0,agree
+7,Permutations and Combinations,mnriohx3,0.67,agree
+8,Statistics,mnriqpa4,0.83,agree
+9,Straight Lines and Pair of Straight Lines,mnrirxhp,0.72,agree
+10,Ellipse,mnritbdk,0.83,agree
+11,Trigonometric Ratio and Identites,mnriuava,0.68,agree
+12,Trigonometric Equations,mnriv4je,0.55,agree
+13,3D Geometry,mnriwlzk,0.81,agree
+14,Vector Algebra,mnriz3gt,0.76,agree
+15,3D Geometry,mnrj2oen,0.9,agree
+16,"Limits, Continuity and Differentiability",mnrj3xt1,0.56,agree
+17,Differential Equations,mnrj86wu,0.9,agree
+18,Application of Derivatives,mnrj9y6s,0.78,agree
+19,Definite Integration,mnrjd1vj,0.96,agree
+20,Differential Equations,mnrjgz2u,0.86,agree
+21,Functions,mnrji7er,0.61,agree
+22,Sequences and Series,mnrjj0ud,0.63,agree
+23,Probability,mnrjkc7x,0.8,agree
+24,Circle,mnrjkx2w,1.0,agree
+25,Definite Integration,mnrjlwga,0.43,agree
+26,Units & Measurements,mnrjpxca,0.88,agree
+27,Units & Measurements,mnrjsy1g,0.88,agree
+28,Vector Algebra,mnrjuylg,0.75,agree
+29,Rotational Motion,mnrjwycu,0.03,agree
+30,Gravitation,mnrjy1a9,0.94,agree
+31,Circular Motion,mnrk1319,0.96,agree
+32,Capacitor,mnrk3zgu,0.98,agree
+33,Heat and Thermodynamics,mnrk562t,0.94,agree
+34,Electrostatics,mnrk9kzr,0.91,agree
+35,Waves,mnrkcmqn,0.83,agree
+36,Electrostatics,mnrkh415,0.81,agree
+37,Semiconductor,mnrkosi9,0.77,agree
+38,Electromagnetic Induction,mnrkr098,0.96,agree
+39,Magnetic Effect of Current,mnrktpsu,0.97,agree
+40,Geometrical Optics,mnrkutcb,1.0,agree
+41,Geometrical Optics,mnrkxga0,0.89,agree
+42,Dual Nature of Radiation,mnrkyc62,0.98,agree
+43,Electromagnetic Waves,mnrkzh21,0.87,agree
+44,Atoms and Nuclei,mnrl0173,0.95,agree
+45,Properties of Matter,mnrl0yf0,0.97,agree
+46,Wave Optics,mnrl2429,0.97,agree
+47,Heat and Thermodynamics,mnrl36bz,0.94,agree
+48,Magnetic Effect of Current,mnrl5j5r,0.87,agree
+49,Properties of Matter,mnrl6sde,0.95,agree
+50,Properties of Matter,mnrl7avq,0.12,agree
+51,Some Basic Concepts of Chemistry,mnrl9v6o,0.98,agree
+52,Structure of Atom,mnrlbn0v,0.94,agree
+53,Chemical Bonding & Molecular Structure,mnrlctcv,0.98,agree
+54,Thermodynamics,mnrlg5zo,0.67,agree
+55,Solutions,mnrli84f,0.78,agree
+56,Ionic Equilibrium,mnrlk5oa,0.89,agree
+57,Electrochemistry,mnrlmb3x,0.56,agree
+58,Chemical Kinetics and Nuclear Chemistry,mnrlnz56,0.5,agree
+59,Periodic Table & Periodicity,mnrloq50,0.91,agree
+60,Redox Reactions,mnrlqhm4,0.74,agree
+61,d and f Block Elements,mnrlrv1q,0.96,agree
+62,Coordination Compounds,mnrlztpc,0.53,agree
+63,Practical Organic Chemistry,mnrm0p6c,1.0,agree
+64,Haloalkanes and Haloarenes,mnrm1x15,0.99,agree
+65,Basics of Organic Chemistry,mnrm67dg,1.0,agree
+66,Basics of Organic Chemistry,mnrm9530,1.0,agree
+67,Practical Organic Chemistry,mnrmc1o4,0.11,agree
+68,Compounds Containing Nitrogen,mnrmgbfz,0.93,agree
+69,Biomolecules,mnrmksfq,0.55,agree
+70,Salt Analysis,mnrmm8rl,0.98,agree
+71,Coordination Compounds,mnrmnt2o,0.26,agree
+72,Hydrocarbons,mnrmoyls,0.87,agree
+73,Hydrocarbons,mnrmq8j0,1.0,agree
+74,Chemical Kinetics and Nuclear Chemistry,mnrmru4s,0.76,agree
+75,Thermodynamics,mnrmvx5t,0.85,agree

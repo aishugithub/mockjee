@@ -1,0 +1,91 @@
+q,topic,examside_id,match,answer_check
+1,Sets and Relations,lv3vefnm,0.78,differs (ExamGOAL C)
+2,Functions,lv3ve421,0.68,differs (ExamGOAL A)
+3,,lv3ve3w9,0.54,differs (ExamGOAL D)
+4,,lv3ve470,0.55,differs (ExamGOAL D)
+5,Permutations and Combinations,lv3ve4dd,1.0,differs (ExamGOAL A)
+6,Binomial Theorem,lv3vef7y,0.91,agree
+7,Complex Numbers,lv3ve9bf,0.84,agree
+8,Sequences and Series,lv3veby6,0.94,agree
+9,"Limits, Continuity and Differentiability",lv3ve5z1,0.7,differs (ExamGOAL D)
+10,Application of Derivatives,lv3ve65y,0.87,differs (ExamGOAL A)
+11,Definite Integration,lv3vefcu,0.88,differs (ExamGOAL A)
+12,Area Under The Curves,lv3ve4fr,0.98,differs (ExamGOAL C)
+13,Differential Equations,lv3ve44l,0.81,differs (ExamGOAL D)
+14,Straight Lines and Pair of Straight Lines,lv3ve5wl,0.81,differs (ExamGOAL A)
+15,Circle,lv3ve68b,0.89,differs (ExamGOAL A)
+16,3D Geometry,lv3vef5l,0.81,differs (ExamGOAL B)
+17,,lv3vefae,0.59,differs (ExamGOAL B)
+18,,lv3veez6,0.52,differs (ExamGOAL B)
+19,Probability,lv3ve61j,0.07,agree
+20,,lv3ve3z9,0.49,differs (ExamGOAL B)
+21,Quadratic Equation and Inequalities,lv3ve4b4,0.85,agree
+22,Straight Lines and Pair of Straight Lines,lv3ve74h,0.85,agree
+23,Sequences and Series,lv3vegci,0.91,agree
+24,Application of Derivatives,lv3vef38,0.95,agree
+25,"Limits, Continuity and Differentiability",lv3vec6m,0.68,agree
+26,Indefinite Integrals,lv3vefpq,0.84,agree
+27,Differential Equations,lv3ve63m,0.06,agree
+28,Hyperbola,lv3vef1a,0.64,agree
+29,3D Geometry,lv3vefgs,0.63,agree
+30,Statistics,lv3vefev,0.68,agree
+31,Units & Measurements,lv3ve84f,0.95,differs (ExamGOAL A)
+32,Motion in a Plane,lv3vec4o,1.0,differs (ExamGOAL D)
+33,Laws of Motion,lv3ve86t,0.98,differs (ExamGOAL A)
+34,Work Power & Energy,lv3vegf4,0.94,agree
+35,Rotational Motion,lv3vefxa,0.96,differs (ExamGOAL D)
+36,Gravitation,lv3vefj4,0.97,differs (ExamGOAL A)
+37,Properties of Matter,lv3vega4,0.95,agree
+38,Heat and Thermodynamics,lv3vec1d,0.94,differs (ExamGOAL C)
+39,Heat and Thermodynamics,lv3veaso,1.0,differs (ExamGOAL B)
+40,Capacitor,lv3veewk,0.25,agree
+41,Current Electricity,lv3ve9dw,0.81,differs (ExamGOAL C)
+42,Magnetic Effect of Current,lv3ve5u6,0.99,agree
+43,Alternating Current,lv3ve9g6,0.93,differs (ExamGOAL B)
+44,Waves,lv3ve49a,0.97,agree
+45,Geometrical Optics,lv3vegjv,0.82,differs (ExamGOAL B)
+46,Dual Nature of Radiation,lv3vefzw,0.98,differs (ExamGOAL C)
+47,Atoms and Nuclei,lv3veetz,0.94,differs (ExamGOAL A)
+48,Atoms and Nuclei,lv3vefuq,0.86,differs (ExamGOAL B)
+49,Units & Measurements,lv3veax2,0.99,differs (ExamGOAL C)
+50,Units & Measurements,lv3vefs7,0.96,differs (ExamGOAL D)
+51,Motion in a Plane,lv3xmamv,0.37,agree
+52,Rotational Motion,lv3vego7,0.52,agree
+53,Properties of Matter,lv3vefl7,0.96,agree
+54,Simple Harmonic Motion,lv3veg1w,0.46,agree
+55,Electrostatics,lv3vegm2,0.86,agree
+56,Current Electricity,lv3vegqg,0.77,agree
+57,Magnetic Properties of Matter,lv3xmal3,0.68,agree
+58,Alternating Current,lv3veaqd,0.13,agree
+59,Wave Optics,lv3veauq,0.41,agree
+60,Semiconductor,lv3vegha,0.78,agree
+61,Chemical Bonding & Molecular Structure,lv3xm5q9,1.0,agree
+62,Ionic Equilibrium,lv3xmb5f,0.62,differs (ExamGOAL C)
+63,Electrochemistry,lv3xmaj6,0.71,agree
+64,Electrochemistry,lv3xmape,0.94,differs (ExamGOAL D)
+65,Chemical Kinetics and Nuclear Chemistry,lv3xm5t5,0.96,agree
+66,,lv3xmazc,0.28,differs (ExamGOAL D)
+67,,lv40va43,0.24,differs (ExamGOAL B)
+68,Ionic Equilibrium,lv3xmaun,0.88,agree
+69,d and f Block Elements,lv3xmbaj,0.64,differs (ExamGOAL D)
+70,Coordination Compounds,lv3xm5x0,0.75,differs (ExamGOAL D)
+71,p-Block Elements,lv40v8yq,1.0,differs (ExamGOAL D)
+72,Compounds Containing Nitrogen,lv40va1g,1.0,agree
+73,Chemical Bonding & Molecular Structure,lv3xmasa,1.0,differs (ExamGOAL D)
+74,Basics of Organic Chemistry,lv40vbj4,0.66,differs (ExamGOAL A)
+75,Haloalkanes and Haloarenes,lv3xmagm,0.99,differs (ExamGOAL D)
+76,Basics of Organic Chemistry,lv3xmadk,0.84,agree
+77,,lv3xmbe2,0.51,differs (ExamGOAL A)
+78,"Alcohols, Phenols and Ethers",lv3xmax0,0.94,differs (ExamGOAL C)
+79,Compounds Containing Nitrogen,lv3xmb83,0.63,differs (ExamGOAL C)
+80,Practical Organic Chemistry,lv3xmb2m,0.65,differs (ExamGOAL D)
+81,Some Basic Concepts of Chemistry,lv40vb6r,0.87,agree
+82,Structure of Atom,lv40v90v,0.94,agree
+83,Chemical Bonding & Molecular Structure,lv40v9yu,0.47,agree
+84,Thermodynamics,lv40vb8u,0.64,agree
+85,Some Basic Concepts of Chemistry,lv40vbct,0.93,agree
+86,"Aldehydes, Ketones and Carboxylic Acids",lv40vbat,0.98,agree
+87,Coordination Compounds,lv40v8tx,0.4,agree
+88,Basics of Organic Chemistry,lv40vbge,1.0,agree
+89,Basics of Organic Chemistry,lv40vbl9,0.63,agree
+90,Biomolecules,lv40v8vs,1.0,agree

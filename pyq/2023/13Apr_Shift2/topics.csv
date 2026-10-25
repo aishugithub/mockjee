@@ -1,0 +1,91 @@
+q,topic,examside_id,match,answer_check
+1,Functions,1lgoxs5ux,0.76,differs (ExamGOAL B)
+2,Complex Numbers,1lgow71ev,0.86,differs (ExamGOAL B)
+3,,,0,no candidate
+4,Matrices and Determinants,1lgoxgbmt,0.88,differs (ExamGOAL A)
+5,,1lgow7xsy,0.47,differs (ExamGOAL B)
+6,Permutations and Combinations,1lgow5dwx,0.99,differs (ExamGOAL D)
+7,Binomial Theorem,1lgowbuor,0.9,differs (ExamGOAL B)
+8,Sequences and Series,1lgow1w1l,0.95,agree
+9,,1lgowfari,0.52,differs (ExamGOAL D)
+10,,1lgoxpnhf,0.47,differs (ExamGOAL B)
+11,,,0,no candidate
+12,Straight Lines and Pair of Straight Lines,1lgowjxyl,0.83,differs (ExamGOAL B)
+13,,,0,no candidate
+14,,,0,no candidate
+15,3D Geometry,1lgowajui,0.94,agree
+16,,,0,no candidate
+17,Vector Algebra,1lgow35tq,0.87,differs (ExamGOAL D)
+18,Vector Algebra,1lgoxv6q0,0.88,agree
+19,,1lgoxjwx4,0.22,differs (ExamGOAL C)
+20,,,0,no candidate
+21,Sets and Relations,1lgoxyjgf,0.86,agree
+22,Permutations and Combinations,1lgoy7m2y,0.86,agree
+23,,,0,no candidate
+24,Quadratic Equation and Inequalities,1lgoy6y4d,0.94,agree
+25,,1lgoy2e8y,0.31,differs (ExamGOAL 12)
+26,Definite Integration,1lgoy1rhw,0.54,agree
+27,Differential Equations,1lgoy5uje,0.74,agree
+28,,1lgoy3hxl,0.1,differs (ExamGOAL 10)
+29,Statistics,1lgoxwkg1,0.91,agree
+30,Inverse Trigonometric Functions,1lgoy4b0g,0.79,agree
+31,Units & Measurements,1lgoyia4x,0.94,differs (ExamGOAL B)
+32,Motion in a Straight Line,1lgoye1mh,0.92,differs (ExamGOAL D)
+33,Motion in a Straight Line,1lgp0lhqz,0.94,agree
+34,Circular Motion,1lgozv6yz,0.93,differs (ExamGOAL A)
+35,Gravitation,1lgoyfzdm,1.0,differs (ExamGOAL B)
+36,,1lgp2ll7k,0.34,differs (ExamGOAL D)
+37,Gravitation,1lgozwopt,0.96,differs (ExamGOAL D)
+38,Heat and Thermodynamics,1lgozkn8g,0.65,differs (ExamGOAL D)
+39,Heat and Thermodynamics,1lgp07l1w,0.95,agree
+40,Simple Harmonic Motion,1lgp0iu9i,0.99,differs (ExamGOAL A)
+41,Electrostatics,1lgp0afk4,0.95,differs (ExamGOAL B)
+42,Capacitor,1lgozzkb4,0.98,differs (ExamGOAL B)
+43,Magnetic Effect of Current,1lgp0hliq,0.98,differs (ExamGOAL C)
+44,Alternating Current,1lgp0cep6,1.0,differs (ExamGOAL A)
+45,Electromagnetic Waves,1lgozyf20,0.95,differs (ExamGOAL C)
+46,Wave Optics,1lgp058hb,0.98,differs (ExamGOAL B)
+47,Dual Nature of Radiation,1lgp0f0jj,1.0,differs (ExamGOAL B)
+48,Atoms and Nuclei,1lgoybtwf,0.89,differs (ExamGOAL C)
+49,Semiconductor,1lgp08a20,0.89,agree
+50,,1lgoztiqi,0.0,differs (ExamGOAL C)
+51,,1lgp17i3v,0.16,agree
+52,Rotational Motion,1lgp0utju,0.99,agree
+53,,1lgp3vvke,0.24,differs (ExamGOAL 17)
+54,,1lgp11j31,0.33,agree
+55,Electrostatics,1lgp0r2m0,0.84,agree
+56,Capacitor,1lgp14emp,0.93,agree
+57,Magnetic Effect of Current,1lgp0xzx8,0.38,agree
+58,,1lgp13fau,0.19,agree
+59,Geometrical Optics,1lgp15k55,0.96,agree
+60,,1lgp0tkqs,0.24,agree
+61,Chemical Bonding & Molecular Structure,1lgp2tgig,0.88,agree
+62,Thermodynamics,1lgp1vctk,0.74,differs (ExamGOAL B)
+63,,,0,no candidate
+64,,,0,no candidate
+65,,,0,no candidate
+66,,1lgp2wtkg,0.18,differs (ExamGOAL B)
+67,,,0,no candidate
+68,,,0,no candidate
+69,,,0,no candidate
+70,,,0,no candidate
+71,,1lgp2ph10,0.39,differs (ExamGOAL B)
+72,Coordination Compounds,1lgp2fvmg,0.98,agree
+73,Salt Analysis,1lgp2d0he,0.99,agree
+74,Basics of Organic Chemistry,1lgp2yz2n,0.98,differs (ExamGOAL B)
+75,,1lgp35q1o,0.12,differs (ExamGOAL C)
+76,"Alcohols, Phenols and Ethers",1lgp38f1x,0.98,differs (ExamGOAL A)
+77,"Alcohols, Phenols and Ethers",1lgp2ilme,0.91,agree
+78,Compounds Containing Nitrogen,1lgp2ehzr,0.79,agree
+79,,,0,no candidate
+80,,1lgp2jfq1,0.22,differs (ExamGOAL A)
+81,Some Basic Concepts of Chemistry,1lgp3jml4,0.67,agree
+82,,1lgp3qrp1,0.05,differs (ExamGOAL 25)
+83,Structure of Atom,1lgp3kr4t,0.97,agree
+84,Solutions,1lgp3o9bs,0.82,agree
+85,Ionic Equilibrium,1lgp3t9aa,0.64,agree
+86,,,0,no candidate
+87,Chemical Kinetics and Nuclear Chemistry,1lgp3cfsl,0.66,agree
+88,Redox Reactions,1lgp3h0ep,0.8,agree
+89,,,0,no candidate
+90,Practical Organic Chemistry,1lgp3frp5,0.82,agree

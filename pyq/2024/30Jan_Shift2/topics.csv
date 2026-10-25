@@ -1,0 +1,91 @@
+q,topic,examside_id,match,answer_check
+1,Functions,1lsg4mhuk,0.86,differs (ExamGOAL B)
+2,Complex Numbers,1lsg3wb0w,0.76,differs (ExamGOAL B)
+3,Matrices and Determinants,1lsg3zn8d,0.82,differs (ExamGOAL D)
+4,Matrices and Determinants,1lsg4izdm,0.84,agree
+5,Binomial Theorem,1lsg4gw8t,0.88,no NTA answer
+6,Sequences and Series,1lsg3p684,0.9,differs (ExamGOAL C)
+7,Differentiation,1lsg3xnzo,0.73,differs (ExamGOAL C)
+8,Definite Integration,1lsg420oq,0.89,agree
+9,Application of Derivatives,1lsg4fvwc,0.85,agree
+10,,1lsg47bl6,0.57,differs (ExamGOAL C)
+11,Trigonometric Ratio and Identites,1lsg3vc3r,0.73,agree
+12,Definite Integration,1lsg3stoy,0.84,agree
+13,Definite Integration,1lsg3nvgv,0.81,differs (ExamGOAL C)
+14,Ellipse,1lsg4p9ak,0.1,agree
+15,Hyperbola,1lsg4ewgx,0.95,differs (ExamGOAL B)
+16,Straight Lines and Pair of Straight Lines,1lsg40lwf,0.82,differs (ExamGOAL B)
+17,3D Geometry,1lsg4acyi,0.8,differs (ExamGOAL C)
+18,Vector Algebra,1lsg4jz4o,0.83,differs (ExamGOAL C)
+19,Vector Algebra,1lsg4dytc,0.78,agree
+20,Probability,1lsg4n319,1.0,agree
+21,Sets and Relations,1lsg59rbo,0.95,agree
+22,,1lsg52jkv,0.35,agree
+23,Permutations and Combinations,1lsg4z01p,0.94,agree
+24,Binomial Theorem,1lsg5bloa,0.65,agree
+25,,1lsg5cobe,0.13,agree
+26,Area Under The Curves,1lsg57scj,0.91,agree
+27,Differential Equations,1lsg51qnf,0.82,agree
+28,Circle,1lsg53zah,0.74,agree
+29,3D Geometry,1lsg550xe,0.78,agree
+30,Statistics,1lsg56yjt,0.73,agree
+31,Units & Measurements,1lsg6udgl,0.95,differs (ExamGOAL C)
+32,Motion in a Plane,1lsg6q118,0.92,differs (ExamGOAL Scan QR)
+33,Laws of Motion,1lsg64fp3,0.93,agree
+34,Laws of Motion,1lsg5qj2q,0.97,differs (ExamGOAL D)
+35,,1lsg6vtn3,0.11,agree
+36,Gravitation,1lsg6odx4,0.96,differs (ExamGOAL A)
+37,Heat and Thermodynamics,1lsg5s187,0.93,agree
+38,Heat and Thermodynamics,1lsg5luua,0.98,agree
+39,Heat and Thermodynamics,1lsg6302e,0.98,agree
+40,Electrostatics,1lsg6ka1a,0.97,differs (ExamGOAL D)
+41,,1lsg5t1zl,0.04,differs (ExamGOAL B)
+42,,1lsg5x0jc,0.28,differs (ExamGOAL C)
+43,Alternating Current,1lsg5jie1,0.93,differs (ExamGOAL B)
+44,Dual Nature of Radiation,1lsg6tja7,0.96,agree
+45,Wave Optics,1lsg61008,0.93,agree
+46,Dual Nature of Radiation,1lsg5znx1,0.99,agree
+47,Atoms and Nuclei,1lsg5y8yo,0.96,differs (ExamGOAL C)
+48,Atoms and Nuclei,1lsg5gkdv,0.92,differs (ExamGOAL D)
+49,Semiconductor,1lsg5hmsr,0.91,differs (ExamGOAL A)
+50,Units & Measurements,1lsg5fkiq,0.97,differs (ExamGOAL A)
+51,,1lsg77p5k,0.2,agree
+52,,1lsg70wif,0.21,agree
+53,Properties of Matter,1lsg6x2hg,0.95,agree
+54,Waves,1lsg71zjn,0.92,agree
+55,Electrostatics,1lsg74bfk,0.56,agree
+56,Current Electricity,1lsg7359d,0.92,agree
+57,Magnetic Effect of Current,1lsg6z8kk,0.94,agree
+58,Alternating Current,1lsg6y28g,0.71,agree
+59,Geometrical Optics,1lsg76up1,0.84,agree
+60,Gravitation,1lsg75mte,0.74,agree
+61,Some Basic Concepts of Chemistry,1lsg7jd5s,0.92,agree
+62,Chemical Bonding & Molecular Structure,1lsg7fij3,0.91,differs (ExamGOAL C)
+63,,1lsg7aykh,0.0,agree
+64,Solutions,1lsg7dshs,1.0,differs (ExamGOAL B)
+65,Electrochemistry,1lsg81ysc,0.82,differs (ExamGOAL D)
+66,Periodic Table & Periodicity,1lsg836jo,0.99,differs (ExamGOAL A)
+67,,1lsg7qzxc,0.52,differs (ExamGOAL C)
+68,Periodic Table & Periodicity,1lsg7tdbj,0.86,agree
+69,d and f Block Elements,1lsg7uyu7,0.98,agree
+70,,1lsg7kbq3,0.0,agree
+71,,1lsg7vwub,0.0,agree
+72,Basics of Organic Chemistry,1lsg7bpxi,0.97,differs (ExamGOAL D)
+73,,1lsg7wptd,0.0,differs (ExamGOAL A)
+74,Basics of Organic Chemistry,1lsg7cpqp,0.83,differs (ExamGOAL D)
+75,Haloalkanes and Haloarenes,1lsg7n4xi,0.9,agree
+76,,1lsg7zp1o,0.0,differs (ExamGOAL A)
+77,Hydrocarbons,1lsg7xgnj,0.79,differs (ExamGOAL D)
+78,,1lsg80hy9,0.0,differs (ExamGOAL D)
+79,Compounds Containing Nitrogen,1lsg78qd5,0.68,differs (ExamGOAL B)
+80,d and f Block Elements,1lsg7hu98,0.64,differs (ExamGOAL B)
+81,Structure of Atom,1lsg85c7e,0.0,agree
+82,Thermodynamics,1lsg8rlk4,0.64,agree
+83,Ionic Equilibrium,1lsg889tg,0.89,agree
+84,Redox Reactions,1lsg8687o,0.85,agree
+85,Chemical Kinetics and Nuclear Chemistry,1lsg8mpo4,0.83,agree
+86,Coordination Compounds,1lsg8pf6x,0.38,agree
+87,Basics of Organic Chemistry,1lsg86sv4,1.0,agree
+88,Haloalkanes and Haloarenes,1lsg8qc5e,0.91,differs (ExamGOAL 6)
+89,Biomolecules,1lsg843uz,0.72,agree
+90,Salt Analysis,1lsg84uzy,0.45,agree

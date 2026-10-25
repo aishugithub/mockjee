@@ -1,0 +1,91 @@
+q,topic,examside_id,match,answer_check
+1,Functions,lv7v4o17,0.72,agree
+2,,lv7v3k13,0.56,differs (ExamGOAL B)
+3,Matrices and Determinants,lv7v3k3w,0.86,differs (ExamGOAL C)
+4,Matrices and Determinants,lv7v3k8u,0.86,differs (ExamGOAL C)
+5,Application of Derivatives,lv7v3jxe,0.89,differs (ExamGOAL B)
+6,Sequences and Series,lv7v4g04,0.66,differs (ExamGOAL B)
+7,"Limits, Continuity and Differentiability",lv7v3k5y,0.61,differs (ExamGOAL C)
+8,Application of Derivatives,lv7v4o2e,0.84,differs (ExamGOAL D)
+9,Application of Derivatives,lv7v3jz2,0.99,differs (ExamGOAL D)
+10,,lv7v3ka9,0.47,differs (ExamGOAL B)
+11,,lv7v4o3r,0.46,differs (ExamGOAL A)
+12,Differential Equations,lv7v4l5j,0.75,differs (ExamGOAL C)
+13,Circle,lv7v3k7d,0.97,differs (ExamGOAL B)
+14,Straight Lines and Pair of Straight Lines,lv7v3k2j,0.89,differs (ExamGOAL B)
+15,,lv7v4g1l,0.08,differs (ExamGOAL C)
+16,3D Geometry,lv7v4fxr,0.67,differs (ExamGOAL D)
+17,3D Geometry,lv7v3jvb,0.84,differs (ExamGOAL A)
+18,,lv7v4g3o,0.52,differs (ExamGOAL D)
+19,Probability,lv7v4fz3,0.92,differs (ExamGOAL B)
+20,Trigonometric Equations,lv7v3v7b,0.78,differs (ExamGOAL D)
+21,Functions,lv7v47tt,0.89,agree
+22,Quadratic Equation and Inequalities,lv7v4o4e,0.39,agree
+23,Permutations and Combinations,lv7v47sx,1.0,agree
+24,Binomial Theorem,lv7v47v9,0.9,agree
+25,Sequences and Series,lv7v4g4n,0.75,agree
+26,"Limits, Continuity and Differentiability",lv7v3v83,0.81,agree
+27,Area Under The Curves,lv7v3qu3,0.93,differs (ExamGOAL 198)
+28,Parabola,lv7v3k4p,0.06,agree
+29,Vector Algebra,lv7v3oem,0.45,agree
+30,Probability,lv7v3quo,0.94,agree
+31,Units & Measurements,lv7v4o5n,0.98,differs (ExamGOAL D)
+32,Vector Algebra,lv7v3whh,0.83,differs (ExamGOAL B)
+33,,lv7v4nwq,0.3,differs (ExamGOAL B)
+34,Work Power & Energy,lv7v4rao,0.81,differs (ExamGOAL C)
+35,Rotational Motion,lv7v4rjv,0.96,differs (ExamGOAL C)
+36,Gravitation,lv7v3v9l,0.79,differs (ExamGOAL A)
+37,Properties of Matter,lv7v3oh5,0.99,differs (ExamGOAL B)
+38,Heat and Thermodynamics,lv7v4rfw,0.83,differs (ExamGOAL A)
+39,Heat and Thermodynamics,lv7v4o98,0.94,differs (ExamGOAL B)
+40,,lv7v4o88,0.46,differs (ExamGOAL A)
+41,Electrostatics,lv7v3kbz,1.0,agree
+42,Current Electricity,lv7v4rh2,0.88,differs (ExamGOAL D)
+43,Magnetic Effect of Current,lv7v4nve,1.0,differs (ExamGOAL B)
+44,Electromagnetic Induction,lv7v4ron,0.99,differs (ExamGOAL B)
+45,Electromagnetic Waves,lv7v3ofn,0.95,differs (ExamGOAL D)
+46,Wave Optics,lv7v3wga,0.99,differs (ExamGOAL C)
+47,Dual Nature of Radiation,lv7v4rdv,0.86,differs (ExamGOAL A)
+48,Atoms and Nuclei,lv7v3tw0,0.99,agree
+49,Semiconductor,lv7v4r9k,0.96,differs (ExamGOAL B)
+50,Units & Measurements,lv7v3kd9,0.92,differs (ExamGOAL B)
+51,Motion in a Straight Line,lv7v3txf,0.72,agree
+52,,lv7v4rip,0.06,agree
+53,,lv7v3obt,0.19,agree
+54,Capacitor,lv7v3twm,0.74,agree
+55,Capacitor,lv7v4hb7,0.92,agree
+56,,lv7v49mv,0.24,agree
+57,Alternating Current,lv7v4rcl,0.53,agree
+58,Wave Optics,lv7v4nxd,0.93,agree
+59,Atoms and Nuclei,lv7v3wj2,0.87,agree
+60,Current Electricity,lv7v4rep,0.94,agree
+61,,lv7v4rl6,0.08,differs (ExamGOAL B)
+62,Chemical Bonding & Molecular Structure,lv7v49r8,1.0,agree
+63,Chemical Equilibrium,lv7v4nyl,1.0,differs (ExamGOAL C)
+64,Electrochemistry,lv7v3yzz,1.0,agree
+65,Electrochemistry,lv7v49ug,0.92,differs (ExamGOAL D)
+66,Periodic Table & Periodicity,lv7v3u1a,0.35,agree
+67,p-Block Elements,lv7v3yys,0.99,differs (ExamGOAL B)
+68,p-Block Elements,lv7v3qs2,0.98,differs (ExamGOAL A)
+69,d and f Block Elements,lv7v4hdn,1.0,differs (ExamGOAL B)
+70,Coordination Compounds,lv7v4q6u,1.0,differs (ExamGOAL C)
+71,Coordination Compounds,lv7v3qt8,0.9,differs (ExamGOAL C)
+72,Thermodynamics,lv7v4hc8,0.97,differs (ExamGOAL B)
+73,Some Basic Concepts of Chemistry,lv7v49so,0.95,differs (ExamGOAL B)
+74,Hydrocarbons,lv7v4rpy,0.89,differs (ExamGOAL B)
+75,,lv7v3tzr,0.27,differs (ExamGOAL A)
+76,Basics of Organic Chemistry,lv7v3tyj,1.0,differs (ExamGOAL C)
+77,"Alcohols, Phenols and Ethers",lv7v49oe,0.94,differs (ExamGOAL C)
+78,Compounds Containing Nitrogen,lv7v4rbz,0.78,differs (ExamGOAL B)
+79,"Aldehydes, Ketones and Carboxylic Acids",lv7v4rmj,0.69,differs (ExamGOAL D)
+80,Biomolecules,lv7v3yxk,1.0,differs (ExamGOAL C)
+81,Structure of Atom,lv7v4kty,0.85,agree
+82,Chemical Bonding & Molecular Structure,lv7v47s8,0.98,agree
+83,Thermodynamics,lv7v3ocj,0.9,agree
+84,,lv7v47rj,0.13,agree
+85,,lv7v3odo,0.17,agree
+86,,lv7v4nzf,0.22,agree
+87,d and f Block Elements,lv7v4rqr,0.95,agree
+88,Haloalkanes and Haloarenes,lv7v4rht,0.98,agree
+89,"Alcohols, Phenols and Ethers",lv7v4rn5,0.8,agree
+90,Compounds Containing Nitrogen,lv7v4nzz,0.95,agree

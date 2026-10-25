@@ -1,0 +1,91 @@
+q,topic,examside_id,match,answer_check
+1,Quadratic Equation and Inequalities,1lh1zzike,0.93,differs (ExamGOAL C)
+2,,,0,no candidate
+3,Matrices and Determinants,1lh21bstu,0.83,differs (ExamGOAL A)
+4,Matrices and Determinants,1lh204tzs,0.84,differs (ExamGOAL D)
+5,,,0,no candidate
+6,Binomial Theorem,1lh23fm6b,0.88,agree
+7,,,0,no candidate
+8,"Limits, Continuity and Differentiability",1lh22m2xj,0.86,differs (ExamGOAL B)
+9,Differentiation,1lh23oisg,0.77,differs (ExamGOAL B)
+10,Definite Integration,1lh21dq8w,0.36,agree
+11,Indefinite Integrals,1lh21fmey,0.57,agree
+12,Straight Lines and Pair of Straight Lines,1lh20btfj,0.4,agree
+13,,,0,no candidate
+14,,1lh2197tv,0.37,differs (ExamGOAL C)
+15,,1lh23bm1u,0.24,differs (ExamGOAL B)
+16,Vector Algebra,1lh21kev1,0.87,differs (ExamGOAL B)
+17,Statistics,1lh21a7of,0.98,agree
+18,,,0,no candidate
+19,,,0,no candidate
+20,,,0,no candidate
+21,,,0,no candidate
+22,Circle,1lh23ruwz,0.87,agree
+23,Permutations and Combinations,1lh245n1s,0.91,agree
+24,,,0,no candidate
+25,"Limits, Continuity and Differentiability",1lh23sso3,0.86,agree
+26,Area Under The Curves,1lh23quiq,0.83,agree
+27,Circle,1lh23y6we,0.81,agree
+28,,,0,no candidate
+29,Differential Equations,1lh23pwxa,0.76,agree
+30,,1lh23u6jh,0.07,differs (ExamGOAL 18)
+31,Communication Systems,1lh24v2j5,0.92,differs (ExamGOAL C)
+32,Semiconductor,1lh249ef1,0.91,differs (ExamGOAL A)
+33,Properties of Matter,1lh24geed,0.98,agree
+34,Atoms and Nuclei,1lh25ib5c,0.96,agree
+35,Dual Nature of Radiation,1lh24nf6c,0.93,differs (ExamGOAL A)
+36,Geometrical Optics,1lh24ps5y,0.85,differs (ExamGOAL D)
+37,Electromagnetic Waves,1lh25dl4z,0.89,agree
+38,,1lh248pml,0.56,differs (ExamGOAL B)
+39,Circular Motion,1lh247dhr,0.98,differs (ExamGOAL D)
+40,Magnetic Effect of Current,1lh24yfpg,0.97,agree
+41,Semiconductor,1lh25h2cr,0.99,agree
+42,Electrostatics,1lh25l359,0.99,differs (ExamGOAL A)
+43,Simple Harmonic Motion,1lh25bgwb,0.97,agree
+44,Heat and Thermodynamics,1lh24e1qg,0.95,agree
+45,Heat and Thermodynamics,1lh25jt13,0.93,differs (ExamGOAL B)
+46,Units & Measurements,1lh25ck1e,0.9,differs (ExamGOAL C)
+47,Motion in a Plane,1lh24d4cw,0.98,agree
+48,Circular Motion,1lh24hwif,0.67,agree
+49,Gravitation,1lh24ku0k,0.88,differs (ExamGOAL C)
+50,Gravitation,1lh252xti,0.98,agree
+51,,1lh241fo2,0.24,differs (ExamGOAL 5005)
+52,,1lh25znf3,0.24,agree
+53,Atoms and Nuclei,1lh25mxeg,0.88,agree
+54,Alternating Current,1lh26dblz,0.39,agree
+55,Current Electricity,1lh2675j3,0.98,agree
+56,Capacitor,1lh26bx37,0.75,agree
+57,Magnetic Effect of Current,1lh25y0ny,0.94,agree
+58,Properties of Matter,1lh25wfvf,0.88,agree
+59,Work Power & Energy,1lh265upm,0.95,agree
+60,,1lh244z4l,0.37,differs (ExamGOAL 594)
+61,,1lh28surs,0.22,differs (ExamGOAL B)
+62,Chemical Equilibrium,1lh27t8xf,0.94,agree
+63,Biomolecules,1lh28w6g2,0.36,agree
+64,,,0,no candidate
+65,Redox Reactions,1lh27pci2,0.85,agree
+66,,1lh27hyo5,0.22,differs (ExamGOAL C)
+67,,,0,no candidate
+68,,,0,no candidate
+69,Chemical Bonding & Molecular Structure,1lh27wei6,0.78,agree
+70,,,0,no candidate
+71,,,0,no candidate
+72,,1lh27ear9,0.47,differs (ExamGOAL D)
+73,Compounds Containing Nitrogen,1lh295cit,0.67,differs (ExamGOAL B)
+74,Practical Organic Chemistry,1lh29g8bx,0.69,differs (ExamGOAL A)
+75,Haloalkanes and Haloarenes,1lh27jwis,0.71,agree
+76,Compounds Containing Nitrogen,1lh28tqxq,0.89,differs (ExamGOAL D)
+77,,,0,no candidate
+78,Compounds Containing Nitrogen,1lh27ny0d,0.9,differs (ExamGOAL B)
+79,,,0,no candidate
+80,,1lh29chdj,0.24,agree
+81,,1lh29uyl4,0.36,differs (ExamGOAL 6)
+82,Structure of Atom,1lh29koof,0.69,agree
+83,Chemical Bonding & Molecular Structure,1lh29lf3g,0.5,agree
+84,Thermodynamics,1lh29rrt0,0.53,agree
+85,Solutions,1lh29pkyt,0.9,agree
+86,Thermodynamics,1lh29mv1w,0.97,agree
+87,,1lh29u8d5,0.03,differs (ExamGOAL 1)
+88,Coordination Compounds,1lh29t8vt,0.94,agree
+89,Hydrocarbons,1lh29honw,0.98,agree
+90,,,0,no candidate

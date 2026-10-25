@@ -1,0 +1,76 @@
+q,topic,examside_id,match,answer_check
+1,Complex Numbers,mnswhwzy,0.78,agree
+2,Sequences and Series,mnswhpsf,0.94,agree
+3,Matrices and Determinants,mnswhxut,0.68,agree
+4,Matrices and Determinants,mnswhve2,0.83,agree
+5,Sequences and Series,mnswhvv2,0.73,agree
+6,Trigonometric Ratio and Identites,mnswhygl,0.61,agree
+7,Probability,mnswhyhe,0.99,agree
+8,Statistics,mnswhptd,0.93,agree
+9,Ellipse,mnswhwe8,0.92,agree
+10,Circle,mnswhui3,0.9,agree
+11,Straight Lines and Pair of Straight Lines,mnswhvw7,0.91,agree
+12,Trigonometric Equations,mnswhta8,0.87,agree
+13,3D Geometry,mnswhtbb,0.9,agree
+14,Vector Algebra,mnswhtul,0.81,agree
+15,3D Geometry,mnswhuiy,0.85,agree
+16,Area Under The Curves,mnswhr9i,0.0,agree
+17,"Limits, Continuity and Differentiability",mnswhtc6,0.75,agree
+18,Definite Integration,mnswhrap,0.85,differs (ExamGOAL C)
+19,Application of Derivatives,mnswhyie,0.84,agree
+20,Definite Integration,mnswhv2f,0.7,differs (ExamGOAL B)
+21,Functions,mnswhtw7,0.7,agree
+22,Permutations and Combinations,mnswhwf6,1.0,agree
+23,Binomial Theorem,mnswhx0t,0.01,agree
+24,Inverse Trigonometric Functions,mnswhv35,0.51,agree
+25,Differential Equations,mnswhtxb,0.81,no NTA answer
+26,Units & Measurements,mnswhpuh,0.86,agree
+27,Units & Measurements,mnswhvx8,0.93,agree
+28,Gravitation,mnswhx1x,0.95,agree
+29,Laws of Motion,mnswhvew,0.83,agree
+30,Laws of Motion,mnswhtdg,0.86,agree
+31,Properties of Matter,mnswhx30,0.95,agree
+32,Heat and Thermodynamics,mnswhv3w,0.36,agree
+33,Heat and Thermodynamics,mnswhx4b,0.53,agree
+34,Current Electricity,mnswhxvp,0.86,agree
+35,Dual Nature of Radiation,mnswhrbp,0.81,agree
+36,Atoms and Nuclei,mnswhrq7,0.94,agree
+37,Electromagnetic Waves,mnswhwg2,0.29,agree
+38,Current Electricity,mnswhwh1,0.84,agree
+39,Wave Optics,mnswhyj9,0.55,agree
+40,Geometrical Optics,mnswhxwl,0.95,agree
+41,Dual Nature of Radiation,mnswhvyf,0.86,agree
+42,Geometrical Optics,mnswhqiw,1.0,agree
+43,Properties of Matter,mnswhpvv,0.68,agree
+44,Alternating Current,mnswhsqf,0.86,agree
+45,Semiconductor,mnswhx59,0.99,agree
+46,Properties of Matter,mnswhqjc,0.96,agree
+47,Motion in a Straight Line,mnswhyk7,0.86,agree
+48,Waves,mnswhx5o,0.9,agree
+49,,mnswhty1,0.33,agree
+50,,mnswhujp,0.19,agree
+51,Some Basic Concepts of Chemistry,mnswhqkg,0.94,agree
+52,Structure of Atom,mnswhyl0,0.95,agree
+53,Structure of Atom,mnswhvga,0.79,agree
+54,Some Basic Concepts of Chemistry,mnswhx6r,0.9,agree
+55,Ionic Equilibrium,mnswhssl,0.93,agree
+56,Ionic Equilibrium,mnswhxxi,0.77,agree
+57,Chemical Kinetics and Nuclear Chemistry,mnswhx80,0.96,agree
+58,Periodic Table & Periodicity,mnswhwi2,0.93,agree
+59,p-Block Elements,mnswhstu,0.88,agree
+60,d and f Block Elements,mnswhrr3,0.97,agree
+61,Coordination Compounds,mnswhpwu,0.99,agree
+62,Coordination Compounds,mnswhx8t,0.93,agree
+63,Basics of Organic Chemistry,mnswhs2w,0.96,agree
+64,"Aldehydes, Ketones and Carboxylic Acids",mnswhvhi,0.86,agree
+65,Hydrocarbons,mnswhpy7,0.28,agree
+66,Compounds Containing Nitrogen,mnswhym6,0.75,agree
+67,"Alcohols, Phenols and Ethers",mnswhpz6,0.57,agree
+68,Compounds Containing Nitrogen,mnswhtzn,0.47,agree
+69,Biomolecules,mnswhyna,0.39,agree
+70,Ionic Equilibrium,mnswhx9w,1.0,agree
+71,Chemical Bonding & Molecular Structure,mnswhxaf,0.76,agree
+72,Practical Organic Chemistry,mnswhrrj,0.91,agree
+73,"Alcohols, Phenols and Ethers",mnswhvyv,0.6,agree
+74,Chemical Equilibrium,mnswhxxz,0.62,agree
+75,Chemical Kinetics and Nuclear Chemistry,mnswhqla,0.84,agree

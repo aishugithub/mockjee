@@ -1,0 +1,76 @@
+q,topic,examside_id,match,answer_check
+1,Sequences and Series,mnswhshn,0.8,agree
+2,Complex Numbers,mnswhxr1,0.81,agree
+3,Matrices and Determinants,mnswhwvu,0.54,agree
+4,Matrices and Determinants,mnswhxry,0.68,agree
+5,Sequences and Series,mnswhufq,0.81,agree
+6,Sequences and Series,mnswhr19,0.86,agree
+7,Binomial Theorem,mnswhtow,0.86,agree
+8,Probability,mnswhyb4,1.0,agree
+9,Permutations and Combinations,mnswhr28,1.0,agree
+10,Statistics,mnswhpm4,0.79,agree
+11,Circle,mnswhwww,0.92,agree
+12,Parabola,mnswhuxy,0.91,agree
+13,Hyperbola,mnswhqbh,0.93,agree
+14,3D Geometry,mnswhxsu,0.86,agree
+15,3D Geometry,mnswhpng,0.89,agree
+16,Vector Algebra,mnswhry6,0.64,agree
+17,"Limits, Continuity and Differentiability",mnswhsil,0.78,agree
+18,Definite Integration,mnswhr33,0.61,agree
+19,Differential Equations,mnswhuzt,0.88,agree
+20,"Limits, Continuity and Differentiability",mnswhr3y,0.78,agree
+21,Sets and Relations,mnswhybo,0.73,agree
+22,Straight Lines and Pair of Straight Lines,mnswhr4k,0.88,agree
+23,Trigonometric Equations,mnswhwck,0.51,agree
+24,Area Under The Curves,mnswhrmr,0.84,agree
+25,Differential Equations,mnswhsj6,0.07,agree
+26,Units & Measurements,mnswhuh4,0.72,agree
+27,Units & Measurements,mnswht6x,0.99,agree
+28,Work Power & Energy,mnswhpor,0.67,agree
+29,Motion in a Straight Line,mnswhrz7,0.97,agree
+30,Rotational Motion,mnswhqcn,0.97,agree
+31,Rotational Motion,mnswhr5q,0.96,agree
+32,Gravitation,mnswhpq5,0.98,agree
+33,Properties of Matter,mnswhvpz,0.98,agree
+34,Heat and Thermodynamics,mnswhych,0.96,agree
+35,Simple Harmonic Motion,mnswhxtt,0.59,agree
+36,Electromagnetic Induction,mnswhwxr,0.97,agree
+37,Capacitor,mnswhtps,0.97,agree
+38,Magnetic Effect of Current,mnswhtqn,0.79,agree
+39,Electromagnetic Waves,mnswhvqv,1.0,agree
+40,Geometrical Optics,mnswhsk1,1.0,agree
+41,Geometrical Optics,mnswhtrj,0.97,agree
+42,Wave Optics,mnswhr6n,0.15,agree
+43,Dual Nature of Radiation,mnswhvb5,0.98,agree
+44,Atoms and Nuclei,mnswhvcf,0.82,agree
+45,Semiconductor,mnswht7t,0.87,agree
+46,Properties of Matter,mnswhwyb,0.93,agree
+47,Heat and Thermodynamics,mnswhqdg,0.89,agree
+48,Alternating Current,mnswhts4,0.91,agree
+49,Current Electricity,mnswhskl,0.88,agree
+50,Electromagnetic Induction,mnswht8m,0.16,agree
+51,Some Basic Concepts of Chemistry,mnswhslh,0.89,agree
+52,Structure of Atom,mnswhydw,0.98,agree
+53,Chemical Bonding & Molecular Structure,mnswhqei,0.96,agree
+54,Thermodynamics,mnswhs0r,0.62,agree
+55,Thermodynamics,mnswhyeo,1.0,agree
+56,,mnswhprb,0.1,agree
+57,Electrochemistry,mnswhrob,0.88,agree
+58,,mnswhv1g,0.22,agree
+59,,mnswhsmf,0.25,agree
+60,Coordination Compounds,mnswhvrx,0.35,agree
+61,Coordination Compounds,mnswhrpf,0.56,agree
+62,Practical Organic Chemistry,mnswhyfs,0.53,agree
+63,Hydrocarbons,mnswhttj,1.0,agree
+64,Hydrocarbons,mnswhvth,0.94,agree
+65,"Aldehydes, Ketones and Carboxylic Acids",mnswhqfi,0.73,agree
+66,"Aldehydes, Ketones and Carboxylic Acids",mnswhqgo,0.53,agree
+67,Compounds Containing Nitrogen,mnswhr7s,0.85,agree
+68,Biomolecules,mnswhvd8,1.0,agree
+69,Biomolecules,mnswhsna,0.79,agree
+70,d and f Block Elements,mnswhqhq,0.93,agree
+71,Coordination Compounds,mnswhwd2,0.94,agree
+72,Haloalkanes and Haloarenes,mnswhso8,0.6,agree
+73,Solutions,mnswhs1t,0.93,agree
+74,Electrochemistry,mnswht98,0.84,agree
+75,Chemical Kinetics and Nuclear Chemistry,mnswhr8l,0.15,agree

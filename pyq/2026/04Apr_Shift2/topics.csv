@@ -1,0 +1,76 @@
+q,topic,examside_id,match,answer_check
+1,Functions,mnswhvip,0.82,agree
+2,Complex Numbers,mnswhw02,0.62,agree
+3,Matrices and Determinants,mnswhqmd,0.94,agree
+4,Definite Integration,mnswhyo5,0.71,agree
+5,Quadratic Equation and Inequalities,mnswhxz2,0.91,agree
+6,Matrices and Determinants,mnswhq05,0.78,agree
+7,Logarithm,mnswhu0y,0.73,agree
+8,Statistics,mnswhrsd,0.78,agree
+9,Binomial Theorem,mnswhvjs,0.69,agree
+10,Ellipse,mnswhqnc,0.84,agree
+11,Hyperbola,mnswhsun,0.86,agree
+12,Application of Derivatives,mnswhqo1,0.55,agree
+13,3D Geometry,mnswhq18,0.87,agree
+14,3D Geometry,mnswhs3u,0.81,agree
+15,Vector Algebra,mnswhs52,0.95,agree
+16,Functions,mnswhxbi,0.62,agree
+17,Permutations and Combinations,mnswhteb,0.76,agree
+18,Area Under The Curves,mnswhyp6,0.88,agree
+19,Differential Equations,mnswhy0n,0.82,agree
+20,Definite Integration,mnswhxci,0.79,agree
+21,Probability,mnswhw0x,0.94,agree
+22,"Limits, Continuity and Differentiability",mnswhqok,0.86,agree
+23,Straight Lines and Pair of Straight Lines,mnswhvkh,0.12,agree
+24,Parabola,mnswhv4h,0.73,agree
+25,Differential Equations,mnswhy18,0.69,agree
+26,Units & Measurements,mnswhuku,0.85,agree
+27,,mnswhtf7,0.33,agree
+28,Laws of Motion,mnswhqph,0.86,agree
+29,Motion in a Plane,mnswhv5p,0.92,agree
+30,Gravitation,mnswhy21,0.97,agree
+31,Properties of Matter,mnswhxdl,0.73,agree
+32,Properties of Matter,mnswhqqb,0.61,agree
+33,Heat and Thermodynamics,mnswhy3f,0.97,agree
+34,Heat and Thermodynamics,mnswhtg2,0.69,agree
+35,Simple Harmonic Motion,mnswhxei,0.98,agree
+36,Electrostatics,mnswhu20,0.42,agree
+37,Capacitor,mnswhw1t,0.93,agree
+38,Electrostatics,mnswhs64,0.99,agree
+39,Magnetic Properties of Matter,mnswhum1,0.83,agree
+40,Electromagnetic Waves,mnswhvld,0.91,agree
+41,Geometrical Optics,mnswhsvm,1.0,agree
+42,Wave Optics,mnswhqr7,0.97,agree
+43,Atoms and Nuclei,mnswhun1,0.86,agree
+44,,mnswhw35,0.19,agree
+45,Semiconductor,mnswhqsh,0.99,agree
+46,Semiconductor,mnswhxfc,0.99,agree
+47,Motion in a Plane,mnswhxfx,0.6,agree
+48,Magnetic Properties of Matter,mnswhs6o,0.26,agree
+49,Magnetic Effect of Current,mnswhuo1,0.91,agree
+50,Wave Optics,mnswhrc6,0.74,agree
+51,Some Basic Concepts of Chemistry,mnswhu30,0.59,agree
+52,Structure of Atom,mnswhswn,0.97,agree
+53,Chemical Bonding & Molecular Structure,mnswhrda,0.94,agree
+54,,mnswhw3y,0.25,agree
+55,Ionic Equilibrium,mnswhu3z,0.98,agree
+56,Basics of Organic Chemistry,mnswhu50,0.42,agree
+57,Periodic Table & Periodicity,mnswhw53,0.89,agree
+58,p-Block Elements,mnswhs7s,0.98,agree
+59,d and f Block Elements,mnswhu5x,0.78,agree
+60,Coordination Compounds,mnswhq2h,0.98,agree
+61,Basics of Organic Chemistry,mnswhwiy,0.88,agree
+62,d and f Block Elements,mnswhyq3,0.87,agree
+63,Chemical Kinetics and Nuclear Chemistry,mnswhwk7,0.96,agree
+64,Hydrocarbons,mnswhsxs,0.71,agree
+65,Basics of Organic Chemistry,mnswhrt6,0.79,agree
+66,Basics of Organic Chemistry,mnswhy4a,0.89,agree
+67,,mnswhred,0.0,agree
+68,Biomolecules,mnswhuou,0.97,agree
+69,Salt Analysis,mnswhxgq,0.93,agree
+70,,mnswhy56,0.25,agree
+71,Thermodynamics,mnswhqt1,0.81,agree
+72,Chemical Equilibrium,mnswhupx,0.12,agree
+73,Electrochemistry,mnswhwkp,0.8,agree
+74,Chemical Kinetics and Nuclear Chemistry,mnswhyqt,0.73,agree
+75,Practical Organic Chemistry,mnswhtgu,0.78,agree

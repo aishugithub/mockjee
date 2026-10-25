@@ -1,0 +1,76 @@
+q,topic,examside_id,match,answer_check
+1,Quadratic Equation and Inequalities,mnrphtel,0.84,agree
+2,Complex Numbers,mnrpjdtx,0.71,agree
+3,Matrices and Determinants,mnrpl81k,0.88,agree
+4,Sequences and Series,mnrpm6su,0.76,agree
+5,Sequences and Series,mnrpmt57,0.63,agree
+6,Binomial Theorem,mnrpp20m,0.64,agree
+7,Permutations and Combinations,mnrppvhi,0.94,agree
+8,Probability,mnrpqq4y,0.96,agree
+9,Statistics,mnrprkp0,1.0,agree
+10,Circle,mnrpt09k,0.93,agree
+11,Hyperbola,mnrpty8n,0.97,agree
+12,Parabola,mnrpukw5,0.92,agree
+13,Trigonometric Ratio and Identites,mnrpvu89,0.36,agree
+14,Vector Algebra,mnrpxa1i,0.7,agree
+15,3D Geometry,mnrpy2y2,0.94,agree
+16,Vector Algebra,mnrpz8jc,0.26,agree
+17,Definite Integration,mnrq09k2,0.45,agree
+18,Application of Derivatives,mnrq1907,0.84,agree
+19,Indefinite Integrals,mnrq3ab8,0.55,agree
+20,Differential Equations,mnrq59lh,0.8,agree
+21,Sets and Relations,mnrq68oe,0.04,agree
+22,Matrices and Determinants,mnrq9qef,0.91,agree
+23,Ellipse,mnrqb419,0.96,agree
+24,Area Under The Curves,mnrqdpxh,0.76,agree
+25,"Limits, Continuity and Differentiability",mnrqfsp8,0.87,agree
+26,Units & Measurements,mnrqi2lu,0.94,agree
+27,Circular Motion,mnrqjtf2,0.95,agree
+28,Center of Mass and Collision,mnrqm5ih,0.92,agree
+29,Magnetic Effect of Current,mnrqo3lf,0.65,agree
+30,Semiconductor,mnrqpck1,0.92,agree
+31,Gravitation,mnrqsm8g,1.0,agree
+32,Units & Measurements,mnrqtn1n,1.0,agree
+33,Properties of Matter,mnrqw3xm,0.96,agree
+34,Heat and Thermodynamics,mnrqxet1,0.99,agree
+35,Properties of Matter,mnrqye2z,0.88,agree
+36,Work Power & Energy,mnrqzrmy,0.96,agree
+37,Electromagnetic Waves,mnrr196d,0.9,agree
+38,Current Electricity,mnrr2p7s,0.98,agree
+39,Electrostatics,mnrr3qcm,0.99,agree
+40,Electrostatics,mnrr50ly,0.95,agree
+41,Geometrical Optics,mnrr7pl6,0.96,agree
+42,Alternating Current,mnrr9to7,0.73,agree
+43,Electromagnetic Induction,mnrrb7o9,0.97,agree
+44,Atoms and Nuclei,mnrrcj7i,0.68,agree
+45,Simple Harmonic Motion,mnrre9kr,0.91,agree
+46,Wave Optics,mnrrf247,0.99,agree
+47,Atoms and Nuclei,mnrrg2j9,1.0,agree
+48,Heat and Thermodynamics,mnrrh22a,0.92,agree
+49,Geometrical Optics,mnrripqb,0.76,agree
+50,Rotational Motion,mnrrmnr3,0.76,differs (ExamGOAL 15)
+51,Some Basic Concepts of Chemistry,mnrroayj,0.99,agree
+52,Ionic Equilibrium,mnrrplya,0.71,agree
+53,Chemical Bonding & Molecular Structure,mnrrq70e,0.88,agree
+54,Thermodynamics,mnrrsxs8,0.99,agree
+55,Solutions,mnrrw2m1,0.44,agree
+56,Ionic Equilibrium,mnrs4xd9,0.93,agree
+57,Chemical Kinetics and Nuclear Chemistry,mnrs7ldl,0.75,agree
+58,Periodic Table & Periodicity,mnrs911j,1.0,agree
+59,p-Block Elements,mnrs9lsh,1.0,agree
+60,Coordination Compounds,mnrsac3b,0.97,agree
+61,Coordination Compounds,mnrsbi25,0.96,agree
+62,Practical Organic Chemistry,mnrse5bw,0.79,agree
+63,Basics of Organic Chemistry,mnrsirag,0.58,agree
+64,Hydrocarbons,mnrsl0ll,0.98,agree
+65,Haloalkanes and Haloarenes,mnrsp984,0.83,agree
+66,"Aldehydes, Ketones and Carboxylic Acids",mnrswkq6,0.98,agree
+67,"Aldehydes, Ketones and Carboxylic Acids",mnrt0awo,0.88,agree
+68,"Aldehydes, Ketones and Carboxylic Acids",mnrt7oxb,0.64,agree
+69,Biomolecules,mnrtcaun,0.93,agree
+70,d and f Block Elements,mnrtd4es,0.92,agree
+71,Structure of Atom,mnrtfk2u,0.64,agree
+72,Chemical Kinetics and Nuclear Chemistry,mnrtgnnc,0.29,agree
+73,Electrochemistry,mnrtih5h,0.89,agree
+74,d and f Block Elements,mnrtkhj0,0.92,agree
+75,Practical Organic Chemistry,mnrtn4hd,0.82,agree

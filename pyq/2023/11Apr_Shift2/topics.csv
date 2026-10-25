@@ -1,0 +1,91 @@
+q,topic,examside_id,match,answer_check
+1,Sets and Relations,1lgsumb17,0.75,differs (ExamGOAL D)
+2,Functions,1lgsw05gr,0.98,agree
+3,Complex Numbers,1lgsugbnn,0.84,differs (ExamGOAL A)
+4,Matrices and Determinants,1lgsuczop,0.81,agree
+5,Matrices and Determinants,1lgsverwb,0.78,differs (ExamGOAL B)
+6,Permutations and Combinations,1lgsugvol,0.98,differs (ExamGOAL A)
+7,Binomial Theorem,1lgsvbm4o,0.89,no NTA answer
+8,Binomial Theorem,1lgsubacw,0.98,differs (ExamGOAL A)
+9,Sequences and Series,1lgsuajhg,0.83,differs (ExamGOAL C)
+10,"Limits, Continuity and Differentiability",1lgsvmum4,0.71,agree
+11,Definite Integration,1lgsvsu3q,0.84,differs (ExamGOAL B)
+12,Definite Integration,1lgsvib75,0.73,differs (ExamGOAL C)
+13,Differential Equations,1lgsvopsl,0.86,differs (ExamGOAL A)
+14,,,0,no candidate
+15,,,0,no candidate
+16,,,0,no candidate
+17,,,0,no candidate
+18,Statistics,1lgsvg819,0.95,agree
+19,,,0,no candidate
+20,,,0,no candidate
+21,Complex Numbers,1lgswb5vn,0.46,agree
+22,Functions,1lgsw4p1x,0.74,agree
+23,,,0,no candidate
+24,Quadratic Equation and Inequalities,1lgswd6s1,0.78,agree
+25,Area Under The Curves,1lgswa4aj,0.3,agree
+26,,,0,no candidate
+27,,,0,no candidate
+28,,,0,no candidate
+29,Vector Algebra,1lgsw25ll,0.72,agree
+30,Probability,1lgsw8nze,0.82,agree
+31,,1lgsxv5u7,0.26,differs (ExamGOAL D)
+32,Heat and Thermodynamics,1lgsxcf9c,0.87,differs (ExamGOAL D)
+33,,1lgsvumqy,0.27,differs (ExamGOAL B)
+34,,1lgswkwfl,0.0,differs (ExamGOAL C)
+35,Laws of Motion,1lgswyy0y,0.94,differs (ExamGOAL C)
+36,Properties of Matter,1lgswvd5r,0.97,differs (ExamGOAL A)
+37,Gravitation,1lgsxaxnl,0.98,differs (ExamGOAL A)
+38,Vector Algebra,1lgsx8o8b,0.94,no NTA answer
+39,Motion in a Plane,1lgswxwfv,0.91,differs (ExamGOAL A)
+40,Units & Measurements,1lgsx9rki,0.97,differs (ExamGOAL D)
+41,,1lgsx1izi,0.0,differs (ExamGOAL B)
+42,Semiconductor,1lgsww5ny,1.0,differs (ExamGOAL B)
+43,Geometrical Optics,1lgswr535,0.98,differs (ExamGOAL C)
+44,Atoms and Nuclei,1lgswq2kx,0.95,differs (ExamGOAL A)
+45,Dual Nature of Radiation,1lgswtznp,0.94,differs (ExamGOAL A)
+46,Electromagnetic Waves,1lgswh6t1,0.92,differs (ExamGOAL C)
+47,Electromagnetic Induction,1lgswnzlv,0.84,differs (ExamGOAL D)
+48,Magnetic Effect of Current,1lgswj9wf,0.99,agree
+49,Current Electricity,1lgsweyym,0.83,differs (ExamGOAL B)
+50,Capacitor,1lgswsttc,0.99,differs (ExamGOAL B)
+51,,1lgswc9j4,0.28,differs (ExamGOAL 348)
+52,Properties of Matter,1lgsxhh3a,0.85,agree
+53,Rotational Motion,1lgsxfqv2,0.98,agree
+54,,1lgsxpbkt,0.34,agree
+55,Atoms and Nuclei,1lgsxnhso,0.94,agree
+56,Geometrical Optics,1lgsxeduk,0.55,agree
+57,Alternating Current,1lgsxsb8o,0.94,agree
+58,Electromagnetic Induction,1lgsxldcn,0.61,agree
+59,,1lgsw5qty,0.33,differs (ExamGOAL 2)
+60,Capacitor,1lgsxqsld,0.8,agree
+61,,,0,no candidate
+62,Solutions,1lgsygi7r,0.91,agree
+63,Chemical Kinetics and Nuclear Chemistry,1lgsyyzmb,0.8,differs (ExamGOAL C)
+64,,,0,no candidate
+65,,1lgsy0dph,0.16,differs (ExamGOAL C)
+66,,,0,no candidate
+67,,1lgsyhrki,0.29,differs (ExamGOAL B)
+68,,,0,no candidate
+69,Coordination Compounds,1lgsyk75j,0.9,differs (ExamGOAL B)
+70,Coordination Compounds,1lgsy5qq9,0.97,differs (ExamGOAL A)
+71,,,0,no candidate
+72,Coordination Compounds,1lgsy839o,0.83,differs (ExamGOAL B)
+73,Coordination Compounds,1lgsyenrz,0.79,differs (ExamGOAL B)
+74,Haloalkanes and Haloarenes,1lgsyif5i,0.96,differs (ExamGOAL B)
+75,,1lgsz0375,0.59,differs (ExamGOAL B)
+76,"Aldehydes, Ketones and Carboxylic Acids",1lgsy1ntw,0.65,differs (ExamGOAL B)
+77,Hydrocarbons,1lgsyqzjc,0.74,differs (ExamGOAL B)
+78,"Alcohols, Phenols and Ethers",1lgsy2959,0.46,agree
+79,"Aldehydes, Ketones and Carboxylic Acids",1lgsybj0x,1.0,agree
+80,,,0,no candidate
+81,,1lgszgc9k,0.21,agree
+82,Chemical Bonding & Molecular Structure,1lgsz22g1,0.93,agree
+83,,1lgsz8dqh,0.3,agree
+84,Thermodynamics,1lgsz4e5k,0.65,agree
+85,Chemical Equilibrium,1lgsza2h5,0.94,agree
+86,Electrochemistry,1lgszc3wc,0.93,agree
+87,,,0,no candidate
+88,,,0,no candidate
+89,Biomolecules,1lgsz5bwm,1.0,agree
+90,Hydrocarbons,1lgsz0udv,0.94,agree

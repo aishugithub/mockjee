@@ -1,0 +1,91 @@
+q,topic,examside_id,match,answer_check
+1,Functions,1lsgb11sw,0.68,differs (ExamGOAL A)
+2,Complex Numbers,1lsgajjz4,0.82,differs (ExamGOAL D)
+3,Matrices and Determinants,1lsga8e3h,0.82,differs (ExamGOAL D)
+4,,1lsg94q54,0.32,differs (ExamGOAL C)
+5,Probability,1lsgadxd6,0.81,differs (ExamGOAL D)
+6,Sequences and Series,1lsgb2052,0.85,differs (ExamGOAL D)
+7,Application of Derivatives,1lsg91cac,0.91,differs (ExamGOAL A)
+8,Definite Integration,1lsga9myw,0.85,agree
+9,Differentiation,1lsg8vyuz,0.82,agree
+10,Definite Integration,1lsg8xaqg,0.72,differs (ExamGOAL C)
+11,Area Under The Curves,1lsgb2phy,0.95,differs (ExamGOAL C)
+12,Differential Equations,1lsgaiiyb,0.86,agree
+13,Straight Lines and Pair of Straight Lines,1lsg96zxo,0.96,differs (ExamGOAL D)
+14,Circle,1lsg8yeao,0.9,differs (ExamGOAL B)
+15,Ellipse,1lsgaam1v,1.0,differs (ExamGOAL B)
+16,3D Geometry,1lsg95okx,0.87,agree
+17,Vector Algebra,1lsgafa13,0.88,differs (ExamGOAL D)
+18,Vector Algebra,1lsg90h1z,0.72,differs (ExamGOAL D)
+19,Statistics,1lsgack8c,0.91,agree
+20,Trigonometric Equations,1lsgaqmf3,0.82,differs (ExamGOAL D)
+21,Functions,1lsgcodrp,0.77,agree
+22,Quadratic Equation and Inequalities,1lsgcitu2,0.66,agree
+23,Binomial Theorem,1lsgcji8h,0.88,agree
+24,Sequences and Series,1lsgcmznt,0.7,agree
+25,,1lsgchdrl,0.01,agree
+26,Differential Equations,1lsgb4t6h,0.85,agree
+27,Hyperbola,1lsgckxsg,0.91,agree
+28,3D Geometry,1lsgclxib,0.81,agree
+29,Probability,1lsgb3d4o,1.0,agree
+30,,1lsgcplix,0.14,agree
+31,,1lsgdjves,0.32,differs (ExamGOAL D)
+32,Rotational Motion,1lsgd0f2p,0.97,differs (ExamGOAL D)
+33,,1lsgx468k,0.46,differs (ExamGOAL B)
+34,Laws of Motion,1lsgwz89q,0.95,differs (ExamGOAL D)
+35,Work Power & Energy,1lsgd50wc,0.95,differs (ExamGOAL C)
+36,,1lsgx6elh,0.31,agree
+37,Properties of Matter,1lsgx5dwc,0.97,differs (ExamGOAL D)
+38,Heat and Thermodynamics,1lsgd7jbd,0.75,differs (ExamGOAL A)
+39,Heat and Thermodynamics,1lsgdgm07,0.96,agree
+40,Electrostatics,1lsgd3mbl,0.99,differs (ExamGOAL C)
+41,Current Electricity,1lsgx2n14,0.91,differs (ExamGOAL D)
+42,Magnetic Effect of Current,1lsgdo9b3,0.99,differs (ExamGOAL B)
+43,Alternating Current,1lsgd2r5a,0.89,agree
+44,Electromagnetic Waves,1lsgdfsz5,0.96,differs (ExamGOAL B)
+45,Wave Optics,1lsgd1frq,0.93,agree
+46,Dual Nature of Radiation,1lsgcxy3n,0.98,differs (ExamGOAL C)
+47,Atoms and Nuclei,1lsgcx4ob,1.0,differs (ExamGOAL C)
+48,Semiconductor,1lsgdmrpl,0.91,differs (ExamGOAL B)
+49,Current Electricity,1lsgdlwra,0.77,agree
+50,Alternating Current,1lsgcytzp,0.94,differs (ExamGOAL A)
+51,Motion in a Straight Line,1lsgxiwe5,0.91,agree
+52,,1lsgxhq5u,0.01,agree
+53,Properties of Matter,1lsgxkprt,0.84,agree
+54,Waves,1lsgxgqv0,0.8,agree
+55,Capacitor,1lsgxeosz,0.94,agree
+56,,1lsgx8rwq,0.2,agree
+57,Magnetic Effect of Current,1lsgx7j5t,0.95,agree
+58,Electromagnetic Induction,1lsgxlz5q,0.43,agree
+59,Geometrical Optics,1lsgxfrmn,0.97,agree
+60,Atoms and Nuclei,1lsgx9b3x,0.88,agree
+61,Structure of Atom,1lsgy7zzo,1.0,differs (ExamGOAL A)
+62,,1lsgy08ma,0.38,differs (ExamGOAL B)
+63,Solutions,1lsgxwd5m,1.0,agree
+64,Chemical Bonding & Molecular Structure,1lsgxnho5,1.0,agree
+65,Chemical Bonding & Molecular Structure,1lsgyis0f,0.99,differs (ExamGOAL C)
+66,,1lsgy4z4q,0.54,differs (ExamGOAL A)
+67,d and f Block Elements,1lsgyc3vg,1.0,differs (ExamGOAL A)
+68,,1lsgydxdm,0.21,differs (ExamGOAL D)
+69,Practical Organic Chemistry,1lsgy6q5x,0.96,differs (ExamGOAL C)
+70,"Aldehydes, Ketones and Carboxylic Acids",1lsgyjecm,1.0,differs (ExamGOAL C)
+71,Basics of Organic Chemistry,1lsgxvdcg,1.0,differs (ExamGOAL B)
+72,Hydrocarbons,1lsgxurp8,0.85,agree
+73,Haloalkanes and Haloarenes,1lsgxo04a,1.0,differs (ExamGOAL D)
+74,Haloalkanes and Haloarenes,1lsgygvg4,0.99,differs (ExamGOAL A)
+75,Hydrocarbons,1lsgyasal,0.69,agree
+76,"Aldehydes, Ketones and Carboxylic Acids",1lsgxre6u,0.84,agree
+77,Haloalkanes and Haloarenes,1lsgxqdvu,0.76,differs (ExamGOAL C)
+78,Biomolecules,1lsgy8oql,1.0,differs (ExamGOAL B)
+79,Salt Analysis,1lsgxplqk,0.93,differs (ExamGOAL B)
+80,Compounds Containing Nitrogen,1lsgyesoy,0.87,agree
+81,,1lsgyl9gy,0.16,agree
+82,Chemical Bonding & Molecular Structure,1lsgyk5tt,0.97,agree
+83,,1lsgz55cl,0.01,agree
+84,Ionic Equilibrium,1lsgz2sxr,0.83,agree
+85,Redox Reactions,1lsgz3rvm,0.83,agree
+86,Some Basic Concepts of Chemistry,1lsgz0zjb,0.78,agree
+87,Chemical Kinetics and Nuclear Chemistry,1lsgz859k,0.83,agree
+88,Periodic Table & Periodicity,1lsgzb1nh,0.89,agree
+89,Basics of Organic Chemistry,1lsgz9w97,0.94,agree
+90,Compounds Containing Nitrogen,1lsgz1kr4,0.93,agree

@@ -474,7 +474,8 @@ code { font-family: var(--font-num); font-size: .92em; background: #f1f4f8; padd
 
         <div class="card">
           <div class="sum-head"><h2>Subjects and chapters</h2><div class="row" style="gap:6px"><button type="button" class="chip ghost" id="btnAllSubj">All subjects</button><button type="button" class="chip ghost" id="btnNoSubj">Clear</button></div></div>
-          <p class="hint">Tick whole subjects, or open a subject and choose individual chapters. Counts reflect the selected years.</p>
+          <div class="row" style="gap:6px;margin:4px 0 6px" id="groupChips"><span class="hint" style="margin:0">Group by:</span><button type="button" class="chip" data-group="chapter">NTA chapters</button><button type="button" class="chip" data-group="topic">Finer topics</button></div>
+          <p class="hint" id="groupHint">Tick whole subjects, or open a subject and choose individual chapters. Counts reflect the selected years.</p>
           <div id="subjList"></div>
         </div>
 
@@ -900,10 +901,14 @@ function importText(name, text) {
 }
 
 /* ---------- setup state ---------- */
-const DEF = { testName: 'JEE Main Mock Test', candidate: '', duration: 180, mcq: 20, num: 5, mcqC: 4, mcqW: 1, numC: 4, numW: 1, shuffle: true, useAll: false };
+const DEF = { testName: 'JEE Main Mock Test', candidate: '', duration: 180, mcq: 20, num: 5, mcqC: 4, mcqW: 1, numC: 4, numW: 1, shuffle: true, useAll: false, groupBy: 'chapter' };
 let cfg = Object.assign({}, DEF, store.get(KEYS.cfg, {}));
 const sel = { years: new Set(), chapters: new Set() };
-const ckey = q => q.subject + '|' + q.chapter;
+/* Group the filters by NTA syllabus chapter, or by the finer topic (ExamGOAL's chapter names, owner's choice
+   2026-10-25). Questions outside the current syllabus stay in their own group in both views. */
+const TOPIC_NONE = 'Topic not known yet';
+const gfield = q => cfg.groupBy !== 'topic' || q.chapter === 'Not in current syllabus' ? q.chapter : (q.topic || TOPIC_NONE);
+const ckey = q => q.subject + '|' + gfield(q);
 const bankYears = () => [...new Set(bank.questions.map(q => +q.year))].sort((a, b) => b - a);
 const bankSubjects = () => [...new Set(bank.questions.map(q => q.subject))].sort(subjOrder);
 function resetSelection() {
@@ -919,7 +924,12 @@ function renderBankLabel() {
   $('#bankLabel').textContent = `${bank.name}: ${bank.questions.length} questions`;
   $('#bankNote').innerHTML = bank.sample
     ? 'The built-in bank holds 84 original practice questions written in JEE Main style and tagged by year to demonstrate the filters. They are not official NTA papers. Use <b>Manage bank</b> to import real previous-year questions.'
-    : bank.pyq ? `Official questions from public NTA question papers, answers from NTA's final answer keys (${bank.questions.length} questions). Questions NTA dropped are left out. Chapter tags were made by Claude from the question images.`
+    : bank.pyq ? (() => {
+        const eg = bank.questions.filter(q => q.source_kind === 'examgoal');
+        const egYears = [...new Set(eg.map(q => q.year))].sort().join(', ');
+        return `${bank.questions.length - eg.length} official questions from public NTA question papers, answers from NTA's final answer keys; questions NTA dropped are left out. Chapter tags were made by Claude from the question images.`
+          + (eg.length ? ` Plus ${eg.length} questions for ${egYears} from ExamGOAL's copies of those papers (NTA does not publish them openly), with ExamGOAL's answer key; each is marked "(ExamGOAL)".` : '');
+      })()
     : `Using an imported bank (${bank.questions.length} questions).`;
 }
 
@@ -937,9 +947,13 @@ function renderYears() {
 }
 const openSubj = new Set();
 function renderSubjects() {
+  $$('#groupChips [data-group]').forEach(b => b.setAttribute('aria-pressed', b.dataset.group === (cfg.groupBy || 'chapter')));
+  $('#groupHint').textContent = cfg.groupBy === 'topic'
+    ? "Finer topics use ExamGOAL's chapter names (for example Wave Optics, Circle, Capacitor). Tick whole subjects, or open a subject and choose topics. Counts reflect the selected years."
+    : 'Tick whole subjects, or open a subject and choose individual chapters (units of the NTA syllabus). Counts reflect the selected years.';
   const inYear = bank.questions.filter(q => sel.years.has(+q.year));
   const html = bankSubjects().map(s => {
-    const chaps = [...new Set(bank.questions.filter(q => q.subject === s).map(q => q.chapter))];
+    const chaps = [...new Set(bank.questions.filter(q => q.subject === s).map(gfield))].sort((a, b) => (a === TOPIC_NONE || a === 'Not in current syllabus') - (b === TOPIC_NONE || b === 'Not in current syllabus') || (cfg.groupBy === 'topic' ? a.localeCompare(b) : 0));
     const keys = chaps.map(c => s + '|' + c);
     const on = keys.filter(k => sel.chapters.has(k)).length;
     const avail = inYear.filter(q => q.subject === s && sel.chapters.has(ckey(q))).length;
@@ -949,8 +963,8 @@ function renderSubjects() {
       return `<label class="chap${n.length ? '' : ' empty'}"><input type="checkbox" data-chap="${esc(k)}" ${sel.chapters.has(k) ? 'checked' : ''}><span>${esc(c)}</span><span class="c num">${m}M · ${v}N</span></label>`;
     }).join('');
     return `<div class="subj">
-      <div class="subj-head"><label><input type="checkbox" data-subj="${esc(s)}" ${on === keys.length ? 'checked' : ''} data-ind="${on > 0 && on < keys.length}"> ${esc(s)} <span class="count">${on}/${keys.length} chapters · ${avail} questions</span></label>
-      <button type="button" class="subj-toggle" data-open="${esc(s)}" aria-expanded="${openSubj.has(s)}">${openSubj.has(s) ? 'Hide chapters' : 'Choose chapters'}</button></div>
+      <div class="subj-head"><label><input type="checkbox" data-subj="${esc(s)}" ${on === keys.length ? 'checked' : ''} data-ind="${on > 0 && on < keys.length}"> ${esc(s)} <span class="count">${on}/${keys.length} ${cfg.groupBy === 'topic' ? 'topics' : 'chapters'} · ${avail} questions</span></label>
+      <button type="button" class="subj-toggle" data-open="${esc(s)}" aria-expanded="${openSubj.has(s)}">${openSubj.has(s) ? 'Hide' : cfg.groupBy === 'topic' ? 'Choose topics' : 'Choose chapters'}</button></div>
       <div class="chap-list" ${openSubj.has(s) ? '' : 'hidden'}>${list}</div></div>`;
   }).join('');
   $('#subjList').innerHTML = html;
@@ -1010,6 +1024,13 @@ $('#subjList').addEventListener('change', e => {
 });
 $('#subjList').addEventListener('click', e => { const b = e.target.closest('[data-open]'); if (!b) return; const s = b.dataset.open; openSubj.has(s) ? openSubj.delete(s) : openSubj.add(s); renderSubjects(); });
 $('#btnAllSubj').addEventListener('click', () => { sel.chapters = new Set(bank.questions.map(ckey)); refresh(); });
+$('#groupChips').addEventListener('click', e => {
+  const b = e.target.closest('[data-group]'); if (!b || b.dataset.group === (cfg.groupBy || 'chapter')) return;
+  const subjOn = new Set([...sel.chapters].map(k => k.split('|')[0]));      // keep the same subjects ticked
+  cfg.groupBy = b.dataset.group;
+  sel.chapters = new Set(bank.questions.filter(q => subjOn.has(q.subject)).map(ckey));
+  refresh();
+});
 $('#btnNoSubj').addEventListener('click', () => { sel.chapters = new Set(); refresh(); });
 [['#inMcq', 'mcq', 0], ['#inNum', 'num', 0], ['#inMcqC', 'mcqC', 0], ['#inMcqW', 'mcqW', 0], ['#inNumC', 'numC', 0], ['#inNumW', 'numW', 0]].forEach(([id, k]) => {
   $(id).addEventListener('input', e => { const v = parseFloat(e.target.value); cfg[k] = Number.isFinite(v) && v >= 0 ? v : 0; if (k === 'mcq' || k === 'num') cfg[k] = Math.floor(cfg[k]); renderSummary(); saveCfg(); });
@@ -1704,6 +1725,7 @@ $('#admBack').addEventListener('click', () => { if (adminFrom === 'scr-result' &
 /* "Practise next": tick only the weak chapters (all years) in the normal setup filters */
 document.addEventListener('click', e => {
   const b = e.target.closest('[data-practise]'); if (!b || b.disabled) return;
+  cfg.groupBy = 'chapter';                      // weak lists are NTA chapters
   const keys = JSON.parse(b.dataset.practise).filter(k => bank.questions.some(q => ckey(q) === k));
   if (!keys.length) { b.disabled = true; return; }
   exam = null;

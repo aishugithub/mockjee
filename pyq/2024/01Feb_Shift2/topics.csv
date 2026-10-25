@@ -1,0 +1,91 @@
+q,topic,examside_id,match,answer_check
+1,Functions,lsam05oo,0.64,differs (ExamGOAL D)
+2,Sets and Relations,lsam6kw5,0.67,differs (ExamGOAL C)
+3,Complex Numbers,lsam3k7w,0.88,no NTA answer
+4,Quadratic Equation and Inequalities,lsamarl9,0.75,differs (ExamGOAL D)
+5,Matrices and Determinants,lsam7nu4,0.84,differs (ExamGOAL B)
+6,Binomial Theorem,lsamwj6p,0.93,agree
+7,Sequences and Series,lsamv2vn,0.94,differs (ExamGOAL C)
+8,"Limits, Continuity and Differentiability",lsamhqd8,0.88,differs (ExamGOAL B)
+9,"Limits, Continuity and Differentiability",lsamze84,0.73,differs (ExamGOAL D)
+10,Definite Integration,lsam93zl,0.79,differs (ExamGOAL A)
+11,Definite Integration,lsamq77b,0.72,differs (ExamGOAL C)
+12,Differential Equations,lsamlzre,0.81,no NTA answer
+13,,lsamf0th,0.39,differs (ExamGOAL C)
+14,Circle,lsamkf38,0.92,agree
+15,3D Geometry,lsamrrrt,0.85,differs (ExamGOAL D)
+16,3D Geometry,lsamoe4e,0.89,agree
+17,Vector Algebra,lsam59tf,0.85,differs (ExamGOAL A)
+18,Probability,lsamdflq,0.74,differs (ExamGOAL D)
+19,Statistics,lsamgfx7,0.87,differs (ExamGOAL A)
+20,Trigonometric Equations,lsamiw6x,0.68,agree
+21,,lsan7qev,0.17,agree
+22,,lsana1e6,0.04,agree
+23,Sequences and Series,lsan9avi,0.95,agree
+24,Definite Integration,lsan5y2d,0.68,agree
+25,,lsan2rgn,0.16,agree
+26,Area Under The Curves,lsan1ar0,0.97,agree
+27,Differential Equations,lsan508v,0.79,agree
+28,Area Under The Curves,lsan0p30,0.84,agree
+29,Straight Lines and Pair of Straight Lines,lsan6rft,0.82,agree
+30,Vector Algebra,lsan8kau,0.82,agree
+31,,lsampttb,0.54,differs (ExamGOAL A)
+32,,lsamvrk0,0.41,differs (ExamGOAL B)
+33,Laws of Motion,lsams161,0.95,differs (ExamGOAL A)
+34,Laws of Motion,lsamcmv7,0.83,agree
+35,Rotational Motion,lsan8z5e,0.98,differs (ExamGOAL A)
+36,Gravitation,lsamy2vh,0.85,agree
+37,,lsan1vgp,0.0,agree
+38,Heat and Thermodynamics,lsamui7s,0.95,differs (ExamGOAL C)
+39,Heat and Thermodynamics,lsan06k0,0.96,differs (ExamGOAL D)
+40,Electrostatics,lsamgy2r,0.94,differs (ExamGOAL C)
+41,Capacitor,lsamif14,0.94,differs (ExamGOAL D)
+42,Current Electricity,lsan7lov,0.99,differs (ExamGOAL C)
+43,Alternating Current,lsan61ku,0.93,differs (ExamGOAL B)
+44,,lsamqzfu,0.28,agree
+45,Wave Optics,lsamz14j,0.95,differs (ExamGOAL A)
+46,Dual Nature of Radiation,lsamftqb,0.9,agree
+47,,lsamb8bl,0.15,differs (ExamGOAL C)
+48,Semiconductor,lsan4w1v,0.89,agree
+49,Semiconductor,lsan382k,0.7,agree
+50,Current Electricity,lsamtosf,0.97,agree
+51,,lsanbcwk,0.3,agree
+52,Rotational Motion,lsanle50,0.93,agree
+53,Properties of Matter,lsanfj48,0.91,agree
+54,Simple Harmonic Motion,lsana2vl,0.97,agree
+55,Electrostatics,lsancm3c,0.85,agree
+56,Capacitor,lsanatnf,0.91,agree
+57,Magnetic Effect of Current,lsanefm9,0.92,agree
+58,Electromagnetic Induction,lsank91r,0.88,agree
+59,Wave Optics,lsanjkmv,0.66,agree
+60,,lsanmvpi,0.26,agree
+61,Structure of Atom,lsaotnb3,0.97,differs (ExamGOAL C)
+62,Chemical Bonding & Molecular Structure,lsaowhvy,1.0,agree
+63,Chemical Bonding & Molecular Structure,lsap1fic,1.0,differs (ExamGOAL A)
+64,Ionic Equilibrium,lsanzb5m,0.92,differs (ExamGOAL C)
+65,Periodic Table & Periodicity,lsaoyqb0,1.0,differs (ExamGOAL C)
+66,p-Block Elements,lsaopfne,1.0,differs (ExamGOAL C)
+67,,lsao7fl5,0.16,differs (ExamGOAL D)
+68,Periodic Table & Periodicity,lsaoc9af,0.94,differs (ExamGOAL A)
+69,d and f Block Elements,lsaorn4w,0.99,differs (ExamGOAL B)
+70,Coordination Compounds,lsaobjj7,1.0,differs (ExamGOAL B)
+71,Coordination Compounds,lsaoznvo,1.0,differs (ExamGOAL B)
+72,Practical Organic Chemistry,lsaoomjj,1.0,differs (ExamGOAL C)
+73,Basics of Organic Chemistry,lsaosqy9,1.0,agree
+74,Basics of Organic Chemistry,lsaoaihn,1.0,differs (ExamGOAL D)
+75,Hydrocarbons,lsanxx7f,0.65,differs (ExamGOAL D)
+76,,lsaofgdj,0.31,differs (ExamGOAL B)
+77,,lsaokiln,0.36,differs (ExamGOAL B)
+78,Hydrocarbons,lsaonshl,0.61,differs (ExamGOAL C)
+79,"Aldehydes, Ketones and Carboxylic Acids",lsaouz79,1.0,differs (ExamGOAL A)
+80,Coordination Compounds,lsaomryz,0.97,differs (ExamGOAL A)
+81,Some Basic Concepts of Chemistry,lsapf7l1,0.84,agree
+82,Thermodynamics,lsapb10m,0.71,agree
+83,Solutions,lsap58pv,0.85,agree
+84,Electrochemistry,lsapbkde,0.88,agree
+85,Electrochemistry,lsape1rr,0.13,agree
+86,Chemical Kinetics and Nuclear Chemistry,lsapa057,0.59,agree
+87,Practical Organic Chemistry,lsapcdp1,0.94,agree
+88,Basics of Organic Chemistry,lsap6gz4,1.0,agree
+89,Compounds Containing Nitrogen,lsapepaf,0.81,agree
+90,Biomolecules,lsap25qp,1.0,agree

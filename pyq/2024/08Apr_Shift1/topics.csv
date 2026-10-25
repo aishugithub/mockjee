@@ -1,0 +1,91 @@
+q,topic,examside_id,match,answer_check
+1,Functions,lv5gs8ga,0.92,differs (ExamGOAL B)
+2,Complex Numbers,lv5gsxx4,0.76,agree
+3,,lv5grw9p,0.0,differs (ExamGOAL A)
+4,,lv5grw76,0.54,differs (ExamGOAL C)
+5,Straight Lines and Pair of Straight Lines,lv5gsk1h,0.89,differs (ExamGOAL C)
+6,Complex Numbers,lv5gsy4m,0.76,agree
+7,Application of Derivatives,lv5gt1vv,0.84,agree
+8,,lv5gst25,0.0,differs (ExamGOAL A)
+9,Application of Derivatives,lv5grwlv,0.82,differs (ExamGOAL D)
+10,Indefinite Integrals,lv5gs8hd,0.6,differs (ExamGOAL D)
+11,Definite Integration,lv5grw2g,0.76,differs (ExamGOAL C)
+12,Differential Equations,lv5grwbn,0.87,differs (ExamGOAL B)
+13,Differential Equations,lv5grwhw,0.73,differs (ExamGOAL D)
+14,3D Geometry,lv5gsxy6,0.88,differs (ExamGOAL B)
+15,Circle,lv5grw3t,0.9,differs (ExamGOAL A)
+16,Hyperbola,lv5grwkp,0.9,differs (ExamGOAL B)
+17,,lv5grwiz,0.18,agree
+18,Vector Algebra,lv5grw8k,0.83,differs (ExamGOAL B)
+19,Probability,lv5grw62,0.95,differs (ExamGOAL A)
+20,,lv5grwfx,0.0,agree
+21,Functions,lv5gt1wc,0.83,agree
+22,Matrices and Determinants,lv5grwjl,0.92,agree
+23,Permutations and Combinations,lv5gsk30,0.99,agree
+24,Binomial Theorem,lv5gt1x2,0.79,agree
+25,Sequences and Series,lv5gt51f,0.95,agree
+26,"Limits, Continuity and Differentiability",lv5grwgp,0.42,agree
+27,Area Under The Curves,lv5gs18q,0.65,agree
+28,Vector Algebra,lv5gt1qa,0.75,agree
+29,Straight Lines and Pair of Straight Lines,lv5gs2w8,0.86,agree
+30,Probability,lv5gs180,0.35,agree
+31,,lv5gs2xe,0.0,differs (ExamGOAL B)
+32,Circular Motion,lv5gsxza,0.95,differs (ExamGOAL C)
+33,Center of Mass and Collision,lv5gsdz6,0.93,agree
+34,Laws of Motion,lv5gs19s,0.94,agree
+35,Work Power & Energy,lv5grwcr,0.93,agree
+36,,lv5gsk3x,0.0,differs (ExamGOAL A)
+37,Heat and Thermodynamics,lv5gt50w,0.88,differs (ExamGOAL C)
+38,Gravitation,lv5gse0c,0.93,differs (ExamGOAL D)
+39,Heat and Thermodynamics,lv5gs2yl,0.99,agree
+40,Current Electricity,lv5gt53y,0.99,differs (ExamGOAL C)
+41,Magnetic Properties of Matter,lv5gs8ij,1.0,agree
+42,Electromagnetic Waves,lv5gsw9i,0.93,differs (ExamGOAL D)
+43,,lv5gse1i,0.0,differs (ExamGOAL D)
+44,Dual Nature of Radiation,lv5gs90p,0.86,differs (ExamGOAL C)
+45,Electrostatics,lv5grvxd,0.99,differs (ExamGOAL C)
+46,Atoms and Nuclei,lv5gt1y4,0.96,differs (ExamGOAL A)
+47,Semiconductor,lv5gt52j,0.94,differs (ExamGOAL D)
+48,,lv5gswap,0.18,differs (ExamGOAL D)
+49,Units & Measurements,lv5gs1aw,0.83,differs (ExamGOAL B)
+50,Alternating Current,lv5gst30,0.99,differs (ExamGOAL D)
+51,Vector Algebra,lv5gt4yr,0.89,agree
+52,Center of Mass and Collision,lv5gt54p,0.86,agree
+53,,lv5gsxzs,0.07,agree
+54,Waves,lv5gst3k,0.38,agree
+55,Electrostatics,lv5gsrm9,0.96,agree
+56,Current Electricity,lv5gt1ps,0.82,agree
+57,,lv5gt3f7,0.12,agree
+58,,lv5gt1qz,0.27,agree
+59,Wave Optics,lv5gt3eo,0.91,agree
+60,Magnetic Effect of Current,lv5gt4pj,0.85,agree
+61,Some Basic Concepts of Chemistry,lv5gsy0w,0.9,differs (ExamGOAL D)
+62,Chemical Bonding & Molecular Structure,lv5gsw7q,0.86,differs (ExamGOAL B)
+63,Chemical Equilibrium,lv5gspnf,0.88,agree
+64,Redox Reactions,lv5gt1sb,0.9,differs (ExamGOAL C)
+65,p-Block Elements,lv5gt1te,0.89,differs (ExamGOAL B)
+66,p-Block Elements,lv5grwn0,0.94,differs (ExamGOAL D)
+67,,lv5gsy29,0.55,differs (ExamGOAL D)
+68,Periodic Table & Periodicity,lv5grwf0,0.76,agree
+69,,lv5gsk5f,0.32,agree
+70,Coordination Compounds,lv5gs17g,0.9,agree
+71,Coordination Compounds,lv5gs2vh,0.98,differs (ExamGOAL A)
+72,,lv5gt1uq,0.54,differs (ExamGOAL B)
+73,Coordination Compounds,lv5gsxvf,0.82,differs (ExamGOAL D)
+74,Basics of Organic Chemistry,lv5gt4zt,0.62,agree
+75,Hydrocarbons,lv5gt4ww,0.81,agree
+76,Basics of Organic Chemistry,lv5gt4os,0.63,differs (ExamGOAL A)
+77,,lv5gt4vr,0.0,agree
+78,"Alcohols, Phenols and Ethers",lv5gt4qp,0.81,agree
+79,"Aldehydes, Ketones and Carboxylic Acids",lv5gt4uk,0.77,differs (ExamGOAL D)
+80,Biomolecules,lv5gt4ry,0.95,differs (ExamGOAL A)
+81,,lv5gt4sj,0.28,agree
+82,Chemical Bonding & Molecular Structure,lv5gsw8c,0.43,agree
+83,,lv5gt4tb,0.27,agree
+84,,lv5gsxw4,0.29,agree
+85,Chemical Kinetics and Nuclear Chemistry,lv5gsy3l,0.98,agree
+86,Coordination Compounds,lv5gt3fp,0.89,agree
+87,,lv5gspm8,0.02,agree
+88,Basics of Organic Chemistry,lv5gt4y9,0.97,agree
+89,Hydrocarbons,lv5gt4xf,0.72,agree
+90,Compounds Containing Nitrogen,lv5gt55e,0.84,agree

@@ -1,0 +1,91 @@
+q,topic,examside_id,match,answer_check
+1,,1lgxszp3h,0.55,differs (ExamGOAL B)
+2,Complex Numbers,1lgxw4now,0.86,agree
+3,Matrices and Determinants,1lgxvxhlk,0.84,differs (ExamGOAL A)
+4,Trigonometric Ratio and Identites,1lgxtayey,0.32,agree
+5,Binomial Theorem,1lgxt15ef,0.62,differs (ExamGOAL A)
+6,Sequences and Series,1lgxw30j8,0.99,differs (ExamGOAL B)
+7,Application of Derivatives,1lgxt9s39,0.85,differs (ExamGOAL C)
+8,Indefinite Integrals,1lgxgz9mo,0.88,agree
+9,Differential Equations,1lgxw1kmc,0.85,differs (ExamGOAL A)
+10,,,0,no candidate
+11,Ellipse,1lgxh2jrz,0.65,agree
+12,Circle,1lgxvzvzw,0.92,differs (ExamGOAL D)
+13,,,0,no candidate
+14,,,0,no candidate
+15,3D Geometry,1lgxgzye9,0.78,agree
+16,Vector Algebra,1lgxh78lc,0.73,differs (ExamGOAL B)
+17,Vector Algebra,1lgxt48t5,0.96,differs (ExamGOAL D)
+18,Probability,1lgxt6jpu,0.98,agree
+19,,,0,no candidate
+20,,,0,no candidate
+21,,1lgxwj4h5,0.34,no NTA answer
+22,Sets and Relations,1lgxwachw,0.8,agree
+23,Permutations and Combinations,1lgxwdlm3,0.99,agree
+24,Permutations and Combinations,1lgxwhg04,0.99,agree
+25,Binomial Theorem,1lgxwe9tk,0.84,agree
+26,,,0,no candidate
+27,,,0,no candidate
+28,Area Under The Curves,1lgxw9wy2,0.79,agree
+29,,1lgxw8rjx,0.04,differs (ExamGOAL 4)
+30,Statistics,1lgxwcpil,0.85,agree
+31,Simple Harmonic Motion,1lgxxnshu,0.96,agree
+32,,1lgxh5015,0.24,agree
+33,Heat and Thermodynamics,1lgxx0jl0,0.98,differs (ExamGOAL C)
+34,Gravitation,1lgyewnv9,1.0,agree
+35,Units & Measurements,1lgxwqesk,0.99,differs (ExamGOAL B)
+36,Properties of Matter,1lgxwszgi,0.96,differs (ExamGOAL D)
+37,Gravitation,1lgyfbw5p,0.99,differs (ExamGOAL A)
+38,Motion in a Straight Line,1lgyezarn,0.51,agree
+39,Motion in a Plane,1lgxx3mgg,0.99,differs (ExamGOAL B)
+40,Center of Mass and Collision,1lgyff41o,0.99,differs (ExamGOAL B)
+41,Capacitor,1lgxww9p2,1.0,differs (ExamGOAL D)
+42,Communication Systems,1lgxwv754,0.96,agree
+43,Semiconductor,1lgyfdstf,0.92,differs (ExamGOAL C)
+44,Atoms and Nuclei,1lgyf0gm1,1.0,differs (ExamGOAL A)
+45,Alternating Current,1lgyf3l3z,0.97,differs (ExamGOAL D)
+46,Dual Nature of Radiation,1lgxxq9qb,1.0,agree
+47,Geometrical Optics,1lgyeva3m,1.0,differs (ExamGOAL D)
+48,,1lgxt8e8l,0.0,differs (ExamGOAL B)
+49,Electromagnetic Induction,1lgxwolyh,0.97,differs (ExamGOAL A)
+50,Current Electricity,1lgxxx9ci,0.97,differs (ExamGOAL C)
+51,Properties of Matter,1lgyfxgqw,0.58,agree
+52,Waves,1lgyfgqv6,0.89,agree
+53,Rotational Motion,1lgyftz9l,0.98,agree
+54,Work Power & Energy,1lgyflfn1,0.97,agree
+55,Electrostatics,1lgyfsuqi,0.97,agree
+56,Atoms and Nuclei,1lgyfo324,0.62,agree
+57,Wave Optics,1lgyfr0p4,0.63,agree
+58,Electromagnetic Induction,1lgyfjiun,0.98,agree
+59,Magnetic Properties of Matter,1lgyfv5wo,0.94,agree
+60,Current Electricity,1lgyfhpni,0.69,agree
+61,,,0,no candidate
+62,,1lgyg9nee,0.32,differs (ExamGOAL C)
+63,,,0,no candidate
+64,,,0,no candidate
+65,,1lgyg5fos,0.26,agree
+66,,1lgyh8qi0,0.25,differs (ExamGOAL B)
+67,,,0,no candidate
+68,,1lgyhghbp,0.22,agree
+69,,,0,no candidate
+70,,1lgygcvay,0.18,agree
+71,Basics of Organic Chemistry,1lgygjxi9,1.0,agree
+72,,,0,no candidate
+73,Haloalkanes and Haloarenes,1lgyhf41e,0.76,differs (ExamGOAL B)
+74,"Aldehydes, Ketones and Carboxylic Acids",1lgyg8q02,0.65,differs (ExamGOAL A)
+75,,1lgyfyt7u,0.0,differs (ExamGOAL D)
+76,Compounds Containing Nitrogen,1lgyh1vlj,0.98,no NTA answer
+77,,1lgygiaty,0.2,differs (ExamGOAL A)
+78,,1lgyg3ikm,0.0,differs (ExamGOAL D)
+79,Practical Organic Chemistry,1lgyh4w33,0.89,differs (ExamGOAL A)
+80,,1lgygw4e4,0.0,differs (ExamGOAL A)
+81,,,0,no candidate
+82,Structure of Atom,1lgyhok29,0.27,agree
+83,Chemical Bonding & Molecular Structure,1lgyhijw5,0.92,agree
+84,Solutions,1lgyhw1k3,0.94,agree
+85,Chemical Equilibrium,1lgyhl1dn,0.39,agree
+86,Electrochemistry,1lgyhushs,0.56,agree
+87,Chemical Kinetics and Nuclear Chemistry,1lgyhqmhf,0.75,agree
+88,p-Block Elements,1lgyhrwmm,0.91,agree
+89,Chemical Bonding & Molecular Structure,1lgyhlpij,0.99,agree
+90,Coordination Compounds,1lgyhhdmz,0.97,agree

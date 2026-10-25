@@ -12,3 +12,6 @@ data/
 
 # deploy zips (tools/make_deploy_bundle.py)
 dist/
+
+# ExamGOAL copies of NTA shifts: only used for topic matching; re-download from sources/examgoal_nta/SOURCES.md
+sources/examgoal_nta/*.pdf

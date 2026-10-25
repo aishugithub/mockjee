@@ -1,0 +1,91 @@
+q,topic,examside_id,match,answer_check
+1,,,0,no candidate
+2,Complex Numbers,1lgyl12p4,0.84,differs (ExamGOAL D)
+3,Matrices and Determinants,1lgym2kp0,0.81,differs (ExamGOAL D)
+4,,1lgylvto4,0.59,differs (ExamGOAL D)
+5,Permutations and Combinations,1lgylnv0d,0.98,differs (ExamGOAL A)
+6,,,0,no candidate
+7,Binomial Theorem,1lgyliytd,0.95,differs (ExamGOAL C)
+8,Sets and Relations,1lgyld2f2,0.36,agree
+9,"Limits, Continuity and Differentiability",1lgylxsd8,0.71,differs (ExamGOAL D)
+10,Indefinite Integrals,1lgyl5enm,0.79,no NTA answer
+11,,,0,no candidate
+12,,1lgyl43d6,0.09,differs (ExamGOAL D)
+13,,,0,no candidate
+14,,,0,no candidate
+15,Vector Algebra,1lgylle5f,0.76,agree
+16,,1lgylyp94,0.21,differs (ExamGOAL B)
+17,Probability,1lgyl9ba2,0.88,agree
+18,Statistics,1lgylem09,0.78,differs (ExamGOAL A)
+19,,,0,no candidate
+20,,,0,no candidate
+21,Functions,1lgyq24t0,0.57,agree
+22,Quadratic Equation and Inequalities,1lgyonh22,0.87,agree
+23,Functions,1lgyoqd24,0.81,agree
+24,,,0,no candidate
+25,"Limits, Continuity and Differentiability",1lgyorpkh,0.91,agree
+26,Definite Integration,1lgyoktep,0.79,agree
+27,Area Under The Curves,1lgyom5cr,0.2,agree
+28,Differential Equations,1lgyq0yd0,0.7,agree
+29,,,0,no candidate
+30,,,0,no candidate
+31,Units & Measurements,1lgyr0x6i,0.86,differs (ExamGOAL B)
+32,Simple Harmonic Motion,1lgyqagtl,0.97,agree
+33,,1lgylmp2h,0.0,agree
+34,Heat and Thermodynamics,1lgyqur5l,0.89,differs (ExamGOAL A)
+35,Properties of Matter,1lgyq4u8n,0.94,agree
+36,Gravitation,1lgyqka47,0.96,agree
+37,Gravitation,1lgyqs0ch,0.92,differs (ExamGOAL D)
+38,Motion in a Straight Line,1lgyqeux5,1.0,differs (ExamGOAL C)
+39,Motion in a Plane,1lgyqw4iu,0.81,differs (ExamGOAL B)
+40,Work Power & Energy,1lgyqdov2,0.93,differs (ExamGOAL B)
+41,Electrostatics,1lgyqr0ia,0.88,differs (ExamGOAL B)
+42,Communication Systems,1lgyqlpcj,0.95,differs (ExamGOAL A)
+43,Semiconductor,1lgyqgzcj,0.76,differs (ExamGOAL D)
+44,Atoms and Nuclei,1lgyqhy15,0.94,differs (ExamGOAL B)
+45,Dual Nature of Radiation,1lgyqc48m,0.98,differs (ExamGOAL D)
+46,Wave Optics,1lgyqx612,0.95,differs (ExamGOAL D)
+47,,1lgym0ipz,0.0,agree
+48,Electromagnetic Induction,1lgyq6f6x,0.91,agree
+49,Magnetic Properties of Matter,1lgyqpe9z,0.88,agree
+50,Current Electricity,1lgyqmx5w,0.86,differs (ExamGOAL C)
+51,Waves,1lgyr5ir2,0.97,agree
+52,Heat and Thermodynamics,1lgyran38,0.73,agree
+53,Rotational Motion,1lgyrblmi,0.94,agree
+54,,1lgypxtlo,0.34,differs (ExamGOAL 16)
+55,,1lgysktm0,0.27,agree
+56,Atoms and Nuclei,1lgyr91cu,0.94,agree
+57,Geometrical Optics,1lgyr4ix8,0.98,agree
+58,,1lgypzf6s,0.3,differs (ExamGOAL 150)
+59,Magnetic Effect of Current,1lgyrcozl,0.88,agree
+60,Current Electricity,1lgyr3d00,0.87,agree
+61,,,0,no candidate
+62,,1lgysc9q2,0.25,differs (ExamGOAL D)
+63,,,0,no candidate
+64,Structure of Atom,1lgys6ajd,0.98,differs (ExamGOAL B)
+65,,,0,no candidate
+66,,,0,no candidate
+67,,,0,no candidate
+68,,,0,no candidate
+69,Coordination Compounds,1lgyrpygh,0.9,differs (ExamGOAL C)
+70,,,0,no candidate
+71,Haloalkanes and Haloarenes,1lgyrsyoh,0.74,differs (ExamGOAL C)
+72,Basics of Organic Chemistry,1lgyrs4ck,0.82,agree
+73,Haloalkanes and Haloarenes,1lgysbbxq,0.92,differs (ExamGOAL B)
+74,Basics of Organic Chemistry,1lgysi9xv,0.85,differs (ExamGOAL C)
+75,Practical Organic Chemistry,1lgyrwlgc,0.94,differs (ExamGOAL B)
+76,Compounds Containing Nitrogen,1lgysged2,0.71,agree
+77,,,0,no candidate
+78,,1lgysfdkf,0.41,differs (ExamGOAL D)
+79,Practical Organic Chemistry,1lgysk2xy,0.99,differs (ExamGOAL A)
+80,Redox Reactions,1lgys8ty2,0.99,differs (ExamGOAL A)
+81,Structure of Atom,1lgyt4cpt,0.91,agree
+82,Chemical Bonding & Molecular Structure,1lgyslico,0.83,agree
+83,Thermodynamics,1lgyt32qk,0.82,agree
+84,Solutions,1lgystn2c,0.97,agree
+85,Ionic Equilibrium,1lgyss80y,0.14,agree
+86,Electrochemistry,1lgyt87c0,0.51,agree
+87,,,0,no candidate
+88,,,0,no candidate
+89,Redox Reactions,1lgyt55ii,0.93,agree
+90,Coordination Compounds,1lgysn4dn,0.94,agree

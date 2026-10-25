@@ -1,0 +1,76 @@
+q,topic,examside_id,match,answer_check
+1,Sets and Relations,mnsik5l1,0.92,agree
+2,Complex Numbers,mnsik5m2,0.71,agree
+3,Matrices and Determinants,mnsik5my,0.91,agree
+4,Matrices and Determinants,mnsik5nv,0.52,agree
+5,Sequences and Series,mnsik5p5,0.77,agree
+6,Probability,mnsik5q1,0.64,agree
+7,Statistics,mnsik5qw,0.99,agree
+8,Binomial Theorem,mnsik5rv,0.47,agree
+9,Permutations and Combinations,mnsik5t2,1.0,agree
+10,Straight Lines and Pair of Straight Lines,mnsik5u6,0.95,agree
+11,Parabola,mnsik5vb,0.98,agree
+12,Inverse Trigonometric Functions,mnsik5x8,0.84,agree
+13,"Limits, Continuity and Differentiability",mnsik5yc,0.88,differs (ExamGOAL D)
+14,Vector Algebra,mnsik5yy,0.68,agree
+15,3D Geometry,mnsik5zv,0.81,agree
+16,Definite Integration,mnsik61b,0.57,agree
+17,Differential Equations,mnsik629,0.74,agree
+18,Area Under The Curves,mnsik636,0.69,agree
+19,Definite Integration,mnsik64k,0.63,agree
+20,Ellipse,mnsik65i,0.88,agree
+21,Logarithm,mnsik66f,0.86,agree
+22,Definite Integration,mnsik66y,0.52,agree
+23,3D Geometry,mnsik67d,0.89,agree
+24,Circle,mnsik68a,0.08,agree
+25,Functions,mnsik68s,0.62,agree
+26,Units & Measurements,mnsik69o,0.99,agree
+27,Units & Measurements,mnsik6aj,0.89,agree
+28,Circular Motion,mnsik6bp,0.96,agree
+29,Motion in a Straight Line,mnsik6ci,0.78,agree
+30,Geometrical Optics,mnsik6da,0.98,agree
+31,Motion in a Plane,mnsik6e6,0.94,agree
+32,Rotational Motion,mnsik6f1,0.4,agree
+33,Properties of Matter,mnsik6g7,0.26,agree
+34,Properties of Matter,mnsik6h8,0.97,agree
+35,Heat and Thermodynamics,mnsik6i2,0.89,agree
+36,Heat and Thermodynamics,mnsik6ix,0.94,agree
+37,Simple Harmonic Motion,mnsik6js,0.97,agree
+38,Dual Nature of Radiation,mnsik6kt,0.88,agree
+39,Magnetic Effect of Current,mnsik6lx,0.84,agree
+40,Electromagnetic Induction,mnsik6mv,0.92,agree
+41,Electrostatics,mnsik6nt,0.75,agree
+42,Geometrical Optics,mnsik6ow,0.86,agree
+43,Dual Nature of Radiation,mnsik6q6,0.95,agree
+44,Atoms and Nuclei,mnsik6r1,0.98,agree
+45,Semiconductor,mnsik6rv,0.95,agree
+46,Capacitor,mnsik6sq,0.92,agree
+47,Wave Optics,mnsik6tc,0.97,agree
+48,Magnetic Effect of Current,mnsik6tu,0.88,agree
+49,Capacitor,mnsik6ug,0.91,agree
+50,Center of Mass and Collision,mnsik6uw,0.71,agree
+51,,mnsik755,0.22,differs (ExamGOAL A)
+52,Solutions,mnsik6ww,0.87,agree
+53,Chemical Bonding & Molecular Structure,mnsik6yf,0.93,agree
+54,,mnsik6zf,0.13,agree
+55,Chemical Equilibrium,mnsik70f,0.86,agree
+56,Electrochemistry,mnsik71l,0.84,agree
+57,Chemical Kinetics and Nuclear Chemistry,mnsik72h,0.63,agree
+58,Periodic Table & Periodicity,mnsik73k,0.75,agree
+59,p-Block Elements,mnsik74f,0.53,agree
+60,,mnsik6vv,0.02,differs (ExamGOAL C)
+61,d and f Block Elements,mnsik763,0.98,agree
+62,Basics of Organic Chemistry,mnsik76x,1.0,agree
+63,Hydrocarbons,mnsik77q,1.0,agree
+64,Basics of Organic Chemistry,mnsik78m,1.0,differs (ExamGOAL B)
+65,Hydrocarbons,mnsik79g,1.0,agree
+66,Haloalkanes and Haloarenes,mnsik7ad,0.42,agree
+67,"Aldehydes, Ketones and Carboxylic Acids",mnsik7bg,0.75,agree
+68,Compounds Containing Nitrogen,mnsik7ck,0.95,agree
+69,Biomolecules,mnsik7de,1.0,agree
+70,Biomolecules,mnsik7e7,1.0,agree
+71,Coordination Compounds,mnsik7en,0.82,agree
+72,"Aldehydes, Ketones and Carboxylic Acids",mnsik7f6,0.02,agree
+73,Structure of Atom,mnsik7fv,0.95,agree
+74,Thermodynamics,mnsik7gr,0.72,agree
+75,Chemical Equilibrium,mnsik7hd,0.73,agree

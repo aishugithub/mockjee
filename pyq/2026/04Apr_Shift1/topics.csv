@@ -1,0 +1,76 @@
+q,topic,examside_id,match,answer_check
+1,Functions,mnswhu6w,0.87,agree
+2,Quadratic Equation and Inequalities,mnswhwlq,0.73,agree
+3,Complex Numbers,mnswhs8r,0.7,agree
+4,,mnswhyrp,0.0,agree
+5,Matrices and Determinants,mnswhw67,0.83,agree
+6,Matrices and Determinants,mnswhtht,0.81,agree
+7,Sequences and Series,mnswhuqy,0.96,agree
+8,Permutations and Combinations,mnswhsyl,0.99,agree
+9,Binomial Theorem,mnswhu7x,0.8,agree
+10,Statistics,mnswhszg,0.9,agree
+11,Straight Lines and Pair of Straight Lines,mnswhv78,0.89,agree
+12,Straight Lines and Pair of Straight Lines,mnswhysk,0.92,agree
+13,Circle,mnswhq3s,0.93,agree
+14,3D Geometry,mnswhrtz,0.94,agree
+15,3D Geometry,mnswhtiq,0.91,agree
+16,,mnswhrf9,0.34,agree
+17,Definite Integration,mnswhqtv,0.86,agree
+18,,mnswhwmt,0.0,agree
+19,Definite Integration,mnswhurx,0.78,agree
+20,Differential Equations,mnswhxhh,0.9,agree
+21,Probability,mnswhquf,0.65,agree
+22,Ellipse,mnswhq4a,0.88,agree
+23,Trigonometric Ratio and Identites,mnswhqv7,0.43,agree
+24,Trigonometric Ratio and Identites,mnswhvls,0.62,agree
+25,"Limits, Continuity and Differentiability",mnswht0f,0.76,agree
+26,Units & Measurements,mnswhusy,0.99,agree
+27,Properties of Matter,mnswhxia,0.89,agree
+28,Laws of Motion,mnswhrgg,0.99,agree
+29,Atoms and Nuclei,mnswhqw8,0.8,agree
+30,Rotational Motion,mnswhtjs,0.75,agree
+31,Motion in a Plane,mnswhs9q,0.96,agree
+32,Dual Nature of Radiation,mnswhuty,0.92,agree
+33,Wave Optics,mnswhsal,0.97,agree
+34,Properties of Matter,mnswhw76,0.86,agree
+35,,mnswhrus,0.34,agree
+36,Heat and Thermodynamics,mnswhwo3,0.64,no NTA answer
+37,Current Electricity,mnswhytt,0.99,agree
+38,Semiconductor,mnswhy69,0.92,agree
+39,Geometrical Optics,mnswhv8j,0.99,agree
+40,Capacitor,mnswhsbh,0.96,agree
+41,Magnetic Effect of Current,mnswhu8y,0.42,agree
+42,,mnswhrw0,0.21,agree
+43,Current Electricity,mnswhtkt,0.8,agree
+44,Wave Optics,mnswhscd,0.92,agree
+45,Wave Optics,mnswhw87,0.93,agree
+46,Work Power & Energy,mnt2t7bw,0.93,agree
+47,Properties of Matter,mnt2t6qi,0.89,agree
+48,Simple Harmonic Motion,mnt2t77g,0.94,agree
+49,,mnt2t71a,0.31,agree
+50,,mnt2t799,0.13,agree
+51,Some Basic Concepts of Chemistry,mnt2t736,0.97,agree
+52,Structure of Atom,mnt2t744,0.99,agree
+53,Structure of Atom,mnt2t6rr,0.97,agree
+54,Thermodynamics,mnt2t6t8,0.99,agree
+55,Chemical Equilibrium,mnt2t750,0.8,agree
+56,Redox Reactions,mnt2t7a5,0.92,agree
+57,Chemical Kinetics and Nuclear Chemistry,mnt2t6uj,0.98,agree
+58,p-Block Elements,mnt2t6ys,0.99,agree
+59,p-Block Elements,mnt2t6xi,0.97,agree
+60,,mnt2t7cx,0.17,agree
+61,,mnt2t6vj,0.29,agree
+62,Coordination Compounds,mnt2t766,0.89,agree
+63,Basics of Organic Chemistry,mnt2t6wg,0.93,agree
+64,Hydrocarbons,mnt2t72a,0.87,agree
+65,,mnt2t7b5,0.2,agree
+66,Basics of Organic Chemistry,mnu6c0bh,0.87,agree
+67,Compounds Containing Nitrogen,mnu6gy7u,0.68,agree
+68,Biomolecules,mnubzpgk,0.48,agree
+69,Biomolecules,mnuc6tqt,0.47,agree
+70,"Alcohols, Phenols and Ethers",mnt2t6zz,0.7,agree
+71,Chemical Bonding & Molecular Structure,mnt2t70i,0.56,agree
+72,"Aldehydes, Ketones and Carboxylic Acids",mnt2t76p,0.77,agree
+73,Practical Organic Chemistry,mnt2t6xy,0.62,agree
+74,Ionic Equilibrium,mnt2t785,0.7,agree
+75,Solutions,mnt2t78p,0.75,agree

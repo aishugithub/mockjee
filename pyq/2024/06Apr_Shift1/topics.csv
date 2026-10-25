@@ -1,0 +1,91 @@
+q,topic,examside_id,match,answer_check
+1,Sets and Relations,lvc57b2n,0.83,differs (ExamGOAL D)
+2,Functions,lvc57nwe,0.63,differs (ExamGOAL C)
+3,Permutations and Combinations,lvc57pix,1.0,differs (ExamGOAL B)
+4,Quadratic Equation and Inequalities,lvc57aw6,0.76,differs (ExamGOAL B)
+5,Matrices and Determinants,lvc57b13,0.67,differs (ExamGOAL A)
+6,Differentiation,lvc57bcq,0.76,no NTA answer
+7,,lvc57uea,0.0,differs (ExamGOAL D)
+8,,lvc57b43,0.55,differs (ExamGOAL C)
+9,,lvc586ak,0.0,agree
+10,Straight Lines and Pair of Straight Lines,lvc57b6s,0.94,differs (ExamGOAL D)
+11,Definite Integration,lvc57ayt,0.41,agree
+12,Area Under The Curves,lvc57b84,0.87,differs (ExamGOAL C)
+13,Differential Equations,lvc58e2y,0.88,differs (ExamGOAL B)
+14,Differential Equations,lvc57baa,0.79,differs (ExamGOAL A)
+15,Circle,lvc57bdz,0.97,agree
+16,Parabola,lvc57b5a,0.94,no NTA answer
+17,3D Geometry,lvc58e18,0.83,differs (ExamGOAL D)
+18,Statistics,lvc583dm,0.86,agree
+19,,lvc57bf8,0.57,differs (ExamGOAL A)
+20,,lvc57bbi,0.12,differs (ExamGOAL A)
+21,Quadratic Equation and Inequalities,lvc57nwy,0.66,agree
+22,Matrices and Determinants,lvc57b1q,0.51,agree
+23,Binomial Theorem,lvc57np0,0.91,agree
+24,,lvc57nxl,0.27,differs (ExamGOAL 47)
+25,Definite Integration,lvc58e3u,0.87,agree
+26,,lvc57uf2,0.05,differs (ExamGOAL 6)
+27,Parabola,lvc57noi,0.54,agree
+28,3D Geometry,lvc58e9z,0.89,agree
+29,Vector Algebra,lvc57b8v,0.73,agree
+30,,lvc583gl,0.0,differs (ExamGOAL 68)
+31,Work Power & Energy,lvc5837p,0.9,differs (ExamGOAL D)
+32,Laws of Motion,lvc5836l,0.74,differs (ExamGOAL C)
+33,Gravitation,lvc57pmu,0.96,differs (ExamGOAL C)
+34,Motion in a Straight Line,lvc5838s,0.95,agree
+35,Properties of Matter,lvc57nro,0.97,agree
+36,,lvc57cty,0.0,differs (ExamGOAL C)
+37,Heat and Thermodynamics,lvc57i7u,1.0,differs (ExamGOAL C)
+38,Electrostatics,lvc58e7h,1.0,differs (ExamGOAL B)
+39,Electromagnetic Waves,lvc57nqe,0.94,differs (ExamGOAL C)
+40,Current Electricity,lvc58eq8,0.85,differs (ExamGOAL C)
+41,,lvc57o02,0.58,differs (ExamGOAL B)
+42,Units & Measurements,lvc57i1o,0.91,differs (ExamGOAL D)
+43,Magnetic Effect of Current,lvc58ehc,0.9,differs (ExamGOAL C)
+44,Alternating Current,lvc57cv4,0.99,differs (ExamGOAL C)
+45,Units & Measurements,lvc58eba,0.83,differs (ExamGOAL A)
+46,Dual Nature of Radiation,lvc58e61,0.93,differs (ExamGOAL A)
+47,Dual Nature of Radiation,lvc57nyr,0.96,agree
+48,Atoms and Nuclei,lvc587n8,0.99,agree
+49,Semiconductor,lvc58elr,0.98,agree
+50,Work Power & Energy,lvc586c4,0.91,differs (ExamGOAL C)
+51,Geometrical Optics,lvc57awz,0.99,agree
+52,,lvc57pgs,0.29,agree
+53,Vector Algebra,lvc57cvn,0.62,agree
+54,Properties of Matter,lvc57nse,0.97,agree
+55,,lvc57i2g,0.07,agree
+56,Rotational Motion,lvc57nsx,0.95,agree
+57,,lvc57o0m,0.09,agree
+58,Current Electricity,lvc58ec5,0.94,agree
+59,Electrostatics,lvc58eje,0.95,agree
+60,Atoms and Nuclei,lvc5868j,0.93,agree
+61,Some Basic Concepts of Chemistry,lvc57i4m,0.86,differs (ExamGOAL B)
+62,Chemical Bonding & Molecular Structure,lvc588zk,0.89,agree
+63,Chemical Equilibrium,lvc587ob,0.77,differs (ExamGOAL C)
+64,,lvc58emw,0.0,differs (ExamGOAL C)
+65,Electrochemistry,lvc58eru,0.98,differs (ExamGOAL D)
+66,Periodic Table & Periodicity,lvc584o4,0.94,differs (ExamGOAL D)
+67,p-Block Elements,lvc57i3i,0.88,differs (ExamGOAL B)
+68,Chemical Bonding & Molecular Structure,lvc57i5y,0.84,differs (ExamGOAL B)
+69,d and f Block Elements,lvc583a5,0.91,agree
+70,,lvc583fj,0.5,differs (ExamGOAL B)
+71,Coordination Compounds,lvc58e8v,0.44,agree
+72,Salt Analysis,lvc583co,0.75,differs (ExamGOAL A)
+73,Practical Organic Chemistry,lvc57nu2,0.97,differs (ExamGOAL A)
+74,Basics of Organic Chemistry,lvc58eo1,0.94,differs (ExamGOAL C)
+75,,lvc57i90,0.0,differs (ExamGOAL B)
+76,,lvc58edm,0.6,differs (ExamGOAL B)
+77,"Alcohols, Phenols and Ethers",lvc57nv7,0.93,differs (ExamGOAL A)
+78,"Alcohols, Phenols and Ethers",lvc58ein,0.93,differs (ExamGOAL B)
+79,,lvc58ekm,0.0,differs (ExamGOAL B)
+80,Biomolecules,lvc58ep5,0.97,differs (ExamGOAL D)
+81,Structure of Atom,lvc57i6o,0.83,differs (ExamGOAL 658)
+82,Chemical Bonding & Molecular Structure,lvc58eqq,0.51,agree
+83,,lvc586b1,0.1,agree
+84,Ionic Equilibrium,lvc583g2,0.86,agree
+85,,lvc58dzo,0.27,agree
+86,d and f Block Elements,lvc58eea,0.8,agree
+87,Coordination Compounds,lvc5869e,0.94,agree
+88,Hydrocarbons,lvc57nnz,0.9,agree
+89,Hydrocarbons,lvc58esl,0.91,agree
+90,Compounds Containing Nitrogen,lvc57ud6,0.98,agree

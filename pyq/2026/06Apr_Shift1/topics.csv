@@ -1,0 +1,76 @@
+q,topic,examside_id,match,answer_check
+1,Functions,mnswhq5g,0.96,agree
+2,Parabola,mnswhxj5,0.86,agree
+3,Hyperbola,mnswhxjz,0.87,agree
+4,Complex Numbers,mnswhvmn,0.85,agree
+5,,mnswhsde,0.0,agree
+6,Sequences and Series,mnswhwp2,0.99,agree
+7,Permutations and Combinations,mnswht26,1.0,agree
+8,Binomial Theorem,mnswhvnj,0.9,agree
+9,Statistics,mnswhy7a,0.87,agree
+10,Probability,mnswhsea,0.98,agree
+11,Hyperbola,mnswhpg0,0.83,agree
+12,Parabola,mnswhrhh,0.95,agree
+13,Trigonometric Equations,mnswhxl9,0.49,agree
+14,Inverse Trigonometric Functions,mnswhtlt,0.71,agree
+15,3D Geometry,mnswhuuw,0.84,agree
+16,3D Geometry,mnswhy8f,0.86,agree
+17,"Limits, Continuity and Differentiability",mnswhric,0.72,agree
+18,Definite Integration,mnswhpi8,0.74,agree
+19,,mnswhw9b,0.0,agree
+20,Area Under The Curves,mnswhv9n,0.78,agree
+21,Matrices and Determinants,mnswhpiw,0.62,agree
+22,Circle,mnswhtma,0.93,agree
+23,Vector Algebra,mnswhxlu,0.84,agree
+24,Sequences and Series,mnswhu9i,0.77,agree
+25,Differential Equations,mnswht30,0.78,agree
+26,Units & Measurements,mnswhqxi,0.85,agree
+27,Units & Measurements,mnswhpjw,0.96,agree
+28,Work Power & Energy,mnswht3z,0.93,agree
+29,Laws of Motion,mnswhy9a,0.03,agree
+30,Properties of Matter,mnswhqyg,0.92,agree
+31,Rotational Motion,mnswhq6e,0.99,agree
+32,Circular Motion,mnswhrj9,0.9,agree
+33,Center of Mass and Collision,mnswhwpx,0.9,agree
+34,Properties of Matter,mnswhwqs,0.78,agree
+35,Heat and Thermodynamics,mnswhuac,0.99,agree
+36,Wave Optics,mnswhtn4,0.61,agree
+37,Simple Harmonic Motion,mnswhubm,0.97,agree
+38,Electrostatics,mnswhwrv,0.9,agree
+39,Semiconductor,mnswhxmp,0.75,agree
+40,Electromagnetic Waves,mnswhsf6,0.98,agree
+41,Geometrical Optics,mnswhwt0,0.43,agree
+42,Magnetic Effect of Current,mnswhxog,0.88,agree
+43,Electromagnetic Induction,mnswht5m,0.37,agree
+44,Atoms and Nuclei,mnswhvog,0.96,agree
+45,Alternating Current,mnswhuct,0.9,agree
+46,Current Electricity,mnswhxou,0.48,agree
+47,Wave Optics,mnswhvp6,0.93,agree
+48,Atoms and Nuclei,mnswhsfr,0.64,agree
+49,Electrostatics,mnswhva7,0.93,agree
+50,,mnswht62,0.51,differs (ExamGOAL 989)
+51,Some Basic Concepts of Chemistry,mnswhq79,0.93,agree
+52,Structure of Atom,mnswhrk8,0.98,agree
+53,,mnswhya6,0.12,agree
+54,Chemical Bonding & Molecular Structure,mnswhwag,0.85,agree
+55,Thermodynamics,mnswhxpp,0.75,agree
+56,Solutions,mnswhpl0,0.98,agree
+57,Chemical Equilibrium,mnswhrx1,0.92,agree
+58,Electrochemistry,mnswhuvr,0.85,agree
+59,p-Block Elements,mnswhto0,0.87,agree
+60,d and f Block Elements,mnswhrm5,0.99,agree
+61,Coordination Compounds,mnswhwu2,0.64,agree
+62,Coordination Compounds,mnswhudu,0.89,agree
+63,Practical Organic Chemistry,mnswhuww,0.93,agree
+64,"Aldehydes, Ketones and Carboxylic Acids",mnswhq8b,1.0,agree
+65,Hydrocarbons,mnswhwbk,0.46,agree
+66,Haloalkanes and Haloarenes,mnswhwuy,0.99,agree
+67,"Alcohols, Phenols and Ethers",mnswhqzb,0.86,differs (ExamGOAL C)
+68,Compounds Containing Nitrogen,mnswhq98,0.81,agree
+69,Biomolecules,mnswhr0d,0.59,agree
+70,,mnswhqah,0.19,agree
+71,Periodic Table & Periodicity,mnswhuec,0.22,agree
+72,Compounds Containing Nitrogen,mnswhsgf,0.71,agree
+73,"Alcohols, Phenols and Ethers",mnswhwc0,0.92,agree
+74,Chemical Kinetics and Nuclear Chemistry,mnswhxq8,0.91,agree
+75,Thermodynamics,mnswhuex,0.73,agree

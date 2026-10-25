@@ -1,0 +1,91 @@
+q,topic,examside_id,match,answer_check
+1,Sets and Relations,lsbkh6se,0.9,differs (ExamGOAL A)
+2,,lsbkwd8l,0.0,differs (ExamGOAL C)
+3,Complex Numbers,lsbkg21j,0.71,differs (ExamGOAL A)
+4,Matrices and Determinants,lsbku1aw,0.91,differs (ExamGOAL C)
+5,Binomial Theorem,lsbl0a9f,0.62,differs (ExamGOAL B)
+6,Binomial Theorem,lsbl8y41,0.93,differs (ExamGOAL D)
+7,Sequences and Series,lsbl2vr8,0.67,differs (ExamGOAL D)
+8,"Limits, Continuity and Differentiability",lsbkoryy,0.89,differs (ExamGOAL D)
+9,"Limits, Continuity and Differentiability",lsbkqsz3,0.69,differs (ExamGOAL C)
+10,Parabola,lsbki99q,0.88,differs (ExamGOAL C)
+11,Definite Integration,lsbke98l,0.62,differs (ExamGOAL D)
+12,Definite Integration,lsbkjqqv,0.72,differs (ExamGOAL B)
+13,Differential Equations,lsbkktpn,0.8,differs (ExamGOAL B)
+14,,lsbl9xjw,0.0,differs (ExamGOAL B)
+15,Straight Lines and Pair of Straight Lines,lsbkz3t1,0.94,differs (ExamGOAL A)
+16,Ellipse,lsbkn1ul,0.91,differs (ExamGOAL A)
+17,3D Geometry,lsbklvv1,0.87,differs (ExamGOAL D)
+18,3D Geometry,lsbkxlh7,0.97,differs (ExamGOAL D)
+19,Vector Algebra,lsbl7k96,0.68,differs (ExamGOAL C)
+20,Statistics,lsbl4onq,0.68,differs (ExamGOAL D)
+21,Complex Numbers,lsblk2wv,0.78,agree
+22,,lsblc3ma,0.32,differs (ExamGOAL 9)
+23,Application of Derivatives,lsblgir9,0.72,agree
+24,,lsblig15,0.01,differs (ExamGOAL 28)
+25,Differentiation,lsble0m7,0.65,agree
+26,Area Under The Curves,lsblh7jy,0.71,agree
+27,Differential Equations,lsbld6tf,0.72,agree
+28,Vector Algebra,lsblj5uf,0.89,agree
+29,Probability,lsblkyym,0.83,agree
+30,Trigonometric Ratio and Identites,lsblfc2j,0.78,agree
+31,Units & Measurements,jaoe38c1lsc3tnnj,1.0,differs (ExamGOAL A)
+32,Motion in a Plane,jaoe38c1lsc2sfsy,0.92,differs (ExamGOAL D)
+33,Center of Mass and Collision,jaoe38c1lsc3p10j,0.89,differs (ExamGOAL D)
+34,Circular Motion,jaoe38c1lsc35sf0,0.93,differs (ExamGOAL B)
+35,Center of Mass and Collision,jaoe38c1lsc3a3qt,0.96,differs (ExamGOAL C)
+36,,jaoe38c1lsc33oqz,0.46,differs (ExamGOAL D)
+37,Properties of Matter,jaoe38c1lsc2ulli,1.0,differs (ExamGOAL B)
+38,Heat and Thermodynamics,jaoe38c1lsc3f7nf,0.88,differs (ExamGOAL C)
+39,Heat and Thermodynamics,jaoe38c1lsc3ypyg,0.81,differs (ExamGOAL B)
+40,Electrostatics,jaoe38c1lsc3ly23,0.92,agree
+41,Current Electricity,jaoe38c1lsc3x2ws,0.99,differs (ExamGOAL A)
+42,Magnetic Effect of Current,jaoe38c1lsc32bux,0.86,agree
+43,Electromagnetic Induction,jaoe38c1lsc3ir9a,0.94,differs (ExamGOAL C)
+44,Electromagnetic Waves,jaoe38c1lsc3rg5e,0.79,differs (ExamGOAL B)
+45,Geometrical Optics,jaoe38c1lsc2wpgx,0.98,agree
+46,Geometrical Optics,jaoe38c1lsc3ndoy,0.88,differs (ExamGOAL D)
+47,Atoms and Nuclei,jaoe38c1lsc3gmgr,1.0,agree
+48,,jaoe38c1lsc3776v,0.0,agree
+49,,jaoe38c1lsc3vcj8,0.0,agree
+50,,jaoe38c1lsc38c3k,0.21,differs (ExamGOAL B)
+51,,jaoe38c1lsc42dju,0.2,agree
+52,Rotational Motion,jaoe38c1lsc4dwm8,0.96,agree
+53,,jaoe38c1lsc4okne,0.27,agree
+54,Simple Harmonic Motion,jaoe38c1lsc4fpbd,0.94,agree
+55,,jaoe38c1lsc45uhh,0.18,agree
+56,Capacitor,jaoe38c1lsc4l3bn,0.87,agree
+57,Magnetic Effect of Current,jaoe38c1lsc4j6we,0.42,agree
+58,Electromagnetic Induction,jaoe38c1lsc48f9n,0.93,agree
+59,Geometrical Optics,jaoe38c1lsc4akxn,0.9,agree
+60,,jaoe38c1lsc4cekv,0.19,agree
+61,,jaoe38c1lsc4rx0p,0.0,differs (ExamGOAL A)
+62,,jaoe38c1lsc4sj34,0.0,differs (ExamGOAL B)
+63,Ionic Equilibrium,jaoe38c1lsc5ys78,0.98,agree
+64,,jaoe38c1lsc6672b,0.23,differs (ExamGOAL D)
+65,,jaoe38c1lsc4tvpg,0.0,differs (ExamGOAL D)
+66,p-Block Elements,jaoe38c1lsc5mr0e,1.0,differs (ExamGOAL B)
+67,d and f Block Elements,jaoe38c1lsc514nf,1.0,differs (ExamGOAL D)
+68,d and f Block Elements,jaoe38c1lsc68b7k,1.0,differs (ExamGOAL A)
+69,Coordination Compounds,jaoe38c1lsc59izv,0.96,differs (ExamGOAL C)
+70,Basics of Organic Chemistry,jaoe38c1lsc60enk,0.97,differs (ExamGOAL B)
+71,Basics of Organic Chemistry,jaoe38c1lsc5shfh,1.0,differs (ExamGOAL D)
+72,,jaoe38c1lsc4v7ll,0.0,differs (ExamGOAL D)
+73,,jaoe38c1lsc52f3g,0.0,agree
+74,"Alcohols, Phenols and Ethers",jaoe38c1lsc5fpk2,1.0,differs (ExamGOAL A)
+75,"Alcohols, Phenols and Ethers",jaoe38c1lsc5ixz2,0.82,differs (ExamGOAL D)
+76,,jaoe38c1lsc54900,0.0,differs (ExamGOAL D)
+77,,jaoe38c1lsc5b7uk,0.0,differs (ExamGOAL D)
+78,,jaoe38c1lsc5d4na,0.0,agree
+79,Coordination Compounds,jaoe38c1lsc5vuvd,0.98,differs (ExamGOAL D)
+80,d and f Block Elements,jaoe38c1lsc62dmq,0.9,differs (ExamGOAL A)
+81,Some Basic Concepts of Chemistry,jaoe38c1lsc6i2be,0.85,agree
+82,Structure of Atom,jaoe38c1lsc6t483,0.96,agree
+83,,jaoe38c1lsc6lz03,0.0,differs (ExamGOAL 4)
+84,Thermodynamics,jaoe38c1lsc6kh74,0.91,agree
+85,p-Block Elements,jaoe38c1lsc6yfr5,0.47,agree
+86,Electrochemistry,jaoe38c1lsc6c6mx,0.9,agree
+87,Chemical Kinetics and Nuclear Chemistry,jaoe38c1lsc6egnz,0.71,agree
+88,Basics of Organic Chemistry,jaoe38c1lsc6oegr,0.82,agree
+89,Basics of Organic Chemistry,jaoe38c1lsc6mkl7,0.96,agree
+90,,jaoe38c1lsc6u3er,0.27,differs (ExamGOAL 6)

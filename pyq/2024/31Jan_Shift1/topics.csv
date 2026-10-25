@@ -1,0 +1,91 @@
+q,topic,examside_id,match,answer_check
+1,,jaoe38c1lse52f1r,0.43,differs (ExamGOAL D)
+2,Quadratic Equation and Inequalities,jaoe38c1lse4uha6,0.81,differs (ExamGOAL A)
+3,Differentiation,jaoe38c1lse5ndcf,0.53,agree
+4,Matrices and Determinants,jaoe38c1lse5aryy,0.85,differs (ExamGOAL D)
+5,"Limits, Continuity and Differentiability",jaoe38c1lse4rgly,1.0,differs (ExamGOAL D)
+6,,jaoe38c1lse57f85,0.16,differs (ExamGOAL B)
+7,Binomial Theorem,jaoe38c1lse5mmmr,0.79,agree
+8,Sequences and Series,jaoe38c1lse508pa,0.83,differs (ExamGOAL B)
+9,,jaoe38c1lse5crz0,0.48,differs (ExamGOAL C)
+10,Area Under The Curves,jaoe38c1lse5f37p,0.86,differs (ExamGOAL A)
+11,Differential Equations,jaoe38c1lse53x0f,0.77,agree
+12,Differential Equations,jaoe38c1lse5genw,0.8,differs (ExamGOAL C)
+13,Circle,jaoe38c1lse5ofy4,0.9,differs (ExamGOAL C)
+14,Straight Lines and Pair of Straight Lines,jaoe38c1lse4xwyu,0.82,differs (ExamGOAL A)
+15,3D Geometry,jaoe38c1lse59x61,0.77,differs (ExamGOAL A)
+16,Hyperbola,jaoe38c1lse5pw17,0.91,agree
+17,Probability,jaoe38c1lse553je,0.99,agree
+18,Vector Algebra,jaoe38c1lse565zc,0.77,differs (ExamGOAL B)
+19,Probability,jaoe38c1lse58eei,0.77,differs (ExamGOAL D)
+20,,jaoe38c1lse4tf9q,0.46,differs (ExamGOAL B)
+21,Sets and Relations,jaoe38c1lse5zdng,0.87,agree
+22,Complex Numbers,jaoe38c1lse5qzoe,0.21,agree
+23,Permutations and Combinations,jaoe38c1lse5y7d4,0.65,agree
+24,Binomial Theorem,jaoe38c1lse5rrmq,0.72,agree
+25,Definite Integration,jaoe38c1lse5vpfh,0.84,agree
+26,Definite Integration,jaoe38c1lse60n68,0.67,agree
+27,Definite Integration,jaoe38c1lse5tymd,0.68,agree
+28,Hyperbola,jaoe38c1lse5xrza,0.97,agree
+29,3D Geometry,jaoe38c1lse5wwlu,0.84,agree
+30,Vector Algebra,jaoe38c1lse5sysr,0.83,agree
+31,Units & Measurements,jaoe38c1lse6mdlu,0.88,differs (ExamGOAL B)
+32,Motion in a Straight Line,jaoe38c1lse66y4y,0.93,differs (ExamGOAL C)
+33,Circular Motion,jaoe38c1lse6hrcw,0.75,agree
+34,Laws of Motion,jaoe38c1lse65jrw,0.75,agree
+35,Center of Mass and Collision,jaoe38c1lse684ye,0.96,agree
+36,Gravitation,jaoe38c1lse61sz2,0.96,differs (ExamGOAL A)
+37,Properties of Matter,jaoe38c1lse6knig,0.98,differs (ExamGOAL B)
+38,Heat and Thermodynamics,jaoe38c1lse64544,1.0,differs (ExamGOAL B)
+39,Heat and Thermodynamics,jaoe38c1lse68uaj,1.0,differs (ExamGOAL A)
+40,Electrostatics,jaoe38c1lse6341e,0.95,agree
+41,Current Electricity,jaoe38c1lse6jbrc,0.98,differs (ExamGOAL B)
+42,,jaoe38c1lse6aaap,0.31,agree
+43,Electromagnetic Induction,jaoe38c1lse6gmkn,0.91,differs (ExamGOAL B)
+44,Electromagnetic Waves,jaoe38c1lse6nvzl,0.88,differs (ExamGOAL D)
+45,,jaoe38c1lse6cweq,0.0,differs (ExamGOAL C)
+46,Dual Nature of Radiation,jaoe38c1lse6bk56,0.67,differs (ExamGOAL B)
+47,Atoms and Nuclei,jaoe38c1lse6f47l,0.98,differs (ExamGOAL C)
+48,Semiconductor,jaoe38c1lse6okbg,0.93,differs (ExamGOAL C)
+49,Waves,jaoe38c1lse6e2vu,0.97,differs (ExamGOAL A)
+50,Units & Measurements,jaoe38c1lse6k1yn,0.98,differs (ExamGOAL D)
+51,Center of Mass and Collision,jaoe38c1lse6t7e4,0.72,agree
+52,Rotational Motion,jaoe38c1lse6pfvb,0.95,agree
+53,Properties of Matter,jaoe38c1lse6sd4s,0.4,agree
+54,Simple Harmonic Motion,jaoe38c1lse6u1qm,0.95,agree
+55,,jaoe38c1lse6r6dd,0.18,agree
+56,Current Electricity,jaoe38c1lse6x19d,0.97,agree
+57,Magnetic Effect of Current,jaoe38c1lse6qgul,0.75,agree
+58,Electromagnetic Induction,jaoe38c1lse6wdsx,0.94,agree
+59,,jaoe38c1lse6y2to,0.12,agree
+60,Atoms and Nuclei,jaoe38c1lse6vfvg,0.86,agree
+61,Chemical Bonding & Molecular Structure,jaoe38c1lse7imu1,1.0,differs (ExamGOAL D)
+62,,jaoe38c1lse7270g,0.0,differs (ExamGOAL A)
+63,Chemical Equilibrium,jaoe38c1lse7hf3x,0.91,differs (ExamGOAL B)
+64,,jaoe38c1lse73zy3,0.0,differs (ExamGOAL D)
+65,Chemical Kinetics and Nuclear Chemistry,jaoe38c1lse7exen,0.97,differs (ExamGOAL A)
+66,Periodic Table & Periodicity,jaoe38c1lse8akex,0.95,differs (ExamGOAL B)
+67,p-Block Elements,jaoe38c1lse739kk,0.84,differs (ExamGOAL C)
+68,d and f Block Elements,jaoe38c1lse7jz29,0.96,agree
+69,d and f Block Elements,jaoe38c1lse7lhct,0.93,agree
+70,Coordination Compounds,jaoe38c1lse78fvs,0.89,differs (ExamGOAL A)
+71,,jaoe38c1lse76yow,0.0,agree
+72,,jaoe38c1lse75vwi,0.21,agree
+73,p-Block Elements,jaoe38c1lse755kb,1.0,differs (ExamGOAL A)
+74,,jaoe38c1lse7d2mp,0.0,differs (ExamGOAL C)
+75,Basics of Organic Chemistry,jaoe38c1lse7tehh,0.93,differs (ExamGOAL B)
+76,Haloalkanes and Haloarenes,jaoe38c1lse7c0dv,0.76,differs (ExamGOAL C)
+77,"Alcohols, Phenols and Ethers",jaoe38c1lse7rplh,0.99,differs (ExamGOAL D)
+78,"Alcohols, Phenols and Ethers",jaoe38c1lse7anlk,1.0,agree
+79,Practical Organic Chemistry,jaoe38c1lse7ocm8,0.39,agree
+80,,jaoe38c1lse7p62x,0.0,differs (ExamGOAL A)
+81,Some Basic Concepts of Chemistry,jaoe38c1lse8g5cf,0.9,agree
+82,Structure of Atom,jaoe38c1lse8d793,0.94,agree
+83,Chemical Bonding & Molecular Structure,jaoe38c1lse8jox3,0.81,differs (ExamGOAL 3)
+84,Thermodynamics,jaoe38c1lse8bprp,0.73,agree
+85,Electrochemistry,jaoe38c1lse8fc6l,0.24,agree
+86,Coordination Compounds,jaoe38c1lse8er57,0.86,agree
+87,Hydrocarbons,jaoe38c1lse8dput,0.85,agree
+88,Haloalkanes and Haloarenes,jaoe38c1lse8isr0,0.77,agree
+89,"Aldehydes, Ketones and Carboxylic Acids",jaoe38c1lse8cgh2,0.85,agree
+90,Some Basic Concepts of Chemistry,jaoe38c1lse8hulm,0.75,agree

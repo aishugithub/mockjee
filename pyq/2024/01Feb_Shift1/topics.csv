@@ -1,0 +1,91 @@
+q,topic,examside_id,match,answer_check
+1,,lsaognvr,0.36,differs (ExamGOAL D)
+2,Quadratic Equation and Inequalities,lsaolop2,0.0,agree
+3,,lsaojnb9,0.59,differs (ExamGOAL A)
+4,Permutations and Combinations,lsaoelst,0.99,differs (ExamGOAL C)
+5,Matrices and Determinants,lsaorfpq,0.81,agree
+6,Sequences and Series,lsappvw8,0.82,differs (ExamGOAL D)
+7,Application of Derivatives,lsaps6wb,0.76,differs (ExamGOAL B)
+8,"Limits, Continuity and Differentiability",lsaowab9,0.84,differs (ExamGOAL D)
+9,Area Under The Curves,lsaonhys,0.91,differs (ExamGOAL C)
+10,Definite Integration,lsao9n4x,0.74,differs (ExamGOAL C)
+11,Differential Equations,lsaoufup,0.82,differs (ExamGOAL D)
+12,Hyperbola,lsaosyr4,0.88,differs (ExamGOAL C)
+13,Ellipse,lsapbol9,0.95,differs (ExamGOAL C)
+14,,lsaoplpj,0.54,differs (ExamGOAL B)
+15,Circle,lsapr1j6,0.88,differs (ExamGOAL D)
+16,3D Geometry,lsaptbc8,0.89,differs (ExamGOAL B)
+17,Probability,lsao86jd,1.0,differs (ExamGOAL B)
+18,Statistics,lsaohwm3,0.93,differs (ExamGOAL C)
+19,Matrices and Determinants,lsaob5vy,0.42,agree
+20,Trigonometric Ratio and Identites,lsaodfiz,0.44,agree
+21,,lsapy2m8,0.03,differs (ExamGOAL 6699)
+22,Complex Numbers,lsaq2wp0,0.7,agree
+23,Binomial Theorem,lsapwdnz,0.74,agree
+24,Permutations and Combinations,lsapvsz6,0.68,agree
+25,,lsaq1mxh,0.05,differs (ExamGOAL 72)
+26,"Limits, Continuity and Differentiability",lsaq12m0,0.8,agree
+27,Definite Integration,lsaq6l6n,0.51,agree
+28,Differential Equations,lsapuxwg,0.84,agree
+29,,lsaqc1qh,0.02,differs (ExamGOAL 46)
+30,3D Geometry,lsaqawqo,0.81,agree
+31,Units & Measurements,lsbknus1,1.0,differs (ExamGOAL C)
+32,Circular Motion,lsbla2py,0.98,differs (ExamGOAL A)
+33,Laws of Motion,lsbkj8ah,0.96,agree
+34,Circular Motion,lsbkstf7,0.94,differs (ExamGOAL C)
+35,Simple Harmonic Motion,lsbl5lz1,0.81,agree
+36,Gravitation,lsbkkgb5,0.96,differs (ExamGOAL A)
+37,,lsblcutl,0.0,no NTA answer
+38,Heat and Thermodynamics,lsbl72nk,0.88,differs (ExamGOAL D)
+39,Heat and Thermodynamics,lsbkmth3,0.99,differs (ExamGOAL D)
+40,,lsbl4bgb,0.37,differs (ExamGOAL A)
+41,Current Electricity,lsbktzxv,0.77,differs (ExamGOAL D)
+42,Current Electricity,lsbkwr5w,0.95,differs (ExamGOAL D)
+43,Alternating Current,lsbl8966,0.98,differs (ExamGOAL C)
+44,,lsbl0864,0.23,differs (ExamGOAL B)
+45,Wave Optics,lsbkrtgp,0.96,agree
+46,Dual Nature of Radiation,lsbl1egu,0.97,differs (ExamGOAL A)
+47,Atoms and Nuclei,lsbkxrye,1.0,agree
+48,Semiconductor,lsble8rg,0.94,differs (ExamGOAL D)
+49,Units & Measurements,lsbkltkk,0.98,differs (ExamGOAL A)
+50,Units & Measurements,lsbl30sw,0.87,differs (ExamGOAL D)
+51,Motion in a Straight Line,lsblif93,0.56,agree
+52,Center of Mass and Collision,lsblm9u6,0.86,agree
+53,Properties of Matter,lsblgcp1,0.45,agree
+54,Waves,lsblmve2,0.66,agree
+55,Electrostatics,lsblh7mf,0.45,agree
+56,,lsblnqwx,0.18,agree
+57,Magnetic Effect of Current,lsblkiz1,0.45,agree
+58,,lsblf9zb,0.19,agree
+59,Geometrical Optics,lsbll9l4,0.98,agree
+60,Atoms and Nuclei,lsbljadf,0.97,agree
+61,Structure of Atom,lsbmiri2,0.99,differs (ExamGOAL D)
+62,Chemical Bonding & Molecular Structure,lsbmwjmb,0.91,agree
+63,Thermodynamics,lsblx2nm,1.0,differs (ExamGOAL A)
+64,Solutions,lsbmfv5f,0.91,differs (ExamGOAL B)
+65,Periodic Table & Periodicity,lsbm99de,0.94,differs (ExamGOAL A)
+66,,lsbmkq49,0.31,agree
+67,Redox Reactions,lsbmpghu,0.85,differs (ExamGOAL B)
+68,Redox Reactions,lsblv392,0.48,agree
+69,Coordination Compounds,lsbmdoyp,1.0,differs (ExamGOAL B)
+70,,lsbm3yq7,0.0,agree
+71,,lsbm5rqa,0.0,differs (ExamGOAL A)
+72,Compounds Containing Nitrogen,lsbmt320,1.0,agree
+73,Basics of Organic Chemistry,lsbmamho,0.37,agree
+74,,lsbmmtp5,0.52,differs (ExamGOAL A)
+75,"Aldehydes, Ketones and Carboxylic Acids",lsbm0609,0.81,differs (ExamGOAL B)
+76,,lsbmv400,0.4,differs (ExamGOAL C)
+77,Compounds Containing Nitrogen,lsbmht85,0.99,agree
+78,,lsbmbcsm,0.0,differs (ExamGOAL B)
+79,Biomolecules,lsbmnxvx,1.0,differs (ExamGOAL B)
+80,Practical Organic Chemistry,lsbm7sp8,1.0,agree
+81,Some Basic Concepts of Chemistry,lsbn1xbb,0.82,agree
+82,Chemical Bonding & Molecular Structure,lsbn2unr,0.83,agree
+83,Ionic Equilibrium,lsbn48lx,0.61,agree
+84,Chemical Bonding & Molecular Structure,lsbn3ilu,0.98,agree
+85,,lsbmzp2l,0.29,agree
+86,,lsbn4uhh,0.27,differs (ExamGOAL 2)
+87,p-Block Elements,lsbn0i1b,0.82,agree
+88,Basics of Organic Chemistry,lsbmymu0,0.95,agree
+89,,lsbn7mjs,0.0,differs (ExamGOAL 17190)
+90,Salt Analysis,lsbmy2l2,0.75,agree

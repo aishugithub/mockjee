@@ -1,0 +1,91 @@
+q,topic,examside_id,match,answer_check
+1,Permutations and Combinations,1lgzzp7q6,0.97,differs (ExamGOAL D)
+2,Complex Numbers,1lgzzx8yo,0.81,differs (ExamGOAL D)
+3,Quadratic Equation and Inequalities,1lgzzo8pe,0.83,differs (ExamGOAL B)
+4,Indefinite Integrals,1lgzzmzjh,0.73,differs (ExamGOAL C)
+5,,1lgzzvyiu,0.56,differs (ExamGOAL D)
+6,Permutations and Combinations,1lgzxfup5,1.0,differs (ExamGOAL A)
+7,Permutations and Combinations,1lgzycfb1,0.99,differs (ExamGOAL D)
+8,,,0,no candidate
+9,Sequences and Series,1lgzztm49,0.66,differs (ExamGOAL D)
+10,,1lgzy95yj,0.42,differs (ExamGOAL B)
+11,Matrices and Determinants,1lgzxiiqh,0.63,differs (ExamGOAL C)
+12,,,0,no candidate
+13,Straight Lines and Pair of Straight Lines,1lgzzli1e,0.82,differs (ExamGOAL B)
+14,Parabola,1lgzyfu4u,0.88,agree
+15,,,0,no candidate
+16,3D Geometry,1lgzydtfy,0.81,differs (ExamGOAL A)
+17,Vector Algebra,1lgzzzo1k,0.82,agree
+18,Probability,1lgzyazug,0.72,differs (ExamGOAL C)
+19,,1lgzxhecr,0.52,differs (ExamGOAL B)
+20,Area Under The Curves,1lgzyidm2,0.34,agree
+21,Sets and Relations,1lh00d5h8,0.88,agree
+22,Binomial Theorem,1lh00ko4t,0.93,agree
+23,Application of Derivatives,1lh00jkrz,0.92,agree
+24,Definite Integration,1lh0010vg,0.73,agree
+25,Differential Equations,1lh00e9y0,0.8,agree
+26,Binomial Theorem,1lh00oqex,0.77,agree
+27,Circle,1lh00nw5i,0.07,agree
+28,,,0,no candidate
+29,Vector Algebra,1lh00gxyv,0.71,agree
+30,Statistics,1lh00fjuy,0.83,agree
+31,Waves,1lh017qcw,0.92,differs (ExamGOAL C)
+32,Properties of Matter,1lh00rp0f,0.49,agree
+33,Heat and Thermodynamics,1lh011ing,0.76,differs (ExamGOAL B)
+34,Properties of Matter,1lh028g0a,0.9,differs (ExamGOAL A)
+35,Gravitation,1lh00x86h,0.95,differs (ExamGOAL A)
+36,Laws of Motion,1lh01adu4,0.89,differs (ExamGOAL D)
+37,Vector Algebra,1lh018ywo,0.62,differs (ExamGOAL C)
+38,Gravitation,1lh02a7gd,0.98,differs (ExamGOAL B)
+39,Motion in a Plane,1lh01di29,0.91,differs (ExamGOAL A)
+40,Units & Measurements,1lh01bfcp,0.89,agree
+41,Communication Systems,1lh023yn3,0.95,agree
+42,Semiconductor,1lh029g6s,0.98,differs (ExamGOAL B)
+43,,1lh022hep,0.56,differs (ExamGOAL A)
+44,Dual Nature of Radiation,1lh02bc3h,0.94,differs (ExamGOAL A)
+45,,1lgzzynuh,0.0,agree
+46,Units & Measurements,1lh00yauq,1.0,agree
+47,Electromagnetic Induction,1lh00v92a,1.0,differs (ExamGOAL A)
+48,Magnetic Effect of Current,1lh016ns7,0.99,differs (ExamGOAL A)
+49,Capacitor,1lh02cuxe,0.95,differs (ExamGOAL D)
+50,Electrostatics,1lh00znbo,0.97,differs (ExamGOAL D)
+51,Waves,1lh02f07b,0.94,agree
+52,Properties of Matter,1lh02n5xi,0.9,agree
+53,Rotational Motion,1lh02pimk,0.43,agree
+54,Center of Mass and Collision,1lh02ipzk,0.99,agree
+55,Atoms and Nuclei,1lh02hzv1,0.59,agree
+56,Geometrical Optics,1lh02lwba,0.94,agree
+57,Alternating Current,1lh02oh0z,0.94,agree
+58,Magnetic Properties of Matter,1lh02e654,0.95,agree
+59,Current Electricity,1lh02gui7,0.89,agree
+60,Electrostatics,1lh02ki8t,0.93,agree
+61,Redox Reactions,1lh031a7t,0.66,differs (ExamGOAL A)
+62,Electrochemistry,1lh03dlfs,0.82,differs (ExamGOAL B)
+63,,1lh02wxn8,0.29,differs (ExamGOAL B)
+64,,,0,no candidate
+65,,1lh03g9az,0.23,differs (ExamGOAL B)
+66,,,0,no candidate
+67,,,0,no candidate
+68,,,0,no candidate
+69,d and f Block Elements,1lh0385nl,0.92,agree
+70,Coordination Compounds,1lh02sqpy,1.0,differs (ExamGOAL C)
+71,,1lh034j53,0.17,no NTA answer
+72,Coordination Compounds,1lh030hwr,1.0,differs (ExamGOAL C)
+73,Haloalkanes and Haloarenes,1lh03jzzh,0.89,differs (ExamGOAL D)
+74,"Aldehydes, Ketones and Carboxylic Acids",1lh03asmr,0.69,differs (ExamGOAL D)
+75,"Alcohols, Phenols and Ethers",1lh02rkk8,0.97,differs (ExamGOAL C)
+76,,,0,no candidate
+77,Biomolecules,1lh03ehcq,1.0,differs (ExamGOAL A)
+78,,,0,no candidate
+79,,1lh04iz2u,0.31,differs (ExamGOAL C)
+80,d and f Block Elements,1lh039s6e,0.87,agree
+81,,,0,no candidate
+82,,1lh04nq5b,0.02,differs (ExamGOAL 11)
+83,Chemical Bonding & Molecular Structure,1lh04mf3g,0.62,agree
+84,Thermodynamics,1lh04w2lz,0.94,agree
+85,Solutions,1lh04z8nh,0.81,agree
+86,Ionic Equilibrium,1lh04uidt,0.54,agree
+87,,,0,no candidate
+88,,1lh04l8va,0.42,differs (ExamGOAL 2)
+89,,1lh04xswe,0.3,agree
+90,,,0,no candidate

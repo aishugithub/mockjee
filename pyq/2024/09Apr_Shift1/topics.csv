@@ -1,0 +1,91 @@
+q,topic,examside_id,match,answer_check
+1,Functions,luy6z50x,0.82,differs (ExamGOAL D)
+2,Quadratic Equation and Inequalities,luy6z57u,0.86,differs (ExamGOAL B)
+3,Matrices and Determinants,luy6z5o7,0.78,differs (ExamGOAL B)
+4,Binomial Theorem,luy6z5lw,0.68,agree
+5,Sequences and Series,luy6z4j2,0.64,agree
+6,Differentiation,luy6z53a,0.73,differs (ExamGOAL B)
+7,Straight Lines and Pair of Straight Lines,luy6z4o4,0.95,differs (ExamGOAL C)
+8,Indefinite Integrals,luy6z4yq,0.69,differs (ExamGOAL D)
+9,Area Under The Curves,luy6z4gc,0.97,differs (ExamGOAL A)
+10,Differential Equations,luy6z4dh,0.84,differs (ExamGOAL A)
+11,Differential Equations,luy6z5jr,0.73,differs (ExamGOAL C)
+12,Ellipse,luy6z5ey,0.67,agree
+13,Circle,luy6z5cm,0.88,differs (ExamGOAL B)
+14,Straight Lines and Pair of Straight Lines,luy6z55g,0.92,agree
+15,3D Geometry,luy6z4qf,0.85,agree
+16,3D Geometry,luy6z5hh,0.88,differs (ExamGOAL B)
+17,Vector Algebra,luy6z5a5,0.9,differs (ExamGOAL C)
+18,Vector Algebra,luy6z4lq,0.8,differs (ExamGOAL A)
+19,Statistics,luy6z4to,0.96,differs (ExamGOAL C)
+20,Trigonometric Equations,luy6z4wc,0.38,agree
+21,Sets and Relations,luy9cl8m,0.76,agree
+22,Complex Numbers,luy9clkm,0.77,agree
+23,,luy9cloc,0.29,agree
+24,"Limits, Continuity and Differentiability",luy9clcn,0.67,agree
+25,Binomial Theorem,luy9clej,0.9,agree
+26,Functions,luy9clgk,0.81,agree
+27,Application of Derivatives,luy9clmh,0.91,agree
+28,,luy9clal,0.02,agree
+29,Circle,luy9clii,0.91,agree
+30,Probability,luy9clq6,0.88,agree
+31,,luy9clxz,0.0,differs (ExamGOAL C)
+32,Motion in a Straight Line,luyita7s,0.64,differs (ExamGOAL D)
+33,Rotational Motion,luyit9yv,0.99,differs (ExamGOAL C)
+34,Laws of Motion,luyita5l,0.97,differs (ExamGOAL C)
+35,Work Power & Energy,luyit9wg,0.97,differs (ExamGOAL C)
+36,Gravitation,luz2u3w3,0.94,differs (ExamGOAL B)
+37,Properties of Matter,luy9cm0f,0.98,differs (ExamGOAL D)
+38,Heat and Thermodynamics,luyit8ee,0.98,differs (ExamGOAL B)
+39,Heat and Thermodynamics,luy9cm2x,0.98,agree
+40,Capacitor,luyitai0,0.98,differs (ExamGOAL D)
+41,Current Electricity,luyitafd,0.87,agree
+42,Magnetic Effect of Current,luyit8bo,1.0,differs (ExamGOAL D)
+43,Alternating Current,luz2u3rd,1.0,differs (ExamGOAL C)
+44,Electromagnetic Waves,luy9clsu,0.95,differs (ExamGOAL B)
+45,Geometrical Optics,luyitaa6,1.0,differs (ExamGOAL A)
+46,Dual Nature of Radiation,luz2umsu,1.0,differs (ExamGOAL B)
+47,Atoms and Nuclei,luyita3e,0.95,differs (ExamGOAL A)
+48,Semiconductor,luy9cm5p,0.97,differs (ExamGOAL B)
+49,Units & Measurements,luyita15,0.95,agree
+50,Current Electricity,luy9clvj,0.93,agree
+51,Vector Algebra,luz2u47j,0.16,agree
+52,Rotational Motion,luz2uzm2,0.85,agree
+53,Properties of Matter,luz2u49f,0.67,agree
+54,Simple Harmonic Motion,luz2u43a,0.94,agree
+55,Electrostatics,luz2umur,0.9,agree
+56,Current Electricity,luz2v3ok,0.41,agree
+57,Magnetic Effect of Current,luz2u3y2,0.36,agree
+58,Alternating Current,luz2umql,0.92,agree
+59,Wave Optics,luz2u3te,0.91,agree
+60,Atoms and Nuclei,luz2u45k,0.53,agree
+61,Structure of Atom,luz2un1m,0.75,differs (ExamGOAL C)
+62,Chemical Bonding & Molecular Structure,luz2un4k,0.97,differs (ExamGOAL A)
+63,Solutions,luz2v4b2,0.79,differs (ExamGOAL C)
+64,Electrochemistry,luz2v4ix,0.85,differs (ExamGOAL B)
+65,Periodic Table & Periodicity,luz2usqx,1.0,differs (ExamGOAL C)
+66,p-Block Elements,luz2uzrj,0.98,differs (ExamGOAL D)
+67,Environmental Chemistry,luz2uu5m,0.99,differs (ExamGOAL A)
+68,d and f Block Elements,luz2v3a2,0.9,agree
+69,Coordination Compounds,luz2u40s,0.97,differs (ExamGOAL B)
+70,Basics of Organic Chemistry,luz2ustl,1.0,agree
+71,Basics of Organic Chemistry,luz2v4dp,0.81,agree
+72,"Aldehydes, Ketones and Carboxylic Acids",luz2v3zq,0.63,agree
+73,Haloalkanes and Haloarenes,luz2ux53,0.97,differs (ExamGOAL B)
+74,Haloalkanes and Haloarenes,luz2v3lv,0.83,differs (ExamGOAL B)
+75,"Aldehydes, Ketones and Carboxylic Acids",luz2v3rx,0.72,differs (ExamGOAL A)
+76,Hydrocarbons,luz2v3vu,0.69,agree
+77,Basics of Organic Chemistry,luz2v48g,0.84,differs (ExamGOAL B)
+78,Basics of Organic Chemistry,luz2v43e,0.93,differs (ExamGOAL D)
+79,p-Block Elements,luz2ux88,1.0,differs (ExamGOAL D)
+80,,luz2uzox,0.33,differs (ExamGOAL A)
+81,Some Basic Concepts of Chemistry,luz2v1h8,0.81,agree
+82,Chemical Bonding & Molecular Structure,luz2uxam,0.91,agree
+83,Thermodynamics,luz2umwz,0.79,agree
+84,Thermodynamics,luz2umyx,0.88,agree
+85,,luz2uu2r,0.12,agree
+86,,luz2v4fx,0.13,agree
+87,d and f Block Elements,luz2ux2a,0.86,agree
+88,Coordination Compounds,luz2ux0g,0.82,agree
+89,Basics of Organic Chemistry,luz2v45v,0.89,agree
+90,Biomolecules,luz2uwyl,1.0,agree

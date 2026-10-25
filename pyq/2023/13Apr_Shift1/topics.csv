@@ -1,0 +1,91 @@
+q,topic,examside_id,match,answer_check
+1,Differentiation,1lgq0jgd2,0.8,differs (ExamGOAL A)
+2,Quadratic Equation and Inequalities,1lgpxzk6k,0.86,differs (ExamGOAL A)
+3,Matrices and Determinants,1lgpy4kyx,0.81,agree
+4,Matrices and Determinants,1lgpxsxhd,0.92,differs (ExamGOAL B)
+5,Matrices and Determinants,1lgq0m4hk,0.88,agree
+6,Sequences and Series,1lgpy2jk4,0.76,differs (ExamGOAL C)
+7,,,0,no candidate
+8,,,0,no candidate
+9,,1lgpxqwcg,0.44,differs (ExamGOAL B)
+10,,,0,no candidate
+11,,,0,no candidate
+12,Area Under The Curves,1lgpxipld,0.74,agree
+13,Binomial Theorem,1lgpy5uw8,0.89,differs (ExamGOAL C)
+14,Differential Equations,1lgpxupwa,0.83,agree
+15,,,0,no candidate
+16,,1lgpxl5r8,0.57,differs (ExamGOAL B)
+17,,1lgpy0x97,0.0,differs (ExamGOAL C)
+18,Probability,1lgpxw3jh,0.99,differs (ExamGOAL C)
+19,Functions,1lgpyd2rn,0.83,no NTA answer
+20,,1lgq0kk6g,0.0,differs (ExamGOAL A)
+21,Complex Numbers,1lgq0ti75,0.88,agree
+22,Permutations and Combinations,1lgq0urew,0.95,agree
+23,Binomial Theorem,1lgq11k4d,0.56,agree
+24,,,0,no candidate
+25,Definite Integration,1lgq0ygkp,0.55,agree
+26,,,0,no candidate
+27,,,0,no candidate
+28,Vector Algebra,1lgq10ehr,0.83,agree
+29,Statistics,1lgq0rwyw,0.93,agree
+30,Inverse Trigonometric Functions,1lgq0x4gc,0.52,agree
+31,Units & Measurements,1lgq2s5sc,0.88,differs (ExamGOAL A)
+32,Motion in a Straight Line,1lgq2how7,0.76,differs (ExamGOAL C)
+33,,1lgq29lea,0.35,differs (ExamGOAL C)
+34,Work Power & Energy,1lgq2uj1c,1.0,differs (ExamGOAL C)
+35,Center of Mass and Collision,1lgq1a943,0.91,agree
+36,Gravitation,1lgq1c0ah,0.88,agree
+37,,1lgpxn2hg,0.36,differs (ExamGOAL D)
+38,Properties of Matter,1lgq2fq2p,0.97,differs (ExamGOAL C)
+39,Heat and Thermodynamics,1lgq223aw,0.86,differs (ExamGOAL C)
+40,Simple Harmonic Motion,1lgq19504,0.97,agree
+41,Work Power & Energy,1lgq2tf2b,0.94,differs (ExamGOAL A)
+42,,1lgpyb2eu,0.0,differs (ExamGOAL C)
+43,,1lgq4q6cq,0.33,agree
+44,Geometrical Optics,1lgq1p0sp,0.98,differs (ExamGOAL B)
+45,Dual Nature of Radiation,1lgq1zt66,0.9,differs (ExamGOAL B)
+46,Atoms and Nuclei,1lgq2ec05,0.68,agree
+47,Semiconductor,1lgq2qd19,0.92,differs (ExamGOAL D)
+48,Communication Systems,1lgq18bgf,0.51,agree
+49,,1lgq26pdf,0.59,differs (ExamGOAL D)
+50,Current Electricity,1lgq2otjb,0.96,agree
+51,Atoms and Nuclei,1lgq392g5,0.89,agree
+52,Geometrical Optics,1lgq2xcny,0.94,agree
+53,Alternating Current,1lgq3dprn,0.69,agree
+54,Electrostatics,1lgq3kzim,0.47,agree
+55,,1lgq5bvjl,0.36,differs (ExamGOAL 392)
+56,Rotational Motion,1lgq3lykk,0.89,agree
+57,Simple Harmonic Motion,1lgq3fgwd,0.91,agree
+58,,1lgq2vwpw,0.11,agree
+59,Semiconductor,1lgq3sw56,0.51,agree
+60,,1lgq0vrkc,0.2,differs (ExamGOAL 1310)
+61,Structure of Atom,1lgq4ogs9,0.94,differs (ExamGOAL C)
+62,Chemical Bonding & Molecular Structure,1lgq3vwp7,1.0,differs (ExamGOAL C)
+63,,,0,no candidate
+64,,1lgq3y68n,0.04,differs (ExamGOAL B)
+65,,,0,no candidate
+66,,1lgq472j1,0.1,differs (ExamGOAL A)
+67,,1lgq4hhq5,0.29,agree
+68,,,0,no candidate
+69,,,0,no candidate
+70,,,0,no candidate
+71,Coordination Compounds,1lgq460xg,0.96,differs (ExamGOAL C)
+72,,,0,no candidate
+73,,,0,no candidate
+74,,1lgq3zgvn,0.58,differs (ExamGOAL B)
+75,"Alcohols, Phenols and Ethers",1lgq4gt4t,0.96,differs (ExamGOAL C)
+76,Hydrocarbons,1lgq4k0ke,0.95,agree
+77,Compounds Containing Nitrogen,1lgq4i2lp,0.65,differs (ExamGOAL C)
+78,"Aldehydes, Ketones and Carboxylic Acids",1lgq41qhy,0.65,agree
+79,,1lgq47te0,0.27,differs (ExamGOAL D)
+80,Biomolecules,1lgq4mtum,0.65,agree
+81,,1lgq4slas,0.02,agree
+82,,1lgq4yyff,0.08,differs (ExamGOAL 1)
+83,Thermodynamics,1lgq5dsyf,0.82,differs (ExamGOAL 400)
+84,Solutions,1lgq57n5s,0.48,agree
+85,Ionic Equilibrium,1lgq5g5il,0.5,agree
+86,,1lgq5aavp,0.17,agree
+87,Chemical Kinetics and Nuclear Chemistry,1lgq4vy18,0.77,agree
+88,Some Basic Concepts of Chemistry,1lgq4u2eu,0.89,agree
+89,Hydrocarbons,1lgq4wwdg,0.89,differs (ExamGOAL 4)
+90,,,0,no candidate
