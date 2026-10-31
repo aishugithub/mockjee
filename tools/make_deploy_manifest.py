@@ -14,11 +14,12 @@ from make_deploy_bundle import APP_FILES, ROOT
 def main():
     out = subprocess.run(['git', 'ls-files', '-s', '--', *APP_FILES, 'pyq/*/*/img/*'], cwd=ROOT,
                          capture_output=True, text=True, check=True).stdout
-    rows = []
-    for line in out.splitlines():
-        meta, path = line.split('\t', 1)
-        sha = meta.split()[1]
-        rows.append(f'{sha} {os.path.getsize(os.path.join(ROOT, path))} {path}')
+    entries = [(line.split('\t', 1)[0].split()[1], line.split('\t', 1)[1]) for line in out.splitlines()]
+    # Blob sizes from git, not the working tree: on Windows the checkout has CRLF line endings, while
+    # PythonAnywhere gets the LF files from GitHub, and pa_sync.py compares images and app files by size.
+    sizes = subprocess.run(['git', 'cat-file', '--batch-check=%(objectsize)'], cwd=ROOT, capture_output=True,
+                           text=True, check=True, input=''.join(sha + '\n' for sha, _ in entries)).stdout.split()
+    rows = [f'{sha} {size} {path}' for (sha, path), size in zip(entries, sizes)]
     missing = [f for f in APP_FILES if not any(r.endswith(' ' + f) for r in rows)]
     if missing:
         sys.exit(f'Not committed: {missing}')

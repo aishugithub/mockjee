@@ -6,6 +6,10 @@ deploy_manifest.txt at that commit). The database (data/) and .secrets are never
     cd ~/mockjee && python3 tools/pa_sync.py <commit>            # see what would change, then:
     cd ~/mockjee && python3 tools/pa_sync.py <commit> --go       # download; add --prune to delete images no
                                                                  # longer in the bank. Then Reload on the Web tab.
+To save the free account's 100 CPU-seconds a day, question images are compared by size only (an image that
+changed but kept exactly the same size is missed); the few app files are always hashed. Sizes in the manifest
+are git's (LF line endings), so check a Windows checkout with --full only. Add --full to hash
+every image too (reads about 250 MB, so expect tens of CPU-seconds).
 Standard library only (the free account allows raw.githubusercontent.com).
 """
 import hashlib, os, sys, urllib.request
@@ -34,11 +38,20 @@ def main():
     args = [a for a in sys.argv[1:] if not a.startswith('--')]
     if not args:
         sys.exit(__doc__)
-    commit, go, prune = args[0], '--go' in sys.argv, '--prune' in sys.argv
+    commit, go, prune, full = args[0], '--go' in sys.argv, '--prune' in sys.argv, '--full' in sys.argv
     manifest = [l.split(' ', 2) for l in fetch(f'{REPO}/{commit}/deploy_manifest.txt').decode().splitlines() if l]
     wanted = {p: (sha, int(n)) for sha, n, p in manifest}
-    todo = [p for p, (sha, _) in wanted.items()
-            if not os.path.exists(os.path.join(ROOT, p)) or blob_sha(os.path.join(ROOT, p)) != sha]
+
+    def stale(p):
+        path = os.path.join(ROOT, p)
+        sha, size = wanted[p]
+        if not os.path.exists(path) or os.path.getsize(path) != size:
+            return True
+        if '/img/' in p and not full:
+            return False
+        return blob_sha(path) != sha
+
+    todo = [p for p in wanted if stale(p)]
     extra = [os.path.relpath(os.path.join(d, f), ROOT).replace(os.sep, '/')
              for d, _, fs in os.walk(os.path.join(ROOT, 'pyq')) for f in fs]
     extra = [p for p in extra if '/img/' in p and p not in wanted]

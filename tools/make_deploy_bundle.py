@@ -15,7 +15,7 @@ import glob, os, sys, zipfile
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PART_LIMIT = 80 * 1024 * 1024
 APP_FILES = ['server.py', 'analysis_store.py', 'index.html', 'login.html', 'manual.html','questions.js', 'pyq_bank.js', 'requirements.txt',
-             'tools/manage_users.py', 'DEPLOY.md']
+             'tools/manage_users.py', 'tools/pa_sync.py', 'DEPLOY.md']
 
 
 def main():
