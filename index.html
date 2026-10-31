@@ -99,6 +99,8 @@ h1, h2, h3 { font-family: var(--font-head); text-wrap: balance; margin: 0; }
 .chap input { margin-top: 3px; }
 .chap .c { color: var(--muted); font-size: 12px; margin-left: auto; white-space: nowrap; }
 .chap.empty { opacity: .5; }
+.chap-head { grid-column: 1 / -1; font-size: 12px; font-weight: 600; color: var(--muted); padding: 8px 0 2px; border-bottom: 1px solid var(--line-soft); }
+.chap-head:first-child { padding-top: 0; }
 input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--blue); }
 
 .pattern { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
@@ -477,7 +479,7 @@ code { font-family: var(--font-num); font-size: .92em; background: #f1f4f8; padd
 
         <div class="card">
           <div class="sum-head"><h2>Subjects and chapters</h2><div class="row" style="gap:6px"><button type="button" class="chip ghost" id="btnAllSubj">All subjects</button><button type="button" class="chip ghost" id="btnNoSubj">Clear</button></div></div>
-          <div class="row" style="gap:6px;margin:4px 0 6px" id="groupChips"><span class="hint" style="margin:0">Group by:</span><button type="button" class="chip" data-group="chapter">NTA chapters</button><button type="button" class="chip" data-group="topic">Finer topics</button></div>
+          <div class="row" style="gap:6px;margin:4px 0 6px" id="groupChips"><span class="hint" style="margin:0">Group by:</span><button type="button" class="chip" data-group="chapter">NTA chapters</button><button type="button" class="chip" data-group="topic">Finer topics</button><button type="button" class="chip" data-group="syllabus">Sub-topics</button></div>
           <p class="hint" id="groupHint">Tick whole subjects, or open a subject and choose individual chapters. Counts reflect the selected years.</p>
           <div id="subjList"></div>
         </div>
@@ -907,10 +909,12 @@ function importText(name, text) {
 const DEF = { testName: 'JEE Main Mock Test', candidate: '', duration: 180, mcq: 20, num: 5, mcqC: 4, mcqW: 1, numC: 4, numW: 1, shuffle: true, useAll: false, groupBy: 'chapter' };
 let cfg = Object.assign({}, DEF, store.get(KEYS.cfg, {}));
 const sel = { years: new Set(), chapters: new Set() };
-/* Group the filters by NTA syllabus chapter, or by the finer topic (ExamGOAL's chapter names, owner's choice
-   2026-10-25). Questions outside the current syllabus stay in their own group in both views. */
-const TOPIC_NONE = 'Topic not known yet';
-const gfield = q => cfg.groupBy !== 'topic' || q.chapter === 'Not in current syllabus' ? q.chapter : (q.topic || TOPIC_NONE);
+/* Group the filters by NTA syllabus chapter, by the finer topic (ExamGOAL's chapter names, owner's choice
+   2026-10-25), or by sub-topic within each NTA chapter (tools/syllabus_topics.py, 2026-10-31; key
+   "chapter › sub-topic"). Questions outside the current syllabus stay in their own group in every view. */
+const TOPIC_NONE = 'Topic not known yet', SUB_NONE = 'Sub-topic not tagged yet', SUB_SEP = ' › ';
+const gfield = q => q.chapter === 'Not in current syllabus' || !['topic', 'syllabus'].includes(cfg.groupBy) ? q.chapter
+  : cfg.groupBy === 'topic' ? (q.topic || TOPIC_NONE) : q.chapter + SUB_SEP + (q.syllabus_topic || SUB_NONE);
 const ckey = q => q.subject + '|' + gfield(q);
 const bankYears = () => [...new Set(bank.questions.map(q => +q.year))].sort((a, b) => b - a);
 const bankSubjects = () => [...new Set(bank.questions.map(q => q.subject))].sort(subjOrder);
@@ -953,21 +957,30 @@ function renderSubjects() {
   $$('#groupChips [data-group]').forEach(b => b.setAttribute('aria-pressed', b.dataset.group === (cfg.groupBy || 'chapter')));
   $('#groupHint').textContent = cfg.groupBy === 'topic'
     ? "Finer topics use ExamGOAL's chapter names (for example Wave Optics, Circle, Capacitor). Tick whole subjects, or open a subject and choose topics. Counts reflect the selected years."
+    : cfg.groupBy === 'syllabus'
+    ? "Sub-topics split each NTA chapter using the items in NTA's syllabus (for example Current Electricity › Wheatstone bridge and metre bridge). NTA does not tag questions by topic: these tags are Claude's, and so far only some papers are tagged. Counts reflect the selected years."
     : 'Tick whole subjects, or open a subject and choose individual chapters (units of the NTA syllabus). Counts reflect the selected years.';
   const inYear = bank.questions.filter(q => sel.years.has(+q.year));
   const html = bankSubjects().map(s => {
-    const chaps = [...new Set(bank.questions.filter(q => q.subject === s).map(gfield))].sort((a, b) => (a === TOPIC_NONE || a === 'Not in current syllabus') - (b === TOPIC_NONE || b === 'Not in current syllabus') || (cfg.groupBy === 'topic' ? a.localeCompare(b) : 0));
+    const last = c => c === TOPIC_NONE || c === 'Not in current syllabus' || c.endsWith(SUB_SEP + SUB_NONE);
+    const chaps = [...new Set(bank.questions.filter(q => q.subject === s).map(gfield))].sort((a, b) => cfg.groupBy === 'syllabus'
+      ? !a.includes(SUB_SEP) - !b.includes(SUB_SEP) || a.split(SUB_SEP)[0].localeCompare(b.split(SUB_SEP)[0]) || last(a) - last(b) || a.localeCompare(b)
+      : last(a) - last(b) || (cfg.groupBy === 'topic' ? a.localeCompare(b) : 0));
+    const unit = c => c.split(SUB_SEP)[0];
     const keys = chaps.map(c => s + '|' + c);
     const on = keys.filter(k => sel.chapters.has(k)).length;
     const avail = inYear.filter(q => q.subject === s && sel.chapters.has(ckey(q))).length;
-    const list = chaps.map(c => {
+    const list = chaps.map((c, i) => {
       const k = s + '|' + c; const n = inYear.filter(q => ckey(q) === k);
       const m = n.filter(q => q.type === 'MCQ').length, v = n.length - m;
-      return `<label class="chap${n.length ? '' : ' empty'}"><input type="checkbox" data-chap="${esc(k)}" ${sel.chapters.has(k) ? 'checked' : ''}><span>${esc(c)}</span><span class="c num">${m}M · ${v}N</span></label>`;
+      const sub = cfg.groupBy === 'syllabus' && c.includes(SUB_SEP);
+      const head = cfg.groupBy !== 'syllabus' || (i > 0 && unit(chaps[i - 1]) === unit(c)) ? ''
+        : `<div class="chap-head">${sub ? esc(unit(c)) : 'Other'}</div>`;
+      return `${head}<label class="chap${n.length ? '' : ' empty'}"><input type="checkbox" data-chap="${esc(k)}" ${sel.chapters.has(k) ? 'checked' : ''}><span>${esc(sub ? c.slice(unit(c).length + SUB_SEP.length) : c)}</span><span class="c num">${m}M · ${v}N</span></label>`;
     }).join('');
     return `<div class="subj">
-      <div class="subj-head"><label><input type="checkbox" data-subj="${esc(s)}" ${on === keys.length ? 'checked' : ''} data-ind="${on > 0 && on < keys.length}"> ${esc(s)} <span class="count">${on}/${keys.length} ${cfg.groupBy === 'topic' ? 'topics' : 'chapters'} · ${avail} questions</span></label>
-      <button type="button" class="subj-toggle" data-open="${esc(s)}" aria-expanded="${openSubj.has(s)}">${openSubj.has(s) ? 'Hide' : cfg.groupBy === 'topic' ? 'Choose topics' : 'Choose chapters'}</button></div>
+      <div class="subj-head"><label><input type="checkbox" data-subj="${esc(s)}" ${on === keys.length ? 'checked' : ''} data-ind="${on > 0 && on < keys.length}"> ${esc(s)} <span class="count">${on}/${keys.length} ${cfg.groupBy === 'topic' ? 'topics' : cfg.groupBy === 'syllabus' ? 'sub-topics' : 'chapters'} · ${avail} questions</span></label>
+      <button type="button" class="subj-toggle" data-open="${esc(s)}" aria-expanded="${openSubj.has(s)}">${openSubj.has(s) ? 'Hide' : cfg.groupBy === 'topic' ? 'Choose topics' : cfg.groupBy === 'syllabus' ? 'Choose sub-topics' : 'Choose chapters'}</button></div>
       <div class="chap-list" ${openSubj.has(s) ? '' : 'hidden'}>${list}</div></div>`;
   }).join('');
   $('#subjList').innerHTML = html;

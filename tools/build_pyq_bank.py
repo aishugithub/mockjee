@@ -21,13 +21,14 @@ import csv, glob, json, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from chapters import CHAPTERS, CODES, OUTSIDE
 from examgoal_chapters import MAP as EG_MAP
+from syllabus_topics import SYLLABUS_TOPICS
 from traps_common import CHECKS as TRAP_CHECKS, MISTAKE_TYPES
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 KEEP = ['id', 'subject', 'chapter', 'subtopic', 'secondary_chapter', 'tag_confidence', 'year', 'type',
         'source', 'question', 'image', 'options', 'option_images', 'answer', 'accept', 'solution',
         'solution_by', 'solution_check', 'solution_note', 'hints', 'concept', 'revise', 'option_traps', 'trap_by',
-        'topic', 'source_kind', 'out_of_syllabus', 'origin_url', 'examgoal_key_differs']
+        'topic', 'syllabus_topic', 'source_kind', 'out_of_syllabus', 'origin_url', 'examgoal_key_differs']
 CHECKS = ('sympy', 'arithmetic', 'conceptual')
 HELD = []   # solutions Claude disputes with NTA's key: not bundled until the owner decides
 UNCHECKED_KEYS = []   # 'differs' rows nobody has checked by eye yet (not shown)
@@ -117,6 +118,16 @@ def load_topics(folder, questions):
         raise SystemExit(f'{path}:' + ''.join('\n  ' + b for b in bad))
     return out
 
+def load_syllabus_topics(folder, questions):
+    """{question id: {'syllabus_topic': ...}} from syllabus_topics.csv (Claude's sub-topic tags).
+    Each must be a sub-topic of the question's NTA unit (tools/syllabus_topics.py), so the tag sheet must come
+    after tags.csv; the chapter is checked in the main loop once tags are merged."""
+    path = os.path.join(folder, 'syllabus_topics.csv')
+    if not os.path.exists(path):
+        return {}
+    return {questions[int(r['q']) - 1]['id']: {'syllabus_topic': r['syllabus_topic'].strip()}
+            for r in csv.DictReader(open(path, encoding='utf-8')) if r['syllabus_topic'].strip()}
+
 def load_key_compare(folder, questions):
     """{question id: {'examgoal_key_differs': ...}} where ExamGOAL's key differs from NTA's final key
     (key_compare.csv, tools/compare_examgoal_keys.py), only rows checked by eye as 'confirmed'.
@@ -182,6 +193,7 @@ for path in sorted(glob.glob(os.path.join(ROOT, 'pyq', '*', '*', 'questions.json
     traps = load_traps(os.path.dirname(path), paper['questions'])
     topics = load_topics(os.path.dirname(path), paper['questions'])
     keydiff = load_key_compare(os.path.dirname(path), paper['questions'])
+    stopics = load_syllabus_topics(os.path.dirname(path), paper['questions'])
     untagged = 0
     n = 0
     for q in paper['questions']:
@@ -189,10 +201,12 @@ for path in sorted(glob.glob(os.path.join(ROOT, 'pyq', '*', '*', 'questions.json
             skipped.append(f"{q['source']}: {q['exclude']}"); continue
         if q.get('answer') is None:
             skipped.append(f"{q['source']}: no answer"); continue
-        q = dict(q, **tags.get(q['id'], {}), **sols.get(q['id'], {}), **traps.get(q['id'], {}), **topics.get(q['id'], {}), **keydiff.get(q['id'], {}))
+        q = dict(q, **tags.get(q['id'], {}), **sols.get(q['id'], {}), **traps.get(q['id'], {}), **topics.get(q['id'], {}), **keydiff.get(q['id'], {}), **stopics.get(q['id'], {}))
         if q.get('chapter') in (None, '', 'Not tagged yet'): untagged += 1
         elif q['chapter'] != OUTSIDE and q['chapter'] not in CHAPTERS.get(q['subject'], []):
             sys.exit(f"{q['source']}: chapter {q['chapter']!r} is not an NTA syllabus unit for {q['subject']}")
+        if q.get('syllabus_topic') and q['syllabus_topic'] not in SYLLABUS_TOPICS.get(q.get('chapter'), []):
+            sys.exit(f"{q['source']}: sub-topic {q['syllabus_topic']!r} is not listed under {q.get('chapter')!r} in tools/syllabus_topics.py")
         r = {k: q[k] for k in KEEP if k in q}
         if 'image' in r: r['image'] = f"{folder}/{r['image']}"
         if 'option_images' in r: r['option_images'] = [f'{folder}/{p}' if p else '' for p in r['option_images']]
