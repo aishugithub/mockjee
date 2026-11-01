@@ -49,16 +49,16 @@ q,topic,examside_id,match,answer_check
 48,Magnetic Effect of Current,mnsik6tu,0.88,agree
 49,Capacitor,mnsik6ug,0.91,agree
 50,Center of Mass and Collision,mnsik6uw,0.71,agree
-51,,mnsik755,0.22,differs (ExamGOAL A)
+51,Some Basic Concepts of Chemistry,mnsik755,unit,differs (ExamGOAL A)
 52,Solutions,mnsik6ww,0.87,agree
 53,Chemical Bonding & Molecular Structure,mnsik6yf,0.93,agree
-54,,mnsik6zf,0.13,agree
+54,Solutions,mnsik6zf,unit,agree
 55,Chemical Equilibrium,mnsik70f,0.86,agree
 56,Electrochemistry,mnsik71l,0.84,agree
 57,Chemical Kinetics and Nuclear Chemistry,mnsik72h,0.63,agree
 58,Periodic Table & Periodicity,mnsik73k,0.75,agree
 59,p-Block Elements,mnsik74f,0.53,agree
-60,,mnsik6vv,0.02,differs (ExamGOAL C)
+60,d and f Block Elements,mnsik6vv,unit,differs (ExamGOAL C)
 61,d and f Block Elements,mnsik763,0.98,agree
 62,Basics of Organic Chemistry,mnsik76x,1.0,agree
 63,Hydrocarbons,mnsik77q,1.0,agree

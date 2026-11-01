@@ -54,10 +54,10 @@ q,topic,examside_id,match,answer_check
 53,Chemical Bonding & Molecular Structure,mnswhqei,0.96,agree
 54,Thermodynamics,mnswhs0r,0.62,agree
 55,Thermodynamics,mnswhyeo,1.0,agree
-56,,mnswhprb,0.1,agree
+56,Chemical Equilibrium,mnswhprb,unit,agree
 57,Electrochemistry,mnswhrob,0.88,agree
-58,,mnswhv1g,0.22,agree
-59,,mnswhsmf,0.25,agree
+58,Periodic Table & Periodicity,mnswhv1g,unit,agree
+59,p-Block Elements,mnswhsmf,unit,agree
 60,Coordination Compounds,mnswhvrx,0.35,agree
 61,Coordination Compounds,mnswhrpf,0.56,agree
 62,Practical Organic Chemistry,mnswhyfs,0.53,agree

@@ -7,7 +7,7 @@ subject and question type. Each match is then checked by its answer:
   - MCQ: ExamGOAL's letter must equal NTA's option position (ExamGOAL usually keeps NTA's option order)
 A match is kept only if the text match is good and both texts are 40+ characters, or the answer agrees and
 the match is fair, or the question was the only one left in its subject and type (a figure with little text)
-and the answer agrees. An MCQ answer agreement only counts where ExamGOAL keeps NTA's option order.
+and the answer agrees. A second pass fills the rest by NTA unit where that settles the chapter (see below). An MCQ answer agreement only counts where ExamGOAL keeps NTA's option order.
 
 Writes pyq/<year>/<shift>/topics.csv: q,topic,examside_id,match,answer_check
 build_pyq_bank.py adds `topic` from it. Rows with an empty topic were not matched confidently.
@@ -52,9 +52,12 @@ def examgoal_questions(pdf):
                 out.append(cur); continue
             if cur is None or x > 505:
                 continue
-            if cur['type'] is None and abs(y - cur['y']) < 4:
-                cur['type'] = 'NUM' if 'Numerical' in t else 'MCQ'
-                sm = re.search(r'·\s*(Chemistry|Mathematics|Physics)', t)
+            if abs(y - cur['y']) < 4:
+                # header line: question type, and in the "Out of syllabus" section also the subject, after a
+                # separator that is sometimes '·' and sometimes an unmapped glyph (may be a separate text line)
+                if cur['type'] is None:
+                    cur['type'] = 'NUM' if 'Numerical' in t else 'MCQ'
+                sm = re.search(r'\b(Chemistry|Mathematics|Physics)\b', t)
                 if sm: cur['subject'] = sm.group(1)
                 continue
             if re.match(r'^\(A\)', t):
@@ -88,6 +91,7 @@ def main():
     if os.path.exists(tp):
         for row in csv.DictReader(open(tp, encoding='utf-8')):
             qs[int(row['q']) - 1]['chapter'] = CODES[row['chapter'].strip()][1]
+            qs[int(row['q']) - 1]['unit'] = row['chapter'].strip()
     pdf = pymupdf.open(eg_pdf)
     eg = examgoal_questions(pdf)
     key = parse_key(pdf)
@@ -166,9 +170,41 @@ def main():
             stats['dropped'] += 1
         rows.append({'q': n, 'topic': topic if keep else '', 'examside_id': e['qid'] or '', 'match': round(r, 2), 'answer_check': check})
 
+    # Second pass, by NTA unit. Questions still without a topic are grouped by subject, type and our own unit tag
+    # (tags.csv); ExamGOAL questions not used by a kept match are grouped the same way by their chapter's unit.
+    # Where a group has as many ExamGOAL questions as NTA ones and they all share one chapter, that chapter is
+    # every NTA question's topic whichever way they pair up. Marked match "unit" so these can be told apart.
+    def eg_topic(e):
+        parts = [p.strip() for p in titles.get(e['qid'] or '', '').split('|')]
+        if len(parts) < 3 or parts[2] != e['subject']:
+            return None, None
+        t = re.sub(r'\s+Question\s+\d+$', '', parts[1])
+        try:
+            return t, unit_for(e['subject'], t)[0]
+        except KeyError:
+            return t, None
+    used = {match[i][0] for i, row in enumerate(rows) if row['topic']}
+    left_q, left_e = {}, {}
+    for i, row in enumerate(rows):
+        if not row['topic'] and qs[i].get('unit'):
+            left_q.setdefault((qs[i]['subject'], qs[i]['type'], qs[i]['unit']), []).append(i)
+    for j, e in enumerate(eg):
+        if j not in used:
+            t, u = eg_topic(e)
+            if u:
+                left_e.setdefault((e['subject'], e['type'], u), []).append(t)
+    by_unit = 0
+    for g, idx in left_q.items():
+        ts = left_e.get(g, [])
+        if len(ts) == len(idx) and len(set(ts)) == 1:
+            for i in idx:
+                rows[i]['topic'], rows[i]['match'] = ts[0], 'unit'
+                by_unit += 1
+    stats['kept'] += by_unit
+
     with open(os.path.join(folder, 'topics.csv'), 'w', newline='', encoding='utf-8') as f:
         w = csv.DictWriter(f, fieldnames=['q', 'topic', 'examside_id', 'match', 'answer_check']); w.writeheader(); w.writerows(rows)
-    print(f"{'(same option order) ' if same_order else ''}{folder}: topics for {stats['kept']}/{len(qs)}; answers agree {stats['agree']}, differ {stats['disagree']}; "
+    print(f"{'(same option order) ' if same_order else ''}{folder}: topics for {stats['kept']}/{len(qs)} ({by_unit} by unit); answers agree {stats['agree']}, differ {stats['disagree']}; "
           f"our NTA-unit tag differs from ExamGOAL's chapter for {len(stats['unit_mismatch'])}")
     for m in stats['unit_mismatch']:
         print('   ', m)

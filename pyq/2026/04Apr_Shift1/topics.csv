@@ -2,7 +2,7 @@ q,topic,examside_id,match,answer_check
 1,Functions,mnswhu6w,0.87,agree
 2,Quadratic Equation and Inequalities,mnswhwlq,0.73,agree
 3,Complex Numbers,mnswhs8r,0.7,agree
-4,,mnswhyrp,0.0,agree
+4,Functions,mnswhyrp,unit,agree
 5,Matrices and Determinants,mnswhw67,0.83,agree
 6,Matrices and Determinants,mnswhtht,0.81,agree
 7,Sequences and Series,mnswhuqy,0.96,agree
@@ -14,9 +14,9 @@ q,topic,examside_id,match,answer_check
 13,Circle,mnswhq3s,0.93,agree
 14,3D Geometry,mnswhrtz,0.94,agree
 15,3D Geometry,mnswhtiq,0.91,agree
-16,,mnswhrf9,0.34,agree
+16,Differentiation,mnswhrf9,unit,agree
 17,Definite Integration,mnswhqtv,0.86,agree
-18,,mnswhwmt,0.0,agree
+18,Area Under The Curves,mnswhwmt,unit,agree
 19,Definite Integration,mnswhurx,0.78,agree
 20,Differential Equations,mnswhxhh,0.9,agree
 21,Probability,mnswhquf,0.65,agree
@@ -40,15 +40,15 @@ q,topic,examside_id,match,answer_check
 39,Geometrical Optics,mnswhv8j,0.99,agree
 40,Capacitor,mnswhsbh,0.96,agree
 41,Magnetic Effect of Current,mnswhu8y,0.42,agree
-42,,mnswhrw0,0.21,agree
+42,Semiconductor,mnswhrw0,unit,agree
 43,Current Electricity,mnswhtkt,0.8,agree
-44,Wave Optics,mnswhscd,0.92,agree
+44,Wave Optics,mnswhscd,0.95,agree
 45,Wave Optics,mnswhw87,0.93,agree
 46,Work Power & Energy,mnt2t7bw,0.93,agree
 47,Properties of Matter,mnt2t6qi,0.89,agree
 48,Simple Harmonic Motion,mnt2t77g,0.94,agree
-49,,mnt2t71a,0.31,agree
-50,,mnt2t799,0.13,agree
+49,Work Power & Energy,mnt2t71a,unit,agree
+50,Alternating Current,mnt2t799,unit,agree
 51,Some Basic Concepts of Chemistry,mnt2t736,0.97,agree
 52,Structure of Atom,mnt2t744,0.99,agree
 53,Structure of Atom,mnt2t6rr,0.97,agree
@@ -58,12 +58,12 @@ q,topic,examside_id,match,answer_check
 57,Chemical Kinetics and Nuclear Chemistry,mnt2t6uj,0.98,agree
 58,p-Block Elements,mnt2t6ys,0.99,agree
 59,p-Block Elements,mnt2t6xi,0.97,agree
-60,,mnt2t7cx,0.17,agree
-61,,mnt2t6vj,0.29,agree
+60,d and f Block Elements,mnt2t7cx,unit,agree
+61,d and f Block Elements,mnt2t6vj,unit,agree
 62,Coordination Compounds,mnt2t766,0.89,agree
 63,Basics of Organic Chemistry,mnt2t6wg,0.93,agree
 64,Hydrocarbons,mnt2t72a,0.87,agree
-65,,mnt2t7b5,0.2,agree
+65,Haloalkanes and Haloarenes,mnt2t7b5,unit,agree
 66,Basics of Organic Chemistry,mnu6c0bh,0.87,agree
 67,Compounds Containing Nitrogen,mnu6gy7u,0.68,agree
 68,Biomolecules,mnubzpgk,0.48,agree

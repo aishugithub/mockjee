@@ -1,7 +1,7 @@
 q,topic,examside_id,match,answer_check
 1,Permutations and Combinations,lv9s208h,0.85,differs (ExamGOAL D)
 2,Functions,lv9s1zso,0.81,differs (ExamGOAL A)
-3,,lv9s1zxt,0.55,differs (ExamGOAL C)
+3,Complex Numbers,lv9s1zxt,unit,differs (ExamGOAL C)
 4,Matrices and Determinants,lv9s2037,0.92,differs (ExamGOAL C)
 5,Matrices and Determinants,lv9s20az,0.64,differs (ExamGOAL D)
 6,Permutations and Combinations,lv9s20f0,0.97,differs (ExamGOAL A)
@@ -9,7 +9,7 @@ q,topic,examside_id,match,answer_check
 8,Sequences and Series,lv9s20ci,0.62,agree
 9,Binomial Theorem,lv9s1zz5,0.76,differs (ExamGOAL C)
 10,"Limits, Continuity and Differentiability",lv9s207h,0.91,agree
-11,,lv9s205z,0.49,differs (ExamGOAL D)
+11,Definite Integration,lv9s205z,unit,differs (ExamGOAL D)
 12,Area Under The Curves,lv9s20di,0.9,agree
 13,Differential Equations,lv9s20hz,0.98,differs (ExamGOAL D)
 14,Circle,lv9s1zub,1.0,differs (ExamGOAL D)
@@ -18,7 +18,7 @@ q,topic,examside_id,match,answer_check
 17,3D Geometry,lv9s1zwj,0.76,agree
 18,Vector Algebra,lv9s2007,0.68,differs (ExamGOAL C)
 19,Vector Algebra,lv9s20g2,0.88,differs (ExamGOAL A)
-20,,lv9s204y,0.46,agree
+20,Differentiation,lv9s204y,unit,agree
 21,Trigonometric Equations,lv9s20oc,0.7,agree
 22,Sequences and Series,lv9s20lt,0.68,agree
 23,"Limits, Continuity and Differentiability",lv9s20md,0.04,agree
@@ -49,30 +49,30 @@ q,topic,examside_id,match,answer_check
 48,Atoms and Nuclei,lv9s23rt,0.99,differs (ExamGOAL C)
 49,Heat and Thermodynamics,lv9s20vb,1.0,differs (ExamGOAL B)
 50,Semiconductor,lv9s2sx3,0.98,agree
-51,,lv9s25lo,0.23,agree
+51,Motion in a Plane,lv9s25lo,unit,agree
 52,Rotational Motion,lv9s25k9,0.99,agree
 53,Wave Optics,lv9s25jl,0.75,agree
 54,Properties of Matter,lv9s2smu,0.98,agree
 55,Waves,lv9s25iu,0.95,agree
 56,Current Electricity,lv9s25l3,0.92,agree
-57,,lv9s26vs,0.24,agree
+57,Magnetic Effect of Current,lv9s26vs,unit,agree
 58,Electrostatics,lv9s2ssg,0.95,agree
 59,Electromagnetic Induction,lv9s25n4,0.95,agree
 60,Atoms and Nuclei,lv9s25mk,0.98,agree
 61,Some Basic Concepts of Chemistry,lv9s2psv,0.91,differs (ExamGOAL B)
 62,Chemical Bonding & Molecular Structure,lv9s2jkm,0.89,differs (ExamGOAL D)
-63,,lv9s2pz5,0.14,differs (ExamGOAL D)
+63,Chemical Equilibrium,lv9s2pz5,unit,differs (ExamGOAL D)
 64,Electrochemistry,lv9s2pxi,0.75,differs (ExamGOAL D)
 65,Electrochemistry,lv9s2pv4,0.75,differs (ExamGOAL D)
-66,,lv9s2805,0.4,differs (ExamGOAL D)
+66,Periodic Table & Periodicity,lv9s2805,unit,differs (ExamGOAL D)
 67,Chemical Bonding & Molecular Structure,lv9s26z7,0.9,differs (ExamGOAL B)
-68,,lv9s2kn9,0.17,agree
+68,p-Block Elements,lv9s2kn9,unit,agree
 69,d and f Block Elements,lv9s2pr8,0.95,differs (ExamGOAL C)
 70,Coordination Compounds,lv9s2pwh,0.98,agree
 71,Coordination Compounds,lv9s26x9,0.8,differs (ExamGOAL C)
 72,d and f Block Elements,lv9s2836,0.97,differs (ExamGOAL A)
 73,Basics of Organic Chemistry,lv9s2szh,0.93,differs (ExamGOAL D)
-74,,lv9s281y,0.52,differs (ExamGOAL C)
+74,Basics of Organic Chemistry,lv9s281y,unit,differs (ExamGOAL C)
 75,"Aldehydes, Ketones and Carboxylic Acids",lv9s2sto,0.85,differs (ExamGOAL B)
 76,"Alcohols, Phenols and Ethers",lv9s2sux,1.0,differs (ExamGOAL C)
 77,Haloalkanes and Haloarenes,lv9s2sog,0.79,agree
@@ -81,8 +81,8 @@ q,topic,examside_id,match,answer_check
 80,Biomolecules,lv9s2lk7,1.0,differs (ExamGOAL A)
 81,Structure of Atom,lv9s2q0t,0.94,agree
 82,Chemical Bonding & Molecular Structure,lv9s2skh,0.43,agree
-83,,lv9s2sjb,0.33,agree
-84,,lv9s2sgg,0.18,agree
+83,Thermodynamics,lv9s2sjb,unit,agree
+84,Solutions,lv9s2sgg,unit,agree
 85,Chemical Kinetics and Nuclear Chemistry,lv9s2sh1,0.7,agree
 86,d and f Block Elements,lv9s2shw,0.92,agree
 87,"Aldehydes, Ketones and Carboxylic Acids",lv9s2sii,0.96,agree

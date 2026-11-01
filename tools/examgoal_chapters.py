@@ -24,6 +24,12 @@ MAP = {
         'Rotational Motion': 'P5',
         'Properties of Matter': 'P7',
         'Heat and Thermodynamics': 'P8',        # heat/calorimetry/expansion in unit 7, thermodynamics unit 8, kinetic theory unit 9
+        # finer names ExamSIDE uses for some questions instead of the two above (seen 2026-10-31)
+        'Mechanical Properties of Solids': 'P7',
+        'Mechanical Properties of Fluids': 'P7',
+        'Thermal Properties of Matter': 'P7',
+        'Thermodynamics': 'P8',
+        'Kinetic Theory of Gases': 'P9',
         'Simple Harmonic Motion': 'P10',
         'Waves': 'P10',
         'Gravitation': 'P6',

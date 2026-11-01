@@ -935,7 +935,7 @@ function renderBankLabel() {
         const eg = bank.questions.filter(q => q.source_kind === 'examgoal');
         const egYears = [...new Set(eg.map(q => q.year))].sort().join(', ');
         return `${bank.questions.length - eg.length} official questions from public NTA question papers, answers from NTA's final answer keys; questions NTA dropped are left out. Chapter tags were made by Claude from the question images.`
-          + (eg.length ? ` Plus ${eg.length} questions for ${egYears} from ExamGOAL's copies of those papers (NTA does not publish them openly), with ExamGOAL's answer key; each is marked "(ExamGOAL)".` : '');
+          + (eg.length ? ` Plus ${eg.length} questions (${egYears}) from ExamGOAL's copies of papers we could not get from NTA's public pages, with ExamGOAL's answer key; each is marked "(ExamGOAL)".` : '');
       })()
     : `Using an imported bank (${bank.questions.length} questions).`;
 }

@@ -196,7 +196,7 @@ def main():
             y_end = min(nxt, foot) - 2
             subj = subject
             if oos:
-                sm = re.search(r'·\s*(Chemistry|Mathematics|Physics)', typ)
+                sm = re.search(r'\b(Chemistry|Mathematics|Physics)\b', typ)   # after '·' or an unmapped glyph
                 subj = sm.group(1) if sm else subject
             link = min(links, key=lambda k: abs(k[0].y0 - hb.y0), default=None)
             qid = re.search(r'/question/([A-Za-z0-9]+)', link[1]).group(1) if link and abs(link[0].y0 - hb.y0) < 60 else None

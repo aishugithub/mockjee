@@ -15,3 +15,20 @@ Listed publicly on https://jeemain.nta.nic.in/ (menu: Question Papers; notice: F
 | JEE_Main_2026_S2_08Apr_Shift2_paper.pdf | https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2026/04/20260409932754345.pdf | 2026-09-26 | 079E3B7AE67B7030 |
 | JEE_Main_2026_S2_final_answer_key.pdf | https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2026/04/20260420409057044.pdf | 2026-09-26 | 07C89E20741C17F1 |
 
+
+## ExamGOAL copies (added 2026-10-31)
+
+Papers ExamGOAL lists for 2026 that are not among our NTA papers above (we could not find them on NTA's public pages). Same rules as the 2025 ExamGOAL papers (sources/2025/SOURCES.md): ExamGOAL's retyped questions and ExamGOAL's answer key, NOT NTA's own documents; every question has source_kind "examgoal" and a source line ending "(ExamGOAL)". Chapters come from each question's ExamSIDE page title (examside_titles.json).
+
+| File | Original URL | Downloaded | SHA-256 (first 16) |
+|---|---|---|---|
+| jee-main-2026-online-21st-january-evening-shift.pdf | https://pdf.questions.examgoal.com/download/paper/jee/jee-main/jee-main-2026-online-21st-january-evening-shift/en.pdf | 2026-10-31 | 955171EE624D992E |
+| jee-main-2026-online-21st-january-morning-shift.pdf | https://pdf.questions.examgoal.com/download/paper/jee/jee-main/jee-main-2026-online-21st-january-morning-shift/en.pdf | 2026-10-31 | 646EC8188AA4DD10 |
+| jee-main-2026-online-22nd-january-evening-shift.pdf | https://pdf.questions.examgoal.com/download/paper/jee/jee-main/jee-main-2026-online-22nd-january-evening-shift/en.pdf | 2026-10-31 | A137EF51310B51FA |
+| jee-main-2026-online-22nd-january-morning-shift.pdf | https://pdf.questions.examgoal.com/download/paper/jee/jee-main/jee-main-2026-online-22nd-january-morning-shift/en.pdf | 2026-10-31 | 8DA8DE8DFD22626D |
+| jee-main-2026-online-23rd-january-evening-shift.pdf | https://pdf.questions.examgoal.com/download/paper/jee/jee-main/jee-main-2026-online-23rd-january-evening-shift/en.pdf | 2026-10-31 | A5B359F35956D551 |
+| jee-main-2026-online-23rd-january-morning-shift.pdf | https://pdf.questions.examgoal.com/download/paper/jee/jee-main/jee-main-2026-online-23rd-january-morning-shift/en.pdf | 2026-10-31 | C47824F9900CE440 |
+| jee-main-2026-online-24th-january-evening-shift.pdf | https://pdf.questions.examgoal.com/download/paper/jee/jee-main/jee-main-2026-online-24th-january-evening-shift/en.pdf | 2026-10-31 | C817F30C0C4AB406 |
+| jee-main-2026-online-24th-january-morning-shift.pdf | https://pdf.questions.examgoal.com/download/paper/jee/jee-main/jee-main-2026-online-24th-january-morning-shift/en.pdf | 2026-10-31 | E44A2F7F35A3A97B |
+| jee-main-2026-online-28th-january-evening-shift.pdf | https://pdf.questions.examgoal.com/download/paper/jee/jee-main/jee-main-2026-online-28th-january-evening-shift/en.pdf | 2026-10-31 | 252EED8856093CA1 |
+| jee-main-2026-online-28th-january-morning-shift.pdf | https://pdf.questions.examgoal.com/download/paper/jee/jee-main/jee-main-2026-online-28th-january-morning-shift/en.pdf | 2026-10-31 | 77122C9464DBA407 |

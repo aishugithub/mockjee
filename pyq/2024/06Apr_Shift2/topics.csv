@@ -1,27 +1,27 @@
 q,topic,examside_id,match,answer_check
 1,Functions,lvb294cr,0.88,agree
-2,,lvb294aa,0.11,agree
+2,Sets and Relations,lvb294aa,unit,agree
 3,Complex Numbers,lvb2948r,0.86,differs (ExamGOAL C)
 4,Matrices and Determinants,lvb294f8,0.75,agree
 5,Permutations and Combinations,lvb294sf,0.97,differs (ExamGOAL C)
-6,,lvb294ut,0.7,differs (ExamGOAL D)
+6,Permutations and Combinations,lvb294ut,unit,differs (ExamGOAL D)
 7,Sequences and Series,lvb294px,1.0,differs (ExamGOAL C)
 8,Application of Derivatives,lvb29471,0.92,differs (ExamGOAL D)
-9,,lvb294dv,0.52,differs (ExamGOAL D)
+9,"Limits, Continuity and Differentiability",lvb294dv,unit,differs (ExamGOAL D)
 10,Differentiation,lvb294td,0.94,differs (ExamGOAL A)
 11,Area Under The Curves,lvb294kx,0.73,differs (ExamGOAL D)
 12,Indefinite Integrals,lvb294vs,0.62,agree
 13,Differential Equations,lvb294oh,0.82,differs (ExamGOAL C)
 14,Straight Lines and Pair of Straight Lines,lvb294xq,0.86,differs (ExamGOAL A)
 15,Circle,lvb294qv,0.88,differs (ExamGOAL B)
-16,,lvb294nj,0.45,differs (ExamGOAL B)
+16,Sequences and Series,lvb294nj,unit,differs (ExamGOAL B)
 17,3D Geometry,lvb294m1,0.84,differs (ExamGOAL B)
 18,Vector Algebra,lvb294hw,0.72,differs (ExamGOAL C)
 19,Vector Algebra,lvb294j7,0.65,differs (ExamGOAL C)
 20,Probability,lvb294g8,1.0,differs (ExamGOAL B)
-21,,lvb2953r,0.46,differs (ExamGOAL 3660)
+21,Quadratic Equation and Inequalities,lvb2953r,unit,differs (ExamGOAL 3660)
 22,Matrices and Determinants,lvb29535,0.83,agree
-23,,lvb2952b,0.24,differs (ExamGOAL 4)
+23,Sequences and Series,lvb2952b,unit,differs (ExamGOAL 4)
 24,"Limits, Continuity and Differentiability",lvb294ya,0.79,agree
 25,Definite Integration,lvb294zl,0.8,agree
 26,Differential Equations,lvb29503,0.86,agree
@@ -33,7 +33,7 @@ q,topic,examside_id,match,answer_check
 32,Units & Measurements,lvb2957z,0.97,differs (ExamGOAL D)
 33,Motion in a Straight Line,lvb2956u,0.97,differs (ExamGOAL B)
 34,Laws of Motion,lvb29599,0.92,differs (ExamGOAL A)
-35,,lvb2acox,0.08,agree
+35,Magnetic Properties of Matter,lvb2acox,unit,agree
 36,Work Power & Energy,lvb29egr,1.0,agree
 37,Gravitation,lvb29ej7,0.98,differs (ExamGOAL D)
 38,Properties of Matter,lvb29ehp,0.98,agree
@@ -50,23 +50,23 @@ q,topic,examside_id,match,answer_check
 49,Semiconductor,lvb295bj,0.93,differs (ExamGOAL D)
 50,Units & Measurements,lvb29ekd,0.85,differs (ExamGOAL D)
 51,Waves,lvb29gyo,0.9,agree
-52,,lvb2acle,0.25,agree
+52,Capacitor,lvb2acle,unit,agree
 53,Current Electricity,lvb2acqd,0.9,agree
-54,,lvb29gxu,0.24,agree
+54,Wave Optics,lvb29gxu,unit,agree
 55,Dual Nature of Radiation,lvb29gzg,0.84,agree
-56,,lvb29eoa,0.08,agree
+56,Rotational Motion,lvb29eoa,unit,agree
 57,Motion in a Straight Line,lvb29gxb,0.93,agree
-58,,lvb29fxq,0.35,agree
+58,Magnetic Effect of Current,lvb29fxq,unit,agree
 59,Alternating Current,lvb29eno,0.82,agree
-60,,lvb2acm6,0.13,agree
+60,Properties of Matter,lvb2acm6,unit,agree
 61,Some Basic Concepts of Chemistry,lvb2a2bp,0.77,differs (ExamGOAL D)
 62,,lvb2a2db,0.32,differs (ExamGOAL C)
-63,,lvb2a7x3,0.85,differs (ExamGOAL D)
-64,,lvb2a27q,0.01,agree
+63,Chemical Equilibrium,lvb2a7x3,unit,differs (ExamGOAL D)
+64,Redox Reactions,lvb29nmy,unit,agree
 65,Electrochemistry,lvb2a269,1.0,differs (ExamGOAL A)
-66,,lvb29nmy,0.19,differs (ExamGOAL A)
+66,s-Block Elements,lvb2a7vy,0.82,agree
 67,Redox Reactions,lvb29icb,0.88,differs (ExamGOAL C)
-68,,,0,no candidate
+68,p-Block Elements,lvb2a27q,unit,differs (ExamGOAL A)
 69,d and f Block Elements,lvb2a2ec,0.72,differs (ExamGOAL B)
 70,,lvb2a7ya,1.0,differs (ExamGOAL C)
 71,Coordination Compounds,lvb2a2am,0.78,differs (ExamGOAL B)
@@ -78,11 +78,11 @@ q,topic,examside_id,match,answer_check
 77,Compounds Containing Nitrogen,lvb2ack2,0.62,differs (ExamGOAL B)
 78,"Aldehydes, Ketones and Carboxylic Acids",lvb2achx,0.73,agree
 79,"Alcohols, Phenols and Ethers",lvb2acuc,0.78,differs (ExamGOAL A)
-80,,lvb2a7u8,0.26,agree
+80,Biomolecules,lvb2a7u8,unit,agree
 81,Structure of Atom,lvb2abca,0.83,agree
 82,Chemical Bonding & Molecular Structure,lvb2acem,0.36,agree
 83,Thermodynamics,lvb2a8u8,0.71,agree
-84,,lvb2acph,0.01,agree
+84,Solutions,lvb2acph,unit,agree
 85,Chemical Kinetics and Nuclear Chemistry,lvb2abd4,0.64,agree
 86,d and f Block Elements,lvb2abeg,0.9,agree
 87,,lvb2ackq,0.16,agree

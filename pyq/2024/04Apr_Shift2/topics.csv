@@ -1,9 +1,9 @@
 q,topic,examside_id,match,answer_check
 1,Sets and Relations,lv2er45n,0.91,differs (ExamGOAL D)
-2,,lv2er3qp,0.95,differs (ExamGOAL B)
+2,Complex Numbers,lv2er3qp,unit,differs (ExamGOAL B)
 3,Matrices and Determinants,lv2eryn4,0.72,agree
 4,Binomial Theorem,lv2eqvbz,0.96,differs (ExamGOAL D)
-5,,lv2erzk5,0.81,differs (ExamGOAL A)
+5,Sequences and Series,lv2erzk5,unit,differs (ExamGOAL A)
 6,Sequences and Series,lv2erzp0,0.91,differs (ExamGOAL A)
 7,Application of Derivatives,lv2er3i1,0.89,differs (ExamGOAL A)
 8,"Limits, Continuity and Differentiability",lv2eqvf0,0.84,agree
@@ -12,7 +12,7 @@ q,topic,examside_id,match,answer_check
 11,Area Under The Curves,lv2er3kw,0.85,agree
 12,Differential Equations,lv2erury,0.81,differs (ExamGOAL D)
 13,Circle,lv2eruuk,0.6,differs (ExamGOAL A)
-14,,lv2er3wn,0.51,agree
+14,Hyperbola,lv2er3wn,unit,agree
 15,Parabola,lv2er40w,0.9,differs (ExamGOAL B)
 16,3D Geometry,lv2er3nv,0.91,agree
 17,Vector Algebra,lv2er3tg,0.8,differs (ExamGOAL C)
@@ -35,14 +35,14 @@ q,topic,examside_id,match,answer_check
 34,Laws of Motion,lv2erypp,0.96,agree
 35,Gravitation,lv2erys9,0.92,differs (ExamGOAL C)
 36,Work Power & Energy,lv2es437,0.84,differs (ExamGOAL D)
-37,,lv2es39u,0.0,differs (ExamGOAL B)
+37,Gravitation,lv2es39u,unit,differs (ExamGOAL B)
 38,Properties of Matter,lv2es16x,1.0,differs (ExamGOAL D)
 39,Heat and Thermodynamics,lv2ersc0,0.96,differs (ExamGOAL B)
 40,Heat and Thermodynamics,lv2erjlj,0.87,differs (ExamGOAL B)
-41,,lv2erzcz,0.0,agree
+41,Electrostatics,lv2erzcz,unit,agree
 42,Current Electricity,lv2es2na,0.92,differs (ExamGOAL C)
 43,Magnetic Properties of Matter,lv2erjiy,0.94,agree
-44,,lv2er9jv,0.17,differs (ExamGOAL A)
+44,Alternating Current,lv2er9jv,unit,differs (ExamGOAL A)
 45,Electromagnetic Waves,lv2erjny,0.97,differs (ExamGOAL A)
 46,Wave Optics,lv2er9hk,0.99,differs (ExamGOAL D)
 47,Dual Nature of Radiation,lv2erh5l,0.96,differs (ExamGOAL A)
@@ -52,15 +52,15 @@ q,topic,examside_id,match,answer_check
 51,Atoms and Nuclei,lv2erthx,0.64,agree
 52,Geometrical Optics,lv2erzev,0.95,agree
 53,Electromagnetic Induction,lv2erkz0,0.85,agree
-54,,lv2es35t,0.29,agree
+54,Magnetic Effect of Current,lv2es35t,unit,agree
 55,Current Electricity,lv2es18v,0.8,agree
-56,,lv2eqxt5,0.25,agree
+56,Simple Harmonic Motion,lv2eqxt5,unit,agree
 57,Properties of Matter,lv2erj3y,0.85,agree
 58,Center of Mass and Collision,lv2eryu7,0.7,agree
 59,Motion in a Straight Line,lv2er9lr,0.95,agree
-60,,lv2erj61,0.12,agree
+60,Capacitor,lv2erj61,unit,agree
 61,,lv2eryxe,0.0,differs (ExamGOAL B)
-62,,lv2erjdj,0.34,differs (ExamGOAL C)
+62,Chemical Bonding & Molecular Structure,lv2erjdj,unit,differs (ExamGOAL C)
 63,Chemical Equilibrium,lv2er9pz,0.78,agree
 64,Electrochemistry,lv2ertkj,0.94,differs (ExamGOAL A)
 65,Electrochemistry,lv2erz0j,0.98,agree
@@ -75,10 +75,10 @@ q,topic,examside_id,match,answer_check
 74,Basics of Organic Chemistry,lv2es40d,0.92,agree
 75,Hydrocarbons,lv2es465,0.94,differs (ExamGOAL D)
 76,Haloalkanes and Haloarenes,lv2es3h7,0.84,differs (ExamGOAL A)
-77,,lv2es3pv,0.47,differs (ExamGOAL D)
-78,,lv2erzhd,0.0,differs (ExamGOAL A)
+77,Haloalkanes and Haloarenes,lv2es3pv,unit,differs (ExamGOAL D)
+78,"Alcohols, Phenols and Ethers",lv2erzhd,unit,differs (ExamGOAL A)
 79,Haloalkanes and Haloarenes,lv2es3mu,0.66,differs (ExamGOAL D)
-80,,lv2erzas,0.2,differs (ExamGOAL B)
+80,Biomolecules,lv2erzas,unit,differs (ExamGOAL B)
 81,Structure of Atom,lv2erl3p,0.96,agree
 82,Chemical Bonding & Molecular Structure,lv2ertou,0.73,agree
 83,Thermodynamics,lv2erykm,0.9,agree
@@ -86,6 +86,6 @@ q,topic,examside_id,match,answer_check
 85,Chemical Kinetics and Nuclear Chemistry,lv2es2g1,0.51,agree
 86,d and f Block Elements,lv2es2i6,0.74,agree
 87,Some Basic Concepts of Chemistry,lv2erz2h,0.96,agree
-88,,lv2erjb4,0.0,agree
+88,Basics of Organic Chemistry,lv2erjb4,unit,agree
 89,"Aldehydes, Ketones and Carboxylic Acids",lv2ers6s,1.0,agree
-90,,lv2es3ut,0.32,agree
+90,Compounds Containing Nitrogen,lv2es3ut,unit,agree

@@ -8,7 +8,7 @@ q,topic,examside_id,match,answer_check
 7,Permutations and Combinations,mnsik7og,0.72,agree
 8,Statistics,mnsik7pe,0.89,agree
 9,Probability,mnsik7q9,1.0,agree
-10,,mnsik7r5,0.34,agree
+10,Circle,mnsik7r5,unit,agree
 11,Hyperbola,mnsik7s0,0.78,agree
 12,Ellipse,mnsik7t4,0.97,agree
 13,Inverse Trigonometric Functions,mnsik7tx,0.66,agree
@@ -51,13 +51,13 @@ q,topic,examside_id,match,answer_check
 50,Geometrical Optics,mnsik8p9,0.71,agree
 51,Some Basic Concepts of Chemistry,mnsik8q5,0.75,agree
 52,Structure of Atom,mnsik8r9,1.0,agree
-53,,mnsik8s3,0.23,agree
-54,,mnsik8sz,0.29,agree
+53,Chemical Bonding & Molecular Structure,mnsik8s3,unit,agree
+54,Thermodynamics,mnsik8sz,unit,agree
 55,Solutions,mnsik8u6,0.43,agree
 56,Ionic Equilibrium,mnsik8v0,0.97,agree
 57,Electrochemistry,mnsik8wd,0.86,agree
 58,Periodic Table & Periodicity,mnsik8xf,1.0,agree
-59,,mnsik8ye,0.19,agree
+59,Chemical Bonding & Molecular Structure,mnsik8ye,unit,agree
 60,d and f Block Elements,mnsik8zf,0.91,agree
 61,Coordination Compounds,mnsik908,0.78,agree
 62,Practical Organic Chemistry,mnsik917,0.95,agree

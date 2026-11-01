@@ -1,0 +1,91 @@
+q,topic,examside_id,match,answer_check
+1,Inverse Trigonometric Functions,lgnwv1sg,0.62,differs (ExamGOAL C)
+2,,lgnxyz9u,0.0,agree
+3,,lgnyjdfm,0.51,differs (ExamGOAL D)
+4,Matrices and Determinants,lgnxwdvt,0.82,differs (ExamGOAL A)
+5,Matrices and Determinants,lgny51ak,0.79,differs (ExamGOAL B)
+6,Permutations and Combinations,lgnwkhha,0.97,differs (ExamGOAL B)
+7,Binomial Theorem,lgnxjgya,unit,differs (ExamGOAL D)
+8,Sequences and Series,lgnybkbk,0.91,differs (ExamGOAL A)
+9,"Limits, Continuity and Differentiability",lgnx6vt2,0.87,differs (ExamGOAL A)
+10,Definite Integration,lgnwfxh4,unit,differs (ExamGOAL B)
+11,Differential Equations,lgnwbvoh,0.72,differs (ExamGOAL B)
+12,Straight Lines and Pair of Straight Lines,lgny7des,0.88,differs (ExamGOAL C)
+13,Circle,lgnx2ht3,0.77,agree
+14,3D Geometry,lgnwzi53,0.86,differs (ExamGOAL C)
+15,3D Geometry,lgnyep2q,0.87,differs (ExamGOAL A)
+16,Vector Algebra,lgnw7ha3,0.77,differs (ExamGOAL D)
+17,Vector Algebra,lgnwmpwc,0.88,differs (ExamGOAL C)
+18,Probability,lgnxp7gc,1.0,differs (ExamGOAL C)
+19,Statistics,lgnxgk71,0.99,agree
+20,Mathematical Reasoning,lgnwpeal,unit,differs (ExamGOAL B)
+21,Sets and Relations,lgnzfh40,0.74,agree
+22,Permutations and Combinations,lgnys0w5,0.99,agree
+23,Sets and Relations,lgnzb2hr,0.94,agree
+24,Sequences and Series,lgnyx1yy,0.7,agree
+25,Application of Derivatives,lgnz80z6,0.89,agree
+26,Indefinite Integrals,lgnz42oa,0.26,agree
+27,Area Under The Curves,lgnz10hf,0.86,agree
+28,Ellipse,lgnyuzc0,0.98,agree
+29,3D Geometry,lgnyni4l,0.88,agree
+30,Properties of Triangle,lgnyq5za,0.65,agree
+31,Simple Harmonic Motion,lgny52r8,unit,differs (ExamGOAL C)
+32,Kinetic Theory of Gases,lgnytfbn,0.96,differs (ExamGOAL D)
+33,Thermodynamics,lgnyjy7p,0.92,differs (ExamGOAL C)
+34,Mechanical Properties of Solids,lgnx23k6,0.78,differs (ExamGOAL C)
+35,Gravitation,lgnybh2l,0.99,agree
+36,Gravitation,lgny675b,0.99,differs (ExamGOAL D)
+37,Vector Algebra,lgnyee6z,0.93,differs (ExamGOAL B)
+38,Motion in a Straight Line,lgnxvqd2,0.94,agree
+39,Units & Measurements,lgnyfjcm,0.95,differs (ExamGOAL D)
+40,Laws of Motion,lgny9f5p,0.99,agree
+41,Electrostatics,lgnxxzq9,0.99,differs (ExamGOAL D)
+42,Communication Systems,lgny32wf,0.94,differs (ExamGOAL A)
+43,Semiconductor,lgnxzec1,0.9,differs (ExamGOAL D)
+44,Atoms and Nuclei,lgnygjbo,1.0,differs (ExamGOAL C)
+45,Dual Nature of Radiation,lgny1m5w,0.99,agree
+46,Wave Optics,lgny7rsq,0.95,differs (ExamGOAL D)
+47,Electromagnetic Waves,lgnys79e,unit,differs (ExamGOAL B)
+48,Electromagnetic Induction,lgnyv190,0.95,agree
+49,Current Electricity,lgnyj1w1,0.6,agree
+50,Current Electricity,lgnyljm0,0.96,differs (ExamGOAL C)
+51,Waves,lgnyy5pt,unit,agree
+52,,lgnz4koo,0.15,agree
+53,Rotational Motion,lgnz71sz,0.57,agree
+54,Work Power & Energy,lgnz215a,0.92,agree
+55,Capacitor,lgnyz1y4,0.85,agree
+56,Atoms and Nuclei,lgnyzx7k,0.78,agree
+57,Geometrical Optics,lgnz1aoi,0.4,agree
+58,Electromagnetic Induction,lgnz3rl2,unit,agree
+59,Magnetic Effect of Current,lgnyxeca,0.93,agree
+60,Current Electricity,lgnz2zq1,0.97,agree
+61,,lgnzajcc,0.0,agree
+62,Structure of Atom,lgnzntql,0.88,differs (ExamGOAL C)
+63,Chemical Bonding & Molecular Structure,lgnzx8zu,unit,differs (ExamGOAL A)
+64,Ionic Equilibrium,lgnzeywd,unit,differs (ExamGOAL B)
+65,,lgnzc1wg,0.0,differs (ExamGOAL A)
+66,,lgnze5sm,0.0,differs (ExamGOAL A)
+67,s-Block Elements,lgnzloa4,0.91,differs (ExamGOAL C)
+68,,lgnzgm5p,0.0,differs (ExamGOAL C)
+69,,lgnzrkr2,0.0,differs (ExamGOAL B)
+70,Coordination Compounds,lgnzt580,unit,differs (ExamGOAL C)
+71,,lgnz9975,0.0,agree
+72,"Alcohols, Phenols and Ethers",lgnzy816,unit,differs (ExamGOAL A)
+73,Compounds Containing Nitrogen,lgo06mre,0.91,differs (ExamGOAL D)
+74,Haloalkanes and Haloarenes,lgnzfp52,unit,differs (ExamGOAL C)
+75,"Aldehydes, Ketones and Carboxylic Acids",lgnzv62b,0.92,agree
+76,Hydrocarbons,lgnzzu3g,0.8,differs (ExamGOAL D)
+77,Compounds Containing Nitrogen,lgnzj56q,0.75,differs (ExamGOAL A)
+78,,lgo03g3a,0.4,agree
+79,Biomolecules,lgnzhs7y,unit,agree
+80,,lgo04s00,0.0,differs (ExamGOAL D)
+81,Some Basic Concepts of Chemistry,lgo0b1p0,0.85,agree
+82,Thermodynamics,lgo0frci,0.93,agree
+83,Solutions,lgo0eo44,0.6,agree
+84,Electrochemistry,lgo0jkav,unit,differs (ExamGOAL 5)
+85,Chemical Kinetics and Nuclear Chemistry,lgo0cpse,unit,differs (ExamGOAL 6)
+86,Surface Chemistry,lgo0dn3e,0.81,agree
+87,Structure of Atom,lgo0bx7d,unit,differs (ExamGOAL 3)
+88,d and f Block Elements,lgo0h44c,0.97,agree
+89,Coordination Compounds,lgo0i5wf,0.79,agree
+90,d and f Block Elements,lgo09zkq,unit,differs (ExamGOAL 130)
